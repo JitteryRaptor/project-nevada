@@ -1,0 +1,242 @@
+#summary Crosshair Script
+
+{{{
+
+scn PNXCrosshairMainScript
+
+float tmp
+float tmp2
+
+; 0.0 - 1.0 (for interface)
+float totalSpread
+
+; time since last execution
+float dt
+
+;------------------------------------------------
+; Mouse speed vars
+float HAngle
+float VAngle
+float lastHAngle
+float lastVAngle
+
+float dhs
+float dvs
+float s
+
+float v
+float vAvg
+; old speeds for avg
+float v1
+float v2
+
+float intMouseSpread
+
+ ; 0 - 100
+float mouseSpread
+
+;------------------------------------------------
+; Movement vars
+
+ ; 0 - 100
+float nextMoveSpread 
+float moveSpread 
+
+;------------------------------------------------
+; Aim vars
+
+ ; 0 - 100
+float nextAimSpread 
+float aimSpread 
+
+;------------------------------------------------
+; Sneak vars
+
+ ; 0 - 100
+float nextSneakSpread
+float sneakSpread
+
+;------------------------------------------------
+; Weapon vars
+
+ref weapon
+
+ ; 0 - 100
+float nextWeaponSpread
+float WeaponSpread 
+
+
+
+
+;------------------------------------------------------------------------------------------------------------------------------------------
+Begin GameMode
+
+set dt to getSecondsPassed
+if dt == 0
+	return
+endif
+
+;------------------------------------------------
+; Mouse Spread
+
+set HAngle to player.getAngle Z
+set VAngle to player.getAngle X
+
+set tmp to HAngle - lastHAngle
+set dhs to (fmod tmp 360)
+if dhs > 180
+	set dhs to -1 * (360 - dhs)
+endif
+
+set dvs to VAngle - lastVAngle
+
+set s to (dhs*dhs)
+set s to s + (dvs*dvs)
+set s to (sqrt s)
+
+set v to s / dt
+
+set vAvg to (v + v1 + v2) / 3
+
+if vAvg > 200
+	set vAvg to 200
+endif
+set tmp to vAvg  / 14
+
+if tmp > intMouseSpread
+	set intMouseSpread to tmp
+elseif tmp < (intMouseSpread - 1) || tmp == 0
+	set intMouseSpread to intMouseSpread - 0.5
+endif
+
+if intMouseSpread < 0
+	set intMouseSpread to 0
+endif
+set mouseSpread to (intMouseSpread*intMouseSpread) / 2
+
+set lastHAngle to HAngle
+set lastVAngle to VAngle
+
+set v2 to v1
+set v1 to v
+
+
+;------------------------------------------------
+; Move Spread
+
+if isControlPressed 0 == 1 || isControlPressed 1 == 1 || isControlPressed 2 == 1 || isControlPressed 3 == 1 || isControlPressed 12 == 1
+	if player.isRunning == 1
+		set nextMoveSpread to 100
+	else
+		set nextMoveSpread to 50
+	endif
+else
+	set nextMoveSpread to 0
+endif
+
+if moveSpread > nextMoveSpread
+	set moveSpread to moveSpread - 4
+	if moveSpread < nextMoveSpread
+		set moveSpread to nextMoveSpread
+	endif
+elseif moveSpread < nextMoveSpread
+	set moveSpread to moveSpread + 8
+	if moveSpread > nextMoveSpread
+		set moveSpread to nextMoveSpread
+	endif
+endif
+
+
+;------------------------------------------------
+; Aim Spread
+if isControlPressed 6 == 1
+	set nextAimSpread to 0
+else
+	set nextAimSpread to 100
+endif
+
+if aimSpread > nextAimSpread
+	set aimSpread to aimSpread - 15
+	if aimSpread < nextAimSpread 
+		set aimSpread to nextAimSpread
+	endif
+elseif aimSpread < nextAimSpread
+	set aimSpread to aimSpread + 15
+	if aimSpread > nextAimSpread
+		set aimSpread to nextAimSpread
+	endif
+endif
+
+
+;------------------------------------------------
+; Sneak Spread
+if player.isSneaking == 1
+	set nextSneakSpread to 0
+else
+	set nextSneakSpread to 100
+endif
+
+if sneakSpread > nextSneakSpread
+	set sneakSpread to sneakSpread - 15
+	if sneakSpread < nextSneakSpread 
+		set sneakSpread to nextSneakSpread
+	endif
+elseif sneakSpread < nextSneakSpread
+	set sneakSpread to sneakSpread + 15
+	if sneakSpread > nextSneakSpread
+		set sneakSpread to nextSneakSpread
+	endif
+endif
+
+
+;------------------------------------------------
+; Weapon Spread
+
+set weapon to player.getEquippedObject 5
+if weapon != 0
+	set tmp to getWeaponMinSpread weapon
+	printToConsole "raw spread: %.3f" tmp
+	set tmp to tmp / 6
+	if tmp > 1
+		set tmp to 1
+	endif
+	set nextWeaponSpread to tmp * 100
+else
+	set nextWeaponSpread to 100
+endif
+
+if weaponSpread > nextWeaponSpread 
+	set weaponSpread to weaponSpread - 15
+	if weaponSpread < nextWeaponSpread 
+		set weaponSpread to nextWeaponSpread 
+	endif
+elseif weaponSpread < nextWeaponSpread 
+	set weaponSpread to weaponSpread + 15
+	if weaponSpread > nextWeaponSpread 
+		set weaponSpread to nextWeaponSpread 
+	endif
+endif
+
+
+;------------------------------------------------
+; Recoil Spread TODO
+
+
+;------------------------------------------------
+
+PrintToConsole "Mouse: %.0f Move: %.0f Aim: %.0f Sneak %.0f Gun: %.0f" mouseSpread, moveSpread, aimSpread, sneakSpread, weaponSpread
+set totalSpread to (mouseSpread + moveSpread * 0.8 + aimSpread * 0.2 + sneakSpread * 0.1 + weaponSpread * 0.5) / 100
+if totalSpread > 1.0
+	set totalSpread to 1.0
+endif
+
+PrintToConsole "Total spread: %.2f" totalSpread
+
+setUIFloat "HUDMainMenu\_PNXCrosshairSpread" totalSpread
+
+;PrintToConsole "Mouse speed: %.3f" v
+
+
+End
+
+}}}
