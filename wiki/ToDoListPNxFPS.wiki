@@ -30,6 +30,8 @@ Enhance FPS Gameplay via new scripted Gameplay Elements
  * Test with new weapons
  * Better attack key detection
  * Remove/Shorten equip animation
+ * Implement new Icons
+ * Update HUD to be compatible with DUI
 
 
 ===Zooming Reworked===
