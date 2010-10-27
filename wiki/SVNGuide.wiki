@@ -3,10 +3,17 @@
 == 1. Install SVN Client ==
 
 Get TortoiseSVN from http://tortoisesvn.net/downloads and install it.
-It will add entries to the context menu in your Windows Explorer.
+It will add new entries to the context menu of your Windows Explorer.
 
 == 2. Checkout repository ==
 
 Firstly, create an empty folder somewhere and name it appropriately, i.e. *Project Nevada*.
 Then right-click on this newly created folder and select *SVN Checkout*.
-In the *URL of repository* field, insert _https://project-nevada.googlecode.com/svn/trunk/_
+In the *URL of repository* field, insert _https://project-nevada.googlecode.com/svn/trunk/_ and click *OK*. Once that's completed, you can close the dialog, and your Project Nevada folder now contains the latest working copy of all files in the repository.
+
+From now on, if you want to update the repository, you can just right-click on the folder and select *SVN Update*.
+
+== 3. Make changes to the repository ==
+
+Whenever you make changes to your local copy of the repository, i.e. by changing files or adding new ones, you can commit those changes to the real repository so others can see them too once they execute an update.
+To do so, right-click on the folder and select *SVN Commit*. You then can insert a comment, describing what changes you made and probably why, and don't forget to check all files you want to add in the list below!
