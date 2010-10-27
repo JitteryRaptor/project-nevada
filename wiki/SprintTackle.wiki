@@ -1,0 +1,48 @@
+#SprintTackleScript (should be merged into the main sprint script)
+
+;instead of tackle perk we will use Unstoppable Force||SuperSlam perks to allow tackle.
+
+scn SprintPerkTackleScript
+
+ref tackleRef
+ref explosionRef
+ref myself
+float tackleAP
+float playerTackle
+float enemyTackle
+
+begin gameMode
+
+;Tackles actors in front of the player
+if(SprintSettings.isSprinting == 1)
+;	set tackleRef to player.getCombatTarget
+	set tackleRef to player.getcrosshairref
+	set myself to GetSelf
+
+	if(tackleRef != 0)
+		set tackleAP to player.getBaseav actionPoints / 4
+		if(tackleRef.getDistance player < 100 && player.getav actionPoints > tackleAP)
+			set SprintSettings.timeOut to 2
+			playSound FXMeleeTrapImpact
+			set explosionRef to player.placeAtMe SprintTackleExplosion	
+			explosionRef.disable
+			explosionRef.markForDelete
+			
+			player.damageav actionPoints tackleAP
+
+			set playerTackle to player.getav unarmed / 10 + player.getav strength + (1 + 0.3 * GetRandompercent)
+			set enemyTackle to tackleRef.getav strength + tackleRef.getav endurance + 15
+	
+			if(playerTackle > enemyTackle) && enemyTackle > 15 && Player.IsInCombat
+				player.pushActorAway tackleRef 2
+			elseif(enemyTackle > playerTackle + 15) && Player.IsInCombat
+;				tackleRef.pushActorAway player 1
+				player.pushactoraway myself 1
+			elseif enemyTackle == 15
+				player.pushactoraway myself 1
+			endif
+		endif
+	endif
+endif
+
+end
