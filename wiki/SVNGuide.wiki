@@ -17,3 +17,4 @@ From now on, if you want to update the repository, you can just right-click on t
 
 Whenever you make changes to your local copy of the repository, i.e. by changing files or adding new ones, you can commit those changes to the real repository so others can see them too once they execute an update.
 To do so, right-click on the folder and select *SVN Commit*. You then can insert a comment, describing what changes you made and probably why, and don't forget to check all files you want to add in the list below!
+Next, it will ask you for your Google code account user name and your password, which you can both check out at https://code.google.com/hosting/settings.
