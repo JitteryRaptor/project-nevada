@@ -1,5 +1,5 @@
 #SprintTackleScript (should be merged into the main sprint script)
-
+{{{
 ;instead of tackle perk we will use Unstoppable Force||SuperSlam perks to allow tackle.
 
 scn SprintPerkTackleScript
@@ -46,3 +46,4 @@ if(SprintSettings.isSprinting == 1)
 endif
 
 end
+}}}
