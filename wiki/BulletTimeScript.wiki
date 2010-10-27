@@ -1,0 +1,438 @@
+#Bullet Time Script
+;Needs to be reworked into a Quest Script
+
+ScriptName PNxFPSBulletTimeScript
+
+float timer
+float suspendInMenu
+
+int apRegen
+short vfx
+
+long activationKey
+short toggle
+
+short configstage
+short configButton
+long bindMouseKey
+long bindKey
+
+short apDamagePeriodMod
+float timeFactorMod
+float apDamageMod
+
+short JetCount
+short UJetCount
+
+ref messageBox
+
+Begin OnAdd Player
+   
+	if (DKBTUsingFose == 0) 
+		   Player.AddItem DKBTActivator 1
+	endif
+
+	;Player.AddItem DKBulletTimeConfigTool 1
+    	Player.AddNote DKBulletTimeNote
+
+	; initial values
+	set apDamagePeriod to 0.50
+	set timeFactor to 0.50
+	set apDamage to -16
+	set vfx to 0
+	
+End
+
+Begin OnDrop Player
+    Player.RemoveItem DKBTActivator 1
+    Player.RemoveItem DKBulletTimeConfigTool 1
+    Player.RemoveItem DKBulletTimeNote 1
+End
+
+
+Begin OnDeath Player
+	; on player death make sure ap is restored and
+	; time is back to normal
+	sgtm 1
+
+	set DKBTon to 0
+
+
+     ; this will only work for FOSE version
+	if (DKBTUsingFose == 0) 
+
+		if player.hasperk FWEAPRestore1 == 1 && player.hasperk FWEAPRestore2 == 0
+
+			con_SetGameSetting fActionPointsRestoreRate, 7
+
+		elseif player.hasperk FWEAPRestore2 == 1 
+		
+			con_SetGameSetting fActionPointsRestoreRate, 9
+
+		else
+
+			con_SetGameSetting fActionPointsRestoreRate, 5
+
+		endif
+		
+	endif
+
+
+End
+
+
+Begin MenuMode
+   
+   ; Check for Perk Levels and re-set globals
+
+	if ( player.hasperk DKBulletTime1 == 0 ) && ( player.hasperk DKBulletTime2 == 0 )
+
+		set apDamagePeriod to ( 0.50 + apDamagePeriodMod )
+		set timeFactor to ( 0.50 + timeFactorMod )
+		set apDamage to ( -16 - apDamageMod )
+
+	elseif ( player.hasperk DKBulletTime1 == 1 ) && ( player.hasperk DKBulletTime2 == 0 )
+
+		set apDamagePeriod to ( 0.40 + apDamagePeriodMod )
+		set timeFactor to ( 0.40 + timeFactorMod )
+		set apDamage to ( -12 - apDamageMod )
+
+	elseif ( player.hasperk DKBulletTime2 == 1 )
+
+		set apDamagePeriod to ( 0.30 + apDamagePeriodMod )
+		set timeFactor to ( 0.30 + timeFactorMod )
+		set apDamage to ( -8 - apDamageMod )
+	
+	endif
+
+
+   ; ################### config mode
+
+	if (DKBTOn == 2)
+		
+		set configButton to GetButtonPressed
+
+		if (configStage == 0)
+			ShowMessage DKBulletTimeConfig
+			set configStage to 1
+
+		; main configStage
+		elseif (configStage ==1)
+		
+			if (configButton > -1)
+				set configStage to configButton + 2
+			endif
+
+		; Choose Key Binding
+		elseif (configStage == 2)
+			ShowMessage DKBulletTimeKeyConfig
+			set configStage to 101
+
+		; Show Choose AP Cost
+		elseif (configStage == 3)
+			ShowMessage DKBulletTimeAPConfig
+			set configStage to 102
+
+		; Show Choose VFX
+		elseif (configStage == 4)
+			ShowMessage DKBulletTimeVFXConfig
+			set configStage to 103
+
+		; Show Choose Time Factor
+		elseif (configStage == 5)
+			ShowMessage DKBulletTimeTFConfig
+			set configStage to 104
+
+		; Add Activator
+		elseif (configStage == 6)
+			Player.AddItem DKBTActivator 1
+			set configStage to 0
+
+		; Remove Activator
+		elseif (configStage == 7)
+			Player.RemoveItem DKBTActivator 1
+			set configStage to 0
+
+		; Jet Requirement
+		elseif (configStage == 8)
+			ShowMessage DKBulletTimeJetConfig
+			set configStage to 105
+
+		; Choose Key binding
+		elseif (configStage == 101)
+			set bindKey to GetKeyPress 0 
+			if bindKey == -1 
+				set bindKey to GetMouseButtonPress 0 
+			endif
+  
+			if (bindKey > -1)
+				set activationKey to bindKey
+
+				; Set 0 before conflict detection to avoid self-conflict
+				set DKBTInitQuest.bulletTimeKey to -1
+
+				set FWEKeyUtil.selectedKey to activationKey
+				setStage FWEKeyUtil 2
+
+				; Get messagebox for selected key
+				set FWEKeyUtil.selectedKey to activationKey 
+				setStage FWEKeyUtil 1
+				set messageBox to FWEKeyUtil.messageBox
+
+				if messageBox == 0
+					showMessage FWEShowSelectedKeyGenericMsg activationKey 
+				else
+					showMessage messageBox
+				endif
+
+				; Store externally for conflict detection
+				set DKBTInitQuest.bulletTimeKey to activationKey 
+ 
+				;ShowMessage DKBulletTimeKeyConfigDone
+				set configStage to 201
+			endif 
+
+		; OK after choose bind key
+		elseif (configStage == 201)
+			if (configButton > -1)
+				set configStage to 0
+			endif
+
+		; Choose APCost
+		elseif (configStage ==102)
+			
+			if (configButton > -1)
+				if (configButton == 0)
+					set apDamageMod to -6
+				elseif (configButton == 1)
+					set apDamageMod to -4
+				elseif (configButton == 2)
+					set apDamageMod to -2
+				elseif (configButton == 3)
+					set apDamageMod to 0
+				elseif (configButton == 4)
+					set apDamageMod to 2
+				elseif (configButton == 5)
+					set apDamageMod to 4
+				elseif (configButton == 6)
+					set apDamageMod to 6
+				endif
+				ShowMessage DKBulletTimeAPConfigDone
+
+ 				set configStage to 0
+			endif
+
+		; Choose VFX
+		elseif (configStage == 103)
+
+			if (configButton > -1)
+				set vfx to configButton
+				ShowMessage DKBulletTimeVFXConfigDone
+ 				set configStage to 0
+			endif
+		
+
+
+		; Show Choose Time factor
+		elseif (configStage == 104)
+			if (configButton > -1)
+				if (configButton == 0)
+					set apDamagePeriodMod to -0.2
+					set timeFactorMod to -0.2
+				elseif (configButton == 1)
+					set apDamagePeriodMod to -0.1
+					set timeFactorMod to -0.1
+				elseif (configButton == 2)
+					set apDamagePeriodMod to -0.05
+					set timeFactorMod to -0.05
+				elseif (configButton == 3)
+					set apDamagePeriodMod to 0
+					set timeFactorMod to 0
+				elseif (configButton == 4)
+					set apDamagePeriodMod to 0.05
+					set timeFactorMod to 0.05
+				elseif (configButton == 5)
+					set apDamagePeriodMod to 0.1
+					set timeFactorMod to 0.1
+				elseif (configButton == 6)
+					set apDamagePeriodMod to 0.2
+					set timeFactorMod to 0.2
+				endif
+				ShowMessage DKBulletTimeTFConfigDone
+
+ 				set configStage to 0
+			endif
+
+		; Show Jet Requirement
+		elseif (configStage == 105)
+			if (configButton > -1)
+				if (configButton == 0)
+					set FWEConfigBTJet to 1
+				elseif (configButton == 1)
+					set FWEConfigBTJet to 0
+				elseif (configButton == 2)
+					set configstage to 0
+				endif
+ 				set configStage to 0
+			endif
+
+		; Exit
+		else
+			Set DKBTOn to 0
+			Set configStage to 0
+		endif
+
+   else 
+
+    ; set time to normal in menu mode
+    if (DKBTInEffect == 1 && suspendInMenu != 1)
+        set suspendInMenu to 1
+        set DKBTInEffect to 0
+
+        if (vfx== 0)
+            rimod MS10DrinkSap02ISFX
+        elseif (vfx== 1)
+            rimod TranquilityLaneISFX
+        elseif (vfx== 2)
+            rimod DKBlue
+        endif
+        sgtm 1
+    endif
+  endif
+End
+
+Begin GameMode
+
+	; Store key in questvar for conflict detection
+	set DKBTInitQuest.bulletTimeKey to activationKey 
+
+	set configstage to 0
+
+	if (DKBTUsingFose && activationKey > 0)
+
+		; listening for keyup
+		if(iskeypressed activationKey != toggle)
+			set toggle to iskeypressed activationKey 
+				
+			if(toggle)
+				;key just pressed - do nothing
+			else 
+				if (DKBTOn == 0)
+	
+						if FWEConfigBTJet == 0
+							set DKBTOn to 1
+
+						elseif FWEConfigBTJet == 1
+
+							if ( player.IsSpellTarget jet == 1 ) || ( player.IsSpellTarget MS09Ultrajet == 1 )
+
+								set DKBTOn to 1
+			
+							elseif ( player.IsSpellTarget jet != 1 ) && ( player.IsSpellTarget MS09Ultrajet != 1 )
+
+								set JetCount to player.getitemcount jet
+								set UJetCount to player.getitemcount MS09Ultrajet
+
+								if JetCount >= 1
+									player.equipitem jet 1
+									set DKBTOn to 1
+								elseif JetCount <= 0
+									if UJetCount >= 1
+										player.equipitem MS09Ultrajet 1
+										set DKBTOn to 1
+									elseif UJetCount <= 0
+										showmessage FWEBTnoJet
+									endif
+								endif
+
+							endif
+
+						endif
+				
+				else
+					set DKBTOn to 0
+				endif
+			endif
+		endif
+	endif
+
+	if (DKBTOn == 1 && DKBTInEffect == 0)	
+		if (suspendInMenu == 1)
+			set suspendInMenu to 0
+		else
+			playsound UIVATSCameraIn
+			TriggerHitShader 0.5
+
+			if (DKBTUsingFose == 1)
+				set apRegen to GetGameSetting fActionPointsRestoreRate
+				con_SetGameSetting fActionPointsRestoreRate, 0
+			endif
+
+		endif
+
+		set DKBTInEffect to 1
+		sgtm timeFactor
+		set timer to 0
+
+		if (vfx== 0)
+			imod MS10DrinkSap02ISFX, 0.5
+		elseif (vfx== 1)
+			imod TranquilityLaneISFX, 0.4
+		elseif (vfx== 2)
+			imod DKBlue, 0.5
+		endif
+
+	endIf
+
+	if (DKBTInEffect == 1)
+		if (timer >= apDamagePeriod)
+			set timer to 0
+			player.damageav ActionPoints, apDamage
+		else
+			set timer to timer + GetSecondsPassed
+		endif
+
+		; end bullet time if AP has reached 0
+		if (player.getav ActionPoints <= 0)
+			set DKBTOn to 0
+		endif
+
+		; turn off BT if DKBTOn is 0
+		if (DKBTOn == 0) 
+			set DKBTInEffect to 0
+			sgtm 1
+
+			if (DKBTUsingFose == 1)
+
+				if player.hasperk FWEAPRestore1 == 1 && player.hasperk FWEAPRestore2 == 0
+
+					con_SetGameSetting fActionPointsRestoreRate, 7
+
+				elseif player.hasperk FWEAPRestore2 == 1 
+		
+					con_SetGameSetting fActionPointsRestoreRate, 9
+
+				else
+
+					con_SetGameSetting fActionPointsRestoreRate, 5
+
+				endif
+
+			endif
+
+			; FX, sound and shader
+			playsound UIVATSCameraOut
+			TriggerHitShader 0.75
+			
+			; turn off the appropriate effect
+			if (vfx == 0)
+				rimod MS10DrinkSap02ISFX
+			elseif (vfx == 1)
+				rimod TranquilityLaneISFX
+			elseif (vfx == 2)
+				rimod DKBlue
+			endif
+
+		endIf
+	endIf
+End
