@@ -1,0 +1,119 @@
+;Grenade Hotkey script
+
+ScriptName PNXFPSGrenadeHotkeyScript
+
+short grenkey ;Grenade throw hotkey
+short throwactive
+short timerstarted
+short curkey
+short curkeyB
+short keydown
+ref grenweapon
+float grentimer
+float throwtimer
+short playonce
+short grenlistcount
+short listcounter
+short attackkey
+short togglekey
+short iSwitchActive
+short iToggleActive
+ref grentype
+ref rCurGren
+
+ref messageBox
+
+
+Begin GameMode
+Set khgrenmenustart to 0
+Set configStage to 0
+
+set grentype to listgetnthform GrenadeList listcounter
+set grenlistcount to ListGetCount GrenadeList -1
+
+if(attackkey<=0)
+	set attackkey to 256
+endif
+
+if(togglekey <=0)
+	set togglekey to 35
+endif
+
+if(grenkey <=0)
+	set grenkey to 34
+endif
+
+if  (throwactive==1)
+	if (curkey>0 && iskeypressed curkey)	
+		set keydown to 1	
+	else
+		set timerstarted to 0
+		enablekey attackkey
+		releasekey attackkey
+		set keydown to 0
+		set curkey to 0
+		set grentimer to 0
+		SetWeaponAnimMult 1 grentype
+		set throwtimer to throwtimer - Getsecondspassed
+			if(throwtimer<=0)
+				player.EquipItem grenweapon 0 1
+					if(player.GetEquippedObject 5==grenweapon)
+						set throwactive to 0
+					endif
+			endif
+	endif
+endif
+
+if (keydown==1)
+	if(timerstarted==0)
+		player.Equipitem grentype 0 1	
+		set grentimer to 0.4
+		set timerstarted to 1
+	endif
+	if (grentimer>=0)
+		set grentimer to grentimer - getsecondspassed
+	elseif (player.getanimaction!=0) 
+		set throwtimer to 0.3
+		enablekey attackkey
+		holdkey attackkey
+	endif
+endif		
+
+if (iskeypressed grenkey && throwactive==0 && player.getequippedobject 5!=0 && player.getitemcount grentype!=0)
+	if(player.getequippedobject 5!=grentype)
+		set grenweapon to player.GetEquippedObject 5
+	endif
+	SetWeaponAnimMult 3 grentype
+	set throwactive to 1
+	set curkey to grenkey
+	disablekey attackkey
+endif
+
+if (player.getitemcount grentype<=0) 
+	set iSwitchActive to 1
+elseif(player.getitemcount grentype>0&&rcurgren!=grentype)
+	playsound ITMGrenadeDown
+	set rCurGren to grentype
+endif
+
+if (iSwitchActive==1)	
+	set listcounter to listcounter +1
+	if (listcounter>grenlistcount)
+		set listcounter to 0
+	endif
+	set iswitchactive to 0
+endif
+
+if ( curKeyB>0 && isKeyPressed curkeyB) 
+  return 
+else
+ set curkeyB to 0
+endif
+
+if ( isKeyPressed togglekey )
+	set rCurGren to grentype
+	set iSwitchActive to 1
+  	set curKeyB to togglekey
+endif
+
+end
