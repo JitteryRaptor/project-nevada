@@ -1,14 +1,129 @@
-#summary One-sentence summary of this page.
 #labels Script
+#Grenade Hotkey Menu Script
+{{{
+ScriptName PNxFPSGrenadeMenuScript   ;menu initiation needs reworking
 
-= Introduction =
 
-Add your content here.
+;Global PNxFPSGrenadeToggleKey
+;Global PNxFPSGrenadeHotkey
+short bindkey
+short configbutton
+short configstage
+short attackkey
 
+ref messageBox
 
-= Details =
+Begin Menumode
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+if(khgrenmenustart==1)
+	set configButton to GetButtonPressed
+	if (configstage==0)
+			ShowMessage khgrenkeysetupmsg
+			set configstage to 1
+	elseif (configstage==1)
+			set configstage to configbutton +2
+	elseif (configstage==2)
+			showmessage khgrenhotkeystart
+			set configstage to 11
+	elseif (configStage == 11)
+			set bindKey to GetKeyPress 0 
+			if bindKey == -1 
+				set bindKey to GetMouseButtonPress 0 
+			endif
+
+			if (bindKey > -1)
+
+				; Reset before conflict detection
+				set PNxFPSGrenadeHotkey to -1
+
+				; Show warning if conflicts were detected
+				set FWEKeyUtil.selectedKey to bindKey 
+				setStage FWEKeyUtil 2
+
+				; Get messagebox for selected key
+				set FWEKeyUtil.selectedKey to bindKey 
+				setStage FWEKeyUtil 1
+				set messageBox to FWEKeyUtil.messageBox
+
+				if messageBox == 0
+					showMessage FWEShowSelectedKeyGenericMsg bindKey 
+				else
+					showMessage messageBox
+				endif
+
+				set PNxFPSGrenadeHotkey to bindKey 
+				;ShowMessage khgrenhotkeyend
+				set configstage to 21
+			endif 
+	elseif (configStage == 21)
+			if (configButton > -1)
+				set configStage to 0
+			endif
+	elseif (configstage==3)
+			showmessage khgrenhotkeystart
+			set configstage to 31
+	elseif (configStage == 31)
+			set bindKey to GetKeyPress 0
+			if bindKey == -1 
+				set bindKey to GetMouseButtonPress 0 
+			endif
+
+			if (bindKey > -1)
+
+				; Reset before conflict detection
+				set PNxFPSGrenadeToggleKey to -1
+
+				; Show warning if conflicts were detected
+				set FWEKeyUtil.selectedKey to bindKey 
+				setStage FWEKeyUtil 2
+
+				; Get messagebox for selected key
+				set FWEKeyUtil.selectedKey to bindKey 
+				setStage FWEKeyUtil 1
+				set messageBox to FWEKeyUtil.messageBox
+
+				if messageBox == 0
+					showMessage FWEShowSelectedKeyGenericMsg bindKey 
+				else
+					showMessage messageBox
+				endif
+
+				set PNxFPSGrenadeToggleKey to bindKey
+ 
+				;ShowMessage khgrenhotkeyend
+				set configstage to 21
+			endif 
+	elseif (configstage==4)
+			showmessage khgrenhotkeystart
+			set configstage to 41
+	elseif (configStage == 41)
+			set bindKey to GetKeyPress 0 
+			if bindKey == -1 
+				set bindKey to GetMouseButtonPress 0 
+			endif
+
+			if (bindKey > -1)
+
+				; Get messagebox for selected key
+				set FWEKeyUtil.selectedKey to bindKey 
+				setStage FWEKeyUtil 1
+				set messageBox to FWEKeyUtil.messageBox
+
+				if messageBox == 0
+					showMessage FWEShowSelectedKeyGenericMsg bindKey 
+				else
+					showMessage messageBox
+				endif
+
+				set attackkey to bindKey 
+				;ShowMessage khgrenhotkeyend
+				set configstage to 21
+			endif 
+	elseif (configstage==5)
+			Set khgrenmenustart to 0
+			Set configStage to 0
+	endif
+endif
+end
+
+}}}
