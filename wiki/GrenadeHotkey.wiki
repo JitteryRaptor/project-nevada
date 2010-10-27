@@ -21,7 +21,7 @@ float throwtimer 					;timer for throw animation to pass
 
 ref grenweapon 						;reference of the weapon the player was holding
 ref grentype 						;reference of the currently selected grenade
-ref rCurGren 						;tempvariable for the grenade
+ref TempGrenRef 						;tempvariable for the grenade
 
 
 Begin GameMode
@@ -89,9 +89,9 @@ endif
 
 if (player.getitemcount grentype<=0) 
 	set SwitchActive to 1
-elseif(player.getitemcount grentype>0&&rcurgren!=grentype)
+elseif(player.getitemcount grentype>0&&TempGrenRef!=grentype)
 	playsound ITMGrenadeDown
-	set rCurGren to grentype
+	set TempGrenRef to grentype
 endif
 
 if (iSwitchActive==1)	
@@ -109,7 +109,7 @@ else
 endif
 
 if ( isKeyPressed PNxFPSGrenadeToggleKey )
-	set rCurGren to grentype
+	set TempGrenRef to grentype
 	set SwitchActive to 1
   	set curKeyB to PNxFPSGrenadeToggleKey
 endif
