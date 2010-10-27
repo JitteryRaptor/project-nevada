@@ -1,5 +1,5 @@
 #labels Script
-;Grenade Hotkey script
+#Grenade Hotkey script
 {{{
 ScriptName PNxFPSGrenadeHotkeyScript
 
