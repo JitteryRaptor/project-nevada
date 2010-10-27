@@ -29,7 +29,7 @@ Begin GameMode
 set grentype to listgetnthform PerkLooseCannonWeapons listcounter 	;sets the grenade to the Nth# of the formlist
 set grenlistcount to ListGetCount PerkLooseCannonWeapons -1			;checks the number of weapons in the grenadeformlist (-1 so the count is right)
 
-set attackkey to getcontrol 4
+;set attackkey to getcontrol 4
 if(attackkey<=0) 
 	set attackkey to 256  					;sets default attackkey to mouse1
 endif
