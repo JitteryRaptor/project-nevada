@@ -1,6 +1,6 @@
 #Bullet Time Script
 ;Needs to be reworked into a Quest Script
-
+{{{
 ScriptName PNxFPSBulletTimeScript
 
 float timer
@@ -436,3 +436,4 @@ Begin GameMode
 		endIf
 	endIf
 End
+}}}
