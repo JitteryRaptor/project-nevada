@@ -1,34 +1,26 @@
 #labels Script
 ;Grenade Hotkey script
-
+{{{
 ScriptName PNXFPSGrenadeHotkeyScript
 
 short grenkey ;Grenade throw hotkey
-short throwactive
-short timerstarted
-short curkey
-short curkeyB
-short keydown
-ref grenweapon
-float grentimer
-float throwtimer
-short playonce
-short grenlistcount
-short listcounter
-short attackkey
-short togglekey
-short iSwitchActive
-short iToggleActive
-ref grentype
-ref rCurGren
-
-ref messageBox
-
+short throwactive ;check if the player is throwing (1 or 0)
+short timerstarted ;variable if timer is started (1 or 0)
+short curkey ;check if grenade throw key is still pressed
+short curkeyB ;check if grenade toggle key is still pressed
+short keydown ;variable if key is being held down (1 or 0)
+ref grenweapon ;reference of the weapon the player was holding
+float grentimer ;timer for equip animation to pass
+float throwtimer ;timer for throw animation to pass
+short grenlistcount ;counter for toggling through grenades
+short listcounter ;counter where the grenade toggle is at
+short attackkey ;the players attack key (default mouse1)
+short togglekey ;key for toggling through grenades
+short iSwitchActive ;check if grenade switching is active
+ref grentype ;reference of the currently selected grenade
+ref rCurGren ;tempvariable for the grenade
 
 Begin GameMode
-Set khgrenmenustart to 0
-Set configStage to 0
-
 set grentype to listgetnthform GrenadeList listcounter
 set grenlistcount to ListGetCount GrenadeList -1
 
@@ -118,3 +110,5 @@ if ( isKeyPressed togglekey )
 endif
 
 end
+
+}}}
