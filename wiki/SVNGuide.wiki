@@ -1,0 +1,12 @@
+#summary Short step-by-step guide on how to setup SVN
+
+== 1. Install SVN Client ==
+
+Get TortoiseSVN from http://tortoisesvn.net/downloads and install it.
+It will add entries to the context menu in your Windows Explorer.
+
+== 2. Checkout repository ==
+
+Firstly, create an empty folder somewhere and name it appropriately, i.e. *Project Nevada*.
+Then right-click on this newly created folder and select *SVN Checkout*.
+In the *URL of repository* field, insert _https://project-nevada.googlecode.com/svn/trunk/_
