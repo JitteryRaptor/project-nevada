@@ -24,22 +24,12 @@ ref grentype 						;reference of the currently selected grenade
 ref TempGrenRef 						;tempvariable for the grenade
 
 
-Begin Menumode ;safety to prevent problems when entering menu during throw
-
-releasekey attackkey
-enablekey attackkey
-set throwactive to 0
-set keydown to 0
-set timerstarted to 0
-
-End
-
-
 Begin GameMode
 
 set grentype to listgetnthform PerkLooseCannonWeapons listcounter 	;sets the grenade to the Nth# of the formlist
 set grenlistcount to ListGetCount PerkLooseCannonWeapons -1			;checks the number of weapons in the grenadeformlist (-1 so the count is right)
 
+set attackkey to getcontrol 4
 if(attackkey<=0) 
 	set attackkey to 256  					;sets default attackkey to mouse1
 endif
