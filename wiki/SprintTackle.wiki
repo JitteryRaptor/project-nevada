@@ -16,8 +16,11 @@ begin gameMode
 
 ;Tackles actors in front of the player
 if(SprintSettings.isSprinting == 1)
-;	set tackleRef to player.getCombatTarget
-	set tackleRef to player.getcrosshairref
+	if getgs fAutoAimScreenPercentage==10 ;Autoaim enabled (vanilla)
+		set tackleRef to player.getCombatTarget
+	else ;Autoaim disabled
+		set tackleRef to player.getcrosshairref
+	endif
 	set myself to GetSelf
 
 	if(tackleRef != 0)
