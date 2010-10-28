@@ -7,16 +7,14 @@ ScriptName PNxFPSBulletTimeScript
 ;Global PNxFPSBulletTimeON
 ;Global PNxFPSBulletTimeActive
 ;Global PNxFPSBulletTimeKey
+
 float timer
-float suspendInMenu
+float apDamagePeriod
 
 int apRegen
 short vfx
 short toggle
-
-short apDamagePeriodMod
-
-ref messageBox
+short suspendInMenu
 
 ;Begin OnAdd Player
 
