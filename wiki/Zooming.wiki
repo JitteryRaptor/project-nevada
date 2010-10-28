@@ -1,5 +1,6 @@
+= ZRMain =
 
-== ZRMain ==
+== Script: ==
 {{{
 
 scn ZRMainScript
@@ -469,7 +470,9 @@ End
 
 }}}
 
+= ZRZoomType1 =
 
+== Script: ==
 
 {{{
 scn ZRZoomType1Script
@@ -562,6 +565,10 @@ set lastStep to step
 
 End
 }}}
+
+= ZRZoomType2a =
+
+== Script: ==
 
 {{{
 scn ZRZoomType2aScript
@@ -695,6 +702,10 @@ set lastFOV to curFOV
 
 End
 }}}
+
+= ZRZoomType2b =
+
+== Script: ==
 
 {{{
 scn ZRZoomType2bScript
