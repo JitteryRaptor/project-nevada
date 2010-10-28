@@ -1,6 +1,31 @@
 = ZRMain =
 
-== Script: ==
+== Stage 0 ==
+
+{{{
+; Clean up
+
+; Reset gamesettings to defaults
+con_SetGameSetting "fIronSightsFOVTimeChange", "0.25"
+con_SetGameSetting "fGunWobbleMultScope", "1.0"
+
+; Stop zooming scripts
+if getQuestRunning ZRZoomType1 == 1
+	set ZRZoomType1.stop to 1
+endif
+if getQuestRunning ZRZoomType2a == 1
+	set ZRZoomType2a.stop to 1
+endif
+if getQuestRunning ZRZoomType2b == 1
+	set ZRZoomType2b.stop to 1
+endif
+
+; Remove breath holding bonus
+player.dispel ZRHoldBreathBonus
+}}}
+
+== Script ==
+
 {{{
 
 scn ZRMainScript
@@ -705,7 +730,35 @@ End
 
 = ZRZoomType2b =
 
-== Script: ==
+== Stage 0 ==
+
+{{{
+; Write back
+
+ref weapon
+float defaultFOV
+
+set weapon to ZRZoomType2b.weapon 
+set defaultFOV to ZRZoomType2b.defaultFOV
+
+setWeaponSightFOV defaultFOV weapon
+}}}
+
+== Stage 1 ==
+
+{{{
+; Init
+
+ref tmpWeapon
+float tmpFOV
+
+set ZRZoomType2b.weapon to ZRmain.weapon
+set ZRZoomType2b.defaultFOV to ZRmain.weaponFOV
+set ZRZoomType2b.curFOV to ZRmain.weaponFOV
+set ZRZoomType2b.nextFOV to ZRmain.weaponFOV
+}}}
+
+== Script ==
 
 {{{
 scn ZRZoomType2bScript
