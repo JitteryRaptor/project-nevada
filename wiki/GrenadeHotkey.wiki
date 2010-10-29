@@ -15,6 +15,7 @@ short keydown 						;variable if key is being held down (1 or 0)
 short grenlistcount 				;counter for toggling through grenades
 short listcounter 					;counter where the grenade toggle is at
 short SwitchActive 					;check if grenade switching is active
+short RealAnimMult
 
 float grentimer 					;timer for equip animation to pass
 float throwtimer 					;timer for throw animation to pass
@@ -60,7 +61,7 @@ if  (throwactive==1)
 		set keydown to 0
 		set curkey to 0
 		set grentimer to 0
-		SetWeaponAnimMult 1 grentype
+		SetWeaponAnimMult RealAnimMult grentype
 		set throwtimer to throwtimer - Getsecondspassed
 			if(throwtimer<=0)
 				player.EquipItem grenweapon 0 1
@@ -92,6 +93,9 @@ if (iskeypressed PNxFPSGrenadeHotkey && throwactive==0 && player.getequippedobje
 		set grenweapon to player.GetEquippedObject 5
 	endif
         player.addperk PNxFPSFastEquipPerk
+        if GetWeaponAnimMult Grentype !=3
+                set RealAnimMult to GetWeaponAnimMult Grentype
+        endif
 	SetWeaponAnimMult 3 grentype
 	set throwactive to 1
 	set curkey to PNxFPSGrenadeHotkey
