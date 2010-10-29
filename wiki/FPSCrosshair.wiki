@@ -239,8 +239,6 @@ setUIFloat "HUDMainMenu\_PNXCrosshairSpread" totalSpread
 
 End
 
-}}}
-
 set IronSightsBase to getNumericGameSetting fGunSpreadIronSightsBas 
 set IronSightsMult to getNumericGameSetting fGunSpreadIronSightsMult 
 set ConditionBase to getNumericGamesetting fGunSpreadCondBase 
@@ -255,3 +253,5 @@ set SkillBaseSpread to GetNumericGameSetting fGunSpreadSkillBase
 set SkillMultSpread to GetNumericGameSetting fGunSpreadSkillMult 
 set Armbase to GetNumericGamesetting fGunSpreadArmBase 
 set ArmMult to GetNumericGamesetting fGunSpreadArmMult
+
+}}}
