@@ -29,10 +29,18 @@ Begin GameMode
 set grentype to listgetnthform PerkLooseCannonWeapons listcounter 	;sets the grenade to the Nth# of the formlist
 set grenlistcount to ListGetCount PerkLooseCannonWeapons -1			;checks the number of weapons in the grenadeformlist (-1 so the count is right)
 
-;set attackkey to getcontrol 4
-if(attackkey<=0) 
-	set attackkey to 256  					;sets default attackkey to mouse1
+set attackkey to getcontrol 4
+if attackkey == 0
+	set attackkey to 256
+elseif attackkey == 1
+	set attackkey to 257
+elseif attackkey == 2
+	set attackkey to 258
 endif
+
+;if(attackkey<=0) 
+;	set attackkey to 256  					;sets default attackkey to mouse1
+;endif
 
 if(PNxFPSGrenadeToggleKey <=0)
 	set PNxFPSGrenadeToggleKey to 35   		;sets default grenadetogglekey to H
@@ -57,6 +65,7 @@ if  (throwactive==1)
 			if(throwtimer<=0)
 				player.EquipItem grenweapon 0 1
 					if(player.GetEquippedObject 5==grenweapon)
+                                                player.removeperk PNxFPSFastEquipPerk
 						set throwactive to 0
 					endif
 			endif
@@ -82,6 +91,7 @@ if (iskeypressed PNxFPSGrenadeHotkey && throwactive==0 && player.getequippedobje
 	if(player.getequippedobject 5!=grentype)
 		set grenweapon to player.GetEquippedObject 5
 	endif
+        player.addperk PNxFPSFastEquipPerk
 	SetWeaponAnimMult 3 grentype
 	set throwactive to 1
 	set curkey to PNxFPSGrenadeHotkey
