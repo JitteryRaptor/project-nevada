@@ -1,38 +1,23 @@
-= ZRMain =
-
-== Stage 0 ==
+= PNxFPSZoomMain =
 
 {{{
-; Clean up
+scn PNxFPSZoomMainScript
 
-; Reset gamesettings to defaults
-con_SetGameSetting "fIronSightsFOVTimeChange", "0.25"
-con_SetGameSetting "fGunWobbleMultScope", "1.0"
+;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Control Flags
 
-; Stop zooming scripts
-if getQuestRunning ZRZoomType1 == 1
-	set ZRZoomType1.stop to 1
-endif
-if getQuestRunning ZRZoomType2a == 1
-	set ZRZoomType2a.stop to 1
-endif
-if getQuestRunning ZRZoomType2b == 1
-	set ZRZoomType2b.stop to 1
-endif
+short enableFreeZoom
+short stop
+short update
 
-; Remove breath holding bonus
-player.dispel ZRHoldBreathBonus
-}}}
-
-== Script ==
-
-{{{
-
-scn ZRMainScript
+;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Variables
 
 short init
-short zoomTrap
+short toggleTrap
 short keyTrap
+short zoomTrap
+short fovTrap 
 
 ; 1 = no weapon
 ; 2 = holstered weapon
@@ -43,51 +28,55 @@ short lastMode
 
 short zooming
 short reloading
-short holdingBreath
 
 float timer
 short recoveryTime 
 
+short zoomPressed
+short altZoomPressed 
+short zoomInPressed
+short zoomOutPressed
 short weaponFired
 short weaponReloaded
 
 ref weapon
 ref lastWeapon
-float weaponFOV
-float weaponRange
+float defaultFOV
+float curFOV
+float nextFOV
+float maxFOV
+float minFOV
+float stepSize
+float tickSize
+float bufferSize
 
-; 0 = optical single-step zoom
-; 1 = optical 2-step zoom
-; 2 = optical 3-step zoom (short range)
-; 3 = optical 3-step zoom (long range)
-; 4 = digital zoom
+; 0 = optical
+; 1 = digital
 short scopeType
-
-; Keys from event detection
-short zoomPressed
-short altZoomPressed 
-short holdBreathPressed
 
 ; 0 = mouse zoom, keyboard internal
 ; 1 = keyboard zoom, mouse internal
 short controlMode
 
-; External control
-short stop
-short update
-short sleep
-float sleepTime
+short zoomKey
+short altZoomKey
 
-;----------------------------------------------------------------------------------------------------------------------------------------------
-; Handle events
+float tmp
+
+
+;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Event Handling
 Begin GameMode
 
 ; Stop zoom on load
 if getGameLoaded == 1
 
 	set lastMode to 0
-	releaseKey ZRConfig.zoomKey
-	releaseKey ZRConfig.altZoomKey
+	releaseKey zoomKey
+	releaseKey altZoomKey
+
+	PNxFPSZoomDigitalLPRef.moveTo player
+	PNxFPSZoomDigitalLPRef.disable
 
 	return
 endif
@@ -96,12 +85,12 @@ endif
 if stop == 1
 	set stop to 0
 
-	releaseKey ZRConfig.zoomKey
-	releaseKey ZRConfig.altZoomKey
+	releaseKey zoomKey
+	releaseKey altZoomKey
 
-	setStage ZRMain 0 ; Clean up
-	resetQuest ZRMain
-	stopQuest ZRMain
+	setStage PNxFPSZoomMain 0 ; Clean up
+	resetQuest PNxFPSZoomMain 
+	stopQuest PNxFPSZoomMain 
 
 	return
 endif
@@ -113,30 +102,30 @@ if update == 1
 endif
 
 ; Just set, faster than running checks
-set ZRConfig.zoomKey to getControl 6
-set ZRConfig.altZoomKey to 256 + getAltControl 6
+set zoomKey to getControl 6
+set altZoomKey to 256 + getAltControl 6
 
 ; Clear flags
 set zoomPressed to 0
 set altZoomPressed to 0
-set holdBreathPressed to 0
-set weaponFired to 0
+set zoomInPressed to 0
+set zoomOutPressed to 0
 set weaponReloaded to 0
 
-if isKeyPressed  ZRConfig.zoomKey == 1
+if isKeyPressed zoomKey == 1
 	set zoomPressed to 1
 endif
 
-if isKeyPressed ZRConfig.altZoomKey == 1
+if isKeyPressed altZoomKey == 1
 	set altZoomPressed to 1
 endif
 
-if isKeyPressed ZRConfig.holdBreathKey == 1
-	set holdBreathPressed to 1
+if isKeyPressed PNxFPSZoomConfig.zoomInKey == 1
+	set zoomInPressed to 1
 endif
 
-if player.getAnimAction == 2
-	set weaponFired to 1
+if isKeyPressed PNxFPSZoomConfig.zoomOutKey == 1
+	set zoomOutPressed to 1
 endif
 
 if player.getAnimAction == 9
@@ -145,8 +134,8 @@ endif
 
 End
 
-;----------------------------------------------------------------------------------------------------------------------------------------------
-; Mode setting block
+;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Mode Setting
 Begin GameMode
 
 set weapon to player.getEquippedObject 5
@@ -169,144 +158,97 @@ endif
 if lastMode != mode || weapon != lastWeapon
 
 	; Clear up from previous zoom
-	releaseKey ZRConfig.zoomKey
-	releaseKey ZRConfig.altZoomKey
-	set zoomTrap to 0
+	releaseKey zoomKey
+	releaseKey altZoomKey
+	set toggleTrap to 0
 	set zooming to 0
 	set reloading to 0
 
-	; Use slower zoom speed when non-scoped
+	; Write back default FOV if last weapon was scoped
+	if lastWeapon != 0 && lastMode == 4
+		setWeaponSightFOV defaultFOV lastWeapon
+	endif
+
+	; Use slower weapon zoom speed when non-scoped
 	if mode == 1 || mode == 2 || mode == 3
 		con_SetGameSetting "fIronSightsFOVTimeChange", "0.25"
 
-		; Stop all zooming scripts
-		if getQuestRunning ZRZoomType1 == 1
-			set ZRZoomType1.stop to 1
-		endif
-		if getQuestRunning ZRZoomType2a == 1
-			set ZRZoomType2a.stop to 1
-		endif
-		if getQuestRunning ZRZoomType2b == 1
-			set ZRZoomType2b.stop to 1
-		endif
-
 	; Use instant zoom effect for scopes
 	else
-		set weaponFOV to getWeaponSightFOV weapon
-		set weaponRange to getWeaponMaxRange weapon
+		con_SetGameSetting "fIronSightsFOVTimeChange", "0.0"
 
-		if ZRConfig.digitalZoomMode != 0 && (listGetFormIndex ZRZoomType2Enabled weapon) != -1
-			con_SetGameSetting "fIronSightsFOVTimeChange", "0.0"
-			set scopeType to 4
-		else
-
-			if ZRConfig.slowZoom == 1
-				con_SetGameSetting "fIronSightsFOVTimeChange", "0.25"
-			else
-				con_SetGameSetting "fIronSightsFOVTimeChange", "0.0"
-			endif
-
-			; 3-step zoom (long range)
-			if weaponFOV <= 20
-				set scopeType to 3
-
-			; 3-step zoom (short range)
-			elseif weaponFOV <= 30
-				set scopeType to 2
-
-			; 2-step zoom
-			elseif weaponFOV <= 35
-				set scopeType to 1
-
-			; 1-step zoom
-			else
-				set scopeType to 0
-			endif
-		endif
+		set defaultFOV to getWeaponSightFOV weapon
 
 		; Optical zoom
-		if scopeType == 1 || scopeType == 2  || scopeType == 3
+		if (listGetFormIndex ZRZoomType2Enabled weapon) == -1
+			set scopeType to 0
+			set stepSize to 10
+			set bufferSize to 0
+			set tickSize to 0
 
-			; Stop digital zooming script
-			if ZRConfig.digitalZoomMode == 2
-				if getQuestRunning ZRZoomType2a == 1
-					set ZRZoomType2a.stop to 1
-				endif
-			elseif ZRConfig.digitalZoomMode == 1
-				if getQuestRunning ZRZoomType2b == 1
-					set ZRZoomType2b.stop to 1
-				endif
-			endif
-
-			; Start optical zooming script
-			if getQuestRunning ZRZoomType1 == 0
-				setStage ZRZoomType1 1
-				startQuest ZRZoomType1
-
-			; Reset running script
+			; sniper range
+			if defaultFOV <= 20
+				set maxFOV to 10
+				set curFOV to 20
+				set minFOV to 30
+	
+			; long range
+			elseif defaultFOV <= 30
+				set maxFOV to 20
+				set curFOV to 30
+				set minFOV to 40
+	
+			; medium range
+			elseif defaultFOV <= 35
+				set maxFOV to 30
+				set curFOV to 30
+				set minFOV to 40
+	
+			; short range
 			else
-				setStage ZRZoomType1 0
-				setStage ZRZoomType1 1
-
-			endif
+				set maxFOV to 40
+				set curFOV to 40
+				set minFOV to 40
+			endif			
 
 		; Digital zoom
-		elseif scopeType == 4
+		else
+			set scopeType to 1
+			set stepSize to 5
+			set bufferSize to 10
+			set tickSize to 0.5
 
-			; Stop optical zooming script
-			if getQuestRunning ZRZoomType1 == 1
-				set ZRZoomType1.stop to 1
+			; sniper range
+			if defaultFOV <= 20
+				set maxFOV to 10
+				set curFOV to 20
+				set minFOV to 40
+	
+			; long range
+			elseif defaultFOV <= 30
+				set maxFOV to 20
+				set curFOV to 30
+				set minFOV to 40
+	
+			; medium range
+			elseif defaultFOV <= 35
+				set maxFOV to 30
+				set curFOV to 40
+				set minFOV to 45
+	
+			; short range
+			else
+				set maxFOV to 40
+				set curFOV to 45
+				set minFOV to 50
 			endif
-
-			if ZRConfig.digitalZoomMode == 2
-
-				; Stop digital zooming script b
-				if getQuestRunning ZRZoomType2b == 1
-					set ZRZoomType2b.stop to 1
-				endif
-
-				; Start digital zooming script a
-				if getQuestRunning ZRZoomType2a == 0
-					setStage ZRZoomType2a 1
-					startQuest ZRZoomType2a
-
-				; Reset running script a
-				else
-					setStage ZRZoomType2a 0
-					setStage ZRZoomType2a 1
-				endif
-
-			elseif ZRConfig.digitalZoomMode == 1
-
-				; Stop digital zooming script a
-				if getQuestRunning ZRZoomType2a == 1
-					set ZRZoomType2a.stop to 1
-				endif
-
-				; Start digital zooming script b
-				if getQuestRunning ZRZoomType2b == 0
-					setStage ZRZoomType2b 1
-					startQuest ZRZoomType2b
-
-				; Reset running script b
-				else
-					setStage ZRZoomType2b 0
-					setStage ZRZoomType2b 1
-				endif
-
-			endif
-
 		endif
 
-	endif
+		; Init with starting FOV
+		setWeaponSightFOV curFOV, weapon
+		set nextFOV to curFOV 
 
-	; Reset zoom when mode changed while zooming
-;	if zooming == 1
-;		releaseKey ZRConfig.zoomKey
-;		releaseKey ZRConfig.altZoomKey
-;		set zoomTrap to 0
-;		set zooming to 0
-;	endif
+	endif
 
 endif
 
@@ -315,109 +257,13 @@ set lastWeapon to weapon
 
 End
 
-;----------------------------------------------------------------------------------------------------------------------------------------------
-; Hold breath block
-Begin GameMode
-
-; Start holding breath
-if holdingBreath == 0 && recoveryTime == 0 && mode == 4 && zooming == 1 && holdBreathPressed == 1 && weaponFired == 0 ; player.getAnimAction != 2
-	set holdingBreath to 1
-	player.castimmediateonself ZRHoldBreathBonus
-	set timer to 1
-	set recoveryTime to 2 ; Start with 2 seconds minimum recovery time
-
-	if getPCIsSex Female == 1
-		playSound ZRHoldBreathFemale
-	else
-		playSound ZRHoldBreath
-	endif
-
-	; Clear flag
-	;set ZREventDetection.weaponFired to 0
-
-; Already holding breath or recovering
-else
-	if recoveryTime > 0
-		if timer > 0
-			set timer to timer - getSecondsPassed
-		else
-			set timer to 1
-
-			; Get qeued weapon flag
-			;set weaponFired to ZREventDetection.weaponFired
-
-			; Stop holding breath
-			if holdBreathPressed == 0 || zooming == 0 || mode != 4 || weaponFired == 1
-				if holdingBreath == 1
-					set holdingBreath to 0
-					player.dispel ZRHoldBreathBonus
-			
-					if recoveryTime >= 4
-						if getPCIsSex Female == 1
-							playSound ZRReleaseBreathMediumFemale
-						else
-							playSound ZRReleaseBreathMedium
-						endif
-					else
-						if getPCIsSex Female == 1
-							playSound ZRReleaseBreathShortFemale
-						else
-							playSound ZRReleaseBreathShort
-						endif
-					endif
-				endif
-			endif
-
-			; Clear flag
-			;set ZREventDetection.weaponFired to 0
-
-			; Recover
-			if holdingBreath == 0
-				if recoveryTime >= 4
-					con_SetGameSetting "fGunWobbleMultScope", "4.0"
-				elseif recoveryTime >= 3
-					con_SetGameSetting "fGunWobbleMultScope", "3.0"
-				elseif recoveryTime >= 2
-					con_SetGameSetting "fGunWobbleMultScope", "2.0"
-				elseif recoveryTime >= 1
-					con_SetGameSetting "fGunWobbleMultScope", "1.0"
-				endif
-
-				set recoveryTime to recoveryTime - 1
-
-			; Keep Holding
-			else
-				if recoveryTime >= 6
-					set holdingBreath to 0
-					player.dispel ZRHoldBreathBonus
-					con_SetGameSetting "fGunWobbleMultScope", "4.0"
-
-					if getPCIsSex Female == 1
-						playSound ZRReleaseBreathLongFemale
-					else
-						playSound ZRReleaseBreathLong
-					endif
-				else
-					set timer to 1
-					set recoveryTime to recoveryTime + 1
-					playSound ZRHeartBeat
-				endif
-			endif
-		endif
-	endif
-endif
-
-
-
-End
-
-;----------------------------------------------------------------------------------------------------------------------------------------------
-; Main block
+;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Zoom Toggle
 Begin GameMode
 
 ;---------------------------------------------------------------
 ; Default  zooming behaviour
-if mode == 1 || mode == 2 || (mode == 3 && ZRConfig.toggleNonScoped == 0) || (mode == 4 && ZRConfig.toggleScoped == 0)
+if mode == 1 || mode == 2 || (mode == 3 && PNxFPSZoomConfig.toggleNonScoped == 0) || (mode == 4 && PNxFPSZoomConfig.toggleScoped == 0)
 	if zoomPressed == 1 || altZoomPressed == 1
 		set zooming to 1
 	else
@@ -428,10 +274,10 @@ if mode == 1 || mode == 2 || (mode == 3 && ZRConfig.toggleNonScoped == 0) || (mo
 
 ;---------------------------------------------------------------
 ; Toggle zooming
-elseif mode == 4 || (mode == 3 && ZRConfig.toggleNonScoped == 1) || (mode == 4 && ZRConfig.toggleScoped == 1)
+elseif mode == 4 || (mode == 3 && PNxFPSZoomConfig.toggleNonScoped == 1) || (mode == 4 && PNxFPSZoomConfig.toggleScoped == 1)
 
 	; Decide which key to use as primary zoom
-	if zooming == 0 && reloading == 0 && zoomTrap == 0
+	if zooming == 0 && reloading == 0 && toggleTrap == 0
 		if altZoomPressed == 1
 			set controlMode to 0
 		elseif zoomPressed == 1
@@ -441,378 +287,71 @@ elseif mode == 4 || (mode == 3 && ZRConfig.toggleNonScoped == 1) || (mode == 4 &
 
 	; Toggle
 	if (altZoomPressed && controlMode == 0 ) || (zoomPressed && controlMode == 1)
-		if zoomTrap == 0
-			set zoomTrap to 1
+		if toggleTrap == 0
+			set toggleTrap to 1
 
 			; Zoom in
 			if zooming == 0
 				if controlMode == 0
-					holdKey ZRConfig.zoomKey
+					holdKey zoomKey
 				else
-					holdKey ZRConfig.altZoomKey
+					holdKey altZoomKey
 				endif
 				set zooming to 1
 
 			; Zoom out
 			else
-				releaseKey ZRConfig.zoomKey
-				releaseKey ZRConfig.altZoomKey
+				releaseKey zoomKey
+				releaseKey altZoomKey
 				set zooming to 0
 			endif
 		endif
 
 	else
-		if zoomTrap == 1
-			set zoomTrap to 0
+		if toggleTrap == 1
+			set toggleTrap to 0
 		endif
 	endif
 
 	; Handle reload
 	if weaponReloaded == 1
 		if zooming == 1 && reloading == 0
-			releaseKey ZRConfig.zoomKey
-			releaseKey ZRConfig.altZoomKey
+			releaseKey zoomKey
+			releaseKey altZoomKey
 			set zooming to 0
 			set reloading to 1
 		endif
 	else
 		if reloading == 1
 			if controlMode == 0
-				holdKey ZRConfig.zoomKey
+				holdKey zoomKey
 			else
-				holdKey ZRConfig.altZoomKey
+				holdKey altZoomKey
 			endif
 			set zooming to 1
 			set reloading to 0
 		endif
 	endif
 
-	return
-
 endif
 
 End
 
-}}}
 
-= ZRZoomType1 =
-
-== Script: ==
-
-{{{
-scn ZRZoomType1Script
-
-; Zooming in discrete steps
-
-short zoomTrap
-
-ref weapon
-float defaultFOV
-
-; 1: 2-step zoom
-; 2: 3-step zoom
-short maxStep
-
-short fovStep0
-short fovStep1
-short fovStep2
-
-short step
-short lastStep
-float tmp
-
-short zoomInPressed
-short zoomOutPressed
-
-short stop
-
-;----------------------------------------------------------------------------------------------------------------------------------------------
-; Process events
+;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Change Zoom Level
 Begin GameMode
 
-if stop == 1
-	set stop to 0
-	setStage ZRZoomType1 0
-	stopQuest ZRZoomType1
+if mode != 4
 	return
 endif
 
-; Clear flags
-set zoomInPressed to 0
-set zoomOutPressed to 0
-
-if isKeyPressed ZRConfig.zoomInKey == 1
-	set zoomInPressed to 1
-endif
-
-if isKeyPressed ZRConfig.zoomOutKey == 1
-	set zoomOutPressed to 1
-endif
-
-
-if ZRMain.zooming == 0
-	return
-endif
-
-if zoomInPressed == 1
-	if zoomTrap == 0 && step < maxStep
-		set zoomTrap to 1
-		set step to step + 1
-		playSound OBJSwitchElevator
-		imod ZRZoomBlur 
-	endif
-elseif zoomOutPressed == 1
-	if zoomTrap == 0 && step > 0
-		set zoomTrap to 1
-		set step to step - 1
-		playSound OBJSwitchElevator
-		imod ZRZoomBlur 
-	endif
-else
+if zooming == 0
+	set fovTrap to 0
 	set zoomTrap to 0
-endif
 
-if step == lastStep
-	return
-endif
+	PNxFPSZoomDigitalLPRef.disable
 
-if step == 0
-	set tmp to fovStep0
-elseif step == 1
-	set tmp to fovStep1
-elseif step == 2
-	set tmp to fovStep2
-endif
-
-setWeaponSightFOV tmp, weapon	
-
-set lastStep to step
-
-End
-}}}
-
-= ZRZoomType2a =
-
-== Script: ==
-
-{{{
-scn ZRZoomType2aScript
-
-; Continuous zooming, auto-mode
-
-short zoomTrap
-
-ref weapon
-float defaultFOV
-float curFOV
-float lastFOV
-
-; 0 - disabled
-; 1 - auto zoom in
-; 2 - auto zoom out
-short auto
-
-; 0 - normal
-; 1 - double
-short speed
-
-; normal - 0.25
-; double - 0.5
-float inc
-
-short zoomInPressed
-short zoomOutPressed
-
-short stop
-
-;----------------------------------------------------------------------------------------------------------------------------------------------
-; Process events
-Begin GameMode
-
-if stop == 1
-	set stop to 0
-	setStage ZRZoomType2a 0
-	stopQuest ZRZoomType2a
-	return
-endif
-
-if getGameLoaded == 1
-	ZRDigitalZoomStartRef.moveTo player
-	ZRDigitalZoomStartRef.disable
-endif
-
-; Clear flags
-set zoomInPressed to 0
-set zoomOutPressed to 0
-
-if isKeyPressed ZRConfig.zoomInKey == 1
-	set zoomInPressed to 1
-endif
-
-if isKeyPressed ZRConfig.zoomOutKey == 1
-	set zoomOutPressed to 1
-endif
-
-
-if ZRMain.zooming == 0
-	if auto == 0
-		return	
-	else
-		set auto to 0
-		ZRDigitalZoomStartRef.disable
-		return
-	endif
-endif
-
-if zoomInPressed == 1 && (auto != 1 || speed == 0)
-	if auto == 1
-		set speed to 1
-		set inc to 0.5
-	elseif auto == 2
-		set auto to 0
-		player.playsound ZRDigitalZoomEnd
-		ZRDigitalZoomStartRef.disable
-	else
-		set auto to 1
-		set speed to 0
-		set inc to 0.25
-	endif
-
-elseif zoomOutPressed == 1 && (auto != 2 || speed == 0)
-	if auto == 2
-		set speed to 1
-		set inc to 0.5
-	elseif auto == 1
-		set auto to 0
-		player.playsound ZRDigitalZoomEnd
-		ZRDigitalZoomStartRef.disable
-	else
-		set auto to 2
-		set speed to 0
-		set inc to 0.25
-	endif
-endif
-
-; auto mode
-if auto == 1
-	if curFOV > 10
-		set curFOV to curFOV - inc
-		ZRDigitalZoomStartRef.moveTo player
-		ZRDigitalZoomStartRef.enable
-	else
-		set auto to 0
-		player.playsound ZRDigitalZoomEnd
-		ZRDigitalZoomStartRef.disable
-	endif
-
-elseif auto == 2
-	if curFOV < 45
-		set curFOV to curFOV + inc
-		ZRDigitalZoomStartRef.moveTo player
-		ZRDigitalZoomStartRef.enable
-	else
-		set auto to 0
-		player.playsound ZRDigitalZoomEnd
-		ZRDigitalZoomStartRef.disable
-	endif
-endif
-
-if lastFOV == curFOV 
-	return
-endif
-
-setWeaponSightFOV curFOV , weapon	
-
-set lastFOV to curFOV 
-
-End
-}}}
-
-= ZRZoomType2b =
-
-== Stage 0 ==
-
-{{{
-; Write back
-
-ref weapon
-float defaultFOV
-
-set weapon to ZRZoomType2b.weapon 
-set defaultFOV to ZRZoomType2b.defaultFOV
-
-setWeaponSightFOV defaultFOV weapon
-}}}
-
-== Stage 1 ==
-
-{{{
-; Init
-
-ref tmpWeapon
-float tmpFOV
-
-set ZRZoomType2b.weapon to ZRmain.weapon
-set ZRZoomType2b.defaultFOV to ZRmain.weaponFOV
-set ZRZoomType2b.curFOV to ZRmain.weaponFOV
-set ZRZoomType2b.nextFOV to ZRmain.weaponFOV
-}}}
-
-== Script ==
-
-{{{
-scn ZRZoomType2bScript
-
-; Continuous zooming, manual mode
-
-short zoomTrap
-
-ref weapon
-float defaultFOV
-float curFOV
-float nextFOV
-
-short zoomInPressed
-short zoomOutPressed
-
-float tmp
-short trap
-
-short stop
-
-
-;----------------------------------------------------------------------------------------------------------------------------------------------
-; Process events
-Begin GameMode
-
-if stop == 1
-	set stop to 0
-	setStage ZRZoomType2b 0
-	stopQuest ZRZoomType2b
-	return
-endif
-
-if getGameLoaded == 1
-	ZRDigitalZoomStartRef.moveTo player
-	ZRDigitalZoomStartRef.disable
-endif
-
-; Clear flags
-set zoomInPressed to 0
-set zoomOutPressed to 0
-
-if isKeyPressed ZRConfig.zoomInKey == 1
-	set zoomInPressed to 1
-endif
-
-if isKeyPressed ZRConfig.zoomOutKey == 1
-	set zoomOutPressed to 1
-endif
-
-
-if ZRMain.zooming == 0
-	set trap to 0
-	ZRDigitalZoomStartRef.disable
 	set nextFOV to curFOV
 	return	
 endif
@@ -822,51 +361,74 @@ set tmp to abs tmp
 
 if zoomInPressed == 1
 
-	if nextFOV > 10 && tmp < 10
-		set nextFOV to nextFOV - 5
+	if nextFOV > maxFOV && zoomTrap == 0 && (bufferSize == 0 || tmp < bufferSize)
+			set nextFOV to nextFOV - stepSize
+			if bufferSize == 0
+				set zoomTrap to 1
+			endif
 	endif
 
 elseif zoomOutPressed == 1
 
-	if nextFOV < 45 && tmp < 10
-		set nextFOV to nextFOV + 5
+	if nextFOV < minFOV && zoomTrap == 0 && (bufferSize == 0 || tmp < bufferSize)
+		set nextFOV to nextFOV + stepSize
+		if bufferSize == 0
+			set zoomTrap to 1
+		endif
 	endif
+
+else
+	set zoomTrap to 0
 endif
 
 set tmp to nextFOV - curFOV
 
-if tmp > 0
-	set curFOV to curFOV + 0.5
+if tmp != 0
 
-	if nextFOV < curFOV
+	; Lazy zoom
+	if tickSize > 0
+		if tmp > 0
+			set curFOV to curFOV + tickSize
+
+			if nextFOV < curFOV
+				set curFOV to nextFOV
+			endif
+		else
+			set curFOV to curFOV - tickSize
+
+			if nextFOV > curFOV
+				set curFOV to nextFOV
+			endif
+		endif
+
+	; Instant zoom
+	else
 		set curFOV to nextFOV
 	endif
 
-	set trap to 1
-	ZRDigitalZoomStartRef.moveTo player
-	ZRDigitalZoomStartRef.enable
+	set fovTrap to 1
 
-elseif tmp < 0
-	set curFOV to curFOV - 0.5
-
-	if nextFOV > curFOV
-		set curFOV to nextFOV
+	if scopeType == 0
+		imod PNxFPSZoomScopeBlurISFX
+		playSound OBJSwitchElevator
+	else
+		PNxFPSZoomDigitalLPRef.moveTo player
+		PNxFPSZoomDigitalLPRef.enable
 	endif
 
-	set trap to 1
-	ZRDigitalZoomStartRef.moveTo player
-	ZRDigitalZoomStartRef.enable
+	setWeaponSightFOV curFOV, weapon
 
 else
-	if trap == 1
-		set trap to 0
-		player.playsound ZRDigitalZoomEnd
-		ZRDigitalZoomStartRef.disable
-	endif
-	return
-endif
 
-setWeaponSightFOV curFOV , weapon
+	if fovTrap == 1
+		set fovTrap to 0
+
+		if scopeType == 1
+			player.playsound UIVATSSelectTargetPart
+			PNxFPSZoomDigitalLPRef.disable
+		endif
+	endif
+endif
 
 End
 }}}
