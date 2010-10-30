@@ -28,9 +28,9 @@ Enhance FPS Gameplay via new scripted Gameplay Elements
 
 ===Grenade Hotkey===
  * Test with new weapons
- * Better attack key detection
- * Remove/Shorten equip animation
- * Implement new Icons
+ * Better attack key detection (hopefully with NVSE version)
+ * Remove/Shorten equip animation (solved via termporary perk)
+ * Implement new Icons (created by T3T)
  * Update HUD to be compatible with DUI
 
 
