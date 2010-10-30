@@ -24,12 +24,10 @@ short isAPLow
 short isBreathing
 
 ;View bob variables
-short enableHeadBob
 float shakeTimer
 ref explosionRef
 
 ;FOV variables
-short enableFOVChange
 float defaultFOV
 float default1stPersonFOV
 short FOVChange
@@ -56,7 +54,6 @@ short delay
 float defaultFOV
 float default1stPersonFOV
 
-
 ; Global
 float SprintAPMult
 float SprintSpeedMult
@@ -74,37 +71,37 @@ if (customKey == 0)
 endif
 
 ;Sounds
-if (isSprinting == 1 && enableSounds == 1)
-	if (isBreathing == 0 && player.getAV actionPoints < player.getBaseAV actionPoints / 4 && breatheTimer <= 0)
-		set isBreathing to 1
-	endif
-endif
-
-if (breatheTimer > 0)
-	set breatheTimer to breatheTimer - getSecondsPassed
-else
-	if (isBreathing == 1)
-		if (player.getav actionPoints < player.getbaseav actionPoints / 4)
-			if (getPCIsSex Male == 1)
-				playSound PNXFBSprintBreatheLoop
-			else
-				playSound PNXFBSprintFemaleBreatheLoop
-			endif
-			set breatheTimer to 8
-		else
-			if (getPCIsSex Male == 1)
-				playSound PNXFBSprintBreatheEnd
-			else
-				playSound PNXFBSprintFemaleBreatheEnd
-			endif
-			set isBreathing to 0
-			set breatheTimer to 10
-		endif
-	endif
-endif
+;if (isSprinting == 1 && enableSounds == 1)
+;	if (isBreathing == 0 && player.getAV actionPoints < player.getBaseAV actionPoints / 4 && breatheTimer <= 0)
+;		set isBreathing to 1
+;	endif
+;endif
+;
+;if (breatheTimer > 0)
+;	set breatheTimer to breatheTimer - getSecondsPassed
+;else
+;	if (isBreathing == 1)
+;		if (player.getav actionPoints < player.getbaseav actionPoints / 4)
+;			if (getPCIsSex Male == 1)
+;				playSound PNXFBSprintBreatheLoop
+;			else
+;				playSound PNXFBSprintFemaleBreatheLoop
+;			endif
+;			set breatheTimer to 8
+;		else
+;			if (getPCIsSex Male == 1)
+;				playSound PNXFBSprintBreatheEnd
+;			else
+;				playSound PNXFBSprintFemaleBreatheEnd
+;			endif
+;			set isBreathing to 0
+;			set breatheTimer to 10
+;		endif
+;	endif
+;endif
 
 ;Triggers a HUD shudder regularly while sprinting
-if (isSprinting == 1 && shakeTimer < 0 && enableHeadBob == 1)
+if (isSprinting == 1 && shakeTimer < 0)
 	set explosionRef to player.placeAtMe PNXFBSprintExplosion	
 	explosionRef.disable
 	explosionRef.markForDelete	
@@ -209,15 +206,15 @@ if (isSprinting == 0 && isKeyPressed runKey == 1 && player.isMoving == 1 && play
 	set sprintSpeed to (player.getav agility * 8 + 40 * (1 - .75 * player.getAV inventoryWeight / player.getAV carryWeight)) * SprintSpeedMult
 	player.modAV SpeedMult sprintSpeed
 	
-	if (enableFOVChange == 1)
-		if (FOVChange == 0)
-			set defaultFOV to GetNumericIniSetting "fDefaultWorldFOV:display"
-			set default1stPersonFOV to GetNumericIniSetting "fDefault1stPersonFOV:display"
-		endif
-		set FOVChange to 1
-		set currentFOV to defaultFOV
-		set FOVIncrease to sprintSpeed / 10
+	
+	if (FOVChange == 0)
+		set defaultFOV to GetNumericIniSetting "fDefaultWorldFOV:display"
+		set default1stPersonFOV to GetNumericIniSetting "fDefault1stPersonFOV:display"
 	endif
+	set FOVChange to 1
+	set currentFOV to defaultFOV
+	set FOVIncrease to sprintSpeed / 10
+
 
 	player.damageAV LeftMobilityCondition 1 ;Damages the player's leg in order to force the game to reevaluate the player's speed
 	set healOnce to 1
@@ -261,9 +258,7 @@ if (isSprinting == 1 && (player.isMoving == 0 || isKeyPressed runKey == 0 || pla
 		set sprintSpeed to sprintSpeed  * -1
 		player.modAV SpeedMult sprintSpeed
 
-		if (enableFOVChange == 1)
-			set FOVChange to -1
-		endif
+		set FOVChange to -1
 		
 		player.Damageav LeftMobilityCondition 1
 		set healOnce to 1
