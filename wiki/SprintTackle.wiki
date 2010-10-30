@@ -38,15 +38,15 @@ if(SprintSettings.isSprinting == 1)
 			
 			player.damageav actionPoints tackleAP
 
-			set playerTackle to player.getav unarmed / 10 + player.getav strength + (1 + 0.3 * GetRandompercent)
-			set enemyTackle to tackleRef.getav strength + tackleRef.getav endurance + 15
+			set playerTackle to player.getav unarmed / 10 + player.getav strength + (1 + 0.1 * GetRandompercent)
+			set enemyTackle to tackleRef.getav strength + tackleRef.getav endurance + 5
 	
-			if(playerTackle > enemyTackle) && enemyTackle > 15 && Player.IsInCombat
+			if(playerTackle > enemyTackle) && enemyTackle > 5 && Player.IsInCombat
 				player.pushActorAway tackleRef 2
-			elseif(enemyTackle > playerTackle + 15) && Player.IsInCombat
+			elseif(enemyTackle > playerTackle + 5) && Player.IsInCombat
 ;				tackleRef.pushActorAway player 1
 				player.pushactoraway myself 1
-			elseif enemyTackle == 15
+			elseif enemyTackle <= 5
 				player.pushactoraway myself 1
 			endif
 		endif
