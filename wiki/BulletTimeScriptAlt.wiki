@@ -9,11 +9,13 @@ ScriptName PNxFPSBulletTimeScript
 
 float timer
 float apDamagePeriod
+float timefactor
 
 int apRegen
 short vfx
 short toggle
 short suspendInMenu
+short apDamage
 
 ;Begin OnAdd Player
 
@@ -26,30 +28,28 @@ short suspendInMenu
 ;End
 
 
-Begin OnDeath Player
-        ; on player death make sure ap is restored and
-        ; time is back to normal
-        sgtm 1
-        set PNxFPSBulletTimeON to 0
-End
+;Begin OnDeath Player
+;        ; on player death make sure ap is restored and
+;        ; time is back to normal
+;        sgtm 1
+;        set PNxFPSBulletTimeON to 0
+;End
 
 Begin Menumode
    if (PNxFPSBulletTimeActive == 1 && suspendInMenu != 1)
         set suspendInMenu to 1
         set PNxFPSBulletTimeActive to 0
 
-        if (vfx== 0)
-            rimod MS10DrinkSap02ISFX
-        elseif (vfx== 1)
-            rimod TranquilityLaneISFX
-        elseif (vfx== 2)
-            rimod DKBlue
-        endif
+        rimod PNxFPSBulletTimeISFX
+        
         sgtm 1
     endif
-Endf
+End
 
 Begin GameMode
+       set apDamagePeriod to 0.10
+       set timeFactor to 0.30
+       set apDamage to -5
 
         ; Store key in questvar for conflict detection
         if (PNxFPSBulletTimeKey > 0)
@@ -74,26 +74,17 @@ Begin GameMode
                 if (suspendInMenu == 1)
                         set suspendInMenu to 0
                 else
-                        playsound UIVATSCameraIn
-                        TriggerHitShader 0.5
-                        set apRegen to GetGameSetting fActionPointsRestoreRate
-            con_SetGameSetting fActionPointsRestoreRate, 0
-
-                        endif
-
+                    playsound UIVATSCameraIn
+                    TriggerHitShader 0.5
+                    set apRegen to GetGameSetting fActionPointsRestoreRate
+				SetNumericGameSetting fActionPointsRestoreRate, 0
                 endif
 
                 set PNxFPSBulletTimeActive to 1
                 sgtm timeFactor
                 set timer to 0
 
-                if (vfx== 0)
-                        imod MS10DrinkSap02ISFX, 0.5
-                elseif (vfx== 1)
-                        imod TranquilityLaneISFX, 0.4
-                elseif (vfx== 2)
-                        imod DKBlue, 0.5
-                endif
+                imod PNxFPSBulletTimeISFX
 
         endIf
 
@@ -118,18 +109,12 @@ Begin GameMode
                         ; FX, sound and shader
                         playsound UIVATSCameraOut
                         TriggerHitShader 0.75
-                        con_SetGameSetting fActionPointsRestoreRate, apregen
+                        SetNumericGameSetting fActionPointsRestoreRate, apregen
                         
                         ; turn off the appropriate effect
-                        if (vfx == 0)
-                                rimod MS10DrinkSap02ISFX
-                        elseif (vfx == 1)
-                                rimod TranquilityLaneISFX
-                        elseif (vfx == 2)
-                                rimod DKBlue
-                        endif
+						rimod PNxFPSBulletTimeISFX
 
-                endIf
-        endIf
+                endif
+        endif
 End
 }}}
