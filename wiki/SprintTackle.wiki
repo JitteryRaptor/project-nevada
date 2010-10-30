@@ -5,6 +5,7 @@
 
 scn SprintPerkTackleScript
 
+ref tempref
 ref tackleRef
 ref explosionRef
 ref myself
@@ -19,12 +20,15 @@ if(SprintSettings.isSprinting == 1)
 	if getgs fAutoAimScreenPercentage==10 ;Autoaim enabled (vanilla)
 		set tackleRef to player.getCombatTarget
 	else ;Autoaim disabled
-		set tackleRef to player.getcrosshairref
+		set tempref to player.getcrosshairref
+		if tempref.isactor==1 && tempref.getdead==0
+			set tackleRef to player.getcrosshairref
+		endif
 	endif
 	set myself to GetSelf
 
 	if(tackleRef != 0)
-		set tackleAP to player.getBaseav actionPoints / 4
+		set tackleAP to player.getBaseav actionPoints / 8
 		if(tackleRef.getDistance player < 100 && player.getav actionPoints > tackleAP)
 			set SprintSettings.timeOut to 2
 			playSound FXMeleeTrapImpact
