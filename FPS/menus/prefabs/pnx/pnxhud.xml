@@ -78,6 +78,8 @@
 
 <_PNxBTMeterEnabled> 0 </_PNxBTMeterEnabled>
 <_PNxBTMeterAmount> 0 </_PNxBTMeterAmount>
+<_PNxBTMeterIcon> 1 </_PNxBTMeterIcon>
+<_PNxBTMeterPulse> 0 </_PNxBTMeterPulse>
 
 <!-- ######################################################################################## Vision Mode meter -->
 <rect name="PNXVMMeter">
@@ -817,26 +819,42 @@
 		<eq> 1 </eq>
 		<and src="io()" trait="_HUDMode" />
 	</visible>
+	
+	<x>
+		<copy src="screen()" trait="width" />
+		<mul> 0.74 </mul>
+	</x>
+	<y>
+		<copy src="screen()" trait="height" />
+		<mul> 0.94 </mul>
+	</y>
+	<width> 100 </width>
+	<height> 100 </height>
+	
+
 	<image name="PNxBTMeterImage">
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
 		
-		<width> 128 </width>
-		<height> 128 </height>
-		
 		<x>
-			<copy src="screen()" trait="width" />
-			<div> 2 </div>
+			<copy src="parent()" trait="x" />
 			<sub>
 				<copy src="me()" trait="width" />
 				<div> 2 </div>
 			</sub>
 		</x>
 		<y>
-			<copy src="screen()" trait="height" />
-			<mul> 0.25 </mul>
-			<sub src="me()" trait="height" />
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
 		</y>
+		
+		<width> <copy src="parent()" trait="width" /> </width>
+		<height> <copy src="parent()" trait="height" /> </height>
+		
+		<alpha> 180 </alpha>
 
 		<filename>
 			<copy src="io()" trait="_PNxBTMeterAmount" />
@@ -853,7 +871,86 @@
 		<_filename_8> pnx\timemeter8.dds </_filename_8>
 		<_filename_9> pnx\timemeter9.dds </_filename_9>
 		<_filename_10> pnx\timemeter10.dds </_filename_10>
+	</image>
+	
+	<image name="PNxBTMeterPulseImage">
+		<zoom> &scale; </zoom>
+		<depth> -1 </depth>
 		
+		<visible>
+			&false;
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+			<mul>
+				<copy> 1.1 </copy>
+				<mul src="io()" trait="_PNxBTMeterPulse" />
+			</mul>	
+		</width>
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul>
+				<copy> 1.1 </copy>
+				<mul src="io()" trait="_PNxBTMeterPulse" />
+			</mul>
+		</height>
+		
+		<alpha> 180 </alpha>
+
+		<filename> pnx\timemeter0.dds </filename>
+	</image>
+	
+	<image name="PNxBTMeterStatusIcon">
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<visible>
+			<copy src="io()" trait="_PNxBTMeterIcon" />
+			<gt> 0 </gt>
+		</visible>
+	
+		<zoom> &scale; </zoom>
+		<depth> 1 </depth>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		<width> <copy src="parent()" trait="width" /> </width>
+		<height> <copy src="parent()" trait="height" /> </height>
+		
+		<alpha> 180 </alpha>
+
+		<filename>
+			<copy src="io()" trait="_PNxBTMeterIcon" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
+		<_filename_1> pnx\timemeter_lowap.dds </_filename_1>
 	</image>
 
 </rect>
