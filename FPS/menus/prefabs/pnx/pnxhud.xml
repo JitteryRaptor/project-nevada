@@ -988,10 +988,11 @@
 		
 		<width>
 			<copy src="io()" trait="_PNXCalibratorSize" />
+			<div> 2 </div>
 		</width>
 		
 		<height>
-			<copy src="io()" trait="_PNXCalibratorSize" />
+			<copy src="me()" trait="width" />
 		</height>
 		
 		<x>
