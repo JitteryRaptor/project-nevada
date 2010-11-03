@@ -1,290 +1,342 @@
-*PNXFTSprintMain*
-
 {{{
 
-scn PNXFBSprintMainScript
+scn PNxCSprintMainScript
 
 ;Sprint variables
-short enableStrafe
-short enableBlur
-short isSprinting
 float sprintSpeed
-short healOnce
-short weaponsOut
-float timeOut
+short healTrap
 
-;AP drain variables
+float cooldown
+
 short apTick
 float apTimer
 
-;Sound variables
-short enableSounds
 float breatheTimer
-short isAPLow
 short isBreathing
 
-;View bob variables
 float shakeTimer
-ref explosionRef
 
-;FOV variables
 float defaultFOV
 float default1stPersonFOV
-short FOVChange
-float currentFOV
-float FOVIncrease
+float curFOV
+float nextFOV
+short fovTrap
 
-;Controls
-short sneakKey
 float sensitivity
+short sprintKey
+
+short sprintPressed
+short attackPressed
+short blockPressed
+
 short reSneak
-short reEqpWep
-float reEqpWepTimer
 short reWalk
+short reWeapon
+float reWeaponTimer
 
-; SprintSettings.
-
-short tackleMode
-short turnRad 
-
-short customKey
-short runKey
-short delay
-
-float defaultFOV
-float default1stPersonFOV
-
-; Global
-float SprintAPMult
-float SprintSpeedMult
+short state
 
 
+
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Event detection
 Begin GameMode
 
-;Set controls
-if (customKey == 0)
-	if (getControl 9 != -1)
-		set runKey to getControl 9
-	elseif (isKeyPressed runKey == 0)
-		setControl 9 runKey
+; Set sprint key to current run key
+if getControl 9 != -1
+	set sprintKey to getControl 9
+elseif isKeyPressed sprintKey == 0
+	setControl 9 sprintKey 
+endif
+
+; Detect sprint keypress
+if isKeyPressed sprintKey == 1
+	set sprintPressed to 1
+else
+	set sprintPressed to 0	
+endif
+
+; Detect attack keypress
+if isControlPressed 4 == 1
+	set attackPressed to 1
+else
+	set attackPressed to 0	
+endif
+
+; Detect block keypress
+if isControlPressed 6 == 1
+	set blockPressed to 1
+else
+	set blockPressed to 0	
+endif
+
+End
+
+
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Breathing sounds
+Begin GameMode
+
+if state == 2
+	if isBreathing == 0 && player.getAV actionPoints < player.getBaseAV actionPoints / 4 && breatheTimer <= 0
+		set isBreathing to 1
 	endif
 endif
 
-;Sounds
-;if (isSprinting == 1 && enableSounds == 1)
-;	if (isBreathing == 0 && player.getAV actionPoints < player.getBaseAV actionPoints / 4 && breatheTimer <= 0)
-;		set isBreathing to 1
-;	endif
-;endif
-;
-;if (breatheTimer > 0)
-;	set breatheTimer to breatheTimer - getSecondsPassed
-;else
-;	if (isBreathing == 1)
-;		if (player.getav actionPoints < player.getbaseav actionPoints / 4)
-;			if (getPCIsSex Male == 1)
-;				playSound PNXFBSprintBreatheLoop
-;			else
-;				playSound PNXFBSprintFemaleBreatheLoop
-;			endif
-;			set breatheTimer to 8
-;		else
-;			if (getPCIsSex Male == 1)
-;				playSound PNXFBSprintBreatheEnd
-;			else
-;				playSound PNXFBSprintFemaleBreatheEnd
-;			endif
-;			set isBreathing to 0
-;			set breatheTimer to 10
-;		endif
-;	endif
-;endif
+if breatheTimer > 0
+	set breatheTimer to breatheTimer - getSecondsPassed
+else
+	if isBreathing == 1
+		if player.getAV ActionPoints < player.getBaseAV ActionPoints / 4
+			if getPCIsSex Male == 1
+				;playSound PNXFBSprintBreatheLoop
+			else
+				;playSound PNXFBSprintFemaleBreatheLoop
+			endif
+			set breatheTimer to 8
+		else
+			if getPCIsSex Male == 1
+				;playSound PNXFBSprintBreatheEnd
+			else
+				;playSound PNXFBSprintFemaleBreatheEnd
+			endif
+			set isBreathing to 0
+			set breatheTimer to 10
+		endif
+	endif
+endif
+
+End
+
+
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; HUD shudder
+Begin GameMode
 
 ;Triggers a HUD shudder regularly while sprinting
-if (isSprinting == 1 && shakeTimer < 0)
-	set explosionRef to player.placeAtMe PNXFBSprintExplosion	
-	explosionRef.disable
-	explosionRef.markForDelete	
-	set shakeTimer to 1
-endif
-if (shakeTimer >= 0)
-	set shakeTimer to shakeTimer - getSecondsPassed
-endif
 
-;Damage the player's action points every 1/10 seconds if they're sprinting
-set apTick to (25 - player.getav endurance) * SprintAPMult
-if (isSprinting == 1 && apTimer < 0)
-	set apTick to apTick / 10
-	player.damageAV ActionPoints apTick
-	set apTimer to 0.1
-endif
-
-if (isSprinting == 1 && apTimer >= 0)
-	set apTimer to apTimer - getSecondsPassed
-endif
-
-;Repairs the damage we did to the player's leg
-if (healOnce == 1)
-	player.restoreAV LeftMobilityCondition 1
-	set healOnce to 0
-endif
-
-;Smoothly widens or narrows the FOV as necessary
-if (FOVChange == 1)
-	set currentFOV to currentFOV + 1
-	con_SetCameraFOV currentFOV
-	if (currentFOV >= defaultFOV + FOVIncrease)
-		set FOVChange to 0
+if state == 2
+	if shakeTimer > 0
+		set shakeTimer to shakeTimer - getSecondsPassed
+	else
+		triggerHUDShudder 2 2
+		set shakeTimer to 1
 	endif
-	setNumericIniSetting "fdefault1stpersonfov:display" default1stPersonFOV ;Changing the FOV also changes this, so we need to change it back to its default
 endif
 
-elseif (FOVChange == -1)
-	set currentFOV to currentFOV - 1
-	con_SetCameraFOV currentFOV
-	if (currentFOV <= defaultFOV)
-		set FOVChange to 0
+End
+
+
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Dynamically change FOV
+Begin GameMode
+
+if curFOV != nextFOV
+
+	set fovTrap to 1
+
+	if curFOV > nextFOV
+		set curFOV to curFOV - 1
+		if curFOV < nextFOV
+			set curFOV to nextFOV
+		endif
+	else
+		set curFOV to curFOV + 1
+		if curFOV > nextFOV
+			set curFOV to nextFOV
+		endif
 	endif
+
+	con_setCameraFOV curFOV
+
+	;Changing the FOV also changes this, so we need to change it back to its default
 	setNumericIniSetting "fdefault1stpersonfov:display" default1stPersonFOV
+
+else
+	set fovTrap to 0
 endif
 
-;Tries to make sure the player's weapon gets re-equipped if they stop sprinting while the weapon is still being put away
-if (isSprinting == 0 && reEqpWep == 1 && reEqpWepTimer > 0)
-	set reEqpWepTimer to reEqpWepTimer - getSecondsPassed
-endif
+End
 
-if (player.hasperk PNXFBSprintChargePerk == 0 && reEqpWep == 1 && reEqpWepTimer <= 0)
-	tapControl 4
-	set reEqpWep to 0
-endif
 
-;Forces the player into run mode if necessary
-if (isSprinting == 1 && player.isRunning == 0)
-	tapControl 10
-	set reWalk to 1
-endif
-if (isSprinting == 0 && reWalk == 1)
-	tapControl 10
-	set reWalk to 0
-endif
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Cooldown
+Begin GameMode
 
-;Counts down timeout
-if (timeOut >= 0)
-	set timeOut to timeOut - getSecondsPassed
-endif
-
-;Prevents sprinting right after firing or aiming a weapon
-if (isSprinting == 0) 
-	if (isControlPressed 6 == 1)
-		set timeOut to 0.5
+if state == 0
+	if cooldown >= 0
+		set cooldown to cooldown - getSecondsPassed
 	endif
-	if (isControlPressed 4 == 1)
-		set timeOut to 1
+
+	; Prevent sprinting after firing/aiming
+	if attackPressed == 1
+		set cooldown to 1
 	endif
+	if blockPressed == 1
+		set cooldown to 0.5
+	endif
+else
+	set cooldown to 1
 endif
 
-;Prevents inadvertant walking
-if (player.getav actionpoints < apTick || timeOut > 0)
+;--------------------------------------------------------------------------------------------
+; Prevent inadvertant walking while in cooldown
+if player.getAV ActionPoints < apTick || cooldown > 0
 	disableControl 9
 else
 	enableControl 9
 endif
-	
-;Begins the sprint
-if (isSprinting == 0 && isKeyPressed runKey == 1 && player.isMoving == 1 && player.getAV ActionPoints > apTick && player.getAV LeftMobilityCondition > 0 && player.getAV RightMobilityCondition > 0 && player.isSwimming == 0 && player.getAV InventoryWeight <= player.getAV CarryWeight+1 && isControlPressed 6 == 0 && timeOut < 0 && getPlayerControlsDisabled 1 0 1 0 1 0 0 == 0)
-	set isSprinting to 1
 
-	if (customKey == 0)
-		setControl 9 -1
+;--------------------------------------------------------------------------------------------
+; Ensure re-equip for short sprints
+if state == 0 && reWeapon == 1
+	if reWeaponTimer > 0
+		set reWeaponTimer to reWeaponTimer - getSecondsPassed
+	else
+		tapControl 4
+		set reWeapon to 0
+	endif
+endif
+
+;--------------------------------------------------------------------------------------------
+;Force run mode if necessary
+if state == 2 && player.isRunning == 0
+	tapControl 10
+	set reWalk to 1
+endif
+if state == 0 && reWalk == 1
+	tapControl 10
+	set reWalk to 0
+endif
+
+End
+
+
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Main state transitions
+
+Begin GameMode
+
+;--------------------------------------------------------------------------------------------
+; Deactivated - Loop
+if state == 0
+
+	if sprintPressed == 1 && player.isMoving == 1 && cooldown <= 0 &&  player.isSwimming == 0 && player.getAV ActionPoints > apTick && getPlayerControlsDisabled 1 0 1 0 1 0 0 == 0 && isControlPressed 6 == 0 && player.getAV LeftMobilityCondition > 0 && player.getAV RightMobilityCondition > 0 && player.getAV InventoryWeight <= player.getAV CarryWeight+1
+		set state to 1
+		return
 	endif
 
-	if (enableStrafe == 0)
-		disableControl 2 ;Disables left and right strafe
-		disableControl 3
-	endif
+	return
+
+;--------------------------------------------------------------------------------------------
+; Activate
+elseif state == 1
+
+	; Unbind run
+	setControl 9 -1
+
+	;Disable strafing
+	disableControl 2 
+	disableControl 3
 	
-	set sprintSpeed to (player.getav agility * 8 + 40 * (1 - .75 * player.getAV inventoryWeight / player.getAV carryWeight)) * SprintSpeedMult
+	set sprintSpeed to (player.getav agility * 8 + 40 * (1 - .75 * player.getAV inventoryWeight / player.getAV carryWeight)) * PNxCSprintSpeedMult
 	player.modAV SpeedMult sprintSpeed
 	
-	
-	if (FOVChange == 0)
+	if (fovTrap == 0)
 		set defaultFOV to GetNumericIniSetting "fDefaultWorldFOV:display"
 		set default1stPersonFOV to GetNumericIniSetting "fDefault1stPersonFOV:display"
 	endif
-	set FOVChange to 1
-	set currentFOV to defaultFOV
-	set FOVIncrease to sprintSpeed / 10
 
+	set nextFOV to defaultFOV + sprintSpeed / 10
 
-	player.damageAV LeftMobilityCondition 1 ;Damages the player's leg in order to force the game to reevaluate the player's speed
-	set healOnce to 1
+	;Damages the player's leg in order to force the game to reevaluate the player's speed
+	player.damageAV LeftMobilityCondition 1 
+	set healTrap to 1
 
-	if (player.isWeaponOut == 1) ;If the player had their weapon out, remember to re-equip it later
-		set reEqpWep to 1
-		set reEqpWepTimer to 0.7
+	;If the player had their weapon out, schedule re-equip
+	if player.isWeaponOut == 1
+		set reWeapon to 1
+		set reWeaponTimer to 0.7
 	endif
-	if (player.isSneaking == 1) ;If the player was sneaking, remember to go back to sneaking later
+
+	;If the player was sneaking, remember to go back to sneaking later
+	if player.isSneaking == 1
 		set reSneak to 1
 	endif
 
-	if (player.hasPerk PNXFBSprintChargePerk == 0)
-		DisablePlayerControls 0 0 1 0 0 0 1
+	disablePlayerControls 0 0 1 0 0 0 1
+
+	set sensitivity to getNumericIniSetting "fMouseSensitivity:controls" 	
+	set sensitivity to sensitivity / 3
+	setNumericIniSetting "fMouseSensitivity:controls" sensitivity	;increases turning radius
+
+	imod PNxCSprintBlurISFX
+
+	set state to 2
+	return
+
+
+;--------------------------------------------------------------------------------------------
+; Activated - Loop
+elseif state == 2
+
+	if apTimer > 0
+		set apTimer to apTimer - getSecondsPassed
 	else
-		DisablePlayerControls 0 0 0 0 0 0 1
+
+		;Damage the player's action points every 1/10 seconds if they're sprinting
+		set apTick to (25 - player.getAV Endurance) * PNxCSprintAPMult
+		set apTick to apTick / 10
+		player.damageAV ActionPoints apTick
+		set apTimer to 0.1
+
 	endif
 
-	if (turnRad > 1)
-		set sensitivity to getNumericIniSetting "fMouseSensitivity:controls" 	
-		set sensitivity to sensitivity / turnRad
-		setNumericIniSetting "fMouseSensitivity:controls" sensitivity	;increases turning radius
+	if sprintPressed == 0 || player.isMoving == 0 ||  cooldown > 0 || player.getAV ActionPoints < apTick / 10 || player.isSwimming == 1 || player.getav LeftMobilityCondition <= 0 || player.getav RightMobilityCondition <= 0 || player.getav InventoryWeight > player.getAV CarryWeight+1 || isControlPressed 6 == 1 || getPlayerControlsDisabled 1 0 0 0 1 0 0 == 1
+		set state to 3
+		return
 	endif
 
-	if (enableBlur == 1)
-		imod PNXFBSprintBlurIFX
-	endif
+	return
 
-	player.addPerk PNXFBSprintChargeSpreadPerk
-endif
+;--------------------------------------------------------------------------------------------
+; Deactivate
+elseif state == 3
 
-;Ends the sprint
-if (isSprinting == 1 && (player.isMoving == 0 || isKeyPressed runKey == 0 || player.getAV ActionPoints < apTick / 10 || player.isSwimming == 1 || player.getav LeftMobilityCondition <= 0 || player.getav RightMobilityCondition <= 0 || player.getav InventoryWeight > player.getAV CarryWeight+1 || isControlPressed 6 == 1 || timeOut > 0 || getPlayerControlsDisabled 1 0 0 0 1 0 0 == 1))
-		set isSprinting to 0
+	;Ends the sprint
 
-		if (enableStrafe == 0)
-			enableControl 2
-			enableControl 3
-		endif
+	enableControl 2
+	enableControl 3
 
-		set sprintSpeed to sprintSpeed  * -1
-		player.modAV SpeedMult sprintSpeed
+	set sprintSpeed to sprintSpeed  * -1
+	player.modAV SpeedMult sprintSpeed
 
-		set FOVChange to -1
+	set nextFOV to defaultFOV
 		
-		player.Damageav LeftMobilityCondition 1
-		set healOnce to 1
+	player.damageAV LeftMobilityCondition 1
+	set healTrap to 1
 
-		EnablePlayerControls 0 0 1 0 0 0 1
+	enablePlayerControls 0 0 1 0 0 0 1
 
-		if (reEqpWep == 1 && player.hasPerk PNXFBSprintChargePerk == 0) ;Re-equip the player's weapon if they had it out before the sprint
-			TapControl 4
-		endif
-		if (reSneak == 1) ;Goes back to sneaking if necessary
-			tapControl 8	
-			set reSneak to 0
-		endif
+	;Re-equip the player's weapon if they had it out before the sprint
+	if reWeapon == 1
+		tapControl 4
+	endif
 
-		if (turnRad > 1)
-			set sensitivity to sensitivity * turnRad
-			setNumericIniSetting "fMouseSensitivity:controls" sensitivity ;Returns the turning radius to normal
-		endif
+	;Goes back to sneaking if necessary
+	if reSneak == 1
+		set reSneak to 0
+		tapControl 8	
+	endif
 
-		if (enableBlur == 1)
-			rimod PNXFBSprintBlurIFX
-		endif
+	set sensitivity to sensitivity * 3
+	setNumericIniSetting "fMouseSensitivity:controls" sensitivity ;Returns the turning radius to normal
 
-		set timeOut to 1
+	rimod PNxCSprintBlurISFX
 
-		player.removePerk PNXFBSprintChargeSpreadPerk
+	set state to 0
+	return
+
 endif
 
 End
