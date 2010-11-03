@@ -828,16 +828,16 @@
 	
 	<x>
 		<copy src="screen()" trait="width" />
-		<mul> 0.74 </mul>
-		<!--mul> 0.5 </mul-->
+		<!--mul> 0.74 </mul-->
+		<mul> 0.5 </mul>
 	</x>
 	<y>
 		<copy src="screen()" trait="height" />
-		<mul> 0.94 </mul>
-		<!--mul> 0.2 </mul-->
+		<!--mul> 0.94 </mul-->
+		<mul> 0.1 </mul>
 	</y>
-	<width> 100 </width>
-	<height> 100 </height>
+	<width> 64 </width>
+	<height> 64 </height>
 	
 
 	<image name="PNxBTMeterImage">
@@ -879,6 +879,7 @@
 		<_filename_8> pnx\timemeter8.dds </_filename_8>
 		<_filename_9> pnx\timemeter9.dds </_filename_9>
 		<_filename_10> pnx\timemeter10.dds </_filename_10>
+		<_filename_11> pnx\stopwatch.dds </_filename_11>
 	</image>
 	
 	<image name="PNxBTMeterStatusWarning">
