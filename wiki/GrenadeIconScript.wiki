@@ -1,0 +1,79 @@
+#labels Script
+#Grenade Icon Display Script
+
+{{{
+scn FWEDarnUIGrenQuestScript
+
+short iGrenShow
+short iGrenCount
+ref rGrenType
+;short dui
+
+
+Begin MenuMode 1013
+
+; Init code
+; _DUIF3 will be 1 with DUI installed (a11+).
+;Set dui To GetUIFloat "HUDMainMenu\_DUIF3"
+Set iGrenShow To 0
+
+End
+
+begin gamemode
+
+if (GetQuestRunning khgrenquest)
+	Set iGrenShow To 1
+	set iGrenShow To GetUIFloat "HUDMainMenu\_xHUDShowGren"
+endif
+
+end
+
+Begin GameMode
+
+;iGrentype
+; 0 =  No grenade or switch active
+; 1 = Frag Grenade
+; 2 = Pulse Grenade
+; 3 = Plasma Grenade
+; 4 = Throwing Spear
+; 5 = Stun Grenade
+; 6 = Throwing Hatchet
+; 7 = Holy Frag Grenade
+; 8 = Throwing Knife
+; 9 = Unknown Grenade
+
+if (iGrenShow)
+	set rGrenType to khgrenquest.rCurGren
+	if rGrenType > 0
+		set iGrencount to player.getitemcount rGrenType
+		SetUIFloat "HUDMainMenu\_FWE_Grencount" iGrencount
+	else
+		set iGrencount to 0
+		SetUIFloat "HUDMainMenu\_FWE_Grencount" iGrencount
+	endif
+	if iGrencount > 0
+		if rGrenType == WeapGrenadeFrag  		;Frag Grenade 
+			SetUIFloat "HUDMainMenu\_FWE_Grentype" 1
+		elseif rGrenType == WeapGrenadePulse   		;Pulse Grenade 
+			SetUIFloat "HUDMainMenu\_FWE_Grentype" 2
+		elseif rGrenType == WeapGrenadePlasma 	 	;Plasma Grenade 
+			SetUIFloat "HUDMainMenu\_FWE_Grentype" 3	
+		elseif rGrenType == WeapNVThrowingSpear 	;Throwing Spear 
+			SetUIFloat "HUDMainMenu\_FWE_Grentype" 4	
+		elseif rGrenType == WeapNVGrenadeStun   	;StunGrenade 
+			SetUIFloat "HUDMainMenu\_FWE_Grentype" 5
+		elseif rGrenType == WeapNVThrowingHatchet 	;Throwing Hatchet 
+			SetUIFloat "HUDMainMenu\_FWE_Grentype" 6
+		elseif rGrenType == WeapNVGrenadeFragHoly	 ;Holy Frag Grenade 
+			SetUIFloat "HUDMainMenu\_FWE_Grentype" 7	
+		elseif rGrenType == WeapNVThrowingKnife  	;Throwing Knife
+			SetUIFloat "HUDMainMenu\_FWE_Grentype" 8
+		else						;Unknown Grenade that somebody manually added to the grenformlist
+			SetUIFloat "HUDMainMenu\_FWE_Grentype" 9
+		endif
+	else							;Display nothing, because the grenades are currently switching or the player has no grenades
+		SetUIFloat "HUDMainMenu\_FWE_Grentype" 0
+	endif
+endif
+
+End}}}
