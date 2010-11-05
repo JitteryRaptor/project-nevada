@@ -1,0 +1,53 @@
+#labels Script
+# Script for slower backpedaling
+
+{{{
+Scriptname BackPedalScript
+
+short healOnce
+short backSpeed
+short isBacking
+
+Begin GameMode
+
+if(isBacking == 0)
+	if(backPedalAgility == 1)
+		set backSpeed to -48 + (player.getav agility * 2)
+		if (backSpeed > 0)
+			set backSpeed to 0
+		endif
+	else
+		set backSpeed to -100 + BackPedalSpeed
+	endif
+endif
+
+;Restores the original damage value to the player's leg
+if(healOnce == 1)
+	player.Restoreav LeftMobilityCondition 0.0001
+	set healOnce to 0
+endif
+
+if(player.IsMoving == 2 && isBacking == 0 && player.isRunning == 1)
+	set isBacking to 1
+	player.modav SpeedMult backSpeed
+
+	if (Player.GetAV LeftMobilityCondition > 0)
+		player.Damageav LeftMobilityCondition 0.0001 ;Damages the player's leg in order to force the game to reevaluate the player's speed
+		set healOnce to 1
+	endif
+
+endif
+
+if(isBacking == 1 && (player.IsMoving != 2 || player.isRunning == 0))
+	set isBacking to 0
+	set backSpeed to backSpeed  * -1
+	player.modav SpeedMult backSpeed
+
+	if (Player.GetAV LeftMobilityCondition > 0)
+		player.Damageav LeftMobilityCondition 0.0001 ;Damages the player's leg in order to force the game to reevaluate the player's speed
+		set healOnce to 1
+	endif
+
+endif
+
+End}}}
