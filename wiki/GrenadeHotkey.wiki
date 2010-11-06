@@ -1,60 +1,57 @@
 #labels Script
 #Grenade Hotkey script
-{{{
-ScriptName PNxFPSGrenadeHotkeyScript
+{{{ScriptName PNxFPSGrenadeHotkeyScript
 
-;Global PNxFPSGrenadeHotkey 		;Grenade throw hotkey
-;Global PNxFPSGrenadeToggleKey 		;key for toggling through grenades
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+;Variables
+;Global PNxFPSGrenadeHotkey             ;Grenade throw hotkey
+;Global PNxFPSGrenadeToggleKey          ;key for toggling through grenades
 
-short attackkey 					;the players attack key (default mouse1)
-short throwactive					;check if the player is throwing (1 or 0)
-short timerstarted 					;variable if timer is started (1 or 0)
-short curkey 						;check if grenade throw key is still pressed
-short curkeyB 						;check if grenade toggle key is still pressed
-short keydown 						;variable if key is being held down (1 or 0)
-short grenlistcount 				;counter for toggling through grenades
-short listcounter 					;counter where the grenade toggle is at
-short SwitchActive 					;check if grenade switching is active
+short attackkey                                         
+short throwactive                                       
+short timerstarted                                     
+short curkey                                            
+short curkeyB                                          
+short keydown                                           
+short grenlistcount                             
+short listcounter                                     
+short SwitchActive                                      
 short RealAnimMult
 
-float grentimer 					;timer for equip animation to pass
-float throwtimer 					;timer for throw animation to pass
+float grentimer                                        
 
-ref grenweapon 						;reference of the weapon the player was holding
-ref grentype 						;reference of the currently selected grenade
-ref TempGrenRef 						;tempvariable for the grenade
+ref grenweapon                                         
+ref grentype                                            
+ref TempGrenRef                                               
 
 
 Begin GameMode
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+;Variable settings
+set grentype to listgetnthform PerkLooseCannonWeapons listcounter       ;sets the grenade to the Nth# of the formlist
+set grenlistcount to ListGetCount PerkLooseCannonWeapons -1                     ;checks the number of weapons in the grenadeformlist (-1 so the count is right)
 
-set grentype to listgetnthform PerkLooseCannonWeapons listcounter 	;sets the grenade to the Nth# of the formlist
-set grenlistcount to ListGetCount PerkLooseCannonWeapons -1			;checks the number of weapons in the grenadeformlist (-1 so the count is right)
-
-set attackkey to getcontrol 4
-if attackkey == 0
-	set attackkey to 256
-elseif attackkey == 1
-	set attackkey to 257
-elseif attackkey == 2
-	set attackkey to 258
+if GetAltControl >= 0
+	set attackkey to 256 + GetAltControl 4
+else 
+	set attackkey to GetControl
 endif
 
-;if(attackkey<=0) 
-;	set attackkey to 256  					;sets default attackkey to mouse1
-;endif
-
 if(PNxFPSGrenadeToggleKey <=0)
-	set PNxFPSGrenadeToggleKey to 35   		;sets default grenadetogglekey to H
+	set PNxFPSGrenadeToggleKey to 35                ;sets default grenadetogglekey to H
 endif
 
 if(PNxFPSGrenadeHotkey <=0)
-	set PNxFPSGrenadeHotkey to 34    		;sets default grenadethrowkey to G
+	set PNxFPSGrenadeHotkey to 34                   ;sets default grenadethrowkey to G
 endif
 
-if  (throwactive==1)          				
-	if (curkey>0 && iskeypressed curkey)	
-		set keydown to 1	
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+;Throw
+if  (throwactive==1)                                    
+	if (curkey>0 && iskeypressed curkey)    
+		set keydown to 1        
 	else
+		player.removeperk PNxFPSFastEquipPerk
 		set timerstarted to 0
 		enablekey attackkey
 		releasekey attackkey
@@ -62,54 +59,64 @@ if  (throwactive==1)
 		set curkey to 0
 		set grentimer to 0
 		SetWeaponAnimMult RealAnimMult grentype
-		set throwtimer to throwtimer - Getsecondspassed
-			if(throwtimer<=0)
-				player.EquipItem grenweapon 0 1
-					if(player.GetEquippedObject 5==grenweapon)
-                                                player.removeperk PNxFPSFastEquipPerk
-						set throwactive to 0
-					endif
+		if player.getanimaction != 6 && player.getanimaction!=5                                 
+			player.EquipItem grenweapon 0 1
+			if(player.GetEquippedObject 5==grenweapon)
+				set throwactive to 0
 			endif
+		endif
 	endif
 endif
 
-if (keydown==1)								;initiates the equipping and "charging" of the throw. Need to find a way to skip equip animation
-	if(timerstarted==0)
-		player.Equipitem grentype 0 1	
-		set grentimer to 0.4
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+;Grenade equip
+if (keydown==1)                                                       
+    if(timerstarted==0 && player.getanimaction!=0 && player.getequippedobject 5==grenweapon)
+		player.Equipitem grentype 0 1   
+		set grentimer to 0.1
 		set timerstarted to 1
-	endif
-	if (grentimer>=0)
-		set grentimer to grentimer - getsecondspassed
-	elseif (player.getanimaction!=0) 
-		set throwtimer to 0.3
-		enablekey attackkey
-		holdkey attackkey
-	endif
-endif		
+    endif
+    if (grentimer>0)
+        set grentimer to grentimer - getsecondspassed
+    elseif (timerstarted==1 && player.getanimaction!=0 && grentimer <=0) 
+        enablekey attackkey
+        holdkey attackkey
+		if(player.GetEquippedObject 5!=grentype) 
+			set curkey to 0
+		endif
+    endif
+endif           
 
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+;Hotkey Activation
 if (iskeypressed PNxFPSGrenadeHotkey && throwactive==0 && player.getequippedobject 5!=0 && player.getitemcount grentype!=0)
 	if(player.getequippedobject 5!=grentype)
 		set grenweapon to player.GetEquippedObject 5
 	endif
-        player.addperk PNxFPSFastEquipPerk
-        if GetWeaponAnimMult Grentype !=3
-                set RealAnimMult to GetWeaponAnimMult Grentype
-        endif
-	SetWeaponAnimMult 3 grentype
+	player.addperk PNxFPSFastEquipPerk
+	if GetWeaponAnimMult Grentype !=3
+		set RealAnimMult to GetWeaponAnimMult Grentype
+	endif
+	if GetWeaponskill Grentype == 38
+		SetWeaponAnimMult 1.5 grentype
+	else
+		SetWeaponAnimMult 3 grentype
+	endif
 	set throwactive to 1
 	set curkey to PNxFPSGrenadeHotkey
 	disablekey attackkey
 endif
 
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+;Grenadeswitch Handling
 if (player.getitemcount grentype<=0) 
-	set SwitchActive to 1
+        set SwitchActive to 1
 elseif(player.getitemcount grentype>0&&TempGrenRef!=grentype)
-	playsound ITMGrenadeDown
-	set TempGrenRef to grentype
+        playsound ITMGrenadeDown
+        set TempGrenRef to grentype
 endif
 
-if (iSwitchActive==1)	
+if (SwitchActive==1)   
 	set listcounter to listcounter +1
 	if (listcounter>grenlistcount)
 		set listcounter to 0
@@ -118,17 +125,16 @@ if (iSwitchActive==1)
 endif
 
 if ( curKeyB>0 && isKeyPressed curkeyB) 
-  return 
+	return 
 else
- set curkeyB to 0
+	set curkeyB to 0
 endif
 
 if ( isKeyPressed PNxFPSGrenadeToggleKey )
 	set TempGrenRef to grentype
 	set SwitchActive to 1
-  	set curKeyB to PNxFPSGrenadeToggleKey
+	set curKeyB to PNxFPSGrenadeToggleKey
 endif
 
 end
-
 }}}
