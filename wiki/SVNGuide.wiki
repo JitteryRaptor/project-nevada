@@ -29,3 +29,9 @@ Next, it will ask you for your Google code account user name and your password, 
 If you want to copy plain files from the SVN repository, you dont have to consider anything special. If you, however, want to copy folders to your Fallout NV Data/ folder, you best use the SVN export feature, because every SVN folder also contains hidden versioning data you don't want to copy over (else, the folders in your Data/ directory will get those green SVN icons etc).
 
 So to export something, just select what you want to copy in the windows explorer, and drag it with your right mouse button into your Data/ folder. In the opening context menu, select *SVN Export all items here*. Thats it.
+
+== Clearing folders from versioning data ==
+
+If you didn't use the method described above, and now something in your data folder has the SVN icons, you can fix it with the following method:
+First, open _two_ explorer windows, and drag the folder onto itself with the right mouse button from the one explorer window to the other. In the opening context menu, select *SVN Export all items here*. You need to open two explorer windows because you cant drag a folder onto itself in a single window.
+After this, SVN will ask you to confirm whether you really want to unversion the selected folder, which means that you did it right.
