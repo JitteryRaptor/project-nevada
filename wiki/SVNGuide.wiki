@@ -24,7 +24,7 @@ Next, it will ask you for your Google code account user name and your password, 
 
 = Usage =
 
-== Copying files to your Data/ folder from your local SVN repository ==
+== Copying files to your Data/ folder ==
 
 If you want to copy plain files from the SVN repository, you dont have to consider anything special. If you, however, want to copy folders to your Fallout NV Data/ folder, you best use the SVN export feature, because every SVN folder also contains hidden versioning data you don't want to copy over (else, the folders in your Data/ directory will get those green SVN icons etc).
 
