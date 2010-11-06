@@ -94,7 +94,7 @@
 
 <!-- ######################################################################################## Scanner -->
 
-<_PNxScannerEnabled> 1 </_PNxScannerEnabled>
+<_PNxScannerEnabled> 0 </_PNxScannerEnabled>
 <_PNxScannerCursorLine> 0 </_PNxScannerCursorLine>
 <_PNxScannerCursorPos> 0 </_PNxScannerCursorPos>
 <_PNxScannerCursorIndent> 0 </_PNxScannerCursorIndent>

@@ -1,6 +1,11 @@
 ﻿<font> 3 </font>
 <justify> &left; </justify>
 
+<visible>
+	<copy src="me()" trait="_index" />
+	<ne> 0 </ne>
+</visible>
+
 <x>
 	<copy src="parent()" trait="_text_pos_x" />
 	<add src="me()" trait="_offset_x" />
