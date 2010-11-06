@@ -506,3 +506,30 @@ if i < n
 endif
 
 }}}
+
+= ExampleHotkeyChecker =
+
+== Script: ==
+{{{
+
+scn ExampleHotkeyCheckerScript
+
+Begin GameMode
+
+if getGameLoaded == 1
+	listAddForm COxHotkeyCheckerList ExampleHotkeyChecker
+endif
+
+End
+}}}
+
+== Stage 1 ==
+{{{
+set keyCode to COxUtilHotkey.keyCode
+
+if keyCode == FWEHotkey01
+	set COxUtilHotkey.conflict to 1
+	set COxUtilHotkey.warningMsg to FWEHotkey01WarningMsg
+	return
+endif
+}}}
