@@ -511,7 +511,6 @@ endif
 
 == Script: ==
 {{{
-
 scn ExampleHotkeyCheckerScript
 
 Begin GameMode
