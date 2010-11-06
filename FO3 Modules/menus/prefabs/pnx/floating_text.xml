@@ -1,0 +1,33 @@
+﻿<font> 3 </font>
+<justify> &left; </justify>
+
+<x>
+	<copy src="parent()" trait="_text_pos_x" />
+	<add src="me()" trait="_offset_x" />
+	<add>
+		<copy src="parent()" trait="_indent_width" />
+		<mul src="me()" trait="_indent" />
+	</add>
+</x>
+<y>
+	<copy src="parent()" trait="_text_pos_y" />
+	<add src="me()" trait="_offset_y" />
+	<add>
+		<copy src="parent()" trait="_line_height" />
+		<mul src="me()" trait="_line" />
+	</add>
+</y>
+
+<_data>
+	<copy src="me()" trait="_index" />
+	<copy src="me()" trait="_dat_" />
+</_data>
+		
+<string>
+	<copy src="me()" trait="_data" />
+</string>
+		
+<brightness> <copy src="globals()" trait="_duiHUDBrightness" /> </brightness>
+<red> <copy src="globals()" trait="_HUDTxtRed" /> </red>
+<green> <copy src="globals()" trait="_HUDTxtGreen" /> </green>
+<blue> <copy src="globals()" trait="_HUDTxtBlue" /> </blue>
