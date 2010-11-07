@@ -111,6 +111,88 @@
 <_PNxScannerText9Index> 0 </_PNxScannerText9Index>
 <_PNxScannerText10Index> 0 </_PNxScannerText10Index>
 
+<!-- ######################################################################################## Control Panel -->
+
+<_COxControlPanelEnabled> 1 </_COxControlPanelEnabled>
+<_COxControlPanelActive> 0 </_COxControlPanelActive>
+
+<_COxControlPanelSplashEnabled> 0 </_COxControlPanelSplashEnabled>
+<_COxControlPanelSplashPath> </_COxControlPanelSplashPath>
+<_COxControlPanelSplashFade> 0 </_COxControlPanelSplashFade>
+<_COxControlPanelSplashWidth> 0 </_COxControlPanelSplashWidth>
+<_COxControlPanelSplashHeight> 0 </_COxControlPanelSplashHeight>
+<_COxControlPanelSplashXAlign> 0 </_COxControlPanelSplashXAlign> <!-- 0: left 0.5: center 1: right -->
+<_COxControlPanelSplashYAlign> 0 </_COxControlPanelSplashYAlign> <!-- 0: top 0.5: center 1: bottom -->
+
+
+
+
+<image name="COxControlPanelBackground">
+	<systemcolor> &nosystemcolor; </systemcolor>
+	
+	<visible>
+		<copy src="io()" trait="_COxControlPanelEnabled" />
+		<and src="io()" trait="_COxControlPanelActive" />
+	</visible>
+	
+	<zoom> &scale; </zoom>
+	<depth> 10 </depth>
+		
+	<x>0</x>
+	<y>0</y>
+	<width> <copy src="screen()" trait="width" /> </width>
+	<height> <copy src="screen()" trait="height" /> </height>
+
+	<filename> pnx\customPause.dds </filename>
+</image>
+	
+<image name="COxControlPanelSplash">
+	<systemcolor> &nosystemcolor; </systemcolor>
+	
+	<visible>
+		<copy src="sibling(COxControlPanelBackground)" trait="visible" />
+		<and src="io()" trait="_COxControlPanelSplashEnabled" />
+	</visible>
+	
+	<alpha>
+		<copy src="io()" trait="_COxControlPanelSplashFade" />
+		<mul> 255 </mul>
+	</alpha>
+	
+	<zoom> &scale; </zoom>
+	<depth> 11 </depth>
+		
+	<x>
+		<copy src="screen()" trait="width" />
+		<mul src="io()" trait="_COxControlPanelSplashXAlign" />
+		<sub>
+			<copy src="me()" trait="width" />
+			<mul src="io()" trait="_COxControlPanelSplashXAlign" />
+		</sub>
+	</x>
+	
+	<y>
+		<copy src="screen()" trait="height" />
+		<mul src="io()" trait="_COxControlPanelSplashYAlign" />
+		<sub>
+			<copy src="me()" trait="height" />
+			<mul src="io()" trait="_COxControlPanelSplashYAlign" />
+		</sub>
+	</y>
+	
+	<width>
+		<copy src="io()" trait="_COxControlPanelSplashWidth" />
+	</width>
+	
+	<height> 
+		<copy src="io()" trait="_COxControlPanelSplashHeight" />
+	</height>
+
+	<filename> <copy src="io()" trait="_COxControlPanelSplashPath" /> </filename>
+</image>
+
+
+
 <!-- ######################################################################################## Vision Mode meter -->
 <rect name="PNXVMMeter">
 	<locus> &true; </locus>
