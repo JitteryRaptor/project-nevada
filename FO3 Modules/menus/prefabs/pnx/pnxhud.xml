@@ -113,6 +113,29 @@
 
 
 
+<_configActive> 0 </_configActive>
+
+
+
+	<image name="PNxBTMeterStatusWarning">
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<visible> <copy src="io()" trait="_configActive" /> </visible>
+	
+		<zoom> &scale; </zoom>
+		<depth> 10 </depth>
+		
+		<x>0</x>
+		<y>0</y>
+		<width> <copy src="screen()" trait="width" /> </width>
+		<height> <copy src="screen()" trait="height" /> </height>
+
+		<filename> pnx\customPause.dds </filename>
+	</image>
+
+
+
+
 
 
 
@@ -287,8 +310,7 @@
 	
 	<alpha>
 		<copy src="io()" trait="_PNXGrainAmount" />
-		<mul>200</mul>
-		<add>55</add>
+		<mul>255</mul>
 	</alpha>
 	<red>
 		<copy src="io()" trait="_PNXGrainColorRed" />
