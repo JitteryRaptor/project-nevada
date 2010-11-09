@@ -1,5 +1,12 @@
 ﻿<!-- ######################################################################################## General -->
-<_PNxScale><copy src="io()" trait="_duiscale_65" /></_PNxScale>
+<_PNxScale>
+	<copy src="io()" trait="_duiscale_65" />
+	<onlyif src="io()" trait="_DUIF3" />
+	<add>
+		<copy> 0.1234 </copy>
+		<onlyif><not src="io()" trait="_DUIF3" /></onlyif>
+	</add>
+</_PNxScale>
 
 
 <!-- ######################################################################################## IO Grain -->
@@ -17,7 +24,7 @@
 <_PNxRadarXAlign> 1 </_PNxRadarXAlign> <!-- 0: left 0.5: center 1: right -->
 <_PNxRadarYAlign> 0 </_PNxRadarYAlign> <!-- 0: top 0.5: center 1: bottom -->
 
-<_PNxRadarXOffset> -160 </_PNxRadarXOffset>
+<_PNxRadarXOffset> -10 </_PNxRadarXOffset>
 <_PNxRadarYOffset> 10 </_PNxRadarYOffset>
 
 <_PNxRadarMarker1Mode> 0 </_PNxRadarMarker1Mode>
@@ -1140,6 +1147,7 @@
 
 	<visible>
 		<copy src="io()" trait="_PNxGrenadeIconEnabled" />
+		<and src="ActionPoints" trait="visible" />
 	</visible>
 	
 	<x>
@@ -1150,26 +1158,45 @@
 	<y>
 		<copy src="screen()" trait="height" />
 		<sub src="me()" trait="height" />
-		<sub> 10 </sub>
+		<sub> 20 </sub>
 	</y>
 		
 	<width>
-		<copy> 128 </copy>
+		<copy> 96 </copy>
 		<mul src="io()" trait="_PNxScale" />
 	</width>
 		
 	<height>
-		<copy> 128 </copy>
+		<copy> 96 </copy>
 		<mul src="io()" trait="_PNxScale" />
 	</height>
 
 	<image name="PNxGrenadeIconImage">
 	
-		<x><copy src="parent()" trait="x" /></x>
-		<y><copy src="parent()" trait="y" /></y>
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="parent()" trait="width" />
+				<mul> 0.25 </mul>
+			</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="parent()" trait="height" />
+				<mul> 0.25 </mul>
+			</sub>
+		</y>
 		
-		<width><copy src="parent()" trait="width" /></width>
-		<height><copy src="parent()" trait="height" /></height>
+		<width>
+			<copy src="parent()" trait="width" />
+			<mul> 1.5 </mul>
+		</width>
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul> 1.5 </mul>
+		</height>
+
 		
 		<zoom> &scale; </zoom>
 		
@@ -1182,44 +1209,43 @@
 		<_fn_1> pnx\hud\gren\GrenFrag.dds </_fn_1>
 		<_fn_2> pnx\hud\gren\GrenPulse.dds </_fn_2>
 		<_fn_3> pnx\hud\gren\GrenPlasma.dds </_fn_3>
-		<_fn_4> pnx\hud\gren\GrenNuka.dds </_fn_4>
-		<_fn_5> pnx\hud\gren\GrenMolotov.dds </_fn_5>
-		<_fn_6> pnx\hud\gren\GrenCryo.dds </_fn_6>
-		
-		<_fn_7> pnx\hud\gren\Gren_NVDynamiteL.dds </_fn_7>
-		<_fn_8> pnx\hud\gren\Gren_NVDynamiteS.dds </_fn_8>
-		<_fn_9> pnx\hud\gren\Gren_NVFirebomb.dds </_fn_9>
-		<_fn_10> pnx\hud\gren\Gren_NVHatchet.dds </_fn_10>
-		<_fn_11> pnx\hud\gren\Gren_NVHoly.dds </_fn_11>
-		
-		<_fn_12> pnx\hud\gren\Gren_NVKnife.dds </_fn_12>
-		<_fn_13> pnx\hud\gren\Gren_NVSpear.dds </_fn_13>
-		<_fn_14> pnx\hud\gren\Gren_NVStun.dds </_fn_14>
-		<_fn_15> pnx\hud\gren\Gren_NVTimebomb.dds </_fn_15>
-		
-		<_fn_16> pnx\hud\gren\GrenMisc.dds </_fn_16>
+		<_fn_4> pnx\hud\gren\Gren_NVSpear.dds </_fn_4>
+		<_fn_5> pnx\hud\gren\Gren_NVStun.dds </_fn_5>
+		<_fn_6> pnx\hud\gren\Gren_NVHatchet.dds </_fn_6>
+		<_fn_7> pnx\hud\gren\Gren_NVHoly.dds </_fn_7>
+		<_fn_8> pnx\hud\gren\Gren_NVKnife.dds </_fn_8>
+		<_fn_9> pnx\hud\gren\GrenMisc.dds </_fn_9>
+		<_fn_10> pnx\hud\gren\GrenNuka.dds </_fn_10>
+		<_fn_11> pnx\hud\gren\GrenMolotov.dds </_fn_11>
+		<_fn_12> pnx\hud\gren\GrenCryo.dds </_fn_12>
+		<_fn_13> pnx\hud\gren\Gren_NVDynamiteL.dds </_fn_13>
+		<_fn_14> pnx\hud\gren\Gren_NVDynamiteS.dds </_fn_14>
+		<_fn_15> pnx\hud\gren\Gren_NVFirebomb.dds </_fn_15>
+		<_fn_16> pnx\hud\gren\Gren_NVTimebomb.dds </_fn_16>
 		
 		<filename>
 			<copy src="io()" trait="_PNxGrenadeIconType" />
 			<copy src="me()" trait="_fn_" />
 		</filename>
-
-		<text name="PNxGrenadeCountText">
+	</image>
+	
+	<text name="PNxGrenadeCountText">
+			<font> 4 </font>
 			<depth> 1 </depth>
 			<string> <copy src="io()" trait="_PNxGrenadeIconCount" /> </string>
 			<x>
-				<copy src="parent()" trait="width" />
-				<!-- <sub src="me()" trait="width" /> -->
+				<copy src="parent()" trait="x" />
+				<add src="parent()" trait="width" />
 				<sub>
 					<copy src="parent()" trait="width" />
-					<mul> .25 </mul>
+					<mul> 0.25 </mul>
 				</sub>
 			</x>
 			<y>
-				<copy src="parent()" trait="height" />
+				<copy src="parent()" trait="y" />
+				<add src="parent()" trait="height" />
 				<sub src="me()" trait="height" />
-				<sub> 12 </sub>
+				<sub> 10 </sub>
 			</y>
 		</text>
-	</image>
 </rect>
