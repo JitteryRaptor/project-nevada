@@ -1,11 +1,6 @@
 ﻿<!-- ######################################################################################## General -->
 <_PNxScale>
 	<copy src="io()" trait="_duiscale_65" />
-	<onlyif src="io()" trait="_DUIF3" />
-	<add>
-		<copy> 0.1234 </copy>
-		<onlyif><not src="io()" trait="_DUIF3" /></onlyif>
-	</add>
 </_PNxScale>
 
 
@@ -360,8 +355,36 @@
 	<visible>
 		<copy src="io()" trait="_PNxCrosshairEnabled" />
 		<eq> 1 </eq>
-		<and src="ActionPoints" trait="visible" />
+		<!--and src="ActionPoints" trait="visible" /-->
 	</visible>
+	
+	<_radius>
+		<copy src="screen()" trait="width" />
+		<mul src="io()" trait="_PNxCrosshairSpread" />
+	</_radius>
+	
+	<x>
+		<copy src="screen()" trait="width" />
+		<div> 2 </div>
+		<sub src="me()" trait="_radius" />
+	</x>
+	
+	<y>
+		<copy src="screen()" trait="height" />
+		<div> 2 </div>
+		<sub src="me()" trait="_radius" />
+	</y>
+	
+	<width>
+		<copy src="me()" trait="_radius" />
+		<mul> 2 </mul>
+	</width>
+	
+	<height>
+		<copy src="me()" trait="_radius" />
+		<mul> 2 </mul>
+	</height>
+		
 
 	<image name="PNxCrosshairLineW">
 		<zoom> &scale; </zoom>
@@ -376,16 +399,8 @@
 		</height>
 		
 		<x>
-			<copy src="screen()" trait="width" />
-			<div> 2 </div>
-			<sub>
-				<copy src="me()" trait="width" />
-			</sub>
-			<sub src="io()" trait="_PNxCrosshairMinOffset" />
-			<sub>
-				<copy src="io()" trait="_PNxCrosshairMaxOffset" />
-				<mul src="io()" trait="_PNxCrosshairSpread" />
-			</sub>
+			<copy src="parent()" trait="x" />
+			<sub src="me()" trait="width" />
 		</x>
 			
 		<y>
@@ -413,13 +428,8 @@
 		</height>
 		
 		<x>
-			<copy src="screen()" trait="width" />
-			<div> 2 </div>
-			<add src="io()" trait="_PNxCrosshairMinOffset" />
-			<add>
-				<copy src="io()" trait="_PNxCrosshairMaxOffset" />
-				<mul src="io()" trait="_PNxCrosshairSpread" />
-			</add>
+			<copy src="parent()" trait="x" />
+			<add src="parent()" trait="width" />
 		</x>
 			
 		<y>
@@ -456,16 +466,8 @@
 		</x>
 		
 		<y>
-			<copy src="screen()" trait="height" />
-			<div> 2 </div>
-			<sub>
-				<copy src="me()" trait="height" />
-			</sub>
-			<sub src="io()" trait="_PNxCrosshairMinOffset" />
-			<sub>
-				<copy src="io()" trait="_PNxCrosshairMaxOffset" />
-				<mul src="io()" trait="_PNxCrosshairSpread" />
-			</sub>
+			<copy src="parent()" trait="y" />
+			<sub src="me()" trait="height" />
 		</y>
 			
 		<filename> pnx\hud\cross\crosshairv.dds </filename>
@@ -493,13 +495,8 @@
 		</x>
 		
 		<y>
-			<copy src="screen()" trait="height" />
-			<div> 2 </div>
-			<add src="io()" trait="_PNxCrosshairMinOffset" />
-			<add>
-				<copy src="io()" trait="_PNxCrosshairMaxOffset" />
-				<mul src="io()" trait="_PNxCrosshairSpread" />
-			</add>
+			<copy src="parent()" trait="y" />
+			<add src="parent()" trait="height" />
 		</y>
 			
 		<filename> pnx\hud\cross\crosshairv.dds </filename>
