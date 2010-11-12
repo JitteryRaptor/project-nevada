@@ -1,13 +1,26 @@
-#summary One-sentence summary of this page.
+#summary Forum thread template for CONVEX
 
-= Introduction =
+= CONVEX - Common New Vegas Extensions =
 
-Add your content here.
+== Introduction ==
 
+CONVEX will provide common resources and infrastructure for other mods to build on.
 
-= Details =
+== Features ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * An extendable control panel, where other mods can plug in their menus.
+  * Streamlined tools for hotkey assignment and detection of conflicting keys between.
+  * TODO: Calibr
+  * A set of global flags to allow cross-communication between mods.
+
+== Details ==
+
+=== Control Panel ===
+
+The control panel is based on the same principle as the popular CRAFT, which allowed different mods to add recipes to a common crafting menu in Fallout 3. Usually mods provide access to their configuration menus by placing special items in the player's inventory. We want to provide an alternative so the users inventory stays clean of any pseudo-items. The control panel uses a fullscreen background to give the look & feel of a real configuration menu and it allows mods to display custom images on top of it while their config is active.
+
+=== Hotkey Management ===
+
+=== Ammunition ===
+
+=== Global Flags ===
