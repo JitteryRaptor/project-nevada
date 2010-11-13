@@ -1,99 +1,89 @@
-﻿<!-- ######################################################################################## IO Vision Mode meter -->
-<_PNXVMEnabled> 0 </_PNXVMEnabled>
-<_PNXVMCharge> 1 </_PNXVMCharge>
-<_PNXVMCells> 666 </_PNXVMCells>
-<_PNXVMMode> 1 </_PNXVMMode>
+﻿<!-- ######################################################################################## General -->
+<_PNxScale>
+	<copy src="io()" trait="_duiscale_65" />
+</_PNxScale>
+
 
 <!-- ######################################################################################## IO Grain -->
-<_PNXGrainAmount> 0 </_PNXGrainAmount>
-<_PNXGrainPhase> 0 </_PNXGrainPhase>
-<_PNXGrainColorRed> 1.0 </_PNXGrainColorRed>
-<_PNXGrainColorGreen> 1.0 </_PNXGrainColorGreen>
-<_PNXGrainColorBlue> 1.0 </_PNXGrainColorBlue>
+<_PNxGrainPhase> 0 </_PNxGrainPhase> <!-- 0: Disabled -->
+<_PNxGrainAmount> 0 </_PNxGrainAmount>
+<_PNxGrainColorRed> 1.0 </_PNxGrainColorRed>
+<_PNxGrainColorGreen> 1.0 </_PNxGrainColorGreen>
+<_PNxGrainColorBlue> 1.0 </_PNxGrainColorBlue>
+
 
 <!-- ######################################################################################## IO Radar -->
-<_PNXShowRadar> 0 </_PNXShowRadar>
-<_PNXRadarScale> 0.5 </_PNXRadarScale>
+<_PNxRadarEnabled> 0 </_PNxRadarEnabled>
+<_PNxRadarScale> 0.5 </_PNxRadarScale>
 
-<_PNXRadarXAlign> 1 </_PNXRadarXAlign> <!-- 0: left 0.5: center 1: right -->
-<_PNXRadarYAlign> 0 </_PNXRadarYAlign> <!-- 0: top 0.5: center 1: bottom -->
+<_PNxRadarXAlign> 1 </_PNxRadarXAlign> <!-- 0: left 0.5: center 1: right -->
+<_PNxRadarYAlign> 0 </_PNxRadarYAlign> <!-- 0: top 0.5: center 1: bottom -->
 
-<_PNXRadarXOffset> -160 </_PNXRadarXOffset>
-<_PNXRadarYOffset> 10 </_PNXRadarYOffset>
+<_PNxRadarXOffset> -10 </_PNxRadarXOffset>
+<_PNxRadarYOffset> 10 </_PNxRadarYOffset>
 
-<_PNXRadarMarker1Mode> 0 </_PNXRadarMarker1Mode>
-<_PNXRadarMarker1X> 0 </_PNXRadarMarker1X>
-<_PNXRadarMarker1Y> 0 </_PNXRadarMarker1Y>
+<_PNxRadarMarker1Mode> 0 </_PNxRadarMarker1Mode>
+<_PNxRadarMarker1X> 0 </_PNxRadarMarker1X>
+<_PNxRadarMarker1Y> 0 </_PNxRadarMarker1Y>
 
-<_PNXRadarMarker2Mode> 0 </_PNXRadarMarker2Mode>
-<_PNXRadarMarker2X> 0 </_PNXRadarMarker2X>
-<_PNXRadarMarker2Y> 0 </_PNXRadarMarker2Y>
+<_PNxRadarMarker2Mode> 0 </_PNxRadarMarker2Mode>
+<_PNxRadarMarker2X> 0 </_PNxRadarMarker2X>
+<_PNxRadarMarker2Y> 0 </_PNxRadarMarker2Y>
 
-<_PNXRadarMarker3Mode> 0 </_PNXRadarMarker3Mode>
-<_PNXRadarMarker3X> 0 </_PNXRadarMarker3X>
-<_PNXRadarMarker3Y> 0 </_PNXRadarMarker3Y>
+<_PNxRadarMarker3Mode> 0 </_PNxRadarMarker3Mode>
+<_PNxRadarMarker3X> 0 </_PNxRadarMarker3X>
+<_PNxRadarMarker3Y> 0 </_PNxRadarMarker3Y>
 
-<_PNXRadarMarker4Mode> 0 </_PNXRadarMarker4Mode>
-<_PNXRadarMarker4X> 0 </_PNXRadarMarker4X>
-<_PNXRadarMarker4Y> 0 </_PNXRadarMarker4Y>
+<_PNxRadarMarker4Mode> 0 </_PNxRadarMarker4Mode>
+<_PNxRadarMarker4X> 0 </_PNxRadarMarker4X>
+<_PNxRadarMarker4Y> 0 </_PNxRadarMarker4Y>
 
-<_PNXRadarMarker5Mode> 0 </_PNXRadarMarker5Mode>
-<_PNXRadarMarker5X> 0 </_PNXRadarMarker5X>
-<_PNXRadarMarker5Y> 0 </_PNXRadarMarker5Y>
+<_PNxRadarMarker5Mode> 0 </_PNxRadarMarker5Mode>
+<_PNxRadarMarker5X> 0 </_PNxRadarMarker5X>
+<_PNxRadarMarker5Y> 0 </_PNxRadarMarker5Y>
 
-<_PNXRadarMarker6Mode> 0 </_PNXRadarMarker6Mode>
-<_PNXRadarMarker6X> 0 </_PNXRadarMarker6X>
-<_PNXRadarMarker6Y> 0 </_PNXRadarMarker6Y>
+<_PNxRadarMarker6Mode> 0 </_PNxRadarMarker6Mode>
+<_PNxRadarMarker6X> 0 </_PNxRadarMarker6X>
+<_PNxRadarMarker6Y> 0 </_PNxRadarMarker6Y>
 
-<_PNXRadarMarker7Mode> 0 </_PNXRadarMarker7Mode>
-<_PNXRadarMarker7X> 0 </_PNXRadarMarker7X>
-<_PNXRadarMarker7Y> 0 </_PNXRadarMarker7Y>
+<_PNxRadarMarker7Mode> 0 </_PNxRadarMarker7Mode>
+<_PNxRadarMarker7X> 0 </_PNxRadarMarker7X>
+<_PNxRadarMarker7Y> 0 </_PNxRadarMarker7Y>
 
-<_PNXRadarMarker8Mode> 0 </_PNXRadarMarker8Mode>
-<_PNXRadarMarker8X> 0 </_PNXRadarMarker8X>
-<_PNXRadarMarker8Y> 0 </_PNXRadarMarker8Y>
+<_PNxRadarMarker8Mode> 0 </_PNxRadarMarker8Mode>
+<_PNxRadarMarker8X> 0 </_PNxRadarMarker8X>
+<_PNxRadarMarker8Y> 0 </_PNxRadarMarker8Y>
 
-<_PNXRadarMarker9Mode> 0 </_PNXRadarMarker9Mode>
-<_PNXRadarMarker9X> 0 </_PNXRadarMarker9X>
-<_PNXRadarMarker9Y> 0 </_PNXRadarMarker9Y>
+<_PNxRadarMarker9Mode> 0 </_PNxRadarMarker9Mode>
+<_PNxRadarMarker9X> 0 </_PNxRadarMarker9X>
+<_PNxRadarMarker9Y> 0 </_PNxRadarMarker9Y>
 
-<!-- ######################################################################################## IO Stealth Field meter-->
-
-<_PNXSFShowStealthMeter> 0 </_PNXSFShowStealthMeter>
-<_PNXSFMeterStyle> 0 </_PNXSFMeterStyle>
-<_PNXSFStability> 1 </_PNXSFStability>
-<_PNXSFCharges> 0 </_PNXSFCharges>
-<_PNXSFHealth> 1 </_PNXSFHealth>
 
 <!-- ######################################################################################## IO Crosshair-->
+<_PNxCrosshairEnabled> 1 </_PNxCrosshairEnabled>
+<_PNxCrosshairLength> 16 </_PNxCrosshairLength>
+<_PNxCrosshairWidth> 6 </_PNxCrosshairWidth>
+<_PNxCrosshairSpread> 0.5 </_PNxCrosshairSpread> <!-- 0.0 to 1.0 -->
+<_PNxCrosshairMinOffset> 3 </_PNxCrosshairMinOffset>
+<_PNxCrosshairMaxOffset> 128 </_PNxCrosshairMaxOffset>
 
-<_PNXCrosshairEnabled> 1 </_PNXCrosshairEnabled>
-<_PNXCrosshairLength> 16 </_PNXCrosshairLength>
-<_PNXCrosshairWidth> 6 </_PNXCrosshairWidth>
-<_PNXCrosshairSpread> 0.5 </_PNXCrosshairSpread> <!-- 0.0 to 1.0 -->
-<_PNXCrosshairMinOffset> 3 </_PNXCrosshairMinOffset>
-<_PNXCrosshairMaxOffset> 128 </_PNXCrosshairMaxOffset>
 
 <!-- ######################################################################################## IO Bullet Time Meter-->
-
 <_PNxBTMeterEnabled> 0 </_PNxBTMeterEnabled>
 <_PNxBTMeterAmount> 0 </_PNxBTMeterAmount>
-<_PNxBTMeterWarn> 0 </_PNxBTMeterWarn>
-<_PNxBTMeterIcon> 0 </_PNxBTMeterIcon>
-<_PNxBTMeterIconAnim> 0 </_PNxBTMeterIconAnim> <!-- 0.0 to 1.0 -->
+
 
 <!-- ######################################################################################## IO Calibrator-->
-
 <_PNXCalibratorEnabled> 0 </_PNXCalibratorEnabled>
 <_PNXCalibratorSize> 200 </_PNXCalibratorSize>
 
-<!-- ######################################################################################## Zoom Bar -->
 
+<!-- ######################################################################################## IO Zoom Bar -->
 <_PNxZoomBarEnabled> 0 </_PNxZoomBarEnabled>
 <_PNxZoomBarFill> 0 </_PNxZoomBarFill>
 
-<!-- ######################################################################################## Scanner -->
 
+<!-- ######################################################################################## IO Scanner -->
 <_PNxScannerEnabled> 0 </_PNxScannerEnabled>
 <_PNxScannerCursorLine> 0 </_PNxScannerCursorLine>
 <_PNxScannerCursorPos> 0 </_PNxScannerCursorPos>
@@ -111,169 +101,19 @@
 <_PNxScannerText9Index> 0 </_PNxScannerText9Index>
 <_PNxScannerText10Index> 0 </_PNxScannerText10Index>
 
-<!-- ######################################################################################## Vision Mode meter -->
 
-<rect name="PNXVMMeter">
-	<locus> &true; </locus>
-	<x>
-		<copy> 0 </copy>
-		<sub>
-			<copy> 131 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</sub>
-		<add src="globals()" trait="_HUDHPInfo_X" />
-	</x>
-	<y>
-		<copy src="HitPoints" trait="y" />
-		<sub>
-			<copy> 52 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</sub>
-	</y>
-	<visible>
-		<copy src="io()" trait="_PNXVMEnabled" />
-		<eq> 1 </eq>
-		<and src="io()" trait="_HUDMode" />
-	</visible>
-	<image name="PNXVMMeterMeter">
-		<depth> -1 </depth>
-		<alpha> <copy src="io()" trait="_MeterAlpha" /> </alpha>
-		<width>
-			<copy> 152 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-			<mul src="me()" trait="_Value" />
-		</width>
-		<height>
-			<copy> 20 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</height>
-		<cropx>
-			<copy src="parent()" trait="width"/>
-			<mul src="me()" trait="_Value"/>
-			
-		</cropx>
-		
-		<filename>
-			<copy src="globals()" trait="_HUDSolidMeters" />
-			<copy src="me()" trait="_filename_" />
-		</filename>
-		<_filename_0> Interface\HUD\hud_tick_mark.dds </_filename_0>
-		<_filename_1> Interface\Shared\solid.dds </_filename_1>
-		<zoom>
-			<copy src="globals()" trait="_duiscale_65" />
-			<mul> 100 </mul>
-		</zoom>
-		<tile> <not src="globals()" trait="_HUDSolidMeters" /> </tile>
-		<x>
-			<copy> 151 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</x>
-		<y>
-			<copy> 61 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-			<sub src="me()" trait="height"/>
-		</y>
-		<_Value> <copy src="io()" trait="_PNXVMCharge"/> </_Value>
-		<systemcolor> <copy src="globals()" trait="_duiHUDMtrSysColor" /> </systemcolor> <!-- DarN CHECK -->
-		<brightness> <copy src="globals()" trait="_duiHUDMtrBrightness" /> </brightness>
-		<red> <copy src="globals()" trait="_HUDRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDBlue" /> </blue>
-	</image>
-	<image name="PNXVMMeterMeterBG">
-		<visible> <copy src="globals()" trait="_HUDSolidMeters" /> </visible>
-		<depth> -2 </depth>
-		<filename> solid.dds </filename>
-		<texatlas> Interface\InterfaceShared.tai </texatlas>
-		<height> <copy src="sibling(VMMeterMeter)" trait="height" /> </height>
-		<width>
-			<copy> 152 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</width>
-		<x>
-			<copy src="sibling(VMMeterMeter)" trait="x" />
-			<add src="sibling(VMMeterMeter)" trait="width" />
-			<sub src="me()" trait="width" />
-		</x>
-		<y> <copy src="sibling(VMMeterMeter)" trait="y" /> </y>
-		<alpha>
-			<copy src="sibling(VMMeterMeter)" trait="alpha" />
-			<div> 2 </div>
-		</alpha>
-		<brightness> <copy src="sibling(VMMeterMeter)" trait="brightness" /> </brightness>
-		<systemcolor> <copy src="sibling(VMMeterMeter)" trait="systemcolor" /> </systemcolor> <!-- DarN CHECK -->
-		<red> <copy src="globals()" trait="_HUDRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDBlue" /> </blue>
-	</image>
-	<image name="PNXVMBracket">
-		<height>
-			<copy> 152 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</height>
-		<width>
-			<copy> 512 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</width>
-		<filename> Interface\HUD\glow_hud_left_nv_seperator.dds </filename>
-		<zoom> &scale; </zoom>
-		<brightness> <copy src="globals()" trait="_duiHUDBrightness" /> </brightness>
-		<red> <copy src="globals()" trait="_HUDRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDBlue" /> </blue>
-	</image>
-	<text name="PNXVMLabel">
-		<font> <copy src="globals()" trait="_HUDMeterFont" /> </font>
-		<justify> &left; </justify>
-		<x>
-			<copy> 161 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</x>
-		<y>
-			<copy> 7 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</y>
-	
-		<_nam_1> NV </_nam_1>
-		<_nam_2> HV </_nam_2>
-		<_nam_3> EV </_nam_3>
-		
-		<_name>
-			<copy src="io()" trait="_PNXVMMode" />
-			<copy src="me()" trait="_nam_" />
-		</_name>
-		
-		<string>
-			<copy src="me()" trait="_name" />
-		</string>
-		
-		<brightness> <copy src="globals()" trait="_duiHUDBrightness" /> </brightness>
-		<red> <copy src="globals()" trait="_HUDTxtRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDTxtGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDTxtBlue" /> </blue>
-	</text>
-	<text name="PNXVMCellsText">
-		<font> <copy src="globals()" trait="_HUDMeterFont" /> </font>
-		<justify> &left; </justify>
-		<x>
-			<copy> 161 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</x>
-		<y>
-			<copy> 79 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</y>
-		<string> <copy src="io()" trait="_PNXVMCells"/> </string>
-		<brightness> <copy src="globals()" trait="_duiHUDBrightness" /> </brightness>
-		<red> <copy src="globals()" trait="_HUDTxtRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDTxtGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDTxtBlue" /> </blue>
-	</text>
+<!-- ######################################################################################## IO Grenade Icon -->
+<_PNxGrenadeIconEnabled> 1 </_PNxGrenadeIconEnabled>
+<_PNxGrenadeIconType> 3 </_PNxGrenadeIconType>
+<_PNxGrenadeIconCount> 10 </_PNxGrenadeIconCount>
 
-</rect>
 
 <!-- ######################################################################################## Grain -->
 <rect name="PNXGrainLayer">
+	<visible>
+		<copy src="io()" trait="_PNxGrainPhase" />
+		<gt> 0 </gt>
+	</visible>
 	<x>0</x>
 	<y>0</y>
 	<width>
@@ -282,19 +122,19 @@
 	<height><copy src="screen()" trait="height" /></height>
 	
 	<alpha>
-		<copy src="io()" trait="_PNXGrainAmount" />
+		<copy src="io()" trait="_PNxGrainAmount" />
 		<mul>255</mul>
 	</alpha>
 	<red>
-		<copy src="io()" trait="_PNXGrainColorRed" />
+		<copy src="io()" trait="_PNxGrainColorRed" />
 		<mul>255</mul>
 	</red>
 	<green>
-		<copy src="io()" trait="_PNXGrainColorGreen" />
+		<copy src="io()" trait="_PNxGrainColorGreen" />
 		<mul>255</mul>
 	</green>
 	<blue>
-		<copy src="io()" trait="_PNXGrainColorBlue" />
+		<copy src="io()" trait="_PNxGrainColorBlue" />
 		<mul>255</mul>
 	</blue>
 
@@ -313,11 +153,11 @@
 		<height><copy src="parent()" trait="height" /></height>
 		
 		<visible>
-			<copy src="io()" trait="_PNXGrainPhase" />
+			<copy src="io()" trait="_PNxGrainPhase" />
 			<eq> 1 </eq>
 		</visible>
 		
-		<filename> pnx\grain1.dds </filename>
+		<filename> pnx\hud\grain\grain1.dds </filename>
 	</image>
 	
 	<image name="Phase2">
@@ -334,11 +174,11 @@
 		<height><copy src="parent()" trait="height" /></height>
 		
 		<visible>
-			<copy src="io()" trait="_PNXGrainPhase" />
+			<copy src="io()" trait="_PNxGrainPhase" />
 			<eq> 2 </eq>
 		</visible>
 		
-		<filename> pnx\grain2.dds </filename>
+		<filename> pnx\hud\grain\grain2.dds </filename>
 		
 	</image>
 	
@@ -356,11 +196,11 @@
 		<height><copy src="parent()" trait="height" /></height>
 		
 		<visible>
-			<copy src="io()" trait="_PNXGrainPhase" />
+			<copy src="io()" trait="_PNxGrainPhase" />
 			<eq> 3 </eq>
 		</visible>
 		
-		<filename> pnx\grain3.dds </filename>
+		<filename> pnx\hud\grain\grain3.dds </filename>
 		
 	</image>
 	
@@ -378,11 +218,11 @@
 		<height><copy src="parent()" trait="height" /></height>
 		
 		<visible>
-			<copy src="io()" trait="_PNXGrainPhase" />
+			<copy src="io()" trait="_PNxGrainPhase" />
 			<eq> 4 </eq>
 		</visible>
 		
-		<filename> pnx\grain4.dds </filename>
+		<filename> pnx\hud\grain\grain4.dds </filename>
 		
 	</image>
 
@@ -393,7 +233,7 @@
 <rect name="PNXRadar">
 
 	<visible>
-		<copy src="io()" trait="_PNXShowRadar" />
+		<copy src="io()" trait="_PNxRadarEnabled" />
 		<eq> 1 </eq>
 		<and>
 			<copy src="ActionPoints" trait="visible" />
@@ -403,32 +243,32 @@
 
 	<width>
 		<copy>400</copy>
-		<mul src="io()" trait="_PNXRadarScale" />
+		<mul src="io()" trait="_PNxRadarScale" />
 	</width>
 	
 	<height>
 		<copy>400</copy>
-		<mul src="io()" trait="_PNXRadarScale" />
+		<mul src="io()" trait="_PNxRadarScale" />
 	</height>
 	
 	<x>
 		<copy src="screen()" trait="width" />
-		<mul src="io()" trait="_PNXRadarXAlign" />
+		<mul src="io()" trait="_PNxRadarXAlign" />
 		<sub>
 			<copy src="me()" trait="width" />
-			<mul src="io()" trait="_PNXRadarXAlign" />
+			<mul src="io()" trait="_PNxRadarXAlign" />
 		</sub>
-		<add src="io()" trait="_PNXRadarXOffset" />
+		<add src="io()" trait="_PNxRadarXOffset" />
 	</x>
 	
 	<y>
 		<copy src="screen()" trait="height" />
-		<mul src="io()" trait="_PNXRadarYAlign" />
+		<mul src="io()" trait="_PNxRadarYAlign" />
 		<sub>
 			<copy src="me()" trait="height" />
-			<mul src="io()" trait="_PNXRadarYAlign" />
+			<mul src="io()" trait="_PNxRadarYAlign" />
 		</sub>
-		<add src="io()" trait="_PNXRadarYOffset" />
+		<add src="io()" trait="_PNxRadarYOffset" />
 	</y>
 
 	<image name="Background">
@@ -441,286 +281,124 @@
 		<width><copy src="parent()" trait="width" /></width>
 		<height><copy src="parent()" trait="height" /></height>
 		
-		<filename> pnx\radar.dds </filename>
+		<filename> pnx\hud\map\radar.dds </filename>
 	</image>
 	
 	<image name="Marker1">
 		<include src="pnx\radar_marker.xml" />
-		<_Mode><copy src="io()" trait="_PNXRadarMarker1Mode" /></_Mode>
-		<_XOffset><copy src="io()" trait="_PNXRadarMarker1X" /></_XOffset>
-		<_YOffset><copy src="io()" trait="_PNXRadarMarker1Y" /></_YOffset>
+		<_Mode><copy src="io()" trait="_PNxRadarMarker1Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker1X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker1Y" /></_YOffset>
 	</image>
 	
 	<image name="Marker2">
 		<include src="pnx\radar_marker.xml" />
-		<_Mode><copy src="io()" trait="_PNXRadarMarker2Mode" /></_Mode>
-		<_XOffset><copy src="io()" trait="_PNXRadarMarker2X" /></_XOffset>
-		<_YOffset><copy src="io()" trait="_PNXRadarMarker2Y" /></_YOffset>
+		<_Mode><copy src="io()" trait="_PNxRadarMarker2Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker2X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker2Y" /></_YOffset>
 	</image>
 	
 	<image name="Marker3">
 		<include src="pnx\radar_marker.xml" />
-		<_Mode><copy src="io()" trait="_PNXRadarMarker3Mode" /></_Mode>
-		<_XOffset><copy src="io()" trait="_PNXRadarMarker3X" /></_XOffset>
-		<_YOffset><copy src="io()" trait="_PNXRadarMarker3Y" /></_YOffset>
+		<_Mode><copy src="io()" trait="_PNxRadarMarker3Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker3X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker3Y" /></_YOffset>
 	</image>
 	
 	<image name="Marker4">
 		<include src="pnx\radar_marker.xml" />
-		<_Mode><copy src="io()" trait="_PNXRadarMarker4Mode" /></_Mode>
-		<_XOffset><copy src="io()" trait="_PNXRadarMarker4X" /></_XOffset>
-		<_YOffset><copy src="io()" trait="_PNXRadarMarker4Y" /></_YOffset>
+		<_Mode><copy src="io()" trait="_PNxRadarMarker4Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker4X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker4Y" /></_YOffset>
 	</image>
 	
 	<image name="Marker5">
 		<include src="pnx\radar_marker.xml" />
-		<_Mode><copy src="io()" trait="_PNXRadarMarker5Mode" /></_Mode>
-		<_XOffset><copy src="io()" trait="_PNXRadarMarker5X" /></_XOffset>
-		<_YOffset><copy src="io()" trait="_PNXRadarMarker5Y" /></_YOffset>
+		<_Mode><copy src="io()" trait="_PNxRadarMarker5Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker5X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker5Y" /></_YOffset>
 	</image>
 	
 	<image name="Marker6">
 		<include src="pnx\radar_marker.xml" />
-		<_Mode><copy src="io()" trait="_PNXRadarMarker6Mode" /></_Mode>
-		<_XOffset><copy src="io()" trait="_PNXRadarMarker6X" /></_XOffset>
-		<_YOffset><copy src="io()" trait="_PNXRadarMarker6Y" /></_YOffset>
+		<_Mode><copy src="io()" trait="_PNxRadarMarker6Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker6X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker6Y" /></_YOffset>
 	</image>
 	
 	<image name="Marker7">
 		<include src="pnx\radar_marker.xml" />
-		<_Mode><copy src="io()" trait="_PNXRadarMarker7Mode" /></_Mode>
-		<_XOffset><copy src="io()" trait="_PNXRadarMarker7X" /></_XOffset>
-		<_YOffset><copy src="io()" trait="_PNXRadarMarker7Y" /></_YOffset>
+		<_Mode><copy src="io()" trait="_PNxRadarMarker7Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker7X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker7Y" /></_YOffset>
 	</image>
 	
 	<image name="Marker8">
 		<include src="pnx\radar_marker.xml" />
-		<_Mode><copy src="io()" trait="_PNXRadarMarker8Mode" /></_Mode>
-		<_XOffset><copy src="io()" trait="_PNXRadarMarker8X" /></_XOffset>
-		<_YOffset><copy src="io()" trait="_PNXRadarMarker8Y" /></_YOffset>
+		<_Mode><copy src="io()" trait="_PNxRadarMarker8Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker8X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker8Y" /></_YOffset>
 	</image>
 	
 	<image name="Marker9">
 		<include src="pnx\radar_marker.xml" />
-		<_Mode><copy src="io()" trait="_PNXRadarMarker9Mode" /></_Mode>
-		<_XOffset><copy src="io()" trait="_PNXRadarMarker9X" /></_XOffset>
-		<_YOffset><copy src="io()" trait="_PNXRadarMarker9Y" /></_YOffset>
+		<_Mode><copy src="io()" trait="_PNxRadarMarker9Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker9X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker9Y" /></_YOffset>
 	</image>
 	
-</rect>
-
-<!-- ######################################################################################## Stealth Field Meter -->
-<rect name="SFMeter">
-	<locus> &true; </locus>
-	<x>
-		<copy src="screen()" trait="width" />
-		<sub>
-			<copy> 382 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</sub>
-		<add src="globals()" trait="_HUDAPInfo_X" />
-		<add src="globals()" trait="_SFMeter_X" />
-	</x>
-	<y>
-		<copy src="ActionPoints" trait="y" />
-		<sub>
-			<copy> 52 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</sub>
-		<add src="globals()" trait="_SFMeter_Y" />
-	</y>
-	<visible>
-		<copy src="io()" trait="_PNXSFShowStealthMeter" />
-		<eq> 1 </eq>
-		<and src="io()" trait="_HUDMode" />
-	</visible>
-	<image name="SFMeterMeter">
-		<depth> -1 </depth>
-		<alpha> <copy src="io()" trait="_MeterAlpha" /> </alpha>
-		<width>
-			<copy> 152 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-			<mul src="me()" trait="_Value" />
-		</width>
-		<height>
-			<copy> 20 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</height>
-		<cropx>
-			<copy src="parent()" trait="width"/>
-			<mul src="me()" trait="_Value"/>
-			<div> -1 </div>
-		</cropx>
-		
-		<filename>
-			<copy src="globals()" trait="_HUDSolidMeters" />
-			<copy src="me()" trait="_filename_" />
-		</filename>
-		<_filename_0> Interface\HUD\hud_tick_mark.dds </_filename_0>
-		<_filename_1> Interface\Shared\solid.dds </_filename_1>
-		<zoom>
-			<copy src="globals()" trait="_duiscale_65" />
-			<mul> 100 </mul>
-		</zoom>
-		<tile> <not src="globals()" trait="_HUDSolidMeters" /> </tile>
-		<x>
-			<copy> 361 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-			<sub src="me()" trait="width"/>
-		</x>
-		<y>
-			<copy> 61 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-			<sub src="me()" trait="height"/>
-		</y>
-		<_Value> <copy src="io()" trait="_PNXSFStability"/> </_Value>
-		<systemcolor> <copy src="globals()" trait="_duiHUDMtrSysColor" /> </systemcolor> <!-- DarN CHECK -->
-		<brightness> <copy src="globals()" trait="_duiHUDMtrBrightness" /> </brightness>
-		<red> <copy src="globals()" trait="_HUDRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDBlue" /> </blue>
-	</image>
-	<image name="SFMeterMeterBG">
-		<visible> <copy src="globals()" trait="_HUDSolidMeters" /> </visible>
-		<depth> -2 </depth>
-		<filename> solid.dds </filename>
-		<texatlas> Interface\InterfaceShared.tai </texatlas>
-		<height> <copy src="sibling(SFMeterMeter)" trait="height" /> </height>
-		<width>
-			<copy> 152 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</width>
-		<x>
-			<copy src="sibling(SFMeterMeter)" trait="x" />
-			<add src="sibling(SFMeterMeter)" trait="width" />
-			<sub src="me()" trait="width" />
-		</x>
-		<y> <copy src="sibling(SFMeterMeter)" trait="y" /> </y>
-		<alpha>
-			<copy src="sibling(SFMeterMeter)" trait="alpha" />
-			<div> 2 </div>
-		</alpha>
-		<brightness> <copy src="sibling(SFMeterMeter)" trait="brightness" /> </brightness>
-		<systemcolor> <copy src="sibling(SFMeterMeter)" trait="systemcolor" /> </systemcolor> <!-- DarN CHECK -->
-		<red> <copy src="globals()" trait="_HUDRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDBlue" /> </blue>
-	</image>
-	<image name="SFBracket">
-		<height>
-			<copy> 152 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</height>
-		<width>
-			<copy> 512 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</width>
-		<filename> Interface\HUD\glow_hud_right_sf_seperator.dds </filename>
-		
-		<filename>
-			<copy src="io()" trait="_PNXSFMeterStyle" />
-			<copy src="me()" trait="_filename_" />
-		</filename>
-		<_filename_0> Interface\HUD\glow_hud_right_sf_seperator.dds </_filename_0>
-		<_filename_1> Interface\HUD\glow_hud_right_sf_seperator_nocond.dds </_filename_1>
-		
-		<zoom> &scale; </zoom>
-		<brightness> <copy src="globals()" trait="_duiHUDBrightness" /> </brightness>
-		<red> <copy src="globals()" trait="_HUDRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDBlue" /> </blue>
-	</image>
-	<text name="SFLabel">
-		<font> <copy src="globals()" trait="_HUDMeterFont" /> </font>
-		<justify> &right; </justify>
-		<x>
-			<copy> 352 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</x>
-		<y>
-			<copy> 7 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</y>
-		<string> SF </string>
-		<brightness> <copy src="globals()" trait="_duiHUDBrightness" /> </brightness>
-		<red> <copy src="globals()" trait="_HUDTxtRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDTxtGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDTxtBlue" /> </blue>
-	</text>
-	<text name="SFChargeText">
-		<font> <copy src="globals()" trait="_HUDMeterFont" /> </font>
-		<justify> &right; </justify>
-		<x>
-			<copy> 352 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</x>
-		<y>
-			<copy> 79 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</y>
-		<string> <copy src="io()" trait="_PNXSFCharges"/> </string>
-		<brightness> <copy src="globals()" trait="_duiHUDBrightness" /> </brightness>
-		<red> <copy src="globals()" trait="_HUDTxtRed" /> </red>
-		<green> <copy src="globals()" trait="_HUDTxtGreen" /> </green>
-		<blue> <copy src="globals()" trait="_HUDTxtBlue" /> </blue>
-	</text>
-	<rect name="SFHealthMeterContainer">
-		<include src="darn\hudmeter.xml" />
-		<visible>
-			<copy src="io()" trait="_PNXSFMeterStyle" />
-			<eq> 0 </eq>
-		</visible>
-		<width> 40 </width>
-		<height> 11 </height>
-		<x>
-			<copy> 176 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</x>
-		<y>
-			<copy> 84 </copy>
-			<mul src="globals()" trait="_duiscale_65" />
-		</y>
-		<locus> &true; </locus>
-		<_SolidMeter> &true; </_SolidMeter>
-		<_ShowBackground> &true; </_ShowBackground>
-		<alpha> <copy> 200 </copy> </alpha>
-		<_Value> <copy src="io()" trait="_PNXSFHealth" /> </_Value>
-	</rect>
-
 </rect>
 
 <!-- ######################################################################################## Crosshair -->
-<rect name="PNXCrosshair">
-
+<rect name="PNxCrosshair">
 	<visible>
-		<copy src="io()" trait="_PNXCrosshairEnabled" />
-		<eq> 1 </eq>
-		<and src="ActionPoints" trait="visible" />
+		<copy src="io()" trait="_PNxCrosshairEnabled" />
+		<and src="ReticleCenter" trait="visible" />
 	</visible>
+	
+	<_radius>
+		<copy src="screen()" trait="width" />
+		<mul src="io()" trait="_PNxCrosshairSpread" />
+	</_radius>
+	
+	<x>
+		<copy src="screen()" trait="width" />
+		<div> 2 </div>
+		<sub src="me()" trait="_radius" />
+	</x>
+	
+	<y>
+		<copy src="screen()" trait="height" />
+		<div> 2 </div>
+		<sub src="me()" trait="_radius" />
+	</y>
+	
+	<width>
+		<copy src="me()" trait="_radius" />
+		<mul> 2 </mul>
+	</width>
+	
+	<height>
+		<copy src="me()" trait="_radius" />
+		<mul> 2 </mul>
+	</height>
+		
 
-	<image name="PNXCrosshairLineW">
+	<image name="PNxCrosshairLineW">
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
 		
 		<width>
-			<copy src="io()" trait="_PNXCrosshairLength" />
+			<copy src="io()" trait="_PNxCrosshairLength" />
 		</width>
 		
 		<height>
-			<copy src="io()" trait="_PNXCrosshairWidth" />
+			<copy src="io()" trait="_PNxCrosshairWidth" />
 		</height>
 		
 		<x>
-			<copy src="screen()" trait="width" />
-			<div> 2 </div>
-			<sub>
-				<copy src="me()" trait="width" />
-			</sub>
-			<sub src="io()" trait="_PNXCrosshairMinOffset" />
-			<sub>
-				<copy src="io()" trait="_PNXCrosshairMaxOffset" />
-				<mul src="io()" trait="_PNXCrosshairSpread" />
-			</sub>
+			<copy src="parent()" trait="x" />
+			<sub src="me()" trait="width" />
 		</x>
 			
 		<y>
@@ -732,29 +410,24 @@
 			</sub>
 		</y>
 		
-		<filename> pnx\crosshairh.dds </filename>
+		<filename> pnx\hud\cross\crosshairh.dds </filename>
 	</image>
 	
-	<image name="PNXCrosshairLineE">
+	<image name="PNxCrosshairLineE">
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
 		
 		<width>
-			<copy src="io()" trait="_PNXCrosshairLength" />
+			<copy src="io()" trait="_PNxCrosshairLength" />
 		</width>
 		
 		<height>
-			<copy src="io()" trait="_PNXCrosshairWidth" />
+			<copy src="io()" trait="_PNxCrosshairWidth" />
 		</height>
 		
 		<x>
-			<copy src="screen()" trait="width" />
-			<div> 2 </div>
-			<add src="io()" trait="_PNXCrosshairMinOffset" />
-			<add>
-				<copy src="io()" trait="_PNXCrosshairMaxOffset" />
-				<mul src="io()" trait="_PNXCrosshairSpread" />
-			</add>
+			<copy src="parent()" trait="x" />
+			<add src="parent()" trait="width" />
 		</x>
 			
 		<y>
@@ -766,19 +439,19 @@
 			</sub>
 		</y>
 		
-		<filename> pnx\crosshairh.dds </filename>
+		<filename> pnx\hud\cross\crosshairh.dds </filename>
 	</image>
 	
-	<image name="PNXCrosshairLineN">
+	<image name="PNxCrosshairLineN">
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
 		
 		<width>
-			<copy src="io()" trait="_PNXCrosshairWidth" />
+			<copy src="io()" trait="_PNxCrosshairWidth" />
 		</width>
 		
 		<height>
-			<copy src="io()" trait="_PNXCrosshairLength" />
+			<copy src="io()" trait="_PNxCrosshairLength" />
 		</height>
 		
 		<x>
@@ -791,31 +464,23 @@
 		</x>
 		
 		<y>
-			<copy src="screen()" trait="height" />
-			<div> 2 </div>
-			<sub>
-				<copy src="me()" trait="height" />
-			</sub>
-			<sub src="io()" trait="_PNXCrosshairMinOffset" />
-			<sub>
-				<copy src="io()" trait="_PNXCrosshairMaxOffset" />
-				<mul src="io()" trait="_PNXCrosshairSpread" />
-			</sub>
+			<copy src="parent()" trait="y" />
+			<sub src="me()" trait="height" />
 		</y>
 			
-		<filename> pnx\crosshairv.dds </filename>
+		<filename> pnx\hud\cross\crosshairv.dds </filename>
 	</image>
 	
-	<image name="PNXCrosshairLineS">
+	<image name="PNxCrosshairLineS">
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
 		
 		<width>
-			<copy src="io()" trait="_PNXCrosshairWidth" />
+			<copy src="io()" trait="_PNxCrosshairWidth" />
 		</width>
 		
 		<height>
-			<copy src="io()" trait="_PNXCrosshairLength" />
+			<copy src="io()" trait="_PNxCrosshairLength" />
 		</height>
 		
 		<x>
@@ -828,16 +493,11 @@
 		</x>
 		
 		<y>
-			<copy src="screen()" trait="height" />
-			<div> 2 </div>
-			<add src="io()" trait="_PNXCrosshairMinOffset" />
-			<add>
-				<copy src="io()" trait="_PNXCrosshairMaxOffset" />
-				<mul src="io()" trait="_PNXCrosshairSpread" />
-			</add>
+			<copy src="parent()" trait="y" />
+			<add src="parent()" trait="height" />
 		</y>
 			
-		<filename> pnx\crosshairv.dds </filename>
+		<filename> pnx\hud\cross\crosshairv.dds </filename>
 	</image>
 	
 </rect>
@@ -860,8 +520,7 @@
 		<mul> 0.1 </mul>
 	</y>
 	<width> 64 </width>
-	<height> 64 </height>
-	
+	<height> 64 </height>	
 
 	<image name="PNxBTMeterImage">
 		<zoom> &scale; </zoom>
@@ -891,113 +550,23 @@
 			<copy src="io()" trait="_PNxBTMeterAmount" />
 			<copy src="me()" trait="_filename_" />
 		</filename>
-		<_filename_0> pnx\timemeter0.dds </_filename_0>
-		<_filename_1> pnx\timemeter1.dds </_filename_1>
-		<_filename_2> pnx\timemeter2.dds </_filename_2>
-		<_filename_3> pnx\timemeter3.dds </_filename_3>
-		<_filename_4> pnx\timemeter4.dds </_filename_4>
-		<_filename_5> pnx\timemeter5.dds </_filename_5>
-		<_filename_6> pnx\timemeter6.dds </_filename_6>
-		<_filename_7> pnx\timemeter7.dds </_filename_7>
-		<_filename_8> pnx\timemeter8.dds </_filename_8>
-		<_filename_9> pnx\timemeter9.dds </_filename_9>
-		<_filename_10> pnx\timemeter10.dds </_filename_10>
-		<_filename_11> pnx\stopwatch.dds </_filename_11>
-	</image>
-	
-	<image name="PNxBTMeterStatusWarning">
-		<systemcolor> &nosystemcolor; </systemcolor>
-	
-		<visible>
-			<copy src="io()" trait="_PNxBTMeterWarn" />
-		</visible>
-	
-		<zoom> &scale; </zoom>
-		<depth> 1 </depth>
-		
-		<x>
-			<copy src="parent()" trait="x" />
-			<sub>
-				<copy src="me()" trait="width" />
-				<div> 2 </div>
-			</sub>
-		</x>
-		<y>
-			<copy src="parent()" trait="y" />
-			<sub>
-				<copy src="me()" trait="height" />
-				<div> 2 </div>
-			</sub>
-		</y>
-		<width> <copy src="parent()" trait="width" /> </width>
-		<height> <copy src="parent()" trait="height" /> </height>
-		
-		<alpha> 180 </alpha>
-
-		<filename> pnx\timemeter_lowap.dds </filename>
-	</image>
-	
-	<image name="PNxBTMeterStatusIcon">
-	
-		<visible>
-			<not src="io()" trait="_PNxBTMeterWarn" />
-			<and src="io()" trait="_PNxBTMeterIcon" />
-			<gt> 0 </gt>
-		</visible>
-	
-		<zoom> &scale; </zoom>
-		<depth> 1 </depth>
-		
-		<x>
-			<copy src="parent()" trait="x" />
-			<sub>
-				<copy src="me()" trait="width" />
-				<div> 2 </div>
-			</sub>
-		</x>
-		<y>
-			<copy src="parent()" trait="y" />
-			<sub>
-				<copy src="me()" trait="height" />
-				<div> 2 </div>
-			</sub>
-		</y>
-		<width>
-			<copy src="parent()" trait="width" />
-			<!--mul>
-				<copy> 0.9 </copy>
-				<add>
-					<copy> 0.1 </copy>
-					<mul src="io()" trait="_PNxBTMeterIconAnim" />
-				</add>
-			</mul-->
-		</width>
-		<height>
-			<copy src="me()" trait="width" />
-		</height>
-		
-		<alpha>
-			<copy> 180 </copy>
-			<sub>
-				<copy> 180 </copy>
-				<mul src="io()" trait="_PNxBTMeterIconAnim" />
-			</sub>
-		
-		</alpha>
-
-		<filename>
-			<copy src="io()" trait="_PNxBTMeterIcon" />
-			<copy src="me()" trait="_filename_" />
-		</filename>
-		
-		<_filename_1> pnx\timemeter_reaper.dds </_filename_1>
-		
+		<_filename_0> pnx\hud\bt\timemeter0.dds </_filename_0>
+		<_filename_1> pnx\hud\bt\timemeter1.dds </_filename_1>
+		<_filename_2> pnx\hud\bt\timemeter2.dds </_filename_2>
+		<_filename_3> pnx\hud\bt\timemeter3.dds </_filename_3>
+		<_filename_4> pnx\hud\bt\timemeter4.dds </_filename_4>
+		<_filename_5> pnx\hud\bt\timemeter5.dds </_filename_5>
+		<_filename_6> pnx\hud\bt\timemeter6.dds </_filename_6>
+		<_filename_7> pnx\hud\bt\timemeter7.dds </_filename_7>
+		<_filename_8> pnx\hud\bt\timemeter8.dds </_filename_8>
+		<_filename_9> pnx\hud\bt\timemeter9.dds </_filename_9>
+		<_filename_10> pnx\hud\bt\timemeter10.dds </_filename_10>
 	</image>
 
 </rect>
 
 
-<!-- ######################################################################################## Crosshair -->
+<!-- ######################################################################################## Spread Calibrator -->
 <rect name="PNXCalibrator">
 
 	<visible>
@@ -1112,7 +681,7 @@
 			<copy src="parent()" trait="height" />
 		</height>
 		
-		<filename> pnx\zoombar.dds </filename>
+		<filename> pnx\hud\zoom\zoombar.dds </filename>
 	</image>
 	
 	<image name="PNxZoomBarMeter">
@@ -1176,7 +745,7 @@
 		<width> 16 </width>
 		<height> 16 </height>
 		
-		<filename> pnx\zoombar_arrow_top.dds </filename>
+		<filename> pnx\hud\zoom\zoombar_arrow_top.dds </filename>
 	</image>
 	
 	<image name="PNxZoomBarMeterArrowBottom">
@@ -1203,7 +772,7 @@
 		<width> 16 </width>
 		<height> 16 </height>
 		
-		<filename> pnx\zoombar_arrow_bottom.dds </filename>
+		<filename> pnx\hud\zoom\zoombar_arrow_bottom.dds </filename>
 	</image>
 	
 </rect>
@@ -1255,7 +824,7 @@
 			<copy src="parent()" trait="height" />
 		</height>
 		
-		<filename> pnx\scannerbracket.dds </filename>
+		<filename> pnx\hud\scan\scannerbracket.dds </filename>
 	</image>
 	
 	<_text_pos_x>
@@ -1567,4 +1136,111 @@
 		<_index><copy src="io()" trait="_PNxScannerText10Index" /></_index>
 	</text>
 	
+</rect>
+
+<rect name="PNxGrenadeIcon">
+
+	<visible>
+		<copy src="io()" trait="_PNxGrenadeIconEnabled" />
+		<and src="ActionPoints" trait="visible" />
+	</visible>
+	
+	<x>
+		<copy src="ActionPoints" trait="x" />
+		<add> 50 </add>
+	</x>
+		
+	<y>
+		<copy src="screen()" trait="height" />
+		<sub src="me()" trait="height" />
+		<sub> 20 </sub>
+	</y>
+		
+	<width>
+		<copy> 96 </copy>
+		<mul src="io()" trait="_PNxScale" />
+	</width>
+		
+	<height>
+		<copy> 96 </copy>
+		<mul src="io()" trait="_PNxScale" />
+	</height>
+
+	<image name="PNxGrenadeIconImage">
+	
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="parent()" trait="width" />
+				<mul> 0.25 </mul>
+			</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="parent()" trait="height" />
+				<mul> 0.25 </mul>
+			</sub>
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+			<mul> 1.5 </mul>
+		</width>
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul> 1.5 </mul>
+		</height>
+
+		
+		<zoom> &scale; </zoom>
+		
+		<visible>
+			<copy src="io()" trait="_PNxGrenadeIconType" />
+			<gt> 0 </gt>
+		</visible>
+		
+		<!-- <_fn_1> Interface\Icons\pipboyimages\FWE\GrenFrag.dds </_fn_1> -->
+		<_fn_1> pnx\hud\gren\GrenFrag.dds </_fn_1>
+		<_fn_2> pnx\hud\gren\GrenPulse.dds </_fn_2>
+		<_fn_3> pnx\hud\gren\GrenPlasma.dds </_fn_3>
+		<_fn_4> pnx\hud\gren\Gren_NVSpear.dds </_fn_4>
+		<_fn_5> pnx\hud\gren\Gren_NVStun.dds </_fn_5>
+		<_fn_6> pnx\hud\gren\Gren_NVHatchet.dds </_fn_6>
+		<_fn_7> pnx\hud\gren\Gren_NVHoly.dds </_fn_7>
+		<_fn_8> pnx\hud\gren\Gren_NVKnife.dds </_fn_8>
+		<_fn_9> pnx\hud\gren\GrenMisc.dds </_fn_9>
+		<_fn_10> pnx\hud\gren\GrenNuka.dds </_fn_10>
+		<_fn_11> pnx\hud\gren\GrenMolotov.dds </_fn_11>
+		<_fn_12> pnx\hud\gren\GrenCryo.dds </_fn_12>
+		<_fn_13> pnx\hud\gren\Gren_NVDynamiteL.dds </_fn_13>
+		<_fn_14> pnx\hud\gren\Gren_NVDynamiteS.dds </_fn_14>
+		<_fn_15> pnx\hud\gren\Gren_NVFirebomb.dds </_fn_15>
+		<_fn_16> pnx\hud\gren\Gren_NVTimebomb.dds </_fn_16>
+		
+		<filename>
+			<copy src="io()" trait="_PNxGrenadeIconType" />
+			<copy src="me()" trait="_fn_" />
+		</filename>
+	</image>
+	
+	<text name="PNxGrenadeCountText">
+			<font> 4 </font>
+			<depth> 1 </depth>
+			<string> <copy src="io()" trait="_PNxGrenadeIconCount" /> </string>
+			<x>
+				<copy src="parent()" trait="x" />
+				<add src="parent()" trait="width" />
+				<sub>
+					<copy src="parent()" trait="width" />
+					<mul> 0.25 </mul>
+				</sub>
+			</x>
+			<y>
+				<copy src="parent()" trait="y" />
+				<add src="parent()" trait="height" />
+				<sub src="me()" trait="height" />
+				<sub> 10 </sub>
+			</y>
+		</text>
 </rect>
