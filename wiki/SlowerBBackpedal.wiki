@@ -4,7 +4,6 @@
 {{{
 Scriptname PNxFPSBackPedaling
 
-int healswitch
 int isBacking
 short backSpeed
 
@@ -17,18 +16,13 @@ if(isBacking == 0)
 	endif
 endif
 
-if(healswitch == 1)
-	player.Restoreav LeftMobilityCondition 0.0001
-	set healswitch to 0
-endif
-
 if(player.IsMoving == 2 && isBacking == 0 && player.isRunning == 1)
 	set isBacking to 1
 	player.modav SpeedMult backSpeed
 
 	if (Player.GetAV LeftMobilityCondition > 0)
 		player.Damageav LeftMobilityCondition 0.0001 
-		set healswitch to 1
+		player.Restoreav LeftMobilityCondition 0.0001
 	endif
 
 endif
@@ -40,7 +34,7 @@ if(isBacking == 1 && (player.IsMoving != 2 || player.isRunning == 0))
 
 	if (Player.GetAV LeftMobilityCondition > 0)
 		player.Damageav LeftMobilityCondition 0.0001 
-		set healswitch to 1
+		player.Restoreav LeftMobilityCondition 0.0001
 	endif
 
 endif
