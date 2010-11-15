@@ -1,6 +1,14 @@
 ﻿<!-- ######################################################################################## General -->
 <_PNxScale>
-	<copy src="io()" trait="_duiscale_65" />
+	<copy> 1 </copy>
+	<mul>
+		<copy src="io()" trait="_duiscale_65" />
+		<onlyif src="io()" trait="_DUIF3" />
+		<add>
+			<copy> 1 </copy>
+			<onlyifnot src="io()" trait="_DUIF3" />
+		</add>
+	</mul>
 </_PNxScale>
 
 
@@ -71,11 +79,6 @@
 <!-- ######################################################################################## IO Bullet Time Meter-->
 <_PNxBTMeterEnabled> 0 </_PNxBTMeterEnabled>
 <_PNxBTMeterAmount> 0 </_PNxBTMeterAmount>
-
-
-<!-- ######################################################################################## IO Calibrator-->
-<_PNXCalibratorEnabled> 0 </_PNXCalibratorEnabled>
-<_PNXCalibratorSize> 200 </_PNXCalibratorSize>
 
 
 <!-- ######################################################################################## IO Zoom Bar -->
@@ -349,6 +352,7 @@
 	
 </rect>
 
+
 <!-- ######################################################################################## Crosshair -->
 <rect name="PNxCrosshair">
 	<visible>
@@ -502,11 +506,12 @@
 	
 </rect>
 
+
 <!-- ######################################################################################## Bullet Time Meter -->
 <rect name="PNxBTMeter">
 	<visible>
 		<copy src="io()" trait="_PNxBTMeterEnabled" />
-		<eq> 1 </eq>
+		<and src="ActionPoints" trait="visible" />
 	</visible>
 	
 	<x>
@@ -563,72 +568,6 @@
 		<_filename_10> pnx\hud\bt\timemeter10.dds </_filename_10>
 	</image>
 
-</rect>
-
-
-<!-- ######################################################################################## Spread Calibrator -->
-<rect name="PNXCalibrator">
-
-	<visible>
-		<copy src="io()" trait="_PNXCalibratorEnabled" />
-		<eq> 1 </eq>
-	</visible>
-	
-	<image name="PNXCalibratorImage">
-		<zoom> &scale; </zoom>
-		<depth> 1 </depth>
-		
-		<width>
-			<copy src="io()" trait="_PNXCalibratorSize" />
-			<div> 2 </div>
-		</width>
-		
-		<height>
-			<copy src="me()" trait="width" />
-		</height>
-		
-		<x>
-			<copy src="screen()" trait="width" />
-			<div> 2 </div>
-			<sub>
-				<copy src="me()" trait="width" />
-				<div> 2 </div>
-			</sub>
-		</x>
-		
-		<y>
-			<copy src="screen()" trait="height" />
-			<div> 2 </div>
-			<sub>
-				<copy src="me()" trait="height" />
-				<div> 2 </div>
-			</sub>
-		</y>
-			
-		<filename> pnx\calibrator.dds </filename>
-	</image>
-	
-	<text name="PNXCalibratorLabel">
-		<justify> &center; </justify>
-		<x>
-			<copy src="screen()" trait="width" />
-			<div> 2 </div>
-		</x>
-		
-		<y>
-			<copy src="screen()" trait="height" />
-			<div> 2 </div>
-			<add>
-				<copy src="io()" trait="_PNXCalibratorSize" />
-				<div> 2 </div>
-			</add>
-		</y>
-		
-		<string>
-			<copy src="io()" trait="_PNXCalibratorSize" />
-		</string>
-	</text>
-	
 </rect>
 
 
@@ -1146,14 +1085,19 @@
 	</visible>
 	
 	<x>
-		<copy src="ActionPoints" trait="x" />
-		<add> 50 </add>
+		<copy src="screen()" trait="width" />
+		<sub>
+			<copy src="ActionPoints" trait="width" />
+			<mul src="io()" trait="_PNxScale" />
+		</sub>
+		<sub src="me()" trait="width" />
+		<sub> 15 </sub>
 	</x>
 		
 	<y>
 		<copy src="screen()" trait="height" />
 		<sub src="me()" trait="height" />
-		<sub> 20 </sub>
+		<sub> 19 </sub>
 	</y>
 		
 	<width>
@@ -1167,7 +1111,6 @@
 	</height>
 
 	<image name="PNxGrenadeIconImage">
-	
 		<x>
 			<copy src="parent()" trait="x" />
 			<sub>
