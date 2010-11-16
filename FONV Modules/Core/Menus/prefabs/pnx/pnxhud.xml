@@ -11,6 +11,14 @@
 	</mul>
 </_PNxScale>
 
+<_PNxEdgeDistance>
+	<copy> 30 </copy>
+	<sub>
+		<copy> 11 </copy>
+		<onlyif src="io()" trait="_DUIF3" />
+	</sub>
+</_PNxEdgeDistance>
+
 
 <!-- ######################################################################################## IO Grain -->
 <_PNxGrainPhase> 0 </_PNxGrainPhase> <!-- 0: Disabled -->
@@ -106,9 +114,24 @@
 
 
 <!-- ######################################################################################## IO Grenade Icon -->
-<_PNxGrenadeIconEnabled> 1 </_PNxGrenadeIconEnabled>
-<_PNxGrenadeIconType> 3 </_PNxGrenadeIconType>
-<_PNxGrenadeIconCount> 10 </_PNxGrenadeIconCount>
+<_PNxGrenadeIconEnabled> 0 </_PNxGrenadeIconEnabled>
+<_PNxGrenadeIconType> 0 </_PNxGrenadeIconType>
+<_PNxGrenadeIconCount> 0 </_PNxGrenadeIconCount>
+
+
+<!-- ######################################################################################## IO Control Panel -->
+<_COxControlPanelEnabled> 1 </_COxControlPanelEnabled>
+<_COxControlPanelActive> 0 </_COxControlPanelActive>
+
+<_COxControlPanelSplashEnabled> 0 </_COxControlPanelSplashEnabled>
+<_COxControlPanelSplashPath> </_COxControlPanelSplashPath>
+<_COxControlPanelSplashFade> 0 </_COxControlPanelSplashFade>
+<_COxControlPanelSplashWidth> 0 </_COxControlPanelSplashWidth>
+<_COxControlPanelSplashHeight> 0 </_COxControlPanelSplashHeight>
+<_COxControlPanelSplashXAlign> 0 </_COxControlPanelSplashXAlign> <!-- 0: left 0.5: center 1: right -->
+<_COxControlPanelSplashYAlign> 0 </_COxControlPanelSplashYAlign> <!-- 0: top 0.5: center 1: bottom -->
+
+<_COxControlPanelKeySelectEnabled> 0 </_COxControlPanelKeySelectEnabled>
 
 
 <!-- ######################################################################################## Grain -->
@@ -1077,6 +1100,8 @@
 	
 </rect>
 
+
+<!-- ######################################################################################## Scanner -->
 <rect name="PNxGrenadeIcon">
 
 	<visible>
@@ -1091,13 +1116,13 @@
 			<mul src="io()" trait="_PNxScale" />
 		</sub>
 		<sub src="me()" trait="width" />
-		<sub> 15 </sub>
+		<sub src="io()" trait="_PNxEdgeDistance" />
 	</x>
 		
 	<y>
 		<copy src="screen()" trait="height" />
 		<sub src="me()" trait="height" />
-		<sub> 19 </sub>
+		<sub src="io()" trait="_PNxEdgeDistance" />
 	</y>
 		
 	<width>
@@ -1135,6 +1160,7 @@
 			<mul> 1.5 </mul>
 		</height>
 
+		<depth> 1 </depth>
 		
 		<zoom> &scale; </zoom>
 		
@@ -1168,22 +1194,112 @@
 	</image>
 	
 	<text name="PNxGrenadeCountText">
-			<font> 4 </font>
-			<depth> 1 </depth>
-			<string> <copy src="io()" trait="_PNxGrenadeIconCount" /> </string>
-			<x>
-				<copy src="parent()" trait="x" />
-				<add src="parent()" trait="width" />
-				<sub>
-					<copy src="parent()" trait="width" />
-					<mul> 0.25 </mul>
-				</sub>
-			</x>
-			<y>
-				<copy src="parent()" trait="y" />
-				<add src="parent()" trait="height" />
-				<sub src="me()" trait="height" />
-				<sub> 10 </sub>
-			</y>
-		</text>
+		<font> 4 </font>
+		<depth> 2 </depth>
+		<string> <copy src="io()" trait="_PNxGrenadeIconCount" /> </string>
+		<x>
+			<copy src="parent()" trait="x" />
+			<add src="parent()" trait="width" />
+			<sub src="me()" trait="width" />
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<add src="parent()" trait="height" />
+			<sub src="me()" trait="height" />
+			<sub>
+				<copy> 10 </copy>
+				<onlyif src="io()" trait="_DUIF3" />
+			</sub>
+		</y>
+	</text>
 </rect>
+
+
+<!-- ######################################################################################## Control Panel -->
+<rect name="PNxControlPanel">
+	<image name="COxControlPanelBackground">
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<visible>
+			<copy src="io()" trait="_COxControlPanelEnabled" />
+			<and src="io()" trait="_COxControlPanelActive" />
+		</visible>
+		
+		<zoom> &scale; </zoom>
+		<depth> 10 </depth>
+		
+		<alpha> 127 </alpha>
+			
+		<x>0</x>
+		<y>0</y>
+		<width> <copy src="screen()" trait="width" /> </width>
+		<height> <copy src="screen()" trait="height" /> </height>
+
+		<filename> convex\hud\custom_pause.dds </filename>
+	</image>
+		
+	<image name="COxControlPanelSplash">
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<visible>
+			<copy src="sibling(COxControlPanelBackground)" trait="visible" />
+			<and src="io()" trait="_COxControlPanelSplashEnabled" />
+		</visible>
+		
+		<alpha>
+			<copy src="io()" trait="_COxControlPanelSplashFade" />
+			<mul> 255 </mul>
+		</alpha>
+		
+		<zoom> &scale; </zoom>
+		<depth> 11 </depth>
+			
+		<x>
+			<copy src="screen()" trait="width" />
+			<mul src="io()" trait="_COxControlPanelSplashXAlign" />
+			<sub>
+				<copy src="me()" trait="width" />
+				<mul src="io()" trait="_COxControlPanelSplashXAlign" />
+			</sub>
+		</x>
+		
+		<y>
+			<copy src="screen()" trait="height" />
+			<mul src="io()" trait="_COxControlPanelSplashYAlign" />
+			<sub>
+				<copy src="me()" trait="height" />
+				<mul src="io()" trait="_COxControlPanelSplashYAlign" />
+			</sub>
+		</y>
+		
+		<width>
+			<copy src="io()" trait="_COxControlPanelSplashWidth" />
+		</width>
+		
+		<height> 
+			<copy src="io()" trait="_COxControlPanelSplashHeight" />
+		</height>
+
+		<filename> <copy src="io()" trait="_COxControlPanelSplashPath" /> </filename>
+	</image>
+
+	<text name="_COxControlPanelKeySelectText">
+		<visible>
+			<copy src="sibling(COxControlPanelBackground)" trait="visible" />
+			<and src="io()" trait="_COxControlPanelKeySelectEnabled" />
+		</visible>
+		<depth> 12 </depth>
+		<font> 3 </font>
+		<justify> &center; </justify>
+		<x>
+			<copy src="screen()" trait="width" />
+			<div> 2 </div>
+		</x>
+		<y>
+			<copy src="screen()" trait="height" />
+			<div> 2 </div>
+		</y>
+		<string> [Press the new hotkey now] </string>
+	</text>
+</rect>
+
