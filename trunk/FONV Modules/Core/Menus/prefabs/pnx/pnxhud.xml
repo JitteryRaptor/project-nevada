@@ -125,18 +125,18 @@
 
 
 <!-- ######################################################################################## IO Control Panel -->
-<_COxControlPanelEnabled> 1 </_COxControlPanelEnabled>
-<_COxControlPanelActive> 0 </_COxControlPanelActive>
+<_PNxControlPanelEnabled> 1 </_PNxControlPanelEnabled>
+<_PNxControlPanelActive> 0 </_PNxControlPanelActive>
 
-<_COxControlPanelSplashEnabled> 0 </_COxControlPanelSplashEnabled>
-<_COxControlPanelSplashPath> </_COxControlPanelSplashPath>
-<_COxControlPanelSplashFade> 0 </_COxControlPanelSplashFade>
-<_COxControlPanelSplashWidth> 0 </_COxControlPanelSplashWidth>
-<_COxControlPanelSplashHeight> 0 </_COxControlPanelSplashHeight>
-<_COxControlPanelSplashXAlign> 0 </_COxControlPanelSplashXAlign> <!-- 0: left 0.5: center 1: right -->
-<_COxControlPanelSplashYAlign> 0 </_COxControlPanelSplashYAlign> <!-- 0: top 0.5: center 1: bottom -->
+<_PNxControlPanelSplashEnabled> 0 </_PNxControlPanelSplashEnabled>
+<_PNxControlPanelSplashPath> </_PNxControlPanelSplashPath>
+<_PNxControlPanelSplashFade> 0 </_PNxControlPanelSplashFade>
+<_PNxControlPanelSplashWidth> 0 </_PNxControlPanelSplashWidth>
+<_PNxControlPanelSplashHeight> 0 </_PNxControlPanelSplashHeight>
+<_PNxControlPanelSplashXAlign> 0 </_PNxControlPanelSplashXAlign> <!-- 0: left 0.5: center 1: right -->
+<_PNxControlPanelSplashYAlign> 0 </_PNxControlPanelSplashYAlign> <!-- 0: top 0.5: center 1: bottom -->
 
-<_COxControlPanelKeySelectEnabled> 0 </_COxControlPanelKeySelectEnabled>
+<_PNxControlPanelKeySelectEnabled> 0 </_PNxControlPanelKeySelectEnabled>
 
 
 <!-- ######################################################################################## Grain -->
@@ -1174,7 +1174,6 @@
 			<gt> 0 </gt>
 		</visible>
 		
-		<!-- <_fn_1> Interface\Icons\pipboyimages\FWE\GrenFrag.dds </_fn_1> -->
 		<_fn_1> pnx\hud\gren\GrenFrag.dds </_fn_1>
 		<_fn_2> pnx\hud\gren\GrenPulse.dds </_fn_2>
 		<_fn_3> pnx\hud\gren\GrenPlasma.dds </_fn_3>
@@ -1224,19 +1223,21 @@
 
 
 <!-- ######################################################################################## Control Panel -->
+
+
 <rect name="PNxControlPanel">
-	<image name="COxControlPanelBackground">
+	<image name="PNxControlPanelBackground">
 		<systemcolor> &nosystemcolor; </systemcolor>
 		
 		<visible>
-			<copy src="io()" trait="_COxControlPanelEnabled" />
-			<and src="io()" trait="_COxControlPanelActive" />
+			<copy src="io()" trait="_PNxControlPanelEnabled" />
+			<and src="io()" trait="_PNxControlPanelActive" />
 		</visible>
 		
 		<zoom> &scale; </zoom>
 		<depth> 10 </depth>
 		
-		<alpha> 127 </alpha>
+		<alpha> 180 </alpha>
 			
 		<x>0</x>
 		<y>0</y>
@@ -1246,16 +1247,16 @@
 		<filename> convex\hud\custom_pause.dds </filename>
 	</image>
 		
-	<image name="COxControlPanelSplash">
+	<image name="PNxControlPanelSplash">
 		<systemcolor> &nosystemcolor; </systemcolor>
 		
 		<visible>
-			<copy src="sibling(COxControlPanelBackground)" trait="visible" />
-			<and src="io()" trait="_COxControlPanelSplashEnabled" />
+			<copy src="sibling(PNxControlPanelBackground)" trait="visible" />
+			<and src="io()" trait="_PNxControlPanelSplashEnabled" />
 		</visible>
 		
 		<alpha>
-			<copy src="io()" trait="_COxControlPanelSplashFade" />
+			<copy src="io()" trait="_PNxControlPanelSplashFade" />
 			<mul> 255 </mul>
 		</alpha>
 		
@@ -1264,37 +1265,37 @@
 			
 		<x>
 			<copy src="screen()" trait="width" />
-			<mul src="io()" trait="_COxControlPanelSplashXAlign" />
+			<mul src="io()" trait="_PNxControlPanelSplashXAlign" />
 			<sub>
 				<copy src="me()" trait="width" />
-				<mul src="io()" trait="_COxControlPanelSplashXAlign" />
+				<mul src="io()" trait="_PNxControlPanelSplashXAlign" />
 			</sub>
 		</x>
 		
 		<y>
 			<copy src="screen()" trait="height" />
-			<mul src="io()" trait="_COxControlPanelSplashYAlign" />
+			<mul src="io()" trait="_PNxControlPanelSplashYAlign" />
 			<sub>
 				<copy src="me()" trait="height" />
-				<mul src="io()" trait="_COxControlPanelSplashYAlign" />
+				<mul src="io()" trait="_PNxControlPanelSplashYAlign" />
 			</sub>
 		</y>
 		
 		<width>
-			<copy src="io()" trait="_COxControlPanelSplashWidth" />
+			<copy src="io()" trait="_PNxControlPanelSplashWidth" />
 		</width>
 		
 		<height> 
-			<copy src="io()" trait="_COxControlPanelSplashHeight" />
+			<copy src="io()" trait="_PNxControlPanelSplashHeight" />
 		</height>
 
-		<filename> <copy src="io()" trait="_COxControlPanelSplashPath" /> </filename>
+		<filename> <copy src="io()" trait="_PNxControlPanelSplashPath" /> </filename>
 	</image>
 
-	<text name="_COxControlPanelKeySelectText">
+	<text name="_PNxControlPanelKeySelectText">
 		<visible>
-			<copy src="sibling(COxControlPanelBackground)" trait="visible" />
-			<and src="io()" trait="_COxControlPanelKeySelectEnabled" />
+			<copy src="sibling(PNxControlPanelBackground)" trait="visible" />
+			<and src="io()" trait="_PNxControlPanelKeySelectEnabled" />
 		</visible>
 		<depth> 12 </depth>
 		<font> 3 </font>
