@@ -1244,7 +1244,7 @@
 		<width> <copy src="screen()" trait="width" /> </width>
 		<height> <copy src="screen()" trait="height" /> </height>
 
-		<filename> convex\hud\custom_pause.dds </filename>
+		<filename> pnx\hud\cp\custom_pause.dds </filename>
 	</image>
 		
 	<image name="PNxControlPanelSplash">
