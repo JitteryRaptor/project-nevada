@@ -2,49 +2,49 @@
 #Grenade Hotkey script
 
 {{{
-ScriptName PNxFPSGrenadeHotkeyScript
+ScriptName PNxCGrenadeHotkeyScript
 
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;Variables
-;Global PNxFPSGrenadeHotkey             ;Grenade throw hotkey
-;Global PNxFPSGrenadeToggleKey          ;key for toggling through grenades
+;Global PNxCGrenadeHotkey             ;Grenade throw hotkey
+;Global PNxCGrenadeToggleKey          ;key for toggling through grenades
 
-short attackkey                                         
-short throwactive                                       
-short timerstarted                                     
+short attackkey
 short curkey                                            
-short curkeyB                                          
-short keydown                                           
+short curkeyB
 short grenlistcount                             
-short listcounter                                     
-short SwitchActive                                      
+short listcounter                                                                  
 short RealAnimMult
+short ammocount
+
+int throwactive                                       
+int timerstarted   
+int keydown 
+int SwitchActive  
+int stop
 
 float grentimer                                        
 
 ref grenweapon                                         
 ref grentype                                            
-ref TempGrenRef                                               
+ref TempGrenRef 
+;ref playerammo                                              
 
 
 Begin GameMode
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;Variable settings
-set grentype to listgetnthform PerkLooseCannonWeapons listcounter       ;sets the grenade to the Nth# of the formlist
-set grenlistcount to ListGetCount PerkLooseCannonWeapons -1                     ;checks the number of weapons in the grenadeformlist (-1 so the count is right)
+set grentype to listgetnthform GrenadeList listcounter      
+set grenlistcount to ListGetCount GrenadeList -1                     
 
-if GetAltControl >= 0
+if GetAltControl 4 >= 0
 	set attackkey to 256 + GetAltControl 4
 else 
-	set attackkey to GetControl
+	set attackkey to GetControl 4
 endif
 
-if(PNxFPSGrenadeToggleKey <=0)
-	set PNxFPSGrenadeToggleKey to 35                ;sets default grenadetogglekey to H
-endif
-
-if(PNxFPSGrenadeHotkey <=0)
-	set PNxFPSGrenadeHotkey to 34                   ;sets default grenadethrowkey to G
+if throwactive == 0 && stop == 1
+	stopquest PNxCGrenadeHotkeyQuest
 endif
 
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ if  (throwactive==1)
 	if (curkey>0 && iskeypressed curkey)    
 		set keydown to 1        
 	else
-		player.removeperk PNxFPSFastEquipPerk
+		player.removeperk PNxCFastEquipPerk
 		set timerstarted to 0
 		enablekey attackkey
 		releasekey attackkey
@@ -64,7 +64,11 @@ if  (throwactive==1)
 		if player.getanimaction != 6 && player.getanimaction!=5                                 
 			player.EquipItem grenweapon 0 1
 			if(player.GetEquippedObject 5==grenweapon)
+				setPlayerCurrentAmmoRounds ammocount
 				set throwactive to 0
+				if stop == 1
+					stopquest PNxCGrenadeHotkeyQuest
+				endif
 			endif
 		endif
 	endif
@@ -75,7 +79,7 @@ endif
 if (keydown==1)                                                       
     if(timerstarted==0 && player.getanimaction!=0 && player.getequippedobject 5==grenweapon)
 		player.Equipitem grentype 0 1   
-		set grentimer to 0.1
+		set grentimer to 0.3
 		set timerstarted to 1
     endif
     if (grentimer>0)
@@ -91,11 +95,12 @@ endif
 
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;Hotkey Activation
-if (iskeypressed PNxFPSGrenadeHotkey && throwactive==0 && player.getequippedobject 5!=0 && player.getitemcount grentype!=0)
+if (iskeypressed PNxCGrenadeHotkey && throwactive==0 && player.getequippedobject 5!=0 && player.getitemcount grentype!=0)
 	if(player.getequippedobject 5!=grentype)
 		set grenweapon to player.GetEquippedObject 5
+		set ammocount to GetPlayerCurrentAmmoRounds
 	endif
-	player.addperk PNxFPSFastEquipPerk
+	player.addperk PNxCFastEquipPerk
 	if GetWeaponAnimMult Grentype !=3
 		set RealAnimMult to GetWeaponAnimMult Grentype
 	endif
@@ -105,7 +110,7 @@ if (iskeypressed PNxFPSGrenadeHotkey && throwactive==0 && player.getequippedobje
 		SetWeaponAnimMult 3 grentype
 	endif
 	set throwactive to 1
-	set curkey to PNxFPSGrenadeHotkey
+	set curkey to PNxCGrenadeHotkey
 	disablekey attackkey
 endif
 
@@ -132,10 +137,10 @@ else
 	set curkeyB to 0
 endif
 
-if ( isKeyPressed PNxFPSGrenadeToggleKey )
+if ( isKeyPressed PNxCGrenadeToggleKey )
 	set TempGrenRef to grentype
 	set SwitchActive to 1
-	set curKeyB to PNxFPSGrenadeToggleKey
+	set curKeyB to PNxCGrenadeToggleKey
 endif
 
 end
