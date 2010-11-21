@@ -135,6 +135,7 @@
 <_PNxControlPanelSplashHeight> 0 </_PNxControlPanelSplashHeight>
 <_PNxControlPanelSplashXAlign> 0 </_PNxControlPanelSplashXAlign> <!-- 0: left 0.5: center 1: right -->
 <_PNxControlPanelSplashYAlign> 0 </_PNxControlPanelSplashYAlign> <!-- 0: top 0.5: center 1: bottom -->
+<_PNxControlPanelSplashNoColor> 0 </_PNxControlPanelSplashNoColor>
 
 <_PNxControlPanelKeySelectEnabled> 0 </_PNxControlPanelKeySelectEnabled>
 
@@ -1112,6 +1113,10 @@
 	<visible>
 		<copy src="io()" trait="_PNxGrenadeIconEnabled" />
 		<and src="ActionPoints" trait="visible" />
+		<and>
+			<copy src="io()" trait="_PNxGrenadeIconType" />
+			<gt> 0 </gt>
+		</and>
 	</visible>
 	
 	<x>
@@ -1168,11 +1173,6 @@
 		<depth> 1 </depth>
 		
 		<zoom> &scale; </zoom>
-		
-		<visible>
-			<copy src="io()" trait="_PNxGrenadeIconType" />
-			<gt> 0 </gt>
-		</visible>
 		
 		<_fn_1> pnx\hud\gren\GrenFrag.dds </_fn_1>
 		<_fn_2> pnx\hud\gren\GrenPulse.dds </_fn_2>
@@ -1248,7 +1248,10 @@
 	</image>
 		
 	<image name="PNxControlPanelSplash">
-		<systemcolor> &nosystemcolor; </systemcolor>
+		<systemcolor>
+			<copy> &nosystemcolor; </copy>
+			<onlyif src="io()" trait="_PNxControlPanelSplashNoColor" />
+		</systemcolor>
 		
 		<visible>
 			<copy src="sibling(PNxControlPanelBackground)" trait="visible" />
