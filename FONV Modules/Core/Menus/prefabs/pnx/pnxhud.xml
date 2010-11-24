@@ -82,6 +82,7 @@
 
 <!-- ######################################################################################## IO Crosshair-->
 <_PNxCrosshairEnabled> 1 </_PNxCrosshairEnabled>
+<_PNxCrosshairColor> 1 </_PNxCrosshairColor>
 <_PNxCrosshairLength> 16 </_PNxCrosshairLength>
 <_PNxCrosshairWidth> 6 </_PNxCrosshairWidth>
 <_PNxCrosshairSpread> 0.5 </_PNxCrosshairSpread> <!-- 0.0 to 1.0 -->
@@ -138,7 +139,6 @@
 <_PNxControlPanelSplashNoColor> 0 </_PNxControlPanelSplashNoColor>
 
 <_PNxControlPanelKeySelectEnabled> 0 </_PNxControlPanelKeySelectEnabled>
-
 
 <!-- ######################################################################################## Grain -->
 <rect name="PNXGrainLayer">
@@ -415,11 +415,14 @@
 		<copy src="me()" trait="_radius" />
 		<mul> 2 </mul>
 	</height>
-		
 
 	<image name="PNxCrosshairLineW">
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
+		
+		<systemcolor>
+			<copy src="io()" trait="_PNxCrosshairColor" />
+		</systemcolor>
 		
 		<width>
 			<copy src="io()" trait="_PNxCrosshairLength" />
@@ -450,6 +453,10 @@
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
 		
+		<systemcolor>
+			<copy src="io()" trait="_PNxCrosshairColor" />
+		</systemcolor>
+		
 		<width>
 			<copy src="io()" trait="_PNxCrosshairLength" />
 		</width>
@@ -479,6 +486,10 @@
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
 		
+		<systemcolor>
+			<copy src="io()" trait="_PNxCrosshairColor" />
+		</systemcolor>
+		
 		<width>
 			<copy src="io()" trait="_PNxCrosshairWidth" />
 		</width>
@@ -507,6 +518,10 @@
 	<image name="PNxCrosshairLineS">
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
+		
+		<systemcolor>
+			<copy src="io()" trait="_PNxCrosshairColor" />
+		</systemcolor>
 		
 		<width>
 			<copy src="io()" trait="_PNxCrosshairWidth" />
