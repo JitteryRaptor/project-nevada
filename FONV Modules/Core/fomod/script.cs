@@ -21,15 +21,6 @@ class Script : BaseScript {
 	    return false;
 	}
 	
-	public static void BackupDataFile(string path) {
-		byte[] data = GetExistingDataFile(path);
-		
-		if (data == null)
-			return;
-			
-		GenerateDataFile(path + ".backup", data);
-	}
-	
 	public static bool AppendIncludeToMenu(string xmlPath, string includePath) {
 		byte[] data = GetExistingDataFile(xmlPath);
 		
@@ -54,54 +45,6 @@ class Script : BaseScript {
 		
 		return true;
 	}
-	
-	// normally better than regex, but messes up formating
-	/*public static bool AppendIncludeToXml2(string xmlPath, string includePath) {
-		byte[] data = GetExistingDataFile(xmlPath);
-		
-		if (data == null)
-			return false;
-		
-		try {
-			// Replace & with &amp;
-			data = Encoding.GetBytes(new Regex(@"&").Replace(Encoding.GetString(data), @"&amp;"));
-		
-			XmlDocument document = new XmlDocument();
-		
-			using (MemoryStream inStream = new MemoryStream(data)) {
-				document.Load(inStream);
-		
-				XmlComment comment = document.CreateComment("Inserted by Stealth Boy Reworked:");
-				document.DocumentElement.InsertAfter(comment, document.DocumentElement.LastChild);
-		
-				XmlElement element = document.CreateElement("include");
-				XmlAttribute attribute = document.CreateAttribute("src");
-				attribute.Value = includePath;
-				element.SetAttributeNode(attribute);
-				document.DocumentElement.InsertAfter(element, document.DocumentElement.LastChild);
-			
-				inStream.Close();
-			}
-		
-		
-			using (MemoryStream outStream = new MemoryStream()) {
-				document.Save(outStream);
-				data = outStream.ToArray();
-			
-				outStream.Close();
-			}
-		
-			// Replace &amp; with &
-			data = Encoding.GetBytes(new Regex(@"&amp;").Replace(Encoding.GetString(data), @"&"));
-		
-			GenerateDataFile(xmlPath, data);
-		
-		} catch (Exception e) {
-			return false;
-		}
-	
-		return true;
-	}*/
 
 	public static bool OnActivate() {
 	
