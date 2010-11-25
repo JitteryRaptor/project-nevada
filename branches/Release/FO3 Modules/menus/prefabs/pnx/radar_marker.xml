@@ -1,0 +1,56 @@
+﻿<zoom> &scale; </zoom>
+<depth> 0 </depth>
+
+<visible>
+	<copy src="me()" trait="_Mode" />
+	<gt> 0 </gt>
+</visible>
+
+<width>
+	<copy> 48 </copy>
+	<mul src="io()" trait="_PNXRadarScale" />
+</width>
+<height>
+	<copy> 48 </copy>
+	<mul src="io()" trait="_PNXRadarScale" />
+</height>
+		
+<x>
+	<copy src="parent()" trait="x" />
+	<add> 
+		<copy src="parent()" trait="width" />
+		<div>2</div>
+	</add>
+	<sub>
+		<copy src="me()" trait="width" />
+		<div>2</div>
+	</sub>
+	<sub>
+		<copy src="me()" trait="_XOffset" />	
+		<mul src="io()" trait="_PNXRadarScale" />
+	</sub>
+</x>
+<y>
+	<copy src="parent()" trait="y" />
+	<add> 
+		<copy src="parent()" trait="width" />
+		<div>2</div>
+	</add>
+	<sub>
+		<copy src="me()" trait="width" />
+		<div>2</div>
+	</sub>
+	<sub>
+		<copy src="me()" trait="_YOffset" />	
+		<mul src="io()" trait="_PNXRadarScale" />
+	</sub>
+</y>
+
+<_filename_1> pnx\marker2.dds </_filename_1> <!--same level-->
+<_filename_2> pnx\marker_down.dds </_filename_2> <!--below-->
+<_filename_3> pnx\marker_up.dds </_filename_3> <!--above-->
+
+<filename>
+	<copy src="me()" trait="_Mode" />
+	<copy src="me()" trait="_filename_" />
+</filename>
