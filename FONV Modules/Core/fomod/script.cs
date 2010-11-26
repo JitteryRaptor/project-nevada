@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -32,10 +33,44 @@ class Script : Fallout3BaseScript
 		
 		string tmp = Encoding.GetString(data);
 		
+		// Include is already there?
+		if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
+			return true;
+		
 		tmp += "\r\n"
 			+ "<!-- BEGIN Added by Project Nevada -->\r\n"
-			+ "<include src= \"" + includePath + "\" />\r\n"
+			+ "<include src=\"" + includePath + "\" />\r\n"
 			+ "<!-- END Added by Project Nevada -->\r\n";
+		
+		data = Encoding.GetBytes(tmp);
+			
+		GenerateDataFile(xmlPath, data);
+		
+		return true;
+	}
+	
+	public static bool AppendIncludeToMenu(string xmlPath, string includePath)
+	{
+		byte[] data = GetExistingDataFile(xmlPath);
+		
+		if (data == null)
+			return false;
+			
+		string tmp = Encoding.GetString(data);
+
+		// Include is already there?
+		if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
+			return true;
+		
+		string includeStr = "\r\n"
+			+ "\t<!-- BEGIN Added by Project Nevada -->\r\n"
+			+ "\t<include src=\"" + includePath + "\" />\r\n"
+			+ "\t<!-- END Added by Project Nevada -->\r\n";
+		
+		tmp = Regex.Replace(tmp,
+			"<menu name=\"(\\w+)\">(.*)</menu>\\s*$",
+			"<menu name=\"$1\">$2" + includeStr + "</menu>",
+			RegexOptions.Singleline);
 		
 		data = Encoding.GetBytes(tmp);
 			
@@ -62,14 +97,14 @@ class Script : Fallout3BaseScript
 	
 		string text;
 	
-		// check NVSE
+		// Check NVSE
 		if (! ScriptExtenderPresent()) {
 			text = "The Fallout: New Vegas Script Extender is required to use this mod! Installation aborted.";
 			MessageBox(text, Title);
 			return false;
 		}
 		
-		// install base files
+		// Install base files
 		InstallFiles();
 		
 		// No need for editing, we're done
@@ -78,13 +113,22 @@ class Script : Fallout3BaseScript
 			return true;
 		}
 		
-		// Edit XML includes
+		// Modify includes.xml
 		bool editSuccess = AppendInclude("menus/prefabs/includes.xml", @"pnx\pnxhud.xml");
 		
 		if (! editSuccess) {
-			text = "Failed to edit includes.xml. Guess you'll have to do it manually (see readme)";
+			text = "Failed to access includes.xml. Guess you'll have to edit it manually (see readme)";
 			MessageBox(text, Title);
 		}
+		
+		// Modify hud_main_menu.xml
+		editSuccess = AppendIncludeToMenu("menus/main/hud_main_menu.xml", "includes.xml");
+		
+		if (! editSuccess) {
+			text = "Failed to access hud_main_menu.xml. Guess you'll have to edit it manually (see readme)";
+			MessageBox(text, Title);
+		}
+		
 	
 		return true;
 	}
