@@ -13,15 +13,22 @@ class Script : Fallout3BaseScript
 	private const string Title = "Project Nevada";
 
 	private static ASCIIEncoding Encoding = new ASCIIEncoding();
-
-
-	public static bool IsPluginInstalled(String name)
+	
+		
+	public static void InstallFiles()
 	{
-	    string[] installedPlugins = GetAllPlugins();
-	    foreach (string plugin in installedPlugins)
-	        if (plugin.Equals(name, StringComparison.InvariantCultureIgnoreCase))
-	             return true;
-	    return false;
+		foreach (string file in GetFomodFileList()) {
+			if (Path.GetDirectoryName(file) == "fomod")
+				continue;
+				
+			if (Path.GetDirectoryName(file) == "optional")
+				continue;
+
+			if (Path.GetFileName(file) == "includes.xml")
+				continue;
+
+			InstallFileFromFomod(file);
+		}
 	}
 	
 	public static bool AppendInclude(string xmlPath, string includePath)
@@ -79,17 +86,13 @@ class Script : Fallout3BaseScript
 		return true;
 	}
 	
-	public static void InstallFiles()
+	public static bool InstallFileFromFomod(string source, string target)
 	{
-		foreach (string file in GetFomodFileList()) {
-			if (Path.GetDirectoryName(file) == "fomod")
-				continue;
-
-			if (Path.GetFileName(file) == "includes.xml")
-				continue;
-
-			InstallFileFromFomod(file);
-		}
+		byte[] data = GetExistingDataFile(source);
+		if (data == null)
+			return false;
+		
+		return GenerateDataFile(target, data);
 	}
 
 	public static bool OnActivate()
@@ -107,28 +110,33 @@ class Script : Fallout3BaseScript
 		// Install base files
 		InstallFiles();
 		
-		// No need for editing, we're done
+		// Modify includes.xml if necessary
 		if (! DataFileExists("menus/prefabs/includes.xml")) {
 			InstallFileFromFomod("menus/prefabs/includes.xml");
-			return true;
+		} else {
+				// 
+			bool editSuccess = AppendInclude("menus/prefabs/includes.xml", @"pnx\pnxhud.xml");
+		
+			if (! editSuccess) {
+				text = "Failed to access includes.xml. Guess you'll have to edit it manually (see readme)";
+				MessageBox(text, Title);
+			}
+		
+
 		}
+
+		// Modify hud_main_menu.xml	if necessary
+		if (! DataFileExists("menus/main/hud_main_menu.xml")) {
+			InstallFileFromFomod("optional/Default HUD/menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml");
+		} else {
+
+			bool editSuccess = AppendIncludeToMenu("menus/main/hud_main_menu.xml", "includes.xml");
 		
-		// Modify includes.xml
-		bool editSuccess = AppendInclude("menus/prefabs/includes.xml", @"pnx\pnxhud.xml");
-		
-		if (! editSuccess) {
-			text = "Failed to access includes.xml. Guess you'll have to edit it manually (see readme)";
-			MessageBox(text, Title);
+			if (! editSuccess) {
+				text = "Failed to access hud_main_menu.xml. Guess you'll have to edit it manually (see readme)";
+				MessageBox(text, Title);
+			}
 		}
-		
-		// Modify hud_main_menu.xml
-		editSuccess = AppendIncludeToMenu("menus/main/hud_main_menu.xml", "includes.xml");
-		
-		if (! editSuccess) {
-			text = "Failed to access hud_main_menu.xml. Guess you'll have to edit it manually (see readme)";
-			MessageBox(text, Title);
-		}
-		
 	
 		return true;
 	}
