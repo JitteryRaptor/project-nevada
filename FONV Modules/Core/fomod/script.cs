@@ -100,12 +100,12 @@ class Script : Fallout3BaseScript
 	
 		string text;
 	
-		// Check NVSE
-		if (! ScriptExtenderPresent()) {
-			text = "The Fallout: New Vegas Script Extender is required to use this mod! Installation aborted.";
-			MessageBox(text, Title);
-			return false;
-		}
+		// Check NVSE - Had problems false positives on this, so disabled for now
+		//if (! ScriptExtenderPresent()) {
+		//	text = "The Fallout: New Vegas Script Extender is required to use this mod! Installation aborted.";
+		//	MessageBox(text, Title);
+		//	return false;
+		//}
 		
 		// Install base files
 		InstallFiles();
