@@ -1,20 +1,20 @@
 {{{
-
 scn PNxCSprintMainScript
 
-;Sprint variables
-float sprintSpeed
-short healTrap
+short stop
 
+float sprintSpeed
+float sprintClock
+short sprintCancel
 float cooldown
 
 short apTick
 float apTimer
 
 float breatheTimer
-short isBreathing
+short breatheTrap
 
-float shakeTimer
+float shudderTimer 
 
 float defaultFOV
 float default1stPersonFOV
@@ -28,14 +28,21 @@ short sprintKey
 short sprintPressed
 short attackPressed
 short blockPressed
+short unarmedskill
 
 short reSneak
 short reWalk
 short reWeapon
 float reWeaponTimer
 
-short state
+ref tackleTarget
+ref lastTackleTarget 
+float tackleAP
+float playerTackleCheck
+float enemyTackleCheck
+float tackleForce
 
+short state
 
 
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -46,7 +53,7 @@ Begin GameMode
 if getControl 9 != -1
 	set sprintKey to getControl 9
 elseif isKeyPressed sprintKey == 0
-	setControl 9 sprintKey 
+	setControl 9 sprintKey
 endif
 
 ; Detect sprint keypress
@@ -77,31 +84,31 @@ End
 ; Breathing sounds
 Begin GameMode
 
-if state == 2
-	if isBreathing == 0 && player.getAV actionPoints < player.getBaseAV actionPoints / 4 && breatheTimer <= 0
-		set isBreathing to 1
+if state == 1
+	if breatheTrap == 0 && player.getAV actionPoints < player.getBaseAV actionPoints / 4 && breatheTimer <= 0
+		set breatheTrap to 1
 	endif
 endif
 
 if breatheTimer > 0
 	set breatheTimer to breatheTimer - getSecondsPassed
 else
-	if isBreathing == 1
+	if breatheTrap == 1
 		if player.getAV ActionPoints < player.getBaseAV ActionPoints / 4
 			if getPCIsSex Male == 1
-				;playSound PNXFBSprintBreatheLoop
+				playSound PNxCSprintBreatheLP
 			else
-				;playSound PNXFBSprintFemaleBreatheLoop
+				playSound PNxCSprintBreatheFemaleLP
 			endif
-			set breatheTimer to 8
+			set breatheTimer to 5
 		else
 			if getPCIsSex Male == 1
-				;playSound PNXFBSprintBreatheEnd
+				playSound PNxCSprintBreatheEnd
 			else
-				;playSound PNXFBSprintFemaleBreatheEnd
+				playSound PNxCSprintBreatheFemaleEnd
 			endif
-			set isBreathing to 0
-			set breatheTimer to 10
+			set breatheTimer to 7
+			set breatheTrap to 0
 		endif
 	endif
 endif
@@ -115,12 +122,12 @@ Begin GameMode
 
 ;Triggers a HUD shudder regularly while sprinting
 
-if state == 2
-	if shakeTimer > 0
-		set shakeTimer to shakeTimer - getSecondsPassed
+if state == 1
+	if shudderTimer > 0
+		set shudderTimer to shudderTimer - getSecondsPassed
 	else
-		triggerHUDShudder 2 2
-		set shakeTimer to 1
+		set shudderTimer to 1
+		setStage PNxCUtilShudder 1
 	endif
 endif
 
@@ -147,7 +154,7 @@ if curFOV != nextFOV
 		endif
 	endif
 
-	con_setCameraFOV curFOV
+	setCameraFOV curFOV
 
 	;Changing the FOV also changes this, so we need to change it back to its default
 	setNumericIniSetting "fdefault1stpersonfov:display" default1stPersonFOV
@@ -175,11 +182,10 @@ if state == 0
 	if blockPressed == 1
 		set cooldown to 0.5
 	endif
-else
+elseif state == 1 && cooldown < 1
 	set cooldown to 1
 endif
 
-;--------------------------------------------------------------------------------------------
 ; Prevent inadvertant walking while in cooldown
 if player.getAV ActionPoints < apTick || cooldown > 0
 	disableControl 9
@@ -187,26 +193,102 @@ else
 	enableControl 9
 endif
 
-;--------------------------------------------------------------------------------------------
-; Ensure re-equip for short sprints
-if state == 0 && reWeapon == 1
-	if reWeaponTimer > 0
-		set reWeaponTimer to reWeaponTimer - getSecondsPassed
-	else
-		tapControl 4
-		set reWeapon to 0
-	endif
-endif
+End
 
-;--------------------------------------------------------------------------------------------
-;Force run mode if necessary
-if state == 2 && player.isRunning == 0
-	tapControl 10
-	set reWalk to 1
-endif
-if state == 0 && reWalk == 1
-	tapControl 10
-	set reWalk to 0
+
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Tackle
+
+Begin GameMode
+
+;Tackles actors in front of the player
+if state == 1
+
+	;Autoaim enabled (vanilla)
+	if getGameSetting fAutoAimScreenPercentage == 10
+		set tackleTarget to player.getCombatTarget
+
+	;Autoaim disabled
+	else 
+		set tackleTarget to player.getCrosshairRef
+	endif
+
+	if tackleTarget != 0
+		if tackleTarget != lastTackleTarget && tackleTarget.isActor == 1 && tackleTarget.getDead == 0 && player.isInCombat
+			set UnarmedSkill to player.getav unarmed
+			set tackleAP to (PNxCSprintTackeAPCost - unarmedskill/10)
+			if tackleTarget.getDistance player < 100
+				set cooldown to 2
+
+				playSound FXMeleeTrapImpact
+
+				setStage PNxCUtilShudder 2
+
+				set playerTackleCheck to player.getAV Strength 
+				;if player.getAV ActionPoints < tackleAP
+				;	set playerTackleCheck to playerTackleCheck - 10
+				;endif
+				player.damageAV ActionPoints tackleAP
+
+				set enemyTackleCheck to tackleTarget.getAV Strength
+
+				; player overpowers enemy and enemy has positive AV's
+				if playerTackleCheck +2 == enemyTackleCheck 
+				
+					if sprintClock < 1
+						set tackleForce to 4
+					elseif sprintClock < 3
+						set tackleForce to 8
+					else
+						set tackleForce to 16
+					endif
+
+					if player.hasPerk SuperSlam == 1
+						set tackleForce to tackleForce * 2
+					endif
+
+					set sprintCancel to 1
+					player.pushActorAway tackleTarget tackleForce
+					player.pushActorAway player 1
+
+				
+				elseif playerTackleCheck + 2 > enemyTackleCheck 
+
+					if sprintClock < 1
+						set tackleForce to 4
+					elseif sprintClock < 3
+						set tackleForce to 8
+					else
+						set tackleForce to 16
+					endif
+
+					if player.hasPerk SuperSlam == 1
+						set tackleForce to tackleForce * 2
+					endif
+
+					if player.hasPerk UnstoppableForce == 0
+						set sprintCancel to 1
+					endif
+
+					player.pushActorAway tackleTarget tackleForce
+
+				
+				elseif enemyTackleCheck > playerTackleCheck + 2 
+					set sprintCancel to 1
+					player.pushActorAway player 1
+
+				
+;				elseif enemyTackleCheck = 0
+;					set sprintCancel to 1
+;					player.pushActorAway player 1
+				endif
+
+				set lastTackleTarget to tackleTarget
+			endif
+		endif
+	endif
+else
+	set lastTackleTarget to 0
 endif
 
 End
@@ -218,10 +300,68 @@ End
 Begin GameMode
 
 ;--------------------------------------------------------------------------------------------
-; Deactivated - Loop
+; Deactivated
 if state == 0
 
+	if reWeapon == 1
+		if reWeaponTimer > 0
+			set reWeaponTimer to reWeaponTimer - getSecondsPassed
+		else
+			if player.isWeaponOut == 0
+				tapControl 4
+			endif
+			set reWeapon to 0
+		endif
+	endif
+
+	if stop == 1
+		set state to 2
+		return
+	endif
+
 	if sprintPressed == 1 && player.isMoving == 1 && cooldown <= 0 &&  player.isSwimming == 0 && player.getAV ActionPoints > apTick && getPlayerControlsDisabled 1 0 1 0 1 0 0 == 0 && isControlPressed 6 == 0 && player.getAV LeftMobilityCondition > 0 && player.getAV RightMobilityCondition > 0 && player.getAV InventoryWeight <= player.getAV CarryWeight+1
+
+		; Unbind run
+		setControl 9 -1
+
+		;Disable strafing
+		disableControl 2 
+		disableControl 3
+
+		set sprintSpeed to (player.getAV agility * 8 + 40 * (1 - .75 * player.getAV inventoryWeight / player.getAV carryWeight)) * PNxCSprintSpeedMult
+		player.modAV SpeedMult sprintSpeed
+
+		setStage PNxCUtilSpeedRefresh 1
+
+		if fovTrap == 0
+			set defaultFOV to GetNumericIniSetting "fDefaultWorldFOV:display"
+			set default1stPersonFOV to GetNumericIniSetting "fDefault1stPersonFOV:display"
+		endif
+
+		set curFOV to defaultFOV
+		set nextFOV to defaultFOV + (sprintSpeed / 10)
+
+		;If the player had their weapon out, schedule re-equip
+		if player.isWeaponOut == 1
+			set reWeapon to 1
+			set reWeaponTimer to 1.1
+		endif
+
+		;If the player was sneaking, remember to go back to sneaking later
+		if player.isSneaking == 1
+			set reSneak to 1
+		endif
+
+		disablePlayerControls 0 0 1 0 0 0 1
+
+		set sensitivity to getNumericIniSetting "fMouseSensitivity:controls" 	
+		set sensitivity to sensitivity / 3
+		setNumericIniSetting "fMouseSensitivity:controls" sensitivity	;increases turning radius
+
+		imod PNxCSprintBlurISFX
+
+		set sprintClock to 0
+
 		set state to 1
 		return
 	endif
@@ -229,116 +369,81 @@ if state == 0
 	return
 
 ;--------------------------------------------------------------------------------------------
-; Activate
+; Activated
 elseif state == 1
 
-	; Unbind run
-	setControl 9 -1
+	set sprintClock to sprintClock + getSecondsPassed
 
-	;Disable strafing
-	disableControl 2 
-	disableControl 3
-	
-	set sprintSpeed to (player.getav agility * 8 + 40 * (1 - .75 * player.getAV inventoryWeight / player.getAV carryWeight)) * PNxCSprintSpeedMult
-	player.modAV SpeedMult sprintSpeed
-	
-	if (fovTrap == 0)
-		set defaultFOV to GetNumericIniSetting "fDefaultWorldFOV:display"
-		set default1stPersonFOV to GetNumericIniSetting "fDefault1stPersonFOV:display"
+	; Force running if necessary
+	if player.isRunning == 0
+		tapControl 10
+		set reWalk to 1
 	endif
-
-	set nextFOV to defaultFOV + sprintSpeed / 10
-
-	;Damages the player's leg in order to force the game to reevaluate the player's speed
-	player.damageAV LeftMobilityCondition 1 
-	set healTrap to 1
-
-	;If the player had their weapon out, schedule re-equip
-	if player.isWeaponOut == 1
-		set reWeapon to 1
-		set reWeaponTimer to 0.7
-	endif
-
-	;If the player was sneaking, remember to go back to sneaking later
-	if player.isSneaking == 1
-		set reSneak to 1
-	endif
-
-	disablePlayerControls 0 0 1 0 0 0 1
-
-	set sensitivity to getNumericIniSetting "fMouseSensitivity:controls" 	
-	set sensitivity to sensitivity / 3
-	setNumericIniSetting "fMouseSensitivity:controls" sensitivity	;increases turning radius
-
-	imod PNxCSprintBlurISFX
-
-	set state to 2
-	return
-
-
-;--------------------------------------------------------------------------------------------
-; Activated - Loop
-elseif state == 2
 
 	if apTimer > 0
 		set apTimer to apTimer - getSecondsPassed
 	else
 
 		;Damage the player's action points every 1/10 seconds if they're sprinting
-		set apTick to (25 - player.getAV Endurance) * PNxCSprintAPMult
+		set apTick to (PNxCSprintAPDrain - player.getAV Endurance) * PNxCSprintAPMult
 		set apTick to apTick / 10
 		player.damageAV ActionPoints apTick
 		set apTimer to 0.1
-
 	endif
 
-	if sprintPressed == 0 || player.isMoving == 0 ||  cooldown > 0 || player.getAV ActionPoints < apTick / 10 || player.isSwimming == 1 || player.getav LeftMobilityCondition <= 0 || player.getav RightMobilityCondition <= 0 || player.getav InventoryWeight > player.getAV CarryWeight+1 || isControlPressed 6 == 1 || getPlayerControlsDisabled 1 0 0 0 1 0 0 == 1
-		set state to 3
+	if stop == 1 || sprintPressed == 0 || sprintCancel == 1 || player.isMoving == 0 || player.getAV ActionPoints < apTick / 10 || player.isSwimming == 1 || player.getav LeftMobilityCondition <= 0 || player.getav RightMobilityCondition <= 0 || player.getav InventoryWeight > player.getAV CarryWeight+1 || blockPressed == 1 || getPlayerControlsDisabled 1 0 0 0 1 0 0 == 1
+		set sprintCancel to 0
+
+		;Enable strafing
+		enableControl 2
+		enableControl 3
+
+		set sprintSpeed to sprintSpeed  * -1
+		player.modAV SpeedMult sprintSpeed
+
+		setStage PNxCUtilSpeedRefresh 1
+
+		set nextFOV to defaultFOV
+
+		enablePlayerControls 0 0 1 0 0 0 1
+
+		;Re-equip the player's weapon if they had it out before the sprint
+		if reWeapon == 1
+			tapControl 4
+		endif
+
+		;Goes back to sneaking if necessary
+		if reSneak == 1
+			set reSneak to 0
+			tapControl 8	
+		endif
+
+		if reWalk == 1
+			set reWalk to 0
+			tapControl 10
+		endif
+
+		set sensitivity to sensitivity * 3
+		setNumericIniSetting "fMouseSensitivity:controls" sensitivity ;Returns the turning radius to normal
+
+		rimod PNxCSprintBlurISFX
+
+		set state to 0
 		return
 	endif
 
 	return
 
 ;--------------------------------------------------------------------------------------------
-; Deactivate
-elseif state == 3
+; Disabled
+elseif state == 2
 
-	;Ends the sprint
-
-	enableControl 2
-	enableControl 3
-
-	set sprintSpeed to sprintSpeed  * -1
-	player.modAV SpeedMult sprintSpeed
-
-	set nextFOV to defaultFOV
-		
-	player.damageAV LeftMobilityCondition 1
-	set healTrap to 1
-
-	enablePlayerControls 0 0 1 0 0 0 1
-
-	;Re-equip the player's weapon if they had it out before the sprint
-	if reWeapon == 1
-		tapControl 4
-	endif
-
-	;Goes back to sneaking if necessary
-	if reSneak == 1
-		set reSneak to 0
-		tapControl 8	
-	endif
-
-	set sensitivity to sensitivity * 3
-	setNumericIniSetting "fMouseSensitivity:controls" sensitivity ;Returns the turning radius to normal
-
-	rimod PNxCSprintBlurISFX
-
+	enableControl 9
 	set state to 0
+	stopquest PNxCSprintMain
 	return
 
 endif
 
 End
-
 }}}
