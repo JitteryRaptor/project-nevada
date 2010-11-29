@@ -143,6 +143,21 @@
 <_PNxControlPanelKeySelectEnabled> 0 </_PNxControlPanelKeySelectEnabled>
 
 
+<!-- ######################################################################################## IO Visor -->
+<_PNxVisorOverlayIndex> 0 </_PNxVisorOverlayIndex>
+<_PNxVisorSelectMode> 0 </_PNxVisorSelectMode>
+
+<_PNxVisorColorRed> 1.0 </_PNxVisorColorRed>
+<_PNxVisorColorGreen> 1.0 </_PNxVisorColorGreen>
+<_PNxVisorColorBlue> 1.0 </_PNxVisorColorBlue>
+
+<_PNxVisorScale> 1.0 </_PNxVisorScale>
+<_PNxVisorXOffscreenMult> 0 </_PNxVisorXOffscreenMult> <!-- from -1: left to 1: right -->
+<_PNxVisorYOffscreenMult> 0 </_PNxVisorYOffscreenMult>
+
+<_PNxVisorCondition> 1.0 </_PNxVisorCondition>
+
+
 <!-- ######################################################################################## Grain -->
 <rect name="PNXGrainLayer">
 	<visible>
@@ -1331,4 +1346,513 @@
 		</y>
 		<string> [Press the new hotkey now] </string>
 	</text>
+</rect>
+
+
+<!-- ######################################################################################## Visor -->
+<rect name="PNxVisorOverlay">
+
+	<_XOffscreenArea>
+		<copy src="screen()" trait="width" />
+		<mul>0.1</mul>
+	</_XOffscreenArea>
+	
+	<_YOffscreenArea> 30 </_YOffscreenArea>
+
+	<x>
+		<copy> 0 </copy>
+		<sub src="me()" trait="_XOffscreenArea" />
+		<add>
+			<copy src="me()" trait="_XOffscreenArea" />
+			<mul src="io()" trait="_PNxVisorXOffscreenMult" />
+		</add>
+		<sub>
+			<copy>
+				<copy src="screen()" trait="width" />
+				<mul src="io()" trait="_PNxVisorScale" />
+			</copy>
+			<sub src="screen()" trait="width" />
+			<div> 2 </div>
+		</sub>
+	</x>
+	
+	<y>
+		<copy> 0 </copy>
+		<add>
+			<copy src="me()" trait="_YOffscreenArea" />
+			<mul src="io()" trait="_PNxVisorYOffscreenMult" />
+		</add>
+		<sub>
+			<copy src="me()" trait="height" />
+			<sub src="screen()" trait="height" />
+			<div> 2 </div>
+		</sub>
+	</y>
+	
+	<visible>
+		<copy src="io()" trait="_PNxVisorOverlayIndex" />
+		<gt> 0 </gt>
+		<and>
+			<copy src="ActionPoints" trait="visible" />
+			<or src="io()" trait="_PNxVisorSelectMode" />
+		</and>
+	</visible>
+	
+	<width>
+		<copy src="screen()" trait="width" />
+		<mul src="io()" trait="_PNxVisorScale" />
+		<add src="me()" trait="_XOffscreenArea" />
+		<add src="me()" trait="_XOffscreenArea" />
+	</width>
+	
+	<height>
+		<copy src="screen()" trait="height" />
+		<mul src="io()" trait="_PNxVisorScale" />
+	</height>
+	
+	<image name="OverlayImage">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		<red>
+			<copy src="io()" trait="_PNxVisorColorRed" />
+			<mul>255</mul>
+		</red>
+		<green>
+			<copy src="io()" trait="_PNxVisorColorGreen" />
+			<mul>255</mul>
+		</green>
+		<blue>
+			<copy src="io()" trait="_PNxVisorColorBlue" />
+			<mul>255</mul>
+		</blue>
+		
+		<depth> -5 </depth>
+		
+		<x> <copy src="parent()" trait="x" /> </x>
+		<y> <copy src="parent()" trait="y" /> </y>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<_filename_1> pnx\hud\visor\pov01.dds </_filename_1>
+		<_filename_2> pnx\hud\visor\pov02.dds </_filename_2>
+		<_filename_3> pnx\hud\visor\pov03.dds </_filename_3>
+		<_filename_4> pnx\hud\visor\pov04.dds </_filename_4>
+		<_filename_5> pnx\hud\visor\pov05.dds </_filename_5>
+		<_filename_6> pnx\hud\visor\pov06.dds </_filename_6>
+		<_filename_7> pnx\hud\visor\pov07.dds </_filename_7>
+		<_filename_8> pnx\hud\visor\pov08.dds </_filename_8>
+		<_filename_9> pnx\hud\visor\pov09.dds </_filename_9>
+		<_filename_10> pnx\hud\visor\pov10.dds </_filename_10>
+		<_filename_11> pnx\hud\visor\pov11.dds </_filename_11>
+		<_filename_12> pnx\hud\visor\pov12.dds </_filename_12>
+		<_filename_13> pnx\hud\visor\pov13.dds </_filename_13>
+		<_filename_14> pnx\hud\visor\pov14.dds </_filename_14>
+		<_filename_15> pnx\hud\visor\pov15.dds </_filename_15>
+		<_filename_16> pnx\hud\visor\pov16.dds </_filename_16>
+		<_filename_17> pnx\hud\visor\pov17.dds </_filename_17>
+		<_filename_18> pnx\hud\visor\pov18.dds </_filename_18>
+		<_filename_19> pnx\hud\visor\pov19.dds </_filename_19>
+		<_filename_20> pnx\hud\visor\pov20.dds </_filename_20>
+		<_filename_21> pnx\hud\visor\pov21.dds </_filename_21>
+		<_filename_22> pnx\hud\visor\pov22.dds </_filename_22>
+		<_filename_23> pnx\hud\visor\pov23.dds </_filename_23>
+		<_filename_24> pnx\hud\visor\pov24.dds </_filename_24>
+		<_filename_25> pnx\hud\visor\pov25.dds </_filename_25>
+		<_filename_26> pnx\hud\visor\pov26.dds </_filename_26>
+		<_filename_27> pnx\hud\visor\pov27.dds </_filename_27>
+		<_filename_28> pnx\hud\visor\pov28.dds </_filename_28>
+		<_filename_29> pnx\hud\visor\pov29.dds </_filename_29>
+		<_filename_30> pnx\hud\visor\pov30.dds </_filename_30>
+		
+		<filename>
+			<copy src="io()" trait="_PNxVisorOverlayIndex" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
+	</image>
+	
+	<image name="TFillBorder">
+		<depth> -3 </depth>
+		<filename> solid.dds </filename>
+		<texatlas> Interface\InterfaceShared.tai </texatlas>
+		
+		<width></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>90</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>90</sub>
+		</y>
+		<width>
+			<copy src="parent()" trait="width" />
+			<mul> 1.2 </mul>
+		</width>
+		
+		<height> 100 </height>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		<red> 0 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+	</image>
+	
+	<image name="BFillBorder">
+		<depth> -3 </depth>
+		<filename> solid.dds </filename>
+		<texatlas> Interface\InterfaceShared.tai </texatlas>
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>90</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<add src="parent()" trait="height" />
+			<sub>10</sub>
+		</y>
+		<width>
+			<copy src="parent()" trait="width" />
+			<mul> 1.2 </mul>
+		</width>
+		
+		<height> 100 </height>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		<red> 0 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+	</image>
+	
+	<image name="LFillBorder">
+		<depth> -3 </depth>
+		<filename> solid.dds </filename>
+		<texatlas> Interface\InterfaceShared.tai </texatlas>
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>90</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>90</sub>
+		</y>
+		<width> 100 </width>
+		
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul> 1.2 </mul>
+		</height>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		<red> 0 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+	</image>
+	
+	<image name="RFillBorder">
+		<depth> -3 </depth>
+		<filename> solid.dds </filename>
+		<texatlas> Interface\InterfaceShared.tai </texatlas>
+		<x>
+			<copy src="parent()" trait="x" />
+			<add src="parent()" trait="width" />
+			<sub> 10 </sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="x" />
+			<sub> 10 </sub>
+		</y>
+		<width> 100 </width>
+		
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul> 1.2 </mul>
+		</height>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		<red> 0 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+	</image>
+	
+	<image name="ConditionBase">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<alpha>
+			<copy> 1.0 </copy>
+			<sub src="io()" trait="_PNxVisorCondition" />
+			<mul> 255 </mul>
+		</alpha>
+		
+		<depth> -7 </depth>
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<filename> pnx\hud\visor\conditionbase.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 1.0 </lt>
+			<and>
+				<not src="io()" trait="_PNxVisorSelectMode" />
+			</and>
+		</visible>
+		
+		<x> <copy src="parent()" trait="x" /> </x>
+		<y> <copy src="parent()" trait="y" /> </y>
+	</image>
+	
+	<image name="ConditionCrack1">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -7 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack1.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.85 </lt>
+			<and>
+				<not src="io()" trait="_PNxVisorSelectMode" />
+			</and>
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.75 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.18 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack2">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -7 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack2.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.70 </lt>
+			<and>
+				<not src="io()" trait="_PNxVisorSelectMode" />
+			</and>
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.14 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.39 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack3">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -7 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack3.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.55 </lt>
+			<and>
+				<not src="io()" trait="_PNxVisorSelectMode" />
+			</and>
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.09 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack4">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -7 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack4.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.40 </lt>
+			<and>
+				<not src="io()" trait="_PNxVisorSelectMode" />
+			</and>
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.52 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.46 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack5">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -7 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack5.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.25 </lt>
+			<and>
+				<not src="io()" trait="_PNxVisorSelectMode" />
+			</and>
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.28 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.19 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack6">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -7 </depth>
+		<width> 420 </width>
+		<height> 420 </height>
+		
+		<filename> pnx\hud\visor\crack6.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.1 </lt>
+			<and>
+				<not src="io()" trait="_PNxVisorSelectMode" />
+			</and>
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.54 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.10 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
 </rect>
