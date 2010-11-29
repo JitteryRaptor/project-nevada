@@ -1,0 +1,23 @@
+#summary Forum thread for Project Nevada
+
+Project Nevada
+
+Team: snakster, Kai Hohiro, delamer, T3T, x-quake, Mezmorki, TheCastle
+
+Version 1.0
+
+`***********************` IMPORTANT `***********************`
+
+The follower mods/utilities are required for Project Nevada: 
+
+* Fallout: New Vegas Script Extender (NVSE)
+
+* Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
+
+
+Overview of Changes
+
+
+
+
+
