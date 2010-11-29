@@ -14,12 +14,20 @@
 </_PNxScale>
 
 <_PNxEdgeDistance>
-	<copy> 30 </copy>
-	<sub>
-		<copy> 11 </copy>
+	<copy> 34 </copy>
+	<sub> <!-- dui 19 -->
+		<copy> 15 </copy>
 		<onlyif src="io()" trait="_DUIF3" />
 	</sub>
 </_PNxEdgeDistance>
+
+<_PNxMeterFont>
+	<copy> 7 </copy>
+	<sub> <!-- dui 4 -->
+		<copy> 3 </copy>
+		<onlyif src="io()" trait="_DUIF3" />
+	</sub>
+</_PNxMeterFont>
 
 <_PNxScopeAiming>
 	<copy src="ActionPoints" trait="visible" />
@@ -1234,7 +1242,7 @@
 	</image>
 	
 	<text name="PNxGrenadeCountText">
-		<font> 4 </font>
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
 		<depth> 2 </depth>
 		<string> <copy src="io()" trait="_PNxGrenadeIconCount" /> </string>
 		<x>
