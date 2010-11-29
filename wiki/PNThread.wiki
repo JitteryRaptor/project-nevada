@@ -17,12 +17,16 @@ The follower mods/utilities are required for Project Nevada:
 
 ==Introduction==
 
-===Goals===
+===Goals===´
 
 ==Module Overview==
 
 ===Core===
+Blabla introduction
 
 ==Module Features and Changes==
 
 ===Core===
+- 1
+- 2
+- 3
