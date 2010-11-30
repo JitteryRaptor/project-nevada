@@ -1397,15 +1397,6 @@
 		</sub>
 	</y>
 	
-	<visible>
-		<copy src="io()" trait="_PNxVisorOverlayIndex" />
-		<gt> 0 </gt>
-		<and>
-			<copy src="ActionPoints" trait="visible" />
-			<or src="io()" trait="_PNxVisorSelectMode" />
-		</and>
-	</visible>
-	
 	<width>
 		<copy src="screen()" trait="width" />
 		<mul src="io()" trait="_PNxVisorScale" />
@@ -1434,6 +1425,15 @@
 			<mul>255</mul>
 		</blue>
 		
+		<visible>
+			<copy src="io()" trait="_PNxVisorOverlayIndex" />
+			<gt> 0 </gt>
+			<and>
+				<copy src="ActionPoints" trait="visible" />
+				<or src="io()" trait="_PNxVisorSelectMode" />
+			</and>
+		</visible>
+		
 		<depth> -5 </depth>
 		
 		<x> <copy src="parent()" trait="x" /> </x>
@@ -1447,142 +1447,118 @@
 		<_filename_3> pnx\hud\visor\pov03.dds </_filename_3>
 		<_filename_4> pnx\hud\visor\pov04.dds </_filename_4>
 		<_filename_5> pnx\hud\visor\pov05.dds </_filename_5>
-		<_filename_6> pnx\hud\visor\pov06.dds </_filename_6>
-		<_filename_7> pnx\hud\visor\pov07.dds </_filename_7>
-		<_filename_8> pnx\hud\visor\pov08.dds </_filename_8>
-		<_filename_9> pnx\hud\visor\pov09.dds </_filename_9>
-		<_filename_10> pnx\hud\visor\pov10.dds </_filename_10>
-		<_filename_11> pnx\hud\visor\pov11.dds </_filename_11>
-		<_filename_12> pnx\hud\visor\pov12.dds </_filename_12>
-		<_filename_13> pnx\hud\visor\pov13.dds </_filename_13>
-		<_filename_14> pnx\hud\visor\pov14.dds </_filename_14>
-		<_filename_15> pnx\hud\visor\pov15.dds </_filename_15>
-		<_filename_16> pnx\hud\visor\pov16.dds </_filename_16>
-		<_filename_17> pnx\hud\visor\pov17.dds </_filename_17>
-		<_filename_18> pnx\hud\visor\pov18.dds </_filename_18>
-		<_filename_19> pnx\hud\visor\pov19.dds </_filename_19>
-		<_filename_20> pnx\hud\visor\pov20.dds </_filename_20>
-		<_filename_21> pnx\hud\visor\pov21.dds </_filename_21>
-		<_filename_22> pnx\hud\visor\pov22.dds </_filename_22>
-		<_filename_23> pnx\hud\visor\pov23.dds </_filename_23>
-		<_filename_24> pnx\hud\visor\pov24.dds </_filename_24>
-		<_filename_25> pnx\hud\visor\pov25.dds </_filename_25>
-		<_filename_26> pnx\hud\visor\pov26.dds </_filename_26>
-		<_filename_27> pnx\hud\visor\pov27.dds </_filename_27>
-		<_filename_28> pnx\hud\visor\pov28.dds </_filename_28>
-		<_filename_29> pnx\hud\visor\pov29.dds </_filename_29>
-		<_filename_30> pnx\hud\visor\pov30.dds </_filename_30>
 		
 		<filename>
 			<copy src="io()" trait="_PNxVisorOverlayIndex" />
 			<copy src="me()" trait="_filename_" />
 		</filename>
-	</image>
-	
-	<image name="TFillBorder">
-		<depth> -3 </depth>
-		<filename> solid.dds </filename>
-		<texatlas> Interface\InterfaceShared.tai </texatlas>
 		
-		<width></width>
-		<height><copy src="parent()" trait="height" /></height>
+		<image name="TFillBorder">
+			<depth> -3 </depth>
+			<filename> solid.dds </filename>
+			<texatlas> Interface\InterfaceShared.tai </texatlas>
+			
+			<width></width>
+			<height><copy src="parent()" trait="height" /></height>
+			
+			<x>
+				<copy src="parent()" trait="x" />
+				<sub>90</sub>
+			</x>
+			<y>
+				<copy src="parent()" trait="y" />
+				<sub>90</sub>
+			</y>
+			<width>
+				<copy src="parent()" trait="width" />
+				<mul> 1.2 </mul>
+			</width>
+			
+			<height> 100 </height>
+			
+			<systemcolor> &nosystemcolor; </systemcolor>
+			<red> 0 </red>
+			<green> 0 </green>
+			<blue> 0 </blue>
+		</image>
 		
-		<x>
-			<copy src="parent()" trait="x" />
-			<sub>90</sub>
-		</x>
-		<y>
-			<copy src="parent()" trait="y" />
-			<sub>90</sub>
-		</y>
-		<width>
-			<copy src="parent()" trait="width" />
-			<mul> 1.2 </mul>
-		</width>
+		<image name="BFillBorder">
+			<depth> -3 </depth>
+			<filename> solid.dds </filename>
+			<texatlas> Interface\InterfaceShared.tai </texatlas>
+			<x>
+				<copy src="parent()" trait="x" />
+				<sub>90</sub>
+			</x>
+			<y>
+				<copy src="parent()" trait="y" />
+				<add src="parent()" trait="height" />
+				<sub>10</sub>
+			</y>
+			<width>
+				<copy src="parent()" trait="width" />
+				<mul> 1.2 </mul>
+			</width>
+			
+			<height> 100 </height>
+			
+			<systemcolor> &nosystemcolor; </systemcolor>
+			<red> 0 </red>
+			<green> 0 </green>
+			<blue> 0 </blue>
+		</image>
 		
-		<height> 100 </height>
+		<image name="LFillBorder">
+			<depth> -3 </depth>
+			<filename> solid.dds </filename>
+			<texatlas> Interface\InterfaceShared.tai </texatlas>
+			<x>
+				<copy src="parent()" trait="x" />
+				<sub>90</sub>
+			</x>
+			<y>
+				<copy src="parent()" trait="y" />
+				<sub>90</sub>
+			</y>
+			<width> 100 </width>
+			
+			<height>
+				<copy src="parent()" trait="height" />
+				<mul> 1.2 </mul>
+			</height>
+			
+			<systemcolor> &nosystemcolor; </systemcolor>
+			<red> 0 </red>
+			<green> 0 </green>
+			<blue> 0 </blue>
+		</image>
 		
-		<systemcolor> &nosystemcolor; </systemcolor>
-		<red> 0 </red>
-		<green> 0 </green>
-		<blue> 0 </blue>
-	</image>
-	
-	<image name="BFillBorder">
-		<depth> -3 </depth>
-		<filename> solid.dds </filename>
-		<texatlas> Interface\InterfaceShared.tai </texatlas>
-		<x>
-			<copy src="parent()" trait="x" />
-			<sub>90</sub>
-		</x>
-		<y>
-			<copy src="parent()" trait="y" />
-			<add src="parent()" trait="height" />
-			<sub>10</sub>
-		</y>
-		<width>
-			<copy src="parent()" trait="width" />
-			<mul> 1.2 </mul>
-		</width>
+		<image name="RFillBorder">
+			<depth> -3 </depth>
+			<filename> solid.dds </filename>
+			<texatlas> Interface\InterfaceShared.tai </texatlas>
+			<x>
+				<copy src="parent()" trait="x" />
+				<add src="parent()" trait="width" />
+				<sub> 10 </sub>
+			</x>
+			<y>
+				<copy src="parent()" trait="x" />
+				<sub> 10 </sub>
+			</y>
+			<width> 100 </width>
+			
+			<height>
+				<copy src="parent()" trait="height" />
+				<mul> 1.2 </mul>
+			</height>
+			
+			<systemcolor> &nosystemcolor; </systemcolor>
+			<red> 0 </red>
+			<green> 0 </green>
+			<blue> 0 </blue>
+		</image>
 		
-		<height> 100 </height>
-		
-		<systemcolor> &nosystemcolor; </systemcolor>
-		<red> 0 </red>
-		<green> 0 </green>
-		<blue> 0 </blue>
-	</image>
-	
-	<image name="LFillBorder">
-		<depth> -3 </depth>
-		<filename> solid.dds </filename>
-		<texatlas> Interface\InterfaceShared.tai </texatlas>
-		<x>
-			<copy src="parent()" trait="x" />
-			<sub>90</sub>
-		</x>
-		<y>
-			<copy src="parent()" trait="y" />
-			<sub>90</sub>
-		</y>
-		<width> 100 </width>
-		
-		<height>
-			<copy src="parent()" trait="height" />
-			<mul> 1.2 </mul>
-		</height>
-		
-		<systemcolor> &nosystemcolor; </systemcolor>
-		<red> 0 </red>
-		<green> 0 </green>
-		<blue> 0 </blue>
-	</image>
-	
-	<image name="RFillBorder">
-		<depth> -3 </depth>
-		<filename> solid.dds </filename>
-		<texatlas> Interface\InterfaceShared.tai </texatlas>
-		<x>
-			<copy src="parent()" trait="x" />
-			<add src="parent()" trait="width" />
-			<sub> 10 </sub>
-		</x>
-		<y>
-			<copy src="parent()" trait="x" />
-			<sub> 10 </sub>
-		</y>
-		<width> 100 </width>
-		
-		<height>
-			<copy src="parent()" trait="height" />
-			<mul> 1.2 </mul>
-		</height>
-		
-		<systemcolor> &nosystemcolor; </systemcolor>
-		<red> 0 </red>
-		<green> 0 </green>
-		<blue> 0 </blue>
 	</image>
 	
 	<image name="ConditionBase">
@@ -1614,13 +1590,12 @@
 		<visible>
 			<copy src="io()" trait="_PNxVisorCondition" />
 			<lt> 1.0 </lt>
-			<and>
-				<not src="io()" trait="_PNxVisorSelectMode" />
-			</and>
+			<and src="ActionPoints" trait="visible" />
 		</visible>
 		
 		<x> <copy src="parent()" trait="x" /> </x>
 		<y> <copy src="parent()" trait="y" /> </y>
+		
 	</image>
 	
 	<image name="ConditionCrack1">
@@ -1646,9 +1621,7 @@
 		<visible>
 			<copy src="io()" trait="_PNxVisorCondition" />
 			<lt> 0.85 </lt>
-			<and>
-				<not src="io()" trait="_PNxVisorSelectMode" />
-			</and>
+			<and src="ActionPoints" trait="visible" />
 		</visible>
 		
 		<x>
@@ -1686,9 +1659,7 @@
 		<visible>
 			<copy src="io()" trait="_PNxVisorCondition" />
 			<lt> 0.70 </lt>
-			<and>
-				<not src="io()" trait="_PNxVisorSelectMode" />
-			</and>
+			<and src="ActionPoints" trait="visible" />
 		</visible>
 		
 		<x>
@@ -1726,9 +1697,7 @@
 		<visible>
 			<copy src="io()" trait="_PNxVisorCondition" />
 			<lt> 0.55 </lt>
-			<and>
-				<not src="io()" trait="_PNxVisorSelectMode" />
-			</and>
+			<and src="ActionPoints" trait="visible" />
 		</visible>
 		
 		<x>
@@ -1766,9 +1735,7 @@
 		<visible>
 			<copy src="io()" trait="_PNxVisorCondition" />
 			<lt> 0.40 </lt>
-			<and>
-				<not src="io()" trait="_PNxVisorSelectMode" />
-			</and>
+			<and src="ActionPoints" trait="visible" />
 		</visible>
 		
 		<x>
@@ -1806,9 +1773,7 @@
 		<visible>
 			<copy src="io()" trait="_PNxVisorCondition" />
 			<lt> 0.25 </lt>
-			<and>
-				<not src="io()" trait="_PNxVisorSelectMode" />
-			</and>
+			<and src="ActionPoints" trait="visible" />
 		</visible>
 		
 		<x>
@@ -1846,9 +1811,7 @@
 		<visible>
 			<copy src="io()" trait="_PNxVisorCondition" />
 			<lt> 0.1 </lt>
-			<and>
-				<not src="io()" trait="_PNxVisorSelectMode" />
-			</and>
+			<and src="ActionPoints" trait="visible" />
 		</visible>
 		
 		<x>
