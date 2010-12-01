@@ -17,7 +17,7 @@ The follower mods/utilities are required for Project Nevada:
 
 ==Introduction==
 
-===Goals===´
+===Goals===
 
 ==Module Overview==
 
