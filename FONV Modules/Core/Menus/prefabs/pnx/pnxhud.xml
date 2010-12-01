@@ -1447,6 +1447,7 @@
 		<_filename_3> pnx\hud\visor\pov03.dds </_filename_3>
 		<_filename_4> pnx\hud\visor\pov04.dds </_filename_4>
 		<_filename_5> pnx\hud\visor\pov05.dds </_filename_5>
+		<_filename_6> pnx\hud\visor\pov06.dds </_filename_6>
 		
 		<filename>
 			<copy src="io()" trait="_PNxVisorOverlayIndex" />
