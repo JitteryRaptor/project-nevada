@@ -1578,7 +1578,7 @@
 		<alpha>
 			<copy> 1.0 </copy>
 			<sub src="io()" trait="_PNxVisorCondition" />
-			<mul> 255 </mul>
+			<mul> 127 </mul>
 		</alpha>
 		
 		<depth> -7 </depth>
