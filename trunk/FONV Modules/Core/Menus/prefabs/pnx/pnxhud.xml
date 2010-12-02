@@ -1448,6 +1448,15 @@
 		<_filename_4> pnx\hud\visor\pov04.dds </_filename_4>
 		<_filename_5> pnx\hud\visor\pov05.dds </_filename_5>
 		<_filename_6> pnx\hud\visor\pov06.dds </_filename_6>
+		<_filename_7> pnx\hud\visor\pov07.dds </_filename_7>
+		<_filename_8> pnx\hud\visor\pov08.dds </_filename_8>
+		<_filename_9> pnx\hud\visor\pov09.dds </_filename_9>
+		<_filename_10> pnx\hud\visor\pov10.dds </_filename_10>
+		
+		<!-- ununsed -->
+		
+		<_filename_11> pnx\hud\visor\pov11.dds </_filename_11>
+		<_filename_12> pnx\hud\visor\pov12.dds </_filename_12>
 		
 		<filename>
 			<copy src="io()" trait="_PNxVisorOverlayIndex" />
