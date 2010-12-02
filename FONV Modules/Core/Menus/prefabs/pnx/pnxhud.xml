@@ -1365,7 +1365,10 @@
 		<mul>0.1</mul>
 	</_XOffscreenArea>
 	
-	<_YOffscreenArea> 30 </_YOffscreenArea>
+	<_YOffscreenArea>
+		<copy src="screen()" trait="height" />
+		<mul>0.05</mul>
+	</_YOffscreenArea>
 
 	<x>
 		<copy> 0 </copy>
@@ -1386,12 +1389,16 @@
 	
 	<y>
 		<copy> 0 </copy>
+		<sub src="me()" trait="_YOffscreenArea" />
 		<add>
 			<copy src="me()" trait="_YOffscreenArea" />
 			<mul src="io()" trait="_PNxVisorYOffscreenMult" />
 		</add>
 		<sub>
-			<copy src="me()" trait="height" />
+			<copy>
+				<copy src="screen()" trait="height" />
+				<mul src="io()" trait="_PNxVisorScale" />
+			</copy>
 			<sub src="screen()" trait="height" />
 			<div> 2 </div>
 		</sub>
@@ -1407,6 +1414,8 @@
 	<height>
 		<copy src="screen()" trait="height" />
 		<mul src="io()" trait="_PNxVisorScale" />
+		<add src="me()" trait="_YOffscreenArea" />
+		<add src="me()" trait="_YOffscreenArea" />
 	</height>
 	
 	<image name="OverlayImage">
@@ -1462,112 +1471,6 @@
 			<copy src="io()" trait="_PNxVisorOverlayIndex" />
 			<copy src="me()" trait="_filename_" />
 		</filename>
-		
-		<image name="TFillBorder">
-			<depth> -3 </depth>
-			<filename> solid.dds </filename>
-			<texatlas> Interface\InterfaceShared.tai </texatlas>
-			
-			<width></width>
-			<height><copy src="parent()" trait="height" /></height>
-			
-			<x>
-				<copy src="parent()" trait="x" />
-				<sub>90</sub>
-			</x>
-			<y>
-				<copy src="parent()" trait="y" />
-				<sub>90</sub>
-			</y>
-			<width>
-				<copy src="parent()" trait="width" />
-				<mul> 1.2 </mul>
-			</width>
-			
-			<height> 100 </height>
-			
-			<systemcolor> &nosystemcolor; </systemcolor>
-			<red> 0 </red>
-			<green> 0 </green>
-			<blue> 0 </blue>
-		</image>
-		
-		<image name="BFillBorder">
-			<depth> -3 </depth>
-			<filename> solid.dds </filename>
-			<texatlas> Interface\InterfaceShared.tai </texatlas>
-			<x>
-				<copy src="parent()" trait="x" />
-				<sub>90</sub>
-			</x>
-			<y>
-				<copy src="parent()" trait="y" />
-				<add src="parent()" trait="height" />
-				<sub>10</sub>
-			</y>
-			<width>
-				<copy src="parent()" trait="width" />
-				<mul> 1.2 </mul>
-			</width>
-			
-			<height> 100 </height>
-			
-			<systemcolor> &nosystemcolor; </systemcolor>
-			<red> 0 </red>
-			<green> 0 </green>
-			<blue> 0 </blue>
-		</image>
-		
-		<image name="LFillBorder">
-			<depth> -3 </depth>
-			<filename> solid.dds </filename>
-			<texatlas> Interface\InterfaceShared.tai </texatlas>
-			<x>
-				<copy src="parent()" trait="x" />
-				<sub>90</sub>
-			</x>
-			<y>
-				<copy src="parent()" trait="y" />
-				<sub>90</sub>
-			</y>
-			<width> 100 </width>
-			
-			<height>
-				<copy src="parent()" trait="height" />
-				<mul> 1.2 </mul>
-			</height>
-			
-			<systemcolor> &nosystemcolor; </systemcolor>
-			<red> 0 </red>
-			<green> 0 </green>
-			<blue> 0 </blue>
-		</image>
-		
-		<image name="RFillBorder">
-			<depth> -3 </depth>
-			<filename> solid.dds </filename>
-			<texatlas> Interface\InterfaceShared.tai </texatlas>
-			<x>
-				<copy src="parent()" trait="x" />
-				<add src="parent()" trait="width" />
-				<sub> 10 </sub>
-			</x>
-			<y>
-				<copy src="parent()" trait="x" />
-				<sub> 10 </sub>
-			</y>
-			<width> 100 </width>
-			
-			<height>
-				<copy src="parent()" trait="height" />
-				<mul> 1.2 </mul>
-			</height>
-			
-			<systemcolor> &nosystemcolor; </systemcolor>
-			<red> 0 </red>
-			<green> 0 </green>
-			<blue> 0 </blue>
-		</image>
 		
 	</image>
 	
