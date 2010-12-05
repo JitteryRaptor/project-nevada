@@ -1443,7 +1443,7 @@
 			</and>
 		</visible>
 		
-		<depth> -5 </depth>
+		<depth> -10 </depth>
 		
 		<x> <copy src="parent()" trait="x" /> </x>
 		<y> <copy src="parent()" trait="y" /> </y>
@@ -1494,7 +1494,7 @@
 			<mul> 127 </mul>
 		</alpha>
 		
-		<depth> -7 </depth>
+		<depth> -12 </depth>
 		<width><copy src="parent()" trait="width" /></width>
 		<height><copy src="parent()" trait="height" /></height>
 		
@@ -1525,7 +1525,7 @@
 			<copy src="sibling(OverlayImage)" trait="blue" />
 		</blue>
 		
-		<depth> -7 </depth>
+		<depth> -11 </depth>
 		<width> 400 </width>
 		<height> 400 </height>
 		
@@ -1563,7 +1563,7 @@
 			<copy src="sibling(OverlayImage)" trait="blue" />
 		</blue>
 		
-		<depth> -7 </depth>
+		<depth> -11 </depth>
 		<width> 400 </width>
 		<height> 400 </height>
 		
@@ -1601,7 +1601,7 @@
 			<copy src="sibling(OverlayImage)" trait="blue" />
 		</blue>
 		
-		<depth> -7 </depth>
+		<depth> -11 </depth>
 		<width> 400 </width>
 		<height> 400 </height>
 		
@@ -1639,7 +1639,7 @@
 			<copy src="sibling(OverlayImage)" trait="blue" />
 		</blue>
 		
-		<depth> -7 </depth>
+		<depth> -11 </depth>
 		<width> 400 </width>
 		<height> 400 </height>
 		
@@ -1677,7 +1677,7 @@
 			<copy src="sibling(OverlayImage)" trait="blue" />
 		</blue>
 		
-		<depth> -7 </depth>
+		<depth> -11 </depth>
 		<width> 400 </width>
 		<height> 400 </height>
 		
@@ -1715,7 +1715,7 @@
 			<copy src="sibling(OverlayImage)" trait="blue" />
 		</blue>
 		
-		<depth> -7 </depth>
+		<depth> -11 </depth>
 		<width> 420 </width>
 		<height> 420 </height>
 		
