@@ -166,6 +166,12 @@
 <_PNxVisorCondition> 1.0 </_PNxVisorCondition>
 
 
+<!-- ######################################################################################## IO Energy Icon -->
+<_PNxEnergyIconEnabled> 0 </_PNxEnergyIconEnabled>
+<_PNxEnergyIconCharge> 0 </_PNxEnergyIconCharge>
+<_PNxEnergyIconCount> 0 </_PNxEnergyIconCount>
+
+
 <!-- ######################################################################################## Grain -->
 <rect name="PNXGrainLayer">
 	<visible>
@@ -1148,7 +1154,7 @@
 </rect>
 
 
-<!-- ######################################################################################## Scanner -->
+<!-- ######################################################################################## Grenade Icon -->
 <rect name="PNxGrenadeIcon">
 
 	<visible>
@@ -1260,6 +1266,150 @@
 			</sub>
 		</y>
 	</text>
+</rect>
+
+
+<!-- ######################################################################################## Energy Icon -->
+<rect name="PNxEnergyIcon">
+
+	<visible>
+		<copy src="io()" trait="_PNxEnergyIconEnabled" />
+		<and src="ActionPoints" trait="visible" />
+	</visible>
+	
+	<x>
+		<copy> 20 </copy>
+		<add>
+			<copy src="HitPoints" trait="width" />
+			<mul src="io()" trait="_PNxScale" />
+		</add>
+		<add src="io()" trait="_PNxEdgeDistance" />
+	</x>
+		
+	<y>
+		<copy src="screen()" trait="height" />
+		<sub src="me()" trait="height" />
+		<sub src="io()" trait="_PNxEdgeDistance" />
+	</y>
+		
+	<width>
+		<copy> 96 </copy>
+		<mul src="io()" trait="_PNxScale" />
+	</width>
+		
+	<height>
+		<copy> 96 </copy>
+		<mul src="io()" trait="_PNxScale" />
+	</height>
+
+	<image name="PNxEnergyIconImage">
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="parent()" trait="width" />
+				<mul> 0.25 </mul>
+			</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="parent()" trait="height" />
+				<mul> 0.25 </mul>
+			</sub>
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+			<mul> 1.5 </mul>
+		</width>
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul> 1.5 </mul>
+		</height>
+
+		<depth> 1 </depth>
+		
+		<zoom> &scale; </zoom>
+		
+		<filename> Interface\Icons\PipboyImages\Items\items_energy_cell.dds </filename>
+	</image>
+	
+	<text name="PNxEnergyCountText">
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
+		<depth> 2 </depth>
+		<string> <copy src="io()" trait="_PNxEnergyIconCount" /> </string>
+		<x>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="x" />
+			<add src="sibling(PNxEnergyChargeMeterBack)" trait="width" />
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<add src="parent()" trait="height" />
+			<sub src="me()" trait="height" />
+			<sub>
+				<copy> 10 </copy>
+				<onlyif src="io()" trait="_DUIF3" />
+			</sub>
+		</y>
+	</text>
+	
+	<image name="PNxEnergyChargeMeterBack">
+		<zoom> &scale; </zoom>
+		<depth> 2 </depth>
+		<alpha> 100 </alpha>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+		</x>
+	
+		<y>
+			<copy src="parent()" trait="y" />
+			<add>
+				<copy src="parent()" trait="height" />
+				<mul> 0.15 </mul>
+			</add>
+		</y>
+		
+		<width>
+			10
+		</width>
+	
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul> 0.7 </mul>
+		</height>
+		
+		<filename> Interface\Shared\solid.dds </filename>
+	</image>
+	
+	<image name="PNxEnergyChargeMeterFill">
+		<zoom> &scale; </zoom>
+		<depth> 2 </depth>
+		<alpha> 200 </alpha>
+		
+		<x>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="x" />
+		</x>
+	
+		<y>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="y" />
+			<add>
+				<copy src="sibling(PNxEnergyChargeMeterBack)" trait="height" />
+				<sub src="me()" trait="height" />
+			</add>
+		</y>
+		
+		<width>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="width" />
+		</width>
+	
+		<height>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="height" />
+			<mul src="io()" trait="_PNxEnergyIconCharge" />
+		</height>
+		
+		<filename> Interface\Shared\solid.dds </filename>
+	</image>
 </rect>
 
 
