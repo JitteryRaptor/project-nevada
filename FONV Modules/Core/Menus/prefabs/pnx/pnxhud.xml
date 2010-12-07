@@ -1424,14 +1424,29 @@
 		<red>
 			<copy src="io()" trait="_PNxVisorColorRed" />
 			<mul>255</mul>
+			<onlyifnot src="PNXGrainLayer" trait="visible" />
+			<add>
+				<copy src="PNXGrainLayer" trait="red" />
+				<onlyif src="PNXGrainLayer" trait="visible" />
+			</add>
 		</red>
 		<green>
 			<copy src="io()" trait="_PNxVisorColorGreen" />
 			<mul>255</mul>
+			<onlyifnot src="PNXGrainLayer" trait="visible" />
+			<add>
+				<copy src="PNXGrainLayer" trait="green" />
+				<onlyif src="PNXGrainLayer" trait="visible" />
+			</add>
 		</green>
 		<blue>
 			<copy src="io()" trait="_PNxVisorColorBlue" />
 			<mul>255</mul>
+			<onlyifnot src="PNXGrainLayer" trait="visible" />
+			<add>
+				<copy src="PNXGrainLayer" trait="blue" />
+				<onlyif src="PNXGrainLayer" trait="visible" />
+			</add>
 		</blue>
 		
 		<visible>
