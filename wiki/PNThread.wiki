@@ -29,26 +29,45 @@ The follower mods/utilities are required for Project Nevada:
 ===Core===
 Blabla introduction
 
+===Realism (better name)===
+
 ===Cyberware===
 
 ===Equipment (better name)===
 
-===Realism (better name)===
 
 ==Module Features and Changes==
 
 ===Core===
 
-Infrastructure:
-- Extensible Control panel
-- Streamlined hotkey management
+*`[b]`Infrastructure:`[/b]`*
 
-Selectable Features:
-- Dynamic crosshair to show actual weapon spread
-- Bullet time
-- Sprint
-- Grenade hotkey
-- Variable zoom for scoped weapons
-- Slower backpedaling
-- First-person helmet visor images/effects
-- 
+`[list]`
+  * `[*]`Extensible Control panel
+  * `[*]`Streamlined hotkey management
+`[/list]`
+
+*`[b]`Selectable Features:`[/b]`*
+
+`[list]`
+  * `[*]`Dynamic crosshair to show actual weapon spread
+  * `[*]`Bullet time
+  * `[*]`Sprint
+  * `[*]`Grenade hotkey
+  * `[*]`Variable zoom for scoped weapons
+  * `[*]`Slower backpedaling
+  * `[*]`First-person helmet visor images/effects
+`[/list]`
+
+===Realism (better name)===
+
+===Cyberware===
+
+===Equipment (better name)===
+
+
+==Media==
+
+===Videos===
+
+===Screenshots===
