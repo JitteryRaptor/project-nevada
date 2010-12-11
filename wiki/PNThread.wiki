@@ -2,19 +2,21 @@
 
 {{{
 [font="Verdana"]
-[font="Courier New"][size="7"][color="#4169E1"][b]Project Nevada[/b][/color][/size][/font]
+[size="7"][font="Courier New"][b][color="#FFFFFF"]([color="#4169E1"]Project Nevada[/color])[/color][/b][/font][/size]
 
 [b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, Mezmorki, TheCastle 
 
 [b]Current Version:[/b]: in development 
 
-*********************** IMPORTANT *********************** 
+[b][color="#800080"]*********************** IMPORTANT ****************************[/color][/b]
 
-The follower mods/utilities are required for Project Nevada: 
+The follower mods/utilities are required for Project Nevada:
 
-* Fallout: New Vegas Script Extender (NVSE) 
+* [url="http://nvse.silverlock.org/"]Fallout: New Vegas Script Extender (NVSE)[/url] 
 
-* Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada. 
+* [url="http://www.newvegasnexus.com/downloads/file.php?id=36901"]Fallout Mod Manager (FOMM)[/url] is HIGHLY recommended for properly installing and setting up Project Nevada. 
+
+[b][color="#800080"]*************************************************************[/color][/b]
 
 
 [size="6"][color="#4169E1"][font="Courier New"][b]Introduction[/b][/font][/color][/size]
