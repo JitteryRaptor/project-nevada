@@ -1,6 +1,3 @@
-#summary Forum thread for Project Nevada
-
-{{{
 [font="Verdana"]
 [size="7"][font="Courier New"][b][color="#FFFFFF"]([color="#FF8C00"]Project Nevada[/color])[/color][/b][/font][/size]
 
@@ -35,7 +32,7 @@ Blabla introduction
 
 [color="#FF8C00"]asfsdf[/color]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Realism[/color][b]>[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
 
@@ -63,7 +60,7 @@ Blabla introduction
 [*]First-person helmet visor images/effects 
 [/list] 
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Realism[/color][b]>[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
 
@@ -77,4 +74,3 @@ Blabla introduction
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Screenshots[/color][b]>[/b][/font][/color][/size]
 
 [/font]
-}}}
