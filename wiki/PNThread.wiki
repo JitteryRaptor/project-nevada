@@ -1,73 +1,74 @@
 #summary Forum thread for Project Nevada
 
-=Project Nevada=
+{{{
+[font="Verdana"]
+[font="Courier New"][size="7"][color="#4169E1"][b]Project Nevada[/b][/color][/size][/font]
 
-Team: snakster, Kai Hohiro, delamer, T3T, x-quake, Mezmorki, TheCastle
+[b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, Mezmorki, TheCastle 
 
-Version 1.0
+[b]Current Version:[/b]: in development 
 
-`***********************` IMPORTANT `***********************`
+*********************** IMPORTANT *********************** 
 
 The follower mods/utilities are required for Project Nevada: 
 
-`*` Fallout: New Vegas Script Extender (NVSE)
+* Fallout: New Vegas Script Extender (NVSE) 
 
-`*` Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
+* Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada. 
 
+[size="6"][color="#4169E1"][font="Courier New"][b]Introduction[/b][/font][/color][/size]
 
-==Introduction==
-- No overhaul
-- Set of modules, each addressing different areas of the game
+- No overhaul - Set of modules, each addressing different areas of the game 
 
-===General Goals===
-- Ease of use
-- Stable, high quality features
-- Compatibility
+[size="4"][color="#4169E1"][font="Courier New"]General Goals[/font][/color][/size]
 
-==Module Overview==
+- Ease of use - Stable, high quality features - Compatibility 
 
-===Core===
-Blabla introduction
+[size="6"][color="#4169E1"][font="Courier New"][b]Module Overview[/b][/font][/color][/size]
 
-===Realism (better name)===
+[size="4"][color="#4169E1"][font="Courier New"]Core[/font][/color][/size]
 
-===Cyberware===
+Blabla introduction 
 
-===Equipment (better name)===
+[size="4"][color="#4169E1"][font="Courier New"]Realism (better name)[/font][/color][/size]
 
+[size="4"][color="#4169E1"][font="Courier New"]Cyberware[/font][/color][/size]
 
-==Module Features and Changes==
+[size="4"][color="#4169E1"][font="Courier New"]Equipment (better name)[/font][/color][/size]
 
-===Core===
+[size="6"][color="#4169E1"][font="Courier New"][b]Module Features and Changes[/b][/font][/color][/size]
 
-*`[b]`Infrastructure:`[/b]`*
+[size="4"][color="#4169E1"][font="Courier New"]Core[/font][/color][/size]
 
-`[list]`
-  * `[*]`Extensible Control panel
-  * `[*]`Streamlined hotkey management
-`[/list]`
+[b]Infrastructure:[/b] 
 
-*`[b]`Selectable Features:`[/b]`*
-
-`[list]`
-  * `[*]`Dynamic crosshair to show actual weapon spread
-  * `[*]`Bullet time
-  * `[*]`Sprint
-  * `[*]`Grenade hotkey
-  * `[*]`Variable zoom for scoped weapons
-  * `[*]`Slower backpedaling
-  * `[*]`First-person helmet visor images/effects
-`[/list]`
-
-===Realism (better name)===
-
-===Cyberware===
-
-===Equipment (better name)===
+[list] 
+[*]Extensible Control panel 
+[*]Streamlined hotkey management 
+[/list] 
 
 
-==Media==
+[b]Selectable Features:[/b] 
 
-===Videos===
+[list] 
+[*]Dynamic crosshair to show actual weapon spread 
+[*]Bullet time 
+[*]Sprint 
+[*]Grenade hotkey 
+[*]Variable zoom for scoped weapons 
+[*]Slower backpedaling 
+[*]First-person helmet visor images/effects 
+[/list] 
 
-===Screenshots===
+[size="4"][color="#4169E1"][font="Courier New"]Realism (better name)[/font][/color][/size]
+
+[size="4"][color="#4169E1"][font="Courier New"]Cyberware[/font][/color][/size]
+
+[size="4"][color="#4169E1"][font="Courier New"]Equipment (better name)[/font][/color][/size]
+
+[size="6"][color="#4169E1"][font="Courier New"][b]Media[/b][/font][/color][/size]
+
+[size="4"][color="#4169E1"][font="Courier New"]Videos[/font][/color][/size]
+
+[size="4"][color="#4169E1"][font="Courier New"]Screenshots[/font][/color][/size][/font]
+}}}
