@@ -16,17 +16,39 @@ The follower mods/utilities are required for Project Nevada:
 
 
 ==Introduction==
+- No overhaul
+- Set of modules, each addressing different areas of the game
 
-===Goals===
+===General Goals===
+- Ease of use
+- Stable, high quality features
+- Compatibility
 
 ==Module Overview==
 
 ===Core===
 Blabla introduction
 
+===Cyberware===
+
+===Equipment (better name)===
+
+===Realism (better name)===
+
 ==Module Features and Changes==
 
 ===Core===
-- 1
-- 2
-- 3
+
+Infrastructure:
+- Extensible Control panel
+- Streamlined hotkey management
+
+Selectable Features:
+- Dynamic crosshair to show actual weapon spread
+- Bullet time
+- Sprint
+- Grenade hotkey
+- Variable zoom for scoped weapons
+- Slower backpedaling
+- First-person helmet visor images/effects
+- 
