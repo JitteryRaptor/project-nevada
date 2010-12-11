@@ -1,3 +1,4 @@
+{{{
 [font="Verdana"]
 [size="7"][font="Courier New"][b][color="#FFFFFF"]([color="#FF8C00"]Project Nevada[/color])[/color][/b][/font][/size]
 
@@ -74,3 +75,4 @@ Blabla introduction
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Screenshots[/color][b]>[/b][/font][/color][/size]
 
 [/font]
+}}}
