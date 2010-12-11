@@ -14,9 +14,9 @@
 
 The follower mods/utilities are required for Project Nevada:
 
-* [url="http://nvse.silverlock.org/"]Fallout: New Vegas Script Extender (NVSE)[/url] 
+* [url="http://nvse.silverlock.org/"]Fallout: New Vegas Script Extender <NVSE>[/url] 
 
-* [url="http://www.newvegasnexus.com/downloads/file.php?id=36901"]Fallout Mod Manager (FOMM)[/url] is HIGHLY recommended for properly installing and setting up Project Nevada. 
+* [url="http://www.newvegasnexus.com/downloads/file.php?id=36901"]Fallout Mod Manager <FOMM>[/url] is HIGHLY recommended for properly installing and setting up Project Nevada. 
 
 [b][color="#8B0000"]*************************************************************[/color][/b]
 
@@ -29,23 +29,22 @@ The follower mods/utilities are required for Project Nevada:
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Overview[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Core[/color][b])[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Core[/color][b]>[/b][/font][/color][/size]
 
 Blabla introduction 
 
 [color="#FF8C00"]asfsdf[/color]
 
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Realism[/color][b]>[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Realism[/color][b])[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Cyberware[/color][b])[/b][/font][/color][/size]
-
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Equipment[/color][b])[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Features and Changes[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Core[/color][b])[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Core[/color][b]>[/b][/font][/color][/size]
 
 [b]Infrastructure:[/b] 
 [list] 
@@ -64,18 +63,18 @@ Blabla introduction
 [*]First-person helmet visor images/effects 
 [/list] 
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Realism[/color][b])[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Realism[/color][b]>[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Cyberware[/color][b])[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Equipment[/color][b])[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Media[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Videos[/color][b])[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Videos[/color][b]>[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]([/b][color="#FFFFFF"]Screenshots[/color][b])[/b][/font][/color][/size]
+[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Screenshots[/color][b]>[/b][/font][/color][/size]
 
 [/font]
 }}}
