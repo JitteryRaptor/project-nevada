@@ -29,9 +29,14 @@ The follower mods/utilities are required for Project Nevada:
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Core[/color][b]>[/b][/font][/color][/size]
 
-Blabla introduction 
+The Core module is the foundation of Project Nevada, and as such required by all other modules.
 
-[color="#FF8C00"]asfsdf[/color]
+It adds the gameplay features you know from popular first-person-shooter games that were yet missing in New Vegas.
+Some of those features are improved versions of mods already well known for Fallout 3, like the Grenade Hotkey, Bullet Time or Sprint.
+Others are brand new, like the Dynamic Crosshair that changes it sizes according to the current weapon spread.
+Each of those features can be individually enabled or disabled in-game and they are fully script-based to play along well with other mods.
+
+
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
 
@@ -46,19 +51,19 @@ Blabla introduction
 
 [b]Infrastructure:[/b] 
 [list] 
-[*]Extensible Control panel 
-[*]Streamlined hotkey management 
+[*]Extensible Control Panel 
+[*]Streamlined Hotkey Management 
 [/list] 
 
 [b]Selectable Features:[/b] 
 [list] 
-[*]Dynamic crosshair to show actual weapon spread 
-[*]Bullet time 
+[*]Dynamic Crosshair
+[*]Bullet Time 
 [*]Sprint 
-[*]Grenade hotkey 
-[*]Variable zoom for scoped weapons 
-[*]Slower backpedaling 
-[*]First-person helmet visor images/effects 
+[*]Grenade Hotkey 
+[*]Variable Zoom for scoped weapons 
+[*]Slower Backpedaling 
+[*]First-person Visor Overlays for helmets
 [/list] 
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
