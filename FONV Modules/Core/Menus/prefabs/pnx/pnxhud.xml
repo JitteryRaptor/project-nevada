@@ -1741,12 +1741,9 @@
 	</visible>
 	
 	<x>
-		<copy> 20 </copy>
-		<add>
-			<copy src="HitPoints" trait="width" />
-			<mul src="io()" trait="_PNxScale" />
-		</add>
-		<add src="io()" trait="_PNxEdgeDistance" />
+		<copy> 12 </copy>
+		<add src="DDTIcon" trait="x" />
+		<add src="DDTIcon" trait="width" />
 	</x>
 		
 	<y>
