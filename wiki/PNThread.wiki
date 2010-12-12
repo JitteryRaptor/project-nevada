@@ -41,11 +41,18 @@ Other mods may extend the Control Panel without conflict and make use of the pro
 
 Since the Core module avoids conflicting changes, players are free run it alongside any other mods, including their favorite overhaul.
 
+
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
+
+The Equipment module brings new weapons and armor to the Mojave Wasteland.
+Source of these items are the many excellent creations produced by the modding community, as well as those created by our own team.
+
+We aim to include only weapons and armor of high quality that fit well within the New Vegas environment and the Fallout universe in general.
+To ensure a seamless integration, the new items are carefully balanced and placed at appropriate locations, including vendors and loot lists.
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Features and Changes[/b][/font][/color][/size]
