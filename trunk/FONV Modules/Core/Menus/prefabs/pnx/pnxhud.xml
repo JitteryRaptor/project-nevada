@@ -112,6 +112,8 @@
 
 <!-- ######################################################################################## IO Scanner -->
 <_PNxScannerEnabled> 0 </_PNxScannerEnabled>
+<_PNxScannerActivateEnabled> 0</_PNxScannerActivateEnabled>
+
 <_PNxScannerCursorLine> 0 </_PNxScannerCursorLine>
 <_PNxScannerCursorPos> 0 </_PNxScannerCursorPos>
 <_PNxScannerCursorIndent> 0 </_PNxScannerCursorIndent>
@@ -127,6 +129,20 @@
 <_PNxScannerText8Index> 0 </_PNxScannerText8Index>
 <_PNxScannerText9Index> 0 </_PNxScannerText9Index>
 <_PNxScannerText10Index> 0 </_PNxScannerText10Index>
+
+<_PNxScannerBoyEnabled> 0 </_PNxScannerBoyEnabled>
+<_PNxScannerBoyHeadDamage> 0 </_PNxScannerBoyHeadDamage>
+<_PNxScannerBoyTorsoDamage> 0 </_PNxScannerBoyTorsoDamage>
+<_PNxScannerBoyLeftLegDamage> 0 </_PNxScannerBoyLeftLegDamage>
+<_PNxScannerBoyLeftArmDamage> 0 </_PNxScannerBoyLeftArmDamage>
+<_PNxScannerBoyRightLegDamage> 0 </_PNxScannerBoyRightLegDamage>
+<_PNxScannerBoyRightArmDamage> 0 </_PNxScannerBoyRightArmDamage>
+
+<_PNxScannerHealth> 1.0 </_PNxScannerHealth>
+<_PNxScannerDamage> 0.8 </_PNxScannerDamage>
+
+<_PNxScannerTextHP> 0 </_PNxScannerTextHP>
+<_PNxScannerTextDT> 0</_PNxScannerTextDT>
 
 
 <!-- ######################################################################################## IO Grenade Icon -->
@@ -173,7 +189,7 @@
 
 
 <!-- ######################################################################################## Grain -->
-<rect name="PNXGrainLayer">
+<rect name="PNxGrainLayer">
 	<visible>
 		<copy src="io()" trait="_PNxGrainPhase" />
 		<gt> 0 </gt>
@@ -294,7 +310,7 @@
 
 
 <!-- ######################################################################################## Radar -->
-<rect name="PNXRadar">
+<rect name="PNxRadar">
 
 	<visible>
 		<copy src="io()" trait="_PNxRadarEnabled" />
@@ -794,11 +810,70 @@
 
 
 <!-- ######################################################################################## Scanner -->
+<rect name="PNxScannerActivate">
+
+	<visible>
+		<copy src="io()" trait="_PNxScannerActivateEnabled" />
+	</visible>
+
+	<text name="PNxScannerActivateText">
+		<font> 0 </font>
+		<depth> 2 </depth>
+		<justify> &center; </justify>
+		
+		<visible>
+			<copy src="io()" trait="_PNxScannerActivateEnabled" />
+		</visible>
+		
+		<string>Scan</string>
+		<x>
+			<copy src="Info" trait="x" />
+			<add>
+				<copy src="Info" trait="width" />
+				<div> 2 </div>
+			</add>
+		</x>
+		<y>
+			<copy src="Info" trait="y" />
+			<sub src="me()" trait="height" />
+			<onlyif src="ActionPoints" trait="visible" />	
+			<add>
+				<copy src="screen()" trait="height" />
+				<sub src="me()" trait="height" />
+				<sub> 5 </sub>
+				<onlyifnot src="ActionPoints" trait="visible" />	
+			</add>
+		</y>
+	</text>
+	
+	<text name="PNxScannerActivateButton">
+		<font> 0 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerActivateText)" trait="visible" />
+		</visible>
+		
+		<string>1)</string>
+		<x>
+			<copy src="sibling(PNxScannerActivateText)" trait="x" />
+			<sub>
+				<copy src="sibling(PNxScannerActivateText)" trait="width" />
+				<div> 2 </div>
+			</sub>
+			<sub src="me()" trait="width" />
+			<sub>10</sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerActivateText)" trait="y" />
+		</y>
+	</text>
+</rect>
+
 <rect name="PNxScanner">
 
 	<visible>
 		<copy src="io()" trait="_PNxScannerEnabled" />
-		<eq> 1 </eq>
 	</visible>
 
 	<x>
@@ -814,7 +889,7 @@
 		</sub>
 	</y>
 		
-	<width> 64 </width>
+	<width> 384 </width>
 	<height> 512 </height>
 
 	<image name="PNxScannerFrame">
@@ -833,14 +908,431 @@
 		
 		<width>
 			<copy src="parent()" trait="width" />
+			<onlyif src="ActionPoints" trait="visible" />	
+			<add>
+				<copy> 64 </copy>
+				<onlyifnot src="ActionPoints" trait="visible" />	
+			</add>
 		</width>
 	
 		<height>
 			<copy src="parent()" trait="height" />
 		</height>
 		
-		<filename> pnx\hud\scan\scannerbracket.dds </filename>
+		<filename>
+			<copy src="ActionPoints" trait="visible" />	
+			<copy src="me()" trait="_filename_" />
+		</filename>
+		<_filename_0> pnx\hud\scan\scannerbracket1.dds </_filename_0>
+		<_filename_1> pnx\hud\scan\scannerbracket2.dds </_filename_1>
+		
 	</image>
+	
+	<image name="PNxScannerBack">
+		<zoom> &scale; </zoom>
+		<depth> -1 </depth>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		<alpha> 120 </alpha>
+		<red> 0 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<glow> &true; </glow>
+		
+		<visible>
+			<copy src="ActionPoints" trait="visible" />	
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<add> 7 </add>
+		</x>
+	
+		<y>
+			<copy src="parent()" trait="y" />
+			<add> 7 </add>
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+			<sub> 14 </sub>
+		</width>
+	
+		<height>
+			<copy src="parent()" trait="height" />
+			<sub> 14 </sub>
+		</height>
+		
+		<filename> Interface\Shared\solid.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyBase">
+		<zoom> &scale; </zoom>
+		<depth> 1 </depth>
+		
+		<visible>
+			<copy src="io()" trait="_PNxScannerBoyEnabled" />
+		</visible>
+		
+		<alpha> 220 </alpha>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<add src="parent()" trait="width" />
+			<sub src="me()" trait="width" />
+			<sub> 15 </sub>
+			<onlyif src="ActionPoints" trait="visible" />	
+			<add>
+				<copy src="screen()" trait="width" />
+				<sub src="me()" trait="width" />
+				<sub> 90 </sub>
+				<onlyifnot src="ActionPoints" trait="visible" />	
+			</add>
+		</x>
+	
+		<y>
+			<copy src="parent()" trait="y" />
+			<add>
+				<copy src="parent()" trait="height" />
+				<div> 2 </div>
+			</add>
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<width> 180 </width>
+		<height> 345 </height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_base.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyHead">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyHeadDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_head.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyTorso">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyTorsoDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_torso.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyLeftArm">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyLeftArmDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_leftarm.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyRightArm">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyRightArmDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_rightarm.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyLeftLeg">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyLeftLegDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_leftleg.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyRightLeg">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red>
+			<copy> 230 </copy>
+			<sub src="io()" trait="_PNxScannerBoyRightLegDamage" />
+		</red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyRightLegDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_rightleg.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyHealthBack">
+		<zoom> 100 </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<alpha> 230 </alpha>
+		
+		<x>
+			<copy src="sibling(PNxScannerBoyBase)" trait="x" />
+			<sub> 8 </sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyBase)" trait="y" />
+			<add src="sibling(PNxScannerBoyBase)" trait="height" />
+			<add> 7 </add>
+		</y>
+		<width> 196 </width>
+		<height> 64 </height>
+		
+		<filename> pnx\hud\scan\healthseperator.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyHealthBar">
+		<zoom> 80 </zoom>
+		<depth> 1 </depth>
+		<tile> &true; </tile>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<alpha> 200 </alpha>
+		
+		<x>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="x" />
+			<add> 47 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="y" />
+			<add> 2 </add>
+		</y>
+		<width>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="width" />
+			<sub> 94 </sub>
+			<mul src="io()" trait="_PNxScannerHealth" />
+		</width>
+		<height>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="height" />
+			<sub> 6 </sub>
+		</height>
+		
+		<filename> Interface\HUD\hud_tick_mark.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyDamageArrow">
+		<zoom> &scale; </zoom>
+		<depth> 3 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<x>
+			<copy src="sibling(PNxScannerBoyHealthBar)" trait="x" />
+			<add>
+				<copy src="sibling(PNxScannerBoyHealthBar)" trait="width" />
+				<mul src="io()" trait="_PNxScannerDamage" />
+			</add>
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHealthBar)" trait="y" />
+			<sub> 25 </sub>
+		</y>
+		<width>
+			50
+		</width>
+		<height>
+			50
+		</height>
+		
+		<filename> Interface\HUD\glow_xp_bar_pointer.dds </filename>
+	</image>
+	
+	<text name="PNxScannerBoyHPLabel">
+		<font> 3 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<string>HP:</string>
+		<x>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="x" />
+			<add> 18 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="y" />
+			<add src="sibling(PNxScannerBoyHealthBack)" trait="height" />
+			<sub> 35 </sub>
+		</y>
+	</text>
+	
+	<text name="PNxScannerBoyHPValue">
+		<font> 3 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<string><copy src="io()" trait="_PNxScannerTextHP" /></string>
+		<x>
+			<copy src="sibling(PNxScannerBoyHPLabel)" trait="x" />
+			<add src="sibling(PNxScannerBoyHPLabel)" trait="width" />
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHPLabel)" trait="y" />
+		</y>
+	</text>
+	
+	<text name="PNxScannerBoyDTLabel">
+		<font> 3 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<string>DT:</string>
+		<x>
+			<copy src="sibling(PNxScannerBoyDTValue)" trait="x" />
+			<sub src="me()" trait="width" />
+			<sub> 1 </sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHPLabel)" trait="y" />
+		</y>
+	</text>
+	
+	<text name="PNxScannerBoyDTValue">
+		<font> 3 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<string><copy src="io()" trait="_PNxScannerTextDT" /></string>
+		<x>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="x" />
+			<add src="sibling(PNxScannerBoyHealthBack)" trait="width" />
+			<sub src="me()" trait="width" />
+			<sub> 20 </sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHPLabel)" trait="y" />
+		</y>
+	</text>
 	
 	<_text_pos_x>
 		<copy src="me()" trait="x" />
@@ -858,7 +1350,6 @@
 	<image name="Cursor">
 		<zoom> &scale; </zoom>
 		<depth> 1 </depth>
-		
 		
 		<visible>
 			<copy src="io()" trait="_PNxScannerCursorBlink" />
@@ -900,28 +1391,17 @@
 	
 		<_line> 0 </_line>
 	
-		<_dat_1>W</_dat_1>
-		<_dat_2>WA</_dat_2>
-		<_dat_3>WAI</_dat_3>
-		<_dat_4>WAIT</_dat_4>
-		<_dat_5>WAITI</_dat_5>
-		<_dat_6>WAITIN</_dat_6>
-		<_dat_7>WAITING</_dat_7>
-		<_dat_8>WAITING.</_dat_8>
-		<_dat_9>WAITING..</_dat_9>
-		<_dat_10>WAITING...</_dat_10>
-		
-		<_dat_11>S</_dat_11>
-		<_dat_12>SC</_dat_12>
-		<_dat_13>SCA</_dat_13>
-		<_dat_14>SCAN</_dat_14>
-		<_dat_15>SCANN</_dat_15>
-		<_dat_16>SCANNI</_dat_16>
-		<_dat_17>SCANNIN</_dat_17>
-		<_dat_18>SCANNING</_dat_18>
-		<_dat_19>SCANNING.</_dat_19>
-		<_dat_20>SCANNING..</_dat_20>
-		<_dat_21>SCANNING...</_dat_21>
+		<_dat_1>S</_dat_1>
+		<_dat_2>SC</_dat_2>
+		<_dat_3>SCA</_dat_3>
+		<_dat_4>SCAN</_dat_4>
+		<_dat_5>SCANN</_dat_5>
+		<_dat_6>SCANNI</_dat_6>
+		<_dat_7>SCANNIN</_dat_7>
+		<_dat_8>SCANNING</_dat_8>
+		<_dat_9>SCANNING.</_dat_9>
+		<_dat_10>SCANNING..</_dat_10>
+		<_dat_11>SCANNING...</_dat_11>
 		
 		<_index><copy src="io()" trait="_PNxScannerText1Index" /></_index>
 	</text>
@@ -931,16 +1411,13 @@
 	
 		<_line> 2 </_line>
 	
-		<_dat_1>A</_dat_1>
-		<_dat_2>AL</_dat_2>
-		<_dat_3>ALE</_dat_3>
-		<_dat_4>ALER</_dat_4>
-		<_dat_5>ALERT</_dat_5>
-		<_dat_6>ALERTN</_dat_6>
-		<_dat_7>ALERTNE</_dat_7>
-		<_dat_8>ALERTNES</_dat_8>
-		<_dat_9>ALERTNESS</_dat_9>
-		<_dat_10>ALERTNESS:</_dat_10>
+		<_dat_1>T</_dat_1>
+		<_dat_2>TH</_dat_2>
+		<_dat_3>THR</_dat_3>
+		<_dat_4>THRE</_dat_4>
+		<_dat_5>THREA</_dat_5>
+		<_dat_6>THREAT</_dat_6>
+		<_dat_7>THREAT:</_dat_7>
 		
 		<_index><copy src="io()" trait="_PNxScannerText2Index" /></_index>
 	</text>
@@ -977,18 +1454,18 @@
 	
 		<_line> 5 </_line>
 	
-		<_dat_1>A</_dat_1>
-		<_dat_2>AR</_dat_2>
-		<_dat_3>ARM</_dat_3>
-		<_dat_4>ARMO</_dat_4>
-		<_dat_5>ARMOR</_dat_5>
-		<_dat_6>ARMOR R</_dat_6>
-		<_dat_7>ARMOR RA</_dat_7>
-		<_dat_8>ARMOR RAT</_dat_8>
-		<_dat_9>ARMOR RATI</_dat_9>
-		<_dat_10>ARMOR RATIN</_dat_10>
-		<_dat_11>ARMOR RATING</_dat_11>
-		<_dat_12>ARMOR RATING:</_dat_12>
+		<_dat_1>C</_dat_1>
+		<_dat_2>CO</_dat_2>
+		<_dat_3>COM</_dat_3>
+		<_dat_4>COMB</_dat_4>
+		<_dat_5>COMBA</_dat_5>
+		<_dat_6>COMBAT</_dat_6>
+		<_dat_7>COMBAT R</_dat_7>
+		<_dat_8>COMBAT RA</_dat_8>
+		<_dat_9>COMBAT RAN</_dat_9>
+		<_dat_10>COMBAT RANG</_dat_10>
+		<_dat_11>COMBAT RANGE</_dat_11>
+		<_dat_12>COMBAT RANGE:</_dat_12>
 		
 		<_index><copy src="io()" trait="_PNxScannerText4Index" /></_index>
 	</text>
@@ -999,10 +1476,10 @@
 		<_line> 6 </_line>
 		<_indent> 2 </_indent>
 	
-		<_dat_1>h</_dat_1>
-		<_dat_2>hi</_dat_2>
-		<_dat_3>hig</_dat_3>
-		<_dat_4>high</_dat_4>
+		<_dat_1>l</_dat_1>
+		<_dat_2>lo</_dat_2>
+		<_dat_3>lon</_dat_3>
+		<_dat_4>long</_dat_4>
 		
 		<_dat_5>m</_dat_5>
 		<_dat_6>me</_dat_6>
@@ -1011,9 +1488,17 @@
 		<_dat_9>mediu</_dat_9>
 		<_dat_10>medium</_dat_10>
 		
-		<_dat_11>l</_dat_11>
-		<_dat_12>lo</_dat_12>
-		<_dat_13>low</_dat_13>
+		<_dat_11>s</_dat_11>
+		<_dat_12>sh</_dat_12>
+		<_dat_13>sho</_dat_13>
+		<_dat_14>shor</_dat_14>
+		<_dat_15>short</_dat_15>
+		
+		<_dat_16>m</_dat_16>
+		<_dat_17>me</_dat_17>
+		<_dat_18>mel</_dat_18>
+		<_dat_19>mele</_dat_19>
+		<_dat_20>melee</_dat_20>
 		
 		<_index><copy src="io()" trait="_PNxScannerText5Index" /></_index>
 	</text>
@@ -1023,19 +1508,16 @@
 	
 		<_line> 8 </_line>
 	
-		<_dat_1>T</_dat_1>
-		<_dat_2>TH</_dat_2>
-		<_dat_3>THR</_dat_3>
-		<_dat_4>THRE</_dat_4>
-		<_dat_5>THREA</_dat_5>
-		<_dat_6>THREAT</_dat_6>
-		<_dat_7>THREAT R</_dat_7>
-		<_dat_8>THREAT RA</_dat_8>
-		<_dat_9>THREAT RAT</_dat_9>
-		<_dat_10>THREAT RATI</_dat_10>
-		<_dat_11>THREAT RATIN</_dat_11>
-		<_dat_12>THREAT RATING</_dat_12>
-		<_dat_13>THREAT RATING:</_dat_13>
+		<_dat_1>A</_dat_1>
+		<_dat_2>AW</_dat_2>
+		<_dat_3>AWA/</_dat_3>
+		<_dat_4>AWAR</_dat_4>
+		<_dat_5>AWARE</_dat_5>
+		<_dat_6>AWAREN/</_dat_6>
+		<_dat_7>AWARENE</_dat_7>
+		<_dat_8>AWARENES</_dat_8>
+		<_dat_9>AWARENESS</_dat_9>
+		<_dat_10>AWARENESS:</_dat_10>
 		
 		<_index><copy src="io()" trait="_PNxScannerText6Index" /></_index>
 	</text>
@@ -1070,15 +1552,18 @@
 	
 		<_line> 11 </_line>
 	
-		<_dat_1>W</_dat_1>
-		<_dat_2>WE</_dat_2>
-		<_dat_3>WEA</_dat_3>
-		<_dat_4>WEAK</_dat_4>
-		<_dat_5>WEAKN</_dat_5>
-		<_dat_6>WEAKNE</_dat_6>
-		<_dat_7>WEAKNES</_dat_7>
-		<_dat_8>WEAKNESS</_dat_8>
-		<_dat_9>WEAKNESS:</_dat_9>
+		<_dat_1>D</_dat_1>
+		<_dat_2>DI</_dat_2>
+		<_dat_3>DIS</_dat_3>
+		<_dat_4>DISP</_dat_4>
+		<_dat_5>DISPO</_dat_5>
+		<_dat_6>DISPOS</_dat_6>
+		<_dat_7>DISPOSI</_dat_7>
+		<_dat_8>DISPOSIT</_dat_8>
+		<_dat_9>DISPOSITI</_dat_9>
+		<_dat_10>DISPOSITIO</_dat_10>
+		<_dat_11>DISPOSITION</_dat_11>
+		<_dat_12>DISPOSITION:</_dat_12>
 		
 		<_index><copy src="io()" trait="_PNxScannerText8Index" /></_index>
 	</text>
@@ -1089,50 +1574,28 @@
 		<_line> 12 </_line>
 		<_indent> 2 </_indent>
 	
-		<_dat_1>h</_dat_1>
-		<_dat_2>he</_dat_2>
-		<_dat_3>hea</_dat_3>
-		<_dat_4>head</_dat_4>
+		<_dat_1>a</_dat_1>
+		<_dat_2>al</_dat_2>
+		<_dat_3>all</_dat_3>
+		<_dat_4>alli</_dat_4>
+		<_dat_5>allie</_dat_5>
+		<_dat_6>allied</_dat_6>
 		
-		<_dat_5>l</_dat_5>
-		<_dat_6>le</_dat_6>
-		<_dat_7>lef</_dat_7>
-		<_dat_8>left</_dat_8>
-		<_dat_9>left a</_dat_9>
-		<_dat_10>left ar</_dat_10>
-		<_dat_11>left arm</_dat_11>
+		<_dat_7>n</_dat_7>
+		<_dat_8>ne</_dat_8>
+		<_dat_9>neu</_dat_9>
+		<_dat_10>neut</_dat_10>
+		<_dat_11>neutr</_dat_11>
+		<_dat_12>neutra</_dat_12>
+		<_dat_13>neutral</_dat_13>
 		
-		<_dat_12>r</_dat_12>
-		<_dat_13>ri</_dat_13>
-		<_dat_14>rig</_dat_14>
-		<_dat_15>righ</_dat_15>
-		<_dat_16>right</_dat_16>
-		<_dat_17>right a</_dat_17>
-		<_dat_18>right ar</_dat_18>
-		<_dat_19>right arm</_dat_19>
-		
-		<_dat_20>t</_dat_20>
-		<_dat_21>to</_dat_21>
-		<_dat_22>tor</_dat_22>
-		<_dat_23>tors</_dat_23>
-		<_dat_24>torso</_dat_24>
-		
-		<_dat_25>l</_dat_25>
-		<_dat_26>le</_dat_26>
-		<_dat_27>lef</_dat_27>
-		<_dat_28>left</_dat_28>
-		<_dat_29>left l</_dat_29>
-		<_dat_30>left le</_dat_30>
-		<_dat_31>left leg</_dat_31>
-		
-		<_dat_32>r</_dat_32>
-		<_dat_33>ri</_dat_33>
-		<_dat_34>rig</_dat_34>
-		<_dat_35>righ</_dat_35>
-		<_dat_36>right</_dat_36>
-		<_dat_37>right l</_dat_37>
-		<_dat_38>right le</_dat_38>
-		<_dat_39>right leg</_dat_39>
+		<_dat_14>h</_dat_14>
+		<_dat_15>ho</_dat_15>
+		<_dat_16>hos</_dat_16>
+		<_dat_17>host</_dat_17>
+		<_dat_18>hosti</_dat_18>
+		<_dat_19>hostil</_dat_19>
+		<_dat_20>hostile</_dat_20>
 		
 		<_index><copy src="io()" trait="_PNxScannerText9Index" /></_index>
 	</text>
