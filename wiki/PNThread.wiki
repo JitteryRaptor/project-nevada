@@ -39,7 +39,7 @@ Each of those features can be individually enabled or disabled in-game. They are
 To allow customization, the Core module implements a Control Panel. For DarnUI users, it can be accessed directly from the pause menu.
 Other mods may extend the Control Panel without conflict and make use of the provided methods for streamlined hotkey assignment.
 
-Since the changes done by the Core module are minimal and no feature is mandatory, users are free to use it with whatever other mods they want.
+Since the Core module avoids conflicting changes, players are free run it alongside any other mods, including their favorite overhaul.
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
 
