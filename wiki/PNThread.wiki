@@ -1,12 +1,15 @@
 {{{
 [font="Verdana"]
-[size="7"][font="Courier New"][b][color="#FFFFFF"]([color="#FF8C00"]Project Nevada[/color])[/color][/b][/font][/size]
+[size="7"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]Project Nevada[/color][/color][/b][/font][/size]
 
 [b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Mezmorki
 
 [b]Current Version:[/b] in development 
 
-[size="4"]>>> [url="http://todo"]Download[/url] <<<[/size]
+[size="4"][color="#FF8C00"][b]>>>[/b][color="#FFFFFF"] [url="http://www.youtube.com/watch?v=230I-OoobR0"]Trailer[/url] [/color][b]<<<[/b][/color][/size]
+
+[size="4"][color="#FF8C00"][b]>>>[/b][color="#FFFFFF"] [url="http://www.youtube.com/watch?v=230I-OoobR0"]Download[/url] [/color][b]<<<[/b][/color][/size]
+
 
 [b][color="#8B0000"]*********************** IMPORTANT ****************************[/color][/b]
 
@@ -18,16 +21,15 @@ The follower mods/utilities are required for Project Nevada:
 
 [b][color="#8B0000"]*************************************************************[/color][/b]
 
-
 [size="6"][color="#FF8C00"][font="Courier New"][b]Introduction[/b][/font][/color][/size]
 
 Project Nevada is a mod aiming to make Fallout: New Vegas a more interesting - eventually more challenging - but surely more fun
-experience for you. Created by the team responsible for the Fallout 3 Wanderers Edition (FWE), we're leaving the barren DC wasteland behind and move
-on west to new, exciting regions.
+experience for you. Created by the team responsible for the Fallout 3 Wanderers Edition (FWE), we're leaving the barren DC wasteland
+behind and move on west to new, exciting regions.
 
-Project Nevada is not a complete overhaul, instead it's organized as a set of themed modules. Each module can address different aspects
-of the game and target different audiences. Our vision is to allow players picking the modules they want only instead of forcing them to
-make the all-or-nothing choice. See the next sections for detailed descriptions and features of all current modules.
+Project Nevada is not an overhaul, instead it's organized as a set of themed modules. Each module can address different aspects of the
+game and target different audiences. Our vision is to allow players picking the modules they want only instead of forcing them to make
+the all-or-nothing choice. See the next sections for detailed descriptions and features of all current modules.
 
 Further general objectives and design concepts are:
 
