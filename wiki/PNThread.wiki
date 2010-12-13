@@ -21,7 +21,17 @@ The follower mods/utilities are required for Project Nevada:
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Introduction[/b][/font][/color][/size]
 
-- No overhaul - Set of modules, each addressing different areas of the game 
+Project Nevada is a mod aiming to make Fallout: New Vegas a more interesting - eventually more challenging - but surely more fun
+experience for you. Created by the team behind the Fallout 3 Wanderers Edition (FWE), we're leaving the barren DC wasteland behind us
+and move on west to new, exciting regions.
+
+We don't want to create an overhaul, instead Project Nevada is organized as a set of themed modules. Each module can address different
+aspects of the game and target different audiences. Our vision is to allow players picking the modules they want only instead of forcing
+them to make the all-or-nothing choice. See the next sections for a detailed descriptions and features of all current modules.
+
+The shared goals and design paradigms of Project Nevada are
+
+- Ease of use
 - Ease of use - Stable, high quality features - Compatibility 
 
 
