@@ -41,10 +41,10 @@ The shared goals and design paradigms of Project Nevada are
 
 The Core module is the foundation of Project Nevada, and as such required by all other modules.
 
-It adds the gameplay features found in popular first-person-shooter games that were yet missing in New Vegas.
-Some of those features are improved versions of already well-known Fallout 3 mods, like the Grenade Hotkey, Bullet Time or Sprint.
-Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread.
-Each of those features can be individually enabled or disabled in-game. They are fully script-based to play along well with other mods.
+It adds the gameplay features found in popular first-person-shooter games that were yet missing in New Vegas. Some of those features
+are improved versions of already well-known Fallout 3 mods, like the Grenade Hotkey, Bullet Time or Sprint. Others are brand new, like
+the Dynamic Crosshair that changes it size according to the current weapon spread. Each of those features can be individually enabled or
+disabled in-game. They are fully script-based to play along well with other mods.
 
 To allow customization, the Core module implements a Control Panel. For DarnUI users, it can be accessed directly from the pause menu.
 Other mods may extend the Control Panel without conflict and make use of the provided methods for streamlined hotkey assignment.
