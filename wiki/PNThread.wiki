@@ -29,6 +29,13 @@ Project Nevada is not a complete overhaul, instead it's organized as a set of th
 of the game and target different audiences. Our vision is to allow players picking the modules they want only instead of forcing them to
 make the all-or-nothing choice. See the next sections for detailed descriptions and features of all current modules.
 
+Further general objectives and design concepts are:
+* Easy installation and setup; no load order or complicated dependencies.
+* Allow customization - but don't expose every single detail to the player.
+* Rather keep things simple and enjoyable than overly complicated and tedious.
+* Avoid changes which cause potential conflicts unless they are absolutely necessary.
+* Blend features in as good as possible - players shouldn't constantly be reminded that they're using a mod.
+
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Overview[/b][/font][/color][/size]
 
