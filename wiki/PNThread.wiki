@@ -1,6 +1,8 @@
 {{{
 [font="Verdana"]
-[size="7"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]Project Nevada[/color][/color][/b][/font][/size]
+[center][size="5"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]P[size="1"] [/size]r[size="2"] [/size]o[size="1"] [/size]j[size="1"] [/size]e[size="1"] [/size]c[size="1"] [/size]t[/color][/color][/b][/font][/size]
+[color="#FFFFFF"][b]============[/b][/color]
+[size="7"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]NEVADA[/color][/color][/b][/font][/size][/center]
 
 [b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Mezmorki
 
