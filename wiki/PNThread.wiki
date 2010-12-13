@@ -12,9 +12,9 @@
 
 The follower mods/utilities are required for Project Nevada:
 
-* [url="http://nvse.silverlock.org/"]Fallout: New Vegas Script Extender <NVSE>[/url] 
+* [url="http://nvse.silverlock.org/"]Fallout: New Vegas Script Extender (NVSE)[/url] 
 
-* [url="http://www.newvegasnexus.com/downloads/file.php?id=36901"]Fallout Mod Manager <FOMM>[/url] is HIGHLY recommended for properly installing and setting up Project Nevada. 
+* [url="http://www.newvegasnexus.com/downloads/file.php?id=36901"]Fallout Mod Manager (FOMM)[/url] is HIGHLY recommended for properly installing and setting up Project Nevada. 
 
 [b][color="#8B0000"]*************************************************************[/color][/b]
 
@@ -25,14 +25,9 @@ Project Nevada is a mod aiming to make Fallout: New Vegas a more interesting - e
 experience for you. Created by the team behind the Fallout 3 Wanderers Edition (FWE), we're leaving the barren DC wasteland behind us
 and move on west to new, exciting regions.
 
-We don't want to create an overhaul, instead Project Nevada is organized as a set of themed modules. Each module can address different
-aspects of the game and target different audiences. Our vision is to allow players picking the modules they want only instead of forcing
-them to make the all-or-nothing choice. See the next sections for a detailed descriptions and features of all current modules.
-
-The shared goals and design paradigms of Project Nevada are
-
-- Ease of use
-- Ease of use - Stable, high quality features - Compatibility 
+Project Nevada is not a complete overhaul, instead it's organized as a set of themed modules. Each module can address different aspects
+of the game and target different audiences. Our vision is to allow players picking the modules they want only instead of forcing them to
+make the all-or-nothing choice. See the next sections for detailed descriptions and features of all current modules.
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Overview[/b][/font][/color][/size]
