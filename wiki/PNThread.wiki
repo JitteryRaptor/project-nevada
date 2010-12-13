@@ -12,9 +12,9 @@
 
 The follower mods/utilities are required for Project Nevada:
 
-* [url="http://nvse.silverlock.org/"]Fallout: New Vegas Script Extender (NVSE)[/url] 
+[color="#FF8C00"]*[/color] [url="http://nvse.silverlock.org/"]Fallout: New Vegas Script Extender (NVSE)[/url] 
 
-* [url="http://www.newvegasnexus.com/downloads/file.php?id=36901"]Fallout Mod Manager (FOMM)[/url] is HIGHLY recommended for properly installing and setting up Project Nevada. 
+[color="#FF8C00"]*[/color] [url="http://www.newvegasnexus.com/downloads/file.php?id=36901"]Fallout Mod Manager (FOMM)[/url] is HIGHLY recommended for properly installing and setting up Project Nevada. 
 
 [b][color="#8B0000"]*************************************************************[/color][/b]
 
@@ -30,11 +30,16 @@ of the game and target different audiences. Our vision is to allow players picki
 make the all-or-nothing choice. See the next sections for detailed descriptions and features of all current modules.
 
 Further general objectives and design concepts are:
-* Easy installation and setup; no load order or complicated dependencies.
-* Allow customization - but don't expose every single detail to the player.
-* Rather keep things simple and enjoyable than overly complicated and tedious.
-* Avoid changes which cause potential conflicts unless they are absolutely necessary.
-* Blend features in as good as possible - players shouldn't constantly be reminded that they're using a mod.
+
+[color="#FF8C00"]*[/color] Easy installation and setup; no load order or complicated dependencies.
+
+[color="#FF8C00"]*[/color] Allow customization - but don't expose every single detail to the player.
+
+[color="#FF8C00"]*[/color] Rather keep things simple and enjoyable than overly complicated and tedious.
+
+[color="#FF8C00"]*[/color] Avoid changes which cause potential conflicts unless they are absolutely necessary.
+
+[color="#FF8C00"]*[/color] Blend features in as good as possible - players shouldn't constantly be reminded that they're using a mod.
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Overview[/b][/font][/color][/size]
