@@ -70,7 +70,8 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of mans most
 advanced technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
 
-Practically this means new features are associated with cybernetic implants, high-tech equipment and chems. Examples include enhanced vision modes for power armor helmets and bionic legs allowing you to charge towards your enemies with super-human speed.
+Practically this means new features are associated with cybernetic implants, high-tech equipment and chems. Examples include enhanced
+vision modes for power armor helmets and bionic legs allowing you to charge towards your enemies with super-human speed.
 
 While for equipment and chems existing items are used, the cybernetic implants come with a custom interface to attach and manage them.
 The whole system is balanced by several mechanisms, like limiting the number of implants that can be attached at the same time, or
@@ -110,6 +111,16 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
+
+[b]Feature Pool:[/b] 
+[list] 
+[*]Enhanced Vision Modes (Night, Heat, EM)
+[*]Real-time Target Scanner
+[*]Minimap Radar
+[*]Controllable Stealth Field
+[*]Improvement of Core Features (Sprint, Bullet Time, Zoom)
+[*]Stat boosts (S.P.E.C.I.A.L., Speed, DT, ...)
+[/list]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
 
