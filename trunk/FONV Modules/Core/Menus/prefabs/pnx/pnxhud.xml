@@ -105,6 +105,11 @@
 <_PNxBTMeterAmount> 0 </_PNxBTMeterAmount>
 
 
+<!-- ######################################################################################## IO Stealth Field Meter-->
+<_PNxSFMeterEnabled> 0 </_PNxSFMeterEnabled>
+<_PNxSFMeterAmount> 0 </_PNxSFMeterAmount>
+
+
 <!-- ######################################################################################## IO Zoom Bar -->
 <_PNxZoomBarEnabled> 0 </_PNxZoomBarEnabled>
 <_PNxZoomBarFill> 0 </_PNxZoomBarFill>
@@ -629,6 +634,11 @@
 				<copy src="me()" trait="width" />
 				<div> 2 </div>
 			</sub>
+			<add>
+				<copy src="PNxSFMeter" trait="width" />
+				<div> 2 </div>
+				<onlyif src="PNxSFMeter" trait="visible" />
+			</add>
 		</x>
 		<y>
 			<copy src="parent()" trait="y" />
@@ -641,7 +651,7 @@
 		<width> <copy src="parent()" trait="width" /> </width>
 		<height> <copy src="parent()" trait="height" /> </height>
 		
-		<alpha> 180 </alpha>
+		<alpha> 210 </alpha>
 
 		<filename>
 			<copy src="io()" trait="_PNxBTMeterAmount" />
@@ -662,6 +672,72 @@
 
 </rect>
 
+
+<!-- ######################################################################################## Stealth Field Meter -->
+<rect name="PNxSFMeter">
+	<visible>
+		<copy src="io()" trait="_PNxSFMeterEnabled" />
+		<and src="ActionPoints" trait="visible" />
+	</visible>
+	
+	<x>
+		<copy src="screen()" trait="width" />
+		<!--mul> 0.74 </mul-->
+		<mul> 0.5 </mul>
+	</x>
+	<y>
+		<copy src="screen()" trait="height" />
+		<!--mul> 0.94 </mul-->
+		<mul> 0.1 </mul>
+	</y>
+	<width> 64 </width>
+	<height> 64 </height>	
+
+	<image name="PNxSFMeterImage">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+			<sub>
+				<copy src="PNxBTMeter" trait="width" />
+				<div> 2 </div>
+				<onlyif src="PNxBTMeter" trait="visible" />
+			</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<width> <copy src="parent()" trait="width" /> </width>
+		<height> <copy src="parent()" trait="height" /> </height>
+		
+		<alpha> 210 </alpha>
+
+		<filename>
+			<copy src="io()" trait="_PNxSFMeterAmount" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
+		<_filename_0> pnx\hud\sf\stealthmeter0.dds </_filename_0>
+		<_filename_1> pnx\hud\sf\stealthmeter1.dds </_filename_1>
+		<_filename_2> pnx\hud\sf\stealthmeter2.dds </_filename_2>
+		<_filename_3> pnx\hud\sf\stealthmeter3.dds </_filename_3>
+		<_filename_4> pnx\hud\sf\stealthmeter4.dds </_filename_4>
+		<_filename_5> pnx\hud\sf\stealthmeter5.dds </_filename_5>
+		<_filename_6> pnx\hud\sf\stealthmeter6.dds </_filename_6>
+		<_filename_7> pnx\hud\sf\stealthmeter7.dds </_filename_7>
+		<_filename_8> pnx\hud\sf\stealthmeter8.dds </_filename_8>
+	</image>
+
+</rect>
 
 
 <!-- ######################################################################################## Zoom Bar -->
@@ -1830,9 +1906,7 @@
 			</add>
 		</y>
 		
-		<width>
-			10
-		</width>
+		<width> 10 </width>
 	
 		<height>
 			<copy src="parent()" trait="height" />
@@ -1844,7 +1918,7 @@
 	
 	<image name="PNxEnergyChargeMeterFill">
 		<zoom> &scale; </zoom>
-		<depth> 2 </depth>
+		<depth> 3 </depth>
 		<alpha> 200 </alpha>
 		
 		<x>
@@ -1952,7 +2026,7 @@
 			<and src="io()" trait="_PNxControlPanelKeySelectEnabled" />
 		</visible>
 		<depth> 12 </depth>
-		<font> 3 </font>
+		<font> 1 </font>
 		<justify> &center; </justify>
 		<x>
 			<copy src="screen()" trait="width" />
@@ -1962,8 +2036,30 @@
 			<copy src="screen()" trait="height" />
 			<div> 2 </div>
 		</y>
-		<string> [Press the new hotkey now] </string>
+		<string> Press the new hotkey now. </string>
 	</text>
+	
+	<text name="_PNxControlPanelKeyResetText">
+		<visible>
+			<copy src="sibling(_PNxControlPanelKeySelectText)" trait="visible" />
+		</visible>
+		<depth> 12 </depth>
+		<font> 3 </font>
+		<justify> &center; </justify>
+		<x>
+			<copy src="screen()" trait="width" />
+			<div> 2 </div>
+		</x>
+		<y>
+			<copy src="sibling(_PNxControlPanelKeySelectText)" trait="y" />
+			<add src="sibling(_PNxControlPanelKeySelectText)" trait="height" />
+			<add> 5 </add>
+		</y>
+		<string>(Backspace to reset)</string>
+	</text>
+	
+	
+	
 </rect>
 
 
