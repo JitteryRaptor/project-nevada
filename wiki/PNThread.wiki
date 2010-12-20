@@ -8,7 +8,6 @@
 
 [b]Current Version:[/b] In development
 
-[size="3"][color="#FF8C00"][b]>>>[/b][color="#FFFFFF"] [url="http://www.youtube.com/watch?v=230I-OoobR0&hd=1"]Original Teaser[/url] [/color][b]<<<[/b][/color][/size]
 [size="4"][color="#FF8C00"][b]>>>[/b][color="#FFFFFF"] [url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Trailer[/url] [/color][b]<<<[/b][/color][/size]
 
 
@@ -29,7 +28,7 @@ experience for you. Created by the team responsible for the Fallout 3 Wanderers 
 behind and move on west to new, exciting regions.
 
 Project Nevada is not an overhaul, instead it's organized as a set of themed modules. Each module can address different aspects of the
-game and target different audiences, but are also designed to work in conjunction. Our vision is to allow players picking the modules
+game and target different audiences, but they are also designed to work in conjunction. Our vision is to allow players picking the modules
 they want and using them together with any mod they like, instead of forcing them to make the all-or-nothing choice. See the next sections
 for detailed descriptions and features of all current modules.
 
@@ -47,6 +46,7 @@ Further general objectives and design concepts are:
 
 [color="#FF8C00"]*[/color] Polish, polish, polish.
 
+
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Overview[/b][/font][/color][/size]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Core[/color][b]>[/b][/font][/color][/size]
@@ -55,9 +55,9 @@ The Core module is the foundation of Project Nevada, and as such required by all
 
 It adds the gameplay features found in popular first-person-shooter games that were yet missing in New Vegas. Some of those features are
 improved versions of already well-known Fallout 3 mods, like the Grenade Hotkey, Bullet Time or Sprint. All of them are rewritten from the 
-ground up, with exciting new features like the support for several VATS perks in Bullet Time and support for throwing weapons with the grenade hotkey
-Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread. Each of those features can be
-individually enabled or disabled in-game. They are fully script-based to play along well with other mods.
+ground up, with exciting new features like the support for several VATS perks in Bullet Time and support for throwing weapons with the
+grenade hotkey. Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread. Each of
+those features can be individually enabled or disabled in-game. They are fully script-based to play along well with other mods.
 
 To allow customization, the Core module implements a Control Panel. For DarnUI users, it can be accessed directly from the pause menu.
 Other mods may extend the Control Panel without conflict and make use of the provided methods for streamlined hotkey assignment.
@@ -70,6 +70,7 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV 
 gameplay and difficulty. Combat will be quicker and deadlier and survival much harder. These changes are aimed to be very subtle and 
 non-intrusive, making the game more challenging without inconveniencing the player.
+
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
 
@@ -140,14 +141,17 @@ To ensure a seamless integration, the new items are carefully balanced and place
 
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
-[color="#FF8C00"]To be announced.[/color]
+
+To be announced.
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Media[/b][/font][/color][/size]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Videos[/color][b]>[/b][/font][/color][/size]
+
  [url="http://www.youtube.com/watch?v=230I-OoobR0&hd=1"]Original Teaser[/url] 
  [url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Trailer[/url] 
+
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Screenshots[/color][b]>[/b][/font][/color][/size]
 
