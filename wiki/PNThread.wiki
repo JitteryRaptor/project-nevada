@@ -8,7 +8,7 @@
 
 [b]Current Version:[/b] In development
 
-[size="4"][color="#FF8C00"][b]>>>[/b][color="#FFFFFF"] [url="http://www.youtube.com/watch?v=230I-OoobR0&hd=1"]Teaser[/url] [/color][b]<<<[/b][/color][/size]
+[size="3"][color="#FF8C00"][b]>>>[/b][color="#FFFFFF"] [url="http://www.youtube.com/watch?v=230I-OoobR0&hd=1"]Original Teaser[/url] [/color][b]<<<[/b][/color][/size]
 [size="4"][color="#FF8C00"][b]>>>[/b][color="#FFFFFF"] [url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Trailer[/url] [/color][b]<<<[/b][/color][/size]
 
 
@@ -29,21 +29,23 @@ experience for you. Created by the team responsible for the Fallout 3 Wanderers 
 behind and move on west to new, exciting regions.
 
 Project Nevada is not an overhaul, instead it's organized as a set of themed modules. Each module can address different aspects of the
-game and target different audiences. Our vision is to allow players picking the modules they want only instead of forcing them to make the
-all-or-nothing choice. See the next sections for detailed descriptions and features of all current modules.
+game and target different audiences, but are also designed to work in conjunction. Our vision is to allow players picking the modules
+they want and using them together with any mod they like, instead of forcing them to make the all-or-nothing choice. See the next sections
+for detailed descriptions and features of all current modules.
 
 Further general objectives and design concepts are:
 
 [color="#FF8C00"]*[/color] Easy installation and setup; no load order or complicated dependencies.
 
-[color="#FF8C00"]*[/color] Allow customization - but don't expose every single detail to the player.
+[color="#FF8C00"]*[/color] Great customization through different modules and an ingame menu
 
-[color="#FF8C00"]*[/color] Rather keep things simple and enjoyable than overly complicated and tedious.
+[color="#FF8C00"]*[/color] Rather keep things straight forward and enjoyable than overly complicated and tedious.
 
-[color="#FF8C00"]*[/color] Avoid changes which cause potential conflicts unless they are absolutely necessary.
+[color="#FF8C00"]*[/color] Avoid changes that could conflict with other mods unless they are absolutely necessary.
 
-[color="#FF8C00"]*[/color] Blend features in as good as possible - players shouldn't constantly be reminded that they're using a mod.
+[color="#FF8C00"]*[/color] Blend features in as good as possible - players shouldn't feel reminded that they're using a mod.
 
+[color="#FF8C00"]*[/color] Polish, polish, polish.
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Overview[/b][/font][/color][/size]
 
@@ -52,9 +54,10 @@ Further general objectives and design concepts are:
 The Core module is the foundation of Project Nevada, and as such required by all other modules.
 
 It adds the gameplay features found in popular first-person-shooter games that were yet missing in New Vegas. Some of those features are
-improved versions of already well-known Fallout 3 mods, like the Grenade Hotkey, Bullet Time or Sprint. Others are brand new, like the
-Dynamic Crosshair that changes it size according to the current weapon spread. Each of those features can be individually enabled or
-disabled in-game. They are fully script-based to play along well with other mods.
+improved versions of already well-known Fallout 3 mods, like the Grenade Hotkey, Bullet Time or Sprint. All of them are rewritten from the 
+ground up, with exciting new features like the support for several VATS perks in Bullet Time and support for throwing weapons with the grenade hotkey
+Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread. Each of those features can be
+individually enabled or disabled in-game. They are fully script-based to play along well with other mods.
 
 To allow customization, the Core module implements a Control Panel. For DarnUI users, it can be accessed directly from the pause menu.
 Other mods may extend the Control Panel without conflict and make use of the provided methods for streamlined hotkey assignment.
@@ -64,15 +67,19 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
 
+This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV 
+gameplay and difficulty. Combat will be quicker and deadlier and survival much harder. These changes are aimed to be very subtle and 
+non-intrusive, making the game more challenging without inconveniencing the player.
+
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
 
 Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of mans most
 advanced technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
 
-Practically this means new features are associated with cybernetic implants, high-tech equipment and chems. Examples include enhanced
+Practically this means new features are associated with cybernetic implants and high-tech equipment. Examples include enhanced
 vision modes for power armor helmets and bionic legs allowing you to charge towards your enemies with super-human speed.
 
-While for equipment and chems existing items are used, the cybernetic implants come with a custom interface to attach and manage them.
+While for equipment existing items are used, the cybernetic implants come with a custom interface to attach and manage them.
 The whole system is balanced by several mechanisms, like limiting the number of implants that can be attached at the same time, or
 requiring energy supply for special equipment.
 
@@ -106,6 +113,15 @@ To ensure a seamless integration, the new items are carefully balanced and place
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
 
+[color="#FF8C00"]*[/color] Reduced Health for NPCs and the player
+[color="#FF8C00"]*[/color] Food&Drink no longer heal (optional) 
+[color="#FF8C00"]*[/color] Weapon damage less skill dependant
+[color="#FF8C00"]*[/color] Complete revamp of grenades and explosions
+[color="#FF8C00"]*[/color] Rarer food and healing items
+[color="#FF8C00"]*[/color] Bartering skill has a much higher affect on buying and selling
+[color="#FF8C00"]*[/color] Higher availability for ammo crafting components
+
+
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
 
 [b]Implants[/b] 
@@ -124,16 +140,14 @@ To ensure a seamless integration, the new items are carefully balanced and place
 
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
-
-[b]Weapons[/b] 
-[color="#FF8C00"]*[/color] Sawed-off shotgun with three barrels
-[color="#FF8C00"]*[/color] WA2000-based plasma sniper rifle
-[color="#FF8C00"]*[/color] Manually triggered pipe bombs
+[color="#FF8C00"]To be announced.[/color]
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Media[/b][/font][/color][/size]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Videos[/color][b]>[/b][/font][/color][/size]
+ [url="http://www.youtube.com/watch?v=230I-OoobR0&hd=1"]Original Teaser[/url] 
+ [url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Trailer[/url] 
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Screenshots[/color][b]>[/b][/font][/color][/size]
 
