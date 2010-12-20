@@ -102,6 +102,7 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color="#FF8C00"]*[/color] Slower Backpedaling 
 [color="#FF8C00"]*[/color] First-person Visor Overlays for helmets
 
+
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
 
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
@@ -120,7 +121,13 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color="#FF8C00"]*[/color] Enhanced vision modes for power armor helmets and other advanced headgear
 [color="#FF8C00"]*[/color] Stealth Boy field is controllable and status is displayed in the HUD
 
+
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
+
+[b]Weapons[/b] 
+[color="#FF8C00"]*[/color] Three barreled sawed-off
+[color="#FF8C00"]*[/color] WA2000-based plasma sniper rifle
+[color="#FF8C00"]*[/color] Manually triggered pipe bombs
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Media[/b][/font][/color][/size]
