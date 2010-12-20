@@ -1,7 +1,7 @@
 {{{
 [font="Verdana"]
 [center][size="5"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]P[size="1"] [/size]r[size="2"] [/size]o[size="1"] [/size]j[size="1"] [/size]e[size="1"] [/size]c[size="1"] [/size]t[/color][/color][/b][/font][/size]
-[color="#FFFFFF"][b]============[/b][/color]
+[b]============[/b]
 [size="7"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]NEVADA[/color][/color][/b][/font][/size][/center]
 
 [b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Mezmorki
@@ -49,7 +49,7 @@ Further general objectives and design concepts are:
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Overview[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Core[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Core[color="#FF8C00"]>[/color][/b][/font][/size]
 
 The Core module is the foundation of Project Nevada, and as such required by all other modules.
 
@@ -65,14 +65,14 @@ Other mods may extend the Control Panel without conflict and make use of the pro
 Since the Core module avoids conflicting changes, players are free run it alongside any other mods, including their favorite overhaul.
 
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Rebalance[color="#FF8C00"]>[/color][/b][/font][/size]
 
 This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV 
 gameplay and difficulty. Combat will be quicker and deadlier and survival much harder. These changes are aimed to be very subtle and 
 non-intrusive, making the game more challenging without inconveniencing the player.
 
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Cyberware[color="#FF8C00"]>[/color][/b][/font][/size]
 
 Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of mans most
 advanced technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
@@ -85,7 +85,7 @@ The whole system is balanced by several mechanisms, like limiting the number of 
 requiring energy supply for special equipment.
 
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Equipment[color="#FF8C00"]>[/color][/b][/font][/size]
 
 The Equipment module brings new weapons and armor to the Mojave Wasteland.
 Source of these items are the many excellent creations produced by the modding community, as well as those created by our own team.
@@ -96,7 +96,7 @@ To ensure a seamless integration, the new items are carefully balanced and place
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Features and Changes[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Core[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Core[color="#FF8C00"]>[/color][/b][/font][/size]
 
 [b]Infrastructure[/b]
 [color="#FF8C00"]*[/color] Extensible Control Panel 
@@ -112,7 +112,7 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color="#FF8C00"]*[/color] First-person Visor Overlays for helmets
 
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Rebalance[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Rebalance[color="#FF8C00"]>[/color][/b][/font][/size]
 
 [color="#FF8C00"]*[/color] Reduced Health for NPCs and the player
 [color="#FF8C00"]*[/color] Food&Drink no longer heal (optional) 
@@ -123,7 +123,7 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color="#FF8C00"]*[/color] Higher availability for ammo crafting components
 
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Cyberware[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Cyberware[color="#FF8C00"]>[/color][/b][/font][/size]
 
 [b]Implants[/b] 
 [color="#FF8C00"]*[/color] Bionic eyes: Enhanced vision modes
@@ -140,20 +140,22 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color="#FF8C00"]*[/color] Stealth Boy field is controllable and status is displayed in the HUD
 
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Equipment[color="#FF8C00"]>[/color][/b][/font][/size]
 
 To be announced.
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Media[/b][/font][/color][/size]
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Videos[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Videos[color="#FF8C00"]>[/color][/b][/font][/size]
 
  [url="http://www.youtube.com/watch?v=230I-OoobR0&hd=1"]Original Teaser[/url] 
  [url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Trailer[/url] 
 
 
-[size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Screenshots[/color][b]>[/b][/font][/color][/size]
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Screenshots[color="#FF8C00"]>[/color][/b][/font][/size]
+
+To follow.
 
 [/font]
 }}}
