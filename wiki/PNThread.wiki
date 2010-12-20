@@ -125,7 +125,7 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [size="5"][color="#FF8C00"][font="Courier New"][b]<[/b][color="#FFFFFF"]Equipment[/color][b]>[/b][/font][/color][/size]
 
 [b]Weapons[/b] 
-[color="#FF8C00"]*[/color] Three barreled sawed-off
+[color="#FF8C00"]*[/color] Sawed-off shotgun with three barrels
 [color="#FF8C00"]*[/color] WA2000-based plasma sniper rifle
 [color="#FF8C00"]*[/color] Manually triggered pipe bombs
 
