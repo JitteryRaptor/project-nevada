@@ -144,7 +144,7 @@ class Script : Fallout3BaseScript
 			InstallFileFromFomod("optional/Default HUD/menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml");
 		} else {
 
-			bool editSuccess = AppendIncludeToMenu("menus/main/hud_main_menu.xml", "includes.xml");
+			bool editSuccess = AppendIncludeToMenu("menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
 		
 			if (! editSuccess) {
 				text = "Failed to access hud_main_menu.xml. Guess you'll have to edit it manually (see readme)";
