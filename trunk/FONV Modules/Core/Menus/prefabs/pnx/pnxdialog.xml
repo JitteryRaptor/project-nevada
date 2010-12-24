@@ -1,0 +1,868 @@
+﻿<!-- ######################################################################################## General -->
+<_PNxDialog> 1 </_PNxDialog>
+
+
+<!-- ######################################################################################## IO Implants Panel -->
+<_PNxImplantsPanelEnabled> 0 </_PNxImplantsPanelEnabled>
+
+<_PNxCyberboyRegion> 0 </_PNxCyberboyRegion>
+<_PNxCyberboyShowLeftSlot> 0 </_PNxCyberboyShowLeftSlot>
+<_PNxCyberboyShowRightSlot> 0 </_PNxCyberboyShowRightSlot>
+<_PNxCyberboyMenuActive> 0 </_PNxCyberboyMenuActive>
+<_PNxCyberboyLeftImplantNum> 1 </_PNxCyberboyLeftImplantNum>
+<_PNxCyberboyRightImplantNum> 0 </_PNxCyberboyRightImplantNum>
+
+<_PNxCyberboyHeadSelected> <copy src="PNxCyberboySelectHeadTrigger" trait="_Selected" /> </_PNxCyberboyHeadSelected>
+<_PNxCyberboyTorsoSelected> <copy src="PNxCyberboySelectTorsoTrigger" trait="_Selected" /> </_PNxCyberboyTorsoSelected>
+<_PNxCyberboyLeftArmSelected> <copy src="PNxCyberboySelectLeftArmTrigger" trait="_Selected" /> </_PNxCyberboyLeftArmSelected>
+<_PNxCyberboyRightArmSelected> <copy src="PNxCyberboySelectRightArmTrigger" trait="_Selected" /> </_PNxCyberboyRightArmSelected>
+<_PNxCyberboyLeftLegSelected> <copy src="PNxCyberboySelectLeftLegTrigger" trait="_Selected" /> </_PNxCyberboyLeftLegSelected>
+<_PNxCyberboyRightLegSelected> <copy src="PNxCyberboySelectRightLegTrigger" trait="_Selected" /> </_PNxCyberboyRightLegSelected>
+
+<_PNxCyberboyLeftImplantSelected> <copy src="PNxCyberboyLeftImplant" trait="_Selected" /> </_PNxCyberboyLeftImplantSelected>
+<_PNxCyberboyRightImplantSelected> <copy src="PNxCyberboyRightImplant" trait="_Selected" /> </_PNxCyberboyRightImplantSelected>
+
+
+<!-- ######################################################################################## Implants Panel -->
+<rect name="PNxImplantsPanel">
+
+	<image name="PNxImplantsPanelBackground">
+		<systemcolor> &hudmain; </systemcolor>
+	
+		<visible>
+			<copy src="io()" trait="_PNxImplantsPanelEnabled" />
+		</visible>
+		
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<alpha> 180 </alpha>
+			
+		<x>0</x>
+		<y>0</y>
+		<width> <copy src="screen()" trait="width" /> </width>
+		<height> <copy src="screen()" trait="height" /> </height>
+
+		<filename> pnx\hud\cy\background.dds </filename>
+	</image>
+	
+	<image name="PNxCyberboyLines">
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+		</visible>
+		
+		<zoom> &scale; </zoom>
+		<depth> 11 </depth>
+			
+		<x>
+			<copy src="screen()" trait="width" />
+			<div> 2 </div>
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+		</x>
+		
+		<y> 100 </y>
+		
+		<width> 1024 </width>
+		<height> 576 </height>
+
+		<filename> pnx\hud\cy\cyboy_lines.dds </filename>
+	</image>
+		
+
+	
+	<image name="PNxCyberboyLeftSlot">
+		<systemcolor> &hudmain; </systemcolor>
+		
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+			<and src="io()" trait="_PNxCyberboyShowLeftSlot" />
+		</visible>
+		
+		<zoom> &scale; </zoom>
+		<depth> 15 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 288 </add>
+		</x>
+		
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 40 </add>
+		</y>
+		
+		<width> 204 </width>
+		<height> 132 </height>
+
+		<filename> pnx\hud\cy\leftslot.dds </filename>
+	</image>
+	
+	<hotrect name="PNxCyberboyLeftImplant">
+		<target> &true; </target>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		<clicksound> UIMenuOK </clicksound>
+		
+		<visible>
+			<copy src="sibling(PNxCyberboyLeftSlot)" trait="visible" />
+		</visible>
+		
+		<depth> 15 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLeftSlot)" trait="x" />
+			<add>
+				<copy src="sibling(PNxCyberboyLeftSlot)" trait="width" />
+				<div> 2 </div>
+			</add>
+			<sub> 64 </sub>
+		</x>
+		
+		<y>
+			<copy src="sibling(PNxCyberboyLeftSlot)" trait="y" />
+			<add>
+				<copy src="sibling(PNxCyberboyLeftSlot)" trait="height" />
+				<div> 2 </div>
+			</add>
+			<sub> 64 </sub>
+		</y>
+		
+		<width> 128 </width>
+		<height> 128 </height>
+		
+		<_Selected>
+			<sub src="io()" trait="_PNxCyberboyMenuActive" />
+			<add src="me()" trait="clicked" />
+			<max> 0 </max>
+			<min> 1 </min>
+		</_Selected>
+		
+		<image name="PNxCyberboyLeftImplantImage">
+			<systemcolor>
+				<copy> &hudmain; </copy>
+				<onlyif src="parent()" trait="mouseover" />
+				<add>
+					<copy> &nosystemcolor; </copy>
+					<onlyifnot src="parent()" trait="mouseover" />
+				</add>
+			</systemcolor>
+			
+			<visible>
+				<copy src="parent()" trait="visible" />
+				<and src="io()" trait="_PNxCyberboyLeftImplantNum" />
+			</visible>
+			
+			<zoom> &scale; </zoom>
+			<depth> 15 </depth>
+				
+			<x> <copy src="parent()" trait="x" /> </x>
+			<y> <copy src="parent()" trait="y" /> </y>
+			
+			<width> <copy src="parent()" trait="width" /> </width>
+			<height> <copy src="parent()" trait="height" /> </height>
+
+			<filename> pnx\hud\cy\implant_arm.dds </filename>
+		</image>
+		
+		<image name="PNxCyberboyLeftImplantEmptyImage">
+			<systemcolor> &hudmain; </systemcolor>
+			
+			<visible>
+				<copy src="parent()" trait="visible" />
+				<and src="parent()" trait="mouseover" />
+				<and>
+					<copy src="io()" trait="_PNxCyberboyLeftImplantNum" />
+					<eq> 0 </eq>
+				</and>
+			</visible>
+			
+			<zoom> &scale; </zoom>
+			<depth> 15 </depth>
+				
+			<x> <copy src="parent()" trait="x" /> </x>
+			<y> <copy src="parent()" trait="y" /> </y>
+			
+			<width> <copy src="parent()" trait="width" /> </width>
+			<height> <copy src="parent()" trait="height" /> </height>
+
+			<filename> pnx\hud\cy\implant_add.dds </filename>
+		</image>
+	</hotrect>
+	
+	<image name="PNxCyberboyRightSlot">
+		<systemcolor> &hudmain; </systemcolor>
+		
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+			<and src="io()" trait="_PNxCyberboyShowRightSlot" />
+		</visible>
+		
+		<zoom> &scale; </zoom>
+		<depth> 15 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 546 </add>
+		</x>
+		
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 29 </add>
+		</y>
+		
+		<width> 204 </width>
+		<height> 132 </height>
+
+		<filename> pnx\hud\cy\rightslot.dds </filename>
+	</image>
+	
+	<hotrect name="PNxCyberboyRightImplant">
+		<target> &true; </target>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		<clicksound> UIMenuOK </clicksound>
+		
+		<visible>
+			<copy src="sibling(PNxCyberboyRightSlot)" trait="visible" />
+		</visible>
+		
+		<depth> 15 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyRightSlot)" trait="x" />
+			<add>
+				<copy src="sibling(PNxCyberboyRightSlot)" trait="width" />
+				<div> 2 </div>
+			</add>
+			<sub> 64 </sub>
+		</x>
+		
+		<y>
+			<copy src="sibling(PNxCyberboyRightSlot)" trait="y" />
+			<add>
+				<copy src="sibling(PNxCyberboyRightSlot)" trait="height" />
+				<div> 2 </div>
+			</add>
+			<sub> 64 </sub>
+		</y>
+		
+		<width> 128 </width>
+		<height> 128 </height>
+		
+		<_Selected>
+			<sub src="io()" trait="_PNxCyberboyMenuActive" />
+			<add src="me()" trait="clicked" />
+			<max> 0 </max>
+			<min> 1 </min>
+		</_Selected>
+		
+		<image name="PNxCyberboyRightImplantImage">
+			<systemcolor>
+				<copy> &hudmain; </copy>
+				<onlyif src="parent()" trait="mouseover" />
+				<add>
+					<copy> &nosystemcolor; </copy>
+					<onlyifnot src="parent()" trait="mouseover" />
+				</add>
+			</systemcolor>
+			
+			<visible>
+				<copy src="parent()" trait="visible" />
+				<and src="io()" trait="_PNxCyberboyRightImplantNum" />
+			</visible>
+			
+			<zoom> &scale; </zoom>
+			<depth> 15 </depth>
+				
+			<x> <copy src="parent()" trait="x" /> </x>
+			<y> <copy src="parent()" trait="y" /> </y>
+			
+			<width> <copy src="parent()" trait="width" /> </width>
+			<height> <copy src="parent()" trait="height" /> </height>
+
+			<filename> pnx\hud\cy\implant_arm.dds </filename>
+		</image>
+		
+		<image name="PNxCyberboyRightImplantEmptyImage">
+			<systemcolor> &hudmain; </systemcolor>
+			
+			<visible>
+				<copy src="parent()" trait="visible" />
+				<and src="parent()" trait="mouseover" />
+				<and>
+					<copy src="io()" trait="_PNxCyberboyRightImplantNum" />
+					<eq> 0 </eq>
+				</and>
+			</visible>
+			
+			<zoom> &scale; </zoom>
+			<depth> 15 </depth>
+				
+			<x> <copy src="parent()" trait="x" /> </x>
+			<y> <copy src="parent()" trait="y" /> </y>
+			
+			<width> <copy src="parent()" trait="width" /> </width>
+			<height> <copy src="parent()" trait="height" /> </height>
+
+			<filename> pnx\hud\cy\implant_add.dds </filename>
+		</image>
+	</hotrect>
+	
+	<image name="PNxCyberboyArrow">
+		<systemcolor> &hudmain; </systemcolor>
+		
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+			<and src="io()" trait="_PNxCyberboyRegion" />
+			<gt> 0 </gt>
+		</visible>
+		
+		<zoom> &scale; </zoom>
+		<depth> 14 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 379 </add>
+		</x>
+		
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 141 </add>
+		</y>
+		
+		<width> 280 </width>
+		<height> 332 </height>
+
+		<_filename_1> pnx\hud\cy\arrow_head.dds </_filename_1>
+		<_filename_2> pnx\hud\cy\arrow_torso.dds </_filename_2>
+		<_filename_3> pnx\hud\cy\arrow_leftarm.dds </_filename_3>
+		<_filename_4> pnx\hud\cy\arrow_rightarm.dds </_filename_4>
+		<_filename_5> pnx\hud\cy\arrow_leftleg.dds </_filename_5>
+		<_filename_6> pnx\hud\cy\arrow_rightleg.dds </_filename_6>
+		
+		<filename>
+			<copy src="io()" trait="_PNxCyberboyRegion" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
+	</image>
+	
+	<image name="PNxCyberboyBase">
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+		</visible>
+		
+		<zoom> &scale; </zoom>
+		<depth> 12 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 423 </add>
+		</x>
+		
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 115 </add>
+		</y>
+		
+		<width> 192 </width>
+		<height> 404 </height>
+
+		<filename> pnx\hud\cy\cyboy_base.dds </filename>
+	</image>
+	
+	<hotrect name="PNxCyberboySelectHeadTrigger">
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+		</visible>
+		
+		<target> &true; </target>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		<clicksound> UIMenuOK </clicksound>
+		
+		<depth> 13 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 482 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 128 </add>
+		</y>
+		
+		<width> 80 </width>
+		<height> 100 </height>
+		
+		<_Selected>
+			<sub>
+				<copy src="me()" trait="clicked" />
+				<onlyif>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 1 </eq>
+				</onlyif>
+			</sub>
+			<add>
+				<copy src="me()" trait="clicked" />
+				<onlyifnot>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 1 </eq>
+				</onlyifnot>
+			</add>
+			<sub>
+				<copy src="PNxCyberboySelectTorsoTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftLegTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightLegTrigger" trait="clicked" />
+			</sub>
+			
+			<max> 0 </max>
+			<min> 1 </min>
+		</_Selected>
+		
+	</hotrect>
+	
+	<image name="PNxCyberboySelectHeadImage">
+		<systemcolor> &hudmain; </systemcolor>
+	
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+			<and src="sibling(PNxCyberboySelectHeadTrigger)" trait="mouseover" />
+		</visible>
+		
+		<alpha> 150 </alpha>
+		
+		<zoom> &scale; </zoom>
+		<depth> 13 </depth>
+			
+		<x> <copy src="sibling(PNxCyberboyBase)" trait="x" /> </x>
+		<y> <copy src="sibling(PNxCyberboyBase)" trait="y" /> </y>
+		
+		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
+		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
+		
+		<filename> pnx\hud\cy\select_head.dds </filename>
+	</image>
+	
+	<hotrect name="PNxCyberboySelectTorsoTrigger">
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+		</visible>
+		
+		<target> &true; </target>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		<clicksound> UIMenuOK </clicksound>
+		
+		<depth> 13 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 482 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 239 </add>
+		</y>
+		
+		<width> 72 </width>
+		<height> 102 </height>
+		
+		<_Selected>
+			<sub>
+				<copy src="me()" trait="clicked" />
+				<onlyif>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 2 </eq>
+				</onlyif>
+			</sub>
+			<add>
+				<copy src="me()" trait="clicked" />
+				<onlyifnot>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 2 </eq>
+				</onlyifnot>
+			</add>
+			<sub>
+				<copy src="PNxCyberboySelectHeadTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftLegTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightLegTrigger" trait="clicked" />
+			</sub>
+			
+			<max> 0 </max>
+			<min> 1 </min>
+		</_Selected>
+		
+	</hotrect>
+	
+	<image name="PNxCyberboySelectTorsoImage">
+		<systemcolor> &hudmain; </systemcolor>
+	
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+			<and src="sibling(PNxCyberboySelectTorsoTrigger)" trait="mouseover" />
+		</visible>
+		
+		<alpha> 150 </alpha>
+		
+		<zoom> &scale; </zoom>
+		<depth> 13 </depth>
+			
+		<x> <copy src="sibling(PNxCyberboyBase)" trait="x" /> </x>
+		<y> <copy src="sibling(PNxCyberboyBase)" trait="y" /> </y>
+		
+		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
+		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
+		
+		<filename> pnx\hud\cy\select_torso.dds </filename>
+	</image>
+	
+	<hotrect name="PNxCyberboySelectLeftArmTrigger">
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+		</visible>
+		
+		<target> &true; </target>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		<clicksound> UIMenuOK </clicksound>
+		
+		<depth> 13 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 437 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 256 </add>
+		</y>
+		
+		<width> 36 </width>
+		<height> 98 </height>
+		
+		<_Selected>
+			<sub>
+				<copy src="me()" trait="clicked" />
+				<onlyif>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 3 </eq>
+				</onlyif>
+			</sub>
+			<add>
+				<copy src="me()" trait="clicked" />
+				<onlyifnot>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 3 </eq>
+				</onlyifnot>
+			</add>
+			<sub>
+				<copy src="PNxCyberboySelectTorsoTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectHeadTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftLegTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightLegTrigger" trait="clicked" />
+			</sub>
+			
+			<max> 0 </max>
+			<min> 1 </min>
+		</_Selected>
+	</hotrect>
+	
+	<image name="PNxCyberboySelectLeftArmImage">
+		<systemcolor> &hudmain; </systemcolor>
+	
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+			<and src="sibling(PNxCyberboySelectLeftArmTrigger)" trait="mouseover" />
+		</visible>
+		
+		<alpha> 150 </alpha>
+		
+		<zoom> &scale; </zoom>
+		<depth> 13 </depth>
+			
+		<x> <copy src="sibling(PNxCyberboyBase)" trait="x" /> </x>
+		<y> <copy src="sibling(PNxCyberboyBase)" trait="y" /> </y>
+		
+		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
+		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
+		
+		<filename> pnx\hud\cy\select_leftarm.dds </filename>
+	</image>
+	
+	<hotrect name="PNxCyberboySelectRightArmTrigger">
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+		</visible>
+		
+		<target> &true; </target>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		<clicksound> UIMenuOK </clicksound>
+		
+		<depth> 13 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 573 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 256 </add>
+		</y>
+		
+		<width> 35 </width>
+		<height> 118 </height>
+		
+		<_Selected>
+			<sub>
+				<copy src="me()" trait="clicked" />
+				<onlyif>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 4 </eq>
+				</onlyif>
+			</sub>
+			<add>
+				<copy src="me()" trait="clicked" />
+				<onlyifnot>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 4 </eq>
+				</onlyifnot>
+			</add>
+			<sub>
+				<copy src="PNxCyberboySelectTorsoTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectHeadTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftLegTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightLegTrigger" trait="clicked" />
+			</sub>
+			
+			<max> 0 </max>
+			<min> 1 </min>
+		</_Selected>
+		
+	</hotrect>
+	
+	<image name="PNxCyberboySelectRightArmImage">
+		<systemcolor> &hudmain; </systemcolor>
+	
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+			<and src="sibling(PNxCyberboySelectRightArmTrigger)" trait="mouseover" />
+		</visible>
+		
+		<alpha> 150 </alpha>
+		
+		<zoom> &scale; </zoom>
+		<depth> 13 </depth>
+			
+		<x> <copy src="sibling(PNxCyberboyBase)" trait="x" /> </x>
+		<y> <copy src="sibling(PNxCyberboyBase)" trait="y" /> </y>
+		
+		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
+		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
+		
+		<filename> pnx\hud\cy\select_rightarm.dds </filename>
+	</image>
+	
+	<hotrect name="PNxCyberboySelectLeftLegTrigger">
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+		</visible>
+		
+		<target> &true; </target>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		<clicksound> UIMenuOK </clicksound>
+	
+		<depth> 13 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 463 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 367 </add>
+		</y>
+		
+		<width> 52 </width>
+		<height> 114 </height>
+		
+		<_Selected>
+			<sub>
+				<copy src="me()" trait="clicked" />
+				<onlyif>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 5 </eq>
+				</onlyif>
+			</sub>
+			<add>
+				<copy src="me()" trait="clicked" />
+				<onlyifnot>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 5 </eq>
+				</onlyifnot>
+			</add>
+			<sub>
+				<copy src="PNxCyberboySelectTorsoTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectHeadTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightLegTrigger" trait="clicked" />
+			</sub>
+			
+			<max> 0 </max>
+			<min> 1 </min>
+		</_Selected>
+	</hotrect>
+
+	<image name="PNxCyberboySelectLeftLegImage">
+		<systemcolor> &hudmain; </systemcolor>
+	
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+			<and src="sibling(PNxCyberboySelectLeftLegTrigger)" trait="mouseover" />
+		</visible>
+		
+		<alpha> 150 </alpha>
+		
+		<zoom> &scale; </zoom>
+		<depth> 13 </depth>
+			
+		<x> <copy src="sibling(PNxCyberboyBase)" trait="x" /> </x>
+		<y> <copy src="sibling(PNxCyberboyBase)" trait="y" /> </y>
+		
+		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
+		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
+		
+		<filename> pnx\hud\cy\select_leftleg.dds </filename>
+	</image>
+
+	<hotrect name="PNxCyberboySelectRightLegTrigger">
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+		</visible>
+		
+		<target> &true; </target>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		<clicksound> UIMenuOK </clicksound>
+		
+		<depth> 13 </depth>
+			
+		<x>
+			<copy src="sibling(PNxCyberboyLines)" trait="x" />
+			<add> 514 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxCyberboyLines)" trait="y" />
+			<add> 367 </add>
+		</y>
+		
+		<width> 59 </width>
+		<height> 116 </height>
+		
+		<_Selected>
+			<sub>
+				<copy src="me()" trait="clicked" />
+				<onlyif>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 6 </eq>
+				</onlyif>
+			</sub>
+			<add>
+				<copy src="me()" trait="clicked" />
+				<onlyifnot>
+					<copy src="io()" trait="_PNxCyberboyRegion" />
+					<eq> 6 </eq>
+				</onlyifnot>
+			</add>
+			<sub>
+				<copy src="PNxCyberboySelectTorsoTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectRightArmTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectLeftLegTrigger" trait="clicked" />
+			</sub>
+			<sub>
+				<copy src="PNxCyberboySelectHeadTrigger" trait="clicked" />
+			</sub>
+			
+			<max> 0 </max>
+			<min> 1 </min>
+		</_Selected>
+	</hotrect>
+	
+	<image name="PNxCyberboySelectRightLegImage">
+		<systemcolor> &hudmain; </systemcolor>
+	
+		<visible>
+			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
+			<and src="sibling(PNxCyberboySelectRightLegTrigger)" trait="mouseover" />
+		</visible>
+		
+		<alpha> 150 </alpha>
+		
+		<zoom> &scale; </zoom>
+		<depth> 13 </depth>
+			
+		<x> <copy src="sibling(PNxCyberboyBase)" trait="x" /> </x>
+		
+		<y> <copy src="sibling(PNxCyberboyBase)" trait="y" /> </y>
+		
+		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
+		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
+		
+		<filename> pnx\hud\cy\select_rightleg.dds </filename>
+	</image>
+	
+</rect>
