@@ -42,8 +42,13 @@
 		<y>0</y>
 		<width> <copy src="screen()" trait="width" /> </width>
 		<height> <copy src="screen()" trait="height" /> </height>
-
-		<filename> pnx\hud\cy\background.dds </filename>
+		
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\background.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 	
 	<image name="PNxCyberboyLines">
@@ -70,7 +75,12 @@
 		<width> 1024 </width>
 		<height> 576 </height>
 
-		<filename> pnx\hud\cy\cyboy_lines.dds </filename>
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\cyboy_lines.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 		
 
@@ -99,7 +109,12 @@
 		<width> 204 </width>
 		<height> 132 </height>
 
-		<filename> pnx\hud\cy\leftslot.dds </filename>
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\leftslot.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 	
 	<hotrect name="PNxCyberboyLeftImplant">
@@ -165,7 +180,12 @@
 			<width> <copy src="parent()" trait="width" /> </width>
 			<height> <copy src="parent()" trait="height" /> </height>
 
-			<filename> pnx\hud\cy\implant_arm.dds </filename>
+			<_filename_0> Interface\Shared\solid.dds </_filename_0>
+			<_filename_1> pnx\hud\cy\implant_arm.dds </_filename_1>
+			<filename>
+				<copy src="me()" trait="visible" />
+				<copy src="me()" trait="_filename_" />
+			</filename>
 		</image>
 		
 		<image name="PNxCyberboyLeftImplantEmptyImage">
@@ -189,7 +209,12 @@
 			<width> <copy src="parent()" trait="width" /> </width>
 			<height> <copy src="parent()" trait="height" /> </height>
 
-			<filename> pnx\hud\cy\implant_add.dds </filename>
+			<_filename_0> Interface\Shared\solid.dds </_filename_0>
+			<_filename_1> pnx\hud\cy\implant_add.dds </_filename_1>
+			<filename>
+				<copy src="me()" trait="visible" />
+				<copy src="me()" trait="_filename_" />
+			</filename>
 		</image>
 	</hotrect>
 	
@@ -217,7 +242,12 @@
 		<width> 204 </width>
 		<height> 132 </height>
 
-		<filename> pnx\hud\cy\rightslot.dds </filename>
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\rightslot.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 	
 	<hotrect name="PNxCyberboyRightImplant">
@@ -283,7 +313,12 @@
 			<width> <copy src="parent()" trait="width" /> </width>
 			<height> <copy src="parent()" trait="height" /> </height>
 
-			<filename> pnx\hud\cy\implant_arm.dds </filename>
+			<_filename_0> Interface\Shared\solid.dds </_filename_0>
+			<_filename_1> pnx\hud\cy\implant_arm.dds </_filename_1>
+			<filename>
+				<copy src="me()" trait="visible" />
+				<copy src="me()" trait="_filename_" />
+			</filename>
 		</image>
 		
 		<image name="PNxCyberboyRightImplantEmptyImage">
@@ -307,7 +342,12 @@
 			<width> <copy src="parent()" trait="width" /> </width>
 			<height> <copy src="parent()" trait="height" /> </height>
 
-			<filename> pnx\hud\cy\implant_add.dds </filename>
+			<_filename_0> Interface\Shared\solid.dds </_filename_0>
+			<_filename_1> pnx\hud\cy\implant_add.dds </_filename_1>
+			<filename>
+				<copy src="me()" trait="visible" />
+				<copy src="me()" trait="_filename_" />
+			</filename>
 		</image>
 	</hotrect>
 	
@@ -454,7 +494,12 @@
 		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
 		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
 		
-		<filename> pnx\hud\cy\select_head.dds </filename>
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\select_head.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 	
 	<hotrect name="PNxCyberboySelectTorsoTrigger">
@@ -536,7 +581,12 @@
 		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
 		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
 		
-		<filename> pnx\hud\cy\select_torso.dds </filename>
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\select_torso.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 	
 	<hotrect name="PNxCyberboySelectLeftArmTrigger">
@@ -617,7 +667,12 @@
 		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
 		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
 		
-		<filename> pnx\hud\cy\select_leftarm.dds </filename>
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\select_leftarm.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 	
 	<hotrect name="PNxCyberboySelectRightArmTrigger">
@@ -699,7 +754,12 @@
 		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
 		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
 		
-		<filename> pnx\hud\cy\select_rightarm.dds </filename>
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\select_rightarm.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 	
 	<hotrect name="PNxCyberboySelectLeftLegTrigger">
@@ -780,7 +840,12 @@
 		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
 		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
 		
-		<filename> pnx\hud\cy\select_leftleg.dds </filename>
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\select_leftleg.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 
 	<hotrect name="PNxCyberboySelectRightLegTrigger">
@@ -862,7 +927,12 @@
 		<width> <copy src="sibling(PNxCyberboyBase)" trait="width" /> </width>
 		<height> <copy src="sibling(PNxCyberboyBase)" trait="height" /> </height>
 		
-		<filename> pnx\hud\cy\select_rightleg.dds </filename>
+		<_filename_0> Interface\Shared\solid.dds </_filename_0>
+		<_filename_1> pnx\hud\cy\select_rightleg.dds </_filename_1>
+		<filename>
+			<copy src="me()" trait="visible" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
 	</image>
 	
 </rect>
