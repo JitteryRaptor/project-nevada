@@ -24,7 +24,10 @@ class Script : Fallout3BaseScript
 			if (Path.GetDirectoryName(file) == "optional")
 				continue;
 
-			if (Path.GetFileName(file) == "includes.xml")
+			if (Path.GetFileName(file) == "includes_HUDMainMenu.xml")
+				continue;
+				
+			if (Path.GetFileName(file) == "includes_DialogMenu.xml")
 				continue;
 
 			InstallFileFromFomod(file);
@@ -110,19 +113,30 @@ class Script : Fallout3BaseScript
 		// Install base files
 		InstallFiles();
 		
-		// Modify includes.xml if necessary
-		if (! DataFileExists("menus/prefabs/includes.xml")) {
-			InstallFileFromFomod("menus/prefabs/includes.xml");
+		// Modify includes_HUDMainMenu.xml if necessary
+		if (! DataFileExists("menus/prefabs/includes_HUDMainMenu.xml")) {
+			InstallFileFromFomod("menus/prefabs/includes_HUDMainMenu.xml");
 		} else {
 				// 
-			bool editSuccess = AppendInclude("menus/prefabs/includes.xml", @"pnx\pnxhud.xml");
+			bool editSuccess = AppendInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
 		
 			if (! editSuccess) {
-				text = "Failed to access includes.xml. Guess you'll have to edit it manually (see readme)";
+				text = "Failed to access includes_HUDMainMenu.xml. Guess you'll have to edit it manually (see readme)";
 				MessageBox(text, Title);
 			}
+		}
 		
-
+		// Modify includes_DialogMenu.xml if necessary
+		if (! DataFileExists("menus/prefabs/includes_DialogMenu.xml")) {
+			InstallFileFromFomod("menus/prefabs/includes_DialogMenu.xml");
+		} else {
+				// 
+			bool editSuccess = AppendInclude("menus/prefabs/includes_DialogMenu.xml", @"pnx\pnxdialog.xml");
+		
+			if (! editSuccess) {
+				text = "Failed to access includes_DialogMenu.xml. Guess you'll have to edit it manually (see readme)";
+				MessageBox(text, Title);
+			}
 		}
 
 		// Modify hud_main_menu.xml	if necessary
@@ -134,6 +148,19 @@ class Script : Fallout3BaseScript
 		
 			if (! editSuccess) {
 				text = "Failed to access hud_main_menu.xml. Guess you'll have to edit it manually (see readme)";
+				MessageBox(text, Title);
+			}
+		}
+		
+		// Modify dialog_menu.xml if necessary
+		if (! DataFileExists("menus/dialog/dialog_menu.xml")) {
+			InstallFileFromFomod("optional/Default HUD/menus/dialog/dialog_menu.xml", "menus/dialog/dialog_menu.xml");
+		} else {
+
+			bool editSuccess = AppendIncludeToMenu("menus/dialog/dialog_menu.xml", "includes_DialogMenu.xml");
+		
+			if (! editSuccess) {
+				text = "Failed to access dialog_menu.xml. Guess you'll have to edit it manually (see readme)";
 				MessageBox(text, Title);
 			}
 		}

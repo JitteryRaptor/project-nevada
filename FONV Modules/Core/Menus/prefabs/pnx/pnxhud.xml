@@ -2026,7 +2026,14 @@
 			<and src="io()" trait="_PNxControlPanelKeySelectEnabled" />
 		</visible>
 		<depth> 12 </depth>
-		<font> 1 </font>
+		<font>
+			<copy> 1 </copy>
+			<onlyifnot src="io()" trait="_DUIF3" />
+			<add>
+				<copy> 3 </copy>
+				<onlyif src="io()" trait="_DUIF3" />
+			</add>
+		</font>
 		<justify> &center; </justify>
 		<x>
 			<copy src="screen()" trait="width" />
@@ -2044,7 +2051,14 @@
 			<copy src="sibling(_PNxControlPanelKeySelectText)" trait="visible" />
 		</visible>
 		<depth> 12 </depth>
-		<font> 3 </font>
+		<font>
+			<copy> 3 </copy>
+			<onlyifnot src="io()" trait="_DUIF3" />
+			<add>
+				<copy> 1 </copy>
+				<onlyif src="io()" trait="_DUIF3" />
+			</add>
+		</font>
 		<justify> &center; </justify>
 		<x>
 			<copy src="screen()" trait="width" />
@@ -2057,8 +2071,6 @@
 		</y>
 		<string>(Backspace to reset)</string>
 	</text>
-	
-	
 	
 </rect>
 
