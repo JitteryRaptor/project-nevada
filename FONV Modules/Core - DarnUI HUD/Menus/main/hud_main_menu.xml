@@ -74,9 +74,6 @@
 
 	<include src="darn\fooknvmeter.xml" />
 	<include src="darn\duiF3Extras.xml" />
-
-	<include src="includes.xml" />
-
 	
 	<_HUDMode> <copy src="ActionPoints" trait="visible" /> </_HUDMode>
 	<_HUDAlpha>
@@ -1383,4 +1380,6 @@
 		<zoom> &scale; </zoom>
 		<visible> <copy src="CNDArrows" trait="visible" /> </visible>
 	</image>
+	
+	<include src="includes_HUDMainMenu.xml" />
 </menu>

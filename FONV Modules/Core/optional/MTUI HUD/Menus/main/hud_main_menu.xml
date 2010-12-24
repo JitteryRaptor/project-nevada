@@ -340,6 +340,6 @@
     </image>
   </rect>
   
-  <include src="includes.xml" />
+  <include src="includes_HUDMainMenu.xml" />
   
 </menu>

@@ -2,8 +2,6 @@
 <menu name="DialogMenu">
 	<class> &DialogMenu; </class>
 	<stackingtype> &no_click_past; </stackingtype>
-
-	<include src="includes_DialogMenu.xml" />
 	
 	<!-- User traits -->
 	<_DialogVisible> &false; </_DialogVisible>		<!-- Controls overall dialog visibility -->
@@ -266,5 +264,7 @@
 			</text>
 		</hotrect>
 	</template>
+
+	<include src="includes_DialogMenu.xml" />
 </menu>
 <!-- ===== END DIALOG_MENU===== -->
