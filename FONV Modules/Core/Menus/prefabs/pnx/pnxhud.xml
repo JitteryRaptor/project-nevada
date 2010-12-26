@@ -1056,7 +1056,7 @@
 			<copy src="parent()" trait="x" />
 			<add src="parent()" trait="width" />
 			<sub src="me()" trait="width" />
-			<sub> 15 </sub>
+			<sub> 20 </sub>
 			<onlyif src="ActionPoints" trait="visible" />	
 			<add>
 				<copy src="screen()" trait="width" />
@@ -1068,6 +1068,10 @@
 	
 		<y>
 			<copy src="parent()" trait="y" />
+			<sub>
+				<copy> 125 </copy>
+				<onlyif src="ActionPoints" trait="visible" />	
+			</sub>
 			<add>
 				<copy src="parent()" trait="height" />
 				<div> 2 </div>
@@ -1079,7 +1083,7 @@
 		</y>
 		
 		<width> 180 </width>
-		<height> 345 </height>
+		<height> 195 </height>
 		
 		<filename> pnx\hud\scan\ScannerBoy_base.dds </filename>
 	</image>
@@ -1261,6 +1265,10 @@
 			<copy src="sibling(PNxScannerBoyBase)" trait="y" />
 			<add src="sibling(PNxScannerBoyBase)" trait="height" />
 			<add> 7 </add>
+			<add>
+				<copy> 200 </copy>
+				<onlyif src="ActionPoints" trait="visible" />	
+			</add>
 		</y>
 		<width> 196 </width>
 		<height> 64 </height>
@@ -1525,10 +1533,56 @@
 		
 	</text>
 	
+	
 	<text name="PNxScannerText4">
 		<include src="pnx\floating_text.xml" />
 	
 		<_line> 5 </_line>
+	
+		<_dat_1>A</_dat_1>
+		<_dat_2>AW</_dat_2>
+		<_dat_3>AWA/</_dat_3>
+		<_dat_4>AWAR</_dat_4>
+		<_dat_5>AWARE</_dat_5>
+		<_dat_6>AWAREN/</_dat_6>
+		<_dat_7>AWARENE</_dat_7>
+		<_dat_8>AWARENES</_dat_8>
+		<_dat_9>AWARENESS</_dat_9>
+		<_dat_10>AWARENESS:</_dat_10>
+		
+		<_index><copy src="io()" trait="_PNxScannerText4Index" /></_index>
+	</text>
+	
+	<text name="PNxScannerText5">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 6 </_line>
+		<_indent> 2 </_indent>
+	
+		<_dat_1>h</_dat_1>
+		<_dat_2>hi</_dat_2>
+		<_dat_3>hig</_dat_3>
+		<_dat_4>high</_dat_4>
+		
+		<_dat_5>m</_dat_5>
+		<_dat_6>me</_dat_6>
+		<_dat_7>med</_dat_7>
+		<_dat_8>medi</_dat_8>
+		<_dat_9>mediu</_dat_9>
+		<_dat_10>medium</_dat_10>
+		
+		<_dat_11>l</_dat_11>
+		<_dat_12>lo</_dat_12>
+		<_dat_13>low</_dat_13>
+		
+		<_index><copy src="io()" trait="_PNxScannerText5Index" /></_index>
+	</text>
+	
+	
+	<text name="PNxScannerText6">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 8 </_line>
 	
 		<_dat_1>C</_dat_1>
 		<_dat_2>CO</_dat_2>
@@ -1543,13 +1597,13 @@
 		<_dat_11>COMBAT RANGE</_dat_11>
 		<_dat_12>COMBAT RANGE:</_dat_12>
 		
-		<_index><copy src="io()" trait="_PNxScannerText4Index" /></_index>
+		<_index><copy src="io()" trait="_PNxScannerText6Index" /></_index>
 	</text>
 	
-	<text name="PNxScannerText5">
+	<text name="PNxScannerText7">
 		<include src="pnx\floating_text.xml" />
 	
-		<_line> 6 </_line>
+		<_line> 9 </_line>
 		<_indent> 2 </_indent>
 	
 		<_dat_1>l</_dat_1>
@@ -1576,52 +1630,10 @@
 		<_dat_19>mele</_dat_19>
 		<_dat_20>melee</_dat_20>
 		
-		<_index><copy src="io()" trait="_PNxScannerText5Index" /></_index>
-	</text>
-	
-	<text name="PNxScannerText6">
-		<include src="pnx\floating_text.xml" />
-	
-		<_line> 8 </_line>
-	
-		<_dat_1>A</_dat_1>
-		<_dat_2>AW</_dat_2>
-		<_dat_3>AWA/</_dat_3>
-		<_dat_4>AWAR</_dat_4>
-		<_dat_5>AWARE</_dat_5>
-		<_dat_6>AWAREN/</_dat_6>
-		<_dat_7>AWARENE</_dat_7>
-		<_dat_8>AWARENES</_dat_8>
-		<_dat_9>AWARENESS</_dat_9>
-		<_dat_10>AWARENESS:</_dat_10>
-		
-		<_index><copy src="io()" trait="_PNxScannerText6Index" /></_index>
-	</text>
-	
-	<text name="PNxScannerText7">
-		<include src="pnx\floating_text.xml" />
-	
-		<_line> 9 </_line>
-		<_indent> 2 </_indent>
-	
-		<_dat_1>h</_dat_1>
-		<_dat_2>hi</_dat_2>
-		<_dat_3>hig</_dat_3>
-		<_dat_4>high</_dat_4>
-		
-		<_dat_5>m</_dat_5>
-		<_dat_6>me</_dat_6>
-		<_dat_7>med</_dat_7>
-		<_dat_8>medi</_dat_8>
-		<_dat_9>mediu</_dat_9>
-		<_dat_10>medium</_dat_10>
-		
-		<_dat_11>l</_dat_11>
-		<_dat_12>lo</_dat_12>
-		<_dat_13>low</_dat_13>
-		
 		<_index><copy src="io()" trait="_PNxScannerText7Index" /></_index>
 	</text>
+	
+
 	
 	<text name="PNxScannerText8">
 		<include src="pnx\floating_text.xml" />
