@@ -156,6 +156,11 @@
 <_PNxGrenadeIconCount> 0 </_PNxGrenadeIconCount>
 
 
+<!-- ######################################################################################## IO AP Bonus Text -->
+<_PNxAPBonusEnabled> 0 </_PNxAPBonusEnabled>
+<_PNxAPBonusValue> 0 </_PNxAPBonusValue>
+
+
 <!-- ######################################################################################## IO Control Panel -->
 <_PNxControlPanelEnabled> 1 </_PNxControlPanelEnabled>
 <_PNxControlPanelActive> 0 </_PNxControlPanelActive>
@@ -1633,8 +1638,6 @@
 		<_index><copy src="io()" trait="_PNxScannerText7Index" /></_index>
 	</text>
 	
-
-	
 	<text name="PNxScannerText8">
 		<include src="pnx\floating_text.xml" />
 	
@@ -2084,6 +2087,75 @@
 		<string>(Backspace to reset)</string>
 	</text>
 	
+</rect>
+
+
+<!-- ######################################################################################## AP Bonus Text -->
+<rect name="PNxAPBonus">
+	<visible>
+		<copy src="ActionPoints" trait="visible" />
+		<and src="io()" trait="_PNxAPBonusEnabled" />
+		<and src="io()" trait="_PNxAPBonusValue" />
+		<gt> 0 </gt>
+	</visible>
+	
+	<text name="PNxAPBonusText">
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
+		<depth> 2 </depth>
+		<justify> &left; </justify>
+		
+		<string>
+			<copy src="io()" trait="_PNxAPBonusValue" />
+			<mul> 100 </mul>
+		</string>
+		
+		<x>
+			<copy src="screen()" trait="width" />
+			<sub>
+				<copy src="ActionPoints" trait="width" />
+				<mul src="io()" trait="_PNxScale" />
+				<div> 2 </div>
+			</sub>
+			<sub> </sub>
+		</x>
+		<y>
+			<copy src="screen()" trait="height" />
+			<sub>
+				<copy src="ActionPoints" trait="height" />
+				<mul src="io()" trait="_PNxScale" />
+			</sub>
+			<sub> 10 </sub>
+		</y>
+	</text>
+	<text name="PNxAPBonusPlus">
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
+		<depth> 2 </depth>
+		<justify> &right; </justify>
+		
+		<string> + </string>
+		
+		<x>
+			<copy src="PNxAPBonusText" trait="x" />
+		</x>
+		<y>
+			<copy src="PNxAPBonusText" trait="y" />
+		</y>
+	</text>
+	<text name="PNxAPBonusPercent">
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
+		<depth> 2 </depth>
+		<justify> &left; </justify>
+		
+		<string> % </string>
+		
+		<x>
+			<copy src="PNxAPBonusText" trait="x" />
+			<add src="PNxAPBonusText" trait="width" />
+		</x>
+		<y>
+			<copy src="PNxAPBonusText" trait="y" />
+		</y>
+	</text>
 </rect>
 
 
