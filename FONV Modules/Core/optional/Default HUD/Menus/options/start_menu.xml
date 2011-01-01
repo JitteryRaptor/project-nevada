@@ -1,0 +1,1187 @@
+<!-- start_menu.xml -->
+<menu name="StartMenu">
+	<class> &StartMenu; </class>
+	<stackingtype> &no_click_past; </stackingtype>
+	<alpha>	0 </alpha>
+	<locus> &true; </locus>
+	<explorefade> 0.25 </explorefade>
+	<brightness> 255 </brightness>
+
+	<_item_height> 48 </_item_height>
+	<_center_x></_center_x>	<!-- x position of user option (set in code) -->
+	<_use_ps3_saveload_settings> &false; </_use_ps3_saveload_settings>
+
+	<user0></user0>		<!-- Set in code:  True if 16:9 or wider, false otherwise -->
+
+	<user1>	360 </user1>	<!-- Center x for Gameplay submenu options -->
+	<user2>	360 </user2>	<!-- Center x for Display submenu options -->
+	<user3>	320 </user3>	<!-- Center x for Audio submenu options -->
+	<user4>	360 </user4>	<!-- Center x for Controls submenu options -->
+
+	<user5> &xbox; </user5>	<!-- Using a 360 controller? -->
+
+	<rect name="NOGLOW_BRANCH">
+		<id> &noglow_branch; </id>
+		<systemcolor> &mainmenu; </systemcolor>
+		<locus> &true; </locus>
+		<depth> 3 </depth>
+		<x> 0 </x>
+		<y> 0 </y>
+		<width> <copy src="screen()" trait="width"/> </width>
+		<height> <copy src="screen()" trait="height"/> </height>
+		<_x_buffer>
+			<copy src="screen()" trait="cropx"/>
+			<mult> 2 </mult>
+			<add>
+				<copy> 20 </copy>
+				<onlyif> &xbox; </onlyif>	<!-- Does not get overridden with user5 -->
+			</add>
+			<!--<add>
+				<copy src="screen()" trait="width"/>
+				<div> 8 </div>	--><!-- ( width(WS) - 3/4 width(reg) ) / 2 --><!--
+				<onlyif src="StartMenu" trait="user0"/>
+			</add>-->
+		</_x_buffer>
+
+		<nif name="pause_background">
+			<id> 13 </id>
+			<visible> <not src="sibling(main_title)" trait="visible"/> </visible>
+			<filename> Interface\PauseScreen\PauseScreen01.NIF </filename>
+			<x>
+				<copy src="screen()" trait="width"/>
+				<div> 2 </div>
+			</x>
+			<y> 480 </y>
+			<systemcolor> &nosystemcolor; </systemcolor>
+		</nif>
+
+		<text name="main_press_start">
+			<id> 9 </id>
+			<visible>
+				<copy> &xbox; </copy>	<!-- Does not get overridden with user5 -->
+				<and> <not src="sibling(main_container)" trait="visible"/> </and>
+			</visible>
+			
+			<alpha> 0 </alpha>	<!-- fade value set in code -->
+			<depth> 3 </depth>
+			<font> 7 </font>
+			<justify> &right; </justify>
+			<string> &-sPressStart; </string>
+			<x>
+				<copy src="parent()" trait="width"/>
+				<sub src="parent()" trait="_x_buffer"/>
+			</x>
+			<y>
+				<copy src="parent()" trait="height"/>
+				<!--<sub src="me()" trait="height"/>-->
+				<sub> 46 </sub>
+				<div> 2 </div>
+			</y>
+		</text>
+		
+		<text name="main_version">
+			<id> 10 </id>
+			<visible> &false; </visible>
+			<depth> 3 </depth>
+			<font> 3 </font>
+			
+			<x> <copy src="parent()" trait="_x_buffer"/> </x>
+			<y>
+				<copy src="parent()" trait="height"/>
+				<sub src="screen()" trait="cropy"/>
+				<sub src="screen()" trait="cropy"/>
+				<!--<sub src="me()" trait="height"/>-->
+				<sub> 31 </sub>
+			</y>
+		</text>
+
+		<hotrect name="main_container">
+			<include src="list_box.xml"/>
+			<id> 0 </id>
+			<alpha> 0 </alpha>
+			<visible>
+				<copy src="me()" trait="_alpha"/>
+				<gt> 0 </gt>
+				<!-- Because so much of StartMenu's logic is based on the visibility of the main listbox,
+				we will fake that it is still visible while the PS3 save/load system utility has control
+				even though we are fading it out in code. -->
+				<or src="io()" trait="_use_ps3_saveload_settings"/>
+			</visible>
+			
+			<target>
+				<not src="me()" trait="_enabled"/>
+				<and> <not> <copy src="io()" trait="user5"/> </not> </and>
+			</target>
+			<x>
+				<copy src="parent()" trait="width"/>
+        <sub src="me()" trait="width"/>
+				<sub src="parent()" trait="_x_buffer"/>
+			</x>
+			<y>
+				<copy src="parent()" trait="height"/>
+				<sub src="me()" trait="height"/>
+				<div> 2 </div>
+			</y>
+			<height>
+				<copy src="me()" trait="_number_of_visible_items"/>
+				<mult src="StartMenu" trait="_item_height"/>
+			</height>
+			<width>
+				<copy> 375 </copy>
+				<add src="me()" trait="_xbox_extra"/>
+			</width>
+
+      <_alpha></_alpha>	<!-- Fade value (set in code by fade control) -->
+			<_scrollbar_vis> &false; </_scrollbar_vis>
+			<_enabled> &false; </_enabled>
+			<_xbox_extra>	<!-- For box to fit around "Downloads" -->
+				<copy> 0 </copy>
+				<onlyif> &xbox; </onlyif>	<!-- Does not get overridden by user5 -->
+			</_xbox_extra>
+		</hotrect>
+
+		<hotrect name="settings_container">
+			<include src="list_box.xml"/>
+			<id> 1 </id>
+			<visible>
+				<copy src="me()" trait="_alpha"/>
+				<gt> 0 </gt>
+			</visible>
+			<alpha> 0 </alpha>
+			
+			<target>
+				<not src="me()" trait="_enabled"/>
+				<and src="me()" trait="visible"/>
+				<and> <not> <copy src="io()" trait="user5"/> </not> </and>
+			</target>
+			<x>
+				<copy src="sibling(main_container)" trait="x"/>
+				<sub src="me()" trait="width"/>
+				<add> 150  </add> <!-- force it back to the right to account for the words "downloadable content" -->
+				<add src="sibling(main_container)" trait="_xbox_extra"/>
+			</x>
+			<y> <copy src="sibling(main_container)" trait="y"/> </y>
+			<width> 155 </width>
+			
+			<_number_of_visible_items> 5 </_number_of_visible_items>
+			<_alpha></_alpha>		<!-- Fade value (set in code by fade control) -->
+			<_enabled> &false; </_enabled>
+			<_scrollbar_vis> &false; </_scrollbar_vis>
+		</hotrect>
+
+		<image name="saveload_screenshot">
+			<id> 11 </id>
+			<depth> 4 </depth>
+			<visible> &false; </visible>
+			<filename> Interface\Main\main_title.dds </filename>
+			
+			<x>
+				<copy src="sibling(saveload_container)" trait="x"/>
+				<add src="lb_scrollbar" trait="width"/>
+				<add src="sibling(saveload_container)" trait="_text_offset"/>
+			</x>
+			<y>
+				<copy src="sibling(saveload_playername)" trait="y"/>
+				<sub src="me()" trait="height"/>
+			</y>
+			<systemcolor> &nosystemcolor; </systemcolor>
+		</image>
+		<text name="saveload_playername">
+			<id> 12 </id>
+			<depth> 4 </depth>
+			<font> 7 </font>
+			<visible> &false; </visible>
+			<wrapwidth> <copy src="sibling(saveload_container)" trait="width"/> </wrapwidth>
+			
+			<x> <copy src="sibling(saveload_screenshot)" trait="x"/> </x>
+			<y>
+				<!--<copy src="sibling(saveload_playerlevel)" trait="y"/>
+				<sub src="me()" trait="height"/>
+				<add> 5 </add>-->
+				347
+			</y>
+		</text>
+		<text name="saveload_playerlevel">
+			<id> 18 </id>
+			<depth> 4 </depth>
+			<font> 7 </font>
+			<visible> &false; </visible>
+			
+			<x> <copy src="sibling(saveload_screenshot)" trait="x"/> </x>
+			<y>
+				<!--<copy src="sibling(saveload_playtime)" trait="y"/>
+				<sub src="me()" trait="height"/>
+				<add> 5 </add>-->
+				388
+			</y>
+		</text>
+		<text name="saveload_playtime">
+			<id> 19 </id>
+			<depth> 4 </depth>
+			<font> 7 </font>
+			<visible> &false; </visible>
+			
+			<x> <copy src="sibling(saveload_screenshot)" trait="x"/> </x>
+			<y>
+				<!--<copy src="sibling(saveload_container)" trait="y"/>
+				<sub src="me()" trait="height"/>
+				<sub> 5 </sub>-->
+				429
+			</y>
+		</text>
+    <text name="saveload_version">
+      <id> 22 </id>
+      <depth> 4 </depth>
+      <font> 7 </font>
+      <visible> &false; </visible>
+
+      <x>
+        <copy src="sibling(saveload_screenshot)" trait="x"/>
+      </x>
+      <y>
+        <!--<copy src="sibling(saveload_container)" trait="y"/>
+				<sub src="me()" trait="height"/>
+				<sub> 5 </sub>-->
+        470
+      </y>
+    </text>
+		<hotrect name="saveload_container">
+			<include src="list_box.xml"/>
+			<id> 6 </id>
+			<visible>
+				<copy src="me()" trait="_alpha"/>
+				<gt> 0 </gt>
+			</visible>
+			
+			<depth> 4 </depth>
+			<x>
+				<copy src="sibling(main_container)" trait="x"/>
+				<sub src="me()" trait="width"/>
+			</x>
+			<y> 521 </y>
+			<width> 650 </width>
+
+			<user0> &true; </user0>	<!-- true=unselected items are visible -->
+			
+			<_alpha></_alpha>		<!-- Fade value (set in code by fade control) -->
+			<_enabled> &false; </_enabled>
+			<_number_of_visible_items>
+				<copy> 4 </copy>
+				<add><!-- main menu mode -->
+					<copy> 1 </copy>
+					<onlyif src="sibling(main_title)" trait="visible"/>
+				</add>
+			</_number_of_visible_items>
+			<_text_offset> 10 </_text_offset>
+		</hotrect>
+
+		<hotrect name="confirm_container">
+			<include src="list_box.xml"/>
+			<id> 7 </id>
+			
+			<visible>
+				<copy src="me()" trait="_alpha"/>
+				<gt> 0 </gt>
+			</visible>
+			<depth> 3 </depth>
+			<x></x>			<!-- will be set in code -->
+			<y></y>			<!-- will be set in code -->
+			<width></width>	<!-- will be set in code -->
+			
+			<_enabled> &false; </_enabled>
+			<_number_of_visible_items> 3 </_number_of_visible_items>
+			<_scrollbar_vis> &false; </_scrollbar_vis>
+			<_alpha></_alpha>	<!-- Fade value -->
+
+			<text name="confirm_warning">
+				<id> 20 </id>
+				<string> &-sConfirmWarning; </string>
+				<alpha> <copy src="parent()" trait="_alpha"/> </alpha>
+				<depth> 3 </depth>
+				<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>
+				<font> 7 </font>
+				<x>
+					<copy src="sibling(confirm_question)" trait="x"/>
+					<sub src="sibling(confirm_question)" trait="width"/>
+				</x>
+				<y>
+					<!--<copy> 0 </copy>
+					<sub src="me()" trait="height"/>-->
+					-46
+				</y>
+			</text>
+			<text name="confirm_question">
+				<id> 8 </id>
+				<alpha> <copy src="parent()" trait="_alpha"/> </alpha>
+				<depth> 3 </depth>
+				<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>
+				<font> 7 </font>
+				<justify> &right; </justify>
+				<x> -20 </x>
+				<y>
+					<copy> 7 </copy>
+					<add>
+						<copy> 3 </copy>
+						<onlyifnot> <copy src="io()" trait="user5"/> </onlyifnot>
+					</add>
+				</y>
+        <wrapwidth> 520 </wrapwidth>
+      </text>
+		</hotrect>
+
+		<image name="options_brightness_gradient">
+			<id> 17 </id>
+			<depth> 3 </depth>
+			<visible> &false; </visible>
+			<filename> Interface\Shared\GrayscaleRamp01.dds </filename>
+			<width> 512 </width>
+			<height> 146 </height>
+			<x>
+				<copy src="sibling(options_container)" trait="x"/>
+				<add>
+					<copy src="sibling(options_container)" trait="width"/>
+					<sub src="me()" trait="width"/>
+					<div> 2 </div>
+				</add>
+			</x>
+			<y>
+				<copy src="sibling(options_container)" trait="y"/>
+				<sub src="me()" trait="height"/>
+				<sub> 10 </sub>
+			</y>
+			<systemcolor> &nosystemcolor; </systemcolor>
+		</image>
+		<text name="controls_header">
+			<id> 16 </id>
+			<depth> 3 </depth>
+			<justify> &center; </justify>
+			<visible> &false; </visible>
+			<alpha> <copy src="sibling(options_container)" trait="_alpha"/> </alpha>
+			
+			<x>
+				<copy src="sibling(options_container)" trait="x"/>
+				<add>
+					<copy src="sibling(options_container)" trait="width"/>
+					<div> 2 </div>
+				</add>
+			</x>
+			<y>
+				<copy src="sibling(options_container)" trait="y"/>
+				<!--<sub src="me()" trait="height"/>-->
+				<sub> 36 </sub>
+			</y>
+		</text>
+		<hotrect name="options_container">
+			<include src="list_box.xml"/>
+			<id> 2 </id>
+			<visible>
+				<copy src="me()" trait="_alpha"/>
+				<gt> 0 </gt>
+			</visible>
+			<!-- debug (make hotrect)
+			<alpha> 64 </alpha>
+			<target> &false; </target>
+			<!--=======-->
+			<depth> 3 </depth>
+			
+			<x>
+				<copy src="screen()" trait="width"/>
+				<sub src="me()" trait="width"/>
+				<div> 2 </div>
+				<sub>					<!-- offset by 40 to the left only on xbox and not widescreen -->
+					<copy> 190 </copy>	<!-- because of highlight box overlapping settings submenu -->
+					<onlyif> &xbox; </onlyif> <!-- Does not get overridden by user5 -->
+					<onlyifnot src="StartMenu" trait="user0"/>
+				</sub>
+			</x>
+			<y> <copy src="sibling(main_container)" trait="y"/> </y>
+			<width> 520 </width>
+			
+			<_alpha> </_alpha> <!-- Fade value -->
+			<_number_of_visible_items> 9 </_number_of_visible_items>
+			<_enabled> &false; </_enabled>
+			<_leftjustify> 1 </_leftjustify>
+		</hotrect>
+
+		<hotrect name="downloads_container">
+			<include src="list_box.xml"/>
+			<id> 14 </id>
+			<visible>
+				<copy src="me()" trait="_alpha"/>
+				<gt> 0 </gt>
+			</visible>
+			
+			<x>
+				<copy src="screen()" trait="width"/>
+				<sub src="me()" trait="width"/>
+				<div> 2 </div>
+        <sub> 150 </sub>
+			</x>
+			<y> <copy src="sibling(main_container)" trait="y"/> </y>
+			<width> 575 </width>
+			
+			<_alpha> </_alpha> <!-- Fade value -->
+			<_number_of_visible_items> 9 </_number_of_visible_items>
+			<_enabled> &false; </_enabled>
+			<_leftjustify> 1 </_leftjustify>
+		</hotrect>
+
+		<image name="container_background">
+			<filename> Interface\Shared\Background\fuzzy.dds </filename>
+			<zoom> &scale; </zoom>
+			<visible>
+				<copy src="options_container" trait="visible"/>
+				<or src="saveload_container" trait="visible"/>
+				<or src="downloads_container" trait="visible"/>
+			</visible>
+			<target> &false; </target>
+			<depth> 2 </depth>
+			<alpha>
+				<copy src="options_container" trait="_alpha"/>
+				<onlyif src="options_container" trait="visible"/>
+				<add>
+					<copy src="saveload_container" trait="_alpha"/>
+					<onlyif src="saveload_container" trait="visible"/>
+				</add>
+				<add>
+					<copy src="downloads_container" trait="_alpha"/>
+					<onlyif src="downloads_container" trait="visible"/>
+				</add>
+				<div> 255 </div>
+				<mult>
+					<copy> 255 </copy>		<onlyif src="io()" trait="_use_ps3_saveload_settings"/>
+					<add><copy> 160 </copy>	<onlyifnot src="io()" trait="_use_ps3_saveload_settings"/></add>
+				</mult>	<!-- This is the alpha you want at full fade-in -->
+			</alpha>
+			<x>
+				<copy src="options_container" trait="x"/>
+				<onlyif src="options_container" trait="visible"/>
+				<add>
+					<copy src="saveload_container" trait="x"/>
+					<onlyif src="saveload_container" trait="visible"/>
+				</add>
+				<add>
+					<copy src="downloads_container" trait="x"/>
+					<onlyif src="downloads_container" trait="visible"/>
+				</add>
+				<sub src="me()" trait="_x_stretch"/>
+			</x>
+			<y>
+				<copy> 0 </copy>
+				<sub src="me()" trait="_y_stretch"/>
+			</y>
+			<width>
+				<copy src="options_container" trait="width"/>
+				<onlyif src="options_container" trait="visible"/>
+				<add>
+					<copy src="saveload_container" trait="width"/>
+					<onlyif src="saveload_container" trait="visible"/>
+				</add>
+				<add>
+					<copy src="downloads_container" trait="width"/>
+					<onlyif src="downloads_container" trait="visible"/>
+				</add>
+				<add src="me()" trait="_x_stretch"/>
+				<add src="me()" trait="_x_stretch"/>
+			</width>
+			<height>
+				<copy src="parent()" trait="height"/>
+				<add src="me()" trait="_y_stretch"/>
+				<add src="me()" trait="_y_stretch"/>
+			</height>
+			<_x_stretch>
+				<copy> 500 </copy>		<onlyif src="io()" trait="_use_ps3_saveload_settings"/>
+				<add><copy> 50 </copy>	<onlyifnot src="io()" trait="_use_ps3_saveload_settings"/></add>
+			</_x_stretch>
+			<_y_stretch> 175 </_y_stretch>
+		</image>
+
+		<image name="main_title">
+			<id> 3 </id>
+			<alpha> 0 </alpha>	<!-- Fade value set in code -->
+			<depth> 1.5 </depth>
+			<systemcolor> &nosystemcolor; </systemcolor>
+			<filename> Interface\Main\main_title.dds  </filename>
+			<zoom>
+				<copy> 100 </copy>
+				<add>
+					<copy> 33.33 </copy>
+					<onlyif src="StartMenu" trait="user0"/>
+				</add>
+			</zoom>
+			<width> <copy src="me()" trait="filewidth"/> </width>
+			<height> <copy src="me()" trait="fileheight"/> </height>
+			<x> <copy src="parent()" trait="_x_buffer"/> </x>
+			<y>
+				<copy src="parent()" trait="height"/>
+				<sub src="me()" trait="height"/>
+				<div> 2 </div>
+			</y>
+		</image>
+
+		<hotrect name="main_device_button">
+			<id> 15 </id>
+			<include src="text_box.xml"/>
+			<depth> 3 </depth>
+			<visible>
+				<copy src="me()" trait="_line_alpha"/>
+				<gt> 0 </gt>
+				<and src="me()" trait="user0"/>
+			</visible>
+			<target>
+				<copy src="sibling(saveload_container)" trait="_enabled"/>
+				<onlyif> &xbox; </onlyif>	<!-- Does not get overridden by user5 -->
+				<add>
+					<copy src="sibling(options_container)" trait="_enabled"/>
+					<onlyifnot><copy src="io()" trait="user5"/></onlyifnot>
+				</add>
+			</target>
+			<string> &-sDevice; </string>
+			
+			<justify> &right; </justify>
+			<clicksound> UIMenuOK </clicksound>
+			<alpha>
+				<copy> 40 </copy>
+				<onlyif src="me()" trait="_box_visible"/>
+			</alpha>
+			<_x> <copy src="sibling(main_defaults_button)" trait="_x"/> </_x>
+			<_y>
+				<copy src="sibling(main_defaults_button)" trait="_y"/>
+				<sub>47</sub>
+			</_y>
+			<_glow> &true; </_glow>
+			<brightness> <copy src="me()" trait="_line_alpha"/> </brightness>
+			<_horbuf> <copy src="sibling(main_defaults_button)" trait="_horbuf"/> </_horbuf>
+			<_verbuf> <copy src="sibling(main_defaults_button)" trait="_verbuf"/> </_verbuf>
+			<_fixedwidth> <copy src="sibling(main_defaults_button)" trait="_fixedwidth"/> </_fixedwidth>
+			<_xbox_button> &xbuttonx; </_xbox_button>
+			<user0> &false; </user0>	<!-- additional visibility check -->
+
+			<_line_alpha>
+				<copy src="sibling(options_container)" trait="_alpha"/>
+				<max src="sibling(saveload_container)" trait="_alpha"/>
+				<min>
+					<copy> 128 </copy>
+					<add>
+						<copy> 127 </copy>
+						<onlyif src="me()" trait="target"/>
+					</add>
+				</min>
+			</_line_alpha>
+		</hotrect>
+		<hotrect name="main_defaults_button">
+			<!-- Used for defaults button with options or delete button with save/load -->
+			<id> 4 </id>
+			<include src="text_box.xml"/>
+			<depth> 3 </depth>
+			<visible>
+				<copy src="me()" trait="_line_alpha"/>
+				<gt> 0 </gt>
+				<and src="me()" trait="user0"/>
+			</visible>
+			<target>
+				<copy src="sibling(options_container)" trait="_enabled"/>
+				<or>
+					<copy src="io()" trait="user5"/>
+					<and src="sibling(saveload_container)" trait="_enabled"/>
+					<and src="me()" trait="_target"/>
+				</or>
+			</target>
+			<_target> &false; </_target>	<!-- Set in code:  true when a save game is currently highlighted -->
+			<justify> &right; </justify>
+			<clicksound> UIMenuOK </clicksound>
+			<alpha>
+				<copy> 40 </copy>
+				<onlyif src="me()" trait="_box_visible"/>
+			</alpha>
+			<_x>
+				<copy src="main_container" trait="x"/>
+				<add src="main_container" trait="width"/>
+				<sub>
+					<copy src="child(xbox_button)" trait="width"/>
+					<sub> 25 </sub>
+					<onlyif> <copy src="io()" trait="user5"/> </onlyif>
+				</sub>
+			</_x>
+			<_y>
+				<copy src="sibling(main_back_button)" trait="_y"/>
+				<sub>47</sub>
+			</_y>
+			<_glow> &true; </_glow>
+			<_xbox_button> &xbuttony; </_xbox_button>
+			<_fixedwidth> 150 </_fixedwidth>
+			<brightness> <copy src="me()" trait="_line_alpha"/> </brightness>
+			<_horbuf> 30 </_horbuf>
+			<_verbuf> 10 </_verbuf>
+			<user0> &true; </user0>      <!-- additional visibility check -->
+
+			<_line_alpha>
+				<copy src="sibling(options_container)" trait="_alpha"/>
+				<max>
+					<copy src="sibling(saveload_container)" trait="_alpha"/>
+					<onlyif> <copy src="io()" trait="user5"/> </onlyif>
+				</max>
+				<min>
+					<copy> 128 </copy>
+					<add>
+						<copy> 127 </copy>
+						<onlyif src="me()" trait="target"/>
+					</add>
+				</min>
+			</_line_alpha>
+		</hotrect>
+		<hotrect name="main_back_button">
+			<id> 5 </id>
+			<include src="text_box.xml"/>
+			<depth> 3 </depth>
+			<visible>
+				<copy src="me()" trait="_line_alpha"/>
+				<gt> 0 </gt>
+			</visible>
+			<string> &-sBack; </string>
+
+			<justify> &right; </justify>
+			<clicksound> UIMenuCancel </clicksound>
+			<alpha>
+				<copy> 40 </copy>
+				<onlyif src="me()" trait="_box_visible"/>
+			</alpha>
+			<_glow> &true; </_glow>
+			<_alpha></_alpha>
+			<!-- Fade value.  Set in code by fade control -->
+			<_x>
+				<copy src="sibling(main_defaults_button)" trait="_x"/>
+			</_x>
+			<_y>
+				<copy src="parent()" trait="height"/>
+				<sub src="me()" trait="height"/>
+				<sub src="screen()" trait="cropy"/>
+				<sub src="screen()" trait="cropy"/>
+			</_y>
+			<_line_alpha>
+				<copy src="me()" trait="_alpha"/>
+				<min>
+					<copy> 255 </copy>
+					<sub>
+						<copy> 127 </copy>
+						<onlyifnot src="me()" trait="target"/>
+					</sub>
+				</min>
+			</_line_alpha>
+			<brightness>
+				<copy src="me()" trait="_line_alpha"/>
+			</brightness>
+			<_xbox_button> &xbuttonb; </_xbox_button>
+			<_fixedwidth>
+				<copy src="sibling(main_defaults_button)" trait="_fixedwidth"/>
+			</_fixedwidth>
+			<_horbuf>
+				<copy src="sibling(main_defaults_button)" trait="_horbuf"/>
+			</_horbuf>
+			<_verbuf>
+				<copy src="sibling(main_defaults_button)" trait="_verbuf"/>
+			</_verbuf>
+		</hotrect>
+		<hotrect name="main_redeem_code_button">
+			<id> 21 </id>
+			<include src="text_box.xml"/>
+			<depth> 3 </depth>
+			<visible>
+				<copy src="me()" trait="_line_alpha"/>
+				<gt> 0 </gt>
+			</visible>
+			<string> &-sRedeemCode; </string>
+			<justify> &right; </justify>
+			<clicksound> UIMenuOK </clicksound>
+			<alpha>
+				<copy> 40 </copy>
+				<onlyif src="me()" trait="_box_visible"/>
+			</alpha>
+			<_glow> &true; </_glow>
+			<_alpha></_alpha>
+			<_x>
+				<copy src="sibling(main_back_button)" trait="_x"/>
+			</_x>
+			<_y>
+				<copy src="sibling(main_back_button)" trait="_y"/>
+				<sub>64</sub>
+			</_y>
+			<_line_alpha>
+				<copy src="me()" trait="_alpha"/>
+				<min>
+					<copy> 255 </copy>
+					<sub>
+						<copy> 127 </copy>
+						<onlyifnot src="me()" trait="target"/>
+					</sub>
+				</min>
+			</_line_alpha>
+			<brightness>
+				<copy src="me()" trait="_line_alpha"/>
+			</brightness>
+			<_xbox_button> &xbuttony; </_xbox_button>
+			<width> 250 </width>
+			<_horbuf>
+				<copy src="sibling(main_defaults_button)" trait="_horbuf"/>
+			</_horbuf>
+			<_verbuf>
+				<copy src="sibling(main_defaults_button)" trait="_verbuf"/>
+			</_verbuf>
+		</hotrect>
+	</rect>
+	
+	<rect name="GLOW_BRANCH">
+		<id> &glow_branch; </id>
+	</rect>
+
+	<template name="lb_item_template">
+		<hotrect name="lb_item_hotrect">
+			<include src="list_box_template.xml"/>
+			
+			<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>	
+			<height> <copy src="io()" trait="_item_height"/> </height>
+
+			<user0> 0 </user0>	<!-- action mapping visibility: 0=none 1=button text 2=button icon -->
+			<user1></user1>		<!-- button text or icon filename -->
+
+			<text name="ListItemText">
+				<font> 7 </font>
+				<string> <copy src="parent()" trait="string"/> </string>
+				<justify>
+					<copy> &left; </copy>
+					<onlyif>
+						<copy src="grandparent()" trait="_leftjustify"/>
+						<eq> 1 </eq>
+					</onlyif>
+					<add>
+						<copy> &right; </copy>
+						<onlyifnot>
+							<copy src="grandparent()" trait="_leftjustify"/>
+							<eq> 1 </eq>
+						</onlyifnot>
+					</add>
+				</justify>
+				
+				<alpha>
+					<copy src="grandparent()" trait="_alpha"/>
+					<min>
+						<copy> 255 </copy>
+						<sub>
+							<copy> 128 </copy>
+							<onlyifnot>
+								<copy src="grandparent()" trait="_enabled"/>
+								<or src="parent()" trait="_selected"/>
+								<and src="parent()" trait="_enabled"/>
+							</onlyifnot>
+						</sub>
+					</min>
+				</alpha>
+				<brightness>
+					<copy src="me()" trait="alpha"/>
+				</brightness>
+				
+				<x>
+					<copy src="parent()" trait="width"/>
+					<sub> 20 </sub>
+					<onlyif>
+						<copy src="me()" trait="justify"/>
+						<eq> &right; </eq>
+					</onlyif>
+					<add>
+						<copy> 20 </copy>
+						<onlyif>
+							<copy src="me()" trait="justify"/>
+							<eq> &left; </eq>
+						</onlyif>
+					</add>
+				</x>
+				<y> 10 </y>
+			</text>
+
+			<text name="lb_item_button_text">
+				<visible>
+					<copy src="parent()" trait="user0"/>
+					<eq> 1 </eq>
+				</visible>
+				<string> <copy src="parent()" trait="user1"/> </string>
+				<justify> &center; </justify>
+				<font> 7 </font>
+				<alpha>
+					<copy src="grandparent()" trait="_alpha"/>
+					<min>
+						<copy> 255 </copy>
+						<sub>
+							<copy> 128 </copy>
+							<onlyifnot>
+								<copy src="grandparent()" trait="_enabled"/>
+								<or src="parent()" trait="_selected"/>
+								<and src="parent()" trait="_enabled"/>
+							</onlyifnot>
+						</sub>
+					</min>
+				</alpha>
+				<brightness>
+					<copy src="me()" trait="alpha"/>
+				</brightness>
+				<x>
+					<copy src="parent()" trait="width"/>
+					<sub> 50 </sub>
+					<sub>
+						<copy> 30 </copy>
+						<onlyifnot> <copy src="io()" trait="user5"/> </onlyifnot>
+					</sub>
+				</x>
+				<y> 10 </y>
+			</text>
+
+			<image name="lb_item_button_icon">
+				<visible>
+					<copy src="parent()" trait="user0"/>
+					<eq> 2 </eq>
+				</visible>
+				<filename> <copy src="parent()" trait="user1"/> </filename>
+				<texatlas> Interface\InterfaceShared.tai </texatlas>		<!-- Make sure to pull button icons from the texture atlas -->
+				
+				<!-- #37077: For reasons unknown, making the icons 64x64 introduces small artifacts.  Going to 63x63 seems to fix it -->
+				<width> 63 </width>
+				<height> 63 </height>
+				<alpha>
+					<copy src="grandparent()" trait="_alpha"/>
+					<min>
+						<copy> 255 </copy>
+						<sub>
+							<copy> 128 </copy>
+							<onlyifnot>
+								<copy src="grandparent()" trait="_enabled"/>
+								<or src="parent()" trait="_selected"/>
+								<and src="parent()" trait="_enabled"/>
+							</onlyifnot>
+						</sub>
+					</min>
+				</alpha>
+				<brightness>
+					<copy src="me()" trait="alpha"/>
+				</brightness>
+				<x>
+					<copy src="sibling(lb_item_button_text)" trait="x"/>
+					<sub>
+						<copy src="me()" trait="width"/>
+						<div> 2 </div>
+					</sub>
+				</x>
+				<y>
+					<copy src="parent()" trait="height"/>
+					<sub src="me()" trait="height"/>
+					<div> 2 </div>
+				</y>
+			</image>
+		</hotrect>
+	</template>
+
+	<template name="lb_meter_template">
+		<hotrect name="lb_meter_template_item">
+			<include src="list_box_template.xml"/>
+			
+			<clicksound> &nosound; </clicksound>
+			<xdefault> 1 </xdefault>
+			<repeathorizontal> &true; </repeathorizontal>
+			<user0></user0>		<!-- num ticks to display -->
+			<user1>
+				<copy src="me()" trait="user3"/>
+				<div> 5 </div>
+			</user1>
+			<user2> 1 </user2>	<!-- arrow display (0=left 1=both 2=right) -->
+			<user3></user3>		<!-- max ticks to display -->
+			<user4> 10 </user4>	<!-- arrow spacing -->
+			
+			<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>
+			<_VerticalSpacing> 10 </_VerticalSpacing>
+			
+			<text name="ListItemText">
+				<font> 7 </font>
+				<string> <copy src="parent()" trait="string"/> </string>
+				
+				<alpha> <copy src="grandparent()" trait="_alpha"/> </alpha>
+				
+				<x> 10 </x>
+				<y> 13 </y>
+			</text>
+			
+			<image name="lb_meter_left">
+				<id> 100 </id>
+				<filename> Interface\Main\main_arrow_left.dds </filename>
+				<alpha> <copy src="grandparent()" trait="_alpha"/> </alpha>
+				<target> &true; </target>
+				<clicksound> UIMenuPrevNext </clicksound>
+				<depth> 3 </depth>
+				<visible>
+					<copy src="parent()" trait="mouseover"/>
+					<add src="me()" trait="mouseover"/>
+					<add src="sibling(lb_meter_hotrect)" trait="mouseover"/>
+					<add src="sibling(lb_meter_right)" trait="mouseover"/>
+					<eq> 1 </eq>
+					<and>
+						<copy src="parent()" trait="user2"/>
+						<lt> 2 </lt>
+					</and>
+				</visible>
+				<x>
+					<copy src="sibling(lb_meter_hotrect)" trait="x"/>
+					<sub src="parent()" trait="user4"/>
+					<sub src="me()" trait="width"/>
+				</x>
+				<y>
+					<copy src="parent()" trait="height"/>
+					<sub src="me()" trait="height"/>
+					<div> 2 </div>
+				</y>
+				<width> 13 </width>
+				<height> 23 </height>
+			</image>
+			<hotrect name="lb_meter_hotrect">
+				<id> 102 </id>
+				<locus> &true; </locus>
+				<target> &true; </target>
+				<alpha> 30 </alpha>
+				<clicksound> UIMenuPrevNext </clicksound>
+				<depth> 3 </depth>
+				<x>
+					<copy src="me()" trait="_center_x"/>
+					<sub>
+						<copy src="me()" trait="width"/>
+						<div> 2 </div>
+					</sub>
+				</x>
+				<y>
+					<copy src="parent()" trait="height"/>
+					<sub src="me()" trait="height"/>
+					<div> 2 </div>
+				</y>
+				
+				<width>
+					<copy src="parent()" trait="user3"/>
+					<mul> 8 </mul>
+				</width>
+				<height> 24 </height>
+				<_alpha> <copy src="grandparent()" trait="_alpha"/> </_alpha>
+				<_center_x> <copy src="StartMenu" trait="_center_x"/> </_center_x>
+				<rect name="lb_meter_image">
+					<include src="meter.xml"/>
+					<alpha> <copy src="parent()" trait="_alpha"/> </alpha>
+					<width> <copy src="parent()" trait="width"/> </width>
+
+					<_Value>
+						<copy src="grandparent()" trait="user0"/>
+						<div src="grandparent()" trait="user3"/>
+					</_Value>
+				</rect>
+			</hotrect>
+			<image name="lb_meter_right">
+				<id> 101 </id>
+				<alpha> <copy src="grandparent()" trait="_alpha"/> </alpha>
+				<filename> Interface\Main\main_arrow_right.dds </filename>
+				<target> &true; </target>
+				<clicksound> UIMenuPrevNext </clicksound>
+				<depth> 3 </depth>
+				<visible>
+					<copy src="parent()" trait="mouseover"/>
+					<add src="me()" trait="mouseover"/>
+					<add src="sibling(lb_meter_hotrect)" trait="mouseover"/>
+					<add src="sibling(lb_meter_left)" trait="mouseover"/>
+					<eq> 1 </eq>
+					<and>
+						<copy src="parent()" trait="user2"/>
+						<gt> 0 </gt>
+					</and>
+				</visible>
+				<x>
+					<copy src="sibling(lb_meter_hotrect)" trait="x"/>
+					<add src="sibling(lb_meter_hotrect)" trait="width"/>
+					<add src="parent()" trait="user4"/>
+				</x>
+				<y> <copy src="sibling(lb_meter_left)" trait="y"/> </y>
+				<width> <copy src="sibling(lb_meter_left)" trait="width"/> </width>
+				<height> <copy src="sibling(lb_meter_left)" trait="height"/> </height>
+			</image>
+		</hotrect>
+	</template>
+
+	<template name="lb_toggle_template">
+		<hotrect name="lb_toggle_template_item">
+			<include src="list_box_template.xml"/>
+			
+			<clicksound> &nosound; </clicksound>
+			<xdefault> 1 </xdefault>
+			<user0></user0>		<!-- value string -->
+			<user1> 0 </user1>	<!-- jump value (LB/RB) -->
+			<user2></user2>		<!-- arrow display (0=left 1=both 2=right) -->
+			<user4> 45 </user4>	<!-- arrow spacing -->
+			
+			<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>
+			<_VerticalSpacing> 10 </_VerticalSpacing>
+			
+			<text name="ListItemText">
+				<font> 7 </font>
+				<string> <copy src="parent()" trait="string"/> </string>
+				
+				<alpha>
+					<copy src="grandparent()" trait="_alpha"/>
+					<min>
+						<copy> 255 </copy>
+						<sub>
+							<copy> 128 </copy>
+							<onlyifnot src="parent()" trait="_enabled"/>
+						</sub>
+					</min>
+				</alpha>
+				
+				<x> 10 </x>
+				<y> 13 </y>
+			</text>
+				
+			<image name="lb_toggle_left">
+				<id> 100 </id>
+				<filename> Interface\Main\main_arrow_left.dds </filename>
+				<clicksound> UIMenuPrevNext </clicksound>
+				<alpha> <copy src="sibling(ListItemText)" trait="alpha"/> </alpha>
+				<target> &true; </target>
+				<depth> 5 </depth>
+				<visible>
+					<copy src="parent()" trait="mouseover"/>
+					<add src="me()" trait="mouseover"/>
+					<add src="sibling(lb_toggle_right)" trait="mouseover"/>
+					<add src="sibling(lb_toggle_value)" trait="mouseover"/>
+					<eq> 1 </eq>
+					<and>
+						<copy src="parent()" trait="user2"/>
+						<lt> 2 </lt>
+					</and>
+				</visible>
+				<x>
+					<copy src="sibling(lb_toggle_value)" trait="_x"/>
+					<sub src="parent()" trait="user4"/>
+					<sub src="me()" trait="width"/>
+				</x>
+				<y>
+					<copy src="parent()" trait="height"/>
+					<sub src="me()" trait="height"/>
+					<div> 2 </div>
+				</y>
+				<width> 13 </width>
+				<height> 23 </height>
+			</image>
+			<hotrect name="lb_toggle_value">
+				<id> &generic; </id>
+				<include src="text_box.xml"/>
+				<clicksound> UIMenuPrevNext </clicksound>
+				<depth> 3 </depth>
+				<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>
+				<string> <copy src="parent()" trait="user0"/> </string>
+				<justify> &center; </justify>
+				<_glow> &true; </_glow>
+				<_x>
+					<copy src="StartMenu" trait="_center_x"/>
+					<add> 10 </add>
+				</_x>
+				<_y> 1 </_y>
+				<_box_visible> &false; </_box_visible>
+				<_horbuf> 20 </_horbuf>
+				<_verbuf> 10 </_verbuf>
+				<_line_alpha> <copy src="sibling(ListItemText)" trait="alpha"/> </_line_alpha>
+			</hotrect>
+			<image name="lb_toggle_right">
+				<id> 101 </id>
+				<alpha> <copy src="sibling(ListItemText)" trait="alpha"/> </alpha>
+				<filename> Interface\Main\main_arrow_right.dds </filename>
+				<clicksound> UIMenuPrevNext </clicksound>
+				<target> &true; </target>
+				<depth> 5 </depth>
+				<visible>
+					<copy src="parent()" trait="mouseover"/>
+					<add src="me()" trait="mouseover"/>
+					<add src="sibling(lb_toggle_left)" trait="mouseover"/>
+					<add src="sibling(lb_toggle_value)" trait="mouseover"/>
+					<eq> 1 </eq>
+					<and>
+						<copy src="parent()" trait="user2"/>
+						<gt> 0 </gt>
+					</and>
+				</visible>
+				<x>
+					<copy src="sibling(lb_toggle_value)" trait="_x"/>
+					<add src="parent()" trait="user4"/>
+				</x>
+				<y> <copy src="sibling(lb_toggle_left)" trait="y"/> </y>
+				<width> <copy src="sibling(lb_toggle_left)" trait="width"/> </width>
+				<height> <copy src="sibling(lb_toggle_left)" trait="height"/> </height>
+			</image>
+		</hotrect>
+	</template>
+
+	<template name="lb_saveload_template">
+		<hotrect name="lb_saveload_template_item">
+			<include src="list_box_template.xml"></include>
+			<xdefault> 1 </xdefault>
+
+			<user0></user0>	<!-- Save prefix (either game number, AUTO, or QUICK) -->
+			<user1></user1>	<!-- Save Location -->
+
+			<visible>
+				<copy src="parent()" trait="user0"/>
+				<or src="me()" trait="_selected"/>
+				<and>
+					<copy src="me()" trait="listindex"/>
+					<gte> 0 </gte>
+				</and>
+			</visible>
+
+			<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>
+			<_VerticalSpacing> 10 </_VerticalSpacing>
+			
+			<text name="lb_saveload_prefix">
+				<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>
+				<font> 7 </font>
+				<alpha> <copy src="grandparent()" trait="_alpha"/> </alpha>
+				<string> <copy src="parent()" trait="user0"/> </string>
+				<x> <copy src="grandparent()" trait="_text_offset"/> </x>
+				<y> 13 </y>
+			</text>
+			<text name="lb_saveload_location">
+				<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>
+				<font> 7 </font>
+				<alpha> <copy src="grandparent()" trait="_alpha"/> </alpha>
+				<string> <copy src="parent()" trait="user1"/> </string>
+				<x> 100 </x>
+				<y> <copy src="sibling(lb_saveload_prefix)" trait="y"/> </y>
+			</text>
+		</hotrect>
+	</template>
+	<template name="lb_newsave_template">
+		<hotrect name="lb_newsave_template_item">
+			<include src="list_box_template.xml"></include>
+			
+			<xdefault> 1 </xdefault>
+			<visible>
+				<copy src="parent()" trait="user0"/>
+				<or src="me()" trait="_selected"/>
+				<and>
+					<copy src="me()" trait="listindex"/>
+					<gte> 0 </gte>
+				</and>
+			</visible>
+			<brightness> <copy src="StartMenu" trait="brightness"/> </brightness>
+			<_VerticalSpacing> 10 </_VerticalSpacing>
+			
+			<text name="ListItemText">
+				<font> 7 </font>
+				<string> <copy src="parent()" trait="string"/> </string>
+				<alpha> <copy src="grandparent()" trait="_alpha"/> </alpha>
+				
+				<x> <copy src="grandparent()" trait="_text_offset"/> </x>
+				<y> 13 </y>
+			</text>
+		</hotrect>
+	</template>
+
+	<include src="includes_StartMenu.xml" />
+</menu>

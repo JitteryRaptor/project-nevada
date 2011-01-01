@@ -1,0 +1,46 @@
+<_PNxCPButtonEnabled> 0 </_PNxCPButtonEnabled>
+	
+<_PNxCPButtonPressed>
+	<copy src="PNxControlPanelBtn" trait="_state" />
+</_PNxCPButtonPressed>
+
+<hotrect name="PNxControlPanelBtn">
+	<depth> 3 </depth>
+	<visible>
+		<copy src="main_container" trait="childcount" />
+		<eq> 8 </eq>
+		<and> <not src="main_back_button" trait="visible" /> </and>
+		<and> <not src="confirm_container" trait="visible" /> </and>
+		<and src="io()" trait="_PNxCPButtonEnabled" />
+	</visible>
+	
+	<zoom> &scale; </zoom>
+	<systemcolor> &mainmenu; </systemcolor>
+	<brightness> <copy src="StartMenu" trait="brightness" /> </brightness>
+	<clicksound> UIMenuOK </clicksound>
+	<mouseoversound> UIMenuFocus </mouseoversound>
+	<alpha>
+		<copy> 155 </copy>
+		<add>
+			<copy> 100 </copy>
+			<onlyif src="me()" trait="mouseover" />
+		</add>
+	</alpha>
+	<x>
+		<copy src="main_container" trait="x" />
+		<add src="main_container" trait="width" />
+		<sub src="me()" trait="width" />
+	<x>
+	<y>
+		<copy src="screen()" trait="height" />
+		<sub src="me()" trait="height" />
+		<sub> 10 </sub>
+	</y>
+	<width> 128 </width>
+	<height> 128 </height>
+	
+	<user0> &true; </user0>
+	<target> &true; </target>
+	
+	<filename> pnx\hud\cp\cp_icon.dds </filename>
+</hotrect>
