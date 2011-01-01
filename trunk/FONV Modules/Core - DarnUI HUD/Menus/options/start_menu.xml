@@ -201,12 +201,6 @@
 	
 	
 	<_DUIF3SettingsMode> <copy src="sibling(HUDMainMenu)" trait="_DUIF3SettingsMode" /> </_DUIF3SettingsMode>
-	
-	<_PNxCPButtonEnabled> 0 </_PNxCPButtonEnabled>
-	
-	<_PNxCPButtonPressed>
-		<copy src="PNxControlPanelBtn" trait="_state" />
-	</_PNxCPButtonPressed>
 
 	<alpha>	0 </alpha>
 	<locus> &true; </locus>
@@ -1442,55 +1436,6 @@
 			<_line_alpha> <copy src="sibling(main_container)" trait="_alpha" /> </_line_alpha>
 		</hotrect>
 		
-		
-		
-		
-		
-		
-		<hotrect name="PNxControlPanelBtn">
-			<include src="darn\duisettings_toggle_button.xml" />
-
-			<string> Control Panel </string> 
-
-			<depth> 3 </depth>
-			<visible>
-				<copy src="io()" trait="_isPauseMenu" />
-				<and> <not src="sibling(main_back_button)" trait="visible" /> </and>
-				<and> <not src="sibling(confirm_container)" trait="visible" /> </and>
-				<and src="io()" trait="_PNxCPButtonEnabled" />
-			</visible>
-			<font> 7 </font>
-			<systemcolor> &mainmenu; </systemcolor>
-			<brightness> <copy src="StartMenu" trait="brightness" /> </brightness>
-			<clicksound> UIMenuOK </clicksound>
-			<mouseoversound> UIMenuFocus </mouseoversound>
-			<alpha>
-				<copy> 40 </copy>
-				<onlyif src="me()" trait="_box_visible" />
-			</alpha>
-			<_x>
-				<copy src="sibling(main_container)" trait="x" />
-				<add src="sibling(main_container)" trait="width" />
-			</_x>
-			<_y>
-				<copy src="sibling(main_container)" trait="y" />
-				<add src="sibling(main_container)" trait="height" />
-				<add> 140 </add>
-			</_y>
-			<_glow> &true; </_glow>
-			<_horbuf> 30 </_horbuf>
-			<_verbuf> 10 </_verbuf>
-			<_fixedwidth> 140 </_fixedwidth>
-			<_button_placement> &right; </_button_placement>
-			<_xbox_button> &xbuttonrt; </_xbox_button>
-			<user0> &true; </user0>
-			<justify> &right; </justify>
-			<_hint> &-sPCMenuHintX; </_hint>
-			<_text_y_adjust> 6 </_text_y_adjust>
-
-			<_line_alpha> <copy src="sibling(main_container)" trait="_alpha" /> </_line_alpha>
-		</hotrect-->
-		
 	</rect>
 
 	<rect name="GLOW_BRANCH">
@@ -2060,4 +2005,6 @@
 			</text>
 		</hotrect>
 	</template>
+
+	<include src="includes_StartMenu.xml" />
 </menu>
