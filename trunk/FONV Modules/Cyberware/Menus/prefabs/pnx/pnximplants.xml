@@ -1,11 +1,16 @@
 ﻿<!-- ######################################################################################## General -->
-<_PNxDialog> 1 </_PNxDialog>
+<_PNxCyberware> 1 </_PNxCyberware>
 
 
 <!-- ######################################################################################## IO Implants Panel -->
 <_PNxImplantsPanelEnabled> 0 </_PNxImplantsPanelEnabled>
+<_PNxImplantsPanelAcceptEnabled> 0 </_PNxImplantsPanelAcceptEnabled>
+<_PNxImplantsPanelAcceptSelected> <copy src="PNxImplantsPanelAcceptButton" trait="_Selected" /> </_PNxImplantsPanelAcceptSelected>
+<_PNxImplantsPanelCaps> 0 </_PNxImplantsPanelCaps>
+<_PNxImplantsPanelPrice> 0 </_PNxImplantsPanelPrice>
 
 <_PNxCyberboyRegion> 0 </_PNxCyberboyRegion>
+<_PNxCyberboyRegionReset> 0 </_PNxCyberboyRegionReset>
 <_PNxCyberboyShowRightSlot> 0 </_PNxCyberboyShowRightSlot>
 <_PNxCyberboyShowLeftSlot> 0 </_PNxCyberboyShowLeftSlot>
 <_PNxCyberboyMenuActive> 0 </_PNxCyberboyMenuActive>
@@ -22,16 +27,15 @@
 <_PNxCyberboyRightImplantSelected> <copy src="PNxCyberboyRightImplant" trait="_Selected" /> </_PNxCyberboyRightImplantSelected>
 <_PNxCyberboyLeftImplantSelected> <copy src="PNxCyberboyLeftImplant" trait="_Selected" /> </_PNxCyberboyLeftImplantSelected>
 
-
 <!-- ######################################################################################## Implants Panel -->
 <rect name="PNxImplantsPanel">
 
+	<visible>
+		<copy src="io()" trait="_PNxImplantsPanelEnabled" />
+	</visible>
+
 	<image name="PNxImplantsPanelBackground">
 		<systemcolor> &hudmain; </systemcolor>
-	
-		<visible>
-			<copy src="io()" trait="_PNxImplantsPanelEnabled" />
-		</visible>
 		
 		<zoom> &scale; </zoom>
 		<depth> 0 </depth>
@@ -54,10 +58,6 @@
 	<image name="PNxCyberboyLines">
 		<systemcolor> &nosystemcolor; </systemcolor>
 		
-		<visible>
-			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
-		</visible>
-		
 		<zoom> &scale; </zoom>
 		<depth> 11 </depth>
 			
@@ -70,7 +70,14 @@
 			</sub>
 		</x>
 		
-		<y> 100 </y>
+		<y>
+			<copy src="screen()" trait="height" />
+			<div> 2 </div>
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
 		
 		<width> 1024 </width>
 		<height> 576 </height>
@@ -82,8 +89,478 @@
 			<copy src="me()" trait="_filename_" />
 		</filename>
 	</image>
-		
+	
+	<image name="PNxCyberboyBackground">
+		<filename> Interface\Shared\Background\solid_black.dds </filename>
+		<width>
+			<copy src="screen()" trait="width"/>
+			<mul src="me()" trait="_scale"/>
+		</width>
+		<height>
+			<copy src="screen()" trait="height"/>
+			<mul src="me()" trait="_scale"/>
+		</height>
+		<x>
+			<copy src="screen()" trait="width"/>
+			<sub src="me()" trait="width"/>
+			<div> 2 </div>
+		</x>
+		<y>
+			<copy src="screen()" trait="height"/>
+			<sub src="me()" trait="height"/>
+			<div> 2 </div>
+		</y>
+		<zoom> &scale; </zoom>
 
+		<brightness> 128 </brightness>
+		<alpha> <copy src="globals()" trait="_background_fill_alpha"/> </alpha>
+		<locus> &true; </locus>
+		<_scale> 0.8 </_scale>
+		
+		<rect name="PNxCyberboyFrame">
+			<locus> &true; </locus>
+			<depth> 3 </depth>
+			<_buffer> 10 </_buffer>
+
+			<image name="ulcv">
+				<include src="vertical_fade_line.xml"/>
+				<_x> 48 </_x>
+				<_y> 96 </_y>
+			</image>
+
+			<image name="ulch">
+				<include src="line.xml"/>
+				<_length> 50 </_length>
+				<x> <copy src="sibling(ulcv)" trait="_x"/> </x>
+				<y>
+					<copy src="sibling(ulcv)" trait="_y"/>
+					<add> 0 </add>
+				</y>
+				<depth> 2 </depth>
+			</image>
+
+			<text name="title">
+				<x>
+					<copy src="sibling(ulcv)" trait="_x"/>
+					<add src="sibling(ulch)" trait="width"/>
+					<add src="parent()" trait="_buffer"/>
+				</x>
+				<y>
+					<copy src="sibling(ulch)" trait="y"/>
+					<add>
+						<copy src="sibling(ulch)" trait="height"/>
+						<sub src="me()" trait="height"/>
+						<div> 2 </div>
+					</add>
+					<add> 5 </add>
+				</y>
+				<font> 6 </font>
+				<string> Cybernetic Implants </string>
+			</text>
+
+			<image name="umh">
+				<include src="line.xml"/>
+				<x>
+					<copy src="sibling(title)" trait="x"/>
+					<add src="sibling(title)" trait="width"/>
+					<add src="parent()" trait="_buffer"/>
+				</x>
+				<y> <copy src="sibling(urcv)" trait="y"/> </y>
+				<_length>
+					<copy src="sibling(urcv)" trait="x"/>
+					<sub src="me()" trait="x"/>
+				</_length>
+			</image>
+
+			<image name="urcv">
+				<include src="vertical_fade_line.xml"/>
+				<_x>
+					<copy src="grandparent()" trait="width"/>
+					<sub src="sibling(ulcv)" trait="_x"/>
+					<sub>
+						<copy src="me()" trait="width"/>
+						<onlyif> &xbox; </onlyif>
+					</sub>
+				</_x>
+				<_y> <copy src="sibling(ulcv)" trait="_y"/> </_y>
+			</image>
+
+			<image name="llcv">
+				<include src="vertical_fade_line.xml"/>
+				<_bottom_to_top> &true; </_bottom_to_top>
+				<_x> <copy src="sibling(ulcv)" trait="_x"/> </_x>
+				<_y>
+					<copy src="grandparent()" trait="height"/>
+					<sub src="sibling(ulcv)" trait="_y"/>
+				</_y>
+			</image>
+
+			<image name="llch">
+				<include src="line.xml"/>
+				<_length>
+					<copy src="sibling(ulch)" trait="_length"/>
+				</_length>
+				<x> <copy src="sibling(ulcv)" trait="_x"/> </x>
+				<y>
+					<copy src="sibling(llcv)" trait="_y"/>
+					<sub src="me()" trait="height"/>
+				</y>
+			</image>
+			
+			<image name="nevada_symbol">
+				<filename> pnx\hud\cy\nevada.dds </filename>
+				<zoom> &scale; </zoom>
+				<x>
+					<copy src="sibling(llch)" trait="x"/>
+					<add src="sibling(llch)" trait="width"/>
+				</x>
+				<y>
+					<copy src="sibling(llch)" trait="y"/>
+					<add>
+						<copy src="sibling(llch)" trait="height"/>
+						<sub src="me()" trait="height"/>
+						<div> 2 </div>
+					</add>
+				</y>
+				<height> 34 </height>
+				<width> 118 </width>
+			</image>
+
+			<image name="lrch">
+				<include src="line.xml"/>
+				<_length>
+					<copy src="sibling(lrcv)" trait="_x"/>
+					<sub src="me()" trait="x"/>
+				</_length>
+				<x>
+					<copy src="sibling(nevada_symbol)" trait="x"/>
+					<add src="sibling(nevada_symbol)" trait="width"/>
+				</x>
+				<y> <copy src="sibling(llch)" trait="y"/> </y>
+			</image>
+
+			<image name="lrcv">
+				<include src="vertical_fade_line.xml"/>
+				<_bottom_to_top> &true; </_bottom_to_top>
+				<_x> <copy src="sibling(urcv)" trait="_x"/> </_x>
+				<_y> <copy src="sibling(llcv)" trait="_y"/> </_y>
+			</image>
+			
+			<image name="lmv">
+				<include src="vertical_fade_line.xml"/>
+				<_bottom_to_top> &true; </_bottom_to_top>
+				<_x>
+					<copy src="grandparent()" trait="width"/>
+					<div> 2 </div>
+				</_x>
+				<_y>
+					<copy src="sibling(lrcv)" trait="_y"/>
+				</_y>
+				<height> 40 </height>
+			</image>
+		</rect>
+	</image>
+	
+	<hotrect name="PNxImplantsPanelCloseButton">
+		<id> 3 </id>
+		<depth> 4 </depth>
+		
+		<systemcolor> &hudalt; </systemcolor>
+
+		<_horbuf> 20 </_horbuf>
+		<_verbuf> 20 </_verbuf>
+		
+		<x>
+			<copy src="PNxCyberboyBackground" trait="x"/>
+			<add src="PNxCyberboyBackground" trait="width"/>
+			<sub> 81 </sub>
+			<sub src="me()" trait="width"/>
+		</x>
+		<y>
+			<copy src="PNxCyberboyBackground" trait="y"/>
+			<add> 120 </add>
+		</y>
+
+		<width>
+			<copy src="child(button_text)" trait="width"/>
+			<add src="me()" trait="_horbuf"/>
+		</width>
+		<height>
+			<copy src="child(button_text)" trait="height"/>
+			<add src="me()" trait="_verbuf"/>
+		</height>
+
+		<target> &true; </target>
+		<locus>&true;</locus>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		
+		<string> &-sExit; </string>
+		<_xbox_button> &xbuttonb; </_xbox_button>
+		<_PCButtonText> &-sPCMenuHintE; </_PCButtonText>
+
+		<text name="button_text">		
+			<font> 2 </font>
+			
+			<string> <copy src="parent()" trait="string"/> </string>
+			<justify> &right; </justify>
+
+			<x>
+				<copy src="sibling(box)" trait="x"/>
+				<add>
+					<copy src="parent()" trait="width"/>
+					<sub>
+						<copy src="parent()" trait="_horbuf"/>
+						<div> 2 </div>
+					</sub>
+				</add>
+			</x>
+			<y>
+				<copy src="sibling(box)" trait="height"/>
+				<sub src="me()" trait="height"/>
+				<div> 2 </div>
+				<add> 10 </add>
+			</y>
+		</text>
+
+		<rect name="box">
+			<include src="box.xml"/>
+			<visible><copy src="parent()" trait="mouseover"/></visible>
+		</rect>
+
+		<image name="xbox_button">
+			<visible>
+				<copy src="globals()" trait="_Has360Controller"/>
+				<and>
+					<copy src="parent()" trait="_xbox_button"/>
+					<gt> 0 </gt>
+				</and>
+			</visible>
+			<filename>
+				<copy src="parent()" trait="_xbox_button"/>
+				<sub> &default_accept; </sub>
+				<add> 1 </add>
+				<copy src="me()" trait="_filename_"/>
+			</filename>
+			<texatlas> Interface\InterfaceShared.tai </texatlas>
+
+			<width> 75 </width>
+			<height> 75 </height>
+
+			<x>
+				<copy src="sibling(box)" trait="x"/>
+				<sub>
+					<copy src="me()" trait="width"/>
+					<sub> 10 </sub>
+				</sub>
+			</x>
+			<y>
+				<copy src="sibling(box)" trait="y"/>
+				<add>
+					<copy src="sibling(box)" trait="height"/>
+					<sub src="me()" trait="height"/>
+					<div> 2 </div>
+				</add>
+			</y>
+
+			<_filename_2> general_button_b.dds </_filename_2>
+			<_filename_15> glow_general_button_b.dds </_filename_15>
+		</image>
+		
+		<text name="PCShortcutLabel">
+			<visible>
+				<not src="globals()" trait="_Has360Controller"/>
+				<and src="parent()" trait="_PCButtonText"/>
+			</visible>
+			<x>
+				<copy src="sibling(box)" trait="x"/>
+				<add src="sibling(box)" trait="width"/>
+				<add> 5 </add>
+			</x>
+			<y> <copy src="sibling(button_text)" trait="y"/> </y>
+			<font> <copy src="sibling(button_text)" trait="font"/> </font>
+			<string> <copy src="parent()" trait="_PCButtonText"/> </string>
+		</text>
+	</hotrect>
+	
+	<hotrect name="PNxImplantsPanelAcceptButton">
+		<depth> 4 </depth>
+	
+		<_horbuf> 20 </_horbuf>
+		<_verbuf> 20 </_verbuf>
+
+		<_line_alpha>
+			<copy> 128 </copy>
+			<add>
+				<copy> 127 </copy>
+				<onlyif>
+					<copy src="me()" trait="target"/>
+				</onlyif>
+			</add>
+		</_line_alpha>
+		
+		<x>
+			<copy src="PNxCyberboyBackground" trait="x"/>
+			<add src="PNxCyberboyBackground" trait="width"/>
+			<sub> 81 </sub>
+			<sub src="me()" trait="width"/>
+		</x>
+		<y>
+			<copy src="PNxImplantsPanelCloseButton" trait="y"/>
+			<add src="PNxImplantsPanelCloseButton" trait="height"/>
+			<add> 5 </add>
+		</y>
+
+		<width>
+			<copy src="child(button_text)" trait="width"/>
+			<add src="me()" trait="_horbuf"/>
+		</width>
+		<height>
+			<copy src="child(button_text)" trait="height"/>
+			<add src="me()" trait="_verbuf"/>
+		</height>
+
+		<target>
+			<copy src="io()" trait="_PNxImplantsPanelAcceptEnabled"/>
+			<eq> 1 </eq>
+		</target>
+		
+		<locus>&true;</locus>
+		<mouseoversound> UIMenuFocus </mouseoversound>
+		
+		<string> &-sAccept; </string>
+		<clicksound> UIMenuPrevNext</clicksound>
+		<_PCButtonText> &-sPCMenuHintA; </_PCButtonText>
+
+		<text name="button_text">		
+			<font> 2 </font>
+			
+			<string> <copy src="parent()" trait="string"/> </string>
+			<justify> &right; </justify>
+			
+			<alpha> <copy src="parent()" trait="_line_alpha"/> </alpha>
+
+			<x>
+				<copy src="sibling(box)" trait="x"/>
+				<add>
+					<copy src="parent()" trait="width"/>
+					<sub>
+						<copy src="parent()" trait="_horbuf"/>
+						<div> 2 </div>
+					</sub>
+				</add>
+			</x>
+			<y>
+				<copy src="sibling(box)" trait="height"/>
+				<sub src="me()" trait="height"/>
+				<div> 2 </div>
+				<add> 10 </add>
+			</y>
+		</text>
+
+		<rect name="box">
+			<include src="box.xml"/>
+			<visible><copy src="parent()" trait="mouseover"/></visible>
+
+			<_line_alpha> <copy src="parent()" trait="_line_alpha"/> </_line_alpha>
+		</rect>
+		
+		<text name="PCShortcutLabel">
+			<visible>
+				<not src="globals()" trait="_Has360Controller"/>
+				<and src="parent()" trait="_PCButtonText"/>
+			</visible>
+			<alpha> <copy src="parent()" trait="_line_alpha"/> </alpha>
+			<x>
+				<copy src="sibling(box)" trait="x"/>
+				<add src="sibling(box)" trait="width"/>
+				<add> 5 </add>
+			</x>
+			<y> <copy src="sibling(button_text)" trait="y"/> </y>
+			<font> <copy src="sibling(button_text)" trait="font"/> </font>
+			<string> <copy src="parent()" trait="_PCButtonText"/> </string>
+		</text>
+		
+		<_Selected>
+			<sub src="io()" trait="_PNxCyberboyMenuActive" />
+			<add src="me()" trait="clicked" />
+			<max> 0 </max>
+			<min> 1 </min>
+		</_Selected>
+	</hotrect>
+	
+	<rect name="PNxImplantsPanelCaps">
+		<x>
+			<copy src="screen()" trait="width"/>
+			<div> 2 </div>
+		</x>
+		<y>
+			<copy src="PNxCyberboyBackground" trait="y"/>
+			<add src="PNxCyberboyBackground" trait="height"/>
+			<sub> 120 </sub>
+		</y>
+
+		<text name="label">
+			<depth> 4 </depth>		
+			<font> 2 </font>
+			<justify> &right; </justify>
+			<string> &-sInventoryCaps; </string>
+			<font> <copy src="globals()" trait="_gl_listFont" /> </font>
+			<x>
+				<copy src="sibling(value)" trait="x"/>
+				<sub src="sibling(value)" trait="width"/>
+				<sub> 20 </sub>
+			</x>
+			<y> <copy src="parent" trait="y"/> </y>
+		</text>
+		
+		<text name="value">
+			<depth> 4 </depth>		
+			<justify> &right; </justify>
+			<x>
+				<copy src="parent" trait="x"/>
+				<sub> 10 </sub>
+			</x>
+			<y> <copy src="parent" trait="y"/> </y>
+			<font> <copy src="sibling(label)" trait="font"/> </font>
+			<string> <copy src="io()" trait="_PNxImplantsPanelCaps"/> </string>
+		</text>
+	</rect>
+	
+	<rect name="PNxImplantsPanelPrice">
+		<x>
+			<copy src="PNxImplantsPanelCaps" trait="x"/>
+		</x>
+		<y>
+			<copy src="PNxImplantsPanelCaps" trait="y"/>
+		</y>
+
+		<text name="label">
+			<depth> 4 </depth>		
+			<font> 2 </font>
+			<string> Price </string>
+			<font> <copy src="globals()" trait="_gl_listFont" /> </font>
+			<x>
+				<copy src="parent" trait="x"/>
+				<add> 10 </add>
+			</x>
+			<y> <copy src="parent" trait="y"/> </y>
+		</text>
+		
+		<text name="value">
+			<depth> 4 </depth>		
+			<x>
+				<copy src="sibling(label)" trait="x"/>
+				<add src="sibling(label)" trait="width"/>
+				<add> 20 </add>
+			</x>
+			<y> <copy src="parent" trait="y"/> </y>
+			<font> <copy src="sibling(label)" trait="font"/> </font>
+			<string> <copy src="io()" trait="_PNxImplantsPanelPrice"/> </string>
+		</text>
+	</rect>
+	
+	
+	
 	
 	<image name="PNxCyberboyRightSlot">
 		<systemcolor> &hudmain; </systemcolor>
@@ -203,8 +680,14 @@
 			<zoom> &scale; </zoom>
 			<depth> 15 </depth>
 				
-			<x> <copy src="parent()" trait="x" /> </x>
-			<y> <copy src="parent()" trait="y" /> </y>
+			<x>
+				<copy src="parent()" trait="x" />
+				<sub> 4 </sub>
+			</x>
+			<y>
+				<copy src="parent()" trait="y" />
+				<sub> 5 </sub>
+			</y>
 			
 			<width> <copy src="parent()" trait="width" /> </width>
 			<height> <copy src="parent()" trait="height" /> </height>
@@ -336,8 +819,14 @@
 			<zoom> &scale; </zoom>
 			<depth> 15 </depth>
 				
-			<x> <copy src="parent()" trait="x" /> </x>
-			<y> <copy src="parent()" trait="y" /> </y>
+			<x>
+				<copy src="parent()" trait="x" />
+				<add> 3 </add>
+			</x>
+			<y>
+				<copy src="parent()" trait="y" />
+				<sub> 5 </sub>
+			</y>
 			
 			<width> <copy src="parent()" trait="width" /> </width>
 			<height> <copy src="parent()" trait="height" /> </height>
@@ -420,7 +909,7 @@
 			<copy src="sibling(PNxImplantsPanelBackground)" trait="visible" />
 		</visible>
 		
-		<target> &true; </target>
+		<target>&true; </target>
 		<mouseoversound> UIMenuFocus </mouseoversound>
 		<clicksound> UIMenuOK </clicksound>
 		
@@ -468,6 +957,7 @@
 			<sub>
 				<copy src="PNxCyberboySelectRightLegTrigger" trait="clicked" />
 			</sub>
+			<sub src="io()" trait="_PNxCyberboyRegionReset" />
 			
 			<max> 0 </max>
 			<min> 1 </min>
@@ -555,6 +1045,7 @@
 			<sub>
 				<copy src="PNxCyberboySelectRightLegTrigger" trait="clicked" />
 			</sub>
+			<sub src="io()" trait="_PNxCyberboyRegionReset" />
 			
 			<max> 0 </max>
 			<min> 1 </min>
@@ -642,6 +1133,7 @@
 			<sub>
 				<copy src="PNxCyberboySelectRightLegTrigger" trait="clicked" />
 			</sub>
+			<sub src="io()" trait="_PNxCyberboyRegionReset" />
 			
 			<max> 0 </max>
 			<min> 1 </min>
@@ -728,6 +1220,7 @@
 			<sub>
 				<copy src="PNxCyberboySelectRightLegTrigger" trait="clicked" />
 			</sub>
+			<sub src="io()" trait="_PNxCyberboyRegionReset" />
 			
 			<max> 0 </max>
 			<min> 1 </min>
@@ -815,6 +1308,7 @@
 			<sub>
 				<copy src="PNxCyberboySelectLeftLegTrigger" trait="clicked" />
 			</sub>
+			<sub src="io()" trait="_PNxCyberboyRegionReset" />
 			
 			<max> 0 </max>
 			<min> 1 </min>
@@ -901,6 +1395,7 @@
 			<sub>
 				<copy src="PNxCyberboySelectHeadTrigger" trait="clicked" />
 			</sub>
+			<sub src="io()" trait="_PNxCyberboyRegionReset" />
 			
 			<max> 0 </max>
 			<min> 1 </min>
