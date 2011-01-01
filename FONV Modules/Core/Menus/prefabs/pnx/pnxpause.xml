@@ -1,9 +1,16 @@
+<!-- ######################################################################################## General -->
+<_PNxCPButton> 1 </_PNxCPButton>
+
+
+<!-- ######################################################################################## IO Control Panel Button -->
 <_PNxCPButtonEnabled> 0 </_PNxCPButtonEnabled>
 	
 <_PNxCPButtonPressed>
-	<copy src="PNxControlPanelBtn" trait="_state" />
+	<copy src="PNxControlPanelBtn" trait="_Selected" />
 </_PNxCPButtonPressed>
 
+
+<!-- ######################################################################################## Control Panel Button -->
 <hotrect name="PNxControlPanelBtn">
 	<depth> 3 </depth>
 	<visible>
@@ -19,13 +26,7 @@
 	<brightness> <copy src="StartMenu" trait="brightness" /> </brightness>
 	<clicksound> UIMenuOK </clicksound>
 	<mouseoversound> UIMenuFocus </mouseoversound>
-	<alpha>
-		<copy> 155 </copy>
-		<add>
-			<copy> 100 </copy>
-			<onlyif src="me()" trait="mouseover" />
-		</add>
-	</alpha>
+
 	<x>
 		<copy src="main_container" trait="x" />
 		<add src="main_container" trait="width" />
@@ -36,11 +37,70 @@
 		<sub src="me()" trait="height" />
 		<sub> 10 </sub>
 	</y>
-	<width> 128 </width>
-	<height> 128 </height>
+	<width>
+		<copy src="child(label)" trait="width" />
+		<add src="child(icon)" trait="width" />
+	</width>
+	<height>
+		<copy src="child(icon)" trait="height" />
+	</height>
 	
 	<user0> &true; </user0>
 	<target> &true; </target>
 	
 	<filename> pnx\hud\cp\cp_icon.dds </filename>
+	
+	<_Selected>
+		<add src="me()" trait="clicked" />
+		<max> 0 </max>
+		<min> 1 </min>
+	</_Selected>
+	
+	<text name="label">
+		<font> 7 </font>
+		<depth> 3 </depth>
+		<justify> &left; </justify>
+		<alpha> <copy src="sibling(icon)" trait="alpha" /> </alpha>
+
+		<x>
+			<copy src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<add>
+				<copy src="parent()" trait="height" />	
+				<div> 2 </div>
+			</add>
+			<sub>
+				<copy src="me()" trait="height" />	
+				<div> 2 </div>
+			</sub>
+		</y>
+		<systemcolor> &hudmain; </systemcolor>
+		<string> Mod Panel </string>
+	</text>
+	
+	<image name="icon">
+		<zoom> &scale; </zoom>
+		<alpha>
+			<copy> 155 </copy>
+			<add>
+				<copy> 100 </copy>
+				<onlyif src="parent()" trait="mouseover" />
+			</add>
+		</alpha>
+		
+		<x>
+			<copy src="sibling(label)" trait="x" />
+			<add src="sibling(label)" trait="width" />
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+		</y>
+	
+		<width> 92 </width>
+		<height> 92	</height>
+		
+		<filename> pnx\hud\cp\cp_icon.dds </filename>
+	</image>
 </hotrect>
