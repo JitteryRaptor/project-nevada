@@ -10,7 +10,7 @@ using fomm.Scripting;
 class Script : Fallout3BaseScript
 {
 
-	private const string Title = "Project Nevada";
+	private const string Title = "Project Nevada - Cyberware";
 
 	private static ASCIIEncoding Encoding = new ASCIIEncoding();
 	
@@ -23,11 +23,8 @@ class Script : Fallout3BaseScript
 				
 			if (Path.GetDirectoryName(file) == "optional")
 				continue;
-
-			if (Path.GetFileName(file) == "includes_HUDMainMenu.xml")
-				continue;
 				
-			if (Path.GetFileName(file) == "includes_StartMenu.xml")
+			if (Path.GetFileName(file) == "includes_TutorialMenu.xml")
 				continue;
 
 			InstallFileFromFomod(file);
@@ -48,9 +45,9 @@ class Script : Fallout3BaseScript
 			return true;
 		
 		tmp += "\r\n"
-			+ "<!-- BEGIN Added by Project Nevada -->\r\n"
+			+ "<!-- BEGIN Added by Project Nevada - Cyberware -->\r\n"
 			+ "<include src=\"" + includePath + "\" />\r\n"
-			+ "<!-- END Added by Project Nevada -->\r\n";
+			+ "<!-- END Added by Project Nevada - Cyberware -->\r\n";
 		
 		data = Encoding.GetBytes(tmp);
 			
@@ -73,9 +70,9 @@ class Script : Fallout3BaseScript
 			return true;
 		
 		string includeStr = "\r\n"
-			+ "\t<!-- BEGIN Added by Project Nevada -->\r\n"
+			+ "\t<!-- BEGIN Added by Project Nevada - Cyberware -->\r\n"
 			+ "\t<include src=\"" + includePath + "\" />\r\n"
-			+ "\t<!-- END Added by Project Nevada -->\r\n";
+			+ "\t<!-- END Added by Project Nevada - Cyberware -->\r\n";
 		
 		tmp = Regex.Replace(tmp,
 			"<menu name=\"(\\w+)\">(.*)</menu>\\s*$",
@@ -113,28 +110,15 @@ class Script : Fallout3BaseScript
 		// Install base files
 		InstallFiles();
 		
-		// Modify includes_HUDMainMenu.xml if necessary
-		if (! DataFileExists("menus/prefabs/includes_HUDMainMenu.xml")) {
-			InstallFileFromFomod("menus/prefabs/includes_HUDMainMenu.xml");
+		// Modify includes_TutorialMenu.xml if necessary
+		if (! DataFileExists("menus/prefabs/includes_TutorialMenu.xml")) {
+			InstallFileFromFomod("menus/prefabs/includes_TutorialMenu.xml");
 		} else {
 				// 
-			bool editSuccess = AppendInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
+			bool editSuccess = AppendInclude("menus/prefabs/includes_TutorialMenu.xml", @"pnx\pnximplants.xml");
 		
 			if (! editSuccess) {
-				text = "Failed to access includes_HUDMainMenu.xml. Guess you'll have to edit it manually (see readme)";
-				MessageBox(text, Title);
-			}
-		}
-		
-		// Modify includes_StartMenu.xml if necessary
-		if (! DataFileExists("menus/prefabs/includes_StartMenu.xml")) {
-			InstallFileFromFomod("menus/prefabs/includes_StartMenu.xml");
-		} else {
-				// 
-			bool editSuccess = AppendInclude("menus/prefabs/includes_StartMenu.xml", @"pnx\pnxpause.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access includes_StartMenu.xml. Guess you'll have to edit it manually (see readme)";
+				text = "Failed to access includes_TutorialMenu.xml. Guess you'll have to edit it manually (see readme)";
 				MessageBox(text, Title);
 			}
 		}
@@ -152,15 +136,15 @@ class Script : Fallout3BaseScript
 			}
 		}
 		
-		// Modify dialog_menu.xml if necessary
-		if (! DataFileExists("menus/options/start_menu.xml")) {
-			InstallFileFromFomod("optional/Default HUD/menus/options/start_menu.xml", "menus/options/start_menu.xml");
+		// Modify tutorial_menu.xml if necessary
+		if (! DataFileExists("menus/tutorial_menu.xml")) {
+			InstallFileFromFomod("optional/Default HUD/menus/tutorial_menu.xml", "menus/tutorial_menu.xml");
 		} else {
 
-			bool editSuccess = AppendIncludeToMenu("menus/options/start_menu.xml", "includes_StartMenu.xml");
+			bool editSuccess = AppendIncludeToMenu("menus/tutorial_menu.xml", "includes_TutorialMenu.xml");
 		
 			if (! editSuccess) {
-				text = "Failed to access start_menu.xml. Guess you'll have to edit it manually (see readme)";
+				text = "Failed to access tutorial_menu.xml. Guess you'll have to edit it manually (see readme)";
 				MessageBox(text, Title);
 			}
 		}
