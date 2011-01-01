@@ -376,4 +376,6 @@
 			</rect> <!-- end depth rect -->
 		</image> <!-- end background -->
 	</rect> <!-- end NOGLOW branch -->
+
+	<include src="includes_TutorialMenu.xml" />
 </menu>
