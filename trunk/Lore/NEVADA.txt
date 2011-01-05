@@ -1,0 +1,21 @@
+Cornerstones:
+
+- Recoverability
+
+Installation of a NEVADA-certified implant does not require in any permanent alterations in the users body.
+This includes the possibility to remove it again. While at first sounding like a serious limitation, this 
+contraint comes with several advantages, i.e. higher public acceptance, flexible business models (leasing),
+and a lower risk of fatal malfunctions.
+
+
+- Interoperability
+
+Unless explicitely stated, implants constructed according to the NEVADA standards can co-exist in the same body
+without interference.
+
+
+- Unification
+
+While all NEVADA members pursue their own goals and interests, non-competitive areas are standardized by the group.
+As a result, the required training time for medical personnel is highly reduced. Costs are further reduced by allowing
+to use a common set of tools and devices for all implants.

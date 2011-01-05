@@ -1,5 +1,5 @@
 ﻿<!-- ######################################################################################## General -->
-<_PNxCyberware> 1 </_PNxCyberware>
+<_PNxImplants> 1 </_PNxImplants>
 
 
 <!-- ######################################################################################## IO Implants Panel -->
@@ -646,21 +646,41 @@
 			<visible>
 				<copy src="parent()" trait="visible" />
 				<and src="io()" trait="_PNxCyberboyRightImplantNum" />
+				<gt> 0 </gt>
 			</visible>
 			
 			<zoom> &scale; </zoom>
 			<depth> 15 </depth>
 				
-			<x> <copy src="parent()" trait="x" /> </x>
-			<y> <copy src="parent()" trait="y" /> </y>
+			<x>
+				<copy src="parent()" trait="x" />
+				<add> 2 </add>
+			</x>
+			<y>
+				<copy src="parent()" trait="y" />
+			</y>
 			
-			<width> <copy src="parent()" trait="width" /> </width>
-			<height> <copy src="parent()" trait="height" /> </height>
+			<width> 128 </width>
+			<height> 128 </height>
 
 			<_filename_0> Interface\Shared\solid.dds </_filename_0>
-			<_filename_1> pnx\hud\cy\implant_arm.dds </_filename_1>
+			<_filename_1> pnx\hud\cy\implant_right_stat.dds </_filename_1>
+			<_filename_2> pnx\hud\cy\implant_right_skill.dds </_filename_2>
+			<_filename_3> pnx\hud\cy\implant_right_scanner.dds </_filename_3>
+			<_filename_4> pnx\hud\cy\implant_right_phoenix.dds </_filename_4>
+			<_filename_5> pnx\hud\cy\implant_right_armor.dds </_filename_5>
+			<_filename_6> pnx\hud\cy\implant_right_weight.dds </_filename_6>
+			<_filename_7> pnx\hud\cy\implant_right_stealth.dds </_filename_7>
+			<_filename_8> pnx\hud\cy\implant_right_lung.dds </_filename_8>
+			<_filename_9> pnx\hud\cy\implant_right_heart.dds </_filename_9>
+			<_filename_10> pnx\hud\cy\implant_right_weave.dds </_filename_10>
+			<_filename_11> pnx\hud\cy\implant_right_leg.dds </_filename_11>
+			<_filename_12> pnx\hud\cy\implant_right_nail.dds </_filename_12>
+			<_filename_13> pnx\hud\cy\implant_right_eye.dds </_filename_13>
+			<_filename_14> pnx\hud\cy\implant_right_arm.dds </_filename_14>
+			
 			<filename>
-				<copy src="me()" trait="visible" />
+				<copy src="io()" trait="_PNxCyberboyRightImplantNum" />
 				<copy src="me()" trait="_filename_" />
 			</filename>
 		</image>
@@ -785,21 +805,40 @@
 			<visible>
 				<copy src="parent()" trait="visible" />
 				<and src="io()" trait="_PNxCyberboyLeftImplantNum" />
+				<gt> 0 </gt>
 			</visible>
 			
 			<zoom> &scale; </zoom>
 			<depth> 15 </depth>
 				
-			<x> <copy src="parent()" trait="x" /> </x>
-			<y> <copy src="parent()" trait="y" /> </y>
+			<x>
+				<copy src="parent()" trait="x" />
+				<add> 2 </add>
+			</x>
+			<y>
+				<copy src="parent()" trait="y" />
+			</y>
 			
-			<width> <copy src="parent()" trait="width" /> </width>
-			<height> <copy src="parent()" trait="height" /> </height>
+			<width> 128 </width>
+			<height> 128 </height>
 
 			<_filename_0> Interface\Shared\solid.dds </_filename_0>
-			<_filename_1> pnx\hud\cy\implant_arm.dds </_filename_1>
+			<_filename_1> pnx\hud\cy\implant_left_stat.dds </_filename_1>
+			<_filename_2> pnx\hud\cy\implant_left_skill.dds </_filename_2>
+			<_filename_3> pnx\hud\cy\implant_left_scanner.dds </_filename_3>
+			<_filename_4> pnx\hud\cy\implant_left_phoenix.dds </_filename_4>
+			<_filename_5> pnx\hud\cy\implant_left_armor.dds </_filename_5>
+			<_filename_6> pnx\hud\cy\implant_left_weight.dds </_filename_6>
+			<_filename_7> pnx\hud\cy\implant_left_stealth.dds </_filename_7>
+			<_filename_8> pnx\hud\cy\implant_left_lung.dds </_filename_8>
+			<_filename_9> pnx\hud\cy\implant_left_heart.dds </_filename_9>
+			<_filename_10> pnx\hud\cy\implant_left_weave.dds </_filename_10>
+			<_filename_11> pnx\hud\cy\implant_left_leg.dds </_filename_11>
+			<_filename_12> pnx\hud\cy\implant_left_nail.dds </_filename_12>
+			<_filename_13> pnx\hud\cy\implant_left_eye.dds </_filename_13>
+			<_filename_14> pnx\hud\cy\implant_left_arm.dds </_filename_14>
 			<filename>
-				<copy src="me()" trait="visible" />
+				<copy src="io()" trait="_PNxCyberboyLeftImplantNum" />
 				<copy src="me()" trait="_filename_" />
 			</filename>
 		</image>
