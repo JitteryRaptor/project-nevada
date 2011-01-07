@@ -43,7 +43,7 @@
 			<brightness> 128 </brightness>
 			<alpha> <copy src="globals()" trait="_background_fill_alpha"/> </alpha>
 			<locus> &true; </locus>
-			<_scale> 0.8 </_scale>
+			<_scale> 0.95 </_scale>
 
 			<rect name="TM_depth_rect">
 				<locus> &true; </locus>
@@ -111,7 +111,7 @@
 						<sub src="parent()" trait="_buffer"/>
 					</x>
 					<y> <copy src="sibling(TM_title)" trait="y"/> </y>
-					<font> 6 </font>
+					<font> 3 </font>
 					<string> ??/?? </string> <!-- Replaced in code -->
 				</text>
 
@@ -170,10 +170,12 @@
 					<_y>
 						<copy src="sibling(TM_ulcv)" trait="_y"/>
 						<add src="sibling(TM_ulcv)" trait="height"/>
+						<sub> 30 </sub>
 					</_y>
 					<_height>
 						<copy src="sibling(TM_llcv)" trait="y"/>
 						<sub src="me()" trait="_y"/>
+						<add> 30 </add>
 					</_height>
 					<_number_of_items>
 						<copy src="sibling(TM_text_container)" trait="_text_height"/>
@@ -198,15 +200,16 @@
 					<locus> &true; </locus>
 					<wheelable> &true; </wheelable>
 					<x> <copy src="sibling(TM_title)" trait="x"/> </x>
-					<y> <copy src="sibling(TM_scrollbar)" trait="y"/> </y>
+					<y> <copy src="sibling(TM_scrollbar)" trait="y"/> <sub> 30 </sub></y>
 					<width>
 						<copy src="sibling(TM_prev_button)" trait="x"/>
 						<sub src="me()" trait="x"/>
-						<sub> 64 </sub>
+						<sub> 14 </sub>
 					</width>
 					<height>
 						<copy src="sibling(TM_llcv)" trait="y"/>
 						<sub src="me()" trait="y"/>
+						<add> 30 </add>
 					</height>
 
 					<_text_height>
@@ -224,6 +227,7 @@
 						<wrapwidth> <copy src="parent()" trait="width"/> <sub> 5 </sub></wrapwidth>		<!-- #43481: Add small text offset to prevent icon clipping -->
 						<x> 5 </x>
 						<y> <copy src="parent()" trait="_text_y"/> </y>
+						<font> 3 </font>
 					</text>
 				</hotrect>
 
@@ -359,6 +363,6 @@
 			</rect> <!-- end depth rect -->
 		</image> <!-- end background -->
 	</rect> <!-- end NOGLOW branch -->
-
+	
 	<include src="includes_TutorialMenu.xml" />
 </menu>
