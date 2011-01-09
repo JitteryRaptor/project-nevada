@@ -34,9 +34,9 @@ Further general objectives and design concepts are:
 
 [color=#FF8C00]*[/color] Easy installation and setup; no load order or complicated dependencies.
 
-[color=#FF8C00]*[/color] Great customization through different modules and an ingame menu
+[color=#FF8C00]*[/color] Great customization through different modules and an in-game menu
 
-[color=#FF8C00]*[/color] Rather keep things straight forward and enjoyable than overly complicated and tedious.
+[color=#FF8C00]*[/color] Rather keep things straightforward and enjoyable than overly complicated and tedious.
 
 [color=#FF8C00]*[/color] Avoid changes that could conflict with other mods unless they are absolutely necessary.
 
