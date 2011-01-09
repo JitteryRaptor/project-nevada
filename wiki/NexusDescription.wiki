@@ -46,8 +46,6 @@ Further general objectives and design concepts are:
 
 [line]
 
-[size=6][color=#FF8C00][b]Modules[/b][/color][/size]
-
 [img]http://img5.imagebanana.com/img/apnzt5a7/NexusCore.png[/img]
 [heading][b]Module Version:[/b] [color=#FF8C00]1.0[/color][/heading]
 
@@ -65,10 +63,6 @@ Other mods may extend the Control Panel without conflict and make use of the pro
 Since the Core module avoids conflicting changes, players are free run it alongside any other mods, including their favorite overhaul.
 
 [heading][color=#FF8C00]>[/color] Details[/heading]
-[b]Infrastructure[/b]
-[color=#FF8C00]*[/color] Extensible Control Panel 
-[color=#FF8C00]*[/color] Streamlined Hotkey Management 
-
 [b]Selectable Features[/b] 
 [color=#FF8C00]*[/color] Dynamic Crosshair
 [color=#FF8C00]*[/color] Bullet Time 
@@ -78,6 +72,10 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 [color=#FF8C00]*[/color] Slower Backpedaling 
 [color=#FF8C00]*[/color] First-person Visor Overlays for helmets
 [color=#FF8C00]*[/color] Immersive Health Visuals
+
+[b]Infrastructure[/b]
+[color=#FF8C00]*[/color] Extensible Control Panel 
+[color=#FF8C00]*[/color] Streamlined Hotkey Management 
 
 [img]http://img5.imagebanana.com/img/w4badyln/NexusReblance.png[/img]
 [heading][b]Module Version:[/b] [color=#FF8C00]Not yet released![/color][/heading]
@@ -158,5 +156,42 @@ To be announced.
 
 [line]
 
-[size=6][color=#FF8C00][font="Impact"][b]Installation[/b][/font][/color][/size]
+[size=6][color=#FF8C00][b]Installation[/b][/color][/size]
+
+[b]We really recommend using the Fallout Mod Manager to install Project Nevada![/b]
+It will automatically copy the right files and take care of any conflicts with already installed mods.
+
+[b]Also remember, the Core module is required for all modules! If you don't like a specific features, you can disable it in-game.[/b]
+
+[heading][color=#FF8C00]>[/color] Automated Installation with FOMM[/heading]
+[b]1.[/b] Start FOMM and click on [color=#FF8C00]Package Manager[/color].
+
+[i]For every module you want to install:[/i]
+[b]2.[/b] In the top-right button menu, click on [color=#FF8C00]Add FOmod[/color] and select the downloaded archive file.
+[b]3.[/b] The module will now appear in the list. [color=#FF8C00]Select[/color] it and click [color=#FF8C00]Activate[/color].
+[b]4.[/b] If you are prompted to [color=#FF8C00]overwrite[/color] anything, click [color=#FF8C00]Yes to All[/color].
+
+[b]5.[/b] Done!
+
+  [b][size=4]OR[/size][/b]
+
+[heading][color=#FF8C00]>[/color] Manual Installation[/heading]
+[b]1.[/b] Locate the [color=#FF8C00]Data/[/color] folder in your Fallout New Vegas [color=#FF8C00]installation directory[/color].
+(Typically it's found at Program Files/Steam/SteamApps/common/fallout new vegas/Data/)
+
+[i]For every module you want to install:[/i]
+[b]2.[/b] Extract the contents of downloaded archive file to your [color=#FF8C00]Data/[/color] folder.
+
+[b]3.[/b] Locate the [color=#FF8C00]Data/optional/[/color] folder. In there, open the following directory, depending on which [color=#FF8C00]interface mod[/color] you are using:
+[color=#FF8C00]*[/color] Default UI, if you're not using any interface mod.
+[color=#FF8C00]*[/color] Darn UI, if you're using [color=#FF8C00]DarNified UI[/color].
+[color=#FF8C00]*[/color] MTUI, if you're using [color=#FF8C00]MTUI[/color].
+
+[b]4.[/b] Copy the contents of the directory you just opened to your [color=#FF8C00]Data/[/color] folder.
+
+[b]5.[/b] Done!
+
+[line]
+
+[size=6][color=#FF8C00][b]Credits[/b][/color][/size]
 }}}
