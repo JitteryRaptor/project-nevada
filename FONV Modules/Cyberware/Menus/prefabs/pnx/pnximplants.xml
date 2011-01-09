@@ -1,6 +1,7 @@
 ﻿<!-- ######################################################################################## General -->
 <_PNxImplants> 1 </_PNxImplants>
 
+<_PNxHasDUIF3><copy src="sibling(HUDmainMenu)" trait="_DUIF3" /></_PNxHasDUIF3>
 
 <!-- ######################################################################################## IO Implants Panel -->
 <_PNxImplantsPanelEnabled> 0 </_PNxImplantsPanelEnabled>
@@ -497,6 +498,10 @@
 			<copy src="PNxCyberboyBackground" trait="y"/>
 			<add src="PNxCyberboyBackground" trait="height"/>
 			<sub> 120 </sub>
+			<sub>
+				<copy> 12 </copy>
+				<onlyifnot src="io()" trait="_PNxHasDUIF3" />
+			</sub>
 		</y>
 
 		<text name="label">
