@@ -88,7 +88,7 @@ class Script : Fallout3BaseScript
 	
 	public static bool InstallFileFromFomod(string source, string target)
 	{
-		byte[] data = GetExistingDataFile(source);
+		byte[] data = GetFileFromFomod(source);
 		if (data == null)
 			return false;
 		
