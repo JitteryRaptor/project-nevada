@@ -14,7 +14,7 @@ class Script : FalloutNewVegasBaseScript {
 
 	private const string title = "Project NEVADA";
 
-	private static ASCIIEncoding encoding = new ASCIIEncoding();
+	private static ASCIIEncoding encoding;
 
 	private static bool cyberwareSelected = true;
 	private static bool installSelected = false;
@@ -28,27 +28,28 @@ class Script : FalloutNewVegasBaseScript {
     private static PictureBox coreCheckbox;
     private static PictureBox cyberwareCheckbox;
 	
-	private static Image imageChecked = GetImageFromFomod("fomod/InstallerChecked.png");
-	private static Image imageUnchecked = GetImageFromFomod("fomod/InstallerUnchecked.png");
-	private static Image imageInstall = GetImageFromFomod("fomod/InstallerInstall.png");
-	private static Image imageInstallHi = GetImageFromFomod("fomod/InstallerInstallHi.png");
-	private static Image imageExit = GetImageFromFomod("fomod/InstallerExit.png");
-	private static Image imageExitHi = GetImageFromFomod("fomod/InstallerExitHi.png");
-	private static Image imageLogo = GetImageFromFomod("fomod/InstallerLogo.png");
-	private static Image imageCore = GetImageFromFomod("fomod/InstallerCore.png");
-	private static Image imageCoreHi = GetImageFromFomod("fomod/InstallerCoreHi.png");
-	private static Image imageCoreDesc = GetImageFromFomod("fomod/InstallerCoreDesc.png");
-	private static Image imageCyberware = GetImageFromFomod("fomod/InstallerCyberware.png");
-	private static Image imageCyberwareHi = GetImageFromFomod("fomod/InstallerCyberwareHi.png");
-	private static Image imageCyberwareDesc = GetImageFromFomod("fomod/InstallerCyberDesc.png");
+	private static Image imageChecked;
+	private static Image imageUnchecked;
+	private static Image imageInstall;
+	private static Image imageInstallHi;
+	private static Image imageExit;
+	private static Image imageExitHi;
+	private static Image imageLogo;
+	private static Image imageCore;
+	private static Image imageCoreHi;
+	private static Image imageCoreDesc;
+	private static Image imageCyberware;
+	private static Image imageCyberwareHi;
+	private static Image imageCyberwareDesc;
 	
-	private static System.Media.SoundPlayer hoverPlayer = new System.Media.SoundPlayer();
-	private static System.Media.SoundPlayer acceptPlayer = new System.Media.SoundPlayer();
-	private static System.Media.SoundPlayer denyPlayer = new System.Media.SoundPlayer();
+	private static System.Media.SoundPlayer hoverPlayer;
+	private static System.Media.SoundPlayer acceptPlayer;
+	private static System.Media.SoundPlayer denyPlayer;
 	
 	
 	public static bool OnActivate() {
         
+        encoding = new ASCIIEncoding();
 		InitializeComponents();
 		
 		installerForm.ShowDialog();
@@ -191,9 +192,27 @@ class Script : FalloutNewVegasBaseScript {
     
     private static void InitializeComponents()
     {
+    	hoverPlayer = new System.Media.SoundPlayer();
+		acceptPlayer = new System.Media.SoundPlayer();
+		denyPlayer = new System.Media.SoundPlayer();
+    
 	    hoverPlayer.Stream = GetStreamFromFomod("fomod/soundHover.wav");
 		acceptPlayer.Stream = GetStreamFromFomod("fomod/soundAccept.wav");
 		denyPlayer.Stream = GetStreamFromFomod("fomod/soundDeny.wav");
+		
+		imageChecked = GetImageFromFomod("fomod/InstallerChecked.png");
+		imageUnchecked = GetImageFromFomod("fomod/InstallerUnchecked.png");
+		imageInstall = GetImageFromFomod("fomod/InstallerInstall.png");
+		imageInstallHi = GetImageFromFomod("fomod/InstallerInstallHi.png");
+		imageExit = GetImageFromFomod("fomod/InstallerExit.png");
+		imageExitHi = GetImageFromFomod("fomod/InstallerExitHi.png");
+		imageLogo = GetImageFromFomod("fomod/InstallerLogo.png");
+		imageCore = GetImageFromFomod("fomod/InstallerCore.png");
+		imageCoreHi = GetImageFromFomod("fomod/InstallerCoreHi.png");
+		imageCoreDesc = GetImageFromFomod("fomod/InstallerCoreDesc.png");
+		imageCyberware = GetImageFromFomod("fomod/InstallerCyberware.png");
+		imageCyberwareHi = GetImageFromFomod("fomod/InstallerCyberwareHi.png");
+		imageCyberwareDesc = GetImageFromFomod("fomod/InstallerCyberDesc.png");
     
     	installerForm = CreateCustomForm();
     
@@ -359,6 +378,7 @@ class Script : FalloutNewVegasBaseScript {
         ((System.ComponentModel.ISupportInitialize)(installButton)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(exitButton)).EndInit();
         installerForm.ResumeLayout(false);
+        installerForm.Refresh();
     }
     
     
@@ -368,9 +388,13 @@ class Script : FalloutNewVegasBaseScript {
 		if (data == null)
 			return null;
 		
-        MemoryStream s = new MemoryStream(data);  
-        Image img = Image.FromStream(s);  
-        s.Close();  
+        MemoryStream s = new MemoryStream(data);
+        
+        if (s.Length == 0)
+        	MessageBox("Empty stream", "Empty stream");
+        
+        Image img = Image.FromStream(s);
+        s.Close();        	
         
         return img;  
     }
