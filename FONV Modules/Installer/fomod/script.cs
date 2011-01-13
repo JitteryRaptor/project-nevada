@@ -12,39 +12,39 @@ using System.Windows.Forms;
 
 class Script : FalloutNewVegasBaseScript {
 
-	private const string title = "Project NEVADA";
+	const string title = "Project NEVADA";
 
-	private static ASCIIEncoding encoding;
+	static ASCIIEncoding encoding;
 
-	private static bool cyberwareSelected = true;
-	private static bool installSelected = false;
+	static bool cyberwareSelected = true;
+	static bool installSelected = false;
 
-	private static Form installerForm;
-	private static PictureBox contentPicture;
-    private static PictureBox exitButton;
-    private static PictureBox installButton;
-    private static PictureBox coreButton;
-    private static PictureBox cyberwareButton;
-    private static PictureBox coreCheckbox;
-    private static PictureBox cyberwareCheckbox;
+	static Form installerForm;
+	static PictureBox contentPicture;
+    static PictureBox exitButton;
+    static PictureBox installButton;
+    static PictureBox coreButton;
+    static PictureBox cyberwareButton;
+    static PictureBox coreCheckbox;
+    static PictureBox cyberwareCheckbox;
 	
-	private static Image imageChecked;
-	private static Image imageUnchecked;
-	private static Image imageInstall;
-	private static Image imageInstallHi;
-	private static Image imageExit;
-	private static Image imageExitHi;
-	private static Image imageLogo;
-	private static Image imageCore;
-	private static Image imageCoreHi;
-	private static Image imageCoreDesc;
-	private static Image imageCyberware;
-	private static Image imageCyberwareHi;
-	private static Image imageCyberwareDesc;
+	static Image imageChecked;
+	static Image imageUnchecked;
+	static Image imageInstall;
+	static Image imageInstallHi;
+	static Image imageExit;
+	static Image imageExitHi;
+	static Image imageLogo;
+	static Image imageCore;
+	static Image imageCoreHi;
+	static Image imageCoreDesc;
+	static Image imageCyberware;
+	static Image imageCyberwareHi;
+	static Image imageCyberwareDesc;
 	
-	private static System.Media.SoundPlayer hoverPlayer;
-	private static System.Media.SoundPlayer acceptPlayer;
-	private static System.Media.SoundPlayer denyPlayer;
+	static System.Media.SoundPlayer hoverPlayer;
+	static System.Media.SoundPlayer acceptPlayer;
+	static System.Media.SoundPlayer denyPlayer;
 	
 	
 	public static bool OnActivate() {
@@ -70,7 +70,7 @@ class Script : FalloutNewVegasBaseScript {
 	}
 	
 	
-	private static bool InstallModuleCore()
+	static bool InstallModuleCore()
 	{
 		string text;
 		
@@ -83,7 +83,7 @@ class Script : FalloutNewVegasBaseScript {
 		
 		// Modify includes_HUDMainMenu.xml if necessary
 		if (! DataFileExists("menus/prefabs/includes_HUDMainMenu.xml")) {
-			InstallFileFromModule("Core", "menus/prefabs/includes_HUDMainMenu.xml");
+			InstallFileFromFomod("menus/prefabs/includes_HUDMainMenu.xml");
 		} else {
 				// 
 			bool editSuccess = AppendInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
@@ -96,7 +96,7 @@ class Script : FalloutNewVegasBaseScript {
 		
 		// Modify includes_StartMenu.xml if necessary
 		if (! DataFileExists("menus/prefabs/includes_StartMenu.xml")) {
-			InstallFileFromModule("Core", "menus/prefabs/includes_StartMenu.xml");
+			InstallFileFromFomod("menus/prefabs/includes_StartMenu.xml");
 		} else {
 				// 
 			bool editSuccess = AppendInclude("menus/prefabs/includes_StartMenu.xml", @"pnx\pnxpause.xml");
@@ -109,7 +109,7 @@ class Script : FalloutNewVegasBaseScript {
 
 		// Modify hud_main_menu.xml	if necessary
 		if (! DataFileExists("menus/main/hud_main_menu.xml")) {
-			InstallFileFromFomod("Core/optional/Default HUD/menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml");
+			InstallFileFromFomod("optional/Default HUD/menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml");
 		} else {
 
 			bool editSuccess = AppendIncludeToMenu("menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
@@ -122,7 +122,7 @@ class Script : FalloutNewVegasBaseScript {
 		
 		// Modify dialog_menu.xml if necessary
 		if (! DataFileExists("menus/options/start_menu.xml")) {
-			InstallFileFromFomod("Core/optional/Default HUD/menus/options/start_menu.xml", "menus/options/start_menu.xml");
+			InstallFileFromFomod("optional/Default HUD/menus/options/start_menu.xml", "menus/options/start_menu.xml");
 		} else {
 
 			bool editSuccess = AppendIncludeToMenu("menus/options/start_menu.xml", "includes_StartMenu.xml");
@@ -137,7 +137,7 @@ class Script : FalloutNewVegasBaseScript {
 	}
 	
 	
-	private static bool InstallModuleCyberware()
+	static bool InstallModuleCyberware()
 	{
 		string text;
 		
@@ -149,7 +149,7 @@ class Script : FalloutNewVegasBaseScript {
 		
 		// Modify includes_TutorialMenu.xml if necessary
 		if (! DataFileExists("menus/prefabs/includes_TutorialMenu.xml")) {
-			InstallFileFromModule("Cyberware", "menus/prefabs/includes_TutorialMenu.xml");
+			InstallFileFromFomod("menus/prefabs/includes_TutorialMenu.xml");
 		} else {
 				// 
 			bool editSuccess = AppendInclude("menus/prefabs/includes_TutorialMenu.xml", @"pnx\pnximplants.xml");
@@ -159,23 +159,10 @@ class Script : FalloutNewVegasBaseScript {
 				MessageBox(text, title);
 			}
 		}
-
-		// Modify hud_main_menu.xml	if necessary
-		if (! DataFileExists("menus/main/hud_main_menu.xml")) {
-			InstallFileFromFomod("Cyberware/optional/Default HUD/menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml");
-		} else {
-
-			bool editSuccess = AppendIncludeToMenu("menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access hud_main_menu.xml. Guess you'll have to install it manually (see readme)";
-				MessageBox(text, title);
-			}
-		}
 		
 		// Modify tutorial_menu.xml if necessary
 		if (! DataFileExists("menus/tutorial_menu.xml")) {
-			InstallFileFromFomod("Cyberware/optional/Default HUD/menus/tutorial_menu.xml", "menus/tutorial_menu.xml");
+			InstallFileFromFomod("optional/Default HUD/menus/tutorial_menu.xml", "menus/tutorial_menu.xml");
 		} else {
 
 			bool editSuccess = AppendIncludeToMenu("menus/tutorial_menu.xml", "includes_TutorialMenu.xml");
@@ -190,7 +177,7 @@ class Script : FalloutNewVegasBaseScript {
 	}
     
     
-    private static void InitializeComponents()
+    static void InitializeComponents()
     {
     	hoverPlayer = new System.Media.SoundPlayer();
 		acceptPlayer = new System.Media.SoundPlayer();
@@ -382,7 +369,7 @@ class Script : FalloutNewVegasBaseScript {
     }
     
     
-    private static Image GetImageFromFomod(string filename) {  
+    static Image GetImageFromFomod(string filename) {  
         byte[] data = GetFileFromFomod(filename);
 		
 		if (data == null)
@@ -400,7 +387,7 @@ class Script : FalloutNewVegasBaseScript {
     }
     
     
-	private static Stream GetStreamFromFomod(string filename) {  
+	static Stream GetStreamFromFomod(string filename) {  
 		byte[] data = GetFileFromFomod(filename);
 		
 		if (data == null)
@@ -410,17 +397,30 @@ class Script : FalloutNewVegasBaseScript {
     }
 	
 		
-	private static void InstallModuleFiles(string name, string[] excludes)
+	static void InstallModuleFiles(string name, string[] excludes)
 	{
-		foreach (string file in GetFomodFileList()) {
-			if (! file.StartsWith(name))
-				continue;
+		Stream listStream = GetStreamFromFomod("fomod/" + name + "Files.txt");
+		if (listStream == null)
+			return;
+			
+		TextReader tr = new StreamReader(listStream);
+		
+		List<string> fileList = new List<string>();
+		string line;
+		while((line = tr.ReadLine()) != null) {
+			fileList.Add(line);
+		}
+		tr.Close();
+		
+		string[] files = fileList.ToArray();
+		
+		foreach (string file in files) {
 		
 			// In case i forgot to remove it :)
-			if (file.StartsWith(name + "/fomod"))
+			if (file.StartsWith("fomod"))
 				continue;
 				
-			if (file.StartsWith(name + "/optional"))
+			if (file.StartsWith("optional"))
 				continue;
 				
 			bool found = false;
@@ -433,12 +433,12 @@ class Script : FalloutNewVegasBaseScript {
 			if (found)
 				continue;
 
-			InstallFileFromModule(name, file);
+			InstallFileFromFomod(file);
 		}
 	}
 	
 	
-	private static bool AppendInclude(string xmlPath, string includePath)
+	static bool AppendInclude(string xmlPath, string includePath)
 	{
 		byte[] data = GetExistingDataFile(xmlPath);
 		
@@ -464,7 +464,7 @@ class Script : FalloutNewVegasBaseScript {
 	}
 	
 	
-	private static bool AppendIncludeToMenu(string xmlPath, string includePath)
+	static bool AppendIncludeToMenu(string xmlPath, string includePath)
 	{
 		byte[] data = GetExistingDataFile(xmlPath);
 		
@@ -495,20 +495,12 @@ class Script : FalloutNewVegasBaseScript {
 	}
 	
 	
-	private static bool InstallFileFromFomod(string source, string target)
+	static bool InstallFileFromFomod(string source, string target)
 	{
 		byte[] data = GetFileFromFomod(source);
 		if (data == null)
 			return false;
 		
 		return GenerateDataFile(target, data);
-	}
-	
-	
-	// Strips the module name from the install path
-	private static bool InstallFileFromModule(string name, string source)
-	{
-		string target = source.Substring(name.Length+1);		
-		return InstallFileFromFomod(source, target);
 	}
 }
