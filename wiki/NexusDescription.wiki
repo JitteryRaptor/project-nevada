@@ -1,3 +1,4 @@
+{{{
 [center][img]http://img5.imagebanana.com/img/t9qh2fia/LogoFINALnexus.png[/img][/center]
 
 [center][b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Mezmorki
@@ -198,3 +199,4 @@ Once you downloaded the right file(s), you can proceed with the installation.
 [b]6.[/b] Done!
 
 [line]
+}}}
