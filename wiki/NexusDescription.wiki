@@ -1,6 +1,3 @@
-#summary Download page description.
-
-{{{
 [center][img]http://img5.imagebanana.com/img/t9qh2fia/LogoFINALnexus.png[/img][/center]
 
 [center][b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Mezmorki
@@ -9,18 +6,15 @@
 [center][youtube]juMWKWR_BCo[/youtube][/center]
 
 [line]
-
+[center]
 [heading][b][color=#AA0000]*********************** IMPORTANT! ****************************[/color][/b][/heading]
 
-The following mods/utilities are required for Project Nevada:
+[color=#FF8C00]*[/color] The [url=http://nvse.silverlock.org/]Fallout: New Vegas Script Extender (NVSE)[/url] is [b]REQUIRED[/b] to run Project Nevada.
 
-[color=#FF8C00]*[/color] [url=http://nvse.silverlock.org/]Fallout: New Vegas Script Extender (NVSE)[/url] 
-
-[color=#FF8C00]*[/color] [url=http://www.newvegasnexus.com/downloads/file.php?id=36901]Fallout Mod Manager (FOMM)[/url] is HIGHLY recommended for properly installing and setting up Project Nevada. 
-
+[color=#FF8C00]*[/color] The [url=http://www.newvegasnexus.com/downloads/file.php?id=36901]Fallout Mod Manager (FOMM)[/url] is [b]HIGHLY RECOMMENDED[/b] for properly installing Project Nevada.
+[/center]
 [line]
-
-[size=6][color=#FF8C00][b]Introduction[/b][/color][/size]
+[img]http://img5.imagebanana.com/img/w0exlpat/NexusIntroduction.png[/img]
 
 Project Nevada is a mod aiming to make Fallout: New Vegas a more interesting - eventually more challenging - but surely more fun experience for you.
 Created by the team responsible for the Fallout 3 Wanderers Edition (FWE), we're leaving the barren DC wasteland behind and move on west to new, exciting regions.
@@ -42,10 +36,7 @@ Further general objectives and design concepts are:
 
 [color=#FF8C00]*[/color] Blend features in as good as possible - players shouldn't feel reminded that they're using a mod.
 
-[color=#FF8C00]*[/color] Polish, polish, polish.
-
 [line]
-
 [img]http://img5.imagebanana.com/img/apnzt5a7/NexusCore.png[/img]
 [heading][b]Module Version:[/b] [color=#FF8C00]1.0[/color][/heading]
 
@@ -158,21 +149,31 @@ To ensure a seamless integration, the new items are carefully balanced and place
 To be announced.
 
 [line]
-
-[size=6][color=#FF8C00][b]Installation[/b][/color][/size]
+[img]http://img5.imagebanana.com/img/8qqrfqbw/NexusInstallation.png[/img]
 
 [b]We really recommend using the Fallout Mod Manager to install Project Nevada![/b]
 It will automatically copy the right files and take care of any conflicts with already installed mods.
 
-[b]Also remember, the Core module is required for all modules! If you don't like a specific features, you can disable it in-game.[/b]
+Before you can get started, you have two make two choices:
+1. [color=#FF8C00]FOMM installation[/color] (recommended) or [color=#FF8C00]manual installation[/color]
+2. [color=#FF8C00]FULL PACKAGE[/color] (recommened) or just [color=#FF8C00]selected modules[/color]
+
+[color=#FF8C00]*[/color] If you're using [color=#FF8C00]FOMM[/color], just download the [color=#FF8C00]FULL PACKAGE[/color]. It has a nice installer that lets you select the modules you want.
+[color=#FF8C00]*[/color] If you want to use [color=#FF8C00]all modules[/color] and install them [color=#FF8C00]manually[/color], grab the [color=#FF8C00]FULL PACKAGE[/color] as well.
+[color=#FF8C00]*[/color] If you want to do a [color=#FF8C00]manual installation[/color] for [color=#FF8C00]selected modules only[/color], download the [color=#FF8C00]separate files[/color].
+
+[b]When downloading selected modules only, remember: The Core module is required in any case! If you don't like a specific feature, you can disable it in-game.[/b]
+
+Once you downloaded the right file(s), you can proceed with the installation.
 
 [heading][color=#FF8C00]>[/color] Automated Installation with FOMM[/heading]
 [b]1.[/b] Start FOMM and click on [color=#FF8C00]Package Manager[/color].
 
-[i]For every module you want to install:[/i]
+[i]In case you downloaded separate modules, repeat these steps for each of them:[/i]
 [b]2.[/b] In the top-right button menu, click on [color=#FF8C00]Add FOmod[/color] and select the downloaded archive file.
 [b]3.[/b] The module will now appear in the list. [color=#FF8C00]Select[/color] it and click [color=#FF8C00]Activate[/color].
-[b]4.[/b] If you are prompted to [color=#FF8C00]overwrite[/color] anything, click [color=#FF8C00]Yes to All[/color].
+[b]4.[/b] In case you're using the [color=#FF8C00]FULL PACKAGE[/color], select the modules you want, then click [color=#FF8C00]Install[/color].
+[b]5.[/b] If you are prompted to [color=#FF8C00]overwrite[/color] anything, click [color=#FF8C00]Yes to All[/color].
 
 [b]5.[/b] Done!
 
@@ -182,7 +183,7 @@ It will automatically copy the right files and take care of any conflicts with a
 [b]1.[/b] Locate the [color=#FF8C00]Data/[/color] folder in your Fallout New Vegas [color=#FF8C00]installation directory[/color].
 (Typically it's found at Program Files/Steam/SteamApps/common/fallout new vegas/Data/)
 
-[i]For every module you want to install:[/i]
+[i]In case you downloaded separate modules, repeat this step for each of them:[/i]
 [b]2.[/b] Extract the contents of downloaded archive file to your [color=#FF8C00]Data/[/color] folder.
 
 [b]3.[/b] Locate the [color=#FF8C00]Data/optional/[/color] folder. In there, open the following directory, depending on which [color=#FF8C00]interface mod[/color] you are using:
@@ -192,9 +193,8 @@ It will automatically copy the right files and take care of any conflicts with a
 
 [b]4.[/b] Copy the contents of the directory you just opened to your [color=#FF8C00]Data/[/color] folder.
 
-[b]5.[/b] Done!
+[b]5.[/b] In the New Vegas Launcher, click on [color=#FF8C00]Data Files[/color] and select the plugins you want.
+
+[b]6.[/b] Done!
 
 [line]
-
-[size=6][color=#FF8C00][b]Credits[/b][/color][/size]
-}}}
