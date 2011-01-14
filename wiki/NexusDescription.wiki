@@ -199,4 +199,40 @@ Once you downloaded the right file(s), you can proceed with the installation.
 [b]6.[/b] Done!
 
 [line]
+[img]http://img5.imagebanana.com/img/h8ek6et0/NexusTroubleshooting.png[/img]
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: My game crashes right after starting it!
+
+Yes, that's pretty annoying! There are basically two things that can cause this:
+
+[b]1.[/b] A missing master file (some plugins depend on other plugins, and if they can't find them the game crashes)
+If related to Project Nevada, this happens if you didn't install the Core plugin (which is required by all other modules).
+Fix it, by installing the Core module as well.
+		
+[b]2.[/b]	A missing interface file.
+This one is a little trickier. If an interface file is used somewhere that does not exist anymore, the game crashes.
+To fix it, delete the menus/ folder in your Data/ directory, then reinstall any interface-related mods (for example MTUI, DarnUI, but also Project Nevada since it uses those interface files as well).
+
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: After I load a savegame, a message box tells me that Project Nevada wasn't properly installed.
+
+Again, two things that can cause this:
+
+[b]1.[/b] Project Nevada wasn't properly installed :) If you did a manual install and forgot to follow step 3 in the guide above, this is
+what happens. To fix it, install Project Nevada properly as described in Section 3.
+		
+[b]2.[/b] If this problem suddenly occurs when you were already running Project Nevada successfully, this means some other mod overwrote an interface file.
+With FOMM, this should be fixed by simply deactivating Project and then activating it again.
+If you don't use FOMM then this is where things will get complicated.
+First you have to find out which other mod causes the conflicts, then with that specific information you can ask for help in the comments.
+
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: After I installed Project Nevada, my game is lagging/stuttering more than usual.
+
+Even though we tried to optimize our scripts as good as possible, they can still cause considerable strain especially if your computer barely meets the minimum system requirements for Fallout: New Vegas.
+You should try out the New Vegas Stutter Remover (http://www.newvegasnexus.com/downloads/file.php?id=34832), in most cases it will will significantly increase performance.
+If that doesn't help, try deactivating some of the features, for example the crosshair recoil or visor overlays.
+		
+		
+If your problem wasn't covered here, describe your issues in the "Comments" section. Surely someone will be able to provide assistance.
 }}}
