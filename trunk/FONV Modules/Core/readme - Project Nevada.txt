@@ -15,7 +15,9 @@ Current Version: 1.0
 
 4. Troubleshooting
 
-5. Cyberware Features
+5. Core Features
+
+6. Cyberware Features
 	a) Item changes
 	b) Implant list
 	c) Implant locations
@@ -32,7 +34,7 @@ Section 3 contains the generic installation guide (it's the same for all modules
 
 The most common problems (and their solutions) are listed in Section 4.
 
-Section 5 describes the Cyberware changes and additions. Read it, you're having trouble finding a certain implant, or if you are just
+Section 6 describes the Cyberware changes and additions. Read it, you're having trouble finding a certain implant, or if you are just
 curious. However, DON'T read it, if you want to search for the implants yourself. Most of them are placed so that you stumble upon them
 naturally when playing the game.
 
@@ -146,9 +148,32 @@ Solution: Even though we tried to optimize our scripts as good as possible, they
 ------------------------------------------------------------
 If your problem wasn't covered here, go to http://www.newvegasnexus.com/downloads/file.php?id=39442 and describe your issues in the
 "Comments" section. Surely someone will be able to provide assistance.
-		
+
 ========================================================================================================================================
- 5. Cyberware Features
+ 5. Core Features
+========================================================================================================================================
+
+------------------------------------------------------------
+ a) Gameplay
+------------------------------------------------------------
+
+[Gameplay]
+
+* Dynamic Crosshair
+* Sprint
+* Grenade Hotkey 
+* Variable Zoom for scoped weapons 
+* Slower Backpedaling 
+* First-person Visor Overlays for helmets
+* Immersive Health Visuals
+
+[Infrastructure]
+
+* Extensible Control Panel 
+* Streamlined Hotkey Management
+
+========================================================================================================================================
+ 6. Cyberware Features
 ========================================================================================================================================
 
 ------------------------------------------------------------
@@ -287,13 +312,13 @@ If your problem wasn't covered here, go to http://www.newvegasnexus.com/download
  d) Surgery services
 ------------------------------------------------------------
 
-Name				Location						Requires training?
+Name			Location				Requires training?
  
-Usanagi				New Vegas Medical Clinic		No
-Doc Mitchell		Goodsprings						Yes
+Usanagi			New Vegas Medical Clinic		No
+Doc Mitchell		Goodsprings				Yes
 Linda Schuler		Hidden Valley Bunker			No
-Kemp				Camp McCarran					Yes
-Julie Farkas		Old Mormon Fort					Yes
+Kemp			Camp McCarran				Yes
+Julie Farkas		Old Mormon Fort				Yes
 
 Training manual locations:
 #1 Locked safe in Goodsprings school

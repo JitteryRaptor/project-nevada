@@ -81,57 +81,11 @@ class Script : FalloutNewVegasBaseScript {
 		};
 		InstallModuleFiles("Core", excludes);
 		
-		// Modify includes_HUDMainMenu.xml if necessary
-		if (! DataFileExists("menus/prefabs/includes_HUDMainMenu.xml")) {
-			InstallFileFromFomod("menus/prefabs/includes_HUDMainMenu.xml");
-		} else {
-				// 
-			bool editSuccess = AppendInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
+		UpdateInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
+		UpdateInclude("menus/prefabs/includes_StartMenu.xml", @"pnx\pnxpause.xml");
 		
-			if (! editSuccess) {
-				text = "Failed to access includes_HUDMainMenu.xml. Guess you'll have to edit it manually (see readme)";
-				MessageBox(text, title);
-			}
-		}
-		
-		// Modify includes_StartMenu.xml if necessary
-		if (! DataFileExists("menus/prefabs/includes_StartMenu.xml")) {
-			InstallFileFromFomod("menus/prefabs/includes_StartMenu.xml");
-		} else {
-				// 
-			bool editSuccess = AppendInclude("menus/prefabs/includes_StartMenu.xml", @"pnx\pnxpause.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access includes_StartMenu.xml. Guess you'll have to install it manually (see readme)";
-				MessageBox(text, title);
-			}
-		}
-
-		// Modify hud_main_menu.xml	if necessary
-		if (! DataFileExists("menus/main/hud_main_menu.xml")) {
-			InstallFileFromFomod("optional/Default HUD/menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml");
-		} else {
-
-			bool editSuccess = AppendIncludeToMenu("menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access hud_main_menu.xml. Guess you'll have to install it manually (see readme)";
-				MessageBox(text, title);
-			}
-		}
-		
-		// Modify dialog_menu.xml if necessary
-		if (! DataFileExists("menus/options/start_menu.xml")) {
-			InstallFileFromFomod("optional/Default HUD/menus/options/start_menu.xml", "menus/options/start_menu.xml");
-		} else {
-
-			bool editSuccess = AppendIncludeToMenu("menus/options/start_menu.xml", "includes_StartMenu.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access start_menu.xml. Guess you'll have to install it manually (see readme)";
-				MessageBox(text, title);
-			}
-		}
+		UpdateUIFile("menus/main/hud_main_menu.xml", "optional/Default UI/menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
+		UpdateUIFile("menus/options/start_menu.xml", "optional/Default UI/menus/options/start_menu.xml", "includes_StartMenu.xml");
 	
 		return true;
 	}
@@ -147,34 +101,49 @@ class Script : FalloutNewVegasBaseScript {
 		};
 		InstallModuleFiles("Cyberware", excludes);
 		
-		// Modify includes_TutorialMenu.xml if necessary
-		if (! DataFileExists("menus/prefabs/includes_TutorialMenu.xml")) {
-			InstallFileFromFomod("menus/prefabs/includes_TutorialMenu.xml");
-		} else {
-				// 
-			bool editSuccess = AppendInclude("menus/prefabs/includes_TutorialMenu.xml", @"pnx\pnximplants.xml");
+		UpdateInclude("menus/prefabs/includes_TutorialMenu.xml", @"pnx\pnximplants.xml");
 		
-			if (! editSuccess) {
-				text = "Failed to access includes_TutorialMenu.xml. Guess you'll have to install it manually (see readme)";
-				MessageBox(text, title);
-			}
-		}
-		
-		// Modify tutorial_menu.xml if necessary
-		if (! DataFileExists("menus/tutorial_menu.xml")) {
-			InstallFileFromFomod("optional/Default HUD/menus/tutorial_menu.xml", "menus/tutorial_menu.xml");
-		} else {
-
-			bool editSuccess = AppendIncludeToMenu("menus/tutorial_menu.xml", "includes_TutorialMenu.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access tutorial_menu.xml. Guess you'll have to install it manually (see readme)";
-				MessageBox(text, title);
-			}
-		}
+		UpdateUIFile("menus/tutorial_menu.xml", "optional/Default UI/menus/tutorial_menu.xml", "includes_TutorialMenu.xml");
 	
 		return true;
 	}
+	
+	
+	// Installs include from fomod if not present, appends editString otherwise
+	static bool UpdateInclude(string path, string includePath)
+	{
+		if (! DataFileExists(path)) {
+			return InstallFileFromFomod(path);
+			
+		} else {
+				// 
+			bool editSuccess = AppendInclude(path, includePath);
+		
+			if (! editSuccess) {
+				MessageBox("Failed to access " + path + ". Reinstall the mod with all other applications closed, or try a manual installation (see readme).", title);
+			}
+			
+			return editSuccess;
+		}
+    }
+    
+    
+    // Installs include from fomod if not present, appends editString otherwise
+	static bool UpdateUIFile(string path, string srcPath, string includePath)
+	{
+		if (! DataFileExists(path)) {
+			return InstallFileFromFomod(srcPath, path);
+		} else {
+
+			bool editSuccess = AppendIncludeToMenu(path, includePath);
+		
+			if (! editSuccess) {
+				MessageBox("Failed to access " + path + ". Reinstall the mod with all other applications closed, or try a manual installation (see readme).", title);
+			}
+			
+			return editSuccess;
+		}
+    }
     
     
     static void InitializeComponents()
