@@ -211,7 +211,7 @@ class Script : FalloutNewVegasBaseScript {
         contentPicture.Image = imageLogo;
         contentPicture.Location = new System.Drawing.Point(8, 115);
         contentPicture.Name = "contentPicture";
-        contentPicture.Size = new System.Drawing.Size(768, 531);
+        contentPicture.Size = new System.Drawing.Size(768, 418);
         contentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
         contentPicture.TabIndex = 0;
         contentPicture.TabStop = false;
@@ -269,7 +269,7 @@ class Script : FalloutNewVegasBaseScript {
         // installButton
         // 
         installButton.Image = imageInstall;
-        installButton.Location = new System.Drawing.Point(603, 652);
+        installButton.Location = new System.Drawing.Point(603, 539);
         installButton.Name = "installButton";
         installButton.Size = new System.Drawing.Size(173, 102);
         installButton.TabIndex = 2;
@@ -289,7 +289,7 @@ class Script : FalloutNewVegasBaseScript {
         // exitButton
         // 
         exitButton.Image = imageExit;
-        exitButton.Location = new System.Drawing.Point(8, 652);
+        exitButton.Location = new System.Drawing.Point(8, 539);
         exitButton.Name = "exitButton";
         exitButton.Size = new System.Drawing.Size(125, 102);
         exitButton.TabIndex = 1;
@@ -311,7 +311,7 @@ class Script : FalloutNewVegasBaseScript {
         installerForm.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         installerForm.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         installerForm.BackColor = System.Drawing.Color.Black;
-        installerForm.ClientSize = new System.Drawing.Size(784, 762);
+        installerForm.ClientSize = new System.Drawing.Size(784, 647);
         installerForm.Controls.Add(cyberwareCheckbox);
         installerForm.Controls.Add(coreCheckbox);
         installerForm.Controls.Add(contentPicture);
@@ -320,9 +320,9 @@ class Script : FalloutNewVegasBaseScript {
         installerForm.Controls.Add(installButton);
         installerForm.Controls.Add(exitButton);
         installerForm.MaximizeBox = false;
-        installerForm.MaximumSize = new System.Drawing.Size(800, 800);
+        installerForm.MaximumSize = new System.Drawing.Size(800, 685);
         installerForm.MinimizeBox = false;
-        installerForm.MinimumSize = new System.Drawing.Size(800, 800);
+        installerForm.MinimumSize = new System.Drawing.Size(800, 685);
         installerForm.Name = "installerForm";
         installerForm.Padding = new System.Windows.Forms.Padding(5, 25, 5, 5);
         installerForm.Text = title;
