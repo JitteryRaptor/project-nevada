@@ -16,12 +16,17 @@ Part I - General
 	3. Troubleshooting
 
 	4. Credits
+	
+	5. Contact
+	
+	6. Permissions
+	
 
 Part II - Module Details
 
 	1. Core
-		a) Gameplay features
-		b) Infrastructure features
+		a) Features
+		b) Hotkeys
 	
 	2. Cyberware
 		a) Item changes
@@ -72,7 +77,7 @@ It will automatically copy the right files and take care of any conflicts with a
 
 Before you can get started, you have two make two choices:
 1. FOMM installation (recommended) or manual installation
-2. FULL PACKAGE (recommened) or just selected modules
+2. FULL PACKAGE (recommended) or just selected modules
 
 * If you're using FOMM, just download the FULL PACKAGE. It has a nice installer that lets you select the modules you want.
 * If you want to use all modules and install them manually, grab the FULL PACKAGE as well.
@@ -139,7 +144,7 @@ Solution: Yes, that's pretty annoying! There are basically two things that can c
 		(for example MTUI, DarnUI, but also Project Nevada since it uses those interface files as well).
 		
 ------------------------------------------------------------
-Problem: After I load a savegame, a message box tells me that Project Nevada wasn't properly installed.
+Problem: After I load a save game, a message box tells me that Project Nevada wasn't properly installed.
 
 Solution: Again, two things that can cause this:
 	1)	Project Nevada wasn't properly installed :) If you did a manual install and forgot to follow step 3 in the guide above, this is
@@ -167,7 +172,7 @@ If your problem wasn't covered here, go to http://www.newvegasnexus.com/download
 
 
 ========================================================================================================================================
- 2. Credits
+ 4. Credits
 ========================================================================================================================================
 
 Ugluxy - Textures for the visor damage effects
@@ -175,6 +180,28 @@ lespaul678 - Sprint exhaustion sounds (male)
 Gopher - Heat vision effects
 Max Tael - MTUI compatibility files
 DarN - DarNified UI compatibility files
+
+
+========================================================================================================================================
+ 5. Contact
+========================================================================================================================================
+
+For contact, send a PM to schlangster at
+
+	http://www.newvegasnexus.com/
+		or
+	http://forums.bethsoft.com/
+
+	
+========================================================================================================================================
+ 6. Permissions
+========================================================================================================================================	
+
+Some assets in Project Nevada belong to other authors.
+You will need to seek permission from these authors before you can use their assets.
+
+You may upload Project Nevada to other sites, convert it work with other games, modify anything or release bug fixes and improvements,
+and use our assets without permission, but please give proper credit if you do so.
 
 
 
@@ -194,54 +221,72 @@ from the ground up, with exciting new features like the support for several VATS
 with the grenade hotkey. Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread.
 Each of those features can be individually enabled or disabled in-game. They are fully script-based to play along well with other mods.
 
-To allow customization, the Core module implements a Control Panel. For DarnUI users, it can be accessed directly from the pause menu.
-Other mods may extend the Control Panel without conflict and make use of the provided methods for streamlined hotkey assignment.
+To allow customization, the Core module implements a Control Panel. Other mods may extend the Control Panel without conflict and make
+use of the provided methods for streamlined hotkey assignment.
 
 Since the Core module avoids conflicting changes, players are free run it alongside any other mods, including their favorite overhaul.
 
 ------------------------------------------------------------
- a) Gameplay features
+ a) Features
 ------------------------------------------------------------
 
+The following features
+
 * Dynamic Crosshair
-	- Used formula: http://forums.bethsoft.com/index.php?/topic/1142921-in-depth-explanation-of-spreadaccuracy/
+	This feature causes the crosshair to expand and contract dynamically based on the player's current gun spread. The formula we used
+	is described here: http://forums.bethsoft.com/index.php?/topic/1142921-in-depth-explanation-of-spreadaccuracy/
+	A side feature is the introduction of recoil, which reduces accuracy when firing shots in rapid succession unless the player is in
+	a stable position (crouching and not moving for example).
 
 * Bullet Time
-	- Supported perks:
+	A classic feature that doesn't need much introduction - press a hotkey to slow down time, at the cost of Action Points.
+	The following perks are supported:
 		Math Wrath: Reduced AP costs
 		Grim Reaper Sprint: Regain AP for BT kills
 		Commando: Improved accuracy with two-handed weapons
 		Gunslinger: Improved accuracy with one-handed weapons
 	
-* Sprint (Run/Walk key)
-	- Supported tackle perks:
+* Sprint
+	Yet another classic - as the name suggests, Sprint allows you to increase your speed until your action points are used up.
+	When bouncing into an oppononent you may knock him down if you're Strength is overpowering his.
+	The following perks improve tackling:
 		Super Slam: Increased tackle force
-		Unstoppable Force: Tackle doesn't kick you out sprint.
+		Unstoppable Force: Tackle doesn't interrupt sprint.
 
 * Grenade Hotkey
-	- Supports grenades, but also throwable weapons
+	Press a hotkey to quickly equip and prepare an explosive, then release it to throw it. Another hotkey is used to cycle throw the
+	different throwables in the players inventory. Besides mentioned explosives, thrown weapons are supported as well.
 
 * Variable Zoom for scoped weapons
-	- Selected weapons have a digital zoom (Gauss, modded Laser Rifle)
+	All scoped weapons get multiple zooming steps. This works for mod-added weapons as well. The zooming number and
+	magnification of those additional zooming steps is based on range of the weapon, so it will not turn a pistol into a sniper rifle.
+	Selected weapons have a digital zoom (Gauss, Scoped Laser Rifle).
 
 * Slower Backpedaling
-	- Depends on Agility
+	When moving backwards, the player's speed is reduced based on his/her agility.
 
 * First-person Visor Overlays for helmets
 
 * Immersive Health Visuals
 
+* Control Panel
+	The control panel is accessible from the pause menu.
+	The button is in the lower right corner and only visible when coming directly from the game instead of another menu!
+	It's technically possible for other mods to add entries to the top-level menu.
+
 ------------------------------------------------------------
- b) Infrastructure features
+ b) Hotkeys
 ------------------------------------------------------------
 
-* Extensible Control Panel
-	- Accessible from the pause menu. The button is only visible when coming directly from the game instead of another menu!
-	- Other mods can add entries to the top-level menu.
-
-* Streamlined Hotkey Management
-	- Hotkey conflicts can be detected between multiple mods if they use our system
-
+* Bullet Time (C)
+* Stealth Field (X)
+* Sprint (Run/Walk)
+* Throw Grenade (G)
+* Select Grenade (H)
+* Control Panel (Hold P)
+* Zoom In (MWheel Up)
+* Zoom Out (MWheel Down)	
+	
 	
 ========================================================================================================================================
  2. Cyberware
