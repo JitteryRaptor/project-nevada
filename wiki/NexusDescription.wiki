@@ -157,7 +157,7 @@ It will automatically copy the right files and take care of any conflicts with a
 
 Before you can get started, you have two make two choices:
 1. [color=#FF8C00]FOMM installation[/color] (recommended) or [color=#FF8C00]manual installation[/color]
-2. [color=#FF8C00]FULL PACKAGE[/color] (recommened) or just [color=#FF8C00]selected modules[/color]
+2. [color=#FF8C00]FULL PACKAGE[/color] (recommended) or just [color=#FF8C00]selected modules[/color]
 
 [color=#FF8C00]*[/color] If you're using [color=#FF8C00]FOMM[/color], just download the [color=#FF8C00]FULL PACKAGE[/color]. It has a nice installer that lets you select the modules you want.
 [color=#FF8C00]*[/color] If you want to use [color=#FF8C00]all modules[/color] and install them [color=#FF8C00]manually[/color], grab the [color=#FF8C00]FULL PACKAGE[/color] as well.
