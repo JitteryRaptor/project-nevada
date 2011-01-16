@@ -9,7 +9,7 @@ This documents contains a few notes and links for our external testers.
 While you can always directly message me or someone else in the team to bring something to our attention, please file every bug in the Issue tracker on our google code page as well:
 http://code.google.com/p/project-nevada/issues/list
 
-Otherwise we may lose track of things and bugs end up being overlooked.
+Otherwise we may lose track of things and bugs end up being overlooked. This Issue Tracker also supports comments, so check your reported issues regularly for status updates or further requests.
 
 Oh, and another important thing: When noticing a bug thats easy to reproduce and that wasn't there before an update, try a clean safe before reporting it. Chances are good that it might be gone then.
 
