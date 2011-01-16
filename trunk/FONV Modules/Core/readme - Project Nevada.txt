@@ -1,5 +1,18 @@
 ########################################################################################################################################
-README - Project Nevada
+					     _____           _           _    
+					    |  __ \         (_)         | |   
+					    | |__) | __ ___  _  ___  ___| |_  
+					    |  ___/ '__/ _ \| |/ _ \/ __| __| 
+ 					    | |   | | | (_) | |  __/ (__| |_  
+					    |_|   |_|  \___/| |\___|\___|\__| 
+					
+					 _   _ ________      __     _____          
+					| \ | |  ____\ \    / /\   |  __ \   /\    
+					|  \| | |__   \ \  / /  \  | |  | | /  \   
+					| . ` |  __|   \ \/ / /\ \ | |  | |/ /\ \  
+					| |\  | |____   \  / ____ \| |__| / ____ \ 
+					|_| \_|______|   \/_/    \_\_____/_/    \_\
+
 ########################################################################################################################################
 
 Team: snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Mezmorki
@@ -368,8 +381,8 @@ requiring energy supply for special equipment.
 
 * Kinetic Accelerator: Surroundings slowed down by 25% (50%) during sprint (Effects are additive if used in both legs)
 * Nanobionic Weave: Limb regeneration
-* Tread Damper: Sneak +4(6,8,10)
-* Weight Absorber: Carry weight +10(20,30,40)
+* Tread Damper: Sneak +4(6,8,10) (Upgradeable)
+* Weight Absorber: Carry weight +10(20,30,40) (Upgradeable)
 
 ------------------------------------------------------------
  c) Implant locations (!!!SPOILER WARNING!!!)
