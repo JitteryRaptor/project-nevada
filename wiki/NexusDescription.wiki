@@ -49,7 +49,7 @@ All of them are rewritten from the ground up, with exciting new features like th
 Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread.
 Each of those features can be individually enabled or disabled in-game. They are fully script-based to play along well with other mods.
 
-To allow customization, the Core module implements a Control Panel. For DarnUI users, it can be accessed directly from the pause menu.
+To allow customization, the Core module implements a Control Panel, which can be accessed directly from the pause menu.
 Other mods may extend the Control Panel without conflict and make use of the provided methods for streamlined hotkey assignment.
 
 Since the Core module avoids conflicting changes, players are free run it alongside any other mods, including their favorite overhaul.
@@ -230,9 +230,9 @@ First you have to find out which other mod causes the conflicts, then with that 
 [color=#FF8C00]*[/color] [b]Problem[/b]: After I installed Project Nevada, my game is lagging/stuttering more than usual.
 
 Even though we tried to optimize our scripts as good as possible, they can still cause considerable strain especially if your computer barely meets the minimum system requirements for Fallout: New Vegas.
-You should try out the New Vegas Stutter Remover (http://www.newvegasnexus.com/downloads/file.php?id=34832), in most cases it will will significantly increase performance.
+You should try out the [url=http://www.newvegasnexus.com/downloads/file.php?id=34832] New Vegas Stutter Remover [/url], in most cases it will will significantly increase performance.
 If that doesn't help, try deactivating some of the features, for example the crosshair recoil or visor overlays.
 		
 		
-If your problem wasn't covered here, describe your issues in the "Comments" section. Surely someone will be able to provide assistance.
+If your problem wasn't covered here, describe your issues in the comments section. Surely someone will be able to provide assistance.
 }}}
