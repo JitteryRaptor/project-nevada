@@ -13,6 +13,17 @@ Otherwise we may lose track of things and bugs end up being overlooked. This Iss
 
 Oh, and another important thing: When noticing a bug thats easy to reproduce and that wasn't there before an update, try a clean safe before reporting it. Chances are good that it might be gone then.
 
+== Issue life-cycle ==
+
+Basically it will work like that
+1. You report an issue
+2. It's confirmed/acknowledged
+3. The fix is committed to SVN
+4. At some point a new installer package is created from the current SVN snapshot
+5. I'll comment on all bugs that should be fixed in this new package
+6. You confirm that they are really fixed
+7. The issues is closed.
+
 == Readme ==
 
 The most current version of the readme can always be found here:
