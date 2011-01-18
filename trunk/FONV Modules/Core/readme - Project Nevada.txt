@@ -401,8 +401,6 @@ requiring energy supply for special equipment.
  c) Implant locations (!!!SPOILER WARNING!!!)
 ------------------------------------------------------------
 
-(!!!SPOILER WARNING!!!)
-
 [World placed]
 
 * AR Scanner
