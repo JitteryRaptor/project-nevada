@@ -47,7 +47,8 @@ class Script : FalloutNewVegasBaseScript {
 	static System.Media.SoundPlayer denyPlayer;
 	
 	
-	public static bool OnActivate() {
+	public static bool OnActivate()
+	{
         
         encoding = new ASCIIEncoding();
 		InitializeComponents();
@@ -77,15 +78,17 @@ class Script : FalloutNewVegasBaseScript {
 		// Install base files
 		string[] excludes = new string[] {
 			"includes_HUDMainMenu.xml",
-			"includes_StartMenu.xml"
+			"includes_StartMenu.xml",
+			"hud_main_menu.xml",
+			"start_menu.xml"
 		};
 		InstallModuleFiles("Core", excludes);
 		
 		UpdateInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
 		UpdateInclude("menus/prefabs/includes_StartMenu.xml", @"pnx\pnxpause.xml");
 		
-		UpdateUIFile("menus/main/hud_main_menu.xml", "optional/Default UI/menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
-		UpdateUIFile("menus/options/start_menu.xml", "optional/Default UI/menus/options/start_menu.xml", "includes_StartMenu.xml");
+		UpdateUIFile("menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
+		UpdateUIFile("menus/options/start_menu.xml", "menus/options/start_menu.xml", "includes_StartMenu.xml");
 	
 		return true;
 	}
@@ -97,13 +100,14 @@ class Script : FalloutNewVegasBaseScript {
 		
 		// Install base files
 		string[] excludes = new string[] {
-			"includes_TutorialMenu.xml"
+			"includes_TutorialMenu.xml",
+			"tutorial_menu.xml"
 		};
 		InstallModuleFiles("Cyberware", excludes);
 		
 		UpdateInclude("menus/prefabs/includes_TutorialMenu.xml", @"pnx\pnximplants.xml");
 		
-		UpdateUIFile("menus/tutorial_menu.xml", "optional/Default UI/menus/tutorial_menu.xml", "includes_TutorialMenu.xml");
+		UpdateUIFile("menus/tutorial_menu.xml", "menus/tutorial_menu.xml", "includes_TutorialMenu.xml");
 	
 		return true;
 	}
@@ -338,25 +342,23 @@ class Script : FalloutNewVegasBaseScript {
     }
     
     
-    static Image GetImageFromFomod(string filename) {  
+    static Image GetImageFromFomod(string filename)
+	{  
         byte[] data = GetFileFromFomod(filename);
 		
 		if (data == null)
 			return null;
 		
-        MemoryStream s = new MemoryStream(data);
-        
-        if (s.Length == 0)
-        	MessageBox("Empty stream", "Empty stream");
-        
-        Image img = Image.FromStream(s);
+        MemoryStream stream = new MemoryStream(data);
+        Image image = Image.FromStream(stream);
         s.Close();        	
         
-        return img;  
+        return image;  
     }
     
     
-	static Stream GetStreamFromFomod(string filename) {  
+	static Stream GetStreamFromFomod(string filename)
+	{  
 		byte[] data = GetFileFromFomod(filename);
 		
 		if (data == null)
