@@ -351,7 +351,7 @@ class Script : FalloutNewVegasBaseScript {
 		
         MemoryStream stream = new MemoryStream(data);
         Image image = Image.FromStream(stream);
-        s.Close();        	
+        stream.Close();        	
         
         return image;  
     }
