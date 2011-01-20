@@ -155,7 +155,7 @@ To be announced.
 [b]We really recommend using the Fallout Mod Manager to install Project Nevada![/b]
 It will automatically copy the right files and take care of any conflicts with already installed mods.
 
-Before you can get started, you have two make two choices:
+Before you can get started, you have to make two choices:
 1. [color=#FF8C00]FOMM installation[/color] (recommended) or [color=#FF8C00]manual installation[/color]
 2. [color=#FF8C00]FULL PACKAGE[/color] (recommended) or just [color=#FF8C00]selected modules[/color]
 
@@ -187,16 +187,15 @@ Once you downloaded the right file(s), you can proceed with the installation.
 [i]In case you downloaded separate modules, repeat this step for each of them:[/i]
 [b]2.[/b] Extract the contents of downloaded archive file to your [color=#FF8C00]Data/[/color] folder.
 
-[b]3.[/b] Locate the [color=#FF8C00]Data/optional/[/color] folder. In there, open the following directory, depending on which [color=#FF8C00]interface mod[/color] you are using:
-[color=#FF8C00]*[/color] Default UI, if you're not using any interface mod.
+[i]In case you are using any mod that modifies the interface:[/i]
+[b]3.[/b] Locate the [color=#FF8C00]Data/optional/[/color] folder. In there, copy the contents of following directory your [color=#FF8C00]Data/[/color] folder, depending on which [color=#FF8C00]interface mod[/color] you are using:
 [color=#FF8C00]*[/color] Darn UI, if you're using [color=#FF8C00]DarNified UI[/color].
 [color=#FF8C00]*[/color] MTUI, if you're using [color=#FF8C00]MTUI[/color].
+[color=#FF8C00]*[/color] Remember, if you're using the default interface you can just skip this step.
 
-[b]4.[/b] Copy the contents of the directory you just opened to your [color=#FF8C00]Data/[/color] folder.
+[b]4.[/b] In the New Vegas Launcher, click on [color=#FF8C00]Data Files[/color] and select the plugins you want.
 
-[b]5.[/b] In the New Vegas Launcher, click on [color=#FF8C00]Data Files[/color] and select the plugins you want.
-
-[b]6.[/b] Done!
+[b]5.[/b] Done!
 
 [line]
 [img]http://img5.imagebanana.com/img/h8ek6et0/NexusTroubleshooting.png[/img]
@@ -232,7 +231,19 @@ First you have to find out which other mod causes the conflicts, then with that 
 Even though we tried to optimize our scripts as good as possible, they can still cause considerable strain especially if your computer barely meets the minimum system requirements for Fallout: New Vegas.
 You should try out the [url=http://www.newvegasnexus.com/downloads/file.php?id=34832] New Vegas Stutter Remover [/url], in most cases it will will significantly increase performance.
 If that doesn't help, try deactivating some of the features, for example the crosshair recoil or visor overlays.
-		
-		
+
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: Since I installed Project Nevada, my game is very unstable and crashes all the time!
+
+Personally, I've been playing with Project Nevada for over 20 hours without a single crash. Same goes for our other testers.
+So currently the mod is not known to cause any instabilities. The problem is most likely somewhere else.
+
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: After I installed Project Nevada MANUALLY, another interface-related mod is no longer working.
+
+Unfortunately, when doing a MANUAL installation  this can't be avoided. Either the last installed UI mod automatically overwrites files of all previous ones, or installation will become very complex for the user.
+We chose the former. If you can't fix the problem yourself by editing the XML files, the solution is simple - just use the FOMM installer, it should automatically resolve any conflicts.
+
+
 If your problem wasn't covered here, describe your issues in the comments section. Surely someone will be able to provide assistance.
 }}}
