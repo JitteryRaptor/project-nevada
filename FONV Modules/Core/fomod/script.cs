@@ -9,39 +9,109 @@ using fomm.Scripting;
 
 class Script : Fallout3BaseScript
 {
+	const string title = "Project NEVADA";
 
-	private const string Title = "Project Nevada";
-
-	private static ASCIIEncoding Encoding = new ASCIIEncoding();
+	static ASCIIEncoding encoding;
 	
-		
-	public static void InstallFiles()
+	public static bool OnActivate()
 	{
+		encoding = new ASCIIEncoding();
+		
+		if (! InstallModuleCore())
+			return false;
+		
+		return true;
+	}
+		
+	static bool InstallModuleCore()
+	{	
+		// Install base files
+		string[] excludes = new string[] {
+			"includes_HUDMainMenu.xml",
+			"includes_StartMenu.xml",
+			"hud_main_menu.xml",
+			"start_menu.xml"
+		};
+		InstallModuleFiles(excludes);
+		
+		UpdateInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
+		UpdateInclude("menus/prefabs/includes_StartMenu.xml", @"pnx\pnxpause.xml");
+		
+		UpdateUIFile("menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
+		UpdateUIFile("menus/options/start_menu.xml", "menus/options/start_menu.xml", "includes_StartMenu.xml");
+	
+		return true;
+	}
+	
+	static void InstallModuleFiles(string[] excludes)
+	{	
 		foreach (string file in GetFomodFileList()) {
-			if (Path.GetDirectoryName(file) == "fomod")
+		
+			if (file.StartsWith("fomod"))
 				continue;
 				
-			if (Path.GetDirectoryName(file) == "optional")
-				continue;
-
-			if (Path.GetFileName(file) == "includes_HUDMainMenu.xml")
+			if (file.StartsWith("optional"))
 				continue;
 				
-			if (Path.GetFileName(file) == "includes_StartMenu.xml")
+			bool found = false;
+			foreach (string exclude in excludes) {
+				if (file.EndsWith(exclude)) {
+					found = true;
+					continue;
+				}
+			}
+			if (found)
 				continue;
 
 			InstallFileFromFomod(file);
 		}
 	}
 	
-	public static bool AppendInclude(string xmlPath, string includePath)
+	
+	// Installs include from fomod if not present, appends editString otherwise
+	static bool UpdateInclude(string path, string includePath)
+	{
+		if (! DataFileExists(path)) {
+			return InstallFileFromFomod(path);
+			
+		} else {
+				// 
+			bool editSuccess = AppendInclude(path, includePath);
+		
+			if (! editSuccess) {
+				MessageBox("Failed to access " + path + ". Reinstall the mod with all other applications closed, or try a manual installation (see readme).", title);
+			}
+			
+			return editSuccess;
+		}
+    }
+    
+	
+    // Installs include from fomod if not present, appends editString otherwise
+	static bool UpdateUIFile(string path, string srcPath, string includePath)
+	{
+		if (! DataFileExists(path)) {
+			return InstallFileFromFomod(srcPath, path);
+		} else {
+
+			bool editSuccess = AppendIncludeToMenu(path, includePath);
+		
+			if (! editSuccess) {
+				MessageBox("Failed to access " + path + ". Reinstall the mod with all other applications closed, or try a manual installation (see readme).", title);
+			}
+			
+			return editSuccess;
+		}
+    }
+	
+	static bool AppendInclude(string xmlPath, string includePath)
 	{
 		byte[] data = GetExistingDataFile(xmlPath);
 		
 		if (data == null)
 			return false;
 		
-		string tmp = Encoding.GetString(data);
+		string tmp = encoding.GetString(data);
 		
 		// Include is already there?
 		if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
@@ -52,21 +122,21 @@ class Script : Fallout3BaseScript
 			+ "<include src=\"" + includePath + "\" />\r\n"
 			+ "<!-- END Added by Project Nevada -->\r\n";
 		
-		data = Encoding.GetBytes(tmp);
+		data = encoding.GetBytes(tmp);
 			
 		GenerateDataFile(xmlPath, data);
 		
 		return true;
 	}
 	
-	public static bool AppendIncludeToMenu(string xmlPath, string includePath)
+	static bool AppendIncludeToMenu(string xmlPath, string includePath)
 	{
 		byte[] data = GetExistingDataFile(xmlPath);
 		
 		if (data == null)
 			return false;
 			
-		string tmp = Encoding.GetString(data);
+		string tmp = encoding.GetString(data);
 
 		// Include is already there?
 		if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
@@ -82,89 +152,20 @@ class Script : Fallout3BaseScript
 			"<menu name=\"$1\">$2" + includeStr + "</menu>",
 			RegexOptions.Singleline);
 		
-		data = Encoding.GetBytes(tmp);
+		data = encoding.GetBytes(tmp);
 			
 		GenerateDataFile(xmlPath, data);
 		
 		return true;
 	}
 	
-	public static bool InstallFileFromFomod(string source, string target)
+	
+	static bool InstallFileFromFomod(string source, string target)
 	{
 		byte[] data = GetFileFromFomod(source);
 		if (data == null)
 			return false;
 		
 		return GenerateDataFile(target, data);
-	}
-
-	public static bool OnActivate()
-	{
-	
-		string text;
-	
-		// Check NVSE - Had problems false positives on this, so disabled for now
-		//if (! ScriptExtenderPresent()) {
-		//	text = "The Fallout: New Vegas Script Extender is required to use this mod! Installation aborted.";
-		//	MessageBox(text, Title);
-		//	return false;
-		//}
-		
-		// Install base files
-		InstallFiles();
-		
-		// Modify includes_HUDMainMenu.xml if necessary
-		if (! DataFileExists("menus/prefabs/includes_HUDMainMenu.xml")) {
-			InstallFileFromFomod("menus/prefabs/includes_HUDMainMenu.xml");
-		} else {
-				// 
-			bool editSuccess = AppendInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access includes_HUDMainMenu.xml. Guess you'll have to edit it manually (see readme)";
-				MessageBox(text, Title);
-			}
-		}
-		
-		// Modify includes_StartMenu.xml if necessary
-		if (! DataFileExists("menus/prefabs/includes_StartMenu.xml")) {
-			InstallFileFromFomod("menus/prefabs/includes_StartMenu.xml");
-		} else {
-				// 
-			bool editSuccess = AppendInclude("menus/prefabs/includes_StartMenu.xml", @"pnx\pnxpause.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access includes_StartMenu.xml. Guess you'll have to edit it manually (see readme)";
-				MessageBox(text, Title);
-			}
-		}
-
-		// Modify hud_main_menu.xml	if necessary
-		if (! DataFileExists("menus/main/hud_main_menu.xml")) {
-			InstallFileFromFomod("optional/Default HUD/menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml");
-		} else {
-
-			bool editSuccess = AppendIncludeToMenu("menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access hud_main_menu.xml. Guess you'll have to edit it manually (see readme)";
-				MessageBox(text, Title);
-			}
-		}
-		
-		// Modify dialog_menu.xml if necessary
-		if (! DataFileExists("menus/options/start_menu.xml")) {
-			InstallFileFromFomod("optional/Default HUD/menus/options/start_menu.xml", "menus/options/start_menu.xml");
-		} else {
-
-			bool editSuccess = AppendIncludeToMenu("menus/options/start_menu.xml", "includes_StartMenu.xml");
-		
-			if (! editSuccess) {
-				text = "Failed to access start_menu.xml. Guess you'll have to edit it manually (see readme)";
-				MessageBox(text, Title);
-			}
-		}
-	
-		return true;
 	}
 }
