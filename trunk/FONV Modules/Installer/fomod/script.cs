@@ -72,9 +72,7 @@ class Script : FalloutNewVegasBaseScript {
 	
 	
 	static bool InstallModuleCore()
-	{
-		string text;
-		
+	{	
 		// Install base files
 		string[] excludes = new string[] {
 			"includes_HUDMainMenu.xml",
@@ -95,9 +93,7 @@ class Script : FalloutNewVegasBaseScript {
 	
 	
 	static bool InstallModuleCyberware()
-	{
-		string text;
-		
+	{	
 		// Install base files
 		string[] excludes = new string[] {
 			"includes_TutorialMenu.xml",
