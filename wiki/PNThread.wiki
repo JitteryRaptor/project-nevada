@@ -9,7 +9,6 @@
 [b]Current Version:[/b] In development
 
 [size="5"][b][color="#FF8C00"]>>> [/color][/b][url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Trailer[/url] [b][color="#FF8C00"]<<<[/color][/b][/size]
-[size="5"][b][color="#FF8C00"]>>> [/color][/b][url="http://www.youtube.com/watch?v=zpFJeQvqgxk&hd=1"]Cyberware Implant Interface Demo[/url] [b][color="#FF8C00"]<<<[/color][/b][/size]
 
 [b][color="#8B0000"]*********************** IMPORTANT ****************************[/color][/b]
 
@@ -98,10 +97,6 @@ To ensure a seamless integration, the new items are carefully balanced and place
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Core[color="#FF8C00"]>[/color][/b][/font][/size]
 
-[b]Infrastructure[/b]
-[color="#FF8C00"]*[/color] Extensible Control Panel 
-[color="#FF8C00"]*[/color] Streamlined Hotkey Management 
-
 [b]Selectable Features[/b] 
 [color="#FF8C00"]*[/color] Dynamic Crosshair
 [color="#FF8C00"]*[/color] Bullet Time 
@@ -110,6 +105,10 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color="#FF8C00"]*[/color] Variable Zoom for scoped weapons 
 [color="#FF8C00"]*[/color] Slower Backpedaling 
 [color="#FF8C00"]*[/color] First-person Visor Overlays for helmets
+
+[b]Infrastructure[/b]
+[color="#FF8C00"]*[/color] Extensible Control Panel 
+[color="#FF8C00"]*[/color] Streamlined Hotkey Management 
 
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Rebalance[color="#FF8C00"]>[/color][/b][/font][/size]
@@ -125,19 +124,42 @@ To ensure a seamless integration, the new items are carefully balanced and place
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Cyberware[color="#FF8C00"]>[/color][/b][/font][/size]
 
-[b]Implants[/b] 
-[color="#FF8C00"]*[/color] Bionic eyes: Enhanced vision modes
-[color="#FF8C00"]*[/color] Stealth nano-bots: Controllable stealth field
-[color="#FF8C00"]*[/color] AR Scanner: Real-time target analysis
-[color="#FF8C00"]*[/color] Synthetic lungs: Reduced sprint AP drain
-[color="#FF8C00"]*[/color] Synthetic limbs: Regenerating limb condition
-[color="#FF8C00"]*[/color] Adrenaline regulator: AP regeneration bonus for bullet time actions
-[color="#FF8C00"]*[/color] Parallel processing micro-grid: Player moves and shoots faster in bullet time
-[color="#FF8C00"]*[/color] Kinetic accelerator: Surroundings are slowed down when sprinting, increased tackle force
+[b]Head Implants[/b]
+[color=#FF8C00]*[/color] AR Scanner: Real-time target analysis
+[color=#FF8C00]*[/color] Bionic Eyes: Enhanced vision modes
+[color=#FF8C00]*[/color] Empathy Synthesizer: Charisma +1
+[color=#FF8C00]*[/color] Logic Co-Processor: Intelligence +1
+[color=#FF8C00]*[/color] Optics Enhancer: Perception +1
+[color=#FF8C00]*[/color] Probability Calculator: Luck +1
+[color=#FF8C00]*[/color] Voice Modulator: Speech +2(3,4,5), Barter +2(3,4,5)
+
+[b]Torso Implants[/b]
+[color=#FF8C00]*[/color] Adrenaline Booster: AP regeneration bonus for kills
+[color=#FF8C00]*[/color] Hypertrophy Accelerator: Strength +1
+[color=#FF8C00]*[/color] Monocyte Breeder: Health regeneration
+[color=#FF8C00]*[/color] Nociception Regulator: Endurance +1
+[color=#FF8C00]*[/color] Reflex Booster: Agility +1
+[color=#FF8C00]*[/color] Stealth Nano-Bots: Controllable stealth field
+[color=#FF8C00]*[/color] Sub-Dermal Armor: DT +4
+[color=#FF8C00]*[/color] Synthetic Lungs: 25% lower Sprint AP drain, water breathing
+
+[b]Arm Implants[/b]
+[color=#FF8C00]*[/color] Kinetic Accelerator: Attack and reload 25% (50%) faster during bullet time
+[color=#FF8C00]*[/color] Nanobionic Weave: Limb regeneration
+[color=#FF8C00]*[/color] Hand Stabilizer: Lockpick  +2(3,4,5), Repair +2(3,4,5)
+[color=#FF8C00]*[/color] Motor Memorizer: Guns  +2(3,4,5), Energy Weapons +2(3,4,5)
+[color=#FF8C00]*[/color] Neural Datatool: Science +4(6,8,10)
+[color=#FF8C00]*[/color] Razor Nails: Unarmed critical chance and damage increased by 25% (40,55,70)
+
+[b]Leg Implants[/b]
+[color=#FF8C00]*[/color] Kinetic Accelerator: Surroundings slowed down by 25% (50%) during sprint
+[color=#FF8C00]*[/color] Nanobionic Weave: Limb regeneration
+[color=#FF8C00]*[/color] Tread Damper: Sneak  +4(6,8,10)
+[color=#FF8C00]*[/color] Weight Absorber: Carry weight +10(20,30,40)
 
 [b]Tech[/b]
-[color="#FF8C00"]*[/color] Enhanced vision modes for power armor helmets and other advanced headgear
-[color="#FF8C00"]*[/color] Stealth Boy field is controllable and status is displayed in the HUD
+[color=#FF8C00]*[/color] Enhanced vision modes for power armor helmets and other advanced headgear
+[color=#FF8C00]*[/color] Stealth Boy field is controllable and status is displayed in the HUD
 
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Equipment[color="#FF8C00"]>[/color][/b][/font][/size]
@@ -149,9 +171,10 @@ To be announced.
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Videos[color="#FF8C00"]>[/color][/b][/font][/size]
 
- [url="http://www.youtube.com/watch?v=230I-OoobR0&hd=1"]Original Teaser[/url] 
- [url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Trailer[/url] 
-[url=http://www.youtube.com/watch?v=GXrLHEyBRQE&hd=1]Control Panel[/url]
+ [url=http://www.youtube.com/watch?v=230I-OoobR0&hd=1]Original Teaser[/url] 
+ [url=http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1]Trailer[/url] 
+ [url=http://www.youtube.com/watch?v=GXrLHEyBRQE&hd=1]Control Panel[/url]
+ [url=http://www.youtube.com/watch?v=zpFJeQvqgxk&hd=1]Cyberware Implant Interface Demo[/url]
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Screenshots[color="#FF8C00"]>[/color][/b][/font][/size]
 
