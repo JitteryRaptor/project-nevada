@@ -107,7 +107,7 @@ Once you downloaded the right file(s), you can proceed with the installation.
 1. Start FOMM and click on Package Manager.
 
 In case you downloaded separate modules, repeat these steps for each of them:
-2. In the top-right button menu, click on Add FOmod and select the downloaded archive file.
+2. In the top-right button menu, click on Add FOMod and select the downloaded archive file.
 3. The module will now appear in the list. Select it and click Activate.
 4. In case you're using the FULL PACKAGE, select the modules you want, then click Install.
 5. If you are prompted to overwrite anything, click Yes to All.
@@ -207,7 +207,6 @@ Max Tael - MTUI compatibility files
 DarN - DarNified UI compatibility files
 Ugluxy - Textures for the visor damage effects
 
-
 Thanks to our external testers, who helped a great deal with improving the overall quality of this mod:
 	gyshall, mikekearn, Ren Lotus, robber804, ToJKa (in alphabetical order)
 
@@ -245,8 +244,8 @@ and use our assets without permission, but please give proper credit if you do s
 
 The Core module is the foundation of Project Nevada, and as such required by all other modules.
 
-It adds the gameplay features found in popular first-person-shooter games that were yet missing in New Vegas. Some of those features
-are improved versions of already well-known Fallout 3 mods, like the Grenade Hotkey, Bullet Time or Sprint. All of them are rewritten
+It adds the gameplay features found in popular first-person-shooter games that were missing in New Vegas. Some of those features are
+improved versions of already well-known Fallout 3 mods, like the Grenade Hotkey, Bullet Time or Sprint. All of them are rewritten
 from the ground up, with exciting new features like the support for several VATS perks in Bullet Time and support for throwing weapons
 with the grenade hotkey. Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread.
 Each of those features can be individually enabled or disabled in-game. They are fully script-based to play along well with other mods.
@@ -272,13 +271,13 @@ The following features
 	A classic feature that doesn't need much introduction - press a hotkey to slow down time, at the cost of Action Points.
 	The following perks are supported:
 		Math Wrath: Reduced AP costs
-		Grim Reaper Sprint: Regain AP for BT kills
+		Grim Reaper's Sprint: Regain AP for BT kills
 		Commando: Improved accuracy with two-handed weapons
 		Gunslinger: Improved accuracy with one-handed weapons
 	
 * Sprint
 	Yet another classic - as the name suggests, Sprint allows you to increase your speed until your action points are used up.
-	When bouncing into an oppononent you may knock him down if you're Strength is overpowering his.
+	When bouncing into an opponent you may knock him down if your Strength is overpowering his.
 	The following perks improve tackling:
 		Super Slam: Increased tackle force
 		Unstoppable Force: Tackle doesn't interrupt sprint.
@@ -322,7 +321,7 @@ The following features
  2. Cyberware
 ========================================================================================================================================
 
-Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of mans most advanced
+Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of man's most advanced
 technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
 
 Practically this means new features are associated with cybernetic implants and high-tech equipment. Examples include enhanced vision
@@ -418,7 +417,7 @@ requiring energy supply for special equipment.
 * Synthetic Lungs
 	Vault 34 Armory, on a shelf in the room with the plasma crate
 * Voice Modulator
-	Doc Mitchells House, on top of a metal box in the room where you wake up first
+	Doc Mitchell's House, on top of a metal box in the room where you wake up first
 * Nanobionic Weave
 	#1 Vault 19, caves, on the floor next to a shelf in the utility room
 	#2 Vault 11, next to the computer in the overseer's room
