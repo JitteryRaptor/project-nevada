@@ -15,7 +15,7 @@
 
 ########################################################################################################################################
 
-Team: snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Mezmorki
+Team: snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Zealotlee, Mezmorki
 
 Current Version: 1.0
 
@@ -29,7 +29,7 @@ Part I - General
 
 	3. Troubleshooting
 
-	4. Credits
+	4. Credits & Acknowledgements
 	
 	5. Contact
 	
@@ -198,14 +198,18 @@ If your problem wasn't covered here, go to http://www.newvegasnexus.com/download
 
 
 ========================================================================================================================================
- 4. Credits
+ 4. Credits & Acknowledgements
 ========================================================================================================================================
 
-Ugluxy - Textures for the visor damage effects
 lespaul678 - Sprint exhaustion sounds (male)
 Gopher - Heat vision effects
 Max Tael - MTUI compatibility files
 DarN - DarNified UI compatibility files
+Ugluxy - Textures for the visor damage effects
+
+
+Thanks to our external testers, who helped a great deal with improving the overall quality of this mod:
+	gyshall, mikekearn, Ren Lotus, robber804, ToJKa (in alphabetical order)
 
 
 ========================================================================================================================================
