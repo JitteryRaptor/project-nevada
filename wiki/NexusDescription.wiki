@@ -129,13 +129,7 @@ Combat will be quicker and deadlier and survival much harder.
 These changes are aimed to be very subtle and non-intrusive, making the game more challenging without inconveniencing the player.
 
 [heading][color=#FF8C00]>[/color] Details[/heading]
-[color=#FF8C00]*[/color] Reduced Health for NPCs and the player
-[color=#FF8C00]*[/color] Food&Drink no longer heal (optional) 
-[color=#FF8C00]*[/color] Weapon damage less skill dependant
-[color=#FF8C00]*[/color] Complete revamp of grenades and explosions
-[color=#FF8C00]*[/color] Rarer food and healing items
-[color=#FF8C00]*[/color] Bartering skill has a much higher affect on buying and selling
-[color=#FF8C00]*[/color] Higher availability for ammo crafting components
+To be announced.
 
 [img]http://www.newvegasnexus.com/downloads/images/39442-4-1296232410.png[/img]
 [heading][b]Module Version:[/b] [color=#FF8C00]Not yet released![/color][/heading]
