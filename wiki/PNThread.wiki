@@ -12,7 +12,7 @@
 
 [b][color="#8B0000"]*********************** IMPORTANT ****************************[/color][/b]
 
-The follower mods/utilities are required for Project Nevada:
+The following mods/utilities are required for Project Nevada:
 
 [color="#FF8C00"]*[/color] [url="http://nvse.silverlock.org/"]Fallout: New Vegas Script Extender (NVSE)[/url] 
 
@@ -52,7 +52,7 @@ Further general objectives and design concepts are:
 
 The Core module is the foundation of Project Nevada, and as such required by all other modules.
 
-It adds the gameplay features found in popular first-person-shooter games that were yet missing in New Vegas. Some of those features are
+It adds the gameplay features found in popular first-person-shooter games that were missing in New Vegas. Some of those features are
 improved versions of already well-known features from FWE, like the Grenade Hotkey, Bullet Time or Sprint. All of them are rewritten from the 
 ground up, with exciting new features like the support for several VATS perks in Bullet Time and support for throwing weapons with the
 grenade hotkey. Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread. Each of
@@ -73,7 +73,7 @@ non-intrusive, making the game more challenging without inconveniencing the play
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Cyberware[color="#FF8C00"]>[/color][/b][/font][/size]
 
-Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of mans most
+Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of man's most
 advanced technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
 
 Practically this means new features are associated with cybernetic implants and high-tech equipment. Examples include enhanced
