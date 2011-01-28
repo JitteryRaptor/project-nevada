@@ -1,5 +1,5 @@
 {{{
-[center][img]http://img5.imagebanana.com/img/t9qh2fia/LogoFINALnexus.png[/img][/center]
+[center][img]http://www.newvegasnexus.com/downloads/images/39442-1-1296232748.png[/img][/center]
 
 [center][b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Mezmorki
 [b]Current Version:[/b] 1.0[/center]
@@ -15,7 +15,7 @@
 [color=#FF8C00]*[/color] The [url=http://www.newvegasnexus.com/downloads/file.php?id=36901]Fallout Mod Manager (FOMM)[/url] is [b]HIGHLY RECOMMENDED[/b] for properly installing Project Nevada.
 [/center]
 [line]
-[img]http://img5.imagebanana.com/img/w0exlpat/NexusIntroduction.png[/img]
+[img]http://www.newvegasnexus.com/downloads/images/39442-1-1296232545.png[/img]
 
 Project Nevada is a mod aiming to make Fallout: New Vegas a more interesting - eventually more challenging - but surely more fun experience for you.
 Created by the team responsible for the Fallout 3 Wanderers Edition (FWE), we're leaving the barren DC wasteland behind and move on west to new, exciting regions.
@@ -38,7 +38,7 @@ Further general objectives and design concepts are:
 [color=#FF8C00]*[/color] Blend features in as good as possible - players shouldn't feel reminded that they're using a mod.
 
 [line]
-[img]http://img5.imagebanana.com/img/apnzt5a7/NexusCore.png[/img]
+[img]http://www.newvegasnexus.com/downloads/images/39442-2-1296232410.png[/img]
 [heading][b]Module Version:[/b] [color=#FF8C00]1.0[/color][/heading]
 
 The Core module is the foundation of Project Nevada, and as such required by all other modules.
@@ -69,7 +69,7 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 [color=#FF8C00]*[/color] Extensible Control Panel 
 [color=#FF8C00]*[/color] Streamlined Hotkey Management 
 
-[img]http://img5.imagebanana.com/img/eeuukjbg/NexusCyberware.png[/img]
+[img]http://www.newvegasnexus.com/downloads/images/39442-3-1296232410.png[/img]
 [heading][b]Module Version:[/b] [color=#FF8C00]1.0[/color][/heading]
 
 Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones.
@@ -122,7 +122,7 @@ The whole system is balanced by several mechanisms, like limiting the number of 
 [color=#FF8C00]*[/color] Enhanced vision modes for power armor helmets and other advanced headgear
 [color=#FF8C00]*[/color] Stealth Boy field is controllable and status is displayed in the HUD
 
-[img]http://img5.imagebanana.com/img/w4badyln/NexusReblance.png[/img]
+[img]http://www.newvegasnexus.com/downloads/images/39442-2-1296232545.png[/img]
 [heading][b]Module Version:[/b] [color=#FF8C00]Not yet released![/color][/heading]
 This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV gameplay and difficulty.
 Combat will be quicker and deadlier and survival much harder.
@@ -137,7 +137,7 @@ These changes are aimed to be very subtle and non-intrusive, making the game mor
 [color=#FF8C00]*[/color] Bartering skill has a much higher affect on buying and selling
 [color=#FF8C00]*[/color] Higher availability for ammo crafting components
 
-[img]http://img5.imagebanana.com/img/goini887/NexusEquipment.png[/img]
+[img]http://www.newvegasnexus.com/downloads/images/39442-4-1296232410.png[/img]
 [heading][b]Module Version:[/b] [color=#FF8C00]Not yet released![/color][/heading]
 
 The Equipment module brings new weapons and armor to the Mojave Wasteland.
@@ -150,7 +150,7 @@ To ensure a seamless integration, the new items are carefully balanced and place
 To be announced.
 
 [line]
-[img]http://img5.imagebanana.com/img/8qqrfqbw/NexusInstallation.png[/img]
+[img]http://www.newvegasnexus.com/downloads/images/39442-5-1296232410.png[/img]
 
 [b]We really recommend using the Fallout Mod Manager to install Project Nevada![/b]
 It will automatically copy the right files and take care of any conflicts with already installed mods.
@@ -198,7 +198,7 @@ Once you downloaded the right file(s), you can proceed with the installation.
 [b]5.[/b] Done!
 
 [line]
-[img]http://img5.imagebanana.com/img/h8ek6et0/NexusTroubleshooting.png[/img]
+[img]http://www.newvegasnexus.com/downloads/images/39442-4-1296232545.png[/img]
 
 [color=#FF8C00]*[/color] [b]Problem[/b]: My game crashes right after starting it!
 
@@ -208,7 +208,7 @@ Yes, that's pretty annoying! There are basically two things that can cause this:
 If related to Project Nevada, this happens if you didn't install the Core plugin (which is required by all other modules).
 Fix it, by installing the Core module as well.
 		
-[b]2.[/b]	A missing interface file.
+[b]2.[/b] A missing interface file.
 This one is a little trickier. If an interface file is used somewhere that does not exist anymore, the game crashes.
 To fix it, delete the menus/ folder in your Data/ directory, then reinstall any interface-related mods (for example MTUI, DarnUI, but also Project Nevada since it uses those interface files as well).
 
