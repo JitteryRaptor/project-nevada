@@ -49,8 +49,10 @@ Part II - Module Details
 		d) Surgery services
 		
 		
-		
+
+########################################################################################################################################
 # PART I ###############################################################################################################################
+########################################################################################################################################
 
 
 
@@ -191,10 +193,6 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
 	files of all previous ones, or installation will become very complex for the user. We chose the former. If you can't fix the problem
 	yourself by editing the XML files, the solution is simple - just use the FOMM installer, it should automatically resolve any
 	conflicts.
-		
-------------------------------------------------------------
-If your problem wasn't covered here, go to http://www.newvegasnexus.com/downloads/file.php?id=39442 and describe your issues in the
-"Comments" section. Surely someone will be able to provide assistance.
 
 
 ========================================================================================================================================
@@ -215,7 +213,7 @@ Thanks to our external testers, who helped a great deal with improving the overa
  5. Contact
 ========================================================================================================================================
 
-For contact, send a PM to schlangster at
+For direct contact, send a PM to schlangster at
 
 	http://www.newvegasnexus.com/
 		or
@@ -234,7 +232,9 @@ and use our assets without permission, but please give proper credit if you do s
 
 
 
+########################################################################################################################################
 # PART II ##############################################################################################################################
+########################################################################################################################################
 
 
 
