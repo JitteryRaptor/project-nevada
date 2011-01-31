@@ -88,33 +88,24 @@ to get the mod running.
 
 We really recommend using the Fallout Mod Manager to install Project Nevada!
 It will automatically copy the right files and take care of any conflicts with already installed mods.
+So before you can get started, you have to choose whether you want to do the FOMM installation (recommended) or a manual installation.
 
-Before you can get started, you have to make two choices:
-1. FOMM installation (recommended) or manual installation
-2. FULL PACKAGE (recommended) or just selected modules
-
-* If you're using FOMM, just download the FULL PACKAGE. It has a nice installer that lets you select the modules you want.
-* If you want to use all modules and install them manually, grab the FULL PACKAGE as well.
-* If you want to do a manual installation for selected modules only, download the separate files.
-
-When downloading selected modules only, remember: The Core module is required in any case! If you don't like a specific feature, you can
-disable it in-game.
-
-Once you downloaded the right file(s), you can proceed with the installation.
+Remember: The Core module is required in any case! If you don't like a specific feature, you can disable it in-game.
 
 ------------------------------------------------------------
  a) Installation with FOMM
 ------------------------------------------------------------
 
-1. Start FOMM and click on Package Manager.
+1.	Start FOMM and click on Package Manager.
 
-In case you downloaded separate modules, repeat these steps for each of them:
-2. In the top-right button menu, click on Add FOMod and select the downloaded archive file.
-3. The module will now appear in the list. Select it and click Activate.
-4. In case you're using the FULL PACKAGE, select the modules you want, then click Install.
-5. If you are prompted to overwrite anything, click Yes to All.
+2.	In the top-right button menu, click on Add FOMod and select the downloaded archive file.
 
-5. Done!
+3.	The module will now appear in the list. Select it and click Activate.
+
+4.	In the installer window, select the modules you want, then click Install.
+	If you are prompted to overwrite anything, click Yes to All.
+
+5.	Done!
 
 OR
 
@@ -122,22 +113,22 @@ OR
  b) Manual Installation
 ------------------------------------------------------------
 
-1. Locate the Data/ folder in your Fallout New Vegas installation directory.
-(Typically it's found at Program Files/Steam/SteamApps/common/fallout new vegas/Data/)
+1.	Locate the Data/ folder in your Fallout New Vegas installation directory.
+	Typically it's found at Program Files/Steam/SteamApps/common/fallout new vegas/Data/.
 
-In case you downloaded separate modules, repeat this step for each of them:
-2. Extract the contents of downloaded archive file to your Data/ folder.
+2.	Extract the contents of the downloaded archive file to your Data/ folder.
+	If you are prompted to overwrite anything, click Yes to All.
 
 In case you are using any mod that modifies the interface:
-3. Locate the Data/optional/ folder. In there, copy the contents of following directory your Data/ folder,
-   depending on which interface mod you are using:
-	* Darn UI, if you're using DarNified UI.
-	* MTUI, if you're using MTUI.
-	* Remember, if you're using the default interface you can just skip this step.
+3.	Locate the Data/optional/ folder. In there, copy the contents of following directory your Data/ folder,
+	depending on which interface mod you are using:
+		* Darn UI, if you're using DarNified UI.
+		* MTUI, if you're using MTUI.
+		* Remember, if you're using the default interface you can just skip this step.
 
-4. In the New Vegas Launcher, click on Data Files and select the plugins you want.
+4.	In the New Vegas Launcher, click on Data Files and select the plugins you want.
 
-5. Done!
+5.	Done!
 
 
 ========================================================================================================================================
