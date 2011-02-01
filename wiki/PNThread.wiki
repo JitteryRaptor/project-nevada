@@ -2,7 +2,7 @@
 [font="Verdana"]
 [center][size="5"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]P[size="1"] [/size]r[size="2"] [/size]o[size="1"] [/size]j[size="1"] [/size]e[size="1"] [/size]c[size="1"] [/size]t[/color][/color][/b][/font][/size]
 [b]============[/b]
-[size="6"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]NEVADA[/color][/color][/b][/font][/size][/center]
+[size="7"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]NEVADA[/color][/color][/b][/font][/size][/center]
 
 [b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Zealotlee, Mezmorki
 
@@ -52,7 +52,7 @@ Further general objectives and design concepts are:
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Core[color="#FF8C00"]>[/color][/b][/font][/size]
 
-[size="2"][b]Module Version:[/b] [color=#FF8C00]1.0[/color][/size]
+[size="2"][b]Module Version:[/b] 1.0[/size]
 
 The Core module is the foundation of Project Nevada, and as such required by all other modules.
 
@@ -85,7 +85,7 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Cyberware[color="#FF8C00"]>[/color][/b][/font][/size]
 
-[size="2"][b]Module Version:[/b] [color=#FF8C00]1.0[/color][/size]
+[size="2"][b]Module Version:[/b] 1.0[/size]
 
 Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of man's most
 advanced technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
@@ -139,7 +139,7 @@ requiring energy supply for special equipment.
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Equipment[color="#FF8C00"]>[/color][/b][/font][/size]
 
-[size="2"][b]Module Version:[/b] [color=#FF8C00]Not yet released![/color][/size]
+[size="2"][b]Module Version:[/b] Not yet released![/size]
 
 The Equipment module brings new weapons and armor to the Mojave Wasteland.
 Source of these items are the many excellent creations produced by the modding community, as well as those created by our own team.
@@ -154,7 +154,7 @@ To be announced.
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Rebalance[color="#FF8C00"]>[/color][/b][/font][/size]
 
-[size="2"][b]Module Version:[/b] [color=#FF8C00]Not yet released![/color][/size]
+[size="2"][b]Module Version:[/b] Not yet released![/size]
 
 This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV 
 gameplay and difficulty. Combat will be quicker and deadlier and survival much harder. These changes are aimed to be very subtle and 
