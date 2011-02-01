@@ -19,6 +19,8 @@ Team: snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Zealotlee, Mezmork
 
 Current Version: 1.0
 
+Download: http://www.newvegasnexus.com/downloads/file.php?id=40040
+
 ########################################################################################################################################
 
 Part I - General
@@ -218,8 +220,8 @@ For direct contact, send a PM to schlangster at
 Some assets in Project Nevada belong to other authors.
 You will need to seek permission from these authors before you can use their assets.
 
-You may upload Project Nevada to other sites, convert it work with other games, modify anything or release bug fixes and improvements,
-and use our assets without permission, but please give proper credit if you do so.
+You may upload Project Nevada to other sites, convert it to work with other games, modify anything or release bug fixes and
+improvements, and use our assets without permission, but please give proper credit if you do so.
 
 
 
