@@ -157,9 +157,9 @@ Remember: The Core module is required in any case! If you don't like a specific 
 
 [b]2.[/b] In the top-right button menu, click on [color=#FF8C00]Add FOMod[/color] and select the downloaded archive file.
 
-[b]3.[/b] Project Nevada will now appear in the list. [color=#FF8C00]Select[/color] it and click [color=#FF8C00]Activate[/color]. If you are prompted to [color=#FF8C00]overwrite[/color] anything, click [color=#FF8C00]Yes to All[/color].
+[b]3.[/b] Project Nevada will now appear in the list. [color=#FF8C00]Select[/color] it and click [color=#FF8C00]Activate[/color]. 
 
-[b]4.[/b] In case you're using the [color=#FF8C00]FULL PACKAGE[/color], select the modules you want, then click [color=#FF8C00]Install[/color].
+[b]4.[/b] In the installer window, select the modules you want, then click [color=#FF8C00]Install[/color]. If you are prompted to [color=#FF8C00]overwrite[/color] anything, click [color=#FF8C00]Yes to All[/color].
 
 [b]5.[/b] Done!
 
