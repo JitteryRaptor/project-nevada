@@ -10,7 +10,7 @@
 
 [size="5"][b][color="#FF8C00"]>>> [/color][/b][url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Trailer[/url] [b][color="#FF8C00"]<<<[/color][/b][/size]
 
-[size="5"][b][color="#FF8C00"]>>> [/color][/b][url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Download[/url] [b][color="#FF8C00"]<<<[/color][/b][/size]
+[size="5"][b][color="#FF8C00"]>>> [/color][/b][url="http://www.newvegasnexus.com/downloads/file.php?id=40040"]Download[/url] [b][color="#FF8C00"]<<<[/color][/b][/size]
 
 [b][color="#8B0000"]*********************** IMPORTANT ****************************[/color][/b]
 
@@ -24,14 +24,13 @@ The following mods/utilities are required for Project Nevada:
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Introduction[/b][/font][/color][/size]
 
-Project Nevada is a mod aiming to make Fallout: New Vegas a more interesting - eventually more challenging - but surely more fun
-experience for you. Created by the team responsible for the Fallout 3 Wanderers Edition (FWE), we're leaving the barren DC wasteland
-behind and move on west to new, exciting regions.
+Project Nevada is a mod aiming to make Fallout: New Vegas a more interesting - eventually more challenging - but surely more fun experience for you.
+Created by the team responsible for the Fallout 3 Wanderers Edition (FWE), we're leaving the barren DC wasteland behind and move on west to new, exciting regions.
 
-Project Nevada is not an overhaul, instead it's organized as a set of themed modules. Each module can address different aspects of the
-game and target different audiences, but they are also designed to work in conjunction. Our vision is to allow players to pick the modules
-they want and using them together with any mod they like, instead of forcing them to make the all-or-nothing choice. See the next sections
-for detailed descriptions and features of all current modules.
+Project Nevada is not an overhaul, instead it's organized as a set of themed modules.
+Each module can address different aspects of the game and target different audiences, but they are also designed to work in conjunction.
+Our vision is to allow players picking the modules they want and using them together with any mod they like, instead of forcing them to make the all-or-nothing choice.
+See the next sections for detailed descriptions and features of all current modules.
 
 Further general objectives and design concepts are:
 
@@ -45,8 +44,6 @@ Further general objectives and design concepts are:
 
 [color="#FF8C00"]*[/color] Blend features in as good as possible - players shouldn't feel reminded that they're using a mod.
 
-[color="#FF8C00"]*[/color] Polish, polish, polish.
-
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Module Overview[/b][/font][/color][/size]
 
@@ -56,13 +53,13 @@ Further general objectives and design concepts are:
 
 The Core module is the foundation of Project Nevada, and as such required by all other modules.
 
-It adds the gameplay features found in popular first-person-shooter games that were missing in New Vegas. Some of those features are
-improved versions of already well-known features from FWE, like the Grenade Hotkey, Bullet Time or Sprint. All of them are rewritten from the 
-ground up, with exciting new features like the support for several VATS perks in Bullet Time and support for throwing weapons with the
-grenade hotkey. Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread. Each of
-those features can be individually enabled or disabled in-game. They are fully script-based to play along well with other mods.
+It adds the gameplay features found in popular first-person-shooter games that were missing in New Vegas.
+Some of those features are improved versions of already well-known Fallout 3 mods, like the Grenade Hotkey, Bullet Time or Sprint.
+All of them are rewritten from the ground up, with exciting new features like the support for several VATS perks in Bullet Time and support for throwing weapons with the grenade hotkey.
+Others are brand new, like the Dynamic Crosshair that changes it size according to the current weapon spread.
+Each of those features can be individually enabled or disabled in-game. They are fully script-based to play along well with other mods.
 
-To allow customization, the Core module implements a Control Panel. For DarnUI users, it can be accessed directly from the pause menu.
+To allow customization, the Core module implements a Control Panel, which can be accessed directly from the pause menu.
 Other mods may extend the Control Panel without conflict and make use of the provided methods for streamlined hotkey assignment.
 
 Since the Core module avoids conflicting changes, players are free run it alongside any other mods, including their favorite overhaul.
@@ -87,15 +84,17 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 
 [size="2"][b]Module Version:[/b] 1.0[/size]
 
-Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of man's most
-advanced technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
+Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones.
+Some of man's most advanced technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
 
-Practically this means new features are associated with cybernetic implants and high-tech equipment. Examples include enhanced
-vision modes for power armor helmets and bionic legs allowing you to charge towards your enemies with super-human speed.
+Practically this means new features are associated with cybernetic implants and high-tech equipment.
+Examples include enhanced vision modes for power armor helmets and bionic legs allowing you to charge towards your enemies with super-human speed.
 
 While for equipment existing items are used, the cybernetic implants come with a custom interface to attach and manage them.
-The whole system is balanced by several mechanisms, like limiting the number of implants that can be attached at the same time, or
-requiring energy supply for special equipment.
+Unique implants that grant powerful abilities are placed all over the wasteland in rewarding locations.
+Other, less powerful implants can be obtained from selected vendors, though with the proper Science skill those can be upgraded up to 3 times.
+
+The whole system is balanced by several mechanisms, like limiting the number of implants that can be attached at the same time, or requiring energy supply for special equipment.
 
 [size="2"][b]Details:[/b][/size]
 
@@ -156,27 +155,100 @@ To be announced.
 
 [size="2"][b]Module Version:[/b] Not yet released![/size]
 
-This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV 
-gameplay and difficulty. Combat will be quicker and deadlier and survival much harder. These changes are aimed to be very subtle and 
-non-intrusive, making the game more challenging without inconveniencing the player.
+This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV gameplay and difficulty.
+Combat will be quicker and deadlier and survival much harder.
+These changes are aimed to be very subtle and non-intrusive, making the game more challenging without inconveniencing the player.
 
 [size="2"][b]Details:[/b][/size]
 
 To be announced.
 
 
-[size="6"][color="#FF8C00"][font="Courier New"][b]Media[/b][/font][/color][/size]
+[size="6"][color="#FF8C00"][font="Courier New"][b]Installation[/b][/font][/color][/size]
 
-[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Videos[color="#FF8C00"]>[/color][/b][/font][/size]
+[b]We really recommend using the Fallout Mod Manager to install Project Nevada![/b]
+It will automatically copy the right files and take care of any conflicts with already installed mods.
+So before you can get started, you have to choose whether you want to do the [color=#FF8C00]FOMM installation[/color] (recommended) or a [color=#FF8C00]manual installation[/color].
 
- [url=http://www.youtube.com/watch?v=230I-OoobR0&hd=1]Original Teaser[/url] 
- [url=http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1]Trailer[/url] 
- [url=http://www.youtube.com/watch?v=GXrLHEyBRQE&hd=1]Control Panel Demo[/url]
- [url=http://www.youtube.com/watch?v=zpFJeQvqgxk&hd=1]Early Cyberware Implant Interface Demo[/url]
+Remember: The Core module is required in any case! If you don't like a specific feature, you can disable it in-game.
 
-[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Screenshots[color="#FF8C00"]>[/color][/b][/font][/size]
+[size="4"][b]Automated Installation with FOMM[/b][/size]
+[b]1.[/b] Start FOMM and click on [color=#FF8C00]Package Manager[/color].
 
- [url=http://img440.imageshack.us/f/implstealtharmor.jpg/]Final Implant Interface[/url]
+[b]2.[/b] In the top-right button menu, click on [color=#FF8C00]Add FOMod[/color] and select the downloaded archive file.
+
+[b]3.[/b] Project Nevada will now appear in the list. [color=#FF8C00]Select[/color] it and click [color=#FF8C00]Activate[/color]. 
+
+[b]4.[/b] In the installer window, select the modules you want, then click [color=#FF8C00]Install[/color]. If you are prompted to [color=#FF8C00]overwrite[/color] anything, click [color=#FF8C00]Yes to All[/color].
+
+[b]5.[/b] Done!
+
+  [b][size=4]OR[/size][/b]
+
+[size="4"][b]Manual Installation[/b][/size]
+[b]1.[/b] Locate the [color=#FF8C00]Data/[/color] folder in your Fallout New Vegas [color=#FF8C00]installation directory[/color]. Typically it's found at [color=#FF8C00]Program Files/Steam/SteamApps/common/fallout new vegas/Data/[/color].
+
+[b]2.[/b] Extract the contents of the downloaded archive file to your [color=#FF8C00]Data/[/color] folder.
+
+[i]In case you are using any mod that modifies the interface:[/i]
+[b]3.[/b] Locate the [color=#FF8C00]Data/optional/[/color] folder. In there, copy the contents of following directory your [color=#FF8C00]Data/[/color] folder, depending on which [color=#FF8C00]interface mod[/color] you are using:
+[color=#FF8C00]*[/color] Darn UI, if you're using [color=#FF8C00]DarNified UI[/color].
+[color=#FF8C00]*[/color] MTUI, if you're using [color=#FF8C00]MTUI[/color].
+[color=#FF8C00]*[/color] Remember, if you're using the default interface you can just skip this step.
+
+[b]4.[/b] In the New Vegas Launcher, click on [color=#FF8C00]Data Files[/color] and select the plugins you want.
+
+[b]5.[/b] Done!
+
+
+[size="6"][color="#FF8C00"][font="Courier New"][b]Troubleshooting[/b][/font][/color][/size]
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: My game crashes right after starting it!
+
+Yes, that's pretty annoying! There are basically two things that can cause this:
+
+[b]1.[/b] A missing master file (some plugins depend on other plugins, and if they can't find them the game crashes)
+If related to Project Nevada, this happens if you didn't install the Core plugin (which is required by all other modules).
+Fix it, by installing the Core module as well.
+                
+[b]2.[/b] A missing interface file.
+This one is a little trickier. If an interface file is used somewhere that does not exist anymore, the game crashes.
+To fix it, delete the menus/ folder in your Data/ directory, then reinstall any interface-related mods (for example MTUI, DarnUI, but also Project Nevada since it uses those interface files as well).
+
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: After I load a savegame, a message box tells me that Project Nevada wasn't properly installed.
+
+Again, two things that can cause this:
+
+[b]1.[/b] Project Nevada wasn't properly installed... If you did a manual install and forgot to follow step 3 in the guide above, this is
+what happens. To fix it, install Project Nevada properly as described in Section 3.
+                
+[b]2.[/b] If this problem suddenly occurs when you were already running Project Nevada successfully, this means some other mod overwrote an interface file.
+With FOMM, this should be fixed by simply deactivating Project and then activating it again.
+If you don't use FOMM then this is where things will get complicated.
+First you have to find out which other mod causes the conflicts, then with that specific information you can ask for help in the comments.
+
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: After I installed Project Nevada, my game is lagging/stuttering more than usual.
+
+Even though we tried to optimize our scripts as good as possible, they can still cause considerable strain especially if your computer barely meets the minimum system requirements for Fallout: New Vegas.
+You should try out the [url=http://www.newvegasnexus.com/downloads/file.php?id=34832]New Vegas Stutter Remover[/url], in most cases it will will significantly increase performance.
+If that doesn't help, try deactivating some of the features, for example the crosshair recoil or visor overlays.
+
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: Since I installed Project Nevada, my game is very unstable and crashes all the time!
+
+Personally, I've been playing with Project Nevada for over 20 hours without a single crash. Same goes for our other testers.
+So currently the mod is not known to cause any instabilities. The problem is most likely somewhere else.
+
+
+[color=#FF8C00]*[/color] [b]Problem[/b]: After I installed Project Nevada MANUALLY, another interface-related mod is no longer working.
+
+Unfortunately, when doing a MANUAL installation  this can't be avoided. Either the last installed UI mod automatically overwrites files of all previous ones, or installation will become very complex for the user.
+We chose the former. If you can't fix the problem yourself by editing the XML files, the solution is simple - just use the FOMM installer, it should automatically resolve any conflicts.
+
+
+If your problem wasn't covered here, describe your issues in the thread. Surely someone will be able to provide assistance.
 
 [/font]
 }}}
