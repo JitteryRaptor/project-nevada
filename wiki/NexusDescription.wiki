@@ -198,21 +198,22 @@ To fix it, delete the menus/ folder in your Data/ directory, then reinstall any 
 
 [color=#FF8C00]*[/color] [b]Problem[/b]: After I load a savegame, a message box tells me that Project Nevada wasn't properly installed.
 
-Again, two things that can cause this:
+Basically, three things can cause this:
 
-[b]1.[/b] Project Nevada wasn't properly installed :) If you did a manual install and forgot to follow step 3 in the guide above, this is
-what happens. To fix it, install Project Nevada properly as described in Section 3.
+[b]1.[/b] Project Nevada wasn't properly installed :) If you did a manual install and forgot to follow step 3 in the guide above, this is what happens. To fix it, install Project Nevada properly as described in Section 3.
+
+[b]2.[/b] You installed Project Nevada with an older version of FOMM. In this case it may happen that even though FOMM confirms a successful installation, some important changes were not made.
+So if your FOMM version is older than 0.13.21, upgrade it and re-install Project Nevada.
 		
-[b]2.[/b] If this problem suddenly occurs when you were already running Project Nevada successfully, this means some other mod overwrote an interface file.
-With FOMM, this should be fixed by simply deactivating Project and then activating it again.
-If you don't use FOMM then this is where things will get complicated.
-First you have to find out which other mod causes the conflicts, then with that specific information you can ask for help in the comments.
+[b]3.[/b] If this problem suddenly occurs when you were already running Project Nevada successfully, this means some other mod overwrote an interface file.
+With FOMM, this should be fixed by simply deactivating Project and then activating it again. When using multiple mods that add new elements to the HUD, we recommend the [url=http://www.newvegasnexus.com/downloads/file.php?id=38961]Unified HUD Project[/url] to resolve any potential problems.
+If you don't use FOMM, then this is where things will get complicated. First you have to find out which other mod causes the conflicts, then with that specific information you can ask for help in the comments.
 
 
 [color=#FF8C00]*[/color] [b]Problem[/b]: After I installed Project Nevada, my game is lagging/stuttering more than usual.
 
 Even though we tried to optimize our scripts as good as possible, they can still cause considerable strain especially if your computer barely meets the minimum system requirements for Fallout: New Vegas.
-You should try out the [url=http://www.newvegasnexus.com/downloads/file.php?id=34832] New Vegas Stutter Remover [/url], in most cases it will will significantly increase performance.
+You should try out the [url=http://www.newvegasnexus.com/downloads/file.php?id=34832]New Vegas Stutter Remover[/url], in most cases it will will significantly increase performance.
 If that doesn't help, try deactivating some of the features, for example the crosshair recoil or visor overlays.
 
 
