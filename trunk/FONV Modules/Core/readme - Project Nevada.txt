@@ -252,8 +252,6 @@ Since the Core module avoids conflicting changes, players are free run it alongs
  a) Features
 ------------------------------------------------------------
 
-The following features
-
 * Dynamic Crosshair
 	This feature causes the crosshair to expand and contract dynamically based on the player's current gun spread. The formula we used
 	is described here: http://forums.bethsoft.com/index.php?/topic/1142921-in-depth-explanation-of-spreadaccuracy/
