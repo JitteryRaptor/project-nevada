@@ -173,6 +173,7 @@ So before you can get started, you have to choose whether you want to do the [co
 Remember: The Core module is required in any case! If you don't like a specific feature, you can disable it in-game.
 
 [size="4"][b]Automated Installation with FOMM[/b][/size]
+
 [b]1.[/b] Start FOMM and click on [color=#FF8C00]Package Manager[/color].
 
 [b]2.[/b] In the top-right button menu, click on [color=#FF8C00]Add FOMod[/color] and select the downloaded archive file.
@@ -186,6 +187,7 @@ Remember: The Core module is required in any case! If you don't like a specific 
   [b][size=4]OR[/size][/b]
 
 [size="4"][b]Manual Installation[/b][/size]
+
 [b]1.[/b] Locate the [color=#FF8C00]Data/[/color] folder in your Fallout New Vegas [color=#FF8C00]installation directory[/color]. Typically it's found at [color=#FF8C00]Program Files/Steam/SteamApps/common/fallout new vegas/Data/[/color].
 
 [b]2.[/b] Extract the contents of the downloaded archive file to your [color=#FF8C00]Data/[/color] folder.
@@ -249,6 +251,21 @@ We chose the former. If you can't fix the problem yourself by editing the XML fi
 
 
 If your problem wasn't covered here, describe your issues in the thread. Surely someone will be able to provide assistance.
+
+
+[size="6"][color="#FF8C00"][font="Courier New"][b]Credits[/b][/font][/color][/size]
+
+lespaul678 - Sprint exhaustion sounds (male)
+Gopher - Heat vision effects
+Max Tael - MTUI compatibility files
+DarN - DarNified UI compatibility files
+Ugluxy - Textures for the visor damage effects
+
+Thanks to our external testers, who helped a great deal with improving the overall quality of this mod:
+	gyshall, mikekearn, Ren Lotus, robber804, ToJKa (in alphabetical order)
+
+
+(And in case anyone starts ranting: The topic description is a joke.)
 
 [/font]
 }}}
