@@ -244,7 +244,6 @@ The visor overlays are displayed when wearing certain headgear (Power Armor helm
 For the rest of the features, the default hotkeys are:
 - Bullet Time (C)
 - Stealth Field (X)
-- Sprint (Run/Walk)
 - Throw Grenade (G)
 - Select Grenade (H)
 - Control Panel (Hold P)
