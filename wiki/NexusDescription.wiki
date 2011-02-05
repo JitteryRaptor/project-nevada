@@ -230,4 +230,31 @@ We chose the former. If you can't fix the problem yourself by editing the XML fi
 
 
 If your problem wasn't covered here, describe your issues in the comments section. Surely someone will be able to provide assistance.
+
+[line]
+[img]http://www.newvegasnexus.com/downloads/images/39442-1-1296906879.png[/img]
+
+[color=#FF8C00]*[/color] [b]Question[/b]: How do I use specific features of this mod?
+
+The Dynamic Crosshair is activated automatically whenever you're carrying an unholstered ranged weapon.
+Sprint is activated by pressing Run/Walk, which is bound to the left shift key by default.
+Immersive Health Visuals will automatically dim your vision when you're low on health.
+The visor overlays are displayed when wearing certain headgear (Power Armor helmets for example). All of the vanilla helmets are supported, though if you found out that we missed one, please notify us in the comments.
+
+For the rest of the features, the default hotkeys are:
+- Bullet Time (C)
+- Stealth Field (X)
+- Sprint (Run/Walk)
+- Throw Grenade (G)
+- Select Grenade (H)
+- Control Panel (Hold P)
+- Zoom In (MWheel Up)
+- Zoom Out (MWheel Down)
+- Change Vision Mode (M)
+
+Not all of those are available at all times:
+- The Grenade Hotkey requires you to have something throwable.
+- Zooming in or out only works when aiming with a scoped weapon.
+- For the Stealth Field, you either have to use a Stealth Boy, have a stealth implant installed or wear Stealth armor. The last two also require energy cells to power the field.
+- Enhanced Vision Modes require certain headgear (see the Readme for a full list), or an installed implant (Bionic Eyes). They might require energy cells as well.
 }}}
