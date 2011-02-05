@@ -239,21 +239,45 @@ If your problem wasn't covered here, describe your issues in the comments sectio
 The Dynamic Crosshair is activated automatically whenever you're carrying an unholstered ranged weapon.
 Sprint is activated by pressing Run/Walk, which is bound to the left shift key by default.
 Immersive Health Visuals will automatically dim your vision when you're low on health.
-The visor overlays are displayed when wearing certain headgear (Power Armor helmets for example). All of the vanilla helmets are supported, though if you found out that we missed one, please notify us in the comments.
+The visor overlays are displayed when wearing certain headgear (Power Armor helmets for example). All of the vanilla helmets are supported, though if you found one we missed, please notify us in the comments.
 
 For the rest of the features, the default hotkeys are:
-- Bullet Time (C)
-- Stealth Field (X)
-- Throw Grenade (G)
-- Select Grenade (H)
-- Control Panel (Hold P)
-- Zoom In (MWheel Up)
-- Zoom Out (MWheel Down)
-- Change Vision Mode (M)
+[b]-[/b] Bullet Time (C)
+[b]-[/b] Stealth Field (X)
+[b]-[/b] Throw Grenade (G)
+[b]-[/b] Select Grenade (H)
+[b]-[/b] Control Panel (Hold P)
+[b]-[/b] Zoom In (MWheel Up)
+[b]-[/b] Zoom Out (MWheel Down)
+[b]-[/b] Change Vision Mode (M)
 
 Not all of those are available at all times:
-- The Grenade Hotkey requires you to have something throwable.
-- Zooming in or out only works when aiming with a scoped weapon.
-- For the Stealth Field, you either have to use a Stealth Boy, have a stealth implant installed or wear Stealth armor. The last two also require energy cells to power the field.
-- Enhanced Vision Modes require certain headgear (see the Readme for a full list), or an installed implant (Bionic Eyes). They might require energy cells as well.
+[b]-[/b] The Grenade Hotkey requires you to have something throwable.
+[b]-[/b] Zooming in or out only works when aiming with a scoped weapon.
+[b]-[/b] For the Stealth Field, you either have to use a Stealth Boy, have a stealth implant installed or wear stealth armor. Energy cells might be needed as well.
+[b]-[/b] Enhanced Vision Modes require certain headgear (see the Readme for a full list), or an installed implant (Bionic Eyes). Energy cells might be needed as well.
+
+
+[color=#FF8C00]*[/color] [b]Question[/b]: How do I use cybernetic implants?
+
+Generally, it's a two-step process:
+[b]1.[/b] Find or buy an implant item.
+[b]2.[/b] Find a doctor who can install it.
+
+Highly qualified doctors can install implants by default; others have the potential to do it, but need some training first.
+This training is done by finding a surgery manual and bringing it to the doctor.
+Usanagi in the New Vegas Medical clinic is an example for a highly qualified doctor. Doc Mitchell in Goodsprings requires training first.
+
+Here's the quickest way to get an implant after starting a new game:
+[b]1.[/b] Pick up the implant in Doc Mitchell's house, right in the room where you wake up at first.
+[b]2.[/b] Go to the Goodsprings School, you can find a surgery manual in he locked safe there.
+[b]3.[/b] Take the manual back to Doc Mitchell and talk to him. The dialogue option for cybernetic surgery will be available now.
+
+A full list with all doctors, implants and training manuals can be found in our Readme.
+
+
+[color=#FF8C00]*[/color] [b]Question[/b]: What happens if I already have some of the default implants installed? Will I lose them? Do I have to buy them again?
+
+You won't lose existing implants, and neither do you have to buy them again. Any pre-existing implant perks will be removed and instead the respective implant item is added to the player's inventory.
+These items then can be re-installed with the new Cyberware interface (see previous questions if you don't know how this works yet).
 }}}
