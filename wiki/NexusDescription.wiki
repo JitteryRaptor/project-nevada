@@ -289,7 +289,7 @@ Usanagi in the New Vegas Medical clinic is an example for a highly qualified doc
 
 Here's the quickest way to get an implant after starting a new game:
 [b]1.[/b] Pick up the implant in Doc Mitchell's house, right in the room where you wake up at first.
-[b]2.[/b] Go to the Goodsprings School, you can find a surgery manual in he locked safe there.
+[b]2.[/b] Go to the Goodsprings School, you can find a surgery manual in the locked safe there.
 [b]3.[/b] Take the manual back to Doc Mitchell and talk to him. The dialogue option for cybernetic surgery will be available now.
 
 A full list with all doctors, implants and training manuals can be found in our Readme.
