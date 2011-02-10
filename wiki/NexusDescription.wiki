@@ -13,6 +13,9 @@
 [color=#FF8C00]*[/color] The [url=http://nvse.silverlock.org/]Fallout: New Vegas Script Extender (NVSE)[/url] is [b]REQUIRED[/b] to run Project Nevada.
 
 [color=#FF8C00]*[/color] The [url=http://www.newvegasnexus.com/downloads/file.php?id=36901]Fallout Mod Manager (FOMM)[/url] is [b]HIGHLY RECOMMENDED[/b] for properly installing Project Nevada.
+
+If you have any problems or questions, please take a look at the [color=#FF8C00]Troubleshooting[/color] and [color=#FF8C00]FAQ[/color] sections at the bottom of this description page first.
+
 [/center]
 [line]
 [img]http://www.newvegasnexus.com/downloads/images/39442-1-1296232545.png[/img]
@@ -229,15 +232,31 @@ Unfortunately, when doing a MANUAL installation  this can't be avoided. Either t
 We chose the former. If you can't fix the problem yourself by editing the XML files, the solution is simple - just use the FOMM installer, it should automatically resolve any conflicts.
 
 
-If your problem wasn't covered here, describe your issues in the comments section. Surely someone will be able to provide assistance.
+[color=#FF8C00]*[/color] [b]Problem[/b]: Help! The Sprint/Zoom/Grenade Hotkey/... feature behaves very strangly.
+
+While there may be multiple reasons for this (including that you encountered a real bug), it's most likely caused by a conflict with another mod that does the exact same thing.
+For example, if you already have a Sprint mod installed, you either have to disable your old Sprint or disable the Project Nevada Sprint feature in the Control Panel.
+
+A conflict might not always be as obvious as with the Sprint mod: Powered Power Armor, among the many other things it does, comes with its own zooming system.
+Besides breaking our Enhanced Zoom, it can also cause problems with the Dynamic Crosshair - again, the only solution (until there's a compatiblity patch) is to disable these features in our Control Panel.
+
+If you decide to disable certain Project Nevada features, there's one [b]important[/b] issue though: You must not use cybernetic implants that improve the disabled feature, because it might be re-enabled when the implant is installed.
+
+
+If your problem wasn't covered here, describe your issues in the comments section. Surely our team or someone else will be able to provide assistance.
+Avoid sending PM's to members of our team unless you have a very specific request. While we will usually answer at some point, you'll have a much higher chance of getting (fast) help when asking in the comments.
 
 [line]
 [img]http://www.newvegasnexus.com/downloads/images/39442-1-1296906879.png[/img]
 
+[color=#FF8C00]*[/color] [b]Question[/b]: How do I sprint?
+
+With the Run/Walk hotkey. By default it's the left shift key.
+
+
 [color=#FF8C00]*[/color] [b]Question[/b]: How do I use specific features of this mod?
 
 The Dynamic Crosshair is activated automatically whenever you're carrying an unholstered ranged weapon.
-Sprint is activated by pressing Run/Walk, which is bound to the left shift key by default.
 Immersive Health Visuals will automatically dim your vision when you're low on health.
 The visor overlays are displayed when wearing certain headgear (Power Armor helmets for example). All of the vanilla helmets are supported, though if you found one we missed, please notify us in the comments.
 
@@ -280,4 +299,15 @@ A full list with all doctors, implants and training manuals can be found in our 
 
 You won't lose existing implants, and neither do you have to buy them again. Any pre-existing implant perks will be removed and instead the respective implant item is added to the player's inventory.
 These items then can be re-installed with the new Cyberware interface (see previous questions if you don't know how this works yet).
+
+
+[color=#FF8C00]*[/color] [b]Question[/b]: Is this mod compatible with an XBOX360 controller?
+
+Project Nevada uses several keyboard hotkeys. Assigning them to controller buttons is not supported by NVSE.
+What should work, however, is avoiding this problem by using an external program like [url=http://www.xpadder.com/]Xpadder[/url]. It allows you to map controller buttons to keys on your keyboard.
+
+
+[color=#FF8C00]*[/color] [b]Question[/b]: I'm a modder myself and I'm interested in using Project Nevada's features for custom mods. Is there some kind of documentation?
+
+We started working on a [url=https://docs.google.com/document/d/1FPIuZGoh5acg433cywGo1vi1dNFTJPXG6rNRgzCUoyc/edit?hl=en&authkey=CNicvuIF]Modder's Guide[/url]. While not completely finished yet, it already contains a lot of useful information, including how to add Visor Overlays or Enhanced Vision Modes to custom armor.
 }}}
