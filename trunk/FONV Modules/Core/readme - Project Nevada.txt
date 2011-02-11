@@ -223,6 +223,8 @@ You will need to seek permission from these authors before you can use their ass
 You may upload Project Nevada to other sites, convert it to work with other games, modify anything or release bug fixes and
 improvements, and use our assets without permission, but please give proper credit if you do so.
 
+If you want to upload Project Nevada to a different site, please notify us before doing so.
+
 
 
 ########################################################################################################################################
