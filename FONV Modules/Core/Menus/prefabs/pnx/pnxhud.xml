@@ -154,6 +154,7 @@
 <_PNxGrenadeIconEnabled> 0 </_PNxGrenadeIconEnabled>
 <_PNxGrenadeIconType> 0 </_PNxGrenadeIconType>
 <_PNxGrenadeIconCount> 0 </_PNxGrenadeIconCount>
+<_PNxGrenadeIconCategory> 0 </_PNxGrenadeIconCategory>
 
 
 <!-- ######################################################################################## IO AP Bonus Text -->
@@ -1819,6 +1820,47 @@
 			</sub>
 		</y>
 	</text>
+	
+	<image name="PNxGrenadeCategoryImage">
+		<visible>
+			<copy src="parent()" trait="visible" />
+			<and>
+			<copy src="io()" trait="_PNxGrenadeIconCategory" />
+				<gt> 0 </gt>
+			</and>
+		</visible>
+	
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub src="me()" trait="width" />
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+		</y>
+		
+		<width>
+			<copy> 24 </copy>
+			<mul src="io()" trait="_PNxScale" />
+		</width>
+		<height>
+			<copy> 96 </copy>
+			<mul src="io()" trait="_PNxScale" />
+		</height>
+
+		<depth> 1 </depth>
+		
+		<zoom> &scale; </zoom>
+		
+		<_fn_1> pnx\hud\gren\CatGren.dds </_fn_1>
+		<_fn_2> pnx\hud\gren\CatWeap.dds </_fn_2>
+		<_fn_3> pnx\hud\gren\CatMine.dds </_fn_3>
+		<_fn_4> pnx\hud\gren\CatDeto.dds </_fn_4>
+		
+		<filename>
+			<copy src="io()" trait="_PNxGrenadeIconCategory" />
+			<copy src="me()" trait="_fn_" />
+		</filename>
+	</image>
 </rect>
 
 
