@@ -179,7 +179,8 @@
 
 
 <!-- ######################################################################################## IO Visor -->
-<_PNxVisorOverlayIndex> 0 </_PNxVisorOverlayIndex>
+<_PNxVisorOverlayEnabled> 0 </_PNxVisorOverlayEnabled>
+<_PNxVisorOverlayPath> </_PNxVisorOverlayPath>
 <_PNxVisorSelectMode> 0 </_PNxVisorSelectMode>
 
 <_PNxVisorColorRed> 1.0 </_PNxVisorColorRed>
@@ -1787,11 +1788,17 @@
 		<_fn_10> pnx\hud\gren\Gren_NVHoly.dds </_fn_10>
 		<_fn_11> pnx\hud\gren\Gren_NVKnife.dds </_fn_11>
 		<_fn_12> pnx\hud\gren\Gren_NVDynamiteL.dds </_fn_12>
-		<!-- unused -->
 		<_fn_13> pnx\hud\gren\GrenNuka.dds </_fn_13>
 		<_fn_14> pnx\hud\gren\GrenMolotov.dds </_fn_14>
 		<_fn_15> pnx\hud\gren\GrenCryo.dds </_fn_15>
 		<_fn_16> pnx\hud\gren\Gren_NVTimebomb.dds </_fn_16>
+		
+		<_fn_17> pnx\hud\gren\Mine_NVC4.dds </_fn_17>
+		<_fn_18> pnx\hud\gren\Mine_NVPowderCharge.dds </_fn_18>
+		<_fn_19> pnx\hud\gren\Mine_NVBottlecap.dds </_fn_19>
+		<_fn_20> pnx\hud\gren\Mine_NVPlasma.dds </_fn_20>
+		<_fn_21> pnx\hud\gren\Mine_NVPulse.dds </_fn_21>
+		<_fn_22> pnx\hud\gren\Mine_NVFrag.dds </_fn_22>
 		<!-- /unused -->
 		<_fn_99> pnx\hud\gren\GrenMisc.dds </_fn_99>
 		
@@ -2297,8 +2304,8 @@
 		</blue>
 		
 		<visible>
-			<copy src="io()" trait="_PNxVisorOverlayIndex" />
-			<gt> 0 </gt>
+			<copy src="io()" trait="_PNxVisorOverlayEnabled" />
+			<ne> 0 </ne>
 			<and>
 				<copy src="ActionPoints" trait="visible" />
 				<or src="io()" trait="_PNxVisorSelectMode" />
@@ -2313,25 +2320,8 @@
 		<width><copy src="parent()" trait="width" /></width>
 		<height><copy src="parent()" trait="height" /></height>
 		
-		<_filename_1> pnx\hud\visor\pov01.dds </_filename_1>
-		<_filename_2> pnx\hud\visor\pov02.dds </_filename_2>
-		<_filename_3> pnx\hud\visor\pov03.dds </_filename_3>
-		<_filename_4> pnx\hud\visor\pov04.dds </_filename_4>
-		<_filename_5> pnx\hud\visor\pov05.dds </_filename_5>
-		<_filename_6> pnx\hud\visor\pov06.dds </_filename_6>
-		<_filename_7> pnx\hud\visor\pov07.dds </_filename_7>
-		<_filename_8> pnx\hud\visor\pov08.dds </_filename_8>
-		<_filename_9> pnx\hud\visor\pov09.dds </_filename_9>
-		<_filename_10> pnx\hud\visor\pov10.dds </_filename_10>
-		<_filename_11> pnx\hud\visor\pov11.dds </_filename_11>
-		
-		<!-- ununsed -->
-		
-		<_filename_12> pnx\hud\visor\pov12.dds </_filename_12>
-		
 		<filename>
-			<copy src="io()" trait="_PNxVisorOverlayIndex" />
-			<copy src="me()" trait="_filename_" />
+			<copy src="io()" trait="_PNxVisorOverlayPath" />
 		</filename>
 		
 	</image>
