@@ -152,7 +152,7 @@
 
 <!-- ######################################################################################## IO Grenade Icon -->
 <_PNxGrenadeIconEnabled> 0 </_PNxGrenadeIconEnabled>
-<_PNxGrenadeIconType> 0 </_PNxGrenadeIconType>
+<_PNxGrenadeIconPath> </_PNxGrenadeIconPath>
 <_PNxGrenadeIconCount> 0 </_PNxGrenadeIconCount>
 <_PNxGrenadeIconCategory> 0 </_PNxGrenadeIconCategory>
 
@@ -1715,10 +1715,6 @@
 	<visible>
 		<copy src="io()" trait="_PNxGrenadeIconEnabled" />
 		<and src="ActionPoints" trait="visible" />
-		<and>
-			<copy src="io()" trait="_PNxGrenadeIconType" />
-			<gt> 0 </gt>
-		</and>
 	</visible>
 	
 	<x>
@@ -1776,35 +1772,8 @@
 		
 		<zoom> &scale; </zoom>
 		
-		<_fn_1> pnx\hud\gren\GrenFrag.dds </_fn_1>
-		<_fn_2> pnx\hud\gren\GrenPulse.dds </_fn_2>
-		<_fn_3> pnx\hud\gren\GrenPlasma.dds </_fn_3>
-		<_fn_4> pnx\hud\gren\Gren_NVDynamiteS.dds </_fn_4>
-		<_fn_5> pnx\hud\gren\Gren_C4Det.dds </_fn_5>
-		<_fn_6> pnx\hud\gren\Gren_NVSpear.dds </_fn_6>
-		<_fn_7> pnx\hud\gren\Gren_NVFirebomb.dds </_fn_7>
-		<_fn_8> pnx\hud\gren\Gren_NVStun.dds </_fn_8>
-		<_fn_9> pnx\hud\gren\Gren_NVHatchet.dds </_fn_9>
-		<_fn_10> pnx\hud\gren\Gren_NVHoly.dds </_fn_10>
-		<_fn_11> pnx\hud\gren\Gren_NVKnife.dds </_fn_11>
-		<_fn_12> pnx\hud\gren\Gren_NVDynamiteL.dds </_fn_12>
-		<_fn_13> pnx\hud\gren\GrenNuka.dds </_fn_13>
-		<_fn_14> pnx\hud\gren\GrenMolotov.dds </_fn_14>
-		<_fn_15> pnx\hud\gren\GrenCryo.dds </_fn_15>
-		<_fn_16> pnx\hud\gren\Gren_NVTimebomb.dds </_fn_16>
-		
-		<_fn_17> pnx\hud\gren\Mine_NVC4.dds </_fn_17>
-		<_fn_18> pnx\hud\gren\Mine_NVPowderCharge.dds </_fn_18>
-		<_fn_19> pnx\hud\gren\Mine_NVBottlecap.dds </_fn_19>
-		<_fn_20> pnx\hud\gren\Mine_NVPlasma.dds </_fn_20>
-		<_fn_21> pnx\hud\gren\Mine_NVPulse.dds </_fn_21>
-		<_fn_22> pnx\hud\gren\Mine_NVFrag.dds </_fn_22>
-		<!-- /unused -->
-		<_fn_99> pnx\hud\gren\GrenMisc.dds </_fn_99>
-		
 		<filename>
-			<copy src="io()" trait="_PNxGrenadeIconType" />
-			<copy src="me()" trait="_fn_" />
+			<copy src="io()" trait="_PNxGrenadeIconPath" />
 		</filename>
 	</image>
 	
