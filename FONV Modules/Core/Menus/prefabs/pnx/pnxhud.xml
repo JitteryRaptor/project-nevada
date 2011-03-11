@@ -200,6 +200,11 @@
 <_PNxEnergyIconCount> 0 </_PNxEnergyIconCount>
 
 
+<!-- ######################################################################################## IO Explosive Entry -->
+<_PNxExplosiveEntryIconEnabled> 0 </_PNxExplosiveEntryIconEnabled>
+<_PNxExplosiveEntryIconIndex> 1 </_PNxExplosiveEntryIconIndex>
+
+
 <!-- ######################################################################################## Grain -->
 <rect name="PNxGrainLayer">
 	<visible>
@@ -1977,6 +1982,56 @@
 		<filename> Interface\Shared\solid.dds </filename>
 	</image>
 </rect>
+
+
+<!-- ######################################################################################## Explosive Entry Icon -->
+<image name="PNxExplosiveEntryIcon">
+
+	<visible>
+		<copy src="io()" trait="_PNxExplosiveEntryIconEnabled" />
+		<and src="ActionPoints" trait="visible" />
+	</visible>
+	
+	<x>
+		<copy src="DDTIcon" trait="x" />
+	</x>
+		
+	<y>
+		<copy src="DDTIcon" trait="y" />
+		<sub src="me()" trait="height" />
+	</y>
+		
+	<width> 32 </width>
+	<height> 32 </height>
+	
+	<depth> 1 </depth>
+	<zoom> &scale; </zoom>
+	
+	<systemcolor>
+		<copy> &hudmain; </copy>
+		<onlyifnot>
+			<copy src="io()" trait="_PNxExplosiveEntryIconIndex" />
+			<eq> 4 </eq>
+		</onlyifnot>
+		<add>
+			<copy> &hudalt; </copy>
+			<onlyif>
+				<copy src="io()" trait="_PNxExplosiveEntryIconIndex" />
+				<eq> 4 </eq>
+			</onlyif>
+		</add>
+	</systemcolor>
+		
+	<_fn_1> pnx\hud\xe\lock_sealed.dds </_fn_1>
+	<_fn_2> pnx\hud\xe\lock_fail.dds </_fn_2>
+	<_fn_3> pnx\hud\xe\lock_success.dds </_fn_3>
+	<_fn_4> pnx\hud\xe\lock_break.dds </_fn_4>
+		
+	<filename>
+		<copy src="io()" trait="_PNxExplosiveEntryIconIndex" />
+		<copy src="me()" trait="_fn_" />
+	</filename>
+</image>
 
 
 <!-- ######################################################################################## Control Panel -->
