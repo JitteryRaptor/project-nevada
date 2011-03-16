@@ -17,6 +17,8 @@ class Script : FalloutNewVegasBaseScript {
 	static ASCIIEncoding encoding;
 
 	static bool cyberwareSelected = true;
+	static bool equipmentSelected = true;
+	static bool rebalanceSelected = true;
 	static bool installSelected = false;
 
 	static Form installerForm;
@@ -25,8 +27,12 @@ class Script : FalloutNewVegasBaseScript {
     static PictureBox installButton;
     static PictureBox coreButton;
     static PictureBox cyberwareButton;
+    static PictureBox equipmentButton;
+    static PictureBox rebalanceButton;
     static PictureBox coreCheckbox;
     static PictureBox cyberwareCheckbox;
+    static PictureBox equipmentCheckbox;
+    static PictureBox rebalanceCheckbox;
 	
 	static Image imageChecked;
 	static Image imageUnchecked;
@@ -41,6 +47,12 @@ class Script : FalloutNewVegasBaseScript {
 	static Image imageCyberware;
 	static Image imageCyberwareHi;
 	static Image imageCyberwareDesc;
+	static Image imageEquipment;
+	static Image imageEquipmentHi;
+	static Image imageEquipmentDesc;
+	static Image imageRebalance;
+	static Image imageRebalanceHi;
+	static Image imageRebalanceDesc;
 	
 	static System.Media.SoundPlayer hoverPlayer;
 	static System.Media.SoundPlayer acceptPlayer;
@@ -64,6 +76,16 @@ class Script : FalloutNewVegasBaseScript {
 		
 		if (cyberwareSelected) {
 			if (! InstallModuleCyberware())
+				return false;
+		}
+		
+		if (equipmentSelected) {
+			if (! InstallModuleEquipment())
+				return false;
+		}
+		
+		if (equipmentSelected) {
+			if (! InstallModuleRebalance())
 				return false;
 		}
 		
@@ -104,6 +126,26 @@ class Script : FalloutNewVegasBaseScript {
 		UpdateInclude("menus/prefabs/includes_TutorialMenu.xml", @"pnx\pnximplants.xml");
 		
 		UpdateUIFile("menus/tutorial_menu.xml", "menus/tutorial_menu.xml", "includes_TutorialMenu.xml");
+	
+		return true;
+	}
+	
+	
+	static bool InstallModuleEquipment()
+	{	
+		// Install base files
+		string[] excludes = new string[0];
+		InstallModuleFiles("Equipment", excludes);
+	
+		return true;
+	}
+	
+	
+	static bool InstallModuleRebalance()
+	{	
+		// Install base files
+		string[] excludes = new string[0];
+		InstallModuleFiles("Rebalance", excludes);
 	
 		return true;
 	}
@@ -169,38 +211,70 @@ class Script : FalloutNewVegasBaseScript {
 		imageCyberware = GetImageFromFomod("fomod/InstallerCyberware.png");
 		imageCyberwareHi = GetImageFromFomod("fomod/InstallerCyberwareHi.png");
 		imageCyberwareDesc = GetImageFromFomod("fomod/InstallerCyberDesc.png");
+		imageEquipment = GetImageFromFomod("fomod/InstallerEquipment.png");
+		imageEquipmentHi = GetImageFromFomod("fomod/InstallerEquipmentHi.png");
+		imageEquipmentDesc = GetImageFromFomod("fomod/InstallerEquipmentDesc.png");
+		imageRebalance = GetImageFromFomod("fomod/InstallerRebalance.png");
+		imageRebalanceHi = GetImageFromFomod("fomod/InstallerRebalanceHi.png");
+		imageRebalanceDesc = GetImageFromFomod("fomod/InstallerRebalanceDesc.png");
     
     	installerForm = CreateCustomForm();
     
+    	rebalanceCheckbox = new System.Windows.Forms.PictureBox();
+    	equipmentCheckbox = new System.Windows.Forms.PictureBox();
         cyberwareCheckbox = new System.Windows.Forms.PictureBox();
         coreCheckbox = new System.Windows.Forms.PictureBox();
         contentPicture = new System.Windows.Forms.PictureBox();
+        rebalanceButton = new System.Windows.Forms.PictureBox();
+        equipmentButton = new System.Windows.Forms.PictureBox();
         cyberwareButton = new System.Windows.Forms.PictureBox();
         coreButton = new System.Windows.Forms.PictureBox();
         installButton = new System.Windows.Forms.PictureBox();
         exitButton = new System.Windows.Forms.PictureBox();
+        ((System.ComponentModel.ISupportInitialize)(rebalanceCheckbox)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(equipmentCheckbox)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(cyberwareCheckbox)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(coreCheckbox)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(contentPicture)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(rebalanceButton)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(equipmentButton)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(cyberwareButton)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(coreButton)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(installButton)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(exitButton)).BeginInit();
         installerForm.SuspendLayout();
         // 
+        // rebalanceCheckbox
+        // 
+        rebalanceCheckbox.Image = imageChecked;
+        rebalanceCheckbox.Location = new System.Drawing.Point(603, 115);
+        rebalanceCheckbox.Name = "rebalanceCheckbox";
+        rebalanceCheckbox.Size = new System.Drawing.Size(64, 62);
+        rebalanceCheckbox.TabIndex = 10;
+        rebalanceCheckbox.TabStop = false;
+        // 
+        // equipmentCheckbox
+        // 
+        equipmentCheckbox.Image = imageChecked;
+        equipmentCheckbox.Location = new System.Drawing.Point(446, 115);
+        equipmentCheckbox.Name = "equipmentCheckbox";
+        equipmentCheckbox.Size = new System.Drawing.Size(64, 62);
+        equipmentCheckbox.TabIndex = 9;
+        equipmentCheckbox.TabStop = false;
+        // 
         // cyberwareCheckbox
         // 
         cyberwareCheckbox.Image = imageChecked;
-        cyberwareCheckbox.Location = new System.Drawing.Point(497, 37);
+        cyberwareCheckbox.Location = new System.Drawing.Point(289, 115);
         cyberwareCheckbox.Name = "cyberwareCheckbox";
-        cyberwareCheckbox.Size = new System.Drawing.Size(62, 62);
+        cyberwareCheckbox.Size = new System.Drawing.Size(64, 62);
         cyberwareCheckbox.TabIndex = 8;
         cyberwareCheckbox.TabStop = false;
         // 
         // coreCheckbox
         // 
         coreCheckbox.Image = imageChecked;
-        coreCheckbox.Location = new System.Drawing.Point(236, 37);
+        coreCheckbox.Location = new System.Drawing.Point(133, 115);
         coreCheckbox.Name = "coreCheckbox";
         coreCheckbox.Size = new System.Drawing.Size(64, 62);
         coreCheckbox.TabIndex = 7;
@@ -209,19 +283,77 @@ class Script : FalloutNewVegasBaseScript {
         // contentPicture
         // 
         contentPicture.Image = imageLogo;
-        contentPicture.Location = new System.Drawing.Point(8, 115);
+        contentPicture.Location = new System.Drawing.Point(8, 183);
         contentPicture.Name = "contentPicture";
-        contentPicture.Size = new System.Drawing.Size(768, 418);
+        contentPicture.Size = new System.Drawing.Size(768, 350);
         contentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
         contentPicture.TabIndex = 0;
         contentPicture.TabStop = false;
+		// 
+        // rebalanceButton
+        // 
+        rebalanceButton.Image = imageRebalance;
+        rebalanceButton.Location = new System.Drawing.Point(570, 28);
+        rebalanceButton.Name = "rebalanceButton";
+        rebalanceButton.Size = new System.Drawing.Size(130, 81);
+        rebalanceButton.TabIndex = 6;
+        rebalanceButton.TabStop = false;
+        rebalanceButton.Click += delegate(object sender, EventArgs e) {
+			acceptPlayer.Play();
+
+			if (rebalanceSelected == true) {
+				rebalanceSelected = false;
+				rebalanceCheckbox.Image = imageUnchecked;
+			} else {
+				rebalanceSelected = true;
+				rebalanceCheckbox.Image = imageChecked;
+			}
+		};
+        rebalanceButton.MouseEnter += delegate(object sender, EventArgs e) {
+			rebalanceButton.Image = imageRebalanceHi;
+			contentPicture.Image = imageRebalanceDesc;
+			hoverPlayer.Play();
+		};
+        rebalanceButton.MouseLeave += delegate(object sender, EventArgs e) {
+			rebalanceButton.Image = imageRebalance;
+			contentPicture.Image = imageLogo;
+		};
+        // 
+        // equipmentButton
+        // 
+        equipmentButton.Image = imageEquipment;
+        equipmentButton.Location = new System.Drawing.Point(413, 28);
+        equipmentButton.Name = "equipmentButton";
+        equipmentButton.Size = new System.Drawing.Size(130, 81);
+        equipmentButton.TabIndex = 6;
+        equipmentButton.TabStop = false;
+        equipmentButton.Click += delegate(object sender, EventArgs e) {
+			acceptPlayer.Play();
+
+			if (equipmentSelected == true) {
+				equipmentSelected = false;
+				equipmentCheckbox.Image = imageUnchecked;
+			} else {
+				equipmentSelected = true;
+				equipmentCheckbox.Image = imageChecked;
+			}
+		};
+        equipmentButton.MouseEnter += delegate(object sender, EventArgs e) {
+			equipmentButton.Image = imageEquipmentHi;
+			contentPicture.Image = imageEquipmentDesc;
+			hoverPlayer.Play();
+		};
+        equipmentButton.MouseLeave += delegate(object sender, EventArgs e) {
+			equipmentButton.Image = imageEquipment;
+			contentPicture.Image = imageLogo;
+		};
         // 
         // cyberwareButton
         // 
         cyberwareButton.Image = imageCyberware;
-        cyberwareButton.Location = new System.Drawing.Point(565, 28);
+        cyberwareButton.Location = new System.Drawing.Point(256, 28);
         cyberwareButton.Name = "cyberwareButton";
-        cyberwareButton.Size = new System.Drawing.Size(128, 81);
+        cyberwareButton.Size = new System.Drawing.Size(130, 81);
         cyberwareButton.TabIndex = 6;
         cyberwareButton.TabStop = false;
         cyberwareButton.Click += delegate(object sender, EventArgs e) {
@@ -312,9 +444,13 @@ class Script : FalloutNewVegasBaseScript {
         installerForm.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         installerForm.BackColor = System.Drawing.Color.Black;
         installerForm.ClientSize = new System.Drawing.Size(784, 647);
+        installerForm.Controls.Add(rebalanceCheckbox);
+        installerForm.Controls.Add(equipmentCheckbox);
         installerForm.Controls.Add(cyberwareCheckbox);
         installerForm.Controls.Add(coreCheckbox);
         installerForm.Controls.Add(contentPicture);
+        installerForm.Controls.Add(rebalanceButton);
+        installerForm.Controls.Add(equipmentButton);
         installerForm.Controls.Add(cyberwareButton);
         installerForm.Controls.Add(coreButton);
         installerForm.Controls.Add(installButton);
@@ -326,9 +462,13 @@ class Script : FalloutNewVegasBaseScript {
         installerForm.Name = "installerForm";
         installerForm.Padding = new System.Windows.Forms.Padding(5, 25, 5, 5);
         installerForm.Text = title;
+        ((System.ComponentModel.ISupportInitialize)(rebalanceCheckbox)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(equipmentCheckbox)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(cyberwareCheckbox)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(coreCheckbox)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(contentPicture)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(rebalanceButton)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(equipmentButton)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(cyberwareButton)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(coreButton)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(installButton)).EndInit();
