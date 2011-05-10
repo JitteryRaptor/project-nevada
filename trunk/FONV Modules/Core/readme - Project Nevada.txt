@@ -31,7 +31,7 @@ Part I - General
 
 	3. Troubleshooting
 
-	4. Credits & Acknowledgements
+	4. General Credits & Acknowledgements
 	
 	5. Contact
 	
@@ -43,12 +43,22 @@ Part II - Module Details
 	1. Core
 		a) Features
 		b) Default hotkeys
+		c) Item changes
 	
 	2. Cyberware
-		a) Item changes
-		b) Implant list
-		c) Implant locations
-		d) Surgery services
+		a) Implant list
+		b) Implant locations
+		c) Surgery services
+		
+	3. Equipment
+		a) Guns
+		b) Energy Weapons
+		c) Melee Weapons
+		d) Explosives
+		e) Armor/Apparel
+		
+	3. Equipment
+		a) Changes
 		
 		
 
@@ -189,7 +199,7 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
 
 
 ========================================================================================================================================
- 4. Credits & Acknowledgements
+ 4. General Credits & Acknowledgements
 ========================================================================================================================================
 
 lespaul678 - Sprint exhaustion sounds (male)
@@ -276,7 +286,7 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 		Unstoppable Force: Tackle doesn't interrupt sprint.
 
 * Grenade Hotkey
-	Press a hotkey to quickly equip and prepare an explosive, then release it to throw it. Another hotkey is used to cycle throw the
+	Press a hotkey to quickly equip and prepare an explosive, then release to throw it. Another hotkey is used to cycle throw the
 	different throwables in the players inventory. Besides mentioned explosives, thrown weapons are supported as well.
 
 * Variable Zoom for scoped weapons
@@ -307,28 +317,10 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 * Select Grenade (H)
 * Control Panel (Hold P)
 * Zoom In (MWheel Up)
-* Zoom Out (MWheel Down)	
-	
-	
-========================================================================================================================================
- 2. Cyberware
-========================================================================================================================================
-
-Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of man's most advanced
-technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
-
-Practically this means new features are associated with cybernetic implants and high-tech equipment. Examples include enhanced vision
-modes for power armor helmets and bionic legs allowing you to charge towards your enemies with super-human speed.
-
-While for equipment existing items are used, the cybernetic implants come with a custom interface to attach and manage them. Unique
-implants that grant powerful abilities are placed all over the wasteland in rewarding locations. Other, less powerful implants can be
-obtained from selected vendors, though with the proper Science skill those can be upgraded up to 3 times.
-
-The whole system is balanced by several mechanisms, like limiting the number of implants that can be attached at the same time, or
-requiring energy supply for special equipment.
+* Zoom Out (MWheel Down)
 
 ------------------------------------------------------------
- a) Item changes
+ c) Item changes
 ------------------------------------------------------------
 
 * Night vision
@@ -350,10 +342,28 @@ requiring energy supply for special equipment.
 	Remnants Tesla Helmet
 	T51b PA Helmet
 
-* Stealth Boy field is now controllable (Hotkey) and status is displayed in the HUD
+* Stealth Boy field is now controllable (Hotkey) and status is displayed in the HUD	
+	
+	
+========================================================================================================================================
+ 2. Cyberware
+========================================================================================================================================
+
+Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of man's most advanced
+technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
+
+Practically this means new features are associated with cybernetic implants and high-tech equipment. Examples include enhanced vision
+modes for power armor helmets and bionic legs allowing you to charge towards your enemies with super-human speed.
+
+While for equipment existing items are used, the cybernetic implants come with a custom interface to attach and manage them. Unique
+implants that grant powerful abilities are placed all over the wasteland in rewarding locations. Other, less powerful implants can be
+obtained from selected vendors, though with the proper Science skill those can be upgraded up to 3 times.
+
+The whole system is balanced by several mechanisms, like limiting the number of implants that can be attached at the same time, or
+requiring energy supply for special equipment.
 
 ------------------------------------------------------------
- b) Implant list
+a) Implant list
 ------------------------------------------------------------
 
 [Head Implants]
@@ -394,7 +404,7 @@ requiring energy supply for special equipment.
 * Weight Absorber: Carry weight +10(20,30,40) (Upgradeable)
 
 ------------------------------------------------------------
- c) Implant locations (!!!SPOILER WARNING!!!)
+ b) Implant locations (!!!SPOILER WARNING!!!)
 ------------------------------------------------------------
 
 [World placed]
@@ -456,7 +466,7 @@ requiring energy supply for special equipment.
 	Julie Farkas
 
 ------------------------------------------------------------
- d) Surgery services (!!!SPOILER WARNING!!!)
+ c) Surgery services (!!!SPOILER WARNING!!!)
 ------------------------------------------------------------
 
 (Name, Location, Requires training?)
@@ -472,3 +482,228 @@ Training manual locations:
 #3 Besides the terminal in Thomas Hildens Office (Camp McCarran)
 
 
+========================================================================================================================================
+ 3. Equipment
+========================================================================================================================================
+
+The Equipment module brings new weapons and armor to the Mojave Wasteland.
+Source of these items are the many excellent creations produced by the modding community, as well as those created by our own team.
+
+We aim to include only weapons and armor of high quality that fit well within the New Vegas environment and the Fallout universe in
+general. To ensure a seamless integration, the new items are carefully balanced and placed at appropriate locations, including vendors
+and loot lists.
+
+------------------------------------------------------------
+a) Guns
+------------------------------------------------------------
+
+[Restored FO3 weapons]
+* 10mm Alloy Steel Pistol
+* Alloy Steel Assault Rifle
+* Alloy Steel Combat Shotgun
+* Assault Rifle
+* Chinese Assault Rifle
+* Chinese Pistol
+* Combat Shotgun
+* Dart Gun
+* Double-Barrel Shotgun
+* Dragoon Assault Rifle
+* Dragoon Pistol
+* Infiltrator
+* Lever-Action Rifle
+* Railway Rifle
+* Replica Repeater
+* Saturday Night Special
+
+[Custom creations]
+* Chinese Sniper Rifle
+* 5mm Submachine Gun
+* Three Shooter
+
+[Based on community creations]
+* European Battle Rifle
+	Original authors: Vashts1985 and LT Albrecht
+	Source: Albrecht and Vashts FN FAL Rifle (http://www.newvegasnexus.com/downloads/file.php?id=37553)
+* Liberator Rifle
+	Original authors: Vashts1985 and LT Albrecht
+	Source: Albrecht and Vashts FN FAL Rifle (http://www.newvegasnexus.com/downloads/file.php?id=37553)
+* .44 Pistol
+	Original authors: Linerunner and War1982
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)	
+* High Roller
+	Original authors: Linerunner and War1982
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)
+
+------------------------------------------------------------
+ b) Energy Weapons
+------------------------------------------------------------
+
+[Restored FO3 weapons]
+* Alien Atomizer
+* Alien Disintegrator
+* Captain's Sidearm
+* Microwave Emitter
+
+[Custom creations]
+* Rail Cannon
+
+[Based on community creations]
+* Auto-Gauss
+	Original author: DaiShiSUN
+	Source: Classic M72 Gauss Rifle (http://newvegasnexus.com/downloads/file.php?id=37703)
+* Cryo Revolver
+	Original author: Omegared99
+	Source: M-2081 Pistol (http://newvegasnexus.com/downloads/file.php?id=40174)
+* Gauss Minigun
+	Original author: DaiShiSUN
+	Source: Classic MEC Gauss Minigun (http://newvegasnexus.com/downloads/file.php?id=36056)
+* Tesla Rifle Prototype
+	Original author: Kikaimegami, scope reticle by Pelinor
+	Source: Liberty Rifle (http://fallout3nexus.com/downloads/file.php?id=1901)
+* Flamer Pistol
+	Original authors: Linerunner and War1982	
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)	
+* Wattz Laser Pistol
+	Original authors: Linerunner and War1982
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)	
+* Wattz Laser Rifle
+	Original authors: Linerunner and War1982
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)	
+* Plasma Disruptor
+	Original author: Chai
+	Source: Plasma Weapons Redesign Rebalance (http://www.fallout3nexus.com/downloads/file.php?id=8983)	
+* Plasma Repeater
+	Original author: Chai
+	Source: Plasma Weapons Redesign Rebalance (http://www.fallout3nexus.com/downloads/file.php?id=8983)
+	
+------------------------------------------------------------
+ c) Melee Weapons
+------------------------------------------------------------
+
+[Unused items]
+* Flag Pole
+
+[Restored FO3 weapons]
+* Auto Axe
+* Chinese Officer's Sword
+* Deathclaw Gauntlet
+* Dragoon Sword
+* Shock Baton
+* Shishkebab
+
+[Based on community creations]
+* Crowbar
+	Original authors: Linerunner and War1982
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)
+* Rising Sun
+	Original author: Shogo
+	Source: Laser Katana (http://www.newvegasnexus.com/downloads/file.php?id=41053)
+
+------------------------------------------------------------
+ d) Explosives
+------------------------------------------------------------
+
+[Restored FO3 items]
+* Nuka-Grenade
+
+[Custom creations]
+* Remote Frag Mine
+* Remote Plasma Mine
+* Remote Pulse Mine
+* Remote Pipe Bomb
+* Cryo Grenade
+* Cryo Mine
+
+[Based on community creations]
+* Molotov Cocktail
+	Original authors: Linerunner and War1982
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)
+* Dynamite Charge
+	Original author: djabend
+	Source: Pipe Rifle And Other Junk Weapons (http://www.newvegasnexus.com/downloads/file.php?id=39438)
+
+------------------------------------------------------------
+ e) Armor/Apparel
+------------------------------------------------------------
+
+[Unused items]
+* Surgical Mask
+* Armored Vault 21 Jumpsuit
+
+[Restored FO3 items]
+* A Suit Named Slickback (Eulogy Jones Suit)
+* A Hat Named Slickback (Eulogy Jones Hat)
+* Army Jumpsuit
+* Desert Recon Armor
+* Eyebot helmet
+* Outcast Armor
+* Medic Power Armor Mk II
+
+[Based on community creations]
+* Advanced Recon Armor
+	Original author: Gopher
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
+* Advanced Recon Helm
+	Original author: Gopher
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
+* Armored Duster
+	Original author: Gopher
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
+* Death Walker Duster
+	Original author: Gopher
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
+* Ranger Recon Armor
+	Original author: Gopher
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
+* Ranger Recon Helm
+	Original author: Gopher
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
+* T57-C Power Armor
+	Original author: AnOneTwo
+	Source: Air Force Power Armor T-57c (http://www.newvegasnexus.com/downloads/file.php?id=37261)
+* Vault-Tec Power Armor
+	Original author: AnOneTwo
+	Source: VaultTec Power Armor (http://www.newvegasnexus.com/downloads/file.php?id=41279)
+	
+	
+========================================================================================================================================
+ 4. Rebalance
+========================================================================================================================================
+
+This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV
+gameplay and difficulty. Combat will be quicker and deadlier and survival much harder. These changes are aimed to be very subtle and
+non-intrusive, making the game more challenging without inconveniencing the player.
+
+------------------------------------------------------------
+ a) Primary needs changes
+------------------------------------------------------------
+
+* Increased Hunger/Thirst/Sleep (HTS) rates
+* Diversified food
+* Hunger rate based on quality of consumed food
+* HTS rates based on survival skill
+* Removed food healing
+
+------------------------------------------------------------
+ b) Damage changes
+------------------------------------------------------------
+
+* Limb shots are less critical, head shots are more critical
+* Reduced HP for all NPCs/creatures
+* Reduced weapon skill influence on damage
+* Explosion effects
+
+------------------------------------------------------------
+ c) Item rarity changes
+------------------------------------------------------------
+
+* Rarer Stimpaks
+* Rarer high quality food
+* Ammo is more common at vendors
+* Weapon mods more common at vendors
+* Higher quality foods more common at vendors
+* Craftable bullet components more common at vendors
+
+------------------------------------------------------------
+ d) Repair changes
+------------------------------------------------------------
