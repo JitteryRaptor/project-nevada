@@ -15,9 +15,9 @@
 
 ########################################################################################################################################
 
-Team: snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Zealotlee, Mezmorki
+Team: snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, x-quake, TheCastle, Mezmorki
 
-Current Version: 1.0
+Current Version: 2.0
 
 Download: http://www.newvegasnexus.com/downloads/file.php?id=40040
 
@@ -57,7 +57,7 @@ Part II - Module Details
 		d) Explosives
 		e) Armor/Apparel
 		
-	3. Equipment
+	4. Rebalance
 		a) Changes
 		
 		
@@ -299,12 +299,20 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 
 * First-person Visor Overlays for helmets
 
-* Immersive Health Visuals
+* Health Visuals
 
 * Control Panel
 	The control panel is accessible from the pause menu.
 	The button is in the lower right corner and only visible when coming directly from the game instead of another menu!
 	It's technically possible for other mods to add entries to the top-level menu.
+
+* Explosive Entry
+
+* Immersive Primary Needs
+
+* Enhanced Stealth Field
+
+* Enhanced Vision
 
 ------------------------------------------------------------
  b) Default hotkeys
