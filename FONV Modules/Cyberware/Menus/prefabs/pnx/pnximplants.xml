@@ -690,6 +690,7 @@
 			<_filename_12> pnx\hud\cy\implant_right_nail.dds </_filename_12>
 			<_filename_13> pnx\hud\cy\implant_right_eye.dds </_filename_13>
 			<_filename_14> pnx\hud\cy\implant_right_arm.dds </_filename_14>
+			<_filename_15> pnx\hud\cy\implant_right_synapses.dds </_filename_15>
 			
 			<filename>
 				<copy src="io()" trait="_PNxCyberboyRightImplant1Num" />
@@ -855,6 +856,7 @@
 			<_filename_12> pnx\hud\cy\implant_left_nail.dds </_filename_12>
 			<_filename_13> pnx\hud\cy\implant_left_eye.dds </_filename_13>
 			<_filename_14> pnx\hud\cy\implant_left_arm.dds </_filename_14>
+			<_filename_15> pnx\hud\cy\implant_left_synapses.dds </_filename_15>
 			
 			<filename>
 				<copy src="io()" trait="_PNxCyberboyRightImplant2Num" />
@@ -1019,6 +1021,7 @@
 			<_filename_12> pnx\hud\cy\implant_left_nail.dds </_filename_12>
 			<_filename_13> pnx\hud\cy\implant_left_eye.dds </_filename_13>
 			<_filename_14> pnx\hud\cy\implant_left_arm.dds </_filename_14>
+			<_filename_15> pnx\hud\cy\implant_left_synapses.dds </_filename_15>
 			<filename>
 				<copy src="io()" trait="_PNxCyberboyLeftImplant1Num" />
 				<copy src="me()" trait="_filename_" />
@@ -1101,7 +1104,7 @@
 		<clicksound> UIMenuOK </clicksound>
 		
 		<visible>
-			<copy src="sibling(PNxCyberboyLeftSlot1)" trait="visible" />
+			<copy src="sibling(PNxCyberboyLeftSlot2)" trait="visible" />
 		</visible>
 		
 		<depth> 15 </depth>
@@ -1179,6 +1182,7 @@
 			<_filename_12> pnx\hud\cy\implant_right_nail.dds </_filename_12>
 			<_filename_13> pnx\hud\cy\implant_right_eye.dds </_filename_13>
 			<_filename_14> pnx\hud\cy\implant_right_arm.dds </_filename_14>
+			<_filename_15> pnx\hud\cy\implant_right_synapses.dds </_filename_15>
 			<filename>
 				<copy src="io()" trait="_PNxCyberboyLeftImplant2Num" />
 				<copy src="me()" trait="_filename_" />
