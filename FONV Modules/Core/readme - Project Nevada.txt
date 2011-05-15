@@ -15,7 +15,7 @@
 
 ########################################################################################################################################
 
-Team: snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, x-quake, TheCastle, Mezmorki
+Team: snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, Gopher, TheCastle, x-quake, Mezmorki
 
 Current Version: 2.0
 
@@ -27,15 +27,17 @@ Part I - General
 
 	1. Introduction
 
-	2. Installation
+	2. Changelog
 
-	3. Troubleshooting
+	3. Installation
 
-	4. General Credits & Acknowledgements
+	4. Troubleshooting
+
+	5. Credits & Acknowledgements
 	
-	5. Contact
+	6. Contact
 	
-	6. Permissions
+	7. Permissions
 	
 
 Part II - Module Details
@@ -95,7 +97,54 @@ to get the mod running.
 
 
 ========================================================================================================================================
- 2. Installation
+ 2. Changelog
+========================================================================================================================================
+
+------------------------------------------------------------
+2.0:
+
+[Core]
+- Enhanced vision modes and Stealth field are no longer tied to Cyberware and can be enabled and disabled in the control panel
+- Added Explosive Entry feature that allows to break locks with explosives
+- Added sound effects for primary needs
+- Sprint: Added freely configurable hotkey (no longer restricted to walk/run)
+- Grenade Hotkey: Added item categories to support mines and placed explosives
+- Grenade Hotkey: Added auto detection of new explosives (once they have been equipped at least once)
+- Stealth Field: Added support for stealth girl perk
+- Enhanced Vision: Added trap highlighting to EM vision
+- Enhanced Vision: Tweaked grain and brightness for clearer sight in all vision modes
+- Enhanced Vision: Added vision modes for Reinforced Combat armor (and Mk2 variant)
+- Bullet Time: Added perk descriptions
+- Scanner: Tweaked threat estimation (Deathclaws are no longer a low threat...)
+- Visor Overlays: Changed underlying system to enhance extendability and simplify addition of custom overlay textures
+
+[Cyberware]
+- Added level 14 perk to give 2 more torso implant slots to the player
+- Added level 14 perk to give 2 more head implant slots to the player
+- Added a short quest that's started when the player picks up the first implant and completed once the player opens the surgery panel
+- Added new head implant that grants slower bullet time
+- Added restoration of original implant perks if Cyberware is disabled
+- Fixed implant placement in Vault 22 so it still can be obtained after the respective quest
+
+[Rebalance]
+- Initial release
+
+[Equipment]
+- Initial release
+
+
+------------------------------------------------------------
+1.0:
+
+[Core]
+- Initial release
+
+[Cyberware]
+- Initial release
+
+
+========================================================================================================================================
+ 3. Installation
 ========================================================================================================================================
 
 We really recommend using the Fallout Mod Manager to install Project Nevada!
@@ -144,7 +193,7 @@ In case you are using any mod that modifies the interface:
 
 
 ========================================================================================================================================
- 3. Troubleshooting
+ 4. Troubleshooting
 ========================================================================================================================================
 
 ------------------------------------------------------------
@@ -199,7 +248,7 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
 
 
 ========================================================================================================================================
- 4. General Credits & Acknowledgements
+ 5. Credits & Acknowledgements
 ========================================================================================================================================
 
 lespaul678 - Sprint exhaustion sounds (male)
@@ -207,13 +256,20 @@ Gopher - Heat vision effects
 Max Tael - MTUI compatibility files
 DarN - DarNified UI compatibility files
 Ugluxy - Textures for the visor damage effects
+Pelinor - Custom scope reticle for Tesla Rifle
+Crawlius - Sound effects for Plasma Disruptor
+
+The authors of all community-contributed items for the Equipment module are listed separately in Part II.
+We thank all of them for granting us permission use of their work in our mod.
 
 Thanks to our external testers, who helped a great deal with improving the overall quality of this mod:
 	gyshall, mikekearn, Ren Lotus, robber804, ToJKa (in alphabetical order)
 
+And - last but not least - thanks to the NVSE team, because without their Script Extender creating this mod wouldn't have been possible.
+
 
 ========================================================================================================================================
- 5. Contact
+ 6. Contact
 ========================================================================================================================================
 
 For direct contact, send a PM to schlangster at
@@ -222,9 +278,11 @@ For direct contact, send a PM to schlangster at
 		or
 	http://forums.bethsoft.com/
 
+If you need help, please leave a comment on our Nexus page instead of contacting me directly.
+
 	
 ========================================================================================================================================
- 6. Permissions
+ 7. Permissions
 ========================================================================================================================================	
 
 Some assets in Project Nevada belong to other authors.
@@ -234,6 +292,7 @@ You may upload Project Nevada to other sites, convert it to work with other game
 improvements, and use our assets without permission, but please give proper credit if you do so.
 
 If you want to upload Project Nevada to a different site, please notify us before doing so.
+
 
 
 
@@ -566,7 +625,7 @@ a) Guns
 	Original author: DaiShiSUN
 	Source: Classic MEC Gauss Minigun (http://newvegasnexus.com/downloads/file.php?id=36056)
 * Tesla Rifle Prototype
-	Original author: Kikaimegami, scope reticle by Pelinor
+	Original author: Kikaimegami
 	Source: Liberty Rifle (http://fallout3nexus.com/downloads/file.php?id=1901)
 * Flamer Pistol
 	Original authors: Linerunner and War1982	
@@ -686,7 +745,7 @@ non-intrusive, making the game more challenging without inconveniencing the play
  a) Primary needs changes
 ------------------------------------------------------------
 
-* Increased Hunger/Thirst/Sleep (HTS) rates
+* Tweaked Hunger/Thirst/Sleep (HTS) rates
 * Diversified food
 * Hunger rate based on quality of consumed food
 * HTS rates based on survival skill
