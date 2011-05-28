@@ -60,7 +60,14 @@ Part II - Module Details
 		e) Armor/Apparel
 		
 	4. Rebalance
-		a) Changes
+		a) Character options
+		b) Damage + Combat options
+		c) Stealth + Movement options
+		d) Miscellaneous options
+		e) Item rarity changes
+		f) Food changes
+		g) Hit location damage changes
+		h) Alternative repair system
 		
 		
 
@@ -357,8 +364,11 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 	When moving backwards, the player's speed is reduced based on his/her agility.
 
 * First-person Visor Overlays for helmets
+	Helmets and other headgear now get immersive first-person overlays and vision effects. Based on the item condition, cracks and
+	scratches will show up in the wearers vision.
 
 * Health Visuals
+	With decreasing health, the player's vision gets weak and blurry, creating an immersive feedback mechanism for you current health.
 
 * Control Panel
 	The control panel is accessible from the pause menu.
@@ -366,12 +376,20 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 	It's technically possible for other mods to add entries to the top-level menu.
 
 * Explosive Entry
+	This feature makes it possible to burst open locked containers and doors with explosives. It uses no special interface, just
+	detonate something close enough to a lock and you may break it.
 
 * Immersive Primary Needs
+	As hunger, thirst or sleep depriviation increase, the player is notified by periodic sound effects. These effects kick in shortly
+	before the first penalties occur, so the player is given a chance to eat, drink or sleep in time.
 
 * Enhanced Stealth Field
+	The stealth field of armors or Stealth Boys can now be toggled on and off by hotkey. To balance this, the field can only stay
+	stable for a few seconds. The current stability is displayed in the HUD.
 
-* Enhanced Vision
+* Enhanced Vision Modes
+	Power Armor helmets and other high-tech gear now enable enhanced vision modes like Night Vision, Heat Vision and EM Vision.
+	If there's no Power Armor equipped as a power source, energy cells are required while these modes are active.
 
 ------------------------------------------------------------
  b) Default hotkeys
@@ -409,7 +427,10 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 	Remnants Tesla Helmet
 	T51b PA Helmet
 
-* Stealth Boy field is now controllable (Hotkey) and status is displayed in the HUD	
+* Stealth field
+	Chinese Stealth Armor
+
+* Stealth Boy field is now controllable (Hotkey) and the status is displayed in the HUD	
 	
 	
 ========================================================================================================================================
@@ -442,6 +463,7 @@ a) Implant list
 * Optics Enhancer: Perception +1
 * Probability Calculator: Luck +1
 * Voice Modulator: Speech +2(3,4,5), Barter +2(3,4,5) (upgradable)
+* Wired Synapses: Bullet time slowndown increased by 20%
 
 [Torso Implants]
 
@@ -470,6 +492,8 @@ a) Implant list
 * Tread Damper: Sneak +4(6,8,10) (Upgradeable)
 * Weight Absorber: Carry weight +10(20,30,40) (Upgradeable)
 
+Upgradable items can be improved at a workbench. If they are already installed, you have to remove them first.
+
 ------------------------------------------------------------
  b) Implant locations (!!!SPOILER WARNING!!!)
 ------------------------------------------------------------
@@ -497,7 +521,9 @@ a) Implant list
 	#1 REPCONN Headquarters Top Floor, in the room with the destroyed wall on the floor
 	#2 REPCONN Research Lab, on a tray in the top lab (where the followers are)
 	#3 H&H Tools Factory, inside the opened safe in the office with the keycard
-	#4 Vault 22, pest control in the highest room near the door
+	#4 Vault 22, Keely's lab
+* Wired Synapses
+	#1 Lake Mead, on the ground in a flooded cave
 
 [For sale at Doctor Usanagi in New Vegas medical clinic]
 
@@ -742,35 +768,241 @@ gameplay and difficulty. Combat will be quicker and deadlier and survival much h
 non-intrusive, making the game more challenging without inconveniencing the player.
 
 ------------------------------------------------------------
- a) Primary needs changes
+ a) Character options
 ------------------------------------------------------------
 
-* Tweaked Hunger/Thirst/Sleep (HTS) rates
-* Diversified food
-* Hunger rate based on quality of consumed food
-* HTS rates based on survival skill
-* Removed food healing
+* Levelling Speed
+	Description:
+		Allows to set the levelling speed to roughly ~50% by modifying the XP rewards for killed enemies.
+	Options:
+		 50%
+		100% [Vanilla]
+	
+* Skill Points per Level
+	Description:
+		Allows to reduce the amount of skill points gained per level.
+	Options:
+		 6 + INT
+		11 + INT [Vanilla]
+
+* Carry Weight
+	Description:
+		Allows to use an alternative carry weight formula that's mainly based on STR.
+	Options:
+		 25 + 25*STR
+		150 + 10*STR [Vanilla]
+		
+* Action Points
+	Description:
+		Allows to use an alternative action point formula that's mainly based on AGI.
+	Options:
+		45 + 6*AGI
+		65 + 3*AGI [Vanilla]
 
 ------------------------------------------------------------
- b) Damage changes
+ b) Damage + Combat options
 ------------------------------------------------------------
 
-* Limb shots are less critical, head shots are more critical
-* Reduced HP for all NPCs/creatures
-* Reduced weapon skill influence on damage
-* Explosion effects
+* Hitpoints
+	Description:
+		Allows to reduce hitpoints of all actors and creatures to increase the relative damage and make combat much deadlier.
+	Options:
+		Player HP: 20 * END + 5 * LVL   ,   NPC HP: 5 * END + 5 * LVL [Vanilla]
+		Player HP: 10 * END             ,   NPC HP: 7 * END
+		Player HP:  7 * END             ,   NPC HP: 7 * END
+
+* DT Bleedthrough
+	Description:
+		Allows to modify the amount of minimum damage received with each shot, even it it was absorbed by DT.
+	Options:
+		 1%
+		10%
+		20% [Vanilla]
+		25%
+		50%
+		
+* Radiation Rate
+	Description:
+		Allows to modify the amount of minimum damage received with each shot, even it it was absorbed by DT.
+	Options:
+		100%
+		150% [Vanilla]
+
+* Safe Falling Distance
+	Description:
+		Allows to change at which falling height actors start to take damage.
+	Options:
+		400
+		600 [Vanilla]
+		
+* Damage Skill Influence
+	Description:
+		Allows to reduce the influence of weapon skill on damage. For 20%, someone with skill 0 will still do 80% base damage.
+	Options:
+		20%
+		50% [Vanilla]
+		
+* Explosion Knockdowns
+	Description:
+		Enables explosion knockdown based on explosion strength and S.P.E.C.I.A.L attributes.
+		This also includes an explosion ring effect.
+	Options:
+		Yes
+		 No [Vanilla]
+		 
+* Limb Damage
+	Description:
+		Allows to increase the amount of health damage that's transferred to limb damage.
+	Options:
+		75%
+		50% [Vanilla]
+		
+* DT for Headshots
+	Description:
+		By default, armor DT protects the full body, even if the head is unprotected.
+		If DT for headshots is requires wearing a helmet, any headshot to an actor not wearing any head protection with DT > 0
+		will do full damage, bypassing the body DT.
+	Options:
+		Only with Helmet
+		Always [Vanilla]
 
 ------------------------------------------------------------
- c) Item rarity changes
+ c) Stealth + Movement options
+------------------------------------------------------------
+
+* Sneak Difficulty
+	Description:
+		Allows to select different sneak profiles. Harder sneaking makes sneaking more difficult, while still keeping the
+		original spirit that makes it possible to hide in plain sight with a high sneak skill.
+		The Experimental profile will make sneaking significantly harder, aiming for a realistic detection.
+	Options:
+		Normal [Vanilla]
+		Harder
+		Experimental
+		
+* Experimental Detection AI
+	Description:
+		Allows to enable scripted search behaviour. Actors will stay alerted much longer, also alerting nearby actors.
+		While alerted, they have significantly enhanced long range detection. If they spot the player of a large distance,
+		they will move towards him to investigate, making any nearby allies join them.
+	Options:
+		Yes
+		 No [Vanilla]
+		 
+* Running Speed Multiplier
+	Description:
+		Allows to reduce the general running speed.
+	Options:
+		3.65
+		4.00 [Vanilla]
+		
+* Holstered Speed
+		Allows to increase movement speed with a holstered weapon.
+	Description:
+	Options:
+		100% [Vanilla]
+		115%
+		
+* Crippled Legs Speed
+	Description:
+		Allows to reduce movement speed with crippled legs.
+	Options:
+		One leg 70% , Two legs 40%
+		One leg 85% , Two legs 75% [Vanilla]
+		
+------------------------------------------------------------
+ d) Miscellaneous options
+------------------------------------------------------------
+
+* Food Healing
+	Description:
+		Allows to disable food healing.
+	Options:
+		Yes [Vanilla]
+		No
+		
+* Alternative Repair System
+	Description:
+		Enable an alternative repair system, which is explained in full detail in a seperate section.
+	Options:
+		Yes
+		 No [Vanilla]
+		 
+* Primary Needs Increase per Minute
+	Description:
+		Allows to increase the hunger, thirst and sleep increase rates.
+	Options:
+		Hunger 2.4, Thirst 6, Sleep 1.2 [Vanillla]
+		Hunger 3  , Thirst 6, Sleep 3
+		
+* Survival Skill and Food Influence Primary Needs Rates
+	Description:
+		Allows the surivial skill and food quality to influence the hunger, sleep and thirst rates.
+		The survival skill reduces the increase speed by up to 50%.
+		Eating bad food will make hunger increase faster for a while.
+	Options:
+		Yes
+		 No [Vanilla]
+
+* Show Karma Messages
+	Description:
+		Allows to hide karma messages.
+	Options:
+		Yes [Vanilla]
+		 No
+
+* Show Sneak Indicator
+		Allows to hide the sneak indicator.
+	Description:
+	Options:
+		Yes [Vanilla]
+		 No
+
+* Death Physics Force
+	Description:
+		Allows to reduce death physics so they are more realistic.
+	Options:
+		 50%
+		100% [Vanilla]
+
+* Gore Chance
+	Description:
+		Allows to reduce gore effects so they are less over-the-top.
+	Options:
+		Dismember 30%, Explode 45%
+		Dismember 50%, Explode 75% [Vanilla]
+		
+------------------------------------------------------------
+ e) Item rarity changes
 ------------------------------------------------------------
 
 * Rarer Stimpaks
+
 * Rarer high quality food
+
 * Ammo is more common at vendors
-* Weapon mods more common at vendors
-* Higher quality foods more common at vendors
-* Craftable bullet components more common at vendors
+
+* Weapon are mods more common at vendors
+
+* Higher quality foods are more common at vendors
+
+* Craftable bullet components are more common at vendors
 
 ------------------------------------------------------------
- d) Repair changes
+ f) Food changes
 ------------------------------------------------------------
+
+For every existing food item, there are now multiple variations in different quality.
+
+------------------------------------------------------------
+ g) Hit location damage changes
+------------------------------------------------------------
+
+For humanoid actors and some creatures, the headshot damage mutliplier was increased from 2.0x to 2.0x,
+while the damage received by limb hits was reduced from 1.0x to 0.75x. This makes hitting vulerable parts more important.
+
+------------------------------------------------------------
+ h) Alternative repair system
+------------------------------------------------------------
+
+TODO
