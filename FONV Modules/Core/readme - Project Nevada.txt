@@ -258,16 +258,30 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
  5. Credits & Acknowledgements
 ========================================================================================================================================
 
+General:
 lespaul678 - Sprint exhaustion sounds (male)
 Gopher - Heat vision effects
 Max Tael - MTUI compatibility files
 DarN - DarNified UI compatibility files
 Ugluxy - Textures for the visor damage effects
+
+Equipment:
+Vashts1985 and LT Albrecht, Albrecht and Vashts FN FAL Rifle
+Linerunner and War1982, Classic Fallout Weapons - New Vegas
+DaiShiSUN, Classic M72 Gauss Rifle
+DaiShiSUN, Classic MEC Gauss Minigun
+Omegared99, M-2081 Pistol
+Kikaimegami, Liberty Rifle
+Chai, Plasma Weapons Redesign Rebalance
+Shogo, Laser Katana
+djabend, Pipe Rifle And Other Junk Weapons
+Gopher, Advanced Recon Stealth Armor
+AnOneTwo, Air Force Power Armor T-57c
+AnOneTwo, VaultTec Power Armor
 Pelinor - Custom scope reticle for Tesla Rifle
 Crawlius - Sound effects for Plasma Disruptor
 
-The authors of all community-contributed items for the Equipment module are listed separately in Part II.
-We thank all of them for granting us permission use of their work in our mod.
+We thank all of them for granting us permission to use their work in our mod.
 
 Thanks to our external testers, who helped a great deal with improving the overall quality of this mod:
 	gyshall, mikekearn, Ren Lotus, robber804, ToJKa (in alphabetical order)
@@ -767,6 +781,8 @@ This module aims to bring back the challenge and balance known from Fallout3 Wan
 gameplay and difficulty. Combat will be quicker and deadlier and survival much harder. These changes are aimed to be very subtle and
 non-intrusive, making the game more challenging without inconveniencing the player.
 
+As usual, the Control Panel allows players to customize most settings according to their personal preferences.
+
 ------------------------------------------------------------
  a) Character options
 ------------------------------------------------------------
@@ -798,6 +814,23 @@ non-intrusive, making the game more challenging without inconveniencing the play
 	Options:
 		45 + 6*AGI
 		65 + 3*AGI [Vanilla]
+
+* Perk Selection:
+	Description:
+		Allows to one perk at each level.
+	Options:
+		Every two Levels [Vanilla]
+		Every Level
+
+* Throwing Range Multiplier:
+	Description:
+		Allows you make the throwing range dependent on your strength.
+	Options:
+		1.0 [Vanilla]
+		0.5 + 0.1*STR
+		
+		
+	
 
 ------------------------------------------------------------
  b) Damage + Combat options
@@ -992,17 +1025,47 @@ non-intrusive, making the game more challenging without inconveniencing the play
  f) Food changes
 ------------------------------------------------------------
 
-For every existing food item, there are now multiple variations in different quality.
+For every existing food item, there are now three variations, classified as Terrible, Bad and Good.
+With decreasing quality, the food is less nutritious. If the respective option is enabled, eating bad or terrible food
+will temporarily increase the hunger rate. More details can be found here:
+https://spreadsheets.google.com/spreadsheet/ccc?key=0AoiEH8ar3jtxdGlzdnVDY3lGUEV5RWhNdXhzRHJBT0E&hl=en_US
 
 ------------------------------------------------------------
  g) Hit location damage changes
 ------------------------------------------------------------
 
-For humanoid actors and some creatures, the headshot damage mutliplier was increased from 2.0x to 2.0x,
+For humanoid actors and some creatures, the headshot damage mutliplier was increased from 2.0x to 2.5x,
 while the damage received by limb hits was reduced from 1.0x to 0.75x. This makes hitting vulerable parts more important.
 
 ------------------------------------------------------------
  h) Alternative repair system
 ------------------------------------------------------------
 
-TODO
+The default repair system relies heavily on weapon repair kits, which bypass the repair interface.
+It's very easy to repair common weapons to 100%, even with a very low repair skill.
+
+The alternative repair system tries to address those issues. It's two cornerstones are dynamic repair lists, and the
+introduction of repair tools. Let's start with those:
+- To repair anything two things are required: An item to repair with (like before), and Repair Tools.
+- Repair tools are created at a workbench. One set of Wrench, Hammer, Wonderglue and Duct Tape yields 10 charges.
+- Crafting of Weapon Repair Kits is disabled, existing Weapon Repair Kits are replaced with at a 1:10 ratio.
+
+This makes repairing harder, as it restricts the number or possible repairs even for very common weapons. Additionally,
+there are the dynamic repair lists. Repair lists are no longer fixed to a few items, but are expanded based on the
+player's repair skill.
+
+For weapons:
+Skill  0 - 49: Original repair list, usually only contains the weapon itself.
+Skill 50 - 74: All weapons of the same type (similiar to Jury Rigging), i.e. all two-handed automatic rifles or all pistols.
+Skill 75 - 99: All weapons of the same skill class, i.e. all Guns or all Energy Weapons.
+Skill     100: All weapons of the same skill class plus class-specific junk items, like Scrap Metal.
+
+Armors don't use multiple skill ranges, but always allow repairs with armors of the same armor type (light, medium, heavy).
+
+Repairing works like before, by selecting an item in the Pipboy inventory and pressing R). If no Repair Tools are available,
+R) is always greyed out. Otherwise, the current number of Repair Tools will be shown in the top right corner of the repair
+dialog (formerly that was where the repair skill was displayed).
+
+The original Jurgy Rigging perk is modified to give a 50% chance that no Repair Tool charge is used up on a repair.
+
+It's possible to disable the system at runtime in the Control Panel.
