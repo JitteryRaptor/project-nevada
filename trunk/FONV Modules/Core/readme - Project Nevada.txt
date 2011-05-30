@@ -66,8 +66,7 @@ Part II - Module Details
 		d) Miscellaneous options
 		e) Item rarity changes
 		f) Food changes
-		g) Hit location damage changes
-		h) Alternative repair system
+		g) Alternative repair system
 		
 		
 
@@ -1031,14 +1030,7 @@ will temporarily increase the hunger rate. More details can be found here:
 https://spreadsheets.google.com/spreadsheet/ccc?key=0AoiEH8ar3jtxdGlzdnVDY3lGUEV5RWhNdXhzRHJBT0E&hl=en_US
 
 ------------------------------------------------------------
- g) Hit location damage changes
-------------------------------------------------------------
-
-For humanoid actors and some creatures, the headshot damage mutliplier was increased from 2.0x to 2.5x,
-while the damage received by limb hits was reduced from 1.0x to 0.75x. This makes hitting vulerable parts more important.
-
-------------------------------------------------------------
- h) Alternative repair system
+ g) Alternative repair system
 ------------------------------------------------------------
 
 The default repair system relies heavily on weapon repair kits, which bypass the repair interface.
