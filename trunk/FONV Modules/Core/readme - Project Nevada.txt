@@ -1035,7 +1035,7 @@ https://spreadsheets.google.com/spreadsheet/ccc?key=0AoiEH8ar3jtxdGlzdnVDY3lGUEV
 The default repair system relies heavily on weapon repair kits, which bypass the repair interface.
 It's very easy to repair common weapons to 100%, even with a very low repair skill.
 
-The alternative repair system tries to address those issues. It's two cornerstones are dynamic repair lists, and the
+The alternative repair system tries to address those issues. Its two cornerstones are dynamic repair lists, and the
 introduction of repair tools. Let's start with those:
 - To repair anything two things are required: An item to repair with (like before), and Repair Tools.
 - Repair tools are created at a workbench. One set of Wrench, Hammer, Wonderglue and Duct Tape yields 10 charges.
