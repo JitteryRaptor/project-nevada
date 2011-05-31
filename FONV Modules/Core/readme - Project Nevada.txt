@@ -15,7 +15,7 @@
 
 ########################################################################################################################################
 
-Team: snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, Gopher, TheCastle, x-quake, Mezmorki
+Team: snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, TheCastle, x-quake, Gopher, Mezmorki
 
 Current Version: 2.0
 
@@ -111,7 +111,7 @@ to get the mod running.
 
 [Core]
 - Enhanced vision modes and Stealth field are no longer tied to Cyberware and can be enabled and disabled in the control panel
-- Added Explosive Entry feature that allows to break locks with explosives
+- Added Explosive Entry feature that allows the player to break locks with explosives
 - Added sound effects for primary needs
 - Sprint: Added freely configurable hotkey (no longer restricted to walk/run)
 - Grenade Hotkey: Added item categories to support mines and placed explosives
@@ -260,10 +260,10 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
 
 General:
 lespaul678 - Sprint exhaustion sounds (male)
-Gopher - Heat vision effects
-Max Tael - MTUI compatibility files
-DarN - DarNified UI compatibility files
-Ugluxy - Textures for the visor damage effects
+Gopher, Heat vision effects
+Max Tael, MTUI compatibility files
+DarN, DarNified UI compatibility files
+Ugluxy, textures for the visor damage effects
 
 Equipment:
 Vashts1985 and LT Albrecht, Albrecht and Vashts FN FAL Rifle
@@ -792,43 +792,43 @@ As usual, the Control Panel allows players to customize most settings according 
 	Description:
 		Allows to set the leveling speed to roughly ~50% by modifying the XP rewards for killed enemies.
 	Options:
-		 50%
-		100% [Vanilla]
+		<50%
+		100% [PN, Vanilla]
 	
 * Skill Points per Level
 	Description:
 		Allows to reduce the amount of skill points gained per level.
 	Options:
 		 6 + INT
-		11 + INT [Vanilla]
+		11 + INT [PN, Vanilla]
 
 * Carry Weight
 	Description:
 		Allows to use an alternative carry weight formula that's mainly based on STR.
 	Options:
-		 25 + 25*STR
+		 25 + 25*STR [PN]
 		150 + 10*STR [Vanilla]
 		
 * Action Points
 	Description:
 		Allows to use an alternative action point formula that's mainly based on AGI.
 	Options:
-		45 + 6*AGI
+		45 + 6*AGI [PN]
 		65 + 3*AGI [Vanilla]
 
 * Perk Selection:
 	Description:
-		Allows to one perk at each level.
+		Allows to pick one perk at each level.
 	Options:
-		Every two Levels [Vanilla]
+		Every two Levels [PN, Vanilla]
 		Every Level
 
 * Throwing Range Multiplier:
 	Description:
-		Allows you make the throwing range dependent on your strength.
+		Allows you to make the throwing range dependent on your strength.
 	Options:
-		1.0 [Vanilla]
-		0.5 + 0.1*STR
+		1.0           [Vanilla]
+		0.5 + 0.1*STR [PN]
 
 ------------------------------------------------------------
  b) Damage + Combat options
@@ -849,14 +849,14 @@ As usual, the Control Panel allows players to customize most settings according 
 		 1%
 		10%
 		20% [Vanilla]
-		25%
+		25% [PN]
 		50%
 		
 * Radiation Rate
 	Description:
 		Allows to modify the amount of minimum damage received with each shot, even it it was absorbed by DT.
 	Options:
-		100%
+		100% [PN]
 		150% [Vanilla]
 
 * Safe Falling Distance
@@ -870,7 +870,7 @@ As usual, the Control Panel allows players to customize most settings according 
 	Description:
 		Allows to reduce the influence of weapon skill on damage. For 20%, someone with skill 0 will still do 80% base damage.
 	Options:
-		20%
+		20% [PN]
 		50% [Vanilla]
 		
 * Explosion Knockdowns
@@ -878,14 +878,14 @@ As usual, the Control Panel allows players to customize most settings according 
 		Enables explosion knockdown based on explosion strength and S.P.E.C.I.A.L attributes.
 		This also includes an explosion ring effect.
 	Options:
-		Yes
+		Yes [PN]
 		 No [Vanilla]
 		 
 * Limb Damage
 	Description:
 		Allows to increase the amount of health damage that's transferred to limb damage.
 	Options:
-		75%
+		75% [PN]
 		50% [Vanilla]
 		
 * DT for Headshots
@@ -894,8 +894,8 @@ As usual, the Control Panel allows players to customize most settings according 
 		If DT for headshots is requires wearing a helmet, any headshot to an actor not wearing any head protection with DT > 0
 		will do full damage, bypassing the body DT.
 	Options:
-		Only with Helmet
-		Always [Vanilla]
+		Only with Helmet [PN]
+		Always           [Vanilla]
 
 ------------------------------------------------------------
  c) Stealth + Movement options
@@ -907,8 +907,8 @@ As usual, the Control Panel allows players to customize most settings according 
 		original spirit so you can hide in plain sight with a high sneak skill.
 		The Experimental profile will make sneaking significantly harder, aiming for a realistic detection.
 	Options:
-		Normal [Vanilla]
-		Harder
+		Normal       [Vanilla]
+		Harder       [PN]
 		Experimental
 		
 * Experimental Detection AI
@@ -918,13 +918,13 @@ As usual, the Control Panel allows players to customize most settings according 
 		they will move towards him to investigate, making any nearby allies join them.
 	Options:
 		Yes
-		 No [Vanilla]
+		 No [PN, Vanilla]
 		 
 * Running Speed Multiplier
 	Description:
 		Allows to reduce the general running speed.
 	Options:
-		3.65
+		3.65 [PN]
 		4.00 [Vanilla]
 		
 * Holstered Speed
@@ -932,13 +932,13 @@ As usual, the Control Panel allows players to customize most settings according 
 	Description:
 	Options:
 		100% [Vanilla]
-		115%
+		115% [PN]
 		
 * Crippled Legs Speed
 	Description:
 		Allows to reduce movement speed with crippled legs.
 	Options:
-		One leg 70% , Two legs 40%
+		One leg 70% , Two legs 40% [PN]
 		One leg 85% , Two legs 75% [Vanilla]
 		
 ------------------------------------------------------------
@@ -950,21 +950,21 @@ As usual, the Control Panel allows players to customize most settings according 
 		Allows to disable food healing.
 	Options:
 		Yes [Vanilla]
-		No
+		No  [PN]
 		
 * Alternative Repair System
 	Description:
 		Enable an alternative repair system, which is explained in full detail in a seperate section.
 	Options:
 		Yes
-		 No [Vanilla]
+		 No [PN, Vanilla]
 		 
 * Primary Needs Increase per Minute
 	Description:
 		Allows to increase the hunger, thirst and sleep increase rates.
 	Options:
 		Hunger 2.4, Thirst 6, Sleep 1.2 [Vanillla]
-		Hunger 3  , Thirst 6, Sleep 3
+		Hunger 3  , Thirst 6, Sleep 3   [PN]
 		
 * Survival Skill and Food Influence Primary Needs Rates
 	Description:
@@ -972,7 +972,7 @@ As usual, the Control Panel allows players to customize most settings according 
 		The survival skill reduces the increase speed by up to 50%.
 		Eating bad food will make hunger increase faster for a while.
 	Options:
-		Yes
+		Yes [PN]
 		 No [Vanilla]
 
 * Show Karma Messages
@@ -980,20 +980,20 @@ As usual, the Control Panel allows players to customize most settings according 
 		Allows to hide karma messages.
 	Options:
 		Yes [Vanilla]
-		 No
+		 No [PN]
 
 * Show Sneak Indicator
 		Allows to hide the sneak indicator.
 	Description:
 	Options:
 		Yes [Vanilla]
-		 No
+		 No [PN]
 
 * Death Physics Force
 	Description:
 		Allows to reduce death physics so they are more realistic.
 	Options:
-		 50%
+		 50% [PN]
 		100% [Vanilla]
 
 * Gore Chance
