@@ -133,7 +133,6 @@ to get the mod running.
 - Added restoration of original implant perks if Cyberware is disabled
 - Fixed implant placement in Vault 22 so it still can be obtained after the respective quest
 
-
 [Rebalance]
 - Initial release
 
@@ -627,6 +626,7 @@ a) Guns
 * Chinese Sniper Rifle
 * 5mm Submachine Gun
 * Three Shooter
+* The People's Rifle
 
 [Based on community creations]
 * European Battle Rifle
@@ -829,9 +829,6 @@ As usual, the Control Panel allows players to customize most settings according 
 	Options:
 		1.0 [Vanilla]
 		0.5 + 0.1*STR
-		
-		
-	
 
 ------------------------------------------------------------
  b) Damage + Combat options
