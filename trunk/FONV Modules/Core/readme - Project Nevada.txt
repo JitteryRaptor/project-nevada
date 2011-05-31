@@ -127,10 +127,12 @@ to get the mod running.
 [Cyberware]
 - Added level 14 perk to give 2 more torso implant slots to the player
 - Added level 14 perk to give 2 more head implant slots to the player
+- Added new implant to enable slower bullet time
 - Added a short quest that's started when the player picks up the first implant and completed once the player opens the surgery panel
 - Added new head implant that grants slower bullet time
 - Added restoration of original implant perks if Cyberware is disabled
 - Fixed implant placement in Vault 22 so it still can be obtained after the respective quest
+
 
 [Rebalance]
 - Initial release
@@ -277,8 +279,8 @@ djabend, Pipe Rifle And Other Junk Weapons
 Gopher, Advanced Recon Stealth Armor
 AnOneTwo, Air Force Power Armor T-57c
 AnOneTwo, VaultTec Power Armor
-Pelinor - Custom scope reticle for Tesla Rifle
-Crawlius - Sound effects for Plasma Disruptor
+Pelinor, Tesla Rifle custom scope reticle
+Crawlius, Plasma Disruptor sound effects
 
 We thank all of them for granting us permission to use their work in our mod.
 
@@ -905,7 +907,7 @@ As usual, the Control Panel allows players to customize most settings according 
 * Sneak Difficulty
 	Description:
 		Allows to select different sneak profiles. Harder sneaking makes sneaking more difficult, while still keeping the
-		original spirit that makes it possible to hide in plain sight with a high sneak skill.
+		original spirit so you can hide in plain sight with a high sneak skill.
 		The Experimental profile will make sneaking significantly harder, aiming for a realistic detection.
 	Options:
 		Normal [Vanilla]
