@@ -788,9 +788,9 @@ As usual, the Control Panel allows players to customize most settings according 
  a) Character options
 ------------------------------------------------------------
 
-* Levelling Speed
+* Leveling Speed
 	Description:
-		Allows to set the levelling speed to roughly ~50% by modifying the XP rewards for killed enemies.
+		Allows to set the leveling speed to roughly ~50% by modifying the XP rewards for killed enemies.
 	Options:
 		 50%
 		100% [Vanilla]
