@@ -280,6 +280,7 @@ AnOneTwo, Air Force Power Armor T-57c
 AnOneTwo, VaultTec Power Armor
 Pelinor, Tesla Rifle custom scope reticle
 Crawlius, Plasma Disruptor sound effects
+mateomateo002 and Nubblecakes, Cryo Explosion sound effect
 
 We thank all of them for granting us permission to use their work in our mod.
 
@@ -692,7 +693,6 @@ a) Guns
 * Flag Pole
 
 [Restored FO3 weapons]
-* Auto Axe
 * Chinese Officer's Sword
 * Deathclaw Gauntlet
 * Dragoon Sword
