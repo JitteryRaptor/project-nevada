@@ -4,9 +4,9 @@
 [b]============[/b]
 [size="7"][font="Courier New"][b][color="#FFFFFF"][color="#FF8C00"]NEVADA[/color][/color][/b][/font][/size][/center]
 
-[b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, x-quake, TheCastle, Zealotlee, Mezmorki
+[b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, Gopher, TheCastle, x-quake, Mezmorki
 
-[b]Current Version:[/b] 1.0
+[b]Current Version:[/b] 2.0
 
 [size="5"][b][color="#FF8C00"]>>> [/color][/b][url="http://www.youtube.com/watch?v=juMWKWR_BCo&hd=1"]Trailer[/url] [b][color="#FF8C00"]<<<[/color][/b][/size]
 
@@ -49,7 +49,7 @@ Further general objectives and design concepts are:
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Core[color="#FF8C00"]>[/color][/b][/font][/size]
 
-[size="2"][b]Module Version:[/b] 1.0[/size]
+[size="2"][b]Module Version:[/b] 2.0[/size]
 
 The Core module is the foundation of Project Nevada, and as such required by all other modules.
 
@@ -66,23 +66,75 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 
 [size="2"][b]Details:[/b][/size]
 
-[b]Selectable Features[/b] 
-[color="#FF8C00"]*[/color] Dynamic Crosshair
-[color="#FF8C00"]*[/color] Bullet Time 
-[color="#FF8C00"]*[/color] Sprint 
-[color="#FF8C00"]*[/color] Grenade Hotkey 
-[color="#FF8C00"]*[/color] Variable Zoom for scoped weapons 
-[color="#FF8C00"]*[/color] Slower Backpedaling 
-[color="#FF8C00"]*[/color] First-person Visor Overlays for helmets
+[b][color="#FF8C00"]*[/color] Dynamic Crosshair[/b] 
+This feature causes the crosshair to expand and contract dynamically based on the player's current gun spread.
 
-[b]Infrastructure[/b]
-[color="#FF8C00"]*[/color] Extensible Control Panel 
-[color="#FF8C00"]*[/color] Streamlined Hotkey Management 
+[b][color="#FF8C00"]*[/color] Bullet Time[/b] 
+A classic feature that doesn't need much introduction - press a hotkey to slow down time, at the cost of Action Points.
+
+[b][color="#FF8C00"]*[/color] Sprint[/b]
+Yet another classic - as the name suggests, Sprint allows you to increase your speed until your action points are used up.
+When bouncing into an opponent you may knock him down if your Strength is overpowering his.
+
+[b][color="#FF8C00"]*[/color] Grenade Hotkey [color=#FF8C00]ENHANCED[/color][/b]
+Press a hotkey to quickly equip and prepare an explosive, then release to throw it. Another hotkey is used to cycle throw the
+different throwables in the players inventory. Besides grenades and thrown weapons, mines and placed explosives are now supported as well.
+Any unknown explosives are automatically supported once they have been equipped.
+ 
+[b][color="#FF8C00"]*[/color] Variable Zoom for scoped weapons[/b] 
+All scoped weapons get multiple zooming steps. This automatically works for mod-added weapons as well.
+The number and magnification of those additional zooming steps is based on range of the weapon, so it will not turn a pistol into a sniper rifle.
+Selected weapons have a digital zoom (Gauss, Scoped Laser Rifle).
+
+[b][color="#FF8C00"]*[/color] Slower Backpedaling[/b]
+When moving backwards, the player's speed is reduced based on his/her agility.
+
+[b][color="#FF8C00"]*[/color] First-person Visor Overlays for helmets[/b]
+Helmets and other headgear now get immersive first-person overlays and vision effects.
+Based on the item condition, cracks and scratches will show up on the visor as well.
+
+[b][color="#FF8C00"]*[/color] Immersive Health Visuals[/b]
+With decreasing health, the player's vision gets weak and blurry, creating an immersive feedback mechanism for you current health.
+
+[b][color="#FF8C00"]*[/color] Enhanced Stealth Field[/b]
+The stealth field of armors or Stealth Boys can now be toggled on and off by hotkey.
+To keep things balanced, the field can only stay stable for a short while. The current stability is displayed in the HUD.
+
+[b][color="#FF8C00"]*[/color] Enhanced Vision Modes[/b]
+Power Armor helmets and other high-tech gear now enable enhanced vision modes like Night Vision, Heat Vision and EM Vision.
+If there's no Power Armor equipped as a power source, energy cells are required while these modes are active.
+
+[b][color="#FF8C00"]*[/color] Explosive Entry [color=#FF8C00]NEW[/color][/b]
+This feature makes it possible to burst open locked containers and doors with explosives.
+It uses no special interface, just detonate something close enough to a lock and you may break it.
+
+[b][color="#FF8C00"]*[/color] Immersive Primary Needs [color=#FF8C00]NEW[/color][/b]
+As hunger, thirst or sleep depriviation increase, the player is notified by periodic sound effects.
+These effects kick in shortly before the first penalties occur, so the player is given a chance to eat, drink or sleep in time.
+
+[b][color="#FF8C00"]*[/color] Control Panel[/b]
+The control panel is accessible directly from the pause menu. Every Project Nevada Core feature can be enabled/disabled at runtime.
+
+[size="2"][b]History:[/b][/size]
+[b]2.0:[/b] 
+[color=#FF8C00]*[/color] Enhanced vision modes and Stealth field are no longer tied to Cyberware and can be enabled and disabled in the control panel
+[color=#FF8C00]*[/color] Added Explosive Entry feature that allows to break locks with explosives
+[color=#FF8C00]*[/color] Added sound effects for primary needs
+[color=#FF8C00]*[/color] Sprint: Added freely configurable hotkey (no longer restricted to walk/run)
+[color=#FF8C00]*[/color] Grenade Hotkey: Added item categories to support mines and placed explosives
+[color=#FF8C00]*[/color] Grenade Hotkey: Added auto detection of new explosives (once they have been equipped at least once)
+[color=#FF8C00]*[/color] Stealth Field: Added support for stealth girl perk
+[color=#FF8C00]*[/color] Enhanced Vision: Added trap highlighting to EM vision
+[color=#FF8C00]*[/color] Enhanced Vision: Tweaked grain and brightness for clearer sight in all vision modes
+[color=#FF8C00]*[/color] Enhanced Vision: Added vision modes for Reinforced Combat armor (and Mk2 variant)
+[color=#FF8C00]*[/color] Bullet Time: Added perk descriptions
+[color=#FF8C00]*[/color] Scanner: Tweaked threat estimation (Deathclaws are no longer a low threat...)
+[color=#FF8C00]*[/color] Visor Overlays: Changed underlying system to enhance extendability and simplify addition of custom overlay textures
 
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Cyberware[color="#FF8C00"]>[/color][/b][/font][/size]
 
-[size="2"][b]Module Version:[/b] 1.0[/size]
+[size="2"][b]Module Version:[/b] 2.0[/size]
 
 Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones.
 Some of man's most advanced technological creations have been preserved - and the Cyberware module gives you the chance to obtain them!
@@ -106,6 +158,7 @@ The whole system is balanced by several mechanisms, like limiting the number of 
 [color=#FF8C00]*[/color] Optics Enhancer: Perception +1
 [color=#FF8C00]*[/color] Probability Calculator: Luck +1
 [color=#FF8C00]*[/color] Voice Modulator: Speech +2(3,4,5), Barter +2(3,4,5)
+[color=#FF8C00]*[/color] Wired Synapses: Bullet time slowndown increased by 20% [b][color=#FF8C00]NEW[/color][/b]
 
 [b]Torso Implants[/b]
 [color=#FF8C00]*[/color] Adrenaline Booster: AP regeneration bonus for kills
@@ -131,14 +184,80 @@ The whole system is balanced by several mechanisms, like limiting the number of 
 [color=#FF8C00]*[/color] Tread Damper: Sneak  +4(6,8,10)
 [color=#FF8C00]*[/color] Weight Absorber: Carry weight +10(20,30,40)
 
-[b]Tech[/b]
-[color=#FF8C00]*[/color] Enhanced vision modes for power armor helmets and other advanced headgear
-[color=#FF8C00]*[/color] Stealth Boy field is controllable and status is displayed in the HUD
+[b]Perks [color=#FF8C00]NEW[/color][/b]
+[color=#FF8C00]*[/color] Man Machine: Two additional torso implant slots
+[color=#FF8C00]*[/color] Tin Head: Two additional head implant slots
+
+[size="2"][b]History:[/b][/size]
+[b]2.0:[/b] 
+[color=#FF8C00]*[/color] Added level 14 perk to give 2 more torso implant slots to the player
+[color=#FF8C00]*[/color] Added level 14 perk to give 2 more head implant slots to the player
+[color=#FF8C00]*[/color] Added a short quest that's started when the player picks up the first implant and completed once the player opens the surgery panel
+[color=#FF8C00]*[/color] Added new head implant that grants slower bullet time
+[color=#FF8C00]*[/color] Added restoration of original implant perks if Cyberware is disabled
+[color=#FF8C00]*[/color] Fixed implant placement in Vault 22 so it still can be obtained after the respective quest
+
+
+[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Rebalance[color="#FF8C00"]>[/color][/b][/font][/size]
+
+[size="2"][b]Module Version:[/b] 1.0[/size]
+
+This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV gameplay and difficulty.
+Combat will be quicker and deadlier and survival much harder.
+These changes are aimed to be very subtle and non-intrusive, making the game more challenging without inconveniencing the player.
+
+[size="2"][b]Details:[/b][/size]
+
+[b]Character Options[/b]
+[color=#FF8C00]*[/color] Reduced Leveling Speed
+[color=#FF8C00]*[/color] Less Skill Points per Level
+[color=#FF8C00]*[/color] STR-focused Carry Weight Formula
+[color=#FF8C00]*[/color] AGI-focused Action Point Formula
+[color=#FF8C00]*[/color] One Perk per Level
+[color=#FF8C00]*[/color] STR-based Throwing Range Multiplier
+
+[b]Damage and Combat Options[/b]
+[color=#FF8C00]*[/color] Less Hitpoints for Player and NPCs
+[color=#FF8C00]*[/color] Customized DT Bleedthrough
+[color=#FF8C00]*[/color] Increased Radiation Rate
+[color=#FF8C00]*[/color] Reduced Safe Falling Distance
+[color=#FF8C00]*[/color] Reduced Influence of Skill to Damage
+[color=#FF8C00]*[/color] Explosion Knockdowns and Explosion Ringing Effect
+[color=#FF8C00]*[/color] Increased Limb Damage
+[color=#FF8C00]*[/color] Headshots Bypass DT when Head is Unprotected
+
+[b]Stealth and Movement Options[/b]
+[color=#FF8C00]*[/color] Higher Sneak Difficulty
+[color=#FF8C00]*[/color] Experimental Detection AI
+[color=#FF8C00]*[/color] Reduced Running Speed
+[color=#FF8C00]*[/color] Increased Speed with Holstered Weapon
+[color=#FF8C00]*[/color] Reduced Speed with Crippled Legs
+
+[b]Miscellaneous Options[/b]
+[color=#FF8C00]*[/color] No Food Healing
+[color=#FF8C00]*[/color] Alternative Repair System
+[color=#FF8C00]*[/color] Higher Primary Needs Increases per Minute
+[color=#FF8C00]*[/color] Survival Skill and Food Quality Influence Primary Needs Rates
+[color=#FF8C00]*[/color] Hidden Karma Messages
+[color=#FF8C00]*[/color] Hidden Sneak Indicator
+[color=#FF8C00]*[/color] Tweaked Death Physics Force
+[color=#FF8C00]*[/color] Tweaked Gore Chances
+
+[b]Item Rarity Changes[/b]
+[color=#FF8C00]*[/color] Rarer Stimpaks
+[color=#FF8C00]*[/color] Rarer high quality food
+[color=#FF8C00]*[/color] Ammo is more common at vendors
+[color=#FF8C00]*[/color] Weapon are mods more common at vendors
+[color=#FF8C00]*[/color] Higher quality foods are more common at vendors
+[color=#FF8C00]*[/color] Craftable bullet components are more common at vendors
+
+[b]Food Changes[/b]
+For every existing food item, there are now three variations, classified as Terrible, Bad and Good. With decreasing quality, the food is less nutritious. If the respective option is enabled, eating bad or terrible food will temporarily increase the hunger rate. More details can be found [url=https://spreadsheets.google.com/spreadsheet/ccc?key=0AoiEH8ar3jtxdGlzdnVDY3lGUEV5RWhNdXhzRHJBT0E&hl=en_US]here[/url].
 
 
 [size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Equipment[color="#FF8C00"]>[/color][/b][/font][/size]
 
-[size="2"][b]Module Version:[/b] Not yet released![/size]
+[size="2"][b]Module Version:[/b] 1.0[/size]
 
 The Equipment module brings new weapons and armor to the Mojave Wasteland.
 Source of these items are the many excellent creations produced by the modding community, as well as those created by our own team.
@@ -148,20 +267,87 @@ To ensure a seamless integration, the new items are carefully balanced and place
 
 [size="2"][b]Details:[/b][/size]
 
-To be announced.
+[b]Guns[/b]
+[color=#FF8C00]*[/color] 10mm Alloy Steel Pistol
+[color=#FF8C00]*[/color] Alloy Steel Assault Rifle
+[color=#FF8C00]*[/color] Alloy Steel Combat Shotgun
+[color=#FF8C00]*[/color] Assault Rifle
+[color=#FF8C00]*[/color] Chinese Assault Rifle
+[color=#FF8C00]*[/color] Chinese Pistol
+[color=#FF8C00]*[/color] Combat Shotgun
+[color=#FF8C00]*[/color] Dart Gun
+[color=#FF8C00]*[/color] Double-Barrel Shotgun
+[color=#FF8C00]*[/color] Dragoon Assault Rifle
+[color=#FF8C00]*[/color] Dragoon Pistol
+[color=#FF8C00]*[/color] Infiltrator
+[color=#FF8C00]*[/color] Lever-Action Rifle
+[color=#FF8C00]*[/color] Railway Rifle
+[color=#FF8C00]*[/color] Replica Repeater
+[color=#FF8C00]*[/color] Saturday Night Special
+[color=#FF8C00]*[/color] Chinese Sniper Rifle [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307105119.jpg]1[/url]]
+[color=#FF8C00]*[/color] The People's Rifle [[url=http://www.newvegasnexus.com/downloads/images/40040-5-1307105331.jpg]1[/url]]
+[color=#FF8C00]*[/color] 5mm Submachine Gun [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307104964.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307104965.jpg]2[/url]]
+[color=#FF8C00]*[/color] Three Shooter [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307104962.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307104964.jpg]2[/url]]
+[color=#FF8C00]*[/color] European Battle Rifle [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105329.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307105330.jpg]2[/url]] ([url=http://www.newvegasnexus.com/downloads/file.php?id=37553]Source[/url], by Albrecht and Vashts)
+[color=#FF8C00]*[/color] Liberator Rifle ([url=http://www.newvegasnexus.com/downloads/file.php?id=37553]Source[/url], by Albrecht and Vashts)
+[color=#FF8C00]*[/color] .44 Pistol ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
+[color=#FF8C00]*[/color] High Roller [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105449.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307105450.jpg]2[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
 
+[b]Energy Weapons[/b]
+[color=#FF8C00]*[/color] Alien Atomizer
+[color=#FF8C00]*[/color] Alien Disintegrator
+[color=#FF8C00]*[/color] Captain's Sidearm
+[color=#FF8C00]*[/color] Microwave Emitter
+[color=#FF8C00]*[/color] Rail Cannon [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307105638.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105639.jpg]2[/url]]
+[color=#FF8C00]*[/color] Auto-Gauss [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105118.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307107034.jpg]2[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=37703]Source[/url], by DaiShiSUN)
+[color=#FF8C00]*[/color] Cryo Revolver [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105119.jpg]1[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=40174]Source[/url], by Omegared99)
+[color=#FF8C00]*[/color] Gauss Minigun [[url=http://www.newvegasnexus.com/downloads/images/40040-5-1307105120.jpg]1[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=36056]Source[/url], by DaiShiSUN) 
+[color=#FF8C00]*[/color] Tesla Rifle Prototype [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307115022.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307115025.jpg]2[/url]] ([url=http://fallout3nexus.com/downloads/file.php?id=1901]Source[/url], by Kikaimegami)
+[color=#FF8C00]*[/color] Flamer Pistol [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307105330.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105331.jpg]2[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
+[color=#FF8C00]*[/color] Wattz Laser Pistol ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
+[color=#FF8C00]*[/color] Wattz Laser Rifle ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
+[color=#FF8C00]*[/color] Plasma Disruptor [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307105451.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105451.jpg]2[/url]] ([url=http://www.fallout3nexus.com/downloads/file.php?id=8983]Source[/url], by Chai)
+[color=#FF8C00]*[/color] Plasma Repeater [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105637.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307105638.jpg]2[/url]] ([url=http://www.fallout3nexus.com/downloads/file.php?id=8983]Source[/url], by Chai)
 
-[size="5"][font="Courier New"][b][color="#FF8C00"]<[/color]Rebalance[color="#FF8C00"]>[/color][/b][/font][/size]
+[b]Melee Weapons[/b]
+[color=#FF8C00]*[/color] Chinese Officer's Sword
+[color=#FF8C00]*[/color] Deathclaw Gauntlet
+[color=#FF8C00]*[/color] Dragoon Sword
+[color=#FF8C00]*[/color] Shock Baton
+[color=#FF8C00]*[/color] Shishkebab
+[color=#FF8C00]*[/color] Flag Pole
+[color=#FF8C00]*[/color] Crowbar ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
+[color=#FF8C00]*[/color] Rising Sun [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307106047.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307106048.jpg]2[/url]] ([url=http://www.newvegasnexus.com/downloads/file.php?id=41053]Source[/url], by Shogo)
 
-[size="2"][b]Module Version:[/b] Not yet released![/size]
+[b]Explosives[/b]
+[color=#FF8C00]*[/color] Nuka-Grenade
+[color=#FF8C00]*[/color] Remote Frag Mine
+[color=#FF8C00]*[/color] Remote Plasma Mine
+[color=#FF8C00]*[/color] Remote Pulse Mine
+[color=#FF8C00]*[/color] Remote Pipe Bomb
+[color=#FF8C00]*[/color] Cryo Grenade
+[color=#FF8C00]*[/color] Cryo Mine
+[color=#FF8C00]*[/color] Molotov Cocktail ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
+[color=#FF8C00]*[/color] Dynamite Charge ([url=http://www.newvegasnexus.com/downloads/file.php?id=39438]Source[/url], by djabend)
 
-This module aims to bring back the challenge and balance known from Fallout3 Wanderers Edition and includes many tweaks to the FNV gameplay and difficulty.
-Combat will be quicker and deadlier and survival much harder.
-These changes are aimed to be very subtle and non-intrusive, making the game more challenging without inconveniencing the player.
-
-[size="2"][b]Details:[/b][/size]
-
-To be announced.
+[b]Armor/Apparel[/b]
+[color=#FF8C00]*[/color] Surgical Mask
+[color=#FF8C00]*[/color] Armored Vault 21 Jumpsuit
+[color=#FF8C00]*[/color] A Suit Named Slickback (Eulogy Jones Suit)
+[color=#FF8C00]*[/color] A Hat Named Slickback (Eulogy Jones Hat)
+[color=#FF8C00]*[/color] Army Jumpsuit
+[color=#FF8C00]*[/color] Desert Recon Armor
+[color=#FF8C00]*[/color] Eyebot helmet
+[color=#FF8C00]*[/color] Outcast Armor
+[color=#FF8C00]*[/color] Medic Power Armor Mk II
+[color=#FF8C00]*[/color] Advanced Recon Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
+[color=#FF8C00]*[/color] Advanced Recon Helm ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
+[color=#FF8C00]*[/color] Armored Duster ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
+[color=#FF8C00]*[/color] Death Walker Duster ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
+[color=#FF8C00]*[/color] Ranger Recon Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
+[color=#FF8C00]*[/color] Ranger Recon Helm ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
+[color=#FF8C00]*[/color] T57-C Power Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=37261]Source[/url], by AnOneTwo)
+[color=#FF8C00]*[/color] Vault-Tec Power Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=41279]Source[/url], by AnOneTwo)
 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Installation[/b][/font][/color][/size]
@@ -255,17 +441,36 @@ If your problem wasn't covered here, describe your issues in the thread. Surely 
 
 [size="6"][color="#FF8C00"][font="Courier New"][b]Credits[/b][/font][/color][/size]
 
+General:
 lespaul678 - Sprint exhaustion sounds (male)
-Gopher - Heat vision effects
-Max Tael - MTUI compatibility files
-DarN - DarNified UI compatibility files
-Ugluxy - Textures for the visor damage effects
+Gopher, Heat vision effects
+Max Tael, MTUI compatibility files
+DarN, DarNified UI compatibility files
+Ugluxy, textures for the visor damage effects
+
+Equipment:
+Vashts1985 and LT Albrecht, Albrecht and Vashts FN FAL Rifle
+Linerunner and War1982, Classic Fallout Weapons - New Vegas
+DaiShiSUN, Classic M72 Gauss Rifle
+DaiShiSUN, Classic MEC Gauss Minigun
+Omegared99, M-2081 Pistol
+Kikaimegami, Liberty Rifle
+Chai, Plasma Weapons Redesign Rebalance
+Shogo, Laser Katana
+djabend, Pipe Rifle And Other Junk Weapons
+Gopher, Advanced Recon Stealth Armor
+AnOneTwo, Air Force Power Armor T-57c
+AnOneTwo, VaultTec Power Armor
+Pelinor, Tesla Rifle custom scope reticle
+Crawlius, Plasma Disruptor sound effects
+mateomateo002 and Nubblecakes, Cryo Explosion sound effect
+
+We thank all of them for granting us permission to use their work in our mod.
 
 Thanks to our external testers, who helped a great deal with improving the overall quality of this mod:
 	gyshall, mikekearn, Ren Lotus, robber804, ToJKa (in alphabetical order)
 
-
-(And in case anyone starts ranting: The topic description is a joke.)
+And - last but not least - thanks to the NVSE team, because without their Script Extender creating this mod wouldn't have been possible.
 
 [/font]
 }}}
