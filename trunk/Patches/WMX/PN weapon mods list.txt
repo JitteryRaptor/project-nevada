@@ -1,0 +1,39 @@
+.22 revolver - HD Cylinder, Long barrel, Custom Action
+
+.44 pistol - Ext Mag, Laser Sight
+
+10mm Alloy steel pistol - Ext Mag, Laser, silencer
+
+5mm SMG - 5mm silencer, 5mm laser (WMX laser sight), 5mm ext barrel
+
+Alien Atomizer - E
+
+Assault Rifle (alloy steel)- Ext mags, scope, silencer
+
+Combat Shotgun (alloy steel) - ext mags, choke, (possible new stock, dec weight)
+
+Chinese Assault Rifle (dragoon) - ext mags, recoil comp, scope
+
+Chinese Pistol - ext mag, scope(?), laser(?), silencer(?)
+
+Chinese Sniper Rifle - ext mag, laser, silencer
+
+Cryo Revolver - scope(?), ext barrel(?), laser(?)
+
+Double-Barrel - choke, improved parts(? would need new texture)
+
+Flamer Pistol - ext mag(?), second reservoir (inc dam)
+
+Gauss Minigun - (new textures?)
+
+High Roller - scope(?)
+
+Infiltrator - folding stock(?), drum mag, laser
+
+Lever Action - long scope, long barrel
+
+Liberator Rifle - laser(?), ext mag(?)
+
+Plasma Defender - Scope(?)
+
+rifle0 = tex1
