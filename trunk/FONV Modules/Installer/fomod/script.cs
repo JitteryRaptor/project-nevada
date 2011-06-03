@@ -84,7 +84,7 @@ class Script : FalloutNewVegasBaseScript {
 				return false;
 		}
 		
-		if (equipmentSelected) {
+		if (rebalanceSelected) {
 			if (! InstallModuleRebalance())
 				return false;
 		}
