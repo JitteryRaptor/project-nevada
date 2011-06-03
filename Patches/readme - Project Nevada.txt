@@ -282,7 +282,8 @@ the Project Nevada system.
 ========================================================================================================================================
 
 Support for WMX and WME is handled through plugins. These plugins add more weapon mods to many of the new weapons added in Project
-Nevada. The Project Nevada weapons use a series of new and existing (WME or WMX) mods, so finding weapon mods will still work pretty
+Nevada. The Project Nevada weapons use a series of new and existing (WME or WMX) mods, so finding weapon mods will be easy. In fact,
+several of the mods you have should work on some of your new weapons.
 
 
 Even though humanity nuked itself back into the Stone Age, you don't have to fight with sticks and stones. Some of man's most advanced
