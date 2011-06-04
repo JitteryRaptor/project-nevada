@@ -193,6 +193,7 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
 
 DLC:
 Aether89, texture for Salt-Upon-Wound's visor overlay
+Zealotlee, for the Sierra Madre visor overlay
 T3T, for custom grenade and throwables icons
 
 WMX/WME:
