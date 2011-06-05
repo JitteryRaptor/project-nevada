@@ -258,31 +258,118 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
  5. Credits & Acknowledgements
 ========================================================================================================================================
 
-General:
-lespaul678 - Sprint exhaustion sounds (male)
+lespaul678, Sprint exhaustion sounds (male)
 Gopher, Heat vision effects
 Max Tael, MTUI compatibility files
 DarN, DarNified UI compatibility files
 Ugluxy, textures for the visor damage effects
+LORD DARIUS and Jtrainz, Ironsight'ed Fallout 3 Weapons (http://www.newvegasnexus.com/downloads/file.php?id=36571)
 
-Equipment:
-Vashts1985 and LT Albrecht, Albrecht and Vashts FN FAL Rifle
-Linerunner and War1982, Classic Fallout Weapons - New Vegas
-DaiShiSUN, Classic M72 Gauss Rifle
-DaiShiSUN, Classic MEC Gauss Minigun
-Omegared99, M-2081 Pistol
-Kikaimegami, Liberty Rifle
-Chai, Plasma Weapons Redesign Rebalance
-Shogo, Laser Katana
-djabend, Pipe Rifle And Other Junk Weapons
-Gopher, Advanced Recon Stealth Armor
-AnOneTwo, Air Force Power Armor T-57c
-AnOneTwo, VaultTec Power Armor
-Pelinor, Tesla Rifle custom scope reticle
-Crawlius, Plasma Disruptor sound effects
-mateomateo002 and Nubblecakes, Cryo Explosion sound effect
 
-We thank all of them for granting us permission to use their work in our mod.
+European Battle Rifle
+	Source: Albrecht and Vashts FN FAL Rifle (http://www.newvegasnexus.com/downloads/file.php?id=37553), by Vashts1985 and LT Albrecht
+	Original model: Pete
+	Original texture: Millenia
+	
+Liberator Rifle
+	Source: Albrecht and Vashts FN FAL Rifle (http://www.newvegasnexus.com/downloads/file.php?id=37553), by Vashts1985 and LT Albrecht
+	Original model: Pete
+	Original texture: Millenia
+	
+.44 Pistol
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
+	Original source: Desert Eagle XIX (http://www.newvegasnexus.com/downloads/file.php?id=37035), by DreadWolf
+	Original Desert Eagle model: Vashts1985
+	Original Desert Eagle Textures (Silver and engraved): Twinkie Masta
+	Original Desert Eagle Textures (black): el maestro de graffiti
+	Tactical Light model: SureShot
+	Tactical Light Texture: Pete
+	Sound effects: DarkFireGaming
+	
+High Roller
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
+	Original source: Desert Eagle XIX (http://www.newvegasnexus.com/downloads/file.php?id=37035), by DreadWolf
+	Original Desert Eagle model: Vashts1985
+	Original Desert Eagle Textures (Silver and engraved): Twinkie Masta
+	Original Desert Eagle Textures (black): el maestro de graffiti
+	Tactical Light model: SureShot
+	Tactical Light Texture: Pete
+	Sound effects: DarkFireGaming
+	
+Auto-Gauss
+	Source: Classic M72 Gauss Rifle (http://newvegasnexus.com/downloads/file.php?id=37703), by DaiShiSUN
+	
+Cryo Revolver
+	Source: M-2081 Pistol (http://newvegasnexus.com/downloads/file.php?id=40174), by Omegared99
+	Explosion sound effect: mateomateo002 and Nubblecakes
+	
+Gauss Minigun
+	Source: Classic MEC Gauss Minigun (http://newvegasnexus.com/downloads/file.php?id=36056), by DaiShiSUN
+	
+Tesla Rifle Prototype
+	Source: Liberty Rifle (http://fallout3nexus.com/downloads/file.php?id=1901), by Kikaimegami
+	Scope reticle: Pelinor
+	
+Flamer Pistol
+	Source: Classic Flamer Pistol (http://www.newvegasnexus.com/downloads/file.php?id=35752), by DaiShiSUN
+	
+Wattz Laser Pistol
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
+	Original model: joefoxx
+	Original texture: joefoxx
+	Enhanced textures, animated glows and improvements: Jonnyeah
+
+Wattz Laser Rifle
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
+	Original model: joefoxx
+	Original texture: joefoxx
+	Enhanced textures, animated glows and improvements: Jonnyeah
+
+Plasma Disruptor
+	Source: Plasma Weapons Redesign Rebalance (http://www.fallout3nexus.com/downloads/file.php?id=8983), by Chai
+	Sound effects: Crawlius
+	
+Plasma Repeater
+	Source: Plasma Weapons Redesign Rebalance (http://www.fallout3nexus.com/downloads/file.php?id=8983), by Chai
+	
+Crowbar
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), Linerunner and War1982
+	Original source: Crowbar (http://www.fallout3nexus.com/downloads/file.php?id=1480), by Frostbitex460
+	Original model/textures: Quad	
+
+Rising Sun
+	Source: Laser Katana (http://www.newvegasnexus.com/downloads/file.php?id=41053), by Shogo
+	
+Molotov Cocktail
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
+
+Dynamite Charge
+	Source: Pipe Rifle And Other Junk Weapons (http://www.newvegasnexus.com/downloads/file.php?id=39438), djabend
+	
+Advanced Recon Armor
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683), by Gopher
+
+Advanced Recon Helm
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683), by Gopher
+
+Armored Duster
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683), by Gopher
+
+Death Walker Duster
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683), by Gopher
+
+Ranger Recon Armor
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683), by Gopher
+
+Ranger Recon Helm
+	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683), by Gopher
+
+T57-C Power Armor
+	Source: Air Force Power Armor T-57c (http://www.newvegasnexus.com/downloads/file.php?id=37261), by AnOneTwo
+
+Vault-Tec Power Armor
+	Source: VaultTec Power Armor (http://www.newvegasnexus.com/downloads/file.php?id=41279), by AnOneTwo
+
 
 Thanks to our external testers, who helped a great deal with improving the overall quality of this mod:
 	gyshall, mikekearn, Ren Lotus, robber804, ToJKa (in alphabetical order)
@@ -631,17 +718,9 @@ a) Guns
 
 [Based on community creations]
 * European Battle Rifle
-	Original authors: Vashts1985 and LT Albrecht
-	Source: Albrecht and Vashts FN FAL Rifle (http://www.newvegasnexus.com/downloads/file.php?id=37553)
 * Liberator Rifle
-	Original authors: Vashts1985 and LT Albrecht
-	Source: Albrecht and Vashts FN FAL Rifle (http://www.newvegasnexus.com/downloads/file.php?id=37553)
 * .44 Pistol
-	Original authors: Linerunner and War1982
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)	
 * High Roller
-	Original authors: Linerunner and War1982
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)
 
 ------------------------------------------------------------
  b) Energy Weapons
@@ -658,32 +737,14 @@ a) Guns
 
 [Based on community creations]
 * Auto-Gauss
-	Original author: DaiShiSUN
-	Source: Classic M72 Gauss Rifle (http://newvegasnexus.com/downloads/file.php?id=37703)
 * Cryo Revolver
-	Original author: Omegared99
-	Source: M-2081 Pistol (http://newvegasnexus.com/downloads/file.php?id=40174)
 * Gauss Minigun
-	Original author: DaiShiSUN
-	Source: Classic MEC Gauss Minigun (http://newvegasnexus.com/downloads/file.php?id=36056)
 * Tesla Rifle Prototype
-	Original author: Kikaimegami
-	Source: Liberty Rifle (http://fallout3nexus.com/downloads/file.php?id=1901)
 * Flamer Pistol
-	Original authors: Linerunner and War1982	
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)	
 * Wattz Laser Pistol
-	Original authors: Linerunner and War1982
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)	
 * Wattz Laser Rifle
-	Original authors: Linerunner and War1982
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)	
 * Plasma Disruptor
-	Original author: Chai
-	Source: Plasma Weapons Redesign Rebalance (http://www.fallout3nexus.com/downloads/file.php?id=8983)	
 * Plasma Repeater
-	Original author: Chai
-	Source: Plasma Weapons Redesign Rebalance (http://www.fallout3nexus.com/downloads/file.php?id=8983)
 	
 ------------------------------------------------------------
  c) Melee Weapons
@@ -701,11 +762,7 @@ a) Guns
 
 [Based on community creations]
 * Crowbar
-	Original authors: Linerunner and War1982
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)
 * Rising Sun
-	Original author: Shogo
-	Source: Laser Katana (http://www.newvegasnexus.com/downloads/file.php?id=41053)
 
 ------------------------------------------------------------
  d) Explosives
@@ -724,11 +781,7 @@ a) Guns
 
 [Based on community creations]
 * Molotov Cocktail
-	Original authors: Linerunner and War1982
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002)
 * Dynamite Charge
-	Original author: djabend
-	Source: Pipe Rifle And Other Junk Weapons (http://www.newvegasnexus.com/downloads/file.php?id=39438)
 
 ------------------------------------------------------------
  e) Armor/Apparel
@@ -749,29 +802,13 @@ a) Guns
 
 [Based on community creations]
 * Advanced Recon Armor
-	Original author: Gopher
-	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
 * Advanced Recon Helm
-	Original author: Gopher
-	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
 * Armored Duster
-	Original author: Gopher
-	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
 * Death Walker Duster
-	Original author: Gopher
-	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
 * Ranger Recon Armor
-	Original author: Gopher
-	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
 * Ranger Recon Helm
-	Original author: Gopher
-	Source: Advanced Recon Stealth Armor (http://www.newvegasnexus.com/downloads/file.php?id=34683)
 * T57-C Power Armor
-	Original author: AnOneTwo
-	Source: Air Force Power Armor T-57c (http://www.newvegasnexus.com/downloads/file.php?id=37261)
 * Vault-Tec Power Armor
-	Original author: AnOneTwo
-	Source: VaultTec Power Armor (http://www.newvegasnexus.com/downloads/file.php?id=41279)
 	
 	
 ========================================================================================================================================
@@ -838,9 +875,9 @@ As usual, the Control Panel allows players to customize most settings according 
 	Description:
 		Allows to reduce hitpoints of all actors and creatures to increase the relative damage and make combat much deadlier.
 	Options:
-		Player HP: 20 * END + 5 * LVL   ,   NPC HP: 5 * END + 5 * LVL [Vanilla]
-		Player HP: 10 * END             ,   NPC HP: 7 * END
-		Player HP:  7 * END             ,   NPC HP: 7 * END
+		Player HP: 100 + 20 * END + 5 * LVL   ,   NPC HP: 100 + 5 * END + 5 * LVL [Vanilla]
+		Player HP: 100 + 10 * END             ,   NPC HP: 100 + 7 * END
+		Player HP: 100 +  7 * END             ,   NPC HP: 100 + 7 * END
 
 * DT Bleedthrough
 	Description:
