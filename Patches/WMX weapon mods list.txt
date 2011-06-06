@@ -1,10 +1,10 @@
 .22 Revolver - PNxEWeap32Pistol
--*HD Cylinder		Increase Max Condition
--*Long Barrel		Increase Weapon Damage
--*Custom Action		Increase Rate of Fire
+-*HD Cylinder						Increase Max Condition
+-*Long Barrel						Increase Weapon Damage
+-*Custom Action						Increase Rate of Fire
 
 5mm Sub Machine Gun
--^Laser Sight		Uses 10mm laser sight (renamed in WME and WMX)
+-^Laser Sight						Uses 10mm laser sight (renamed in WME and WMX)
 
 Alien Atomizer
 -#Alien Blaster Exp. Mag. Accel.	Increase Projectile Speed
@@ -16,27 +16,27 @@ Alien Disintegrator
 -#Embedded Laser Sight				Decrease Spread
 
 Alloy Steel Assault Rifle
--*5.56mm Drum Magazine		Increase Clip Capacity
--*Assault Rifle Scope		Increase Zoom
--*Assault Rifle Silencer	Silence
+-*5.56mm Drum Magazine				Increase Clip Capacity
+-*Assault Rifle Scope				Increase Zoom
+-*Assault Rifle Silencer			Silence
 
 Alloy Steel Combat Shotgun
 -*Combat Shotgun Choke				Decrease Spread
 -*Combat Shotgun Saddle Drums		Increase Clip Capacity
 
 Assault Rifle
--*5.56mm Drum Magazine		Increase Clip Capacity
--*Assault Rifle Scope		Increase Zoom
--*Assault Rifle Silencer	Silence
+-*5.56mm Drum Magazine				Increase Clip Capacity
+-*Assault Rifle Scope				Increase Zoom
+-*Assault Rifle Silencer			Silence
 
 Captain's Sidearm
 -#Extended Alien Power Cells		Increase Clip Capacity
 -#Alien Blaster Exp. Mag. Accel.	Increase Projectile Speed
 
 Chinese Assault Rifle
--*5.56mm Drum Magazine		Increase Clip Capacity
--#^5.56mm Recoil Comp		(used LMG recoil comp added by WMX, renamed by me)
--*Assault Rifle Scope		Increase Zoom
+-*5.56mm Drum Magazine				Increase Clip Capacity
+-#^5.56mm Recoil Comp				(used LMG recoil comp added by WMX, renamed by me)
+-*Assault Rifle Scope				Increase Zoom
 
 Chinese Pistol
 -*Chinese Pistol Ext. Mags			Increase Clip Capacity
@@ -44,8 +44,8 @@ Chinese Pistol
 -*Chinese Pistol Long Barrel		Increase Weapon Damage
 
 Chinese Sniper Rifle
--^Sniper Rifle Suppressor		Silence
--#Sniper Rifle Ext. Mags		Increase Clip Capactiy
+-^Sniper Rifle Suppressor			Silence
+-#Sniper Rifle Ext. Mags			Increase Clip Capactiy
 
 Combat Shotgun
 -*Combat Shotgun Choke				Decrease Spread
@@ -56,9 +56,9 @@ Double-Barrel Shotgun
 -#Sawed-off Shotgun Imp. Parts		Increase Max Condition
 
 Dragoon Assault Rifle
--*5.56mm Drum Magazine		Increase Clip Capacity
--#^5.56mm Recoil Comp		(used LMG recoil comp added by WMX, renamed by me)
--*Assault Rifle Scope		Increase Zoom
+-*5.56mm Drum Magazine				Increase Clip Capacity
+-#^5.56mm Recoil Comp				(used LMG recoil comp added by WMX, renamed by me)
+-*Assault Rifle Scope				Increase Zoom
 
 Dragoon Pistol
 -*Chinese Pistol Ext. Mags			Increase Clip Capacity
@@ -75,14 +75,23 @@ Lever-Action Rifle
 -*Lever-Action Rifle Long Barrel
 -*Lever-Action rifle Long Scope
 
+Plasma Repeater
+-*Plasma Repeater Ext. Mags			Increase Clip Capacity
+-*Plasma Repeater Scope 			Increase Zoom
+
 Replica Repeater
 -#Trail Carbine Custom Action
 -*Lever-Action Rifle Long Barrel
 -*Lever-Action rifle Long Scope
 
+Tesla Rifle
+-*Tesla Rifle Feeder Cylinders		Increase Weapon Damage
+-*Tesla Rifle Oscillation Stabilizer Decrease Spread
+-#Plasma Rifle Dual Cell			Increase Clip Capacity
+
 The People's Rifle
--^Sniper Rifle Suppressor		Silence
--#Sniper Rifle Ext. Mags		Increase Clip Capactiy
+-^Sniper Rifle Suppressor			Silence
+-#Sniper Rifle Ext. Mags			Increase Clip Capactiy
 
 Key
 * Mod new to PN - WMx
