@@ -3,7 +3,8 @@
 
 [center][b]Team:[/b] snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, Gopher, TheCastle, x-quake, Mezmorki
 
-[b]Current Version:[/b] 2.0[/center]
+[b]Current Version: [color=#FF8C00]2.0a[/color][/b]
+[b][color=#FF8C00]UPDATED![/color][/b][/center]
 
 [center][youtube]juMWKWR_BCo[/youtube][/center]
 
@@ -279,10 +280,10 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color=#FF8C00]*[/color] The People's Rifle [[url=http://www.newvegasnexus.com/downloads/images/40040-5-1307105331.jpg]1[/url]]
 [color=#FF8C00]*[/color] 5mm Submachine Gun [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307104964.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307104965.jpg]2[/url]]
 [color=#FF8C00]*[/color] Three Shooter [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307104962.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307104964.jpg]2[/url]]
-[color=#FF8C00]*[/color] European Battle Rifle [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105329.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307105330.jpg]2[/url]] ([url=http://www.newvegasnexus.com/downloads/file.php?id=37553]Source[/url], by Albrecht and Vashts)
-[color=#FF8C00]*[/color] Liberator Rifle ([url=http://www.newvegasnexus.com/downloads/file.php?id=37553]Source[/url], by Albrecht and Vashts)
-[color=#FF8C00]*[/color] .44 Pistol ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
-[color=#FF8C00]*[/color] High Roller [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105449.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307105450.jpg]2[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
+[color=#FF8C00]*[/color] European Battle Rifle [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105329.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307105330.jpg]2[/url]] ([url=http://www.newvegasnexus.com/downloads/file.php?id=37553]Source[/url])
+[color=#FF8C00]*[/color] Liberator Rifle ([url=http://www.newvegasnexus.com/downloads/file.php?id=37553]Source[/url])
+[color=#FF8C00]*[/color] .44 Pistol ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url])
+[color=#FF8C00]*[/color] High Roller [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105449.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307105450.jpg]2[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url])
 
 [b]Energy Weapons[/b]
 [color=#FF8C00]*[/color] Alien Atomizer
@@ -290,15 +291,15 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color=#FF8C00]*[/color] Captain's Sidearm
 [color=#FF8C00]*[/color] Microwave Emitter
 [color=#FF8C00]*[/color] Rail Cannon [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307105638.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105639.jpg]2[/url]]
-[color=#FF8C00]*[/color] Auto-Gauss [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105118.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307107034.jpg]2[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=37703]Source[/url], by DaiShiSUN)
-[color=#FF8C00]*[/color] Cryo Revolver [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105119.jpg]1[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=40174]Source[/url], by Omegared99)
-[color=#FF8C00]*[/color] Gauss Minigun [[url=http://www.newvegasnexus.com/downloads/images/40040-5-1307105120.jpg]1[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=36056]Source[/url], by DaiShiSUN) 
-[color=#FF8C00]*[/color] Tesla Rifle Prototype [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307115022.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307115025.jpg]2[/url]] ([url=http://fallout3nexus.com/downloads/file.php?id=1901]Source[/url], by Kikaimegami)
-[color=#FF8C00]*[/color] Flamer Pistol [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307105330.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105331.jpg]2[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
-[color=#FF8C00]*[/color] Wattz Laser Pistol ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
-[color=#FF8C00]*[/color] Wattz Laser Rifle ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
-[color=#FF8C00]*[/color] Plasma Disruptor [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307105451.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105451.jpg]2[/url]] ([url=http://www.fallout3nexus.com/downloads/file.php?id=8983]Source[/url], by Chai)
-[color=#FF8C00]*[/color] Plasma Repeater [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105637.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307105638.jpg]2[/url]] ([url=http://www.fallout3nexus.com/downloads/file.php?id=8983]Source[/url], by Chai)
+[color=#FF8C00]*[/color] Auto-Gauss [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105118.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307107034.jpg]2[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=37703]Source[/url])
+[color=#FF8C00]*[/color] Cryo Revolver [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105119.jpg]1[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=40174]Source[/url])
+[color=#FF8C00]*[/color] Gauss Minigun [[url=http://www.newvegasnexus.com/downloads/images/40040-5-1307105120.jpg]1[/url]] ([url=http://newvegasnexus.com/downloads/file.php?id=36056]Source[/url]) 
+[color=#FF8C00]*[/color] Tesla Rifle Prototype [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307115022.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307115025.jpg]2[/url]] ([url=http://fallout3nexus.com/downloads/file.php?id=1901]Source[/url])
+[color=#FF8C00]*[/color] Flamer Pistol [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307105330.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105331.jpg]2[/url]] ([url=http://www.newvegasnexus.com/downloads/file.php?id=35752]Source[/url])
+[color=#FF8C00]*[/color] Wattz Laser Pistol ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url])
+[color=#FF8C00]*[/color] Wattz Laser Rifle ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url])
+[color=#FF8C00]*[/color] Plasma Disruptor [[url=http://www.newvegasnexus.com/downloads/images/40040-3-1307105451.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-4-1307105451.jpg]2[/url]] ([url=http://www.fallout3nexus.com/downloads/file.php?id=8983]Source[/url])
+[color=#FF8C00]*[/color] Plasma Repeater [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307105637.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307105638.jpg]2[/url]] ([url=http://www.fallout3nexus.com/downloads/file.php?id=8983]Source[/url])
 
 [b]Melee Weapons[/b]
 [color=#FF8C00]*[/color] Chinese Officer's Sword
@@ -307,8 +308,8 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color=#FF8C00]*[/color] Shock Baton
 [color=#FF8C00]*[/color] Shishkebab
 [color=#FF8C00]*[/color] Flag Pole
-[color=#FF8C00]*[/color] Crowbar ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
-[color=#FF8C00]*[/color] Rising Sun [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307106047.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307106048.jpg]2[/url]] ([url=http://www.newvegasnexus.com/downloads/file.php?id=41053]Source[/url], by Shogo)
+[color=#FF8C00]*[/color] Crowbar ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url])
+[color=#FF8C00]*[/color] Rising Sun [[url=http://www.newvegasnexus.com/downloads/images/40040-1-1307106047.jpg]1[/url]] [[url=http://www.newvegasnexus.com/downloads/images/40040-2-1307106048.jpg]2[/url]] ([url=http://www.newvegasnexus.com/downloads/file.php?id=41053]Source[/url])
 
 [b]Explosives[/b]
 [color=#FF8C00]*[/color] Nuka-Grenade
@@ -318,8 +319,8 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color=#FF8C00]*[/color] Remote Pipe Bomb
 [color=#FF8C00]*[/color] Cryo Grenade
 [color=#FF8C00]*[/color] Cryo Mine
-[color=#FF8C00]*[/color] Molotov Cocktail ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url], by Linerunner and War1982)
-[color=#FF8C00]*[/color] Dynamite Charge ([url=http://www.newvegasnexus.com/downloads/file.php?id=39438]Source[/url], by djabend)
+[color=#FF8C00]*[/color] Molotov Cocktail ([url=http://newvegasnexus.com/downloads/file.php?id=37002]Source[/url])
+[color=#FF8C00]*[/color] Dynamite Charge ([url=http://www.newvegasnexus.com/downloads/file.php?id=39438]Source[/url])
 
 [b]Armor/Apparel[/b]
 [color=#FF8C00]*[/color] Surgical Mask
@@ -331,14 +332,14 @@ To ensure a seamless integration, the new items are carefully balanced and place
 [color=#FF8C00]*[/color] Eyebot helmet
 [color=#FF8C00]*[/color] Outcast Armor
 [color=#FF8C00]*[/color] Medic Power Armor Mk II
-[color=#FF8C00]*[/color] Advanced Recon Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
-[color=#FF8C00]*[/color] Advanced Recon Helm ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
-[color=#FF8C00]*[/color] Armored Duster ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
-[color=#FF8C00]*[/color] Death Walker Duster ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
-[color=#FF8C00]*[/color] Ranger Recon Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
-[color=#FF8C00]*[/color] Ranger Recon Helm ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url], by Gopher)
-[color=#FF8C00]*[/color] T57-C Power Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=37261]Source[/url], by AnOneTwo)
-[color=#FF8C00]*[/color] Vault-Tec Power Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=41279]Source[/url], by AnOneTwo)
+[color=#FF8C00]*[/color] Advanced Recon Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url])
+[color=#FF8C00]*[/color] Advanced Recon Helm ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url])
+[color=#FF8C00]*[/color] Armored Duster ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url])
+[color=#FF8C00]*[/color] Death Walker Duster ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url])
+[color=#FF8C00]*[/color] Ranger Recon Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url])
+[color=#FF8C00]*[/color] Ranger Recon Helm ([url=http://www.newvegasnexus.com/downloads/file.php?id=34683]Source[/url])
+[color=#FF8C00]*[/color] T57-C Power Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=37261]Source[/url])
+[color=#FF8C00]*[/color] Vault-Tec Power Armor ([url=http://www.newvegasnexus.com/downloads/file.php?id=41279]Source[/url])
 
 [line]
 [img]http://www.newvegasnexus.com/downloads/images/39442-5-1296232410.png[/img]
@@ -428,6 +429,18 @@ Unfortunately, when doing a MANUAL installation  this can't be avoided. Either t
 We chose the former. If you can't fix the problem yourself by editing the XML files, the solution is simple - just use the FOMM installer, it should automatically resolve any conflicts.
 
 
+[color=#FF8C00]*[/color] [b]Problem[/b]: I was using an old version of Project Nevada without issues, but since I upgraded I have lots of bugs!
+
+It's normal that with a new release some small bugs may sneak in, and we encourage you to report them so we can fix the issues.
+What's not normal is that anything is completely broken after an update. If we release something, it's usually tested by multiple persons for at least a few weeks.
+It might be the case that during the updating process something broke. Try to repair it by completely removing Project Nevada and then re-installing it.
+If that doesn't help, do the same, but make a clean safe without Project Nevada before you re-install. When asked, make sure you overwrite any old files that might still be there for some reason.
+
+
+Unfortunately, when doing a MANUAL installation  this can't be avoided. Either the last installed UI mod automatically overwrites files of all previous ones, or installation will become very complex for the user.
+We chose the former. If you can't fix the problem yourself by editing the XML files, the solution is simple - just use the FOMM installer, it should automatically resolve any conflicts.
+
+
 [color=#FF8C00]*[/color] [b]Problem[/b]: Help! The Sprint/Zoom/Grenade Hotkey/... feature behaves very strangly.
 
 While there may be multiple reasons for this (including that you encountered a real bug), it's most likely caused by a conflict with another mod that does the exact same thing.
@@ -502,6 +515,17 @@ Also, remember that not all implants are upgradable. Usually only the one that g
 
 You won't lose existing implants, and neither do you have to buy them again. Any pre-existing implant perks will be removed and instead the respective implant item is added to the player's inventory.
 These items then can be re-installed with the new Cyberware interface (see previous questions if you don't know how this works yet).
+
+
+[color=#FF8C00]*[/color] [b]Question[/b]: Where do I find a specific item?
+
+If you don't mind being spoiled, check out the [url=https://spreadsheets.google.com/spreadsheet/ccc?key=0AoiEH8ar3jtxdGlzdnVDY3lGUEV5RWhNdXhzRHJBT0E#gid=3]Project Nevada Data Sheet[/url]. It contains all kinds of detailed information, including where to find the new weapons, armors and implants.
+If you're really impatient, you can also enter 'coc PNxTestroom' in the console. You'll be transported to our test room where pretty much all items are. To return to the game world, type 'coc Goodsprings'.
+
+
+To upgrade an implant, take the item to a workbench. The recipe will tell you which other components you need.
+If want to upgrade an already installed implant, you have to remove it first.
+Also, remember that not all implants are upgradable. Usually only the one that give Skill increases are. For a complete list, check the Readme.
 
 
 [color=#FF8C00]*[/color] [b]Question[/b]: Is this mod compatible with an XBOX360 controller?
