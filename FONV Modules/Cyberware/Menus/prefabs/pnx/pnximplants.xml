@@ -18,10 +18,16 @@
 <_PNxCyberboyShowLeftSlot1> 0 </_PNxCyberboyShowLeftSlot1>
 <_PNxCyberboyShowLeftSlot2> 0 </_PNxCyberboyShowLeftSlot2>
 <_PNxCyberboyMenuActive> 0 </_PNxCyberboyMenuActive>
-<_PNxCyberboyRightImplant1Num> 0 </_PNxCyberboyRightImplant1Num>
-<_PNxCyberboyRightImplant2Num> 0 </_PNxCyberboyRightImplant2Num>
-<_PNxCyberboyLeftImplant1Num> 0 </_PNxCyberboyLeftImplant1Num>
-<_PNxCyberboyLeftImplant2Num> 0 </_PNxCyberboyLeftImplant2Num>
+
+<_PNxCyberboyRightImplant1State> 0 </_PNxCyberboyRightImplant1State>
+<_PNxCyberboyRightImplant2State> 0 </_PNxCyberboyRightImplant2State>
+<_PNxCyberboyLeftImplant1State> 0 </_PNxCyberboyLeftImplant1State>
+<_PNxCyberboyLeftImplant2State> 0 </_PNxCyberboyLeftImplant2State>
+
+<_PNxCyberboyRightImplant1Path> </_PNxCyberboyRightImplant1Path>
+<_PNxCyberboyRightImplant2Path> </_PNxCyberboyRightImplant2Path>
+<_PNxCyberboyLeftImplant1Path> </_PNxCyberboyLeftImplant1Path>
+<_PNxCyberboyLeftImplant2Path> </_PNxCyberboyLeftImplant2Path>
 
 <_PNxCyberboyHeadSelected> <copy src="PNxCyberboySelectHeadTrigger" trait="_Selected" /> </_PNxCyberboyHeadSelected>
 <_PNxCyberboyTorsoSelected> <copy src="PNxCyberboySelectTorsoTrigger" trait="_Selected" /> </_PNxCyberboyTorsoSelected>
@@ -657,7 +663,7 @@
 			
 			<visible>
 				<copy src="parent()" trait="visible" />
-				<and src="io()" trait="_PNxCyberboyRightImplant1Num" />
+				<and src="io()" trait="_PNxCyberboyRightImplant1State" />
 				<gt> 0 </gt>
 			</visible>
 			
@@ -674,27 +680,9 @@
 			
 			<width> 128 </width>
 			<height> 128 </height>
-
-			<_filename_0> Interface\Shared\solid.dds </_filename_0>
-			<_filename_1> pnx\hud\cy\implant_right_stat.dds </_filename_1>
-			<_filename_2> pnx\hud\cy\implant_right_skill.dds </_filename_2>
-			<_filename_3> pnx\hud\cy\implant_right_scanner.dds </_filename_3>
-			<_filename_4> pnx\hud\cy\implant_right_phoenix.dds </_filename_4>
-			<_filename_5> pnx\hud\cy\implant_right_armor.dds </_filename_5>
-			<_filename_6> pnx\hud\cy\implant_right_weight.dds </_filename_6>
-			<_filename_7> pnx\hud\cy\implant_right_stealth.dds </_filename_7>
-			<_filename_8> pnx\hud\cy\implant_right_lung.dds </_filename_8>
-			<_filename_9> pnx\hud\cy\implant_right_heart.dds </_filename_9>
-			<_filename_10> pnx\hud\cy\implant_right_weave.dds </_filename_10>
-			<_filename_11> pnx\hud\cy\implant_right_leg.dds </_filename_11>
-			<_filename_12> pnx\hud\cy\implant_right_nail.dds </_filename_12>
-			<_filename_13> pnx\hud\cy\implant_right_eye.dds </_filename_13>
-			<_filename_14> pnx\hud\cy\implant_right_arm.dds </_filename_14>
-			<_filename_15> pnx\hud\cy\implant_right_synapses.dds </_filename_15>
 			
 			<filename>
-				<copy src="io()" trait="_PNxCyberboyRightImplant1Num" />
-				<copy src="me()" trait="_filename_" />
+				<copy src="io()" trait="_PNxCyberboyRightImplant1Path" />
 			</filename>
 		</image>
 		
@@ -705,7 +693,7 @@
 				<copy src="parent()" trait="visible" />
 				<and src="parent()" trait="mouseover" />
 				<and>
-					<copy src="io()" trait="_PNxCyberboyRightImplant1Num" />
+					<copy src="io()" trait="_PNxCyberboyRightImplant1State" />
 					<eq> 0 </eq>
 				</and>
 			</visible>
@@ -823,7 +811,7 @@
 			
 			<visible>
 				<copy src="parent()" trait="visible" />
-				<and src="io()" trait="_PNxCyberboyRightImplant2Num" />
+				<and src="io()" trait="_PNxCyberboyRightImplant2State" />
 				<gt> 0 </gt>
 			</visible>
 			
@@ -840,27 +828,9 @@
 			
 			<width> 128 </width>
 			<height> 128 </height>
-
-			<_filename_0> Interface\Shared\solid.dds </_filename_0>
-			<_filename_1> pnx\hud\cy\implant_left_stat.dds </_filename_1>
-			<_filename_2> pnx\hud\cy\implant_left_skill.dds </_filename_2>
-			<_filename_3> pnx\hud\cy\implant_left_scanner.dds </_filename_3>
-			<_filename_4> pnx\hud\cy\implant_left_phoenix.dds </_filename_4>
-			<_filename_5> pnx\hud\cy\implant_left_armor.dds </_filename_5>
-			<_filename_6> pnx\hud\cy\implant_left_weight.dds </_filename_6>
-			<_filename_7> pnx\hud\cy\implant_left_stealth.dds </_filename_7>
-			<_filename_8> pnx\hud\cy\implant_left_lung.dds </_filename_8>
-			<_filename_9> pnx\hud\cy\implant_left_heart.dds </_filename_9>
-			<_filename_10> pnx\hud\cy\implant_left_weave.dds </_filename_10>
-			<_filename_11> pnx\hud\cy\implant_left_leg.dds </_filename_11>
-			<_filename_12> pnx\hud\cy\implant_left_nail.dds </_filename_12>
-			<_filename_13> pnx\hud\cy\implant_left_eye.dds </_filename_13>
-			<_filename_14> pnx\hud\cy\implant_left_arm.dds </_filename_14>
-			<_filename_15> pnx\hud\cy\implant_left_synapses.dds </_filename_15>
 			
 			<filename>
-				<copy src="io()" trait="_PNxCyberboyRightImplant2Num" />
-				<copy src="me()" trait="_filename_" />
+				<copy src="io()" trait="_PNxCyberboyRightImplant2Path" />
 			</filename>
 		</image>
 		
@@ -871,7 +841,7 @@
 				<copy src="parent()" trait="visible" />
 				<and src="parent()" trait="mouseover" />
 				<and>
-					<copy src="io()" trait="_PNxCyberboyRightImplant2Num" />
+					<copy src="io()" trait="_PNxCyberboyRightImplant2State" />
 					<eq> 0 </eq>
 				</and>
 			</visible>
@@ -988,7 +958,7 @@
 			
 			<visible>
 				<copy src="parent()" trait="visible" />
-				<and src="io()" trait="_PNxCyberboyLeftImplant1Num" />
+				<and src="io()" trait="_PNxCyberboyLeftImplant1State" />
 				<gt> 0 </gt>
 			</visible>
 			
@@ -1006,25 +976,8 @@
 			<width> 128 </width>
 			<height> 128 </height>
 
-			<_filename_0> Interface\Shared\solid.dds </_filename_0>
-			<_filename_1> pnx\hud\cy\implant_left_stat.dds </_filename_1>
-			<_filename_2> pnx\hud\cy\implant_left_skill.dds </_filename_2>
-			<_filename_3> pnx\hud\cy\implant_left_scanner.dds </_filename_3>
-			<_filename_4> pnx\hud\cy\implant_left_phoenix.dds </_filename_4>
-			<_filename_5> pnx\hud\cy\implant_left_armor.dds </_filename_5>
-			<_filename_6> pnx\hud\cy\implant_left_weight.dds </_filename_6>
-			<_filename_7> pnx\hud\cy\implant_left_stealth.dds </_filename_7>
-			<_filename_8> pnx\hud\cy\implant_left_lung.dds </_filename_8>
-			<_filename_9> pnx\hud\cy\implant_left_heart.dds </_filename_9>
-			<_filename_10> pnx\hud\cy\implant_left_weave.dds </_filename_10>
-			<_filename_11> pnx\hud\cy\implant_left_leg.dds </_filename_11>
-			<_filename_12> pnx\hud\cy\implant_left_nail.dds </_filename_12>
-			<_filename_13> pnx\hud\cy\implant_left_eye.dds </_filename_13>
-			<_filename_14> pnx\hud\cy\implant_left_arm.dds </_filename_14>
-			<_filename_15> pnx\hud\cy\implant_left_synapses.dds </_filename_15>
 			<filename>
-				<copy src="io()" trait="_PNxCyberboyLeftImplant1Num" />
-				<copy src="me()" trait="_filename_" />
+				<copy src="io()" trait="_PNxCyberboyLeftImplant1Path" />
 			</filename>
 		</image>
 		
@@ -1035,7 +988,7 @@
 				<copy src="parent()" trait="visible" />
 				<and src="parent()" trait="mouseover" />
 				<and>
-					<copy src="io()" trait="_PNxCyberboyLeftImplant1Num" />
+					<copy src="io()" trait="_PNxCyberboyLeftImplant1State" />
 					<eq> 0 </eq>
 				</and>
 			</visible>
@@ -1149,7 +1102,7 @@
 			
 			<visible>
 				<copy src="parent()" trait="visible" />
-				<and src="io()" trait="_PNxCyberboyLeftImplant2Num" />
+				<and src="io()" trait="_PNxCyberboyLeftImplant2State" />
 				<gt> 0 </gt>
 			</visible>
 			
@@ -1166,26 +1119,9 @@
 			
 			<width> 128 </width>
 			<height> 128 </height>
-
-			<_filename_0> Interface\Shared\solid.dds </_filename_0>
-			<_filename_1> pnx\hud\cy\implant_right_stat.dds </_filename_1>
-			<_filename_2> pnx\hud\cy\implant_right_skill.dds </_filename_2>
-			<_filename_3> pnx\hud\cy\implant_right_scanner.dds </_filename_3>
-			<_filename_4> pnx\hud\cy\implant_right_phoenix.dds </_filename_4>
-			<_filename_5> pnx\hud\cy\implant_right_armor.dds </_filename_5>
-			<_filename_6> pnx\hud\cy\implant_right_weight.dds </_filename_6>
-			<_filename_7> pnx\hud\cy\implant_right_stealth.dds </_filename_7>
-			<_filename_8> pnx\hud\cy\implant_right_lung.dds </_filename_8>
-			<_filename_9> pnx\hud\cy\implant_right_heart.dds </_filename_9>
-			<_filename_10> pnx\hud\cy\implant_right_weave.dds </_filename_10>
-			<_filename_11> pnx\hud\cy\implant_right_leg.dds </_filename_11>
-			<_filename_12> pnx\hud\cy\implant_right_nail.dds </_filename_12>
-			<_filename_13> pnx\hud\cy\implant_right_eye.dds </_filename_13>
-			<_filename_14> pnx\hud\cy\implant_right_arm.dds </_filename_14>
-			<_filename_15> pnx\hud\cy\implant_right_synapses.dds </_filename_15>
+			
 			<filename>
-				<copy src="io()" trait="_PNxCyberboyLeftImplant2Num" />
-				<copy src="me()" trait="_filename_" />
+				<copy src="io()" trait="_PNxCyberboyLeftImplant2Path" />
 			</filename>
 		</image>
 		
@@ -1196,7 +1132,7 @@
 				<copy src="parent()" trait="visible" />
 				<and src="parent()" trait="mouseover" />
 				<and>
-					<copy src="io()" trait="_PNxCyberboyLeftImplant2Num" />
+					<copy src="io()" trait="_PNxCyberboyLeftImplant2State" />
 					<eq> 0 </eq>
 				</and>
 			</visible>
