@@ -1,8 +1,16 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
-	<moduleName>Project Nevada - The Patches</moduleName>
-	<moduleDependencies operator="Or">
-		<fileDependency file="Project Nevada - Core.esm" state="Active"/>
-		<fileDependency file="Project Nevada - Core.esm" state="Inactive"/>
+	<moduleName>Project Nevada - DLC Support</moduleName>
+	<moduleDependencies operator="And">
+		<dependencies operator="Or">
+			<fileDependency file="Project Nevada - Core.esm" state="Active"/>
+			<fileDependency file="Project Nevada - Core.esm" state="Inactive"/>
+		</dependencies>
+		<dependencies operator="Or">
+			<fileDependency file="DeadMoney.esm" state="Active"/>
+			<fileDependency file="DeadMoney.esm" state="Inactive"/>
+			<fileDependency file="HonestHearts.esm" state="Active"/>
+			<fileDependency file="HonestHearts.esm" state="Inactive"/>
+		</dependencies>
 	</moduleDependencies>
 	<requiredInstallFiles>
 		<folder source="textures"/>
@@ -10,15 +18,9 @@
 	<conditionalFileInstalls>
 		<patterns>
 			<pattern>
-				<dependencies operator="And">
-					<dependencies operator="Or">
-						<fileDependency file="DeadMoney.esm" state="Active"/>
-						<fileDependency file="DeadMoney.esm" state="Inactive"/>
-					</dependencies>
-					<dependencies operator="Or">
-						<fileDependency file="Project Nevada - Core.esm" state="Active"/>
-						<fileDependency file="Project Nevada - Core.esm" state="Inactive"/>
-					</dependencies>
+				<dependencies operator="Or">
+					<fileDependency file="DeadMoney.esm" state="Active"/>
+					<fileDependency file="DeadMoney.esm" state="Inactive"/>
 				</dependencies>
 				<files>
 					<file source="Project Nevada - Dead Money.esp" priority="1"/>
@@ -29,10 +31,6 @@
 					<dependencies operator="Or">
 						<fileDependency file="HonestHearts.esm" state="Active"/>
 						<fileDependency file="HonestHearts.esm" state="Inactive"/>
-					</dependencies>
-					<dependencies operator="Or">
-						<fileDependency file="Project Nevada - Core.esm" state="Active"/>
-						<fileDependency file="Project Nevada - Core.esm" state="Inactive"/>
 					</dependencies>
 				</dependencies>
 				<files>
