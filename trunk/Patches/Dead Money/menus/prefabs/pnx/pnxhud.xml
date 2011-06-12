@@ -1,0 +1,2747 @@
+﻿<!-- ######################################################################################## General -->
+<_PNxHUD> 1 </_PNxHUD>
+
+<_PNxScale>
+	<copy> 1 </copy>
+	<mul>
+		<copy src="io()" trait="_duiscale_65" />
+		<onlyif src="io()" trait="_DUIF3" />
+		<add>
+			<copy> 1 </copy>
+			<onlyifnot src="io()" trait="_DUIF3" />
+		</add>
+	</mul>
+</_PNxScale>
+
+<_PNxEdgeDistance>
+	<copy> 34 </copy>
+	<sub> <!-- dui 19 -->
+		<copy> 15 </copy>
+		<onlyif src="io()" trait="_DUIF3" />
+	</sub>
+</_PNxEdgeDistance>
+
+<_PNxMeterFont>
+	<copy> 7 </copy>
+	<sub> <!-- dui 4 -->
+		<copy> 3 </copy>
+		<onlyif src="io()" trait="_DUIF3" />
+	</sub>
+</_PNxMeterFont>
+
+<_PNxScopeAiming>
+	<copy src="ActionPoints" trait="visible" />
+	<eq> 0 </eq>
+</_PNxScopeAiming>
+
+
+<!-- ######################################################################################## IO Grain -->
+<_PNxGrainPhase> 0 </_PNxGrainPhase> <!-- 0: Disabled -->
+<_PNxGrainAmount> 0 </_PNxGrainAmount>
+<_PNxGrainColorRed> 1.0 </_PNxGrainColorRed>
+<_PNxGrainColorGreen> 1.0 </_PNxGrainColorGreen>
+<_PNxGrainColorBlue> 1.0 </_PNxGrainColorBlue>
+
+
+<!-- ######################################################################################## IO Scanlines -->
+<_PNxScanPhase> 0 </_PNxScanPhase> <!-- 0: Disabled -->
+<_PNxScanAmount> 0 </_PNxScanAmount>
+<_PNxScanColorRed> 1.0 </_PNxScanColorRed>
+<_PNxScanColorGreen> 1.0 </_PNxScanColorGreen>
+<_PNxScanColorBlue> 1.0 </_PNxScanColorBlue>
+
+
+<!-- ######################################################################################## IO Radar -->
+<_PNxRadarEnabled> 0 </_PNxRadarEnabled>
+<_PNxRadarScale> 0.5 </_PNxRadarScale>
+
+<_PNxRadarXAlign> 1 </_PNxRadarXAlign> <!-- 0: left 0.5: center 1: right -->
+<_PNxRadarYAlign> 0 </_PNxRadarYAlign> <!-- 0: top 0.5: center 1: bottom -->
+
+<_PNxRadarXOffset> -10 </_PNxRadarXOffset>
+<_PNxRadarYOffset> 10 </_PNxRadarYOffset>
+
+<_PNxRadarMarker1Mode> 0 </_PNxRadarMarker1Mode>
+<_PNxRadarMarker1X> 0 </_PNxRadarMarker1X>
+<_PNxRadarMarker1Y> 0 </_PNxRadarMarker1Y>
+
+<_PNxRadarMarker2Mode> 0 </_PNxRadarMarker2Mode>
+<_PNxRadarMarker2X> 0 </_PNxRadarMarker2X>
+<_PNxRadarMarker2Y> 0 </_PNxRadarMarker2Y>
+
+<_PNxRadarMarker3Mode> 0 </_PNxRadarMarker3Mode>
+<_PNxRadarMarker3X> 0 </_PNxRadarMarker3X>
+<_PNxRadarMarker3Y> 0 </_PNxRadarMarker3Y>
+
+<_PNxRadarMarker4Mode> 0 </_PNxRadarMarker4Mode>
+<_PNxRadarMarker4X> 0 </_PNxRadarMarker4X>
+<_PNxRadarMarker4Y> 0 </_PNxRadarMarker4Y>
+
+<_PNxRadarMarker5Mode> 0 </_PNxRadarMarker5Mode>
+<_PNxRadarMarker5X> 0 </_PNxRadarMarker5X>
+<_PNxRadarMarker5Y> 0 </_PNxRadarMarker5Y>
+
+<_PNxRadarMarker6Mode> 0 </_PNxRadarMarker6Mode>
+<_PNxRadarMarker6X> 0 </_PNxRadarMarker6X>
+<_PNxRadarMarker6Y> 0 </_PNxRadarMarker6Y>
+
+<_PNxRadarMarker7Mode> 0 </_PNxRadarMarker7Mode>
+<_PNxRadarMarker7X> 0 </_PNxRadarMarker7X>
+<_PNxRadarMarker7Y> 0 </_PNxRadarMarker7Y>
+
+<_PNxRadarMarker8Mode> 0 </_PNxRadarMarker8Mode>
+<_PNxRadarMarker8X> 0 </_PNxRadarMarker8X>
+<_PNxRadarMarker8Y> 0 </_PNxRadarMarker8Y>
+
+<_PNxRadarMarker9Mode> 0 </_PNxRadarMarker9Mode>
+<_PNxRadarMarker9X> 0 </_PNxRadarMarker9X>
+<_PNxRadarMarker9Y> 0 </_PNxRadarMarker9Y>
+
+
+<!-- ######################################################################################## IO Crosshair-->
+<_PNxCrosshairEnabled> 1 </_PNxCrosshairEnabled>
+<_PNxCrosshairColor> 1 </_PNxCrosshairColor>
+<_PNxCrosshairLength> 16 </_PNxCrosshairLength>
+<_PNxCrosshairWidth> 6 </_PNxCrosshairWidth>
+<_PNxCrosshairSpread> 0.5 </_PNxCrosshairSpread> <!-- 0.0 to 1.0 -->
+<_PNxCrosshairMinOffset> 3 </_PNxCrosshairMinOffset>
+<_PNxCrosshairMaxOffset> 128 </_PNxCrosshairMaxOffset>
+
+
+<!-- ######################################################################################## IO Bullet Time Meter-->
+<_PNxBTMeterEnabled> 0 </_PNxBTMeterEnabled>
+<_PNxBTMeterAmount> 0 </_PNxBTMeterAmount>
+
+
+<!-- ######################################################################################## IO Stealth Field Meter-->
+<_PNxSFMeterEnabled> 0 </_PNxSFMeterEnabled>
+<_PNxSFMeterAmount> 0 </_PNxSFMeterAmount>
+
+
+<!-- ######################################################################################## IO Zoom Bar -->
+<_PNxZoomBarEnabled> 0 </_PNxZoomBarEnabled>
+<_PNxZoomBarFill> 0 </_PNxZoomBarFill>
+
+
+<!-- ######################################################################################## IO Scanner -->
+<_PNxScannerEnabled> 0 </_PNxScannerEnabled>
+<_PNxScannerActivateEnabled> 0</_PNxScannerActivateEnabled>
+
+<_PNxScannerCursorLine> 0 </_PNxScannerCursorLine>
+<_PNxScannerCursorPos> 0 </_PNxScannerCursorPos>
+<_PNxScannerCursorIndent> 0 </_PNxScannerCursorIndent>
+<_PNxScannerCursorBlink> 0 </_PNxScannerCursorBlink>
+
+<_PNxScannerText1Index> 0 </_PNxScannerText1Index>
+<_PNxScannerText2Index> 0 </_PNxScannerText2Index>
+<_PNxScannerText3Index> 0 </_PNxScannerText3Index>
+<_PNxScannerText4Index> 0 </_PNxScannerText4Index>
+<_PNxScannerText5Index> 0 </_PNxScannerText5Index>
+<_PNxScannerText6Index> 0 </_PNxScannerText6Index>
+<_PNxScannerText7Index> 0 </_PNxScannerText7Index>
+<_PNxScannerText8Index> 0 </_PNxScannerText8Index>
+<_PNxScannerText9Index> 0 </_PNxScannerText9Index>
+<_PNxScannerText10Index> 0 </_PNxScannerText10Index>
+
+<_PNxScannerBoyEnabled> 0 </_PNxScannerBoyEnabled>
+<_PNxScannerBoyHeadDamage> 0 </_PNxScannerBoyHeadDamage>
+<_PNxScannerBoyTorsoDamage> 0 </_PNxScannerBoyTorsoDamage>
+<_PNxScannerBoyLeftLegDamage> 0 </_PNxScannerBoyLeftLegDamage>
+<_PNxScannerBoyLeftArmDamage> 0 </_PNxScannerBoyLeftArmDamage>
+<_PNxScannerBoyRightLegDamage> 0 </_PNxScannerBoyRightLegDamage>
+<_PNxScannerBoyRightArmDamage> 0 </_PNxScannerBoyRightArmDamage>
+
+<_PNxScannerHealth> 1.0 </_PNxScannerHealth>
+<_PNxScannerDamage> 0 </_PNxScannerDamage>
+
+<_PNxScannerTextHP> 0 </_PNxScannerTextHP>
+<_PNxScannerTextDT> 0</_PNxScannerTextDT>
+
+
+<!-- ######################################################################################## IO Grenade Icon -->
+<_PNxGrenadeIconEnabled> 0 </_PNxGrenadeIconEnabled>
+<_PNxGrenadeIconPath> </_PNxGrenadeIconPath>
+<_PNxGrenadeIconCount> 0 </_PNxGrenadeIconCount>
+<_PNxGrenadeIconCategory> 0 </_PNxGrenadeIconCategory>
+
+
+<!-- ######################################################################################## IO AP Bonus Text -->
+<_PNxAPBonusEnabled> 0 </_PNxAPBonusEnabled>
+<_PNxAPBonusValue> 0 </_PNxAPBonusValue>
+
+
+<!-- ######################################################################################## IO Control Panel -->
+<_PNxControlPanelEnabled> 1 </_PNxControlPanelEnabled>
+<_PNxControlPanelActive> 0 </_PNxControlPanelActive>
+
+<_PNxControlPanelSplashEnabled> 0 </_PNxControlPanelSplashEnabled>
+<_PNxControlPanelSplashPath> </_PNxControlPanelSplashPath>
+<_PNxControlPanelSplashFade> 0 </_PNxControlPanelSplashFade>
+<_PNxControlPanelSplashWidth> 0 </_PNxControlPanelSplashWidth>
+<_PNxControlPanelSplashHeight> 0 </_PNxControlPanelSplashHeight>
+<_PNxControlPanelSplashXAlign> 0 </_PNxControlPanelSplashXAlign> <!-- 0: left 0.5: center 1: right -->
+<_PNxControlPanelSplashYAlign> 0 </_PNxControlPanelSplashYAlign> <!-- 0: top 0.5: center 1: bottom -->
+<_PNxControlPanelSplashNoColor> 0 </_PNxControlPanelSplashNoColor>
+
+<_PNxControlPanelKeySelectEnabled> 0 </_PNxControlPanelKeySelectEnabled>
+
+
+<!-- ######################################################################################## IO Visor -->
+<_PNxVisorOverlayEnabled> 0 </_PNxVisorOverlayEnabled>
+<_PNxVisorOverlayPath> </_PNxVisorOverlayPath>
+<_PNxVisorSelectMode> 0 </_PNxVisorSelectMode>
+
+<_PNxVisorColorRed> 1.0 </_PNxVisorColorRed>
+<_PNxVisorColorGreen> 1.0 </_PNxVisorColorGreen>
+<_PNxVisorColorBlue> 1.0 </_PNxVisorColorBlue>
+
+<_PNxVisorScale> 1.0 </_PNxVisorScale>
+<_PNxVisorXOffscreenMult> 0 </_PNxVisorXOffscreenMult> <!-- from -1: left to 1: right -->
+<_PNxVisorYOffscreenMult> 0 </_PNxVisorYOffscreenMult>
+
+<_PNxVisorCondition> 1.0 </_PNxVisorCondition>
+
+
+<!-- ######################################################################################## IO Energy Icon -->
+<_PNxEnergyIconEnabled> 0 </_PNxEnergyIconEnabled>
+<_PNxEnergyIconCharge> 0 </_PNxEnergyIconCharge>
+<_PNxEnergyIconCount> 0 </_PNxEnergyIconCount>
+
+
+<!-- ######################################################################################## IO Explosive Entry -->
+<_PNxExplosiveEntryIconEnabled> 0 </_PNxExplosiveEntryIconEnabled>
+<_PNxExplosiveEntryIconIndex> 1 </_PNxExplosiveEntryIconIndex>
+
+
+<!-- ######################################################################################## Grain -->
+<rect name="PNxGrainLayer">
+	<visible>
+		<copy src="io()" trait="_PNxGrainPhase" />
+		<gt> 0 </gt>
+	</visible>
+	<x>0</x>
+	<y>0</y>
+	<width>
+		<copy src="screen()" trait="width" />
+	</width>
+	<height><copy src="screen()" trait="height" /></height>
+	
+	<alpha>
+		<copy src="io()" trait="_PNxGrainAmount" />
+		<mul>255</mul>
+	</alpha>
+	<red>
+		<copy src="io()" trait="_PNxGrainColorRed" />
+		<mul>255</mul>
+	</red>
+	<green>
+		<copy src="io()" trait="_PNxGrainColorGreen" />
+		<mul>255</mul>
+	</green>
+	<blue>
+		<copy src="io()" trait="_PNxGrainColorBlue" />
+		<mul>255</mul>
+	</blue>
+
+	<!-- Explicit copy for each phase for smoother performance -->
+	<image name="Phase1">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxGrainPhase" />
+			<eq> 1 </eq>
+		</visible>
+		
+		<filename> pnx\hud\grain\grain1.dds </filename>
+	</image>
+	
+	<image name="Phase2">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxGrainPhase" />
+			<eq> 2 </eq>
+		</visible>
+		
+		<filename> pnx\hud\grain\grain2.dds </filename>
+		
+	</image>
+	
+	<image name="Phase3">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxGrainPhase" />
+			<eq> 3 </eq>
+		</visible>
+		
+		<filename> pnx\hud\grain\grain3.dds </filename>
+		
+	</image>
+	
+	<image name="Phase4">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxGrainPhase" />
+			<eq> 4 </eq>
+		</visible>
+		
+		<filename> pnx\hud\grain\grain4.dds </filename>
+		
+	</image>
+
+</rect>
+
+
+<!-- ######################################################################################## ScanLines -->
+<rect name="PNxscanLayer">
+	<visible>
+		<copy src="io()" trait="_PNxscanPhase" />
+		<gt> 0 </gt>
+	</visible>
+	<x>0</x>
+	<y>0</y>
+	<width>
+		<copy src="screen()" trait="width" />
+	</width>
+	<height><copy src="screen()" trait="height" /></height>
+	
+	<alpha>
+		<copy src="io()" trait="_PNxscanAmount" />
+		<mul>255</mul>
+	</alpha>
+	<red>
+		<copy src="io()" trait="_PNxscanColorRed" />
+		<mul>255</mul>
+	</red>
+	<green>
+		<copy src="io()" trait="_PNxscanColorGreen" />
+		<mul>255</mul>
+	</green>
+	<blue>
+		<copy src="io()" trait="_PNxscanColorBlue" />
+		<mul>255</mul>
+	</blue>
+
+	<!-- Explicit copy for each phase for smoother performance -->
+	<image name="Phase1">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxscanPhase" />
+			<eq> 1 </eq>
+		</visible>
+		
+		<filename> pnx\hud\line\scanline1.dds </filename>
+	</image>
+	
+	<image name="Phase2">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxscanPhase" />
+			<eq> 2 </eq>
+		</visible>
+		
+		<filename> pnx\hud\line\scanline2.dds </filename>
+		
+	</image>
+	
+	<image name="Phase3">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxscanPhase" />
+			<eq> 3 </eq>
+		</visible>
+		
+		<filename> pnx\hud\line\scanline3.dds </filename>
+		
+	</image>
+	
+	<!--<image name="Phase4">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxscanPhase" />
+			<eq> 4 </eq>
+		</visible>
+		
+		<filename> pnx\hud\scan\scan4.dds </filename>
+		
+	</image>-->
+
+</rect>
+
+
+<!-- ######################################################################################## Radar -->
+<rect name="PNxRadar">
+
+	<visible>
+		<copy src="io()" trait="_PNxRadarEnabled" />
+		<eq> 1 </eq>
+		<and>
+			<copy src="ActionPoints" trait="visible" />
+			<or src="io()" trait="_PNXSelectMode" />
+		</and>
+	</visible>
+
+	<width>
+		<copy>400</copy>
+		<mul src="io()" trait="_PNxRadarScale" />
+	</width>
+	
+	<height>
+		<copy>400</copy>
+		<mul src="io()" trait="_PNxRadarScale" />
+	</height>
+	
+	<x>
+		<copy src="screen()" trait="width" />
+		<mul src="io()" trait="_PNxRadarXAlign" />
+		<sub>
+			<copy src="me()" trait="width" />
+			<mul src="io()" trait="_PNxRadarXAlign" />
+		</sub>
+		<add src="io()" trait="_PNxRadarXOffset" />
+	</x>
+	
+	<y>
+		<copy src="screen()" trait="height" />
+		<mul src="io()" trait="_PNxRadarYAlign" />
+		<sub>
+			<copy src="me()" trait="height" />
+			<mul src="io()" trait="_PNxRadarYAlign" />
+		</sub>
+		<add src="io()" trait="_PNxRadarYOffset" />
+	</y>
+
+	<image name="Background">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<x><copy src="parent()" trait="x" /></x>
+		<y><copy src="parent()" trait="y" /></y>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<filename> pnx\hud\map\radar.dds </filename>
+	</image>
+	
+	<image name="Marker1">
+		<include src="pnx\radar_marker.xml" />
+		<_Mode><copy src="io()" trait="_PNxRadarMarker1Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker1X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker1Y" /></_YOffset>
+	</image>
+	
+	<image name="Marker2">
+		<include src="pnx\radar_marker.xml" />
+		<_Mode><copy src="io()" trait="_PNxRadarMarker2Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker2X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker2Y" /></_YOffset>
+	</image>
+	
+	<image name="Marker3">
+		<include src="pnx\radar_marker.xml" />
+		<_Mode><copy src="io()" trait="_PNxRadarMarker3Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker3X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker3Y" /></_YOffset>
+	</image>
+	
+	<image name="Marker4">
+		<include src="pnx\radar_marker.xml" />
+		<_Mode><copy src="io()" trait="_PNxRadarMarker4Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker4X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker4Y" /></_YOffset>
+	</image>
+	
+	<image name="Marker5">
+		<include src="pnx\radar_marker.xml" />
+		<_Mode><copy src="io()" trait="_PNxRadarMarker5Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker5X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker5Y" /></_YOffset>
+	</image>
+	
+	<image name="Marker6">
+		<include src="pnx\radar_marker.xml" />
+		<_Mode><copy src="io()" trait="_PNxRadarMarker6Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker6X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker6Y" /></_YOffset>
+	</image>
+	
+	<image name="Marker7">
+		<include src="pnx\radar_marker.xml" />
+		<_Mode><copy src="io()" trait="_PNxRadarMarker7Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker7X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker7Y" /></_YOffset>
+	</image>
+	
+	<image name="Marker8">
+		<include src="pnx\radar_marker.xml" />
+		<_Mode><copy src="io()" trait="_PNxRadarMarker8Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker8X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker8Y" /></_YOffset>
+	</image>
+	
+	<image name="Marker9">
+		<include src="pnx\radar_marker.xml" />
+		<_Mode><copy src="io()" trait="_PNxRadarMarker9Mode" /></_Mode>
+		<_XOffset><copy src="io()" trait="_PNxRadarMarker9X" /></_XOffset>
+		<_YOffset><copy src="io()" trait="_PNxRadarMarker9Y" /></_YOffset>
+	</image>
+	
+</rect>
+
+
+<!-- ######################################################################################## Crosshair -->
+<rect name="PNxCrosshair">
+	<visible>
+		<copy src="io()" trait="_PNxCrosshairEnabled" />
+		<and src="ReticleCenter" trait="visible" />
+	</visible>
+	
+	<_radius>
+		<copy src="screen()" trait="width" />
+		<mul src="io()" trait="_PNxCrosshairSpread" />
+	</_radius>
+	
+	<x>
+		<copy src="screen()" trait="width" />
+		<div> 2 </div>
+		<sub src="me()" trait="_radius" />
+	</x>
+	
+	<y>
+		<copy src="screen()" trait="height" />
+		<div> 2 </div>
+		<sub src="me()" trait="_radius" />
+	</y>
+	
+	<width>
+		<copy src="me()" trait="_radius" />
+		<mul> 2 </mul>
+	</width>
+	
+	<height>
+		<copy src="me()" trait="_radius" />
+		<mul> 2 </mul>
+	</height>
+
+	<image name="PNxCrosshairLineW">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<systemcolor>
+			<copy src="io()" trait="_PNxCrosshairColor" />
+		</systemcolor>
+		
+		<width>
+			<copy src="io()" trait="_PNxCrosshairLength" />
+		</width>
+		
+		<height>
+			<copy src="io()" trait="_PNxCrosshairWidth" />
+		</height>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub src="me()" trait="width" />
+		</x>
+			
+		<y>
+			<copy src="screen()" trait="height" />
+			<div> 2 </div>
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<filename> pnx\hud\cross\crosshairh.dds </filename>
+	</image>
+	
+	<image name="PNxCrosshairLineE">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<systemcolor>
+			<copy src="io()" trait="_PNxCrosshairColor" />
+		</systemcolor>
+		
+		<width>
+			<copy src="io()" trait="_PNxCrosshairLength" />
+		</width>
+		
+		<height>
+			<copy src="io()" trait="_PNxCrosshairWidth" />
+		</height>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<add src="parent()" trait="width" />
+		</x>
+			
+		<y>
+			<copy src="screen()" trait="height" />
+			<div> 2 </div>
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<filename> pnx\hud\cross\crosshairh.dds </filename>
+	</image>
+	
+	<image name="PNxCrosshairLineN">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<systemcolor>
+			<copy src="io()" trait="_PNxCrosshairColor" />
+		</systemcolor>
+		
+		<width>
+			<copy src="io()" trait="_PNxCrosshairWidth" />
+		</width>
+		
+		<height>
+			<copy src="io()" trait="_PNxCrosshairLength" />
+		</height>
+		
+		<x>
+			<copy src="screen()" trait="width" />
+			<div> 2 </div>
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+		</x>
+		
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub src="me()" trait="height" />
+		</y>
+			
+		<filename> pnx\hud\cross\crosshairv.dds </filename>
+	</image>
+	
+	<image name="PNxCrosshairLineS">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<systemcolor>
+			<copy src="io()" trait="_PNxCrosshairColor" />
+		</systemcolor>
+		
+		<width>
+			<copy src="io()" trait="_PNxCrosshairWidth" />
+		</width>
+		
+		<height>
+			<copy src="io()" trait="_PNxCrosshairLength" />
+		</height>
+		
+		<x>
+			<copy src="screen()" trait="width" />
+			<div> 2 </div>
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+		</x>
+		
+		<y>
+			<copy src="parent()" trait="y" />
+			<add src="parent()" trait="height" />
+		</y>
+			
+		<filename> pnx\hud\cross\crosshairv.dds </filename>
+	</image>
+	
+</rect>
+
+
+<!-- ######################################################################################## Bullet Time Meter -->
+<rect name="PNxBTMeter">
+	<visible>
+		<copy src="io()" trait="_PNxBTMeterEnabled" />
+		<and src="ActionPoints" trait="visible" />
+	</visible>
+	
+	<x>
+		<copy src="screen()" trait="width" />
+		<!--mul> 0.74 </mul-->
+		<mul> 0.5 </mul>
+	</x>
+	<y>
+		<copy src="screen()" trait="height" />
+		<!--mul> 0.94 </mul-->
+		<mul> 0.1 </mul>
+	</y>
+	<width> 64 </width>
+	<height> 64 </height>	
+
+	<image name="PNxBTMeterImage">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+			<add>
+				<copy src="PNxSFMeter" trait="width" />
+				<div> 2 </div>
+				<onlyif src="PNxSFMeter" trait="visible" />
+			</add>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<width> <copy src="parent()" trait="width" /> </width>
+		<height> <copy src="parent()" trait="height" /> </height>
+		
+		<alpha> 210 </alpha>
+
+		<filename>
+			<copy src="io()" trait="_PNxBTMeterAmount" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
+		<_filename_0> pnx\hud\bt\timemeter0.dds </_filename_0>
+		<_filename_1> pnx\hud\bt\timemeter1.dds </_filename_1>
+		<_filename_2> pnx\hud\bt\timemeter2.dds </_filename_2>
+		<_filename_3> pnx\hud\bt\timemeter3.dds </_filename_3>
+		<_filename_4> pnx\hud\bt\timemeter4.dds </_filename_4>
+		<_filename_5> pnx\hud\bt\timemeter5.dds </_filename_5>
+		<_filename_6> pnx\hud\bt\timemeter6.dds </_filename_6>
+		<_filename_7> pnx\hud\bt\timemeter7.dds </_filename_7>
+		<_filename_8> pnx\hud\bt\timemeter8.dds </_filename_8>
+		<_filename_9> pnx\hud\bt\timemeter9.dds </_filename_9>
+		<_filename_10> pnx\hud\bt\timemeter10.dds </_filename_10>
+	</image>
+
+</rect>
+
+
+<!-- ######################################################################################## Stealth Field Meter -->
+<rect name="PNxSFMeter">
+	<visible>
+		<copy src="io()" trait="_PNxSFMeterEnabled" />
+		<and src="ActionPoints" trait="visible" />
+	</visible>
+	
+	<x>
+		<copy src="screen()" trait="width" />
+		<!--mul> 0.74 </mul-->
+		<mul> 0.5 </mul>
+	</x>
+	<y>
+		<copy src="screen()" trait="height" />
+		<!--mul> 0.94 </mul-->
+		<mul> 0.1 </mul>
+	</y>
+	<width> 64 </width>
+	<height> 64 </height>	
+
+	<image name="PNxSFMeterImage">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+			<sub>
+				<copy src="PNxBTMeter" trait="width" />
+				<div> 2 </div>
+				<onlyif src="PNxBTMeter" trait="visible" />
+			</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<width> <copy src="parent()" trait="width" /> </width>
+		<height> <copy src="parent()" trait="height" /> </height>
+		
+		<alpha> 210 </alpha>
+
+		<filename>
+			<copy src="io()" trait="_PNxSFMeterAmount" />
+			<copy src="me()" trait="_filename_" />
+		</filename>
+		<_filename_0> pnx\hud\sf\stealthmeter0.dds </_filename_0>
+		<_filename_1> pnx\hud\sf\stealthmeter1.dds </_filename_1>
+		<_filename_2> pnx\hud\sf\stealthmeter2.dds </_filename_2>
+		<_filename_3> pnx\hud\sf\stealthmeter3.dds </_filename_3>
+		<_filename_4> pnx\hud\sf\stealthmeter4.dds </_filename_4>
+		<_filename_5> pnx\hud\sf\stealthmeter5.dds </_filename_5>
+		<_filename_6> pnx\hud\sf\stealthmeter6.dds </_filename_6>
+		<_filename_7> pnx\hud\sf\stealthmeter7.dds </_filename_7>
+		<_filename_8> pnx\hud\sf\stealthmeter8.dds </_filename_8>
+	</image>
+
+</rect>
+
+
+<!-- ######################################################################################## Zoom Bar -->
+<rect name="PNxZoomBar">
+
+	<visible>
+		<copy src="io()" trait="_PNxZoomBarEnabled" />
+		<eq> 1 </eq>
+	</visible>
+
+	<x>
+		<copy src="screen()" trait="width" />
+		<sub src="me()" trait="width" />
+		<sub> 20 </sub>
+	</x>
+	
+	<y>
+		<copy src="screen()" trait="height" />
+		<div> 2 </div>
+		<sub>
+			<copy src="me()" trait="height" />
+			<div> 2 </div>
+		</sub>
+	</y>
+		
+	<width> 128 </width>
+	<height> 512 </height>
+
+	<image name="PNxZoomBarFrame">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<alpha> 180 </alpha>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+		</x>
+	
+		<y>
+			<copy src="parent()" trait="y" />
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+		</width>
+	
+		<height>
+			<copy src="parent()" trait="height" />
+		</height>
+		
+		<filename> pnx\hud\zoom\zoombar.dds </filename>
+	</image>
+	
+	<image name="PNxZoomBarMeter">
+		<zoom> &scale; </zoom>
+		<depth> -1 </depth>
+		
+		<alpha> 100 </alpha>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<add> 90 </add>
+		</x>
+	
+		<y>
+			<copy src="parent()" trait="y" />
+			<add> 15 </add>
+			<add>
+				<copy src="parent()" trait="height" />
+				<sub> 30 </sub>
+				<mul>
+					<copy> 1 </copy>
+					<sub src="io()" trait="_PNxZoomBarFill" />
+				</mul>
+			</add>
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+			<sub> 105 </sub>
+		</width>
+	
+		<height>
+			<copy src="parent()" trait="height" />
+			<sub> 30 </sub>
+			<mul src="io()" trait="_PNxZoomBarFill" />
+		</height>
+		
+		<filename> Interface\Shared\solid.dds </filename>
+	</image>
+	
+	<image name="PNxZoomBarMeterArrowTop">
+		<visible>
+			<copy src="sibling(PNxZoomBarMeter)" trait="height" />
+			<gt> 16 </gt>
+		</visible>
+		
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<alpha> 100 </alpha>
+		
+		<x>
+			<copy src="sibling(PNxZoomBarMeter)" trait="x" />
+			<sub src="me()" trait="width" />
+		</x>
+	
+		<y>
+			<copy src="sibling(PNxZoomBarMeter)" trait="y" />
+		</y>
+		
+		<width> 16 </width>
+		<height> 16 </height>
+		
+		<filename> pnx\hud\zoom\zoombar_arrow_top.dds </filename>
+	</image>
+	
+	<image name="PNxZoomBarMeterArrowBottom">
+		<visible>
+			<copy src="sibling(PNxZoomBarMeterArrowTop)" trait="visible" />
+		</visible>
+	
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<alpha> 100 </alpha>
+		
+		<x>
+			<copy src="sibling(PNxZoomBarMeter)" trait="x" />
+			<sub src="me()" trait="width" />
+		</x>
+	
+		<y>
+			<copy src="sibling(PNxZoomBarMeter)" trait="y" />
+			<add src="sibling(PNxZoomBarMeter)" trait="height" />
+			<sub src="me()" trait="height" />
+		</y>
+		
+		<width> 16 </width>
+		<height> 16 </height>
+		
+		<filename> pnx\hud\zoom\zoombar_arrow_bottom.dds </filename>
+	</image>
+	
+</rect>
+
+
+<!-- ######################################################################################## Scanner -->
+<rect name="PNxScannerActivate">
+
+	<visible>
+		<copy src="io()" trait="_PNxScannerActivateEnabled" />
+	</visible>
+
+	<text name="PNxScannerActivateText">
+		<font> 0 </font>
+		<depth> 2 </depth>
+		<justify> &center; </justify>
+		
+		<visible>
+			<copy src="io()" trait="_PNxScannerActivateEnabled" />
+		</visible>
+		
+		<string>Scan</string>
+		<x>
+			<copy src="Info" trait="x" />
+			<add>
+				<copy src="Info" trait="width" />
+				<div> 2 </div>
+			</add>
+		</x>
+		<y>
+			<copy src="Info" trait="y" />
+			<sub src="me()" trait="height" />
+			<onlyif src="ActionPoints" trait="visible" />	
+			<add>
+				<copy src="screen()" trait="height" />
+				<sub src="me()" trait="height" />
+				<sub> 5 </sub>
+				<onlyifnot src="ActionPoints" trait="visible" />	
+			</add>
+		</y>
+	</text>
+	
+	<text name="PNxScannerActivateButton">
+		<font> 0 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerActivateText)" trait="visible" />
+		</visible>
+		
+		<string>1)</string>
+		<x>
+			<copy src="sibling(PNxScannerActivateText)" trait="x" />
+			<sub>
+				<copy src="sibling(PNxScannerActivateText)" trait="width" />
+				<div> 2 </div>
+			</sub>
+			<sub src="me()" trait="width" />
+			<sub>10</sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerActivateText)" trait="y" />
+		</y>
+	</text>
+</rect>
+
+<rect name="PNxScanner">
+
+	<visible>
+		<copy src="io()" trait="_PNxScannerEnabled" />
+	</visible>
+
+	<x>
+		<copy> 20 </copy>
+	</x>
+	
+	<y>
+		<copy src="screen()" trait="height" />
+		<div> 2 </div>
+		<sub>
+			<copy src="me()" trait="height" />
+			<div> 2 </div>
+		</sub>
+	</y>
+		
+	<width> 384 </width>
+	<height> 512 </height>
+
+	<image name="PNxScannerFrame">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<alpha> 180 </alpha>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+		</x>
+	
+		<y>
+			<copy src="parent()" trait="y" />
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+			<onlyif src="ActionPoints" trait="visible" />	
+			<add>
+				<copy> 128 </copy>
+				<onlyifnot src="ActionPoints" trait="visible" />	
+			</add>
+		</width>
+	
+		<height>
+			<copy src="parent()" trait="height" />
+		</height>
+		
+		<filename>
+			<copy src="ActionPoints" trait="visible" />	
+			<copy src="me()" trait="_filename_" />
+		</filename>
+		<_filename_0> pnx\hud\scan\scannerbracket1.dds </_filename_0>
+		<_filename_1> pnx\hud\scan\scannerbracket2.dds </_filename_1>
+		
+	</image>
+	
+	<image name="PNxScannerBack">
+		<zoom> &scale; </zoom>
+		<depth> -1 </depth>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		<alpha> 120 </alpha>
+		<red> 0 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		
+		<visible>
+			<copy src="ActionPoints" trait="visible" />	
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<add> 14 </add>
+		</x>
+	
+		<y>
+			<copy src="parent()" trait="y" />
+			<add> 14 </add>
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+			<sub> 28 </sub>
+		</width>
+	
+		<height>
+			<copy src="parent()" trait="height" />
+			<sub> 28 </sub>
+		</height>
+		
+		<filename> Interface\Shared\solid.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyBase">
+		<zoom> &scale; </zoom>
+		<depth> 1 </depth>
+		
+		<visible>
+			<copy src="io()" trait="_PNxScannerBoyEnabled" />
+		</visible>
+		
+		<alpha> 220 </alpha>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<add src="parent()" trait="width" />
+			<sub src="me()" trait="width" />
+			<sub> 20 </sub>
+			<onlyif src="ActionPoints" trait="visible" />	
+			<add>
+				<copy src="screen()" trait="width" />
+				<sub src="me()" trait="width" />
+				<sub> 90 </sub>
+				<onlyifnot src="ActionPoints" trait="visible" />	
+			</add>
+		</x>
+	
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy> 125 </copy>
+				<onlyif src="ActionPoints" trait="visible" />	
+			</sub>
+			<add>
+				<copy src="parent()" trait="height" />
+				<div> 2 </div>
+			</add>
+			<sub>
+				<copy src="me()" trait="height" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<width> 180 </width>
+		<height> 195 </height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_base.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyHead">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyHeadDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_head.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyTorso">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyTorsoDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_torso.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyLeftArm">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyLeftArmDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_leftarm.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyRightArm">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyRightArmDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_rightarm.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyLeftLeg">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red> 230 </red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyLeftLegDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_leftleg.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyRightLeg">
+		<zoom> &scale; </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red>
+			<copy> 230 </copy>
+			<sub src="io()" trait="_PNxScannerBoyRightLegDamage" />
+		</red>
+		<green> 0 </green>
+		<blue> 0 </blue>
+		<alpha>
+			<copy> 230 </copy>
+			<mul src="io()" trait="_PNxScannerBoyRightLegDamage" />
+		</alpha>
+		
+		<x><copy src="sibling(PNxScannerBoyBase)" trait="x" /></x>
+		<y><copy src="sibling(PNxScannerBoyBase)" trait="y" /></y>
+		<width><copy src="sibling(PNxScannerBoyBase)" trait="width" /></width>
+		<height><copy src="sibling(PNxScannerBoyBase)" trait="height" /></height>
+		
+		<filename> pnx\hud\scan\ScannerBoy_rightleg.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyHealthBack">
+		<zoom> 100 </zoom>
+		<depth> 0 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<alpha> 230 </alpha>
+		
+		<x>
+			<copy src="sibling(PNxScannerBoyBase)" trait="x" />
+			<sub> 8 </sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyBase)" trait="y" />
+			<add src="sibling(PNxScannerBoyBase)" trait="height" />
+			<add> 7 </add>
+			<add>
+				<copy> 200 </copy>
+				<onlyif src="ActionPoints" trait="visible" />	
+			</add>
+		</y>
+		<width> 196 </width>
+		<height> 64 </height>
+		
+		<filename> pnx\hud\scan\healthseperator.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyHealthBar">
+		<zoom> 80 </zoom>
+		<depth> 1 </depth>
+		<tile> &true; </tile>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<alpha> 200 </alpha>
+		
+		<x>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="x" />
+			<add> 47 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="y" />
+			<add> 2 </add>
+		</y>
+		<width>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="width" />
+			<sub> 94 </sub>
+			<mul src="io()" trait="_PNxScannerHealth" />
+		</width>
+		<height>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="height" />
+			<sub> 6 </sub>
+		</height>
+		
+		<filename> Interface\HUD\hud_tick_mark.dds </filename>
+	</image>
+	
+	<image name="PNxScannerBoyDamageArrow">
+		<zoom> &scale; </zoom>
+		<depth> 3 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<x>
+			<copy src="sibling(PNxScannerBoyHealthBar)" trait="x" />
+			<add>
+				<copy src="sibling(PNxScannerBoyHealthBar)" trait="width" />
+				<mul src="io()" trait="_PNxScannerDamage" />
+			</add>
+			<sub>
+				<copy src="me()" trait="width" />
+				<div> 2 </div>
+			</sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHealthBar)" trait="y" />
+			<sub> 25 </sub>
+		</y>
+		<width>
+			50
+		</width>
+		<height>
+			50
+		</height>
+		
+		<filename> Interface\HUD\glow_xp_bar_pointer.dds </filename>
+	</image>
+	
+	<text name="PNxScannerBoyHPLabel">
+		<font> 3 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<string>HP:</string>
+		<x>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="x" />
+			<add> 18 </add>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="y" />
+			<add src="sibling(PNxScannerBoyHealthBack)" trait="height" />
+			<sub> 35 </sub>
+		</y>
+	</text>
+	
+	<text name="PNxScannerBoyHPValue">
+		<font> 3 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<string><copy src="io()" trait="_PNxScannerTextHP" /></string>
+		<x>
+			<copy src="sibling(PNxScannerBoyHPLabel)" trait="x" />
+			<add src="sibling(PNxScannerBoyHPLabel)" trait="width" />
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHPLabel)" trait="y" />
+		</y>
+	</text>
+	
+	<text name="PNxScannerBoyDTLabel">
+		<font> 3 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<string>DT:</string>
+		<x>
+			<copy src="sibling(PNxScannerBoyDTValue)" trait="x" />
+			<sub src="me()" trait="width" />
+			<sub> 1 </sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHPLabel)" trait="y" />
+		</y>
+	</text>
+	
+	<text name="PNxScannerBoyDTValue">
+		<font> 3 </font>
+		<depth> 2 </depth>
+		
+		<visible>
+			<copy src="sibling(PNxScannerBoyBase)" trait="visible" />
+		</visible>
+		
+		<string><copy src="io()" trait="_PNxScannerTextDT" /></string>
+		<x>
+			<copy src="sibling(PNxScannerBoyHealthBack)" trait="x" />
+			<add src="sibling(PNxScannerBoyHealthBack)" trait="width" />
+			<sub src="me()" trait="width" />
+			<sub> 20 </sub>
+		</x>
+		<y>
+			<copy src="sibling(PNxScannerBoyHPLabel)" trait="y" />
+		</y>
+	</text>
+	
+	<_text_pos_x>
+		<copy src="me()" trait="x" />
+		<add> 30 </add>
+	</_text_pos_x> 
+	
+	<_text_pos_y>
+		<copy src="me()" trait="y" />
+		<add> 30 </add>
+	</_text_pos_y>
+	
+	<_line_height> 31 </_line_height>
+	<_indent_width> 20 </_indent_width>
+	
+	<image name="Cursor">
+		<zoom> &scale; </zoom>
+		<depth> 1 </depth>
+		
+		<visible>
+			<copy src="io()" trait="_PNxScannerCursorBlink" />
+			<eq> 0 </eq>
+		</visible>
+		
+		<alpha> 200 </alpha>
+		
+		<x>
+			<copy src="parent()" trait="_text_pos_x" />
+			<add>
+				<copy src="io()" trait="_PNxScannerCursorPos" />
+				<mul> 15 </mul>
+			</add>
+			<add>
+				<copy src="io()" trait="_PNxScannerCursorIndent" />
+				<mul src="parent()" trait="_indent_width" />
+			</add>
+			
+		</x>
+
+		<y>
+			<copy src="parent()" trait="_text_pos_y" />
+			<add>
+				<copy src="io()" trait="_PNxScannerCursorLine" />
+				<mul src="parent()" trait="_line_height" />
+			</add>
+			<sub> 4 </sub>
+		</y>
+		
+		<width> 11 </width>
+		<height> 22 </height>
+		
+		<filename> Interface\Shared\solid.dds </filename>
+	</image>
+	
+	<text name="PNxScannerText1">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 0 </_line>
+	
+		<_dat_1>S</_dat_1>
+		<_dat_2>SC</_dat_2>
+		<_dat_3>SCA</_dat_3>
+		<_dat_4>SCAN</_dat_4>
+		<_dat_5>SCANN</_dat_5>
+		<_dat_6>SCANNI</_dat_6>
+		<_dat_7>SCANNIN</_dat_7>
+		<_dat_8>SCANNING</_dat_8>
+		<_dat_9>SCANNING.</_dat_9>
+		<_dat_10>SCANNING..</_dat_10>
+		<_dat_11>SCANNING...</_dat_11>
+		
+		<_index><copy src="io()" trait="_PNxScannerText1Index" /></_index>
+	</text>
+	
+	<text name="PNxScannerText2">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 2 </_line>
+	
+		<_dat_1>T</_dat_1>
+		<_dat_2>TH</_dat_2>
+		<_dat_3>THR</_dat_3>
+		<_dat_4>THRE</_dat_4>
+		<_dat_5>THREA</_dat_5>
+		<_dat_6>THREAT</_dat_6>
+		<_dat_7>THREAT:</_dat_7>
+		
+		<_index><copy src="io()" trait="_PNxScannerText2Index" /></_index>
+	</text>
+	
+	<text name="PNxScannerText3">
+	
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 3 </_line>
+		<_indent> 2 </_indent>
+	
+		<_dat_1>h</_dat_1>
+		<_dat_2>hi</_dat_2>
+		<_dat_3>hig</_dat_3>
+		<_dat_4>high</_dat_4>
+		
+		<_dat_5>m</_dat_5>
+		<_dat_6>me</_dat_6>
+		<_dat_7>med</_dat_7>
+		<_dat_8>medi</_dat_8>
+		<_dat_9>mediu</_dat_9>
+		<_dat_10>medium</_dat_10>
+		
+		<_dat_11>l</_dat_11>
+		<_dat_12>lo</_dat_12>
+		<_dat_13>low</_dat_13>
+		
+		<_index><copy src="io()" trait="_PNxScannerText3Index" /></_index>
+		
+	</text>
+	
+	
+	<text name="PNxScannerText4">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 5 </_line>
+	
+		<_dat_1>A</_dat_1>
+		<_dat_2>AW</_dat_2>
+		<_dat_3>AWA/</_dat_3>
+		<_dat_4>AWAR</_dat_4>
+		<_dat_5>AWARE</_dat_5>
+		<_dat_6>AWAREN/</_dat_6>
+		<_dat_7>AWARENE</_dat_7>
+		<_dat_8>AWARENES</_dat_8>
+		<_dat_9>AWARENESS</_dat_9>
+		<_dat_10>AWARENESS:</_dat_10>
+		
+		<_index><copy src="io()" trait="_PNxScannerText4Index" /></_index>
+	</text>
+	
+	<text name="PNxScannerText5">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 6 </_line>
+		<_indent> 2 </_indent>
+	
+		<_dat_1>h</_dat_1>
+		<_dat_2>hi</_dat_2>
+		<_dat_3>hig</_dat_3>
+		<_dat_4>high</_dat_4>
+		
+		<_dat_5>m</_dat_5>
+		<_dat_6>me</_dat_6>
+		<_dat_7>med</_dat_7>
+		<_dat_8>medi</_dat_8>
+		<_dat_9>mediu</_dat_9>
+		<_dat_10>medium</_dat_10>
+		
+		<_dat_11>l</_dat_11>
+		<_dat_12>lo</_dat_12>
+		<_dat_13>low</_dat_13>
+		
+		<_index><copy src="io()" trait="_PNxScannerText5Index" /></_index>
+	</text>
+	
+	
+	<text name="PNxScannerText6">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 8 </_line>
+	
+		<_dat_1>C</_dat_1>
+		<_dat_2>CO</_dat_2>
+		<_dat_3>COM</_dat_3>
+		<_dat_4>COMB</_dat_4>
+		<_dat_5>COMBA</_dat_5>
+		<_dat_6>COMBAT</_dat_6>
+		<_dat_7>COMBAT R</_dat_7>
+		<_dat_8>COMBAT RA</_dat_8>
+		<_dat_9>COMBAT RAN</_dat_9>
+		<_dat_10>COMBAT RANG</_dat_10>
+		<_dat_11>COMBAT RANGE</_dat_11>
+		<_dat_12>COMBAT RANGE:</_dat_12>
+		
+		<_index><copy src="io()" trait="_PNxScannerText6Index" /></_index>
+	</text>
+	
+	<text name="PNxScannerText7">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 9 </_line>
+		<_indent> 2 </_indent>
+	
+		<_dat_1>l</_dat_1>
+		<_dat_2>lo</_dat_2>
+		<_dat_3>lon</_dat_3>
+		<_dat_4>long</_dat_4>
+		
+		<_dat_5>m</_dat_5>
+		<_dat_6>me</_dat_6>
+		<_dat_7>med</_dat_7>
+		<_dat_8>medi</_dat_8>
+		<_dat_9>mediu</_dat_9>
+		<_dat_10>medium</_dat_10>
+		
+		<_dat_11>s</_dat_11>
+		<_dat_12>sh</_dat_12>
+		<_dat_13>sho</_dat_13>
+		<_dat_14>shor</_dat_14>
+		<_dat_15>short</_dat_15>
+		
+		<_dat_16>m</_dat_16>
+		<_dat_17>me</_dat_17>
+		<_dat_18>mel</_dat_18>
+		<_dat_19>mele</_dat_19>
+		<_dat_20>melee</_dat_20>
+		
+		<_index><copy src="io()" trait="_PNxScannerText7Index" /></_index>
+	</text>
+	
+	<text name="PNxScannerText8">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 11 </_line>
+	
+		<_dat_1>D</_dat_1>
+		<_dat_2>DI</_dat_2>
+		<_dat_3>DIS</_dat_3>
+		<_dat_4>DISP</_dat_4>
+		<_dat_5>DISPO</_dat_5>
+		<_dat_6>DISPOS</_dat_6>
+		<_dat_7>DISPOSI</_dat_7>
+		<_dat_8>DISPOSIT</_dat_8>
+		<_dat_9>DISPOSITI</_dat_9>
+		<_dat_10>DISPOSITIO</_dat_10>
+		<_dat_11>DISPOSITION</_dat_11>
+		<_dat_12>DISPOSITION:</_dat_12>
+		
+		<_index><copy src="io()" trait="_PNxScannerText8Index" /></_index>
+	</text>
+	
+	<text name="PNxScannerText9">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 12 </_line>
+		<_indent> 2 </_indent>
+	
+		<_dat_1>a</_dat_1>
+		<_dat_2>al</_dat_2>
+		<_dat_3>all</_dat_3>
+		<_dat_4>alli</_dat_4>
+		<_dat_5>allie</_dat_5>
+		<_dat_6>allied</_dat_6>
+		
+		<_dat_7>n</_dat_7>
+		<_dat_8>ne</_dat_8>
+		<_dat_9>neu</_dat_9>
+		<_dat_10>neut</_dat_10>
+		<_dat_11>neutr</_dat_11>
+		<_dat_12>neutra</_dat_12>
+		<_dat_13>neutral</_dat_13>
+		
+		<_dat_14>h</_dat_14>
+		<_dat_15>ho</_dat_15>
+		<_dat_16>hos</_dat_16>
+		<_dat_17>host</_dat_17>
+		<_dat_18>hosti</_dat_18>
+		<_dat_19>hostil</_dat_19>
+		<_dat_20>hostile</_dat_20>
+		
+		<_index><copy src="io()" trait="_PNxScannerText9Index" /></_index>
+	</text>
+	
+	<text name="PNxScannerText10">
+		<include src="pnx\floating_text.xml" />
+	
+		<_line> 14 </_line>
+	
+		<_dat_1>D</_dat_1>
+		<_dat_2>DO</_dat_2>
+		<_dat_3>DON</_dat_3>
+		<_dat_4>DONE</_dat_4>
+		<_dat_5>DONE.</_dat_5>
+		
+		<_index><copy src="io()" trait="_PNxScannerText10Index" /></_index>
+	</text>
+	
+</rect>
+
+
+<!-- ######################################################################################## Grenade Icon -->
+<rect name="PNxGrenadeIcon">
+
+	<visible>
+		<copy src="io()" trait="_PNxGrenadeIconEnabled" />
+		<and src="ActionPoints" trait="visible" />
+	</visible>
+	
+	<x>
+		<copy src="screen()" trait="width" />
+		<sub>
+			<copy src="ActionPoints" trait="width" />
+			<mul src="io()" trait="_PNxScale" />
+		</sub>
+		<sub src="me()" trait="width" />
+		<sub src="io()" trait="_PNxEdgeDistance" />
+	</x>
+		
+	<y>
+		<copy src="screen()" trait="height" />
+		<sub src="me()" trait="height" />
+		<sub src="io()" trait="_PNxEdgeDistance" />
+	</y>
+		
+	<width>
+		<copy> 96 </copy>
+		<mul src="io()" trait="_PNxScale" />
+	</width>
+		
+	<height>
+		<copy> 96 </copy>
+		<mul src="io()" trait="_PNxScale" />
+	</height>
+
+	<image name="PNxGrenadeIconImage">
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="parent()" trait="width" />
+				<mul> 0.25 </mul>
+			</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="parent()" trait="height" />
+				<mul> 0.25 </mul>
+			</sub>
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+			<mul> 1.5 </mul>
+		</width>
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul> 1.5 </mul>
+		</height>
+
+		<depth> 1 </depth>
+		
+		<zoom> &scale; </zoom>
+		
+		<filename>
+			<copy src="io()" trait="_PNxGrenadeIconPath" />
+		</filename>
+	</image>
+	
+	<text name="PNxGrenadeCountText">
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
+		<depth> 2 </depth>
+		<string> <copy src="io()" trait="_PNxGrenadeIconCount" /> </string>
+		<x>
+			<copy src="parent()" trait="x" />
+			<add src="parent()" trait="width" />
+			<sub src="me()" trait="width" />
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<add src="parent()" trait="height" />
+			<sub src="me()" trait="height" />
+			<sub>
+				<copy> 10 </copy>
+				<onlyif src="io()" trait="_DUIF3" />
+			</sub>
+		</y>
+	</text>
+	
+	<image name="PNxGrenadeCategoryImage">
+		<visible>
+			<copy src="parent()" trait="visible" />
+			<and>
+			<copy src="io()" trait="_PNxGrenadeIconCategory" />
+				<gt> 0 </gt>
+			</and>
+		</visible>
+	
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub src="me()" trait="width" />
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+		</y>
+		
+		<width>
+			<copy> 24 </copy>
+			<mul src="io()" trait="_PNxScale" />
+		</width>
+		<height>
+			<copy> 96 </copy>
+			<mul src="io()" trait="_PNxScale" />
+		</height>
+
+		<depth> 1 </depth>
+		
+		<zoom> &scale; </zoom>
+		
+		<_fn_1> pnx\hud\gren\CatGren.dds </_fn_1>
+		<_fn_2> pnx\hud\gren\CatWeap.dds </_fn_2>
+		<_fn_3> pnx\hud\gren\CatMine.dds </_fn_3>
+		<_fn_4> pnx\hud\gren\CatDeto.dds </_fn_4>
+		
+		<filename>
+			<copy src="io()" trait="_PNxGrenadeIconCategory" />
+			<copy src="me()" trait="_fn_" />
+		</filename>
+	</image>
+</rect>
+
+
+<!-- ######################################################################################## Energy Icon -->
+<rect name="PNxEnergyIcon">
+
+	<visible>
+		<copy src="io()" trait="_PNxEnergyIconEnabled" />
+		<and src="ActionPoints" trait="visible" />
+	</visible>
+	
+	<x>
+		<copy> 12 </copy>
+		<add src="DDTIcon" trait="x" />
+		<add src="DDTIcon" trait="width" />
+	</x>
+		
+	<y>
+		<copy src="screen()" trait="height" />
+		<sub src="me()" trait="height" />
+		<sub src="io()" trait="_PNxEdgeDistance" />
+	</y>
+		
+	<width>
+		<copy> 96 </copy>
+		<mul src="io()" trait="_PNxScale" />
+	</width>
+		
+	<height>
+		<copy> 96 </copy>
+		<mul src="io()" trait="_PNxScale" />
+	</height>
+
+	<image name="PNxEnergyIconImage">
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="parent()" trait="width" />
+				<mul> 0.25 </mul>
+			</sub>
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="parent()" trait="height" />
+				<mul> 0.25 </mul>
+			</sub>
+		</y>
+		
+		<width>
+			<copy src="parent()" trait="width" />
+			<mul> 1.5 </mul>
+		</width>
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul> 1.5 </mul>
+		</height>
+
+		<depth> 1 </depth>
+		
+		<zoom> &scale; </zoom>
+		
+		<filename> Interface\Icons\PipboyImages\Items\items_energy_cell.dds </filename>
+	</image>
+	
+	<text name="PNxEnergyCountText">
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
+		<depth> 2 </depth>
+		<string> <copy src="io()" trait="_PNxEnergyIconCount" /> </string>
+		<x>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="x" />
+			<add src="sibling(PNxEnergyChargeMeterBack)" trait="width" />
+		</x>
+		<y>
+			<copy src="parent()" trait="y" />
+			<add src="parent()" trait="height" />
+			<sub src="me()" trait="height" />
+			<sub>
+				<copy> 10 </copy>
+				<onlyif src="io()" trait="_DUIF3" />
+			</sub>
+		</y>
+	</text>
+	
+	<image name="PNxEnergyChargeMeterBack">
+		<zoom> &scale; </zoom>
+		<depth> 2 </depth>
+		<alpha> 100 </alpha>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+		</x>
+	
+		<y>
+			<copy src="parent()" trait="y" />
+			<add>
+				<copy src="parent()" trait="height" />
+				<mul> 0.15 </mul>
+			</add>
+		</y>
+		
+		<width> 10 </width>
+	
+		<height>
+			<copy src="parent()" trait="height" />
+			<mul> 0.7 </mul>
+		</height>
+		
+		<filename> Interface\Shared\solid.dds </filename>
+	</image>
+	
+	<image name="PNxEnergyChargeMeterFill">
+		<zoom> &scale; </zoom>
+		<depth> 3 </depth>
+		<alpha> 200 </alpha>
+		
+		<x>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="x" />
+		</x>
+	
+		<y>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="y" />
+			<add>
+				<copy src="sibling(PNxEnergyChargeMeterBack)" trait="height" />
+				<sub src="me()" trait="height" />
+			</add>
+		</y>
+		
+		<width>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="width" />
+		</width>
+	
+		<height>
+			<copy src="sibling(PNxEnergyChargeMeterBack)" trait="height" />
+			<mul src="io()" trait="_PNxEnergyIconCharge" />
+		</height>
+		
+		<filename> Interface\Shared\solid.dds </filename>
+	</image>
+</rect>
+
+
+<!-- ######################################################################################## Explosive Entry Icon -->
+<image name="PNxExplosiveEntryIcon">
+
+	<visible>
+		<copy src="io()" trait="_PNxExplosiveEntryIconEnabled" />
+		<and src="ActionPoints" trait="visible" />
+	</visible>
+	
+	<x>
+		<copy src="DDTIcon" trait="x" />
+	</x>
+		
+	<y>
+		<copy src="DDTIcon" trait="y" />
+		<sub src="me()" trait="height" />
+	</y>
+		
+	<width> 32 </width>
+	<height> 32 </height>
+	
+	<depth> 1 </depth>
+	<zoom> &scale; </zoom>
+	
+	<systemcolor>
+		<copy> &hudmain; </copy>
+		<onlyifnot>
+			<copy src="io()" trait="_PNxExplosiveEntryIconIndex" />
+			<eq> 4 </eq>
+		</onlyifnot>
+		<add>
+			<copy> &hudalt; </copy>
+			<onlyif>
+				<copy src="io()" trait="_PNxExplosiveEntryIconIndex" />
+				<eq> 4 </eq>
+			</onlyif>
+		</add>
+	</systemcolor>
+		
+	<_fn_1> pnx\hud\xe\lock_sealed.dds </_fn_1>
+	<_fn_2> pnx\hud\xe\lock_fail.dds </_fn_2>
+	<_fn_3> pnx\hud\xe\lock_success.dds </_fn_3>
+	<_fn_4> pnx\hud\xe\lock_break.dds </_fn_4>
+		
+	<filename>
+		<copy src="io()" trait="_PNxExplosiveEntryIconIndex" />
+		<copy src="me()" trait="_fn_" />
+	</filename>
+</image>
+
+
+<!-- ######################################################################################## Control Panel -->
+
+
+<rect name="PNxControlPanel">
+	<image name="PNxControlPanelBackground">
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<visible>
+			<copy src="io()" trait="_PNxControlPanelEnabled" />
+			<and src="io()" trait="_PNxControlPanelActive" />
+		</visible>
+		
+		<zoom> &scale; </zoom>
+		<depth> 10 </depth>
+		
+		<alpha> 180 </alpha>
+			
+		<x>0</x>
+		<y>0</y>
+		<width> <copy src="screen()" trait="width" /> </width>
+		<height> <copy src="screen()" trait="height" /> </height>
+
+		<filename> pnx\hud\cp\custom_pause.dds </filename>
+	</image>
+		
+	<image name="PNxControlPanelSplash">
+		<systemcolor>
+			<copy> &nosystemcolor; </copy>
+			<onlyif src="io()" trait="_PNxControlPanelSplashNoColor" />
+		</systemcolor>
+		
+		<visible>
+			<copy src="sibling(PNxControlPanelBackground)" trait="visible" />
+			<and src="io()" trait="_PNxControlPanelSplashEnabled" />
+		</visible>
+		
+		<alpha>
+			<copy src="io()" trait="_PNxControlPanelSplashFade" />
+			<mul> 255 </mul>
+		</alpha>
+		
+		<zoom> &scale; </zoom>
+		<depth> 11 </depth>
+			
+		<x>
+			<copy src="screen()" trait="width" />
+			<mul src="io()" trait="_PNxControlPanelSplashXAlign" />
+			<sub>
+				<copy src="me()" trait="width" />
+				<mul src="io()" trait="_PNxControlPanelSplashXAlign" />
+			</sub>
+		</x>
+		
+		<y>
+			<copy src="screen()" trait="height" />
+			<mul src="io()" trait="_PNxControlPanelSplashYAlign" />
+			<sub>
+				<copy src="me()" trait="height" />
+				<mul src="io()" trait="_PNxControlPanelSplashYAlign" />
+			</sub>
+		</y>
+		
+		<width>
+			<copy src="io()" trait="_PNxControlPanelSplashWidth" />
+		</width>
+		
+		<height> 
+			<copy src="io()" trait="_PNxControlPanelSplashHeight" />
+		</height>
+
+		<filename> <copy src="io()" trait="_PNxControlPanelSplashPath" /> </filename>
+	</image>
+
+	<text name="_PNxControlPanelKeySelectText">
+		<visible>
+			<copy src="sibling(PNxControlPanelBackground)" trait="visible" />
+			<and src="io()" trait="_PNxControlPanelKeySelectEnabled" />
+		</visible>
+		<depth> 12 </depth>
+		<font>
+			<copy> 1 </copy>
+			<onlyifnot src="io()" trait="_DUIF3" />
+			<add>
+				<copy> 3 </copy>
+				<onlyif src="io()" trait="_DUIF3" />
+			</add>
+		</font>
+		<justify> &center; </justify>
+		<x>
+			<copy src="screen()" trait="width" />
+			<div> 2 </div>
+		</x>
+		<y>
+			<copy src="screen()" trait="height" />
+			<div> 2 </div>
+		</y>
+		<string> Press the new hotkey now. </string>
+	</text>
+	
+	<text name="_PNxControlPanelKeyResetText">
+		<visible>
+			<copy src="sibling(_PNxControlPanelKeySelectText)" trait="visible" />
+		</visible>
+		<depth> 12 </depth>
+		<font>
+			<copy> 3 </copy>
+			<onlyifnot src="io()" trait="_DUIF3" />
+			<add>
+				<copy> 1 </copy>
+				<onlyif src="io()" trait="_DUIF3" />
+			</add>
+		</font>
+		<justify> &center; </justify>
+		<x>
+			<copy src="screen()" trait="width" />
+			<div> 2 </div>
+		</x>
+		<y>
+			<copy src="sibling(_PNxControlPanelKeySelectText)" trait="y" />
+			<add src="sibling(_PNxControlPanelKeySelectText)" trait="height" />
+			<add> 5 </add>
+		</y>
+		<string>(Backspace to reset)</string>
+	</text>
+	
+</rect>
+
+
+<!-- ######################################################################################## AP Bonus Text -->
+<rect name="PNxAPBonus">
+	<visible>
+		<copy src="ActionPoints" trait="visible" />
+		<and src="io()" trait="_PNxAPBonusEnabled" />
+		<and src="io()" trait="_PNxAPBonusValue" />
+		<gt> 0 </gt>
+	</visible>
+	
+	<text name="PNxAPBonusText">
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
+		<depth> 2 </depth>
+		<justify> &left; </justify>
+		
+		<string>
+			<copy src="io()" trait="_PNxAPBonusValue" />
+			<mul> 100 </mul>
+		</string>
+		
+		<x>
+			<copy src="screen()" trait="width" />
+			<sub>
+				<copy src="ActionPoints" trait="width" />
+				<mul src="io()" trait="_PNxScale" />
+				<div> 2 </div>
+			</sub>
+			<sub> </sub>
+		</x>
+		<y>
+			<copy src="screen()" trait="height" />
+			<sub>
+				<copy src="ActionPoints" trait="height" />
+				<mul src="io()" trait="_PNxScale" />
+			</sub>
+			<sub> 10 </sub>
+			<sub>
+				<copy> 11 </copy>
+				<onlyifnot src="io()" trait="_DUIF3" />
+			</sub>
+		</y>
+	</text>
+	<text name="PNxAPBonusPlus">
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
+		<depth> 2 </depth>
+		<justify> &right; </justify>
+		
+		<string> + </string>
+		
+		<x>
+			<copy src="PNxAPBonusText" trait="x" />
+		</x>
+		<y>
+			<copy src="PNxAPBonusText" trait="y" />
+		</y>
+	</text>
+	<text name="PNxAPBonusPercent">
+		<font> <copy src="io()" trait="_PNxMeterFont" /> </font>
+		<depth> 2 </depth>
+		<justify> &left; </justify>
+		
+		<string> % </string>
+		
+		<x>
+			<copy src="PNxAPBonusText" trait="x" />
+			<add src="PNxAPBonusText" trait="width" />
+		</x>
+		<y>
+			<copy src="PNxAPBonusText" trait="y" />
+		</y>
+	</text>
+</rect>
+
+
+<!-- ######################################################################################## Visor -->
+<rect name="PNxVisorOverlay">
+
+	<_XOffscreenArea>
+		<copy src="screen()" trait="width" />
+		<mul>0.1</mul>
+	</_XOffscreenArea>
+	
+	<_YOffscreenArea>
+		<copy src="screen()" trait="height" />
+		<mul>0.05</mul>
+	</_YOffscreenArea>
+
+	<x>
+		<copy> 0 </copy>
+		<sub src="me()" trait="_XOffscreenArea" />
+		<add>
+			<copy src="me()" trait="_XOffscreenArea" />
+			<mul src="io()" trait="_PNxVisorXOffscreenMult" />
+		</add>
+		<sub>
+			<copy>
+				<copy src="screen()" trait="width" />
+				<mul src="io()" trait="_PNxVisorScale" />
+			</copy>
+			<sub src="screen()" trait="width" />
+			<div> 2 </div>
+		</sub>
+	</x>
+	
+	<y>
+		<copy> 0 </copy>
+		<sub src="me()" trait="_YOffscreenArea" />
+		<add>
+			<copy src="me()" trait="_YOffscreenArea" />
+			<mul src="io()" trait="_PNxVisorYOffscreenMult" />
+		</add>
+		<sub>
+			<copy>
+				<copy src="screen()" trait="height" />
+				<mul src="io()" trait="_PNxVisorScale" />
+			</copy>
+			<sub src="screen()" trait="height" />
+			<div> 2 </div>
+		</sub>
+	</y>
+	
+	<width>
+		<copy src="screen()" trait="width" />
+		<mul src="io()" trait="_PNxVisorScale" />
+		<add src="me()" trait="_XOffscreenArea" />
+		<add src="me()" trait="_XOffscreenArea" />
+	</width>
+	
+	<height>
+		<copy src="screen()" trait="height" />
+		<mul src="io()" trait="_PNxVisorScale" />
+		<add src="me()" trait="_YOffscreenArea" />
+		<add src="me()" trait="_YOffscreenArea" />
+	</height>
+	
+	<image name="OverlayImage">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		<red>
+			<copy src="io()" trait="_PNxVisorColorRed" />
+			<mul>255</mul>
+			<onlyifnot src="PNXGrainLayer" trait="visible" />
+			<add>
+				<copy src="PNXGrainLayer" trait="red" />
+				<onlyif src="PNXGrainLayer" trait="visible" />
+			</add>
+		</red>
+		<green>
+			<copy src="io()" trait="_PNxVisorColorGreen" />
+			<mul>255</mul>
+			<onlyifnot src="PNXGrainLayer" trait="visible" />
+			<add>
+				<copy src="PNXGrainLayer" trait="green" />
+				<onlyif src="PNXGrainLayer" trait="visible" />
+			</add>
+		</green>
+		<blue>
+			<copy src="io()" trait="_PNxVisorColorBlue" />
+			<mul>255</mul>
+			<onlyifnot src="PNXGrainLayer" trait="visible" />
+			<add>
+				<copy src="PNXGrainLayer" trait="blue" />
+				<onlyif src="PNXGrainLayer" trait="visible" />
+			</add>
+		</blue>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorOverlayEnabled" />
+			<ne> 0 </ne>
+			<and>
+				<copy src="ActionPoints" trait="visible" />
+				<or src="io()" trait="_PNxVisorSelectMode" />
+			</and>
+		</visible>
+		
+		<depth> -10 </depth>
+		
+		<x> <copy src="parent()" trait="x" /> </x>
+		<y> <copy src="parent()" trait="y" /> </y>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<filename>
+			<copy src="io()" trait="_PNxVisorOverlayPath" />
+		</filename>
+		
+	</image>
+	
+	<image name="ConditionBase">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<alpha>
+			<copy> 1.0 </copy>
+			<sub src="io()" trait="_PNxVisorCondition" />
+			<mul> 127 </mul>
+		</alpha>
+		
+		<depth> -12 </depth>
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<filename> pnx\hud\visor\conditionbase.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 1.0 </lt>
+			<and src="ActionPoints" trait="visible" />
+		</visible>
+		
+		<x> <copy src="parent()" trait="x" /> </x>
+		<y> <copy src="parent()" trait="y" /> </y>
+		
+	</image>
+	
+	<image name="ConditionCrack1">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -11 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack1.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.85 </lt>
+			<and src="ActionPoints" trait="visible" />
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.75 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.18 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack2">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -11 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack2.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.70 </lt>
+			<and src="ActionPoints" trait="visible" />
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.14 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.39 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack3">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -11 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack3.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.55 </lt>
+			<and src="ActionPoints" trait="visible" />
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.09 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack4">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -11 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack4.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.40 </lt>
+			<and src="ActionPoints" trait="visible" />
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.52 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.46 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack5">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -11 </depth>
+		<width> 400 </width>
+		<height> 400 </height>
+		
+		<filename> pnx\hud\visor\crack5.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.25 </lt>
+			<and src="ActionPoints" trait="visible" />
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.28 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.19 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+	<image name="ConditionCrack6">
+		<zoom> &scale; </zoom>
+		<systemcolor> &nosystemcolor; </systemcolor>
+	
+		<red>
+			<copy src="sibling(OverlayImage)" trait="red" />
+		</red>
+		<green>
+			<copy src="sibling(OverlayImage)" trait="green" />
+		</green>
+		<blue>
+			<copy src="sibling(OverlayImage)" trait="blue" />
+		</blue>
+		
+		<depth> -11 </depth>
+		<width> 420 </width>
+		<height> 420 </height>
+		
+		<filename> pnx\hud\visor\crack6.dds </filename>
+		
+		<visible>
+			<copy src="io()" trait="_PNxVisorCondition" />
+			<lt> 0.1 </lt>
+			<and src="ActionPoints" trait="visible" />
+		</visible>
+		
+		<x>
+			<copy src="parent()" trait="width" />
+			<mul> 0.54 </mul>
+			<add src="parent()" trait="x" />
+		</x>
+		<y>
+			<copy src="parent()" trait="height" />
+			<mul> 0.10 </mul>
+			<add src="parent()" trait="y" />
+		</y>
+	</image>
+	
+</rect>
