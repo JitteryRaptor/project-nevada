@@ -29,7 +29,7 @@ Contributors: Aether89, T3T, Zealotlee
 
 Current Version: 1.0
 
-Download: Nexus
+Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
 ########################################################################################################################################
 
