@@ -124,20 +124,20 @@ to get the mod running.
 [Core]
 - Added Inventory Sorter feature
 - Fixed various typos
-- Various optimizations by utilizing new NVSE functions
 - Added missing vision effects to Lucky Shades
-- Control Panel: Reworked menu structure and improved the hotkey menu to show the current hotkey instead of a generic "Custom"
+- Various optimizations by utilizing new NVSE functions
+- Control Panel: Improved menu structure and hotkey menu to show the current hotkey instead of a generic "Custom"
 - Explosive Entry: Added trespassing alert when blowing up owned containers/doors
 - Explosive Entry: Fixed bug that would make the HUD icon appear for all explosions
 - Explosive Entry: Fixed bug where HUD icon would not disappear after reload
 - Visor Overlays: Decreased extra visor brightness by 50%
 
 [Cyberware]
-- Reworked implant system so it's now possible for other mods to add their own implants
+- Improved implant system so it's now possible for other mods to add their own implants
 
 [Rebalance]
-- Reworked menu system so it now supports more entries per page and any number of options per entry
-- Reworked Alternative Repair System
+- Improved menu system so it now supports more entries per page and any number of options per entry
+- Improved Alternative Repair System
 - Fixed hitpoint formula descriptions by adding the missing 100 base HP
 - Included Yuki's weapon repair kit fix that would otherwise get overriden
 - Fixed issue where headshot monitor could accidently be added to the player
@@ -149,7 +149,7 @@ to get the mod running.
 [Equipment]
 - Added 3 Shooter to Shotgun Surgeon perk list
 - Added Pipe bomb missing to Demo Expert Perk List
-- Fixed rail cannon zooming bug
+- Fixed Rail Cannon zooming bug
 - Fixed 5mm SMG loot list count
 - Fixed list error that prevented BoS NPCs from spawning with some of the new weapons
 - Fixed visbility condition for Nuka Grenade recipe, added extra safety conditions to all recipes
