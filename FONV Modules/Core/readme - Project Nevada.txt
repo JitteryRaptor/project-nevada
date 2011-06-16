@@ -15,11 +15,21 @@
 
 ########################################################################################################################################
 
-Team: snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, TheCastle, x-quake, Gopher, Mezmorki
+Team: snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, TheCastle, x-quake, Gopher, Gribbleshnibit8, Mezmorki
 
-Current Version: 2.0
+Current Version: 2.1
 
 Download: http://www.newvegasnexus.com/downloads/file.php?id=40040
+
+########################################################################################################################################
+
+The following mods/utilities are required for Project Nevada:
+
+* Fallout: New Vegas Script Extender (NVSE), version 2.0 beta4 or newer
+	http://nvse.silverlock.org/
+
+* Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
+	http://www.newvegasnexus.com/downloads/file.php?id=36901
 
 ########################################################################################################################################
 
@@ -43,9 +53,11 @@ Part I - General
 Part II - Module Details
 
 	1. Core
-		a) Features
-		b) Default hotkeys
-		c) Item changes
+		a) Gameplay Features
+		b) Immersion Features
+		c) Miscellaneous Features
+		d) Default hotkeys
+		e) Item changes
 	
 	2. Cyberware
 		a) Implant list
@@ -64,7 +76,7 @@ Part II - Module Details
 		b) Damage + Combat options
 		c) Stealth + Movement options
 		d) Miscellaneous options
-		e) Item rarity changes
+		e) Loot rarity options
 		f) Food changes
 		g) Alternative repair system
 		
@@ -105,6 +117,45 @@ to get the mod running.
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
+
+------------------------------------------------------------
+2.1:
+
+[Core]
+- Added Inventory Sorter feature
+- Fixed various typos
+- Various optimizations by utilizing new NVSE functions
+- Added missing vision effects to Lucky Shades
+- Control Panel: Reworked menu structure and improved the hotkey menu to show the current hotkey instead of a generic "Custom"
+- Explosive Entry: Added trespassing alert when blowing up owned containers/doors
+- Explosive Entry: Fixed bug that would make the HUD icon appear for all explosions
+- Explosive Entry: Fixed bug where HUD icon would not disappear after reload
+- Visor Overlays: Decreased extra visor brightness by 50%
+
+[Cyberware]
+- Reworked implant system so it's now possible for other mods to add their own implants
+
+[Rebalance]
+- Reworked menu system so it now supports more entries per page and any number of options per entry
+- Reworked Alternative Repair System
+- Fixed hitpoint formula descriptions by adding the missing 100 base HP
+- Included Yuki's weapon repair kit fix that would otherwise get overriden
+- Fixed issue where headshot monitor could accidently be added to the player
+- Removed non-functional "Less Skill Points" option
+- Removed more common ammo crafting components to avoid CTDs
+- Added a workaround to make sure the Rebalance menu appears in the Control Panel
+- Removed rancid food from dead animal loot
+
+[Equipment]
+- Added 3 Shooter to Shotgun Surgeon perk list
+- Added Pipe bomb missing to Demo Expert Perk List
+- Fixed rail cannon zooming bug
+- Fixed 5mm SMG loot list count
+- Fixed list error that prevented BoS NPCs from spawning with some of the new weapons
+- Fixed visbility condition for Nuka Grenade recipe, added extra safety conditions to all recipes
+- Fixed faulty meshes for various weapons (thanks to Antistar)
+- Fixed 3 Shooter weapon mod description
+
 
 ------------------------------------------------------------
 2.0:
@@ -264,17 +315,19 @@ Max Tael, MTUI compatibility files
 DarN, DarNified UI compatibility files
 Ugluxy, textures for the visor damage effects
 LORD DARIUS and Jtrainz, Ironsight'ed Fallout 3 Weapons (http://www.newvegasnexus.com/downloads/file.php?id=36571)
+pintocat, inventory sorting scheme
+Antistar, fixed weapon meshes
 
 
 European Battle Rifle
 	Source: Albrecht and Vashts FN FAL Rifle (http://www.newvegasnexus.com/downloads/file.php?id=37553), by Vashts1985 and LT Albrecht
 	Original model: Pete
-	Original texture: Millenia
+	Original texture: Pete
 	
 Liberator Rifle
 	Source: Albrecht and Vashts FN FAL Rifle (http://www.newvegasnexus.com/downloads/file.php?id=37553), by Vashts1985 and LT Albrecht
 	Original model: Pete
-	Original texture: Millenia
+	Original texture: Pete
 	
 .44 Pistol
 	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
@@ -295,6 +348,7 @@ High Roller
 	Tactical Light model: SureShot
 	Tactical Light Texture: Pete
 	Sound effects: DarkFireGaming
+	Retexture: Zealotlee
 	
 Auto-Gauss
 	Source: Classic M72 Gauss Rifle (http://newvegasnexus.com/downloads/file.php?id=37703), by DaiShiSUN
@@ -429,7 +483,7 @@ use of the provided methods for streamlined hotkey assignment.
 Since the Core module avoids conflicting changes, players are free run it alongside any other mods, including their favorite overhaul.
 
 ------------------------------------------------------------
- a) Features
+ a) Gameplay Features
 ------------------------------------------------------------
 
 * Dynamic Crosshair
@@ -445,7 +499,7 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 		Grim Reaper's Sprint: Regain AP for BT kills
 		Commando: Improved accuracy with two-handed weapons
 		Gunslinger: Improved accuracy with one-handed weapons
-	
+		
 * Sprint
 	Yet another classic - as the name suggests, Sprint allows you to increase your speed until your action points are used up.
 	When bouncing into an opponent you may knock him down if your Strength is overpowering his.
@@ -464,6 +518,18 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 
 * Slower Backpedaling
 	When moving backwards, the player's speed is reduced based on his/her agility.
+	
+* Enhanced Stealth Field
+	The stealth field of armors or Stealth Boys can now be toggled on and off by hotkey. To balance this, the field can only stay
+	stable for a few seconds. The current stability is displayed in the HUD.
+
+* Enhanced Vision Modes
+	Power Armor helmets and other high-tech gear now enable enhanced vision modes like Night Vision, Heat Vision and EM Vision.
+	If there's no Power Armor equipped as a power source, energy cells are required while these modes are active.
+		
+------------------------------------------------------------
+ b) Immersion Features
+------------------------------------------------------------
 
 * First-person Visor Overlays for helmets
 	Helmets and other headgear now get immersive first-person overlays and vision effects. Based on the item condition, cracks and
@@ -471,6 +537,14 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 
 * Health Visuals
 	With decreasing health, the player's vision gets weak and blurry, creating an immersive feedback mechanism for you current health.
+	
+* Immersive Primary Needs
+	As hunger, thirst or sleep depriviation increase, the player is notified by periodic sound effects. These effects kick in shortly
+	before the first penalties occur, so the player is given a chance to eat, drink or sleep in time.
+
+------------------------------------------------------------
+ c) Miscellaneous Features
+------------------------------------------------------------
 
 * Control Panel
 	The control panel is accessible from the pause menu.
@@ -480,21 +554,12 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 * Explosive Entry
 	This feature makes it possible to burst open locked containers and doors with explosives. It uses no special interface, just
 	detonate something close enough to a lock and you may break it.
-
-* Immersive Primary Needs
-	As hunger, thirst or sleep depriviation increase, the player is notified by periodic sound effects. These effects kick in shortly
-	before the first penalties occur, so the player is given a chance to eat, drink or sleep in time.
-
-* Enhanced Stealth Field
-	The stealth field of armors or Stealth Boys can now be toggled on and off by hotkey. To balance this, the field can only stay
-	stable for a few seconds. The current stability is displayed in the HUD.
-
-* Enhanced Vision Modes
-	Power Armor helmets and other high-tech gear now enable enhanced vision modes like Night Vision, Heat Vision and EM Vision.
-	If there's no Power Armor equipped as a power source, energy cells are required while these modes are active.
+	
+* Inventory Sorter
+	To keep your inventory managable, even when carrying lots of items, the inventory sorter prefixes items based on categories.
 
 ------------------------------------------------------------
- b) Default hotkeys
+ d) Default hotkeys
 ------------------------------------------------------------
 
 * Bullet Time (C)
@@ -507,7 +572,7 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 * Zoom Out (MWheel Down)
 
 ------------------------------------------------------------
- c) Item changes
+ e) Item changes
 ------------------------------------------------------------
 
 * Night vision
@@ -829,15 +894,12 @@ As usual, the Control Panel allows players to customize most settings according 
 	Description:
 		Allows to set the leveling speed to roughly ~50% by modifying the XP rewards for killed enemies.
 	Options:
-		<50%
+		 10%
+		 25%
+		 50%
+		 66%
+		 75%
 		100% [PN, Vanilla]
-	
-* Skill Points per Level
-	Description:
-		Allows to reduce the amount of skill points gained per level.
-	Options:
-		 6 + INT
-		11 + INT [PN, Vanilla]
 
 * Carry Weight
 	Description:
@@ -1041,20 +1103,28 @@ As usual, the Control Panel allows players to customize most settings according 
 		Dismember 50%, Explode 75% [Vanilla]
 		
 ------------------------------------------------------------
- e) Item rarity changes
+ e) Loot rarity options
 ------------------------------------------------------------
 
-* Rarer Stimpaks
+* Ammo Spawn Chance
+	Description:
+		Allows to reduce the chance for ammo to spawn in various locations. Special ammo is not affected.
+	Options:
+		10%
+		25% [PN]
+		33%
+		50%
+		66%
+		75% [V]
 
-* Rarer high quality food
-
-* Ammo is more common at vendors
-
-* Weapon are mods more common at vendors
-
-* Higher quality foods are more common at vendors
-
-* Craftable bullet components are more common at vendors
+* Food Spawn Chance
+	Description:
+		Allows to reduce the chance for food (includes drinks as well) to spawn in various locations.
+	Options:
+		10%, 10%, 10%, 10%
+		37%, 37%, 27%, 17% [PN]
+		75%, 50%, 25%, 10%
+		100%, 75%, 50%, 25% [V]
 
 ------------------------------------------------------------
  f) Food changes
@@ -1082,18 +1152,24 @@ This makes repairing harder, as it restricts the number or possible repairs even
 there are the dynamic repair lists. Repair lists are no longer fixed to a few items, but are expanded based on the
 player's repair skill.
 
-For weapons:
-Skill  0 - 49: Original repair list, usually only contains the weapon itself.
-Skill 50 - 74: All weapons of the same type (similiar to Jury Rigging), i.e. all two-handed automatic rifles or all pistols.
-Skill 75 - 99: All weapons of the same skill class, i.e. all Guns or all Energy Weapons.
-Skill     100: All weapons of the same skill class plus class-specific junk items, like Scrap Metal.
+If your Repair Skill is below the required skill for an item, you can only repair it with itself.
+Otherwise the list is expanded with items of similar type.
 
-Armors don't use multiple skill ranges, but always allow repairs with armors of the same armor type (light, medium, heavy).
+For weapons, the required repair skill is equal to the required weapon skill.
+For armor, the required skill depends on the DT value of the item.
+
+The skill exact skill requirements for armor are:
+* 0 Repair for Clothing (DT 0)
+* 25 Repair for Light Armor (DT < 10)
+* 50 Repair for Medium Armor (DT < 20)
+* 75 Repair for Heavy Armor (DT >= 20)
+* 100 Repair for Power Armor
 
 Repairing works like before, by selecting an item in the Pipboy inventory and pressing R). If no Repair Tools are available,
 R) is always greyed out. Otherwise, the current number of Repair Tools will be shown in the top right corner of the repair
 dialog (formerly that was where the repair skill was displayed).
 
-The original Jurgy Rigging perk is modified to give a 50% chance that no Repair Tool charge is used up on a repair.
+The original Jurgy Rigging perk is modified to add additional scrap items to weapon repair lists once you meet the
+repair skill requirements.
 
 It's possible to disable the system at runtime in the Control Panel.
