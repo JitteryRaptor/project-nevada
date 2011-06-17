@@ -147,8 +147,8 @@ to get the mod running.
 - Removed rancid food from dead animal loot
 
 [Equipment]
-- Added 3 Shooter to Shotgun Surgeon perk list
-- Added Pipe bomb missing to Demo Expert Perk List
+- Added missing 3 Shooter to Shotgun Surgeon perk list
+- Added missing Pipe Bomb to Demo Expert Perk List
 - Fixed Rail Cannon zooming bug
 - Fixed 5mm SMG loot list count
 - Fixed list error that prevented BoS NPCs from spawning with some of the new weapons
