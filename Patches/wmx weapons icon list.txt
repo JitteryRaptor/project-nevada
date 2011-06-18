@@ -1,6 +1,6 @@
 wattz pistol extended battery slot .......... [ ]
 wattz pistol super charger .................. [ ]
-flamer pistol expanded cylinder ............. [ ]
+flamer pistol expanded cylinder ............. [x]
 combat shotgun saddle drums ................. [x]
 cryo revolver extended barrel ............... [ ]
 5.56mm drum magazine (chinese assault rifle). [ ]
