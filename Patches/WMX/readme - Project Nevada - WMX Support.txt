@@ -38,8 +38,6 @@ Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 	2. Changelog
 	
 	3. Features
-		a) Dead Money
-		b) Honest Hearts
 
 	4. Installation
 
@@ -75,34 +73,7 @@ In cases where new mods had to be created, they match the style of existing WMX 
  3. Features
 ========================================================================================================================================
 
-The DLC modules add support for individual DLC. Each is a separate file that adds armors and weapons to the correct lists to work with
-the Project Nevada system.
-
-------------------------------------------------------------
- a) Dead Money
-------------------------------------------------------------
-
-* Visor Overlays
-	A custom visor overlay has been added to the Sierra Madre Security Helmets.
-
-* Grenade Hotkey
-	The grenades and throwable weapons have been added to the appropriate lists.
-	As soon as you get to the Sierra Madre, you can use	the	new weapons with your standard hotkey.
-	
-* Stealth Field
-	The Assassin suit has been given a stealth field.
-
-------------------------------------------------------------
- b) Honest Hearts
-------------------------------------------------------------
-
-* Visor Overlays
-	A custom visor overlay has been added to Salt-Upon-Wounds' Helmet.
-	The Deser Ranger Combat Helmet has been given the appropriate overlay.
-
-* Grenade Hotkey
-	The grenades and throwable weapons have been added to the appropriate lists.
-	As soon as you get to the Zion, you can use the new	weapons with your standard hotkey.
+TODO
 
 
 ========================================================================================================================================
@@ -142,11 +113,11 @@ OR
 
 4.	Done!
 
+------------------------------------------------------------
+ c) Load Order
+------------------------------------------------------------
 
-We really recommend using the Fallout Mod Manager to install any of these patches!
-It will automatically copy the right files and warn you in case you miss any of the required mods.
-So before you can get started, you have to choose whether you want to do the FOMM installation (recommended) or a manual installation.
-The procedure is the same for all patches.
+TODO
 
 
 ========================================================================================================================================
@@ -155,15 +126,14 @@ The procedure is the same for all patches.
 
 Problem: My game crashes right after starting it!
 
-Solution: This happens when you activated a DLC patch without owning the respective DLC. To fix it, find this patch and deactivate it
-	by unchecking it either in FOMM or the New Vegas Launcher.
+Solution: TODO
 
 
 ========================================================================================================================================
  6. Credits
 ========================================================================================================================================
 
-Antistar, original creator of WMX, new meshes.
+Antistar, author of WMX, for new meshes and support.
 T3T, for custom icons.
 Zealotlee, for models and textures.
 
