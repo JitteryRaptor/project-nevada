@@ -1,5 +1,5 @@
-wattz pistol extended battery slot .......... [ ]
-wattz pistol super charger .................. [ ]
+wattz pistol extended battery slot .......... [x]
+wattz pistol super charger .................. [x]
 flamer pistol expanded cylinder ............. [x]
 combat shotgun saddle drums ................. [x]
 cryo revolver extended barrel ............... [ ]
