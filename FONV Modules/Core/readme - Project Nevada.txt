@@ -15,11 +15,13 @@
 
 ########################################################################################################################################
 
-Team: snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, TheCastle, x-quake, Gopher, Gribbleshnibit8, Mezmorki
+Team:			snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, TheCastle, x-quake, Gopher, Gribbleshnibit8, Mezmorki
 
-Current Version: 2.1
+Contributors:	Pelinor (Mod Configuration Menu)
 
-Download: http://www.newvegasnexus.com/downloads/file.php?id=40040
+Version:		2.1
+
+Download:		http://www.newvegasnexus.com/downloads/file.php?id=40040
 
 ########################################################################################################################################
 
@@ -28,9 +30,16 @@ The following mods/utilities are required for Project Nevada:
 * Fallout: New Vegas Script Extender (NVSE), version 2.0 beta4 or newer
 	http://nvse.silverlock.org/
 
-* Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
+* The Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
 	http://www.newvegasnexus.com/downloads/file.php?id=36901
+	
 
+Since version 2.1 Project Nevada comes with an integrated version of the Mod Configuration Menu (MCM) by Pelinor.
+If you want other mods to use the MCM as well, you can install the standalone MCM version, which will always take precedence if active:
+
+* The Mod Configuration Menu (MCM)
+	http://www.newvegasnexus.com/downloads/file.php?id=42507
+	
 ########################################################################################################################################
 
 Part I - General
@@ -1146,7 +1155,7 @@ The alternative repair system tries to address those issues. Its two cornerstone
 introduction of repair tools. Let's start with those:
 - To repair anything two things are required: An item to repair with (like before), and Repair Tools.
 - Repair tools are created at a workbench. One set of Wrench, Hammer, Wonderglue and Duct Tape yields 10 charges.
-- Crafting of Weapon Repair Kits is disabled, existing Weapon Repair Kits are replaced with at a 1:10 ratio.
+- Crafting of Weapon Repair Kits is disabled, existing Weapon Repair Kits are replaced with at a 1:5 ratio.
 
 This makes repairing harder, as it restricts the number or possible repairs even for very common weapons. Additionally,
 there are the dynamic repair lists. Repair lists are no longer fixed to a few items, but are expanded based on the

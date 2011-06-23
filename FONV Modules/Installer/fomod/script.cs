@@ -105,7 +105,7 @@ class Script : FalloutNewVegasBaseScript {
 		InstallModuleFiles("Core", excludes);
 		
 		UpdateInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
-		UpdateInclude("menus/prefabs/includes_StartMenu.xml", @"pnx\pnxpause.xml");
+		UpdateInclude("menus/prefabs/includes_StartMenu.xml", @"MCM\MCM.xml");
 		
 		UpdateUIFile("menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
 		UpdateUIFile("menus/options/start_menu.xml", "menus/options/start_menu.xml", "includes_StartMenu.xml");
