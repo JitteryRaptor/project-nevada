@@ -1,0 +1,52 @@
+	<brightness> 255 </brightness>
+	<depth> 12 </depth>
+	<font> <copy> 7 </copy> <sub> <copy> 1 </copy> <onlyifnot src="MCM" trait="_dUI"/> </sub> </font>
+	<justify> &left; </justify>
+	<string>  </string>
+	<systemcolor> &mainmenu; </systemcolor>
+	<visible>
+		<copy> 0 </copy>
+		<add>
+			<copy> 1 </copy>
+			<onlyif>
+				<copy src="MCM_ModList" trait="_selected"/>
+				<and>
+					<copy src="MCM_ModList" trait="_selected"/>
+					<eq> <copy src="me()" trait="_titleID"/> </eq>
+					<and> <not src="MCM" trait="_ActiveSubMenu"/> </and>
+				</and>
+			</onlyif>
+		</add>
+		<add>
+			<copy> 1 </copy>
+			<onlyif>
+				<copy src="MCM" trait="_ActiveSubMenu"/>
+				<and>
+					<copy src="MCM" trait="_ActiveSubMenu"/>
+					<eq src="me()" trait="_subTitleID"/>
+				</and>
+			</onlyif>
+		</add>
+	</visible>
+	<x>
+		<copy src="grandparent()" trait="x"/>
+		<add>
+			<copy src="grandparent()" trait="width"/>
+			<add src="MCM_ModList" trait="width"/>
+			<div> 2 </div>
+		</add>
+		<sub>
+			<copy src="me()" trait="width"/>
+			<div> 2 </div>
+		</sub>
+	</x>
+	<y>
+		<copy src="grandparent()" trait="y"/>
+		<sub>
+			<copy src="me()" trait="height"/>
+			<div> 3 </div>
+		</sub>
+	</y>
+	<_height> <copy> 0 </copy> <add src="me()" trait="height"/> <onlyif src="me()" trait="visible"/> </_height>
+	<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+	<_x> <copy> 0 </copy> <add src="me()" trait="x"/> <onlyif src="me()" trait="visible"/> </_x>
