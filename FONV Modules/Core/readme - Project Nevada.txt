@@ -140,6 +140,7 @@ to get the mod running.
 - Explosive Entry: Added trespassing alert when blowing up owned containers/doors
 - Explosive Entry: Fixed bug that would make the HUD icon appear for all explosions
 - Explosive Entry: Fixed bug where HUD icon would not disappear after reload
+- Grenade Hotkey: Fixed an issue where the script would stop working in rare situations
 - Visor Overlays: Decreased extra visor brightness by 50%
 
 [Cyberware]
@@ -159,6 +160,7 @@ to get the mod running.
 - Added missing 3 Shooter to Shotgun Surgeon perk list
 - Added missing Pipe Bomb to Demo Expert Perk List
 - Fixed Rail Cannon zooming bug
+- Fixed missing meshes for modded Gauss Minigun
 - Fixed 5mm SMG loot list count
 - Fixed list error that prevented BoS NPCs from spawning with some of the new weapons
 - Fixed visbility condition for Nuka Grenade recipe, added extra safety conditions to all recipes
