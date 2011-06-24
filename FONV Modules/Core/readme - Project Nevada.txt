@@ -32,8 +32,8 @@ The following mods/utilities are required for Project Nevada:
 
 * The Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
 	http://www.newvegasnexus.com/downloads/file.php?id=36901
-	
 
+	
 Since version 2.1 Project Nevada comes with an integrated version of the Mod Configuration Menu (MCM) by Pelinor.
 If you want other mods to use the MCM as well, you can install the standalone MCM version, which will always take precedence if active:
 
@@ -131,11 +131,12 @@ to get the mod running.
 2.1:
 
 [Core]
+- Removed old Control Panel and replaced it with an integrated version of MCM
+- Removed old configuration menu and replaced it with an MCM config script
 - Added Inventory Sorter feature
 - Fixed various typos
 - Added missing vision effects to Lucky Shades
 - Various optimizations by utilizing new NVSE functions
-- Control Panel: Improved menu structure and hotkey menu to show the current hotkey instead of a generic "Custom"
 - Explosive Entry: Added trespassing alert when blowing up owned containers/doors
 - Explosive Entry: Fixed bug that would make the HUD icon appear for all explosions
 - Explosive Entry: Fixed bug where HUD icon would not disappear after reload
@@ -145,14 +146,13 @@ to get the mod running.
 - Improved implant system so it's now possible for other mods to add their own implants
 
 [Rebalance]
-- Improved menu system so it now supports more entries per page and any number of options per entry
+- Removed old configuration menu and replaced it with an MCM config script
 - Improved Alternative Repair System
 - Fixed hitpoint formula descriptions by adding the missing 100 base HP
 - Included Yuki's weapon repair kit fix that would otherwise get overriden
 - Fixed issue where headshot monitor could accidently be added to the player
 - Removed non-functional "Less Skill Points" option
 - Removed more common ammo crafting components to avoid CTDs
-- Added a workaround to make sure the Rebalance menu appears in the Control Panel
 - Removed rancid food from dead animal loot
 
 [Equipment]
@@ -318,6 +318,7 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
  5. Credits & Acknowledgements
 ========================================================================================================================================
 
+Pelinor, included Mod Configuration Menu
 lespaul678, Sprint exhaustion sounds (male)
 Gopher, Heat vision effects
 Max Tael, MTUI compatibility files
@@ -554,11 +555,6 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 ------------------------------------------------------------
  c) Miscellaneous Features
 ------------------------------------------------------------
-
-* Control Panel
-	The control panel is accessible from the pause menu.
-	The button is in the lower right corner and only visible when coming directly from the game instead of another menu!
-	It's technically possible for other mods to add entries to the top-level menu.
 
 * Explosive Entry
 	This feature makes it possible to burst open locked containers and doors with explosives. It uses no special interface, just
