@@ -51,6 +51,23 @@ Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
 ########################################################################################################################################
 
+The following mods/utilities are required for Project Nevada:
+
+* Fallout: New Vegas Script Extender (NVSE), version 2.0 beta4 or newer
+	http://nvse.silverlock.org/
+
+* The Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
+	http://www.newvegasnexus.com/downloads/file.php?id=36901
+
+	
+Since version 2.1 Project Nevada comes with an integrated version of the Mod Configuration Menu (MCM) by Pelinor.
+If you want other mods to use the MCM as well, you can install the standalone MCM version, which will always take precedence if active:
+
+* The Mod Configuration Menu (MCM)
+	http://www.newvegasnexus.com/downloads/file.php?id=42507
+	
+########################################################################################################################################
+
 
 
 ========================================================================================================================================
@@ -73,132 +90,164 @@ In cases where new mods had to be created, they match the style of existing WMX 
  3. Features
 ========================================================================================================================================
 
-[Guns]
+Symbols:
+	 + New mod
+	 # Mod added by WMX
+	 ^ Vanilla mod edited by WMX
+	 ~ Unchanged from PN
 
-.22 Revolver
-	HD Cylinder	Increase Max Condition	50
-	Long Barrel	Increase Weapon Damage	3
-	Custom Action	Increase Rate of Fire	0.5
+------------------------------------------------------------
+a) Guns
+------------------------------------------------------------
 
-.44 Pistol
-	.44 Pistol Extended Mags	Increase Clip Capacity	12
-	Laser Sight	Decrease Spread	0.1
+* .22 Revolver
+	+ HD Cylinder
+	+ Long Barrel
+	+ Custom Action
 
-5mm Submachine Gun
-	5mm Submachine Gun Silencer	Silence	0
-	Laser Sight			Decrease Spread	0.5
-	5mm SMG Ext Barrel		Increase Weapon Damage	2
+* .44 Pistol
+	+ .44 Pistol Extended Mags
+	^ Laser Sight
 
-Alloy Steel Assault Rifle
-	5.56mm Extended Magazine	Increase Clip Capacity	10
-	Assault Rifle Scope		Increase Zoom	10
-	Assault Rifle Silencer		Silence
+* 10mm Alloy Steel Pistol
+	~ 10mm Pistol Extended Mags
+	~ 10mm Pistol Laser Sight
+	~ 10mm Pistol Silencer
 
-Alloy Steel Combat Shotgun
-	Combat Shotgun Choke		Decrease Spread	1
-	Combat Shotgun Saddle Drums	Increase Clip Capacity	18
+* 5mm Submachine Gun
+	~ 5mm Submachine Gun Silencer
+	^ Laser Sight
+	~ 5mm SMG Ext Barrel
+
+* Alloy Steel Assault Rifle
+	+ 5.56mm Extended Magazine
+	+ Assault Rifle Scope
+	+ Assault Rifle Silencer
+
+* Alloy Steel Combat Shotgun
+	+ Combat Shotgun Choke
+	+ Combat Shotgun Saddle Drums
 			
-Assault Rifle
-	5.56mm Extended Magazine	Increase Clip Capacity	10
-	Assault Rifle Scope	Increase Zoom	10
-	Assault Rifle Silencer	Silence
+* Assault Rifle
+	+ 5.56mm Extended Magazine
+	+ Assault Rifle Scope
+	+ Assault Rifle Silencer
 
-Chinese Assault Rifle
-	5.56mm Drum Magazine	Increase Clip Capacity	45
-	5.56mm Recoil Compensator	Decrease Spread
-	Assault Rifle Scope	Increase Zoom	
+* Chinese Assault Rifle
+	+ 5.56mm Drum Magazine
+	^ 5.56mm Recoil Compensator
+	+ Assault Rifle Scope
 
-Chinese Pistol
-	Chinese Pistol Ext. Mags	Increase Clip Capacity	10
-	Laser Sight	Decrease Spread	0.5
-	Chinese Pistol Long Barrel	Increase Weapon Damage	3
+* Chinese Pistol
+	+ Chinese Pistol Ext. Mags
+	^ Laser Sight
+	+ Chinese Pistol Long Barrel
 
-Chinese Sniper Rifle
-	Sniper Rifle Suppressor	Silence	0
-	Chinese Sniper Rifle Mesquite Stock	Decrease Weight	2
-	Sniper Rifle Extended Mags	Increase Clip Capacity	5
+* Chinese Sniper Rifle
+	^ Sniper Rifle Suppressor
+	+ Chinese Sniper Rifle Mesquite Stock
+	# Sniper Rifle Extended Mags
 
-Combat Shotgun
-	Combat Shotgun Choke	Decrease Spread	1
-	Combat Shotgun Saddle Drums	Increase Clip Capacity	18
+* Combat Shotgun
+	+ Combat Shotgun Choke
+	+ Combat Shotgun Saddle Drums
 
-Double-Barrel Shotgun
-	12 Gauge Shotgun Choke	Decrease Spread	1.5
+* Double-Barrel Shotgun
+	^ 12 Gauge Shotgun Choke
 
-Dragoon Assault Rifle
-	5.56mm Drum Magazine	Increase Clip Capacity	45
-	5.56mm Recoil Compensator	Decrease Spread	0.5
-	Assault Rifle Scope	Increase Zoom	10
+* Dragoon Assault Rifle
+	+ 5.56mm Drum Magazine
+	^ 5.56mm Recoil Compensator
+	+ Assault Rifle Scope
 
-Dragoon Pistol
-	Chinese Pistol Ext. Mags	Increase Clip Capacity	10
-	Laser Sight	Decrease Spread	0.5
-	Chinese Pistol Long Barrel	Increase Weapon Damage	3
+* Dragoon Pistol
+	+ Chinese Pistol Ext. Mags
+	^ Laser Sight
+	+ Chinese Pistol Long Barrel
 
-High Roller
-	.44 Pistol Extended Mags	Increase Clip Capacity	12
-	Laser Sight	Decrease Spread
+* European Battle Rifle
+	~ Euro Battle Rifle Night Scope
+	~ Euro Battle Rifle Folding Stock
+	~ Euro Battle Rifle Ext. Barrel
 
-Infiltrator
-	5.56mm Drum Magazine	Increase Clip Capacity	45
-	Infiltrator Improved Rifling	Increase Weapon Damage	4
-	Laser Sight	Decrease Spread	1.25
+* High Roller
+	+ .44 Pistol Extended Mags
+	^ Laser Sight
 
-Lever-Action Rifle
-	Trail Carbine Custom Action	Increase Rate of Fire	0.5
-	Lever-Action Rifle Long Barrel	Increase Weapon Damage	5
-	Lever-Action rifle Long Scope	Increase Zoom	15
+* Infiltrator
+	+ 5.56mm Drum Magazine
+	+ Infiltrator Improved Rifling
+	^ Laser Sight
 
-Replica Repeater
-	Trail Carbine Custom Action	Increase Rate of Fire	0.5
-	Lever-Action Rifle Long Barrel	Increase Weapon Damage	5
-	Lever-Action rifle Long Scope	Increase Zoom	15
+* Lever-Action Rifle
+	# Trail Carbine Custom Action
+	+ Lever-Action Rifle Long Barrel
+	+ Lever-Action rifle Long Scope
 
-The People's Rifle
-	Sniper Rifle Suppressor	Silence	0
-	Chinese Sniper Custom Action	Increase Rate of Fire	0.5
-	Sniper Rifle Extended Mags	Increase Clip Capacity	5
+* Liberator Rifle
+	~ Euro Battle Rifle Night Scope
+	~ Euro Battle Rifle Folding Stock
 
-Three Shooter
-	Three Shooter Barrel Reinforcement	Increase Max Condition	50
-	Three Shooter Choke	Decrease Weapon Spread	2				
-												
-												
-												
-[Energy Weapons]
+* Replica Repeater
+	# Trail Carbine Custom Action
+	+ Lever-Action Rifle Long Barrel
+	+ Lever-Action rifle Long Scope
 
-Alien Atomizer
-	Alien Blaster Exp. Mag. Accel.	Increase Projectile Speed	5
-	Extended Alien Power Cells	Increase Clip Capacity	10
-	Embedded Laser Sight	Decrease Spread	0.2
+* The People's Rifle
+	^ Sniper Rifle Suppressor
+	+ People's Rifle Custom Action
+	+ Sniper Rifle Extended Mags
 
-Alien Disintegrator
-	Alien Blaster Exp. Mag. Accel.	Increase Projectile Speed	20
-	Embedded Laser Sight	Decrease Spread	0.55				
+* Three Shooter
+	~ Three Shooter Barrel Reinforcement
+	+ Three Shooter Choke	
 
-Captain's Sidearm
-	Extended Alien Power Cells	Increase Clip Capacity	15
-	Alien Blaster Exp. Mag. Accel.	Increase Projectile Speed	20
+------------------------------------------------------------
+b) Energy Weapons
+------------------------------------------------------------
 
-Cryo Revolver
-	Cryo Revolver Extended Barrel	Increase Weapon Damage	6
+* Alien Atomizer
+	# Alien Blaster Exp. Mag. Accel.
+	# Extended Alien Power Cells
+	# Embedded Laser Sight
 
-Flamer Pistol
-	Flamer Pistol Expanded Cylinders	Increase Clip Capacity	10
-	Flamer Pistol Improved Heatsink	Increase Max Condition	75				
+* Alien Disintegrator
+	# Alien Blaster Exp. Mag.
+	# Embedded Laser Sight
 
-Plasma Repeater
-	Plasma Repeater Ext. Mags	Increase Clip Capacity	48
-	Plasma Repeater Scope	Increase Zoom	15
+* Auto-Gauss
+	~ Auto-Gauss Cooling Unit
+	~ Auto-Gauss Accelerators
+	~ Auto-Gauss Night Scope
 
-Tesla Rifle Prototype
-	Prototype Tesla Feeder Cylinders	Increase Weapon Damage	11
-	Prototype Tesla Oscillation Stabilizer	Decrease Spread	0.3
-	Micro Fusion Rifle Dual Harness	Increase Clip Capacity
+* Captain's Sidearm
+	~ Extended Alien Power Cells
+	~ Alien Blaster Exp. Mag. Accel.
 
-Wattz Laser Pistol
-	Wattz Pistol Extra Battery Socket	Increase Clip Capacity	12
-	Wattz Pistol Super Charger		Increase Weapon Damage	3
+* Cryo Revolver
+	+ Cryo Revolver Extended Barrel
+
+* Flamer Pistol
+	+ Flamer Pistol Expanded Cylinders
+	+ Flamer Pistol Improved Heatsink
+
+* Plasma Repeater
+	+ Plasma Repeater Ext. Mags
+	+ Plasma Repeater Scope
+
+* Tesla Rifle Prototype
+	+ Prototype Tesla Feeder Cylinders
+	+ Prototype Tesla Oscillation Stabilizer
+	+ Micro Fusion Rifle Dual Harness
+
+* Wattz Laser Pistol
+	+ Wattz Pistol Extra Battery Socket
+	+ Wattz Pistol Super Charger
+
+* Wattz Laser Rifle
+	~ Laser Rifle Scope
+	~ Laser RCW Recycler
+	~ Laser Rifle Focus Optics		
 
 
 ========================================================================================================================================
