@@ -765,6 +765,7 @@ a) Guns
 ------------------------------------------------------------
 
 [Restored FO3 weapons]
+* .22 Revolver
 * 10mm Alloy Steel Pistol
 * Alloy Steel Assault Rifle
 * Alloy Steel Combat Shotgun
@@ -780,7 +781,6 @@ a) Guns
 * Lever-Action Rifle
 * Railway Rifle
 * Replica Repeater
-* Saturday Night Special
 
 [Custom creations]
 * Chinese Sniper Rifle
