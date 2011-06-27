@@ -564,6 +564,10 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 	
 * Inventory Sorter
 	To keep your inventory managable, even when carrying lots of items, the inventory sorter prefixes items based on categories.
+	
+* MCM-powered Configuration Menu
+	The Mod Configuration Menu is accessible directly from the pause menu. In there, every Project Nevada Core feature can be
+	enabled or disabled at runtime.
 
 ------------------------------------------------------------
  d) Default hotkeys
@@ -899,40 +903,34 @@ As usual, the Control Panel allows players to customize most settings according 
 
 * Leveling Speed
 	Description:
-		Allows to set the leveling speed to roughly ~50% by modifying the XP rewards for killed enemies.
-	Options:
-		 10%
-		 25%
-		 50%
-		 66%
-		 75%
+		Allows to reduce the leveling speed.
+	Defaults:
 		100% [PN, Vanilla]
 
 * Carry Weight
 	Description:
-		Allows to use an alternative carry weight formula that's mainly based on STR.
-	Options:
+		Allows to change how total Carry Weight is calculated.
+	Defaults:
 		 25 + 25*STR [PN]
 		150 + 10*STR [Vanilla]
 		
 * Action Points
 	Description:
-		Allows to use an alternative action point formula that's mainly based on AGI.
-	Options:
+		Allows to change how total Action points are calculated.
+	Defaults:
 		45 + 6*AGI [PN]
 		65 + 3*AGI [Vanilla]
 
 * Perk Selection:
 	Description:
-		Allows to pick one perk at each level.
-	Options:
+		Allows to set the level interval for perk selection.
+	Defaults:
 		Every two Levels [PN, Vanilla]
-		Every Level
 
 * Throwing Range Multiplier:
 	Description:
 		Allows you to make the throwing range dependent on your strength.
-	Options:
+	Defaults:
 		1.0           [Vanilla]
 		0.5 + 0.1*STR [PN]
 
@@ -942,66 +940,61 @@ As usual, the Control Panel allows players to customize most settings according 
 
 * Hitpoints
 	Description:
-		Allows to reduce hitpoints of all actors and creatures to increase the relative damage and make combat much deadlier.
-	Options:
+		Allows to change how hitpoints for the player and other actors are calculated.
+	Defaults:
 		Player HP: 100 + 20 * END + 5 * LVL   ,   NPC HP: 100 + 5 * END + 5 * LVL [Vanilla]
-		Player HP: 100 + 10 * END             ,   NPC HP: 100 + 7 * END
-		Player HP: 100 +  7 * END             ,   NPC HP: 100 + 7 * END
+		Player HP: 100 + 10 * END             ,   NPC HP: 100 + 7 * END			  [PN]
 
-* DT Bleedthrough
+* DT Minimum Damage
 	Description:
 		Allows to modify the amount of minimum damage received with each shot, even it it was absorbed by DT.
-	Options:
-		 1%
-		10%
+	Defaults:
 		20% [Vanilla]
 		25% [PN]
-		50%
+		
+* Helmet Requirement for Head DT
+	Description:
+		By default, armor DT protects the full body, even if the head is unprotected.
+		If this option is enabled, DT will be bypassed for any headshot to an actor not wearing any head protection with DT > 0.
+	Defaults:
+		Yes [PN]
+		No  [Vanilla]
 		
 * Radiation Rate
 	Description:
-		Allows to modify the amount of minimum damage received with each shot, even it it was absorbed by DT.
-	Options:
+		Allows to modify the radiation increase rate.
+	Defaults:
 		100% [PN]
 		150% [Vanilla]
 
 * Safe Falling Distance
 	Description:
 		Allows to change at which falling height actors start to take damage.
-	Options:
+	Defaults:
 		400
 		600 [Vanilla]
 		
 * Damage Skill Influence
 	Description:
 		Allows to reduce the influence of weapon skill on damage. For 20%, someone with skill 0 will still do 80% base damage.
-	Options:
+	Defaults:
 		20% [PN]
 		50% [Vanilla]
 		
-* Explosion Knockdowns
+* Explosion Knockdowns and Sounds
 	Description:
 		Enables explosion knockdown based on explosion strength and S.P.E.C.I.A.L attributes.
 		This also includes an explosion ring effect.
-	Options:
+	Defaults:
 		Yes [PN]
 		 No [Vanilla]
 		 
 * Limb Damage
 	Description:
 		Allows to increase the amount of health damage that's transferred to limb damage.
-	Options:
+	Defaults:
 		75% [PN]
 		50% [Vanilla]
-		
-* DT for Headshots
-	Description:
-		By default, armor DT protects the full body, even if the head is unprotected.
-		If DT for headshots is requires wearing a helmet, any headshot to an actor not wearing any head protection with DT > 0
-		will do full damage, bypassing the body DT.
-	Options:
-		Only with Helmet [PN]
-		Always           [Vanilla]
 
 ------------------------------------------------------------
  c) Stealth + Movement options
@@ -1012,18 +1005,16 @@ As usual, the Control Panel allows players to customize most settings according 
 		Allows to select different sneak profiles. Harder sneaking makes sneaking more difficult, while still keeping the
 		original spirit so you can hide in plain sight with a high sneak skill.
 		The Experimental profile will make sneaking significantly harder, aiming for a realistic detection.
-	Options:
+	Defaults:
 		Normal       [Vanilla]
 		Harder       [PN]
-		Experimental
 		
 * Experimental Detection AI
 	Description:
 		Allows to enable scripted search behaviour. Actors will stay alerted much longer, also alerting nearby actors.
 		While alerted, they have significantly enhanced long range detection. If they spot the player of a large distance,
 		they will move towards him to investigate, making any nearby allies join them.
-	Options:
-		Yes
+	Defaults:
 		 No [PN, Vanilla]
 		 
 * Running Speed Multiplier
@@ -1033,105 +1024,97 @@ As usual, the Control Panel allows players to customize most settings according 
 		3.65 [PN]
 		4.00 [Vanilla]
 		
-* Holstered Speed
-		Allows to increase movement speed with a holstered weapon.
+* Holstered Speed Mutliplier
 	Description:
-	Options:
+		Allows to increase movement speed with a holstered weapon.
+	Defaults:
 		100% [Vanilla]
 		115% [PN]
 		
 * Crippled Legs Speed
 	Description:
 		Allows to reduce movement speed with crippled legs.
-	Options:
+	Defaults:
 		One leg 70% , Two legs 40% [PN]
 		One leg 85% , Two legs 75% [Vanilla]
 		
 ------------------------------------------------------------
- d) Miscellaneous options
+ d) Loot rarity options
+------------------------------------------------------------
+
+* Ammo Spawn Chance
+	Description:
+		Allows to reduce the chance for ammo to spawn in various locations. Special ammo is not affected.
+	Defaults:
+		25% [PN]
+		75% [Vanilla]
+
+* Food Spawn Chances
+	Description:
+		Allows to reduce the chance for food (includes drinks as well) to spawn in various locations.
+	Defaults:
+		37%, 37%, 27%, 17% [PN]
+		100%, 75%, 50%, 25% [Vanilla]
+		
+------------------------------------------------------------
+ e) Miscellaneous options
 ------------------------------------------------------------
 
 * Food Healing
 	Description:
 		Allows to disable food healing.
-	Options:
+	Defaults:
 		Yes [Vanilla]
 		No  [PN]
 		
 * Alternative Repair System
 	Description:
 		Enable an alternative repair system, which is explained in full detail in a seperate section.
-	Options:
+	Defaults:
 		Yes
 		 No [PN, Vanilla]
 		 
-* Primary Needs Increase per Minute
+* Primary Needs Increase Interval and Tweaked Timescale
 	Description:
 		Allows to increase the hunger, thirst and sleep increase rates.
-	Options:
-		Hunger 2.4, Thirst 6, Sleep 1.2 [Vanillla]
-		Hunger 3  , Thirst 6, Sleep 3   [PN]
+	Defaults:
+		Hunger 25, Thirst 10, Sleep 5,  Timescale 30 [Vanillla]
+		Hunger 20, Thirst 10, Sleep 20, Timescale 20 [PN]
 		
 * Survival Skill and Food Influence Primary Needs Rates
 	Description:
 		Allows the surivial skill and food quality to influence the hunger, sleep and thirst rates.
 		The survival skill reduces the increase speed by up to 50%.
 		Eating bad food will make hunger increase faster for a while.
-	Options:
+	Defaults:
 		Yes [PN]
 		 No [Vanilla]
 
 * Show Karma Messages
 	Description:
 		Allows to hide karma messages.
-	Options:
-		Yes [Vanilla]
-		 No [PN]
+	Defaults:
+		Yes [Vanilla, PN]
 
 * Show Sneak Indicator
-		Allows to hide the sneak indicator.
 	Description:
-	Options:
-		Yes [Vanilla]
-		 No [PN]
+		Allows to hide the sneak indicator.
+	Defaults:
+		Yes [Vanilla, PN]
 
 * Death Physics Force
 	Description:
 		Allows to reduce death physics so they are more realistic.
-	Options:
+	Defaults:
 		 50% [PN]
 		100% [Vanilla]
 
 * Gore Chance
 	Description:
 		Allows to reduce gore effects so they are less over-the-top.
-	Options:
-		Dismember 30%, Explode 45%
+	Defaults:
+		Dismember 30%, Explode 45% [PN]
 		Dismember 50%, Explode 75% [Vanilla]
-		
-------------------------------------------------------------
- e) Loot rarity options
-------------------------------------------------------------
-
-* Ammo Spawn Chance
-	Description:
-		Allows to reduce the chance for ammo to spawn in various locations. Special ammo is not affected.
-	Options:
-		10%
-		25% [PN]
-		33%
-		50%
-		66%
-		75% [V]
-
-* Food Spawn Chance
-	Description:
-		Allows to reduce the chance for food (includes drinks as well) to spawn in various locations.
-	Options:
-		10%, 10%, 10%, 10%
-		37%, 37%, 27%, 17% [PN]
-		75%, 50%, 25%, 10%
-		100%, 75%, 50%, 25% [V]
 
 ------------------------------------------------------------
  f) Food changes
