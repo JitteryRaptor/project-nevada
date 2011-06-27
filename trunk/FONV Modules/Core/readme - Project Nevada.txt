@@ -27,8 +27,10 @@ Download:		http://www.newvegasnexus.com/downloads/file.php?id=40040
 
 The following mods/utilities are required for Project Nevada:
 
-* Fallout: New Vegas Script Extender (NVSE), version 2.0 beta4 or newer
+* The Fallout: New Vegas Script Extender (NVSE), Version 2.0 Beta4 or newer.
 	http://nvse.silverlock.org/
+		or directly
+	http://nvse.silverlock.org/beta/nvse_2_beta4.zip
 
 * The Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
 	http://www.newvegasnexus.com/downloads/file.php?id=36901
@@ -132,7 +134,7 @@ to get the mod running.
 
 [Core]
 - Removed old Control Panel and replaced it with an integrated version of MCM
-- Removed old configuration menu and replaced it with an MCM config script
+- Removed old configuration menu and replaced it with an MCM-powered menu
 - Added Inventory Sorter feature
 - Fixed various typos
 - Added missing vision effects to Lucky Shades
@@ -140,14 +142,16 @@ to get the mod running.
 - Explosive Entry: Added trespassing alert when blowing up owned containers/doors
 - Explosive Entry: Fixed bug that would make the HUD icon appear for all explosions
 - Explosive Entry: Fixed bug where HUD icon would not disappear after reload
+- Explosive Entry: Added some missing explosions to the detection lists
 - Grenade Hotkey: Fixed an issue where the script would stop working in rare situations
+- Stealth Field: Fixed bug where Stealth Boy wouldn't drain field stability when activated for the first time
 - Visor Overlays: Decreased extra visor brightness by 50%
 
 [Cyberware]
 - Improved implant system so it's now possible for other mods to add their own implants
 
 [Rebalance]
-- Removed old configuration menu and replaced it with an MCM config script
+- Removed old configuration menu and replaced it with an MCM-powered menu
 - Improved Alternative Repair System
 - Fixed hitpoint formula descriptions by adding the missing 100 base HP
 - Included Yuki's weapon repair kit fix that would otherwise get overriden
@@ -155,17 +159,21 @@ to get the mod running.
 - Removed non-functional "Less Skill Points" option
 - Removed more common ammo crafting components to avoid CTDs
 - Removed rancid food from dead animal loot
+- Removed unintended high radiation increase when wading in water
 
 [Equipment]
 - Added missing 3 Shooter to Shotgun Surgeon perk list
-- Added missing Pipe Bomb to Demo Expert Perk List
+- Added missing Pipe Bomb to Demo Expert perk list
+- Added 10mm and 10mm SMG to The Professional perk list
 - Fixed Rail Cannon zooming bug
 - Fixed missing meshes for modded Gauss Minigun
 - Fixed 5mm SMG loot list count
+- Fixed missing dry firing and equip sounds for .44 Pistol and High Roller
 - Fixed list error that prevented BoS NPCs from spawning with some of the new weapons
 - Fixed visbility condition for Nuka Grenade recipe, added extra safety conditions to all recipes
 - Fixed faulty meshes for various weapons (thanks to Antistar)
 - Fixed 3 Shooter weapon mod description
+- Replaced .44 Pistol flash light mod by proper laser sight
 
 
 ------------------------------------------------------------
@@ -321,14 +329,14 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
 ========================================================================================================================================
 
 Pelinor, included Mod Configuration Menu
+Antistar, fixed weapon meshes
+pintocat, inventory sorting scheme
 lespaul678, Sprint exhaustion sounds (male)
 Gopher, Heat vision effects
 Max Tael, MTUI compatibility files
 DarN, DarNified UI compatibility files
 Ugluxy, textures for the visor damage effects
 LORD DARIUS and Jtrainz, Ironsight'ed Fallout 3 Weapons (http://www.newvegasnexus.com/downloads/file.php?id=36571)
-pintocat, inventory sorting scheme
-Antistar, fixed weapon meshes
 
 
 European Battle Rifle
@@ -579,8 +587,8 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 * Throw Grenade (G)
 * Select Grenade (H)
 * Control Panel (Hold P)
-* Zoom In (MWheel Up)
-* Zoom Out (MWheel Down)
+* Zoom In (Wheel Up)
+* Zoom Out (Wheel Down)
 
 ------------------------------------------------------------
  e) Item changes
