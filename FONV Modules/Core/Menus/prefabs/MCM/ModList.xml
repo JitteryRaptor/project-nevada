@@ -31,6 +31,32 @@
 			<add src="child(Mod22)" trait="_index"/>
 			<add src="child(Mod23)" trait="_index"/>
 		</_index>
+		<_index2>
+			<copy> 0 </copy>
+			<add src="child(Mod1)" trait="_index2"/>
+			<add src="child(Mod2)" trait="_index2"/>
+			<add src="child(Mod3)" trait="_index2"/>
+			<add src="child(Mod4)" trait="_index2"/>
+			<add src="child(Mod5)" trait="_index2"/>
+			<add src="child(Mod6)" trait="_index2"/>
+			<add src="child(Mod7)" trait="_index2"/>
+			<add src="child(Mod8)" trait="_index2"/>
+			<add src="child(Mod9)" trait="_index2"/>
+			<add src="child(Mod10)" trait="_index2"/>
+			<add src="child(Mod11)" trait="_index2"/>
+			<add src="child(Mod12)" trait="_index2"/>
+			<add src="child(Mod13)" trait="_index2"/>
+			<add src="child(Mod14)" trait="_index2"/>
+			<add src="child(Mod15)" trait="_index2"/>
+			<add src="child(Mod16)" trait="_index2"/>
+			<add src="child(Mod17)" trait="_index2"/>
+			<add src="child(Mod18)" trait="_index2"/>
+			<add src="child(Mod19)" trait="_index2"/>
+			<add src="child(Mod20)" trait="_index2"/>
+			<add src="child(Mod21)" trait="_index2"/>
+			<add src="child(Mod22)" trait="_index2"/>
+			<add src="child(Mod23)" trait="_index2"/>
+		</_index2>
 		<_line_width> 1 </_line_width>
 		<_mouseover>
 			<copy> 0 </copy>

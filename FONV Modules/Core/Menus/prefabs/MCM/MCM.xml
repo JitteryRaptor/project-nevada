@@ -5,6 +5,7 @@
 	<x> <copy src="screen()" trait="width"/> <sub src="me()" trait="width"/> <div> 2 </div> </x>
 	<y> <copy src="screen()" trait="height"/> <sub src="me()" trait="height"/> <div> 2 </div> </y>
 	<_ActiveMod> 0 </_ActiveMod>
+	<_ActiveMenu> 0 </_ActiveMenu>
 	<_ActiveSubMenu> 0 </_ActiveSubMenu>
 	<_ActiveOption> 0 </_ActiveOption>
 	<_Default> 0 </_Default>
@@ -21,6 +22,8 @@
 	<_ValueIncrement> 0 </_ValueIncrement>
 	<_ValueMax> 0 </_ValueMax>
 	<_ValueMin> 0 </_ValueMin>
+	<_ValueX> </_ValueX>
+	<_ValueY> </_ValueY>
 
 	<include src="MCM\Options.xml"/>
 
@@ -701,8 +704,8 @@
 		<rect name="box">
 			<include src="box.xml"/>
 			<visible> <copy src="parent()" trait="mouseover"/> </visible>
-			<x> <copy src="parent()" trait="x"/> <x>
-			<y> <copy src="parent()" trait="y"/> <y>
+			<x> <copy src="parent()" trait="x"/> </x>
+			<y> <copy src="parent()" trait="y"/> </y>
 		</rect>
 
 		<text name="text">
@@ -729,8 +732,8 @@
 		<rect name="box">
 			<include src="box.xml"/>
 			<visible> <copy src="parent()" trait="mouseover"/> </visible>
-			<x> <copy src="parent()" trait="x"/> <x>
-			<y> <copy src="parent()" trait="y"/> <y>
+			<x> <copy src="parent()" trait="x"/> </x>
+			<y> <copy src="parent()" trait="y"/> </y>
 		</rect>
 
 		<text name="text">
@@ -773,4 +776,6 @@
 			<add> 1 </add>
 		</y>
 	</text>
+
+	<!--<include src="MCM\XYScale.xml"/>-->
 </rect>

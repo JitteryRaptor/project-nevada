@@ -156,7 +156,7 @@
 	<_value> </_value>
 
 	<image name="highlight">
-		<alpha> 80 </alpha>
+		<alpha> 30 </alpha>
 		<brightness> 255 </brightness>
 		<depth> 11 </depth>
 		<filename> effects\fxsoftglowspot01.dds </filename>
