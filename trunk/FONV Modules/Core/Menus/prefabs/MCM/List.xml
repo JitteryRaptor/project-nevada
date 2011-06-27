@@ -33,6 +33,7 @@
 		<_selected> 0 </_selected>
 		<_spacing> 6 </_spacing>
 		<_title> </_title>
+		<_thickness> <copy src="globals()" trait="_line_thickness"/> </_thickness>
 		<_visible>
 			<copy> 0 </copy>
 			<add src="child(Item1)" trait="visible"/>

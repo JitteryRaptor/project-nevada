@@ -46,14 +46,16 @@
 	</y>
 	<_enable> 0 </_enable>
 	<_index> <copy> 0 </copy> <add src="me()" trait="_modIndex"/> <onlyif src="me()" trait="mouseover"/> </_index>
+	<_index2> <copy> 0 </copy> <add src="me()" trait="_modIndex2"/> <onlyif src="me()" trait="mouseover"/> </_index2>
 	<_modIndex> 0 </_modIndex>
+	<_modIndex2> 0 </_modIndex2>
 	<_mouseover> <copy> 0 </copy> <add src="me()" trait="_modID"/> <onlyif src="me()" trait="mouseover"/> </_mouseover>
 	<_subID> 0 </_subID>
 	<_subIndex> <copy> 0 </copy> <add src="me()" trait="_subID"/> <onlyif src="me()" trait="mouseover"/> </_subIndex>
 	<_width> <copy> 0 </copy> <add> <copy src="child(text)" trait="width"/> <onlyif> <copy src="parent()" trait="_widthcheck"/> <eq> <copy src="me()" trait="_modID"/> </eq> </onlyif> </add> </_width>
 
 	<image name="highlight">
-		<alpha> 60 </alpha>
+		<alpha> 30 </alpha>
 		<brightness> 255 </brightness>
 		<depth> 11 </depth>
 		<filename> effects\fxsoftglowspot01.dds </filename>

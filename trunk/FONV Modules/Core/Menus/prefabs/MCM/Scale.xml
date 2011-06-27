@@ -91,6 +91,20 @@
 			<y> <copy src="parent()" trait="y"/> <add> <copy src="me()" trait="height"/> <div> 3 </div> </add> </y>
 		</text>
 
+		<hotrect name="Title_BG">
+			<alpha> 255 </alpha>
+			<blue> 0 </blue>
+			<depth> 15 </depth>
+			<green> 0 </green>
+			<height> <copy src="sibling(Scale_Title)" trait="height"/> <add> <copy src="globals()" trait="_line_thickness"/> <mul> 4 </mul> </add> <add src="sibling(XY_Accept)" trait="height"/> <add src="MCM_Options" trait="_padding"/> </height>
+			<red> 0 </red>
+			<systemcolor> &nosystemcolor; </systemcolor>
+			<target> &false; </target>
+			<width> <copy src="sibling(Scale_Title)" trait="width"/> <add> <copy src="globals()" trait="_line_thickness"/> <mul> 4 </mul> </add> </width>
+			<x> <copy src="parent()" trait="x"/> <sub src="globals()" trait="_line_thickness"/> </x>
+			<y> <copy src="parent()" trait="y"/> <sub src="globals()" trait="_line_thickness"/> </y>
+		</hotrect>
+
 		<rect name="Scale_Value">
 			<width> <copy src="child(Value_Unit)" trait="width"/> <add src="child(Value_Suffix)" trait="_width"/> </width>
 			<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
@@ -132,7 +146,7 @@
 			<y> <copy src="sibling(Scale_BG)" trait="y"/> <add src="sibling(Scale_BG)" trait="height"/> <sub src="me()" trait="height"/> </y>
 
 			<image name="highlight">
-				<alpha> 60 </alpha>
+				<alpha> 30 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 16 </depth>
 				<filename> effects\fxsoftglowspot01.dds </filename>
@@ -168,7 +182,7 @@
 			<y> <copy src="sibling(Scale_Accept)" trait="y"/> </y>
 
 			<image name="highlight">
-				<alpha> 60 </alpha>
+				<alpha> 30 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 16 </depth>
 				<filename> effects\fxsoftglowspot01.dds </filename>
@@ -204,7 +218,7 @@
 			<y> <copy src="sibling(Scale_Accept)" trait="y"/> </y>
 
 			<image name="highlight">
-				<alpha> 60 </alpha>
+				<alpha> 30 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 16 </depth>
 				<filename> effects\fxsoftglowspot01.dds </filename>
