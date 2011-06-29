@@ -51,20 +51,13 @@ Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
 ########################################################################################################################################
 
-The following mods/utilities are required for Project Nevada:
+The following mods are required:
 
-* Fallout: New Vegas Script Extender (NVSE), version 2.0 beta4 or newer
-	http://nvse.silverlock.org/
-
-* The Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
-	http://www.newvegasnexus.com/downloads/file.php?id=36901
-
+* Weapon Mods Expanded - WMX
+	http://www.newvegasnexus.com/downloads/file.php?id=39651
 	
-Since version 2.1 Project Nevada comes with an integrated version of the Mod Configuration Menu (MCM) by Pelinor.
-If you want other mods to use the MCM as well, you can install the standalone MCM version, which will always take precedence if active:
-
-* The Mod Configuration Menu (MCM)
-	http://www.newvegasnexus.com/downloads/file.php?id=42507
+* Project Nevada Equipment Module
+	http://www.newvegasnexus.com/downloads/file.php?id=40040
 	
 ########################################################################################################################################
 
@@ -315,7 +308,14 @@ Arrange your load order like this:
 
 Problem: My game crashes right after starting it!
 
-Solution: TODO
+Solution: There are basically two things that can cause this:
+	1)	A missing requirement (some plugins depend on other plugins, and if they can't find them the game crashes).
+		To fix this, make sure have WMX and the Project Nevada Equipment Module installed.
+		Also don't forgot to adjust your load order as described in the next point.
+                
+	2)	Your load order is wrong.
+		You can fix your load order in FOMM by dragging plugins in the mod list. Make sure all patches you're using are placed after
+		their requirements. Refer to the previous section for an example.
 
 
 ========================================================================================================================================
