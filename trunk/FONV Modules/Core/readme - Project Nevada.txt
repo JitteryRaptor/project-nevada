@@ -27,7 +27,7 @@ Download:		http://www.newvegasnexus.com/downloads/file.php?id=40040
 
 The following mods/utilities are required for Project Nevada:
 
-* The Fallout: New Vegas Script Extender (NVSE), Version 2.0 Beta4 or newer.
+* The Fallout: New Vegas Script Extender (NVSE), Version 2.0 Beta4.
 	http://nvse.silverlock.org/
 		or directly
 	http://nvse.silverlock.org/beta/nvse_2_beta4.zip
@@ -165,6 +165,7 @@ to get the mod running.
 - Added missing 3 Shooter to Shotgun Surgeon perk list
 - Added missing Pipe Bomb to Demo Expert perk list
 - Added 10mm and 10mm SMG to The Professional perk list
+- Improved Plasma Disruptor charging mechanics
 - Fixed Rail Cannon zooming bug
 - Fixed missing meshes for modded Gauss Minigun
 - Fixed 5mm SMG loot list count
@@ -1061,7 +1062,7 @@ As usual, the Control Panel allows players to customize most settings according 
 	Description:
 		Allows to reduce the chance for food (includes drinks as well) to spawn in various locations.
 	Defaults:
-		37%, 37%, 27%, 17% [PN]
+		37%,  37%, 27%, 17% [PN]
 		100%, 75%, 50%, 25% [Vanilla]
 		
 ------------------------------------------------------------
