@@ -2,8 +2,17 @@ wattz pistol extended battery slot .......... [x]
 wattz pistol super charger .................. [x]
 flamer pistol expanded cylinder ............. [x]
 combat shotgun saddle drums ................. [x]
-cryo revolver extended barrel ............... [ ]
-5.56mm drum magazine (chinese assault rifle). [ ]
+cryo revolver extended barrel ............... [x]
+5.56mm drum magazine (chinese assault rifle). [x]
 lever-action rifle long scope ............... [x]
 chinese sniper new stock .................... [x]
 plasma repeater extended battery ............ [x]
+
+Auto gauss accelerator
+auto gauss cooling unit
+.44 pistol ext mag
+chinese pistol ext mag
+euro rifle ext barrel
+3 shooter barrel reinforcement
+lever action rifle long barrel (/w tube)
+3 shooter choke

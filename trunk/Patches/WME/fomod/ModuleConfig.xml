@@ -1,0 +1,22 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+	<moduleName>Project Nevada - WME Support</moduleName>
+	<moduleDependencies operator="And">
+		<dependencies operator="Or">
+			<fileDependency file="Project Nevada - Core.esm" state="Active"/>
+			<fileDependency file="Project Nevada - Core.esm" state="Inactive"/>
+		</dependencies>
+		<dependencies operator="Or">
+			<fileDependency file="Project Nevada - Equipment.esm" state="Active"/>
+			<fileDependency file="Project Nevada - Equipment.esm" state="Inactive"/>
+		</dependencies>
+		<dependencies operator="Or">
+			<fileDependency file="Weapon Mod Expansion.esm" state="Active"/>
+			<fileDependency file="Weapon Mod Expansion.esm" state="Inactive"/>
+		</dependencies>
+	</moduleDependencies>
+	<requiredInstallFiles>
+		<folder source="meshes/"/>
+		<folder source="textures/"/>
+		<file source="Project Nevada - WMX.esp" />
+	</requiredInstallFiles>
+</config>
