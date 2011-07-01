@@ -11,11 +11,11 @@ plasma repeater extended battery ............ [X]
 Auto gauss accelerator ...................... [ ]
 auto gauss cooling unit ..................... [ ]
 .44 pistol ext mag .......................... [*]
-chinese pistol ext mag ...................... [ ] 
+chinese pistol ext mag ...................... [x] 
 euro rifle ext barrel ....................... [ ]
-3 shooter barrel reinforcement .............. [ ]
+3 shooter barrel reinforcement .............. [x]
 lever action rifle long barrel (/w tube) .... [ ]
-3 shooter choke ............................. [ ]
+3 shooter choke ............................. [#]
 
 
  _________________________________________________
@@ -25,6 +25,6 @@ lever action rifle long barrel (/w tube) .... [ ]
 |  [x] - HD Draft Complete                        |
 |  [X] - Completed and Converted to .dds          |
 |  [*] - Suitable vanilla/WMX icon already exists |
-|                                                 |
+|  [#] - Suitable WMX mod exists already          |
 |                                                 |
 |_________________________________________________|
