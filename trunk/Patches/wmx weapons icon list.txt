@@ -12,9 +12,9 @@ Auto gauss accelerator ...................... [x]
 auto gauss cooling unit ..................... [x]
 .44 pistol ext mag .......................... [*]
 chinese pistol ext mag ...................... [x] 
-euro rifle ext barrel ....................... [ ]
+euro rifle ext barrel ....................... [x]
 3 shooter barrel reinforcement .............. [x]
-lever action rifle long barrel (/w tube) .... [ ]
+lever action rifle long barrel (/w tube) .... [x]
 3 shooter choke ............................. [#]
 
 
