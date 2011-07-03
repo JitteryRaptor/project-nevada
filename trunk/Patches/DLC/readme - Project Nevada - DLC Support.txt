@@ -27,7 +27,7 @@ Project Nevada - DLC Support
 Authors: Gribbleshnibit8 and snakster
 Contributors: Aether89, T3T, Zealotlee
 
-Current Version: 1.0
+Current Version: 1.1
 
 Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
@@ -68,7 +68,17 @@ appropriate patches.
  2. Changelog
 ========================================================================================================================================
 
+1.1:
+
+[Dead Money] 
+- Added digital zoom to Holo Rifle
+
 1.0:
+
+[Dead Money]
+- Initial release
+
+[Honest Hearts]
 - Initial release
 
 
@@ -92,6 +102,9 @@ the Project Nevada system.
 	
 * Stealth Field
 	The Assassin suit has been given a stealth field.
+	
+* Weapon Zoom
+	The Holo Rifle now uses digital zooming.
 
 ------------------------------------------------------------
  b) Honest Hearts
