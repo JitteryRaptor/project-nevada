@@ -1,0 +1,16 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+	<moduleName>Project Nevada - Rebalance Rebalanced</moduleName>
+	<moduleDependencies operator="And">
+		<dependencies operator="Or">
+			<fileDependency file="Project Nevada - Core.esm" state="Active"/>
+			<fileDependency file="Project Nevada - Core.esm" state="Inactive"/>
+		</dependencies>
+		<dependencies operator="Or">
+			<fileDependency file="Project Nevada - Rebalance.esm" state="Active"/>
+			<fileDependency file="Project Nevada - Rebalance.esm" state="Inactive"/>
+		</dependencies>
+	</moduleDependencies>
+	<requiredInstallFiles>
+		<file source="Project Nevada - Rebalance Rebalanced.esp" />
+	</requiredInstallFiles>
+</config>
