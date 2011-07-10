@@ -19,7 +19,7 @@ Team:			snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, TheCastle, x-
 
 Contributors:	Pelinor (Mod Configuration Menu)
 
-Version:		2.1
+Version:		2.2
 
 Download:		http://www.newvegasnexus.com/downloads/file.php?id=40040
 
@@ -27,10 +27,8 @@ Download:		http://www.newvegasnexus.com/downloads/file.php?id=40040
 
 The following mods/utilities are required for Project Nevada:
 
-* The Fallout: New Vegas Script Extender (NVSE), Version 2.0 Beta4.
+* The Fallout: New Vegas Script Extender (NVSE)
 	http://nvse.silverlock.org/
-		or directly
-	http://nvse.silverlock.org/beta/nvse_2_beta4.zip
 
 * The Fallout Mod Manager (FOMM) is HIGHLY recommended for properly installing and setting up Project Nevada.
 	http://www.newvegasnexus.com/downloads/file.php?id=36901
@@ -128,6 +126,18 @@ to get the mod running.
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
+
+------------------------------------------------------------
+2.2:
+
+[Core]
+
+[Cyberware]
+
+[Rebalance]
+
+[Equipment]
+
 
 ------------------------------------------------------------
 2.1:
@@ -331,12 +341,16 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
 
 Pelinor, included Mod Configuration Menu
 Antistar, fixed weapon meshes
+Antistar,  ammo spread effect lists
 pintocat, inventory sorting scheme
 lespaul678, Sprint exhaustion sounds (male)
 Gopher, Heat vision effects
 Max Tael, MTUI compatibility files
 DarN, DarNified UI compatibility files
 Ugluxy, textures for the visor damage effects
+pintocat, inventory sorting scheme
+Crawlius, charging sound effects
+Crawlius, unstable explosion sound effects
 LORD DARIUS and Jtrainz, Ironsight'ed Fallout 3 Weapons (http://www.newvegasnexus.com/downloads/file.php?id=36571)
 
 
@@ -445,6 +459,9 @@ T57-C Power Armor
 Vault-Tec Power Armor
 	Source: VaultTec Power Armor (http://www.newvegasnexus.com/downloads/file.php?id=41279), by AnOneTwo
 
+Leather Backpack
+	Source: Leather Backpack (http://www.newvegasnexus.com/downloads/file.php?id=39611), by d_ivanov
+
 
 Thanks to our external testers, who helped a great deal with improving the overall quality of this mod:
 	gyshall, mikekearn, Ren Lotus, robber804, ToJKa (in alphabetical order)
@@ -547,6 +564,9 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 * Enhanced Vision Modes
 	Power Armor helmets and other high-tech gear now enable enhanced vision modes like Night Vision, Heat Vision and EM Vision.
 	If there's no Power Armor equipped as a power source, energy cells are required while these modes are active.
+	
+* Chargeable Weapons
+	asdf
 		
 ------------------------------------------------------------
  b) Immersion Features
@@ -890,6 +910,7 @@ a) Guns
 * Advanced Recon Helm
 * Armored Duster
 * Death Walker Duster
+* Leather Backpack
 * Ranger Recon Armor
 * Ranger Recon Helm
 * T57-C Power Armor
@@ -1004,6 +1025,13 @@ As usual, the Control Panel allows players to customize most settings according 
 	Defaults:
 		75% [PN]
 		50% [Vanilla]
+
+* Auto Aim
+	Description:
+		Allows to tweak parameters for auto aim.
+	Defaults:
+		Distance 5000, Max Angle 0.1, Screen Area 0.1 [PN]
+		Distance 1800, Max Angle 3,   Screen Area 20  [Vanilla]
 
 ------------------------------------------------------------
  c) Stealth + Movement options
