@@ -388,6 +388,9 @@ High Roller
 Auto-Gauss
 	Source: Classic M72 Gauss Rifle (http://newvegasnexus.com/downloads/file.php?id=37703), by DaiShiSUN
 	
+Auto-Gauss Pistol
+	Source: Classic PPK12 Gauss Pistol (http://newvegasnexus.com/downloads/file.php?id=42711), by DaiShiSUN
+	
 Cryo Revolver
 	Source: M-2081 Pistol (http://newvegasnexus.com/downloads/file.php?id=40174), by Omegared99
 	Explosion sound effect: mateomateo002 and Nubblecakes
@@ -422,9 +425,12 @@ Plasma Repeater
 	Source: Plasma Weapons Redesign Rebalance (http://www.fallout3nexus.com/downloads/file.php?id=8983), by Chai
 	
 Crowbar
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), Linerunner and War1982
+	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
 	Original source: Crowbar (http://www.fallout3nexus.com/downloads/file.php?id=1480), by Frostbitex460
 	Original model/textures: Quad	
+	
+Homemade Assault Rifle, Homemade Plasma Rifle, Homemade Rifle
+	Source: Plasma Weapons Redesign Rebalance (http://www.newvegasnexus.com/downloads/file.php?id=41099), by Eddur
 
 Rising Sun
 	Source: Laser Katana (http://www.newvegasnexus.com/downloads/file.php?id=41053), by Shogo
@@ -826,6 +832,8 @@ a) Guns
 * Liberator Rifle
 * .44 Pistol
 * High Roller
+* Homemade Rifle
+* Homemade Assault Rifle
 
 ------------------------------------------------------------
  b) Energy Weapons
@@ -842,6 +850,7 @@ a) Guns
 
 [Based on community creations]
 * Auto-Gauss
+* Auto-Gauss Pistol
 * Cryo Revolver
 * Gauss Minigun
 * Tesla Rifle Prototype
@@ -850,6 +859,7 @@ a) Guns
 * Wattz Laser Rifle
 * Plasma Disruptor
 * Plasma Repeater
+* Homemade Plasma Rifle
 	
 ------------------------------------------------------------
  c) Melee Weapons
