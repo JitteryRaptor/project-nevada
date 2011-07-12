@@ -339,19 +339,30 @@ Solution: Unfortunately, when doing a MANUAL install this can't be avoided. Eith
  5. Credits & Acknowledgements
 ========================================================================================================================================
 
-Pelinor, included Mod Configuration Menu
-Antistar, fixed weapon meshes
-Antistar,  ammo spread effect lists
-pintocat, inventory sorting scheme
-lespaul678, Sprint exhaustion sounds (male)
-Gopher, Heat vision effects
-Max Tael, MTUI compatibility files
-DarN, DarNified UI compatibility files
-Ugluxy, textures for the visor damage effects
-pintocat, inventory sorting scheme
-Crawlius, charging sound effects
-Crawlius, unstable explosion sound effects
-LORD DARIUS and Jtrainz, Ironsight'ed Fallout 3 Weapons (http://www.newvegasnexus.com/downloads/file.php?id=36571)
+Pelinor:	Included Mod Configuration Menu
+
+Antistar:	Fixed weapon meshes
+			Ammo spread effect lists
+		  
+MadCat221:	Q-41 Prototype
+			Custom plasma rifle equip/unequip sounds 			
+
+pintocat:	Inventory sorting scheme
+
+lespaul678:	Sprint exhaustion sounds (male)
+
+Gopher:		Heat vision effects
+
+Max Tael:	MTUI compatibility files
+
+DarN:		DarNified UI compatibility files
+
+Ugluxy:		Textures for the visor damage effects
+
+Crawlius:	Charging sound effects;
+			Unstable explosion sound effects
+			
+LORD DARIUS and Jtrainz: Ironsight'ed Fallout 3 Weapons (http://www.newvegasnexus.com/downloads/file.php?id=36571)
 
 
 European Battle Rifle
@@ -847,6 +858,7 @@ a) Guns
 
 [Custom creations]
 * Rail Cannon
+* Q-41 Prototype
 
 [Based on community creations]
 * Auto-Gauss
