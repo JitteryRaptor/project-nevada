@@ -11,7 +11,7 @@
 	<_Default> 0 </_Default>
 	<_DefaultScale> 0 </_DefaultScale>
 	<_dUI> <copy> 1 </copy> <onlyif src="StartMenu" trait="_duiVersion"/> </_dUI>
-	<_MCM> 1 </_MCM>
+	<_MCM> 1.1 </_MCM>
 	<_Menu> 0 </_Menu>
 	<_NewValue> 0 </_NewValue>
 	<_Reset> 0 </_Reset>
@@ -776,6 +776,4 @@
 			<add> 1 </add>
 		</y>
 	</text>
-
-	<!--<include src="MCM\XYScale.xml"/>-->
 </rect>
