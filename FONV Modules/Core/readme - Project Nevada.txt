@@ -345,7 +345,7 @@ Antistar:	Fixed weapon meshes
 			Ammo spread effect lists
 		  
 MadCat221:	Q-41 Prototype
-			Custom plasma rifle equip/unequip sounds 			
+			Plasma rifle equip/unequip sounds from Plasma Rifles Awesomefied (http://www.newvegasnexus.com/downloads/file.php?id=35678)			
 
 pintocat:	Inventory sorting scheme
 
@@ -361,6 +361,8 @@ Ugluxy:		Textures for the visor damage effects
 
 Crawlius:	Charging sound effects;
 			Unstable explosion sound effects
+
+joefoxx082:	Fixed Attack3 and Attack4 IS animations
 			
 LORD DARIUS and Jtrainz: Ironsight'ed Fallout 3 Weapons (http://www.newvegasnexus.com/downloads/file.php?id=36571)
 
@@ -418,14 +420,14 @@ Flamer Pistol
 	
 Wattz Laser Pistol
 	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
-	Original model: joefoxx
-	Original texture: joefoxx
+	Original model: joefoxx082
+	Original texture: joefoxx082
 	Enhanced textures, animated glows and improvements: Jonnyeah
 
 Wattz Laser Rifle
 	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
-	Original model: joefoxx
-	Original texture: joefoxx
+	Original model: joefoxx082
+	Original texture: joefoxx082
 	Enhanced textures, animated glows and improvements: Jonnyeah
 
 Plasma Disruptor
