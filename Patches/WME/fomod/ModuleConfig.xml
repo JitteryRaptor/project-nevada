@@ -17,6 +17,6 @@
 	<requiredInstallFiles>
 		<folder source="meshes/"/>
 		<folder source="textures/"/>
-		<file source="Project Nevada - WMX.esp" />
+		<file source="Project Nevada - WME.esp" />
 	</requiredInstallFiles>
 </config>
