@@ -344,7 +344,8 @@ Pelinor:	Included Mod Configuration Menu
 Antistar:	Fixed weapon meshes
 			Ammo spread effect lists
 		  
-MadCat221:	Q-41 Prototype
+MadCat221:	Q-41 Prototype (Unique MultiPlas), including backstory
+			AER18 Prototype (Unique Tri-Beam Laser), including backstory
 			Plasma rifle equip/unequip sounds from Plasma Rifles Awesomefied (http://www.newvegasnexus.com/downloads/file.php?id=35678)			
 
 pintocat:	Inventory sorting scheme
@@ -359,7 +360,7 @@ DarN:		DarNified UI compatibility files
 
 Ugluxy:		Textures for the visor damage effects
 
-Crawlius:	Charging sound effects;
+Crawlius:	Charging sound effects
 			Unstable explosion sound effects
 
 joefoxx082:	Fixed Attack3 and Attack4 IS animations
