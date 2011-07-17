@@ -131,12 +131,36 @@ to get the mod running.
 2.2:
 
 [Core]
+- Added Chargeable Weapons feature that adds special fire modes to selected energy weapons
+- Added charging mechanics to AER14 Prototype and Q-35 Matter Modulator
+- Dynamic Crosshair: Included parts of Antistar's Ammo Spread Effect Fixer so the crosshair shows spread decrease for special ammo
+- Explosive Entry: Added additional type checks for destroyed items in containers to avoid destroying important things
+- Stealth Field: Fixed bug that allowed multiple Steath Boys to run at the same time
+- Scanner: Fixed issues with reloading during scanning
 
 [Cyberware]
+- Fixed a bug that could leave the cybernetic surgery menu unresponsive in rare situations
+- Added cybernetic surgery service to Doctor Henry in Jacobstown
+- Relocated Wired Synapses implant
+- Removed Energy Cell drain from implant-powered vision modes, instead AP regeneration is set to 0 while active
 
 [Rebalance]
+- Added options for auto aim to the configuration menu
+- Added options to modify skill points gained on level up
+- Fixed falling damage slider in the configuration menu
+- Fixed several tooltips in the configuration menu
+- Fixed headshot monitor effect not being stopped for companions in certain situations
 
 [Equipment]
+- Added Leather Backpack (Source: http://www.newvegasnexus.com/downloads/file.php?id=39611)
+- Added Classic PPK12 Gauss Pistol (Source: http://www.newvegasnexus.com/downloads/file.php?id=42711)
+- Added Homemade Rifle, Plasma Rifle and Assault Rifle (Source http://www.newvegasnexus.com/downloads/file.php?id=41099)
+- Added unique Multiplas Rifle created by MadCat221 with custom charging mechanics
+- Added unique Tri-Beam Laser Rifle created by MadCat221 with custom charging mechanics
+- Reworked the charging mechanics for the Plasma Disruptor and made the script compatible with the latest NVSE versions
+- Fixed issues with the Railway Rifle that could result in potential CTDs after firing multiple shots
+- Fixed 2 mismatched FormIDs introduced by the 1.4 patch
+- Fixed wrong attack animation for Wattz Laser Pistol
 
 
 ------------------------------------------------------------
@@ -586,7 +610,8 @@ Since the Core module avoids conflicting changes, players are free run it alongs
 	If there's no Power Armor equipped as a power source, energy cells are required while these modes are active.
 	
 * Chargeable Weapons
-	asdf
+	Selected unique weapons can be charged to enable powerful special attack modes.
+	By default, these weapons are the AER14 Laser Rifle and the Q-35 Plasma Rifle, with the Equipment module adding even more of them.
 		
 ------------------------------------------------------------
  b) Immersion Features
