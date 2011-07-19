@@ -309,6 +309,16 @@ In case you are using any mod that modifies the interface:
 ========================================================================================================================================
 
 ------------------------------------------------------------
+Problem: I'm having issues when using Project Nevada and other interface mods.
+
+Solution: Gopher made a series of videos tutorials, describing how to install Project Nevada together with several UI mods.
+	They also cover installation of NVSE, usage of FOMM and ways of recovering from installation errors. So if you need more detailed
+	installation instructions, check out those videos!
+	
+	Modding Fallout NV Part 1: User Interface	-> http://www.youtube.com/watch?v=EGzt6rF7MYA
+	Modding Fallout NV Part 2: Project Nevada	-> http://www.youtube.com/watch?v=DdfJME1nhGA
+
+------------------------------------------------------------
 Problem: My game crashes right after starting it!
 
 Solution: Yes, that's pretty annoying! There are basically two things that can cause this:
@@ -370,7 +380,8 @@ Antistar:	Fixed weapon meshes
 		  
 MadCat221:	Q-41 Prototype (Unique MultiPlas), including backstory
 			AER18 Prototype (Unique Tri-Beam Laser), including backstory
-			Plasma rifle equip/unequip sounds from Plasma Rifles Awesomefied (http://www.newvegasnexus.com/downloads/file.php?id=35678)			
+			Plasma rifle equip/unequip sounds from Plasma Rifles Awesomefied (http://www.newvegasnexus.com/downloads/file.php?id=35678)
+			Valueable feedback and bug reports
 
 pintocat:	Inventory sorting scheme
 
@@ -384,7 +395,7 @@ DarN:		DarNified UI compatibility files
 
 Ugluxy:		Textures for the visor damage effects
 
-Crawlius:	Charging sound effects
+Crawlius:	Weapon charging sound effects
 			Unstable explosion sound effects
 
 joefoxx082:	Fixed Attack3 and Attack4 IS animations
@@ -775,7 +786,7 @@ Upgradable items can be improved at a workbench. If they are already installed, 
 	#3 H&H Tools Factory, inside the opened safe in the office with the keycard
 	#4 Vault 22, Keely's lab
 * Wired Synapses
-	#1 Lake Mead, on the ground in a flooded cave
+	#1 Jacobstown Lodge, Doctor Henry's lab
 
 [For sale at Doctor Usanagi in New Vegas medical clinic]
 
@@ -820,6 +831,7 @@ Doc Mitchell, Goodsprings, Yes
 Linda Schuler, Hidden Valley Bunker, No
 Kemp, Camp McCarran, Yes
 Julie Farkas, Old Mormon Fort, Yes
+Doctor Henry, Jacobstown, No
 
 Training manual locations:
 #1 Locked safe in Goodsprings school
@@ -1006,6 +1018,12 @@ As usual, the Control Panel allows players to customize most settings according 
 		Allows to set the level interval for perk selection.
 	Defaults:
 		Every two Levels [PN, Vanilla]
+		
+* Skill Point Modifier:
+	Description:
+		Allows to adjust the skill points received on level up.
+	Defaults:
+		0 [PN, Vanilla]
 
 * Throwing Range Multiplier:
 	Description:
@@ -1022,8 +1040,8 @@ As usual, the Control Panel allows players to customize most settings according 
 	Description:
 		Allows to change how hitpoints for the player and other actors are calculated.
 	Defaults:
-		Player HP: 100 + 20 * END + 5 * LVL   ,   NPC HP: 100 + 5 * END + 5 * LVL [Vanilla]
-		Player HP: 100 + 10 * END             ,   NPC HP: 100 + 7 * END			  [PN]
+		Player HP: 100 + 20 * END + 5 * LVL   ,   NPC HP: Base HP + 5 * END + 5 * LVL [Vanilla]
+		Player HP: 100 + 10 * END             ,   NPC HP: Base HP + 7 * END			  [PN]
 
 * DT Minimum Damage
 	Description:
