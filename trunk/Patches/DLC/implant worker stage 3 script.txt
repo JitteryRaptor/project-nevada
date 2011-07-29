@@ -1,0 +1,76 @@
+; Refresh implant perks
+
+float fPercent
+
+;-----------------------------------------------------------------------------------------------------------------------------------------------------
+; Head
+;--------------------------------------------
+
+;-----------------------------------------------------------------------------------------------------------------------------------------------------
+; Torso
+if (PNxYImplantsPanel.torsoImplant1 == PNxOWBImplantY3 || PNxYImplantsPanel.torsoImplant2 == PNxOWBImplantY3 || PNxYImplantsPanel.torsoImplant3 == PNxOWBImplantY3 || PNxYImplantsPanel.torsoImplant4 == PNxOWBImplantY3)
+	if player.hasPerk PNxOWBImplantY3Perk == 0
+		player.addPerk PNxOWBImplantY3Perk 
+	endif
+else
+	player.removePerk PNxOWBImplantY3Perk 
+endif
+;--------------------------------------------
+if (PNxYImplantsPanel.torsoImplant1 == PNxOWBImplantY7 || PNxYImplantsPanel.torsoImplant2 == PNxOWBImplantY7 || PNxYImplantsPanel.torsoImplant3 == PNxOWBImplantY7 || PNxYImplantsPanel.torsoImplant4 == PNxOWBImplantY7)
+	if player.hasPerk PNxOWBImplantY7Perk == 0
+		player.addPerk PNxOWBImplantY7Perk 
+	endif
+else
+	player.removePerk PNxOWBImplantY7Perk 
+endif
+;--------------------------------------------
+if (PNxYImplantsPanel.headImplant1 == PNxOWBImplantGRX || PNxYImplantsPanel.headImplant2 == PNxOWBImplantGRX || PNxYImplantsPanel.headImplant3 == PNxOWBImplantGRX || PNxYImplantsPanel.headImplant4 == PNxOWBImplantGRX)
+	if player.hasPerk PNxOWBImplantGRXPerk == 0
+		player.addPerk PNxOWBImplantGRXPerk 
+	endif
+	set PNxOWBImplantsWorker.BulletTimeAPDrainOrig to PNxCBulletTimeAPDrain
+	set fPercent to ((PNxCBulletTimeAPDrain * 25)/100)
+	set fPercent to PNxCBulletTimeAPDrain - fPercent
+	set PNxCBulletTimeAPDrain to fPercent
+else
+	player.removePerk PNxOWBImplantGRXPerk
+	set PNxCBulletTimeAPDrain to PNxOWBImplantsWorker.BulletTimeAPDrainOrig
+endif
+
+;-----------------------------------------------------------------------------------------------------------------------------------------------------
+; Arms
+if PNxYImplantsPanel.rightArmImplant == PNxOWBImplantC13
+	if player.hasPerk PNxOWBImplantC13Perk == 0
+		player.addPerk PNxOWBImplantC13Perk
+	endif
+else
+	player.removePerk PNxOWBImplantC13Perk
+endif
+;--------------------------------------------
+if PNxYImplantsPanel.leftArmImplant == PNxOWBImplantC13
+	if player.hasPerk PNxOWBImplantC13Perk == 0
+		player.addPerk PNxOWBImplantC13Perk
+	endif
+else
+	player.removePerk PNxOWBImplantC13Perk
+endif
+
+;-----------------------------------------------------------------------------------------------------------------------------------------------------
+; Legs
+if PNxYImplantsPanel.rightLegImplant == PNxOWBImplantM5
+	if player.hasPerk PNxOWBImplantM5Perk == 0
+		player.addPerk PNxOWBImplantM5Perk 
+	endif
+	set PNxYLimbRegenRightLeg to 1
+else
+	player.removePerk PNxOWBImplantM5Perk 
+	set PNxYLimbRegenRightLeg to 0
+endif
+;--------------------------------------------
+if PNxYImplantsPanel.leftLegImplant == PNxOWBImplantM5
+	if player.hasPerk PNxOWBImplantM5Perk == 0
+		player.addPerk PNxOWBImplantM5Perk 
+	endif
+else
+	player.removePerk PNxOWBImplantM5Perk
+endif
