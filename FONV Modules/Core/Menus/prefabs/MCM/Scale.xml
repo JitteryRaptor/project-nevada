@@ -171,6 +171,20 @@
 				<x> <copy src="parent()" trait="x"/> <add src="MCM_Options" trait="_padding"/> </x>
 				<y> <copy src="parent()" trait="y"/> <add src="MCM_Options" trait="_padding"/> </y>
 			</text>
+
+			<image name="button">
+				<alpha> 255 </alpha>
+				<brightness> 180 </brightness>
+				<depth> 17 </depth>
+				<filename> general_button_a.dds </filename>
+				<height> 50 </height>
+				<texatlas> Interface\InterfaceShared.tai </texatlas>
+				<visible> <copy src="MCM" trait="_AltInput"/> </visible>
+				<width> 50 </width>
+				<x> <copy src="sibling(text)" trait="x"/> <sub> 40 </sub> </x>
+				<y> <copy src="sibling(text)" trait="y"/> <sub> 14 </sub> </y>
+				<zoom> &scale; </zoom>
+			</image>
 		</hotrect>
 
 		<hotrect name="Scale_Cancel">
@@ -207,6 +221,20 @@
 				<x> <copy src="parent()" trait="x"/> <add src="MCM_Options" trait="_padding"/> </x>
 				<y> <copy src="parent()" trait="y"/> <add src="MCM_Options" trait="_padding"/> </y>
 			</text>
+
+			<image name="button">
+				<alpha> 255 </alpha>
+				<brightness> 180 </brightness>
+				<depth> 17 </depth>
+				<filename> general_button_b.dds </filename>
+				<height> 50 </height>
+				<texatlas> Interface\InterfaceShared.tai </texatlas>
+				<visible> <copy src="MCM" trait="_AltInput"/> </visible>
+				<width> 50 </width>
+				<x> <copy src="sibling(text)" trait="x"/> <sub> 40 </sub> </x>
+				<y> <copy src="sibling(text)" trait="y"/> <sub> 14 </sub> </y>
+				<zoom> &scale; </zoom>
+			</image>
 		</hotrect>
 
 		<hotrect name="Scale_Default">
@@ -243,6 +271,20 @@
 				<x> <copy src="parent()" trait="x"/> <add src="MCM_Options" trait="_padding"/> </x>
 				<y> <copy src="parent()" trait="y"/> <add src="MCM_Options" trait="_padding"/> </y>
 			</text>
+
+			<image name="button">
+				<alpha> 255 </alpha>
+				<brightness> 180 </brightness>
+				<depth> 17 </depth>
+				<filename> general_button_y.dds </filename>
+				<height> 50 </height>
+				<texatlas> Interface\InterfaceShared.tai </texatlas>
+				<visible> <copy src="MCM" trait="_AltInput"/> </visible>
+				<width> 50 </width>
+				<x> <copy src="sibling(text)" trait="x"/> <sub> 40 </sub> </x>
+				<y> <copy src="sibling(text)" trait="y"/> <sub> 14 </sub> </y>
+				<zoom> &scale; </zoom>
+			</image>
 		</hotrect>
 
 		<hotrect name="Meter">
