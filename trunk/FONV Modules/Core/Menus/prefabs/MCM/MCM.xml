@@ -1,29 +1,41 @@
 <rect name="MCM">
-	<visible> &false; </visible>
+	<systemcolor> &mainmenu; </systemcolor>
 	<height> 675 </height>
+	<visible> &false; </visible>
 	<width> <copy> 850 </copy> <add src="MCM_ModList" trait="width"/> </width>
 	<x> <copy src="screen()" trait="width"/> <sub src="me()" trait="width"/> <div> 2 </div> </x>
 	<y> <copy src="screen()" trait="height"/> <sub src="me()" trait="height"/> <div> 2 </div> </y>
-	<_ActiveMod> 0 </_ActiveMod>
+
 	<_ActiveMenu> 0 </_ActiveMenu>
-	<_ActiveSubMenu> 0 </_ActiveSubMenu>
+	<_ActiveMod> 0 </_ActiveMod>
 	<_ActiveOption> 0 </_ActiveOption>
+	<_ActiveSubMenu> 0 </_ActiveSubMenu>
+	<_AltInput> &xbox; </_AltInput>
 	<_Default> 0 </_Default>
 	<_DefaultScale> 0 </_DefaultScale>
 	<_dUI> <copy> 1 </copy> <onlyif src="StartMenu" trait="_duiVersion"/> </_dUI>
-	<_MCM> 1.1 </_MCM>
+	<_KeyInut> 0 </_KeyInput>
+	<_MCM> 1.2 </_MCM>
 	<_Menu> 0 </_Menu>
 	<_NewValue> 0 </_NewValue>
 	<_Reset> 0 </_Reset>
 	<_ShowList> 0 </_ShowList>
 	<_ShowScale> 0 </_ShowScale>
+	<_TargetList> 0 </_TargetList>
+	<_TargetMenu> 0 </_TargetMenu>
+	<_TargetOption> 0 </_TargetOption>
+	<_TargetSubMenu> 0 </_TargetSubMenu>
+	<_UnClick> 0 </_UnClick>
 	<_Value> 0 </_Value>
+	<_ValueB> 0 </_ValueB>
 	<_ValueDecimal> 0 </_ValueDecimal>
+	<_ValueG> 0 </_ValueG>
 	<_ValueIncrement> 0 </_ValueIncrement>
 	<_ValueMax> 0 </_ValueMax>
 	<_ValueMin> 0 </_ValueMin>
-	<_ValueX> </_ValueX>
-	<_ValueY> </_ValueY>
+	<_ValueR> 0 </_ValueR>
+	<_ValueX> 0 </_ValueX>
+	<_ValueY> 0 </_ValueY>
 
 	<include src="MCM\Options.xml"/>
 
@@ -36,9 +48,11 @@
 		<clicksound> UIMenuOK </clicksound>
 		<height> 0 </height>
 		<mouseoversound> UIMenuFocus </mouseoversound>
+		<target> <not src="MCM_Return" trait="_clicked"/> <and src="me()" trait="_target"/> </target>
 		<visible> &true; </visible>
 		<width> 0 </width>
 		<x> 0 </x>
+		<xdown> <ref src="MCM_Return" trait="clicked"/> </xdown>
 		<y> 0 </y>
 
 		<_alpha> 0 </_alpha>
@@ -51,6 +65,7 @@
 				</and>
 			</onlyif>
 		</_box_visible>
+		<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
 		<_enabled> &false; </_enabled>
 		<_fill_alpha>
 			<copy> 40 </copy>
@@ -62,6 +77,7 @@
 				</and>
 			</onlyif>
 		</_fill_alpha>
+		<_target> 1 </_target>
 
 		<text name="MCM_TriggerText">
 			<alpha>
@@ -99,21 +115,22 @@
 	<include src="MCM\ModList.xml"/>
 
 	<rect name="MCM_BG">
+		<locus> &true; </locus>
+		<systemcolor> &nosystemcolor; </systemcolor>
 		<visible> <copy src="parent()" trait="_Menu"/> </visible>
+		<x> <copy src="parent()" trait="x"/> </x>
+		<y> <copy src="parent()" trait="y"/> </y>
 
 		<image name="MCM_BG_1">
 			<alpha> 255 </alpha>
 			<blue> 0 </blue>
 			<depth> 10 </depth>
-			<filename> Interface\Shared\solid.dds </filename>
+			<filename> Interface\Shared\empty.dds </filename>
 			<green> 0 </green>
 			<height> <copy src="grandparent()" trait="height"/> </height>
 			<red> 0 </red>
-			<systemcolor> &nosystemcolor; </systemcolor>
 			<target> &true; </target>
 			<width> <copy src="grandparent()" trait="width"/> </width>
-			<x> <copy src="grandparent()" trait="x"/> </x>
-			<y> <copy src="grandparent()" trait="y"/> </y>
 			<zoom> &scale; </zoom>
 		</image>
 
@@ -121,15 +138,13 @@
 			<alpha> 255 </alpha>
 			<blue> 0 </blue>
 			<depth> 10 </depth>
-			<filename> Interface\Shared\Background\large.dds </filename>
+			<filename> Interface\Shared\empty.dds </filename>
 			<green> 0 </green>
 			<height> <copy src="grandparent()" trait="height"/> <add> 50 </add> </height>
 			<red> 0 </red>
-			<systemcolor> &nosystemcolor; </systemcolor>
-			<target> &false; </target>
 			<width> <copy src="grandparent()" trait="width"/> <add> 50 </add> </width>
-			<x> <copy src="grandparent()" trait="x"/> <sub> 25 </sub> </x>
-			<y> <copy src="grandparent()" trait="y"/> <sub> 25 </sub> </y>
+			<x> <copy> 0 </copy> <sub> 25 </sub> </x>
+			<y> <copy> 0 </copy> <sub> 25 </sub> </y>
 			<zoom> &scale; </zoom>
 		</image>
 
@@ -137,15 +152,13 @@
 			<alpha> 225 </alpha>
 			<blue> 0 </blue>
 			<depth> 10 </depth>
-			<filename> Interface\Shared\Background\fuzzy.dds </filename>
+			<filename> Interface\Shared\empty.dds </filename>
 			<green> 0 </green>
 			<height> <copy src="MCM_ModTitle" trait="height"/> <mul> <copy> 1.5 </copy> <sub> <copy src="MCM_ModTitle" trait="width"/> <div> 1000 </div> </sub> </mul> </height>
 			<red> 0 </red>
-			<systemcolor> &nosystemcolor; </systemcolor>
-			<target> &false; </target>
 			<width> <copy src="MCM_ModTitle" trait="width"/> <mul> <copy> 1.5 </copy> <sub> <copy src="MCM_ModTitle" trait="width"/> <div> 1000 </div> </sub> </mul> </width>
-			<x> <copy src="MCM_ModTitle" trait="x"/> <sub> <copy src="me()" trait="width"/> <sub src="MCM_ModTitle" trait="width"/> <div> 2 </div> </sub> </x>
-			<y> <copy src="MCM_ModTitle" trait="y"/> <sub> <copy src="me()" trait="height"/> <sub src="MCM_ModTitle" trait="height"/> <div> 2 </div> </sub> </y>
+			<x> <copy src="MCM_ModTitle" trait="x"/> <sub src="parent()" trait="x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
+			<y> <copy src="MCM_ModTitle" trait="y"/> <sub src="parent()" trait="y"/> <sub> <copy src="me()" trait="height"/> <sub src="MCM_ModTitle" trait="height"/> <div> 2 </div> </sub> </y>
 			<zoom> &scale; </zoom>
 		</image>
 
@@ -153,16 +166,14 @@
 			<alpha> 225 </alpha>
 			<blue> 0 </blue>
 			<depth> 10 </depth>
-			<filename> Interface\Shared\solid.dds </filename>
+			<filename> <copy src="sibling(MCM_BG_1)" trait="filename"/> </filename>
 			<green> 0 </green>
 			<height> <copy src="MCM_Info" trait="height"/> <add> 20 </add> </height>
 			<red> 0 </red>
-			<systemcolor> &nosystemcolor; </systemcolor>
-			<target> &false; </target>
 			<visible> <copy src="MCM_Info" trait="visible"/> </visible>
 			<width> <copy src="MCM" trait="width"/> <sub src="MCM_ModList" trait="width"/> </width>
-			<x> <copy src="MCM" trait="x"/> <add src="MCM_ModList" trait="width"/> </x>
-			<y> <copy src="MCM" trait="y"/> <add src="MCM" trait="height"/> </y>
+			<x> <copy src="MCM_ModList" trait="width"/> </x>
+			<y> <copy src="MCM" trait="height"/> </y>
 			<zoom> &scale; </zoom>
 		</image>
 
@@ -170,16 +181,14 @@
 			<alpha> 225 </alpha>
 			<blue> 0 </blue>
 			<depth> 10 </depth>
-			<filename> Interface\Shared\Background\large.dds </filename>
+			<filename> <copy src="sibling(MCM_BG_2)" trait="filename"/> </filename>
 			<green> 0 </green>
 			<height> <copy src="MCM_Info" trait="height"/> <add> 260 </add> </height>
 			<red> 0 </red>
-			<systemcolor> &nosystemcolor; </systemcolor>
-			<target> &false; </target>
 			<visible> <copy src="MCM_Info" trait="visible"/> </visible>
 			<width> <copy src="MCM" trait="width"/> <sub src="MCM_ModList" trait="width"/> <add> 35 </add> </width>
-			<x> <copy src="MCM" trait="x"/> <add src="MCM_ModList" trait="width"/> <sub> 20 </sub> </x>
-			<y> <copy src="MCM" trait="y"/> <add src="MCM" trait="height"/> <sub> 222 </sub> </y>
+			<x> <copy src="MCM_ModList" trait="width"/> <sub> 20 </sub> </x>
+			<y> <copy src="MCM" trait="height"/> <sub> 222 </sub> </y>
 			<zoom> &scale; </zoom>
 		</image>
 
@@ -187,134 +196,164 @@
 			<alpha> 225 </alpha>
 			<blue> 0 </blue>
 			<depth> 12 </depth>
-			<filename> Interface\Shared\Background\large.dds </filename>
+			<filename> <copy src="sibling(MCM_BG_3)" trait="filename"/> </filename>
 			<green> 0 </green>
 			<height> <copy src="MCM_PressControl" trait="height"/> <mul> 1.5 </mul> </height>
 			<red> 0 </red>
-			<systemcolor> &nosystemcolor; </systemcolor>
-			<target> &false; </target>
 			<visible> <copy src="MCM_PressControl" trait="visible"/> </visible>
 			<height> <copy src="MCM_PressControl" trait="width"/> <mul> 1.5 </mul> </height>
-			<x> <copy src="MCM_PressControl" trait="x"/> <sub> <copy src="MCM_PressControl" trait="width"/> <mul> 0.25 </mul> </sub> </x>
-			<x> <copy src="MCM_PressControl" trait="y"/> <sub> <copy src="MCM_PressControl" trait="height"/> <mul> 0.25 </mul> </sub> </x>
+			<x> <copy src="MCM_PressControl" trait="x"/> <sub src="parent()" trait="x"/> <sub> <copy src="MCM_PressControl" trait="width"/> <mul> 0.25 </mul> </sub> </x>
+			<x> <copy src="MCM_PressControl" trait="y"/> <sub src="parent()" trait="y"/> <sub> <copy src="MCM_PressControl" trait="height"/> <mul> 0.25 </mul> </sub> </x>
 			<zoom> &scale; </zoom>
 		</image>
 	</rect>
 
 	<rect name="MCM_Bracket">
+		<systemcolor> &nosystemcolor; </systemcolor>
 		<visible> <copy src="parent()" trait="_Menu"/> </visible>
+		<_blue> <copy src="sibling(MCM_RGB)" trait="_LineBlue"/> </_blue>
+		<_green> <copy src="sibling(MCM_RGB)" trait="_LineGreen"/> </_green>
+		<_red> <copy src="sibling(MCM_RGB)" trait="_LineRed"/> </_red>
+
 
 		<rect name="MCM_Bracket_Top">
+			<locus> &true; </locus>
 			<width> <copy src="MCM" trait="width"/> </width>
 			<x> <copy src="MCM" trait="x"/> </x>
 			<y> <copy src="MCM" trait="y"/> </y>
+			<_TitleX> <copy src="MCM_ModTitle" trait="x"/> <sub src="MCM" trait="x"/> </_TitleX>
 
 			<image name="bracket_v1">
 				<include src="vertical_fade_line.xml"/>
+
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<depth> 11 </depth>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> 170 </height>
-				<x> <copy src="parent()" trait="x"/> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
 			</image>
 
 			<image name="bracket_h1">
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 				<depth> 11 </depth>
 				<filename> Interface\Shared\solid.dds </filename>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> <copy src="globals()" trait="_line_thickness"/> </height>
-				<width> <copy src="MCM_ModTitle" trait="x"/> <sub src="parent()" trait="x"/> <sub> 40 </sub> </width>
-				<x> <copy src="parent()" trait="x"/> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
+				<width> <copy src="MCM_ModTitle" trait="x"/> <sub> <copy src="MCM_ModTitle" trait="width"/> <div> 2 </div> </sub> <sub src="MCM" trait="x"/> <sub> 40 </sub> </width>
+				<zoom> &scale; </zoom>
 			</image>
 
 			<image name="bracket_h2">
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 				<depth> 11 </depth>
 				<filename> Interface\Shared\Line\fade_to_right.dds </filename>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> <copy src="globals()" trait="_line_thickness"/> </height>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
 				<width> 40 </width>
-				<x> <copy src="parent" trait="x"/> <add src="sibling(bracket_h1)" trait="width"/> </x>
-				<y> <copy src="parent" trait="y"/> </y>
+				<x> <copy src="sibling(bracket_h1)" trait="width"/> </x>
 				<zoom> &scale; </zoom>
 			</image>
 
 			<image name="bracket_h3">
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 				<depth> 11 </depth>
 				<filename> Interface\Shared\Line\fade_to_left.dds </filename>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> <copy src="globals()" trait="_line_thickness"/> </height>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
 				<width> 40 </width>
-				<x> <copy src="MCM_ModTitle" trait="x"/> <add src="MCM_ModTitle" trait="width"/> </x>
-				<y> <copy src="parent" trait="y"/> </y>
+				<x> <copy src="parent()" trait="_TitleX"/> <add> <copy src="MCM_ModTitle" trait="width"/> <div> 2 </div> </add> </x>
 				<zoom> &scale; </zoom>
 			</image>
 
 			<image name="bracket_h4">
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 				<depth> 11 </depth>
 				<filename> Interface\Shared\solid.dds </filename>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> <copy src="globals()" trait="_line_thickness"/> </height>
-				<width> <copy src="parent()" trait="width"/> <add src="parent()" trait="x"/> <sub src="me()" trait="x"/> </width>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
+				<width> <copy src="parent()" trait="width"/> <sub src="me()" trait="x"/> </width>
 				<x> <copy src="sibling(bracket_h3)" trait="x"/> <add src="sibling(bracket_h3)" trait="width"/> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
+				<zoom> &scale; </zoom>
 			</image>
 
 			<image name="bracket_v2">
 				<include src="vertical_fade_line.xml"/>
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<depth> 11 </depth>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> 170 </height>
-				<x> <copy src="parent()" trait="x"/> <add src="parent()" trait="width"/> <sub src="me()" trait="width"/> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
+				<x> <copy src="parent()" trait="width"/> <sub src="me()" trait="width"/> </x>
 			</image>
 
 			<image name="bracket_v3">
 				<include src="vertical_fade_line.xml"/>
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<depth> 11 </depth>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> 170 </height>
-				<x> <copy src="parent()" trait="x"/> <add src="MCM_ModList" trait="width"/> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
+				<x> <copy src="MCM_ModList" trait="width"/> </x>
 			</image>
 
 			<image name="bracket_v4">
 				<include src="vertical_fade_line.xml"/>
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<depth> 11 </depth>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> 170 </height>
-				<x> <copy src="parent()" trait="x"/> <add src="MCM_ModList" trait="width"/> </x>
-				<y>
-					<copy src="MCM" trait="y"/>
-					<add src="MCM" trait="height"/>
-					<sub> 170 </sub>
-				</y>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
+				<x> <copy src="MCM_ModList" trait="width"/> </x>
+				<y> <copy src="MCM" trait="height"/> <sub> 170 </sub> </y>
 				<_bottom_to_top> &true; </_bottom_to_top>
 			</image>
 
 			<image name="bracket_v5">
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 				<depth> 11 </depth>
 				<filename> Interface\Shared\solid.dds </filename>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> <copy src="MCM_Info" trait="height"/> <add> 20 </add> </height>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
 				<visible> <copy src="MCM_Info" trait="visible"/> </visible>
 				<width> <copy src="globals()" trait="_line_thickness"/> </width>
 				<x> <copy src="sibling(bracket_v3)" trait="x"/> </x>
-				<y> <copy src="MCM" trait="y"/> <add src="MCM" trait="height"/> </y>
+				<y> <copy src="MCM" trait="height"/> </y>
+				<zoom> &scale; </zoom>
 			</image>
 
 			<image name="bracket_v6">
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 				<depth> 11 </depth>
 				<filename> Interface\Shared\solid.dds </filename>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> <copy src="MCM_Info" trait="height"/> <add> 20 </add> </height>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
 				<visible> <copy src="MCM_Info" trait="visible"/> </visible>
 				<width> <copy src="globals()" trait="_line_thickness"/> </width>
 				<x> <copy src="sibling(bracket_v2)" trait="x"/> </x>
-				<y> <copy src="MCM" trait="y"/> <add src="MCM" trait="height"/> </y>
+				<y> <copy src="MCM" trait="height"/> </y>
+				<zoom> &scale; </zoom>
 			</image>
 
 			<image name="bracket_h5">
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 				<depth> 11 </depth>
 				<filename> Interface\Shared\Line\fade_to_right.dds </filename>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> <copy src="globals()" trait="_line_thickness"/> </height>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
 				<visible> <copy src="MCM_Info" trait="visible"/> </visible>
 				<width> 140 </width>
 				<x> <copy src="sibling(bracket_v5)" trait="x"/> </x>
@@ -323,10 +362,13 @@
 			</image>
 
 			<image name="bracket_h6">
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
 				<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 				<depth> 11 </depth>
 				<filename> Interface\Shared\Line\fade_to_left.dds </filename>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
 				<height> <copy src="globals()" trait="_line_thickness"/> </height>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
 				<visible> <copy src="MCM_Info" trait="visible"/> </visible>
 				<width> 140 </width>
 				<x> <copy src="sibling(bracket_v6)" trait="x"/> <sub src="me()" trait="width"/> </x>
@@ -337,59 +379,60 @@
 		</rect>
 
 		<rect name="MCM_Bracket_Bottom">
-			<include src="bottom_bracket.xml"/>
-
-			<depth> 11 </depth>
-			<height> 170 </height>
-			<width> <copy src="MCM" trait="width"/> </width>
 			<x> <copy src="MCM" trait="x"/> </x>
 			<y>
 				<copy src="MCM" trait="y"/>
 				<add src="MCM" trait="height"/>
-				<sub src="globals()" trait="_line_thickness"/>
+				<sub> 170 </sub>
 			</y>
+
+			<image name="bracket_v1">
+				<include src="vertical_fade_line.xml"/>
+				<depth> 11 </depth>
+				<height> 170 </height>
+				<x> <copy src="parent()" trait="x"/> </x>
+				<y> <copy src="parent()" trait="y"/> </y>
+				<_bottom_to_top> &true; </_bottom_to_top>
+
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
+			</image>
+
+			<image name="bracket_h1">
+				<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
+				<depth> 11 </depth>
+				<filename> Interface\Shared\solid.dds </filename>
+				<height> <copy src="globals()" trait="_line_thickness"/> </height>
+				<width> <copy src="MCM" trait="width"/> </width>
+				<x> <copy src="parent()" trait="x"/> </x>
+				<y> <copy src="parent()" trait="y"/> <add> 170 </add> </y>
+
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
+			</image>
+
+			<image name="bracket_v2">
+				<include src="vertical_fade_line.xml"/>
+				<depth> 11 </depth>
+				<height> 170 </height>
+				<x> <copy src="parent()" trait="x"/> <add src="MCM" trait="width"/> <sub src="me()" trait="width"/> </x>
+				<y> <copy src="parent()" trait="y"/> </y>
+				<_bottom_to_top> &true; </_bottom_to_top>
+
+				<blue> <copy src="grandparent()" trait="_blue"/> </blue>
+				<green> <copy src="grandparent()" trait="_green"/> </green>
+				<red> <copy src="grandparent()" trait="_red"/> </red>
+			</image>
 		</rect>
 	</rect>
 
 	<rect name="MCM_ModTitle">
-		<height>
-			<copy> 0 </copy>
-			<add src="child(Title0)" trait="_height"/>
-			<add src="child(Title1)" trait="_height"/>
-			<add src="child(Title2)" trait="_height"/>
-			<add src="child(Title3)" trait="_height"/>
-			<add src="child(Title4)" trait="_height"/>
-			<add src="child(Title5)" trait="_height"/>
-			<add src="child(Title6)" trait="_height"/>
-			<add src="child(Title7)" trait="_height"/>
-			<add src="child(Title8)" trait="_height"/>
-			<add src="child(Title9)" trait="_height"/>
-			<add src="child(Title10)" trait="_height"/>
-			<add src="child(Title11)" trait="_height"/>
-			<add src="child(Title12)" trait="_height"/>
-			<add src="child(Title13)" trait="_height"/>
-			<add src="child(Title14)" trait="_height"/>
-			<add src="child(Title15)" trait="_height"/>
-			<add src="child(Title16)" trait="_height"/>
-			<add src="child(Title17)" trait="_height"/>
-			<add src="child(Title18)" trait="_height"/>
-			<add src="child(Title19)" trait="_height"/>
-			<add src="child(Title20)" trait="_height"/>
-			<add src="child(Title21)" trait="_height"/>
-			<add src="child(Title22)" trait="_height"/>
-			<add src="child(Title23)" trait="_height"/>
-			<add src="child(SubTitle1)" trait="_height"/>
-			<add src="child(SubTitle2)" trait="_height"/>
-			<add src="child(SubTitle3)" trait="_height"/>
-			<add src="child(SubTitle4)" trait="_height"/>
-			<add src="child(SubTitle5)" trait="_height"/>
-			<add src="child(SubTitle6)" trait="_height"/>
-			<add src="child(SubTitle7)" trait="_height"/>
-			<add src="child(SubTitle8)" trait="_height"/>
-			<add src="child(SubTitle9)" trait="_height"/>
-			<add src="child(SubTitle10)" trait="_height"/>
-		</height>
+		<height> <copy src="child(Title0)" trait="height"/> </height>
+		<locus> &true; </locus>
 		<visible> <copy src="parent()" trait="_Menu"/> </visible>
+		<systemcolor> &nosystemcolor; </systemcolor>
 		<width>
 			<copy> 0 </copy>
 			<add src="child(Title0)" trait="_width"/>
@@ -428,41 +471,12 @@
 			<add src="child(SubTitle10)" trait="_width"/>
 		</width>
 		<x>
-			<copy> 0 </copy>
-			<add src="child(Title0)" trait="_x"/>
-			<add src="child(Title1)" trait="_x"/>
-			<add src="child(Title2)" trait="_x"/>
-			<add src="child(Title3)" trait="_x"/>
-			<add src="child(Title4)" trait="_x"/>
-			<add src="child(Title5)" trait="_x"/>
-			<add src="child(Title6)" trait="_x"/>
-			<add src="child(Title7)" trait="_x"/>
-			<add src="child(Title8)" trait="_x"/>
-			<add src="child(Title9)" trait="_x"/>
-			<add src="child(Title10)" trait="_x"/>
-			<add src="child(Title11)" trait="_x"/>
-			<add src="child(Title12)" trait="_x"/>
-			<add src="child(Title13)" trait="_x"/>
-			<add src="child(Title14)" trait="_x"/>
-			<add src="child(Title15)" trait="_x"/>
-			<add src="child(Title16)" trait="_x"/>
-			<add src="child(Title17)" trait="_x"/>
-			<add src="child(Title18)" trait="_x"/>
-			<add src="child(Title19)" trait="_x"/>
-			<add src="child(Title20)" trait="_x"/>
-			<add src="child(Title21)" trait="_x"/>
-			<add src="child(Title22)" trait="_x"/>
-			<add src="child(Title23)" trait="_x"/>
-			<add src="child(SubTitle1)" trait="_x"/>
-			<add src="child(SubTitle2)" trait="_x"/>
-			<add src="child(SubTitle3)" trait="_x"/>
-			<add src="child(SubTitle4)" trait="_x"/>
-			<add src="child(SubTitle5)" trait="_x"/>
-			<add src="child(SubTitle6)" trait="_x"/>
-			<add src="child(SubTitle7)" trait="_x"/>
-			<add src="child(SubTitle8)" trait="_x"/>
-			<add src="child(SubTitle9)" trait="_x"/>
-			<add src="child(SubTitle10)" trait="_x"/>
+			<copy src="MCM" trait="x"/>
+			<add>
+				<copy src="MCM" trait="width"/>
+				<add src="MCM_ModList" trait="width"/>
+				<div> 2 </div>
+			</add>
 		</x>
 		<y>
 			<copy src="parent()" trait="y"/>
@@ -650,12 +664,15 @@
 	</rect>
 
 	<text name="MCM_Info">
+		<blue> <copy src="sibling(MCM_RGB)" trait="_InfoBlue"/> </blue>
 		<brightness> 255 </brightness>
 		<depth> 12 </depth>
-		<font> <copy> 3 </copy> <add> <copy> 1 </copy> <onlyif src="MCM" trait="_dUI"/> </add> </font>
+		<font> <copy src="sibling(MCM_Font)" trait="_Info"/> </font>
+		<green> <copy src="sibling(MCM_RGB)" trait="_InfoGreen"/> </green>
 		<justify> &left; </justify>
+		<red> <copy src="sibling(MCM_RGB)" trait="_InfoRed"/> </red>
 		<string> Select a mod to configure from the list on the left. </string>
-		<systemcolor> &mainmenu; </systemcolor>
+		<systemcolor> &nosystemcolor; </systemcolor>
 		<visible> &false; </visible>
 		<wrapwidth> 700 </wrapwidth>
 		<x>
@@ -671,9 +688,12 @@
 	</text>
 
 	<hotrect name="MCM_Back">
+		<alpha> <copy> 40 </copy> <onlyif src="me()" trait="mouseover"/> </alpha>
+		<brightness> 255 </brightness>
 		<clicksound> UIMenuOK </clicksound>
 		<depth> 12 </depth>
 		<height> <copy src="child(text)" trait="height"/> <mul> 0.8 </mul> <add> 20 </add> </height>
+		<locus> &true; </locus>
 		<visible> <copy src="parent()" trait="_Menu"/> </visible>
 		<width> 120 </width>
 		<x> <copy src="screen()" trait="width"/> <sub> 120 </sub> <sub src="screen()" trait="cropx"/> </x>
@@ -700,12 +720,11 @@
 				</sub>
 			</sub>
 		</y>
+		<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
 
 		<rect name="box">
 			<include src="box.xml"/>
-			<visible> <copy src="parent()" trait="mouseover"/> </visible>
-			<x> <copy src="parent()" trait="x"/> </x>
-			<y> <copy src="parent()" trait="y"/> </y>
+			<visible> <copy src="parent()" trait="mouseover"/> <onlyifnot src="MCM" trait="_AltInput"/> </visible>
 		</rect>
 
 		<text name="text">
@@ -715,25 +734,41 @@
 			<font> 7 </font>
 			<justify> &right; </justify>
 			<string> &-sBack; </string>
-			<x> <copy src="parent()" trait="x"/> <add> 110 </add> </x>
-			<y> <copy src="parent()" trait="y"/> <add> 10 </add> </y>
+			<x> <copy> 110 </copy> <sub> <copy> 55 </copy> <onlyif src="MCM" trait="_AltInput"/> </sub> </x>
+			<y> 10 </y>
 		</text>
+
+		<image name="button">
+			<alpha> 255 </alpha>
+			<brightness> 255 </brightness>
+			<depth> 11 </depth>
+			<filename> general_button_b.dds </filename>
+			<height> 75 </height>
+			<texatlas> Interface\InterfaceShared.tai </texatlas>
+			<visible> <copy src="MCM" trait="_AltInput"/> </visible>
+			<width> 75 </width>
+			<x> 50 </x>
+			<y> -13 </y>
+			<zoom> &scale; </zoom>
+		</image>
 	</hotrect>
 
 	<hotrect name="MCM_Defaults">
+		<alpha> <copy> 40 </copy> <onlyif src="me()" trait="mouseover"/> </alpha>
+		<brightness> 255 </brightness>
 		<clicksound> UIMenuCancel </clicksound>
 		<depth> 12 </depth>
 		<height> <copy src="child(text)" trait="height"/> <mul> 0.8 </mul> <add> 20 </add> </height>
+		<locus> &true; </locus>
 		<visible> <copy src="parent()" trait="_Menu"/> </visible>
 		<width> 120 </width>
 		<x> <copy src="screen()" trait="width"/> <sub> 120 </sub> <sub src="screen()" trait="cropx"/> </x>
 		<y> <copy src="sibling(MCM_Back)" trait="y"/> <sub> <copy src="child(text)" trait="height"/> <mul> 0.8 </mul> <add> 20 </add> </sub> </y>
+		<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
 
 		<rect name="box">
 			<include src="box.xml"/>
-			<visible> <copy src="parent()" trait="mouseover"/> </visible>
-			<x> <copy src="parent()" trait="x"/> </x>
-			<y> <copy src="parent()" trait="y"/> </y>
+			<visible> <copy src="parent()" trait="mouseover"/> <onlyifnot src="MCM" trait="_AltInput"/> </visible>
 		</rect>
 
 		<text name="text">
@@ -743,16 +778,30 @@
 			<font> 7 </font>
 			<justify> &right; </justify>
 			<string> &-sDefaults; </string>
-			<x> <copy src="parent()" trait="x"/> <add> 110 </add> </x>
-			<y> <copy src="parent()" trait="y"/> <add> 10 </add> </y>
+			<x> <copy> 110 </copy> <sub> <copy> 55 </copy> <onlyif src="MCM" trait="_AltInput"/> </sub> </x>
+			<y> 10 </y>
 		</text>
+
+		<image name="button">
+			<alpha> 255 </alpha>
+			<brightness> 255 </brightness>
+			<depth> 11 </depth>
+			<filename> general_button_y.dds </filename>
+			<height> 75 </height>
+			<texatlas> Interface\InterfaceShared.tai </texatlas>
+			<visible> <copy src="MCM" trait="_AltInput"/> </visible>
+			<width> 75 </width>
+			<x> 50 </x>
+			<y> -13 </y>
+			<zoom> &scale; </zoom>
+		</image>
 	</hotrect>
 
 	<text name="MCM_PressControl">
 		<blue> 255 </blue>
 		<brightness> 255 </brightness>
 		<depth> 13 </depth>
-		<font> <copy> 6 </copy> <sub> <copy> 1 </copy> <onlyifnot src="parent()" trait="_dUI"/> </sub> </font>
+		<font> <copy src="sibling(MCM_Font)" trait="_PressControl"/> </font>
 		<green> 255 </green>
 		<justify> &left; </justify>
 		<red> 255 </red>
@@ -761,10 +810,6 @@
 		<visible> &false; </visible>
 		<x>
 			<copy src="MCM_ModTitle" trait="x"/>
-			<add>
-				<copy src="MCM_ModTitle" trait="width"/>
-				<div> 2 </div>
-			</add>
 			<sub>
 				<copy src="me()" trait="width"/>
 				<div> 2 </div>
@@ -776,4 +821,100 @@
 			<add> 1 </add>
 		</y>
 	</text>
+
+	<hotrect name="MCM_Input">
+		<clicksound> UIMenuOK </clicksound>
+		<target> <copy src="parent()" trait="_Menu"/> <onlyif> <copy src="parent()" trait="_AltInput"/> <or src="parent()" trait="_KeyInput"/> </onlyif> </target>
+		<xbuttonB> <ref src="child(InputB)" trait="clicked"/> </xbuttonB>
+		<xbuttonY> <ref src="child(InputY)" trait="clicked"/> </xbuttonY>
+		<xdefault> 1 </xdefault>
+		<xdown> <ref src="child(InputDown)" trait="clicked"/> </xdown>
+		<xleft> <ref src="child(InputLeft)" trait="clicked"/> </xleft>
+		<xright> <ref src="child(InputRight)" trait="clicked"/> </xright>
+		<xup> <ref src="child(InputUp)" trait="clicked"/> </xup>
+		<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+		<_buttonB> <copy src="child(InputB)" trait="_clicked"/> </_buttonB>
+		<_buttonY> <copy src="child(InputY)" trait="_clicked"/> </_buttonY>
+		<_down> <copy src="child(InputDown)" trait="_clicked"/> </_down>
+		<_left> <copy src="child(InputLeft)" trait="_clicked"/> </_left>
+		<_right> <copy src="child(InputRight)" trait="_clicked"/> </_right>
+		<_up> <copy src="child(InputUp)" trait="_clicked"/> </_up>
+
+		<hotrect name="InputB">
+			<clicksound> UIMenuOK </clicksound>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+		</hotrect>
+
+		<hotrect name="InputDown">
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+		</hotrect>
+
+		<hotrect name="InputLeft">
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+		</hotrect>
+
+		<hotrect name="InputRight">
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+		</hotrect>
+
+		<hotrect name="InputUp">
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+		</hotrect>
+
+		<hotrect name="InputY">
+			<clicksound> UIMenuCancel </clicksound>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+		</hotrect>
+	</hotrect>
+
+	<hotrect name="MCM_Return">
+		<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+	</hotrect>
+
+	<rect name="MCM_Font">
+		<_Info> <copy> 3 </copy> <add> <copy> 1 </copy> <onlyif src="MCM" trait="_dUI"/> </add> </_Info>
+		<_ModList> <copy> 3 </copy> <sub> <copy> 2 </copy> <onlyif src="MCM" trait="_dUI"/> </sub> </_ModList>
+		<_Options> <copy> 3 </copy> <sub> <copy> 2 </copy> <onlyif src="MCM" trait="_dUI"/> </sub> </_Options>
+		<_PressControl> <copy> 6 </copy> <sub> <copy> 1 </copy> <onlyifnot src="parent()" trait="_dUI"/> </sub> </_PressControl>
+		<_Title> <copy> 7 </copy> <sub> <copy> 1 </copy> <onlyifnot src="MCM" trait="_dUI"/> </sub> </_Title>
+	</rect>
+
+	<rect name="MCM_RGB">
+		<_BackBlue> 066 </_BackBlue>
+		<_BackGreen> 182 </_BackGreen>
+		<_BackRed> 255 </_BackRed>
+
+		<_DefaultsBlue> 066 </_DefaultsBlue>
+		<_DefaultsGreen> 182 </_DefaultsGreen>
+		<_DefaultsRed> 255 </_DefaultsRed>
+
+		<_InfoBlue> 066 </_InfoBlue>
+		<_InfoGreen> 182 </_InfoGreen>
+		<_InfoRed> 255 </_InfoRed>
+
+		<_LineBlue> 066 </_LineBlue>
+		<_LineGreen> 182 </_LineGreen>
+		<_LineRed> 255 </_LineRed>
+
+		<_ModListBlue> 066 </_ModListBlue>
+		<_ModListGreen> 182 </_ModListGreen>
+		<_ModListRed> 255 </_ModListRed>
+		<_ModListBlueAlt> 255 </_ModListBlueAlt>
+		<_ModListGreenAlt> 255 </_ModListGreenAlt>
+		<_ModListRedAlt> 255 </_ModListRedAlt>
+		<_ModListBlueSub> 050 </_ModListBlueSub>
+		<_ModListGreenSub> 137 </_ModListGreenSub>
+		<_ModListRedSub> 205 </_ModListRedSub>
+
+		<_ModListBlueHL> 066 </_ModListBlueHL>
+		<_ModListGreenHL> 182 </_ModListGreenHL>
+		<_ModListRedHL> 255 </_ModListRedHL>
+
+		<_ModTitleBlue> 066 </_ModTitleBlue>
+		<_ModTitleGreen> 182 </_ModTitleGreen>
+		<_ModTitleRed> 255 </_ModTitleRed>
+	</rect><!--
+	<include src="MCM\XYScale.xml"/>
+	<include src="MCM\RGB.xml"/>-->
 </rect>

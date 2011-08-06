@@ -4,6 +4,20 @@
 		<width> 250 </width>
 		<x> <copy src="sibling(MCM_Options)" trait="x"/> <add> <copy src="sibling(MCM_Options)" trait="width"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
 		<y> <copy src="parent()" trait="y"/> <add> <copy src="parent()" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+
+		<_active>
+			<copy> 0 </copy>
+			<add src="child(Item1)" trait="_mouseover"/>
+			<add src="child(Item2)" trait="_mouseover"/>
+			<add src="child(Item3)" trait="_mouseover"/>
+			<add src="child(Item4)" trait="_mouseover"/>
+			<add src="child(Item5)" trait="_mouseover"/>
+			<add src="child(Item6)" trait="_mouseover"/>
+			<add src="child(Item7)" trait="_mouseover"/>
+			<add src="child(Item8)" trait="_mouseover"/>
+			<add src="child(Item9)" trait="_mouseover"/>
+			<add src="child(Item10)" trait="_mouseover"/>
+		</_active>
 		<_count> </_count>
 		<_height>
 			<copy> 0 </copy>
@@ -16,19 +30,6 @@
 			<add src="me()" trait="_spacing"/>
 		</_height>
 		<_line_width> 1 </_line_width>
-		<_mouseover>
-			<copy> 0 </copy>
-			<add src="child(Item1)" trait="_mouseover"/>
-			<add src="child(Item2)" trait="_mouseover"/>
-			<add src="child(Item3)" trait="_mouseover"/>
-			<add src="child(Item4)" trait="_mouseover"/>
-			<add src="child(Item5)" trait="_mouseover"/>
-			<add src="child(Item6)" trait="_mouseover"/>
-			<add src="child(Item7)" trait="_mouseover"/>
-			<add src="child(Item8)" trait="_mouseover"/>
-			<add src="child(Item9)" trait="_mouseover"/>
-			<add src="child(Item10)" trait="_mouseover"/>
-		</_mouseover>
 		<_offset> 0 </_offset>
 		<_selected> 0 </_selected>
 		<_spacing> 6 </_spacing>
