@@ -99,6 +99,10 @@
 <_PNxCrosshairMinOffset> 3 </_PNxCrosshairMinOffset>
 <_PNxCrosshairMaxOffset> 128 </_PNxCrosshairMaxOffset>
 
+<_PNxCrosshairChargeEnabled> 0 </_PNxCrosshairChargeEnabled>
+<_PNxCrosshairChargeAmount> 0.0 </_PNxCrosshairChargeAmount> <!-- 0.0 to 1.0 -->
+
+
 
 <!-- ######################################################################################## IO Bullet Time Meter-->
 <_PNxBTMeterEnabled> 0 </_PNxBTMeterEnabled>
@@ -611,6 +615,113 @@
 		</y>
 			
 		<filename> pnx\hud\cross\crosshairv.dds </filename>
+	</image>
+	
+	<image name="PNxChargeCircle1">
+		<zoom> &scale; </zoom>
+		<depth> -2 </depth>
+		
+		<visible>
+			<copy src="io()" trait="_PNxCrosshairChargeEnabled" />
+			<and src="parent" trait="visible" />
+		</visible>
+		
+		<alpha>
+			<copy> 150 </copy>
+			<mul>
+				<copy> 1 </copy>
+				<sub src="io()" trait="_PNxCrosshairChargeAmount" />
+			</mul>
+		</alpha>
+		
+		<width>
+			<copy src="parent()" trait="_radius" />
+			<mul> 2 </mul>
+			<add src="io()" trait="_PNxCrosshairLength" />
+		</width>
+		
+		<height>
+			<copy src="me()" trait="width" />
+		</height>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="io()" trait="_PNxCrosshairLength" />
+				<div> 2 </div>
+			</sub>
+		</x>
+			
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="io()" trait="_PNxCrosshairLength" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<rotateangle>
+			<copy> 3.1416 </copy>
+			<mul src="io()" trait="_PNxCrosshairChargeAmount" />
+		</rotateangle>
+		
+		<rotateaxisx> <copy src="me()" trait="width" /> <div> 2 </div> </rotateaxisx>
+		<rotateaxisy> <copy src="me()" trait="height" /> <div> 2 </div> </rotateaxisy>
+		
+		<filename> pnx\hud\cross\chargecircle.dds </filename>
+	</image>
+	
+	<image name="PNxChargeCircle2">
+		<zoom> &scale; </zoom>
+		<depth> -1 </depth>
+		
+		<visible>
+			<copy src="io()" trait="_PNxCrosshairChargeEnabled" />
+			<and src="parent" trait="visible" />
+		</visible>
+		
+		<systemcolor> &hudalt; </systemcolor>
+		
+		<alpha>
+			<copy> 150 </copy>
+			<mul src="io()" trait="_PNxCrosshairChargeAmount" />
+		</alpha>
+		
+		<width>
+			<copy src="parent()" trait="_radius" />
+			<mul> 2 </mul>
+			<add src="io()" trait="_PNxCrosshairLength" />
+		</width>
+		
+		<height>
+			<copy src="me()" trait="width" />
+		</height>
+		
+		<x>
+			<copy src="parent()" trait="x" />
+			<sub>
+				<copy src="io()" trait="_PNxCrosshairLength" />
+				<div> 2 </div>
+			</sub>
+		</x>
+			
+		<y>
+			<copy src="parent()" trait="y" />
+			<sub>
+				<copy src="io()" trait="_PNxCrosshairLength" />
+				<div> 2 </div>
+			</sub>
+		</y>
+		
+		<rotateangle>
+			<copy> 3.1416 </copy>
+			<mul src="io()" trait="_PNxCrosshairChargeAmount" />
+		</rotateangle>
+		
+		<rotateaxisx> <copy src="me()" trait="width" /> <div> 2 </div> </rotateaxisx>
+		<rotateaxisy> <copy src="me()" trait="height" /> <div> 2 </div> </rotateaxisy>
+		
+		<filename> pnx\hud\cross\chargecircle.dds </filename>
 	</image>
 	
 </rect>
