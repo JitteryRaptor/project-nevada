@@ -619,7 +619,7 @@
 	
 	<image name="PNxChargeCircle1">
 		<zoom> &scale; </zoom>
-		<depth> -2 </depth>
+		<depth> 1 </depth>
 		
 		<visible>
 			<copy src="io()" trait="_PNxCrosshairChargeEnabled" />
@@ -668,7 +668,7 @@
 		<rotateaxisx> <copy src="me()" trait="width" /> <div> 2 </div> </rotateaxisx>
 		<rotateaxisy> <copy src="me()" trait="height" /> <div> 2 </div> </rotateaxisy>
 		
-		<filename> pnx\hud\cross\chargecircle.dds </filename>
+		<filename> pnx\hud\cross\chargearrows.dds </filename>
 	</image>
 	
 	<image name="PNxChargeCircle2">
@@ -683,7 +683,7 @@
 		<systemcolor> &hudalt; </systemcolor>
 		
 		<alpha>
-			<copy> 150 </copy>
+			<copy> 200 </copy>
 			<mul src="io()" trait="_PNxCrosshairChargeAmount" />
 		</alpha>
 		
