@@ -19,7 +19,7 @@ Team:			snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, TheCastle, x-
 
 Contributors:	Pelinor (Mod Configuration Menu)
 
-Version:		2.2
+Version:		2.3
 
 Download:		http://www.newvegasnexus.com/downloads/file.php?id=40040
 
@@ -126,6 +126,32 @@ to get the mod running.
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
+
+------------------------------------------------------------
+2.3:
+
+[Core]
+- Improved charging scripts and added a charging indicator to the crosshair
+- Removed seperate records for chargeable AER14 and Q-35. They now use the vanilla records, which means they can modded as well
+- Added optional quick-select hotkeys for Grenade Hotkey categories
+- Upgraded bundled MCM to version Beta 11
+
+[Cyberware]
+- Added new 'EMP Generator' implant, which grants the ability to fire a targeted electromagnetic pulse
+- Added new 'Hyperfrequency Emitter' implant, which can be used to cause an explosive combustion in a targeted area
+- Added level 8 perk to give 2 more arm implant slots to the player
+- Added level 8 perk to give 2 more leg implant slots to the player
+- Fixed recipe descriptions for Razor Nail implants and other typos
+- Increased AP regeneration while using implant-powered vision modes from 0% to 50%
+
+[Rebalance]
+- Added option to change level cap
+
+[Equipment]
+- Added 2mm EC ammunition, used by the Auto-Gauss, the Auto-Gauss Pistol and the Gauss Minigun
+- Included new weapons in some form lists they were missing from, and various other fixes (thanks to xporc)
+- Updated models and textures for Wattz 2000 (thanks to jonnyeah)
+
 
 ------------------------------------------------------------
 2.2:
@@ -317,6 +343,7 @@ Solution: Gopher made a series of videos tutorials, describing how to install Pr
 	
 	Modding Fallout NV Part 1: User Interface	-> http://www.youtube.com/watch?v=EGzt6rF7MYA
 	Modding Fallout NV Part 2: Project Nevada	-> http://www.youtube.com/watch?v=DdfJME1nhGA
+	( ... on-going series!)
 
 ------------------------------------------------------------
 Problem: My game crashes right after starting it!
@@ -402,6 +429,8 @@ joefoxx082:	Fixed Attack3 and Attack4 IS animations
 			
 LORD DARIUS and Jtrainz: Ironsight'ed Fallout 3 Weapons (http://www.newvegasnexus.com/downloads/file.php?id=36571)
 
+???:		Charging warning sound effect from www.soundfx-free.com/wrapper/8.html
+
 
 European Battle Rifle
 	Source: Albrecht and Vashts FN FAL Rifle (http://www.newvegasnexus.com/downloads/file.php?id=37553), by Vashts1985 and LT Albrecht
@@ -455,13 +484,13 @@ Flamer Pistol
 	Source: Classic Flamer Pistol (http://www.newvegasnexus.com/downloads/file.php?id=35752), by DaiShiSUN
 	
 Wattz Laser Pistol
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
+	Source: FOOK - New Vegas (http://www.newvegasnexus.com/downloads/file.php?id=34684)
 	Original model: joefoxx082
 	Original texture: joefoxx082
 	Enhanced textures, animated glows and improvements: Jonnyeah
 
 Wattz Laser Rifle
-	Source: Classic Fallout Weapons - New Vegas (http://newvegasnexus.com/downloads/file.php?id=37002), by Linerunner and War1982
+	Source: FOOK - New Vegas (http://www.newvegasnexus.com/downloads/file.php?id=34684)
 	Original model: joefoxx082
 	Original texture: joefoxx082
 	Enhanced textures, animated glows and improvements: Jonnyeah
@@ -747,6 +776,8 @@ a) Implant list
 * Motor Memorizer: Guns +2(3,4,5), Energy Weapons +2(3,4,5) (upgradable)
 * Neural Datatool: Science +4(6,8,10) (Upgradable)
 * Razor Nails: Unarmed critical chance and damage increased by 25% (40,55,70) (upgradable)
+* EMP Generator: EM Burst, Capacity 5x, Recharge 1x per hour (effects are additive if used in both arms)
+* Hyperfrequence Emitter: Effect: HF Burst, Capacity 5x, Recharge 1x per hour (effects are additive if used in both arms)
 
 [Leg Implants]
 
@@ -1024,6 +1055,13 @@ As usual, the Control Panel allows players to customize most settings according 
 		Allows to adjust the skill points received on level up.
 	Defaults:
 		0 [PN, Vanilla]
+		
+* Maximum Level:
+	Description:
+		Allows to increase the level cap.
+	Defaults:
+		50 [PN]
+		30 [Vanilla] (depending on installed DLCs)
 
 * Throwing Range Multiplier:
 	Description:
