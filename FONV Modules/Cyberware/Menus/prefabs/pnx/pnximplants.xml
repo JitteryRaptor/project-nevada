@@ -1197,6 +1197,10 @@
 		<_filename_6> pnx\hud\cy\arrow_rightleg.dds </_filename_6>
 		<_filename_7> pnx\hud\cy\arrow_head2.dds </_filename_7>
 		<_filename_8> pnx\hud\cy\arrow_torso2.dds </_filename_8>
+		<_filename_9> pnx\hud\cy\arrow_leftarm2.dds </_filename_9>
+		<_filename_10> pnx\hud\cy\arrow_rightarm2.dds </_filename_10>
+		<_filename_11> pnx\hud\cy\arrow_leftleg2.dds </_filename_11>
+		<_filename_12> pnx\hud\cy\arrow_rightleg2.dds </_filename_12>
 		
 		<filename>
 			<copy src="io()" trait="_PNxCyberboyLineNum" />
