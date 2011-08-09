@@ -143,9 +143,11 @@ to get the mod running.
 - Added level 8 perk to give 2 more leg implant slots to the player
 - Fixed recipe descriptions for Razor Nail implants and other typos
 - Increased AP regeneration while using implant-powered vision modes from 0% to 50%
+- Added surgery dialogue option to Arcade Gannon (if he is recruited as a follower)
 
 [Rebalance]
 - Added option to change level cap
+- Removed additional food variants so lists, recipes etc use the defaults again (for compatibility reasons)
 
 [Equipment]
 - Added 2mm EC ammunition, used by the Auto-Gauss, the Auto-Gauss Pistol and the Gauss Minigun
@@ -863,6 +865,7 @@ Linda Schuler, Hidden Valley Bunker, No
 Kemp, Camp McCarran, Yes
 Julie Farkas, Old Mormon Fort, Yes
 Doctor Henry, Jacobstown, No
+Arcade Gannon, if he's been recruited as a follower
 
 Training manual locations:
 #1 Locked safe in Goodsprings school
@@ -1263,7 +1266,7 @@ As usual, the Control Panel allows players to customize most settings according 
  f) Food changes
 ------------------------------------------------------------
 
-For every existing food item, there are now three variations, classified as Terrible, Bad and Good.
+Food is generally classified as Terrible, Bad and Good.
 With decreasing quality, the food is less nutritious. If the respective option is enabled, eating bad or terrible food
 will temporarily increase the hunger rate. More details can be found here:
 https://spreadsheets.google.com/spreadsheet/ccc?key=0AoiEH8ar3jtxdGlzdnVDY3lGUEV5RWhNdXhzRHJBT0E&hl=en_US
