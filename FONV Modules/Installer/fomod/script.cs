@@ -96,12 +96,27 @@ class Script : FalloutNewVegasBaseScript {
 	static bool InstallModuleCore()
 	{	
 		// Install base files
-		string[] excludes = new string[] {
-			"includes_HUDMainMenu.xml",
-			"includes_StartMenu.xml",
-			"hud_main_menu.xml",
-			"start_menu.xml"
-		};
+		string[] excludes = null;
+		
+		if (IsPNMCMOutdated() && MessageBox("Your installed MCM files are already newer than the one included with PN. Would you like to keep the newer ones? (Recommended)", title, MessageBoxButtons.YesNo) == DialogResult.Yes) {
+			// Skip MCM xml files if newer version is already installed
+			excludes = new string[] {
+				"includes_HUDMainMenu.xml",
+				"includes_StartMenu.xml",
+				"hud_main_menu.xml",
+				"start_menu.xml",
+				"list_box_template.xml",
+				"Menus/prefabs/MCM/"
+			};
+		} else {
+			excludes = new string[] {
+				"includes_HUDMainMenu.xml",
+				"includes_StartMenu.xml",
+				"hud_main_menu.xml",
+				"start_menu.xml"
+			};
+		}
+		
 		InstallModuleFiles("Core", excludes);
 		
 		UpdateInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
@@ -185,6 +200,17 @@ class Script : FalloutNewVegasBaseScript {
 			
 			return editSuccess;
 		}
+    }
+    
+    static bool IsPNMCMOutdated()
+    {
+    	byte[] oldFile = GetExistingDataFile("menus/prefabs/MCM/MCM.xml");
+    	if (oldFile == null)
+    		return false;
+    	
+    	byte[] newFile = GetFileFromFomod("menus/prefabs/MCM/MCM.xml");
+    	
+    	return (ExtractMCMVersion(oldFile) > ExtractMCMVersion(newFile));
     }
     
     
@@ -532,7 +558,7 @@ class Script : FalloutNewVegasBaseScript {
 				
 			bool found = false;
 			foreach (string exclude in excludes) {
-				if (file.EndsWith(exclude)) {
+				if (file.EndsWith(exclude) || file.StartsWith(exclude)) {
 					found = true;
 					continue;
 				}
@@ -609,5 +635,21 @@ class Script : FalloutNewVegasBaseScript {
 			return false;
 		
 		return GenerateDataFile(target, data);
+	}
+	
+	
+	static float ExtractMCMVersion(byte[] data)
+	{
+		if (data == null)
+			return 0;
+			
+		string tmp = encoding.GetString(data);	
+		
+		Match m = Regex.Match(tmp, "<_MCM>(.*)</_MCM>", RegexOptions.Singleline);
+		
+		if (m.Success) {
+			return Single.Parse(m.Groups[1].Value);
+		} else
+			return 0;
 	}
 }
