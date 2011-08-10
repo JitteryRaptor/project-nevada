@@ -148,6 +148,7 @@ to get the mod running.
 [Rebalance]
 - Added option to change level cap
 - Removed additional food variants so lists, recipes etc use the defaults again (for compatibility reasons)
+- Added rads back to raw meat and pre-war food
 
 [Equipment]
 - Added 2mm EC ammunition, used by the Auto-Gauss, the Auto-Gauss Pistol and the Gauss Minigun

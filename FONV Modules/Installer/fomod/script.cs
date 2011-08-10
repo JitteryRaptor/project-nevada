@@ -120,7 +120,7 @@ class Script : FalloutNewVegasBaseScript {
 		InstallModuleFiles("Core", excludes);
 		
 		UpdateInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
-		UpdateInclude("menus/prefabs/includes_StartMenu.xml", @"MCM\MCM.xml");
+		UpdateInclude("menus/prefabs/includes_StartMenu.xml", @"MCM\MCM.xml", new string[] {"menus/options/start_menu.xml"});
 		
 		UpdateUIFile("menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
 		UpdateUIFile("menus/options/start_menu.xml", "menus/options/start_menu.xml", "includes_StartMenu.xml");
@@ -169,12 +169,17 @@ class Script : FalloutNewVegasBaseScript {
 	// Installs include from fomod if not present, appends editString otherwise
 	static bool UpdateInclude(string path, string includePath)
 	{
+		return UpdateInclude(path, includePath, null);
+	}
+	
+	static bool UpdateInclude(string path, string includePath, string[] checkFiles)
+	{
 		if (! DataFileExists(path)) {
 			return InstallFileFromFomod(path);
 			
 		} else {
 				// 
-			bool editSuccess = AppendInclude(path, includePath);
+			bool editSuccess = AppendInclude(path, includePath, checkFiles);
 		
 			if (! editSuccess) {
 				MessageBox("Failed to access " + path + ". Reinstall the mod with all other applications closed, or try a manual installation (see readme).", title);
@@ -186,13 +191,18 @@ class Script : FalloutNewVegasBaseScript {
     
     
     // Installs include from fomod if not present, appends editString otherwise
-	static bool UpdateUIFile(string path, string srcPath, string includePath)
+    static bool UpdateUIFile(string path, string srcPath, string includePath)
+    {
+    	return UpdateUIFile(path, srcPath, null);
+    }
+    
+	static bool UpdateUIFile(string path, string srcPath, string includePath, string[] checkFiles)
 	{
 		if (! DataFileExists(path)) {
 			return InstallFileFromFomod(srcPath, path);
 		} else {
 
-			bool editSuccess = AppendIncludeToMenu(path, includePath);
+			bool editSuccess = AppendIncludeToMenu(path, includePath, checkFiles);
 		
 			if (! editSuccess) {
 				MessageBox("Failed to access " + path + ". Reinstall the mod with all other applications closed, or try a manual installation (see readme).", title);
@@ -571,7 +581,7 @@ class Script : FalloutNewVegasBaseScript {
 	}
 	
 	
-	static bool AppendInclude(string xmlPath, string includePath)
+	static bool AppendInclude(string xmlPath, string includePath, string[] checkFiles)
 	{
 		byte[] data = GetExistingDataFile(xmlPath);
 		
@@ -583,6 +593,12 @@ class Script : FalloutNewVegasBaseScript {
 		// Include is already there?
 		if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
 			return true;
+		
+		// Check additional files for the include
+		if (checkFiles != null)
+			foreach (string file in checkFiles)
+				if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(file) + "\" />", RegexOptions.Singleline).Success == true)
+					return true;
 		
 		tmp += "\r\n"
 			+ "<!-- BEGIN Added by Project Nevada -->\r\n"
@@ -597,7 +613,7 @@ class Script : FalloutNewVegasBaseScript {
 	}
 	
 	
-	static bool AppendIncludeToMenu(string xmlPath, string includePath)
+	static bool AppendIncludeToMenu(string xmlPath, string includePath, string[] checkFiles)
 	{
 		byte[] data = GetExistingDataFile(xmlPath);
 		
@@ -609,6 +625,12 @@ class Script : FalloutNewVegasBaseScript {
 		// Include is already there?
 		if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
 			return true;
+
+		// Check additional files for the include
+		if (checkFiles != null)
+			foreach (string file in checkFiles)
+				if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(file) + "\" />", RegexOptions.Singleline).Success == true)
+					return true;
 		
 		string includeStr = "\r\n"
 			+ "\t<!-- BEGIN Added by Project Nevada -->\r\n"
