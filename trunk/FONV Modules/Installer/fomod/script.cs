@@ -193,7 +193,7 @@ class Script : FalloutNewVegasBaseScript {
     // Installs include from fomod if not present, appends editString otherwise
     static bool UpdateUIFile(string path, string srcPath, string includePath)
     {
-    	return UpdateUIFile(path, srcPath, null);
+    	return UpdateUIFile(path, srcPath, includePath, null);
     }
     
 	static bool UpdateUIFile(string path, string srcPath, string includePath, string[] checkFiles)
