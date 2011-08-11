@@ -669,9 +669,13 @@ class Script : FalloutNewVegasBaseScript {
 		
 		Match m = Regex.Match(tmp, "<_MCM>(.*)</_MCM>", RegexOptions.Singleline);
 		
-		if (m.Success) {
-			return Single.Parse(m.Groups[1].Value);
-		} else
+		try {
+			if (m.Success)
+				return Single.Parse(m.Groups[1].Value);
+			else
+				return 0;
+		} catch (Exception e) {
 			return 0;
+		}
 	}
 }
