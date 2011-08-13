@@ -27,7 +27,7 @@ Project Nevada - DLC Support
 Authors: Gribbleshnibit8 and snakster
 Contributors: Aether89, T3T, Zealotlee
 
-Current Version: 1.1
+Current Version: 1.2
 
 Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
@@ -40,6 +40,7 @@ Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 	3. Features
 		a) Dead Money
 		b) Honest Hearts
+		c) Old World Blues
 
 	4. Installation
 
@@ -68,10 +69,17 @@ appropriate patches.
  2. Changelog
 ========================================================================================================================================
 
+1.2:
+
+[Old World Blues]
+- Initial release
+
+
 1.1:
 
 [Dead Money] 
 - Added digital zoom to Holo Rifle
+
 
 1.0:
 
@@ -117,6 +125,58 @@ the Project Nevada system.
 * Grenade Hotkey
 	The grenades and throwable weapons have been added to the appropriate lists.
 	As soon as you get to the Zion, you can use the new	weapons with your standard hotkey.
+	
+------------------------------------------------------------
+ c) Honest Hearts
+------------------------------------------------------------
+
+* Visor Overlays
+	TODO
+
+* Grenade Hotkey
+	TODO
+
+* Stealth Field
+	TODO
+	
+* Cyberware Implants
+	The M-5, C-13, Y-3, Y-7 and GRX implants have been converted to be usable with the PN Cyberware interface.
+	All implants can additionally by upgraded one level. Here's a description of what each implant does now:
+	
+		C-13
+			Level 1: +10% damage to Cazadores
+			Level 2: +20% damage to Cazadores and a passive radio field that frenzies them over time
+			
+		M-5
+			Level 1: +20% movement speed when crouched
+			Level 2: +40% movement speed when crouched
+		
+		Y-3
+			Level 1: Radiation from contaminated drinks is neutralized
+			Level 2: Radiation from contaminated drinks is absorbed and converted into Action Points
+		
+		Y-7
+			Level 1: Consuming food restores additional  5 HP and 2 AP
+			Level 2: Consuming food restored additional 10 HP and 4 AP
+			
+		GRX
+			The GRX implant is no longer a perk but buyable at the Sink Autodoc like the other implants.
+			It's effects depend on whether Bullet Time is enabled or not.
+			
+			[Bullet Time enabled]
+			Level 1: Bullet Time Action Point drain reduced by 25%
+			Level 2: Bullet Time Action Point drain reduced by 50%
+			
+			[Bullet Time disabled]
+			Level 1: Non-addictive Turbo is added to the inventory, lasts for 2 seconds,  5 uses per day
+			Level 2: Non-addictive Turbo is added to the inventory, lasts for 4 seconds, 10 uses per day
+	
+	The implants are upgradable by bringing the un-installed implant item to a workbench.
+
+* Hoarder Trait
+	The Hoarder Trait has been adjusted to work with modified Carry Weight formulas.
+	Instead of having the penality limit hardcoded at 130 lbs., it's now kicks in when below 75% maximum Carry Weight.
+	Also, being close to (but still below) the weight limit will no longer prevent you from sprinting.
 
 
 ========================================================================================================================================
