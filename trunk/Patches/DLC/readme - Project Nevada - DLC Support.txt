@@ -175,7 +175,7 @@ the Project Nevada system.
 
 * Hoarder Trait
 	The Hoarder Trait has been adjusted to work with modified Carry Weight formulas.
-	Instead of having the penality limit hardcoded at 130 lbs., it's now kicks in when below 75% maximum Carry Weight.
+	Instead of having the penality limit hardcoded at 130 lbs., it now kicks in when below 75% maximum Carry Weight.
 	Also, being close to (but still below) the weight limit will no longer prevent you from sprinting.
 
 
