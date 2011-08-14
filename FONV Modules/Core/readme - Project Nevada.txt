@@ -154,6 +154,7 @@ to get the mod running.
 - Added 2mm EC ammunition, used by the Auto-Gauss, the Auto-Gauss Pistol and the Gauss Minigun
 - Included new weapons in some form lists they were missing from, and various other fixes (thanks to xporc)
 - Updated models and textures for Wattz 2000 (thanks to jonnyeah)
+- Tweaked balancing for a few weapons (thanks to MadCat221)
 
 
 ------------------------------------------------------------
@@ -466,7 +467,7 @@ High Roller
 	Sound effects: DarkFireGaming
 	Retexture: Zealotlee
 	
-Auto-Gauss
+Auto-Gauss, including 2mm EC ammunition
 	Source: Classic M72 Gauss Rifle (http://newvegasnexus.com/downloads/file.php?id=37703), by DaiShiSUN
 	
 Auto-Gauss Pistol
