@@ -147,14 +147,17 @@ to get the mod running.
 
 [Rebalance]
 - Added option to change level cap
+- Added option to change timescale
 - Removed additional food variants so lists, recipes etc use the defaults again (for compatibility reasons)
 - Added rads back to raw meat and pre-war food
+- Set food quality labels visible
+
 
 [Equipment]
 - Added 2mm EC ammunition, used by the Auto-Gauss, the Auto-Gauss Pistol and the Gauss Minigun
 - Included new weapons in some form lists they were missing from, and various other fixes (thanks to xporc)
 - Updated models and textures for Wattz 2000 (thanks to jonnyeah)
-- Tweaked balancing for a few weapons (thanks to MadCat221)
+- Tweaked weapon balancing (thanks to MadCat221)
 
 
 ------------------------------------------------------------
