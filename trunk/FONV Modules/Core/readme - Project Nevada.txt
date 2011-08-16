@@ -152,7 +152,6 @@ to get the mod running.
 - Added rads back to raw meat and pre-war food
 - Set food quality labels visible
 
-
 [Equipment]
 - Added 2mm EC ammunition, used by the Auto-Gauss, the Auto-Gauss Pistol and the Gauss Minigun
 - Included new weapons in some form lists they were missing from, and various other fixes (thanks to xporc)
