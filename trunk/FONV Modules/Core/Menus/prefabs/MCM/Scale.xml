@@ -1,22 +1,83 @@
 	<rect name="MCM_Scale">
-		<height> 200 </height>
+		<height>
+			<copy> 190 </copy>
+			<add>
+				<copy> 65 </copy>
+				<mul>
+					<copy src="me()" trait="_Scales"/>
+					<sub> 1 </sub>
+				</mul>
+			</add>
+			<add>
+				<copy> 65 </copy>
+				<onlyif>
+					<copy src="me()" trait="_type"/>
+					<eq> 2 </eq>
+				</onlyif>
+			</add>
+		</height>
+		<systemcolor> &mainmenu; </systemcolor>
 		<visible> 0 </visible>
-		<width> 400 </width>
+		<width> <copy src="me()" trait="_BaseWidth"/> <add src="me()" trait="_SettingWidth"/> </width>
 		<x> <copy src="MCM" trait="x"/> <add src="MCM_ModList" trait="width"/> <add> <copy src="MCM" trait="width"/> <sub src="MCM_ModList" trait="width"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
 		<y> <copy src="screen()" trait="height"/> <sub src="me()" trait="height"/> <div> 2 </div> </y>
 
-		<_accept> <copy src="child(Scale_Accept)" trait="mouseover"/> </_accept>
-		<_cancel> <copy src="child(Scale_Cancel)" trait="mouseover"/> </_cancel>
-		<_default> <copy src="child(Scale_Default)" trait="mouseover"/> </_default>
-		<_decimal>  </_decimal>
-		<_drag> <copy src="child(Meter)" trait="_drag"/> </_drag>
-		<_meterL> <copy src="child(Meter_ArrowL)" trait="mouseover"/> </_meterL>
-		<_meterR> <copy src="child(Meter_ArrowR)" trait="mouseover"/> </_meterR>
+		<_Accept> <copy src="child(Scale_Accept)" trait="_clicked"/> </_Accept>
+		<_BaseWidth> 430 </_BaseWidth>
+		<_Cancel> <copy src="child(Scale_Cancel)" trait="_clicked"/> </_Cancel>
+		<_Default> <copy src="child(Scale_Default)" trait="_clicked"/> </_Default>
+		<_Drag1> <copy src="child(Meter1)" trait="_drag"/> </_Drag1>
+		<_Drag2> <copy src="child(Meter2)" trait="_drag"/> </_Drag2>
+		<_Drag3> <copy src="child(Meter3)" trait="_drag"/> </_Drag3>
+		<_Highlight>
+			<copy> 0 </copy>
+			<add>
+				<copy> 1 </copy>
+				<onlyif>
+					<copy src="child(Meter1)" trait="_highlight"/>
+					<or src="child(Meter1_ArrowL)" trait="mouseover"/>
+					<or src="child(Meter1_ArrowL2)" trait="mouseover"/>
+					<or src="child(Meter1_ArrowR)" trait="mouseover"/>
+					<or src="child(Meter1_ArrowR2)" trait="mouseover"/>
+				</onlyif>
+			</add>
+			<add>
+				<copy> 2 </copy>
+				<onlyif>
+					<copy src="child(Meter2)" trait="_highlight"/>
+					<or src="child(Meter2_ArrowL)" trait="mouseover"/>
+					<or src="child(Meter2_ArrowL2)" trait="mouseover"/>
+					<or src="child(Meter2_ArrowR)" trait="mouseover"/>
+					<or src="child(Meter2_ArrowR2)" trait="mouseover"/>
+				</onlyif>
+			</add>
+			<add>
+				<copy> 3 </copy>
+				<onlyif>
+					<copy src="child(Meter3)" trait="_highlight"/>
+					<or src="child(Meter3_ArrowL)" trait="mouseover"/>
+					<or src="child(Meter3_ArrowL2)" trait="mouseover"/>
+					<or src="child(Meter3_ArrowR)" trait="mouseover"/>
+					<or src="child(Meter3_ArrowR2)" trait="mouseover"/>
+				</onlyif>
+			</add>
+		</_Highlight>
+		<_MeterL> <copy src="child(Meter1_ArrowL)" trait="_clicked"/> <add src="child(Meter2_ArrowL)" trait="_clicked"/> <add src="child(Meter3_ArrowL)" trait="_clicked"/> </_MeterL>
+		<_MeterL2> <copy src="child(Meter1_ArrowL2)" trait="_clicked"/> <add src="child(Meter2_ArrowL2)" trait="_clicked"/> <add src="child(Meter3_ArrowL2)" trait="_clicked"/> </_MeterL2>
+		<_MeterR> <copy src="child(Meter1_ArrowR)" trait="_clicked"/> <add src="child(Meter2_ArrowR)" trait="_clicked"/> <add src="child(Meter3_ArrowR)" trait="_clicked"/> </_MeterR>
+		<_MeterR2> <copy src="child(Meter1_ArrowR2)" trait="_clicked"/> <add src="child(Meter2_ArrowR2)" trait="_clicked"/> <add src="child(Meter3_ArrowR2)" trait="_clicked"/> </_MeterR2>
+		<_Scales> 3 </_Scales>
+		<_Selected> 1 </_Selected>
+		<_Setting1>  </_Setting1>
+		<_Setting2>  </_Setting2>
+		<_Setting3>  </_Setting3>
+		<_SettingWidth> 0 </_SettingWidth>
 		<_suffixText>  </_suffixText>
-		<_title>  </_title>
-		<_value>  </_value>
-		<_valueMax>  </_valueMax>
-		<_valueMin>  </_valueMin>
+		<_Title>  </_Title>
+		<_Type> 1 </_Type>
+		<_Value1> 0 </_Value1>
+		<_Value2> 0 </_Value2>
+		<_Value3> 0 </_Value3>
 
 		<hotrect name="Scale_BG">
 			<alpha> 255 </alpha>
@@ -41,7 +102,7 @@
 				<image name="Bracket_h">
 					<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 					<depth> 16 </depth>
-					<filename> Interface\Shared\solid.dds </filename>
+					<filename> <copy src="MCM_Images" trait="_solid"/> </filename>
 					<height> <copy src="globals()" trait="_line_thickness"/> </height>
 					<width> <copy src="parent()" trait="width"/> </width>
 					<x> <copy src="parent()" trait="x"/> </x>
@@ -84,7 +145,7 @@
 			<alpha> 255 </alpha>
 			<brightness> 255 </brightness>
 			<depth> 16 </depth>
-			<font> <copy> 7 </copy> <sub> <copy> 1 </copy> <onlyifnot src="MCM" trait="_dUI"/> </sub> </font>
+			<font> <copy src="MCM_Font" trait="_ScaleTitle"/> </font>
 			<justify> &left; </justify>
 			<string> <copy src="parent()" trait="_title"/> </string>
 			<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
@@ -105,35 +166,157 @@
 			<y> <copy src="parent()" trait="y"/> <sub src="globals()" trait="_line_thickness"/> </y>
 		</hotrect>
 
-		<rect name="Scale_Value">
-			<width> <copy src="child(Value_Unit)" trait="width"/> <add src="child(Value_Suffix)" trait="_width"/> </width>
+		<hotrect name="Scale_RGB">
+			<alpha> 255 </alpha>
+			<blue> <copy src="parent()" trait="_Value3"/> </blue>
+			<brightness> 255 </brightness>
+			<depth> 16 </depth>
+			<green> <copy src="parent()" trait="_Value2"/> </green>
+			<height> 35 </height>
+			<red> <copy src="parent()" trait="_Value1"/> </red>
+			<systemcolor> &nosystemcolor; </systemcolor>
+			<target> &false; </target>
+			<visible> <copy> 1 </copy> <onlyif> <copy src="parent()" trait="_type"/> <eq> 2 </eq> </onlyif> </visible>
+			<width> 100 </width>
 			<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-			<y> <copy src="sibling(Scale_Title)" trait="y"/> <add> <copy src="sibling(Scale_Title)" trait="height"/> <mul> 1.3 </mul> </add> </y>
+			<y> <copy src="parent()" trait="y"/> <add> 65 </add> </y>
+		</hotrect>
 
-			<text name="Value_Unit">
-				<alpha> 255 </alpha>
-				<brightness> 255 </brightness>
-				<depth> 16 </depth>
-				<font> 7 </font>
-				<justify> &left; </justify>
-				<string> <copy src="grandparent()" trait="_value"/> </string>
-				<systemcolor> &mainmenu; </systemcolor>
-				<x> <copy src="parent()" trait="x"/> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
-			</text>
+		<rect name="Scale_Value">
+			<locus> &true; </locus>
+			<width>
+				<copy src="child(Value1_Setting)" trait="_width"/>
+				<add src="child(Value1_Unit)" trait="_width"/>
+				<add src="child(Value_Suffix)" trait="_width"/>
+				<add src="child(Value2_Separator)" trait="_width"/>
+				<add src="child(Value2_Setting)" trait="_width"/>
+				<add src="child(Value2_Unit)" trait="_width"/>
+				<add src="child(Value3_Separator)" trait="_width"/>
+				<add src="child(Value3_Setting)" trait="_width"/>
+				<add src="child(Value3_Unit)" trait="_width"/>
+				<add>
+					<copy src="me()" trait="_spacing"/>
+					<mul>
+						<copy> 1 </copy>
+						<add>
+							<copy> 2 </copy>
+							<onlyif src="child(Value2_Separator)" trait="visible"/>
+						</add>
+						<add>
+							<copy> 2 </copy>
+							<onlyif src="child(Value3_Separator)" trait="visible"/>
+						</add>
+					</mul>
+				</add>
+			</width>
+			<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
+			<y> <copy src="sibling(Meter1)" trait="y"/> <sub src="child(Value1_Unit)" trait="height"/> <sub> 10 </sub> </y>
+			<_spacing> 5 </_spacing>
 
 			<text name="Value_Suffix">
 				<alpha> 255 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 16 </depth>
-				<font> 7 </font>
+				<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
 				<justify> &left; </justify>
 				<string> <copy src="grandparent()" trait="_suffixText"/> </string>
-				<systemcolor> &mainmenu; </systemcolor>
 				<visible> <copy> 1 </copy> <onlyif src="grandparent()" trait="_suffixText"/> </visible>
-				<x> <copy src="parent()" trait="x"/> <add src="sibling(Value_Unit)" trait="width"/> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
-				<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="grandparent()" trait="_suffixText"/> </_width>
+				<x> <copy src="sibling(Value1_Unit)" trait="width"/> <add src="parent()" trait="_spacing"/> </x>
+				<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+			</text>
+
+			<text name="Value1_Setting">
+				<alpha> 255 </alpha>
+				<brightness> 255 </brightness>
+				<depth> 16 </depth>
+				<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+				<justify> &left; </justify>
+				<string> <copy src="grandparent()" trait="_Setting1"/> </string>
+				<visible> <copy> 1 </copy> <onlyif> <copy src="grandparent()" trait="_Scales"/> <gt> 1 </gt> </onlyif> </visible>
+				<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+			</text>
+
+			<text name="Value1_Unit">
+				<alpha> 255 </alpha>
+				<brightness> 255 </brightness>
+				<depth> 16 </depth>
+				<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+				<justify> &left; </justify>
+				<string> <copy src="grandparent()" trait="_Value1"/> </string>
+				<x> <copy  src="sibling(Value1_Setting)" trait="_width"/> <add src="parent()" trait="_spacing"/> </x>
+				<_width> <copy src="me()" trait="width"/> </_width>
+			</text>
+
+			<text name="Value2_Separator">
+				<alpha> 255 </alpha>
+				<brightness> 255 </brightness>
+				<depth> 16 </depth>
+				<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+				<justify> &left; </justify>
+				<string> , </string>
+				<visible> <copy> 1 </copy> <onlyif> <copy src="grandparent()" trait="_Scales"/> <gt> 1 </gt> </onlyif> </visible>
+				<x> <copy src="sibling(Value1_Unit)" trait="x"/> <add src="sibling(Value1_Unit)" trait="width"/> </x>
+				<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+			</text>
+
+			<text name="Value2_Setting">
+				<alpha> 255 </alpha>
+				<brightness> 255 </brightness>
+				<depth> 16 </depth>
+				<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+				<justify> &left; </justify>
+				<string> <copy src="grandparent()" trait="_Setting2"/> </string>
+				<visible> <copy src="sibling(Value2_Separator)" trait="visible"/> </visible>
+				<x> <copy src="sibling(Value2_Separator)" trait="x"/> <add src="sibling(Value2_Separator)" trait="width"/> <add src="parent()" trait="_spacing"/> </x>
+				<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+			</text>
+
+			<text name="Value2_Unit">
+				<alpha> 255 </alpha>
+				<brightness> 255 </brightness>
+				<depth> 16 </depth>
+				<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+				<justify> &left; </justify>
+				<string> <copy src="grandparent()" trait="_Value2"/> </string>
+				<visible> <copy src="sibling(Value2_Separator)" trait="visible"/> </visible>
+				<x> <copy src="sibling(Value2_Setting)" trait="x"/> <add src="sibling(Value2_Setting)" trait="width"/> <add src="parent()" trait="_spacing"/> </x>
+				<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+			</text>
+
+			<text name="Value3_Separator">
+				<alpha> 255 </alpha>
+				<brightness> 255 </brightness>
+				<depth> 16 </depth>
+				<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+				<justify> &left; </justify>
+				<string> , </string>
+				<visible> <copy> 1 </copy> <onlyif> <copy src="grandparent()" trait="_Scales"/> <gt> 2 </gt> </onlyif> </visible>
+				<x> <copy src="sibling(Value2_Unit)" trait="x"/> <add src="sibling(Value2_Unit)" trait="width"/> </x>
+				<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+			</text>
+
+			<text name="Value3_Setting">
+				<alpha> 255 </alpha>
+				<brightness> 255 </brightness>
+				<depth> 16 </depth>
+				<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+				<justify> &left; </justify>
+				<string> <copy src="grandparent()" trait="_Setting3"/> </string>
+				<visible> <copy src="sibling(Value3_Separator)" trait="visible"/> </visible>
+				<x> <copy src="sibling(Value3_Separator)" trait="x"/> <add src="sibling(Value3_Separator)" trait="width"/> <add src="parent()" trait="_spacing"/> </x>
+				<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+			</text>
+
+			<text name="Value3_Unit">
+				<alpha> 255 </alpha>
+				<brightness> 255 </brightness>
+				<depth> 16 </depth>
+				<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+				<justify> &left; </justify>
+				<string> <copy src="grandparent()" trait="_Value3"/> </string>
+				<visible> <copy src="sibling(Value3_Separator)" trait="visible"/> </visible>
+				<x> <copy src="sibling(Value3_Setting)" trait="x"/> <add src="sibling(Value3_Setting)" trait="width"/> <add src="parent()" trait="_spacing"/> </x>
+				<_width> <copy> 0 </copy> <add src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
 			</text>
 		</rect>
 
@@ -144,14 +327,14 @@
 			<width> <copy src="child(text)" trait="width"/> <add> <copy src="MCM_Options" trait="_padding"/> <mul> 2 </mul> </add> </width>
 			<x> <copy src="parent()" trait="x"/> <add src="parent()" trait="width"/> <sub src="me()" trait="width"/> </x>
 			<y> <copy src="sibling(Scale_BG)" trait="y"/> <add src="sibling(Scale_BG)" trait="height"/> <sub src="me()" trait="height"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
 
 			<image name="highlight">
 				<alpha> 30 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 16 </depth>
-				<filename> effects\fxsoftglowspot01.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_fxglowspot01"/> </filename>
 				<height> <copy src="parent()" trait="height"/> </height>
-				<systemcolor> &mainmenu; </systemcolor>
 				<target> &false; </target>
 				<visible> <copy src="parent()" trait="mouseover"/> </visible>
 				<width> <copy src="parent()" trait="width"/> <mul> 3 </mul> </width>
@@ -164,7 +347,7 @@
 				<alpha> 255 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 17 </depth>
-				<font> 6 </font>
+				<font> <copy src="MCM_Font" trait="_ScaleInput"/> </font>
 				<justify> &left; </justify>
 				<string> &sAccept; </string>
 				<systemcolor> <copy> 5 </copy> <add> <copy> 5 </copy> <onlyif src="parent()" trait="mouseover"/> </add> </systemcolor>
@@ -176,9 +359,8 @@
 				<alpha> 255 </alpha>
 				<brightness> 180 </brightness>
 				<depth> 17 </depth>
-				<filename> general_button_a.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_general_button_a"/> </filename>
 				<height> 50 </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
 				<visible> <copy src="MCM" trait="_AltInput"/> </visible>
 				<width> 50 </width>
 				<x> <copy src="sibling(text)" trait="x"/> <sub> 40 </sub> </x>
@@ -194,14 +376,14 @@
 			<width> <copy src="child(text)" trait="width"/> <add> <copy src="MCM_Options" trait="_padding"/> <mul> 2 </mul> </add> </width>
 			<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
 			<y> <copy src="sibling(Scale_Accept)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
 
 			<image name="highlight">
 				<alpha> 30 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 16 </depth>
-				<filename> effects\fxsoftglowspot01.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_fxglowspot01"/> </filename>
 				<height> <copy src="parent()" trait="height"/> </height>
-				<systemcolor> &mainmenu; </systemcolor>
 				<target> &false; </target>
 				<visible> <copy src="parent()" trait="mouseover"/> </visible>
 				<width> <copy src="parent()" trait="width"/> <mul> 3 </mul> </width>
@@ -214,7 +396,7 @@
 				<alpha> 255 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 17 </depth>
-				<font> 6 </font>
+				<font> <copy src="MCM_Font" trait="_ScaleInput"/> </font>
 				<justify> &left; </justify>
 				<string> &sCancel; </string>
 				<systemcolor> <copy> 5 </copy> <add> <copy> 5 </copy> <onlyif src="parent()" trait="mouseover"/> </add> </systemcolor>
@@ -226,9 +408,8 @@
 				<alpha> 255 </alpha>
 				<brightness> 180 </brightness>
 				<depth> 17 </depth>
-				<filename> general_button_b.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_general_button_b"/> </filename>
 				<height> 50 </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
 				<visible> <copy src="MCM" trait="_AltInput"/> </visible>
 				<width> 50 </width>
 				<x> <copy src="sibling(text)" trait="x"/> <sub> 40 </sub> </x>
@@ -244,14 +425,14 @@
 			<width> <copy src="child(text)" trait="width"/> <add> <copy src="MCM_Options" trait="_padding"/> <mul> 2 </mul> </add> </width>
 			<x> <copy src="parent()" trait="x"/> </x>
 			<y> <copy src="sibling(Scale_Accept)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
 
 			<image name="highlight">
 				<alpha> 30 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 16 </depth>
-				<filename> effects\fxsoftglowspot01.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_fxglowspot01"/> </filename>
 				<height> <copy src="parent()" trait="height"/> </height>
-				<systemcolor> &mainmenu; </systemcolor>
 				<target> &false; </target>
 				<visible> <copy src="parent()" trait="mouseover"/> </visible>
 				<width> <copy src="parent()" trait="width"/> <mul> 3 </mul> </width>
@@ -264,7 +445,7 @@
 				<alpha> 255 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 17 </depth>
-				<font> 6 </font>
+				<font> <copy src="MCM_Font" trait="_ScaleInput"/> </font>
 				<justify> &left; </justify>
 				<string> Default </string>
 				<systemcolor> <copy> 5 </copy> <add> <copy> 5 </copy> <onlyif src="parent()" trait="mouseover"/> </add> </systemcolor>
@@ -276,9 +457,8 @@
 				<alpha> 255 </alpha>
 				<brightness> 180 </brightness>
 				<depth> 17 </depth>
-				<filename> general_button_y.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_general_button_y"/> </filename>
 				<height> 50 </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
 				<visible> <copy src="MCM" trait="_AltInput"/> </visible>
 				<width> 50 </width>
 				<x> <copy src="sibling(text)" trait="x"/> <sub> 40 </sub> </x>
@@ -287,222 +467,631 @@
 			</image>
 		</hotrect>
 
-		<hotrect name="Meter">
+
+
+
+		<rect name="Meter1">
 			<clicksound> UIMenuPrevNext </clicksound>
+			<clipwindow> &true; </clipwindow>
 			<depth> 17 </depth>
-			<draggable> &true; </draggable>
-			<height> <copy src="child(Meter_Image1)" trait="height"/> <add src="sibling(Meter_Bar)" trait="height"/> </height>
-			<width> <copy src="child(Meter_Image1)" trait="width"/> <add src="MCM_Options" trait="_padding"/> </width>
-			<x> <copy src="me()" trait="_x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-			<y> <copy src="parent()" trait="y"/> <add src="parent()" trait="height"/> <sub> <copy src="parent()" trait="height"/> <div> 3 </div> </sub> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+			<height> <copy src="sibling(Meter1_Bar)" trait="height"/> </height>
+			<width> <copy src="sibling(Meter1_Bar)" trait="width"/> <add> 10 </add> </width>
+			<x> <copy src="sibling(Meter1_Bar)" trait="x"/> <sub> 5 </sub> </x>
+			<y> <copy src="parent()" trait="y"/> <add> 95 </add> <add> <copy> 65 </copy> <onlyif> <copy src="parent()" trait="_type"/> <eq> 2 </eq> </onlyif> </add> </y>
 
 			<_drag>
-				<copy src="me()" trait="dragx"/>
-				<sub src="sibling(Meter_Bar)" trait="x"/>
-				<div src="sibling(Meter_Bar)" trait="width"/>
-				<max> <copy> -0.1 </copy> <add> <copy> 0.1 </copy> <onlyif src="me()" trait="dragx"/> </add> </max>
+				<copy src="child(Meter1_Drag)" trait="dragx"/>
+				<sub src="sibling(Meter1_Bar)" trait="x"/>
+				<div src="sibling(Meter1_Bar)" trait="width"/>
+				<max> <copy> -0.1 </copy> <add> <copy> 0.1 </copy> <onlyif src="child(Meter1_Drag)" trait="dragx"/> </add> </max>
 				<min> 1 </min>
 			</_drag>
-			<_x>
-				<copy src="sibling(Meter_Bar)" trait="x"/>
+			<_height> 28 </_height>
+			<_highlight>
+				<copy src="child(Meter1_Drag)" trait="mouseover"/>
 				<add>
-					<copy src="sibling(Meter_Bar)" trait="width"/>
+					<copy src="MCM" trait="_AltInput"/>
+					<onlyif>
+						<copy src="parent()" trait="_selected"/>
+						<eq> 1 </eq>
+					</onlyif>
+				</add>
+			</_highlight>
+			<_width> 9 </_width>
+			<_x>
+				<copy src="sibling(Meter1_Bar)" trait="x"/>
+				<add>
+					<copy src="sibling(Meter1_Bar)" trait="width"/>
 					<mul>
-						<copy src="parent()" trait="_value"/>
-						<sub src="parent()" trait="_valueMin"/>
+						<copy src="parent()" trait="_Value1"/>
+						<sub src="MCM" trait="_Value1Min"/>
 						<div>
-							<copy src="parent()" trait="_valueMax"/>
-							<sub src="parent()" trait="_valueMin"/>
+							<copy src="MCM" trait="_Value1Max"/>
+							<sub src="MCM" trait="_Value1Min"/>
 						</div>
 					</mul>
+					<max> 0 </max>
+					<min> <copy src="sibling(Meter1_Bar)" trait="width"/> </min>
 				</add>
 			</_x>
 
-			<image name="Meter_Image1">
-				<depth> 16 </depth>
-				<filename> Interface\Shared\Arrow\pointer.dds </filename>
-				<height> 48 </height>
-				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
-				<width> 24 </width>
+			<hotrect name="Meter1_Drag">
+				<clicksound> UIMenuPrevNext </clicksound>
+				<clips> &true; </clips>
+				<depth> 17 </depth>
+				<draggable> &true; </draggable>
+				<height> <copy src="parent()" trait="height"/> </height>
+				<width> <copy src="parent()" trait="width"/> <mul> 2 </mul> </width>
 				<x> <copy src="parent()" trait="_x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> <sub> <copy src="me()" trait="height"/> <div> 4 </div> </sub> </y>
+				<y> <copy src="parent()" trait="y"/> </y>
+			</hotrect>
+
+			<image name="Meter1_Image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_meterarrow"/> </filename>
+				<height> <copy src="parent()" trait="_height"/> </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="_highlight"/> <add> &mainmenu; </add> </systemcolor>
+				<width> <copy src="parent()" trait="_width"/> </width>
+				<x> <copy src="parent()" trait="_x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
+				<y> <copy src="parent()" trait="y"/> <add> <copy src="parent()" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
 				<zoom> &scale; </zoom>
 			</image>
+		</rect>
 
-			<image name="Meter_Image2">
+		<image name="Meter1_Bar">
+			<depth> 16 </depth>
+			<filename> <copy src="MCM_Images" trait="_meter"/> </filename>
+			<height> 56 </height>
+			<width> 324 </width>
+			<x> <copy src="parent()" trait="x"/> <add src="parent()" trait="_SettingWidth"/> <add> <copy src="parent()" trait="_BaseWidth"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
+			<y> <copy src="sibling(Meter1)" trait="y"/> </y>
+			<zoom> &scale; </zoom>
+		</image>
+
+		<text name="Meter1_Setting">
+			<alpha> 255 </alpha>
+			<brightness> 255 </brightness>
+			<depth> 16 </depth>
+			<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+			<justify> &left; </justify>
+			<string> <copy src="parent()" trait="_Setting1"/> </string>
+			<visible> <copy> 1 </copy> <onlyif> <copy src="parent()" trait="_Scales"/> <gt> 1 </gt> </onlyif> </visible>
+			<x> <copy src="parent()" trait="x"/> <add> 10 </add> </x>
+			<y> <copy src="sibling(Meter1)" trait="y"/> <add> <copy src="sibling(Meter1)" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+		</text>
+
+		<hotrect name="Meter1_ArrowL">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter1_Bar)" trait="x"/> <sub> 29 </sub> </x>
+			<y> <copy src="sibling(Meter1_Bar)" trait="y"/> <add> <copy src="sibling(Meter1_Bar)" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+			<image name="Meter1_ArrowL_image">
 				<depth> 16 </depth>
-				<filename> Interface\Shared\Arrow\pointer.dds </filename>
-				<height> 48 </height>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
 				<rotateangle> 3.14159 </rotateangle>
 				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
 				<rotateaxisy> <copy src="me()" trait="height"/> <div> 2 </div> </rotateaxisy>
 				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
-				<width> 24 </width>
-				<x> <copy src="sibling(Meter_Image1)" trait="x"/> </x>
-				<y> <copy src="parent()" trait="y"/> <add src="parent()" trait="height"/> <sub> <copy src="me()" trait="height"/> <mul> 0.75 </mul> </sub> </y>
+				<width> 19 </width>
 				<zoom> &scale; </zoom>
 			</image>
 		</hotrect>
 
-		<rect name="Meter_Bar">
-			<height> <copy src="child(Meter_Bar_h)" trait="height"/> </height>
-			<width> <copy src="child(Meter_Bar_h)" trait="width"/> </width>
-			<x> <copy src="child(Meter_Bar_h)" trait="x"/> </x>
-			<y> <copy src="sibling(meter)" trait="y"/> </y>
-			<_height> <copy src="sibling(meter)" trait="height"/> </_height>
-			<_max> <copy src="me()" trait="_min"/> </_max>
-			<_min> 35 </_min>
+		<hotrect name="Meter1_ArrowL2">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<target> &true; </target>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter1_ArrowL)" trait="x"/> <sub> 19 </sub> </x>
+			<y> <copy src="sibling(Meter1_ArrowL)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
 
-			<image name="Meter_Bar_h">
+			<image name="Meter1_ArrowL2_image">
 				<depth> 16 </depth>
-				<filename> Interface\Shared\solid.dds </filename>
-				<height> <copy src="globals()" trait="_line_thickness"/> </height>
-				<systemcolor> &mainmenu; </systemcolor>
-				<width> <copy src="grandparent()" trait="width"/> <sub> <copy src="MCM_Options" trait="_padding"/> <mul> 6 </mul> </sub> <sub> 35 </sub> </width>
-				<x> <copy src="grandparent()" trait="x"/> <add> <copy src="grandparent()" trait="width"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> <add> <copy src="parent()" trait="_height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<rotateangle> 3.14159 </rotateangle>
+				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
+				<rotateaxisy> <copy src="me()" trait="height"/> <div> 2 </div> </rotateaxisy>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
 				<zoom> &scale; </zoom>
 			</image>
-			
-			<image name="Meter_l1">
+
+			<image name="Meter1_ArrowL2_image2">
 				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_top.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 2 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<rotateangle> 3.14159 </rotateangle>
+				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
+				<rotateaxisy> <copy src="me()" trait="height"/> <div> 2 </div> </rotateaxisy>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<x> -6 </x>
+				<zoom> &scale; </zoom>
+			</image>
+		</hotrect>
+
+		<hotrect name="Meter1_ArrowR">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<target> &true; </target>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter1_Bar)" trait="x"/> <add src="sibling(Meter1_Bar)" trait="width"/> <add> 10 </add> </x>
+			<y> <copy src="sibling(Meter1_ArrowL)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+			<image name="Meter1_ArrowR_image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<zoom> &scale; </zoom>
+			</image>
+		</hotrect>
+
+		<hotrect name="Meter1_ArrowR2">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<target> &true; </target>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter1_ArrowR)" trait="x"/> <add> <copy src="sibling(Meter1_ArrowR)" trait="width"/> <div> 2 </div> </add> <add> 10 </add> </x>
+			<y> <copy src="sibling(Meter1_ArrowL)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+			<image name="Meter1_ArrowR2_image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<zoom> &scale; </zoom>
+			</image>
+
+			<image name="Meter1_ArrowR2_image2">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<x> 6 </x>
+				<zoom> &scale; </zoom>
+			</image>
+		</hotrect>
+
+
+
+
+		<rect name="Meter2">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<clipwindow> &true; </clipwindow>
+			<depth> 17 </depth>
+			<height> <copy src="sibling(Meter2_Bar)" trait="height"/> </height>
+			<visible> <copy> 1 </copy> <onlyif> <copy src="parent()" trait="_Scales"/> <gt> 1 </gt> </onlyif> </visible>
+			<width> <copy src="sibling(Meter2_Bar)" trait="width"/> <add> 10 </add> </width>
+			<x> <copy src="sibling(Meter2_Bar)" trait="x"/> <sub> 5 </sub> </x>
+			<y> <copy src="parent()" trait="y"/> <add> 160 </add> <add> <copy> 65 </copy> <onlyif> <copy src="parent()" trait="_type"/> <eq> 2 </eq> </onlyif> </add> </y>
+
+			<_drag>
+				<copy src="child(Meter2_Drag)" trait="dragx"/>
+				<sub src="sibling(Meter2_Bar)" trait="x"/>
+				<div src="sibling(Meter2_Bar)" trait="width"/>
+				<max> <copy> -0.1 </copy> <add> <copy> 0.1 </copy> <onlyif src="child(Meter2_Drag)" trait="dragx"/> </add> </max>
+				<min> 1 </min>
+			</_drag>
+			<_height> 28 </_height>
+			<_highlight>
+				<copy src="child(Meter2_Drag)" trait="mouseover"/>
+				<add>
+					<copy src="MCM" trait="_AltInput"/>
+					<onlyif>
+						<copy src="parent()" trait="_selected"/>
+						<eq> 2 </eq>
+					</onlyif>
+				</add>
+			</_highlight>
+			<_width> 9 </_width>
+			<_x>
+				<copy src="sibling(Meter2_Bar)" trait="x"/>
+				<add>
+					<copy src="sibling(Meter2_Bar)" trait="width"/>
+					<mul>
+						<copy src="parent()" trait="_Value2"/>
+						<sub src="MCM" trait="_Value2Min"/>
+						<div>
+							<copy src="MCM" trait="_Value2Max"/>
+							<sub src="MCM" trait="_Value2Min"/>
+						</div>
+					</mul>
+					<max> 0 </max>
+					<min> <copy src="sibling(Meter2_Bar)" trait="width"/> </min>
+				</add>
+			</_x>
+
+			<hotrect name="Meter2_Drag">
+				<clicksound> UIMenuPrevNext </clicksound>
+				<clips> &true; </clips>
+				<depth> 17 </depth>
+				<draggable> &true; </draggable>
+				<height> <copy src="parent()" trait="height"/> </height>
+				<width> <copy src="parent()" trait="width"/> <mul> 2 </mul> </width>
+				<x> <copy src="parent()" trait="_x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
 				<y> <copy src="parent()" trait="y"/> </y>
-			</image>
+			</hotrect>
 
-			<image name="Meter_l2">
+			<image name="Meter2_Image">
 				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_bottom.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 2 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> <add src="me()" trait="height"/> </y>
-			</image>
-
-			<image name="Meter_l3">
-				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_top.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 4 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <mul> 0.25 </mul> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> <add src="me()" trait="height"/> </y>
-			</image>
-
-			<image name="Meter_l4">
-				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_bottom.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 4 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <mul> 0.25 </mul> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> <add src="me()" trait="height"/> <add src="me()" trait="height"/> </y>
-			</image>
-
-			<image name="Meter_l5">
-				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_top.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 2 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <mul> 0.5 </mul> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
-			</image>
-
-			<image name="Meter_l6">
-				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_bottom.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 2 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <mul> 0.5 </mul> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> <add src="me()" trait="height"/> </y>
-			</image>
-
-			<image name="Meter_l7">
-				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_top.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 4 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <mul> 0.75 </mul> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> <add src="me()" trait="height"/> </y>
-			</image>
-
-			<image name="Meter_l8">
-				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_bottom.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 4 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <add> <copy src="parent()" trait="width"/> <mul> 0.75 </mul> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> <add src="me()" trait="height"/> <add src="me()" trait="height"/> </y>
-			</image>
-
-			<image name="Meter_l9">
-				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_top.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 2 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <add src="parent()" trait="width"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
-			</image>
-
-			<image name="Meter_l10">
-				<depth> 16 </depth>
-				<filename> Interface\Shared\Line\fade_to_bottom.dds </filename>
-				<height> <copy src="parent()" trait="_height"/> <div> 2 </div> </height>
-				<texatlas> Interface\InterfaceShared.tai </texatlas>
-				<width> <copy src="globals()" trait="_line_thickness"/> </width>
-				<x> <copy src="parent()" trait="x"/> <add src="parent()" trait="width"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
-				<y> <copy src="parent()" trait="y"/> <add src="me()" trait="height"/> </y>
+				<filename> <copy src="MCM_Images" trait="_meterarrow"/> </filename>
+				<height> <copy src="parent()" trait="_height"/> </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="_highlight"/> <add> &mainmenu; </add> </systemcolor>
+				<width> <copy src="parent()" trait="_width"/> </width>
+				<x> <copy src="parent()" trait="_x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
+				<y> <copy src="parent()" trait="y"/> <add> <copy src="parent()" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+				<zoom> &scale; </zoom>
 			</image>
 		</rect>
 
-		<hotrect name="Meter_ArrowL">
+		<image name="Meter2_Bar">
+			<depth> 16 </depth>
+			<filename> <copy src="MCM_Images" trait="_meter"/> </filename>
+			<height> 56 </height>
+			<visible> <copy src="sibling(Meter2)" trait="visible"/> </visible>
+			<width> 324 </width>
+			<x> <copy src="parent()" trait="x"/> <add src="parent()" trait="_SettingWidth"/> <add> <copy src="parent()" trait="_BaseWidth"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
+			<y> <copy src="sibling(Meter2)" trait="y"/> </y>
+			<zoom> &scale; </zoom>
+		</image>
+
+		<text name="Meter2_Setting">
+			<alpha> 255 </alpha>
+			<brightness> 255 </brightness>
+			<depth> 16 </depth>
+			<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+			<justify> &left; </justify>
+			<string> <copy src="parent()" trait="_Setting2"/> </string>
+			<visible> <copy src="sibling(Meter2)" trait="visible"/> </visible>
+			<x> <copy src="parent()" trait="x"/> <add> 10 </add> </x>
+			<y> <copy src="sibling(Meter2)" trait="y"/> <add> <copy src="sibling(Meter2)" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+			<_width> <copy src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+		</text>
+
+		<hotrect name="Meter2_ArrowL">
 			<clicksound> UIMenuPrevNext </clicksound>
 			<depth> 17 </depth>
-			<height> 35 </height>
-			<width> 17.5 </width>
-			<x> <copy src="sibling(Meter_Bar)" trait="x"/> <sub> 17.5 </sub> <sub src="MCM_Options" trait="_padding"/> </x>
-			<y> <copy src="sibling(Meter_Bar)" trait="y"/> <add> <copy src="me()" trait="height"/> <mul> 0.333 </mul> </add> </y>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<visible> <copy src="sibling(Meter2)" trait="visible"/> </visible>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter2_Bar)" trait="x"/> <sub> 29 </sub> </x>
+			<y> <copy src="sibling(Meter2_Bar)" trait="y"/> <add> <copy src="sibling(Meter2_Bar)" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
 
-			<image name="Meter_ArrowL_image">
+			<image name="Meter2_ArrowL_image">
 				<depth> 16 </depth>
-				<filename> Interface\Main\main_arrow_left.dds </filename>
-				<height> 35 </height>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<rotateangle> 3.14159 </rotateangle>
+				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
+				<rotateaxisy> <copy src="me()" trait="height"/> <div> 2 </div> </rotateaxisy>
 				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
-				<width> 17.5 </width>
-				<x> <copy src="parent()" trait="x"/> </x>
-				<y> <copy src="parent()" trait="y"/> </y>
+				<width> 19 </width>
 				<zoom> &scale; </zoom>
 			</image>
 		</hotrect>
 
-		<hotrect name="Meter_ArrowR">
+		<hotrect name="Meter2_ArrowL2">
 			<clicksound> UIMenuPrevNext </clicksound>
 			<depth> 17 </depth>
-			<height> 35 </height>
+			<height> 19 </height>
+			<locus> &true; </locus>
 			<target> &true; </target>
-			<width> 17.5 </width>
-			<x> <copy src="me()" trait="_x"/> </x>
-			<_x> <copy src="sibling(Meter_Bar)" trait="x"/> <add src="sibling(Meter_Bar)" trait="width"/> <add> 5 </add> <add src="MCM_Options" trait="_padding"/> </_x>
-			<y> <copy src="sibling(Meter_arrowL)" trait="y"/> </y>
+			<visible> <copy src="sibling(Meter2)" trait="visible"/> </visible>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter2_ArrowL)" trait="x"/> <sub> 19 </sub> </x>
+			<y> <copy src="sibling(Meter2_ArrowL)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
 
-			<image name="Meter_ArrowR_image">
+			<image name="Meter2_ArrowL2_image">
 				<depth> 16 </depth>
-				<filename> Interface\Main\main_arrow_right.dds </filename>
-				<height> 35 </height>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<rotateangle> 3.14159 </rotateangle>
+				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
+				<rotateaxisy> <copy src="me()" trait="height"/> <div> 2 </div> </rotateaxisy>
 				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
-				<width> 17.5 </width>
-				<x> <copy src="parent()" trait="_x"/> </x>
+				<width> 19 </width>
+				<zoom> &scale; </zoom>
+			</image>
+
+			<image name="Meter2_ArrowL2_image2">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<rotateangle> 3.14159 </rotateangle>
+				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
+				<rotateaxisy> <copy src="me()" trait="height"/> <div> 2 </div> </rotateaxisy>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<x> -6 </x>
+				<zoom> &scale; </zoom>
+			</image>
+		</hotrect>
+
+		<hotrect name="Meter2_ArrowR">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<target> &true; </target>
+			<visible> <copy src="sibling(Meter2)" trait="visible"/> </visible>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter2_Bar)" trait="x"/> <add src="sibling(Meter2_Bar)" trait="width"/> <add> 10 </add> </x>
+			<y> <copy src="sibling(Meter2_ArrowL)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+			<image name="Meter2_ArrowR_image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<zoom> &scale; </zoom>
+			</image>
+		</hotrect>
+
+		<hotrect name="Meter2_ArrowR2">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<target> &true; </target>
+			<visible> <copy src="sibling(Meter2)" trait="visible"/> </visible>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter2_ArrowR)" trait="x"/> <add> <copy src="sibling(Meter2_ArrowR)" trait="width"/> <div> 2 </div> </add> <add> 10 </add> </x>
+			<y> <copy src="sibling(Meter2_ArrowL)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+			<image name="Meter2_ArrowR2_image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<zoom> &scale; </zoom>
+			</image>
+
+			<image name="Meter2_ArrowR2_image2">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<x> 6 </x>
+				<zoom> &scale; </zoom>
+			</image>
+		</hotrect>
+
+
+
+
+		<rect name="Meter3">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<clipwindow> &true; </clipwindow>
+			<depth> 17 </depth>
+			<height> <copy src="sibling(Meter3_Bar)" trait="height"/> </height>
+			<visible> <copy> 1 </copy> <onlyif> <copy src="parent()" trait="_Scales"/> <eq> 3 </eq> </onlyif> </visible>
+			<width> <copy src="sibling(Meter3_Bar)" trait="width"/> <add> 10 </add> </width>
+			<x> <copy src="sibling(Meter3_Bar)" trait="x"/> <sub> 5 </sub> </x>
+			<y> <copy src="parent()" trait="y"/> <add> 225 </add> <add> <copy> 65 </copy> <onlyif> <copy src="parent()" trait="_type"/> <eq> 2 </eq> </onlyif> </add> </y>
+
+			<_drag>
+				<copy src="child(Meter3_Drag)" trait="dragx"/>
+				<sub src="sibling(Meter3_Bar)" trait="x"/>
+				<div src="sibling(Meter3_Bar)" trait="width"/>
+				<max> <copy> -0.1 </copy> <add> <copy> 0.1 </copy> <onlyif src="child(Meter3_Drag)" trait="dragx"/> </add> </max>
+				<min> 1 </min>
+			</_drag>
+			<_height> 28 </_height>
+			<_highlight>
+				<copy src="child(Meter3_Drag)" trait="mouseover"/>
+				<add>
+					<copy src="MCM" trait="_AltInput"/>
+					<onlyif>
+						<copy src="parent()" trait="_selected"/>
+						<eq> 3 </eq>
+					</onlyif>
+				</add>
+			</_highlight>
+			<_width> 9 </_width>
+			<_x>
+				<copy src="sibling(Meter3_Bar)" trait="x"/>
+				<add>
+					<copy src="sibling(Meter3_Bar)" trait="width"/>
+					<mul>
+						<copy src="parent()" trait="_Value3"/>
+						<sub src="MCM" trait="_Value3Min"/>
+						<div>
+							<copy src="MCM" trait="_Value3Max"/>
+							<sub src="MCM" trait="_Value3Min"/>
+						</div>
+					</mul>
+					<max> 0 </max>
+					<min> <copy src="sibling(Meter3_Bar)" trait="width"/> </min>
+				</add>
+			</_x>
+
+			<hotrect name="Meter3_Drag">
+				<clicksound> UIMenuPrevNext </clicksound>
+				<clips> &true; </clips>
+				<depth> 17 </depth>
+				<draggable> &true; </draggable>
+				<height> <copy src="parent()" trait="height"/> </height>
+				<width> <copy src="parent()" trait="width"/> <mul> 2 </mul> </width>
+				<x> <copy src="parent()" trait="_x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
 				<y> <copy src="parent()" trait="y"/> </y>
+			</hotrect>
+
+			<image name="Meter3_Image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_meterarrow"/> </filename>
+				<height> <copy src="parent()" trait="_height"/> </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="_highlight"/> <add> &mainmenu; </add> </systemcolor>
+				<width> <copy src="parent()" trait="_width"/> </width>
+				<x> <copy src="parent()" trait="_x"/> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
+				<y> <copy src="parent()" trait="y"/> <add> <copy src="parent()" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+				<zoom> &scale; </zoom>
+			</image>
+		</rect>
+
+		<image name="Meter3_Bar">
+			<depth> 16 </depth>
+			<filename> <copy src="MCM_Images" trait="_meter"/> </filename>
+			<height> 56 </height>
+			<visible> <copy src="sibling(Meter3)" trait="visible"/> </visible>
+			<width> 324 </width>
+			<x> <copy src="parent()" trait="x"/> <add src="parent()" trait="_SettingWidth"/> <add> <copy src="parent()" trait="_BaseWidth"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="width"/> <div> 2 </div> </sub> </x>
+			<y> <copy src="sibling(Meter3)" trait="y"/> </y>
+			<zoom> &scale; </zoom>
+		</image>
+
+		<text name="Meter3_Setting">
+			<alpha> 255 </alpha>
+			<brightness> 255 </brightness>
+			<depth> 16 </depth>
+			<font> <copy src="MCM_Font" trait="_ScaleValue"/> </font>
+			<justify> &left; </justify>
+			<string> <copy src="parent()" trait="_Setting3"/> </string>
+			<visible> <copy src="sibling(Meter3)" trait="visible"/> </visible>
+			<x> <copy src="parent()" trait="x"/> <add> 10 </add> </x>
+			<y> <copy src="sibling(Meter3)" trait="y"/> <add> <copy src="sibling(Meter3)" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+			<_width> <copy src="me()" trait="width"/> <onlyif src="me()" trait="visible"/> </_width>
+		</text>
+
+		<hotrect name="Meter3_ArrowL">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<visible> <copy src="sibling(Meter3)" trait="visible"/> </visible>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter3_Bar)" trait="x"/> <sub> 29 </sub> </x>
+			<y> <copy src="sibling(Meter3_Bar)" trait="y"/> <add> <copy src="sibling(Meter3_Bar)" trait="height"/> <div> 2 </div> </add> <sub> <copy src="me()" trait="height"/> <div> 2 </div> </sub> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+			<image name="Meter3_ArrowL_image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<rotateangle> 3.14159 </rotateangle>
+				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
+				<rotateaxisy> <copy src="me()" trait="height"/> <div> 2 </div> </rotateaxisy>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<zoom> &scale; </zoom>
+			</image>
+		</hotrect>
+
+		<hotrect name="Meter3_ArrowL2">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<target> &true; </target>
+			<visible> <copy src="sibling(Meter3)" trait="visible"/> </visible>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter3_ArrowL)" trait="x"/> <sub> 19 </sub> </x>
+			<y> <copy src="sibling(Meter3_ArrowL)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+			<image name="Meter3_ArrowL2_image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<rotateangle> 3.14159 </rotateangle>
+				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
+				<rotateaxisy> <copy src="me()" trait="height"/> <div> 2 </div> </rotateaxisy>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<zoom> &scale; </zoom>
+			</image>
+
+			<image name="Meter3_ArrowL2_image2">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<rotateangle> 3.14159 </rotateangle>
+				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
+				<rotateaxisy> <copy src="me()" trait="height"/> <div> 2 </div> </rotateaxisy>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<x> -6 </x>
+				<zoom> &scale; </zoom>
+			</image>
+		</hotrect>
+
+		<hotrect name="Meter3_ArrowR">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<target> &true; </target>
+			<visible> <copy src="sibling(Meter3)" trait="visible"/> </visible>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter3_Bar)" trait="x"/> <add src="sibling(Meter3_Bar)" trait="width"/> <add> 10 </add> </x>
+			<y> <copy src="sibling(Meter3_ArrowL)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+			<image name="Meter3_ArrowR_image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<zoom> &scale; </zoom>
+			</image>
+		</hotrect>
+
+		<hotrect name="Meter3_ArrowR2">
+			<clicksound> UIMenuPrevNext </clicksound>
+			<depth> 17 </depth>
+			<height> 19 </height>
+			<locus> &true; </locus>
+			<target> &true; </target>
+			<visible> <copy src="sibling(Meter3)" trait="visible"/> </visible>
+			<width> 19 </width>
+			<x> <copy src="sibling(Meter3_ArrowR)" trait="x"/> <add> <copy src="sibling(Meter3_ArrowR)" trait="width"/> <div> 2 </div> </add> <add> 10 </add> </x>
+			<y> <copy src="sibling(Meter3_ArrowL)" trait="y"/> </y>
+			<_clicked> <sub src="MCM" trait="_UnClick"/> <add src="me()" trait="clicked"/> <max> 0 </max> <min> 1 </min> </_clicked>
+
+			<image name="Meter3_ArrowR2_image">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<zoom> &scale; </zoom>
+			</image>
+
+			<image name="Meter3_ArrowR2_image2">
+				<depth> 16 </depth>
+				<filename> <copy src="MCM_Images" trait="_arrow"/> </filename>
+				<height> 19 </height>
+				<systemcolor> <copy> &mainmenu; </copy> <onlyif src="parent()" trait="mouseover"/> <add> &mainmenu; </add> </systemcolor>
+				<width> 19 </width>
+				<x> 6 </x>
 				<zoom> &scale; </zoom>
 			</image>
 		</hotrect>

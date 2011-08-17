@@ -224,7 +224,6 @@
 		<_spacing> 6 </_spacing>
 
 
-		<_highlightAlpha> 30 </_highlightAlpha>
 		<_highlightDepth> 11 </_highlightDepth>
 		<_highlightHeight> <copy src="MCM_ModList_Size" trait="height"/> <add src="me()" trait="_spacing"/> <sub> 1 </sub> </_hightlightHeight>
 		<_highlightWidth> <copy src="me()" trait="_listWidth"/> <add src="me()" trait="_spacing"/> <mul> 1.3 </mul> </_highlightWidth>
@@ -423,7 +422,7 @@
 				<alpha> 60 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> effects\fxsoftglowspot01.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_fxglowspot01"/> </filename>
 				<height> <copy src="parent()" trait="height"/> <sub> 2 </sub> </height>
 				<systemcolor> &mainmenu; </systemcolor>
 				<visible> <copy> 1 </copy> <onlyif src="parent()" trait="mouseover"/> </visible>
@@ -437,7 +436,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
@@ -454,7 +453,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
@@ -481,7 +480,7 @@
 				<alpha> 60 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> effects\fxsoftglowspot01.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_fxglowspot01"/> </filename>
 				<height> <copy src="parent()" trait="height"/> <sub> 2 </sub> </height>
 				<systemcolor> &mainmenu; </systemcolor>
 				<visible> <copy> 1 </copy> <onlyif src="parent()" trait="mouseover"/> </visible>
@@ -494,7 +493,7 @@
 				<alpha> 255 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<systemcolor> <copy> 5 </copy> <add> <copy> 5 </copy> <onlyif src="parent()" trait="mouseover"/> </add> </systemcolor>
@@ -508,7 +507,7 @@
 				<alpha> 255 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<systemcolor> <copy> 5 </copy> <add> <copy> 5 </copy> <onlyif src="parent()" trait="mouseover"/> </add> </systemcolor>

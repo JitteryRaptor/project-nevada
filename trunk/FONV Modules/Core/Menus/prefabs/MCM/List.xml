@@ -123,7 +123,7 @@
 				<image name="Bracket_h">
 					<brightness> <copy src="globals()" trait="_text_brightness"/> </brightness>
 					<depth> 16 </depth>
-					<filename> Interface\Shared\solid.dds </filename>
+					<filename> <copy src="MCM_Images" trait="_solid"/> </filename>
 					<height> <copy src="globals()" trait="_line_thickness"/> </height>
 					<width> <copy src="parent()" trait="width"/> </width>
 					<x> <copy src="parent()" trait="x"/> </x>

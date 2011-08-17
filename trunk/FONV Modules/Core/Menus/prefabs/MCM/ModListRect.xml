@@ -2,7 +2,7 @@
 	<clicksound> UIMenuOK </clicksound>
 	<depth> 13 </depth>
 	<height> <copy src="MCM_ModList_Size" trait="height"/> </height>
-	<target> &true; </target>
+	<target> <copy src="MCM" trait="_TargetMain"/> </target>
 	<visible>
 		<copy> 1 </copy>
 		<onlyif>
@@ -65,7 +65,7 @@
 	<_modIndex> 0 </_modIndex>
 	<_modIndex2> 0 </_modIndex2>
 	<_subID> 0 </_subID>
-	<_target> <copy> 1 </copy> <onlyif> <copy src="me()" trait="mouseover"/> <or src="me()" trait="_altTarget"/> </onlyif> </_target>
+	<_target> <copy> 1 </copy> <onlyif> <copy src="me()" trait="mouseover"/> <or src="me()" trait="_altTarget"/> </_target>
 
 	<_index> <copy src="me()" trait="_modIndex"/> <onlyif> <copy src="me()" trait="_clicked"/> <or src="me()" trait="_altTarget"/> </onlyif> </_index>
 	<_index2> <copy src="me()" trait="_modIndex2"/> <onlyif> <copy src="me()" trait="_clicked"/> <or src="me()" trait="_altTarget"/> </onlyif> </_index2>
@@ -76,17 +76,17 @@
 	<_width> <copy src="child(text)" trait="width"/> <onlyif> <copy src="parent()" trait="_widthcheck"/> <eq> <copy src="me()" trait="_modID"/> </eq> </onlyif> </_width>
 
 	<image name="highlight">
-		<alpha> <copy src="grandparent()" trait="_highlightAlpha"/> </alpha>
-		<blue> <copy src="MCM_RGB" trait="_ModListBlueHL"/> </blue>
+		<alpha> <copy src="MCM_RGB" trait="_HighlightAlpha"/> <div> <copy> 3 </copy> <onlyifnot src="MCM" trait="_TargetMain"/> </div> </alpha>
+		<blue> <copy src="MCM_RGB" trait="_HighlightBlue"/> </blue>
 		<brightness> 255 </brightness>
 		<depth> <copy src="grandparent()" trait="_highlightDepth"/> </depth>
-		<filename> effects\fxsoftglowspot01.dds </filename>
-		<green> <copy src="MCM_RGB" trait="_ModListGreenHL"/> </green>
+		<filename> <copy src="MCM_Images" trait="_fxglowspot01"/> </filename>
+		<green> <copy src="MCM_RGB" trait="_HighlightGreen"/> </green>
 		<height> <copy src="grandparent()" trait="_highlightHeight"/> </height>
-		<red> <copy src="MCM_RGB" trait="_ModListRedHL"/> </red>
+		<red> <copy src="MCM_RGB" trait="_HighlightRed"/> </red>
 		<systemcolor> &nosystemcolor; </systemcolor>
 		<target> &false; </target>
-		<visible> <copy src="parent()" trait="_target"/> </visible>
+		<visible> <copy src="parent()" trait="_target"/> <onlyif src="MCM" trait="_HighlightGlow"/> </visible>
 		<width> <copy src="grandparent()" trait="_highlightWidth"/> </width>
 		<x> <copy src="grandparent()" trait="_highlightX"/> </x>
 		<y>
@@ -100,7 +100,7 @@
 	</image>
 
 	<text name="text">
-		<alpha> 255 </alpha>
+		<alpha> <copy> 255 </copy> <div> <copy> 3 </copy> <onlyifnot src="MCM" trait="_TargetMain"/> </div> </alpha>
 		<blue>
 			<copy src="MCM_RGB" trait="_ModListBlue"/>
 			<onlyifnot>

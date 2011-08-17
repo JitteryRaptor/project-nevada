@@ -85,120 +85,120 @@
 		</_count>
 		<_optionID>
 			<copy> 0 </copy>
-			<add src="child(Option1)" trait="_optionID2"/>
-			<add src="child(Option2)" trait="_optionID2"/>
-			<add src="child(Option3)" trait="_optionID2"/>
-			<add src="child(Option4)" trait="_optionID2"/>
-			<add src="child(Option5)" trait="_optionID2"/>
-			<add src="child(Option6)" trait="_optionID2"/>
-			<add src="child(Option7)" trait="_optionID2"/>
-			<add src="child(Option8)" trait="_optionID2"/>
-			<add src="child(Option9)" trait="_optionID2"/>
-			<add src="child(Option10)" trait="_optionID2"/>
-			<add src="child(Option11)" trait="_optionID2"/>
-			<add src="child(Option12)" trait="_optionID2"/>
-			<add src="child(Option13)" trait="_optionID2"/>
-			<add src="child(Option14)" trait="_optionID2"/>
-			<add src="child(Option15)" trait="_optionID2"/>
-			<add src="child(Option16)" trait="_optionID2"/>
-			<add src="child(Option17)" trait="_optionID2"/>
-			<add src="child(Option18)" trait="_optionID2"/>
-			<add src="child(Option19)" trait="_optionID2"/>
-			<add src="child(Option20)" trait="_optionID2"/>
-			<add src="child(Option21)" trait="_optionID2"/>
-			<add src="child(Option22)" trait="_optionID2"/>
-			<add src="child(Option23)" trait="_optionID2"/>
-			<add src="child(Option24)" trait="_optionID2"/>
-			<add src="child(Option25)" trait="_optionID2"/>
-			<add src="child(Option26)" trait="_optionID2"/>
-			<add src="child(Option27)" trait="_optionID2"/>
-			<add src="child(Option28)" trait="_optionID2"/>
-			<add src="child(Option29)" trait="_optionID2"/>
-			<add src="child(Option30)" trait="_optionID2"/>
-			<add src="child(Option31)" trait="_optionID2"/>
-			<add src="child(Option32)" trait="_optionID2"/>
-			<add src="child(Option33)" trait="_optionID2"/>
-			<add src="child(Option34)" trait="_optionID2"/>
-			<add src="child(Option35)" trait="_optionID2"/>
-			<add src="child(Option36)" trait="_optionID2"/>
+			<add src="child(Option1)" trait="_optionIDX"/>
+			<add src="child(Option2)" trait="_optionIDX"/>
+			<add src="child(Option3)" trait="_optionIDX"/>
+			<add src="child(Option4)" trait="_optionIDX"/>
+			<add src="child(Option5)" trait="_optionIDX"/>
+			<add src="child(Option6)" trait="_optionIDX"/>
+			<add src="child(Option7)" trait="_optionIDX"/>
+			<add src="child(Option8)" trait="_optionIDX"/>
+			<add src="child(Option9)" trait="_optionIDX"/>
+			<add src="child(Option10)" trait="_optionIDX"/>
+			<add src="child(Option11)" trait="_optionIDX"/>
+			<add src="child(Option12)" trait="_optionIDX"/>
+			<add src="child(Option13)" trait="_optionIDX"/>
+			<add src="child(Option14)" trait="_optionIDX"/>
+			<add src="child(Option15)" trait="_optionIDX"/>
+			<add src="child(Option16)" trait="_optionIDX"/>
+			<add src="child(Option17)" trait="_optionIDX"/>
+			<add src="child(Option18)" trait="_optionIDX"/>
+			<add src="child(Option19)" trait="_optionIDX"/>
+			<add src="child(Option20)" trait="_optionIDX"/>
+			<add src="child(Option21)" trait="_optionIDX"/>
+			<add src="child(Option22)" trait="_optionIDX"/>
+			<add src="child(Option23)" trait="_optionIDX"/>
+			<add src="child(Option24)" trait="_optionIDX"/>
+			<add src="child(Option25)" trait="_optionIDX"/>
+			<add src="child(Option26)" trait="_optionIDX"/>
+			<add src="child(Option27)" trait="_optionIDX"/>
+			<add src="child(Option28)" trait="_optionIDX"/>
+			<add src="child(Option29)" trait="_optionIDX"/>
+			<add src="child(Option30)" trait="_optionIDX"/>
+			<add src="child(Option31)" trait="_optionIDX"/>
+			<add src="child(Option32)" trait="_optionIDX"/>
+			<add src="child(Option33)" trait="_optionIDX"/>
+			<add src="child(Option34)" trait="_optionIDX"/>
+			<add src="child(Option35)" trait="_optionIDX"/>
+			<add src="child(Option36)" trait="_optionIDX"/>
 		</_optionID>
 		<_type>
 			<copy> 0 </copy>
-			<add src="child(Option1)" trait="_type2"/>
-			<add src="child(Option2)" trait="_type2"/>
-			<add src="child(Option3)" trait="_type2"/>
-			<add src="child(Option4)" trait="_type2"/>
-			<add src="child(Option5)" trait="_type2"/>
-			<add src="child(Option6)" trait="_type2"/>
-			<add src="child(Option7)" trait="_type2"/>
-			<add src="child(Option8)" trait="_type2"/>
-			<add src="child(Option9)" trait="_type2"/>
-			<add src="child(Option10)" trait="_type2"/>
-			<add src="child(Option11)" trait="_type2"/>
-			<add src="child(Option12)" trait="_type2"/>
-			<add src="child(Option13)" trait="_type2"/>
-			<add src="child(Option14)" trait="_type2"/>
-			<add src="child(Option15)" trait="_type2"/>
-			<add src="child(Option16)" trait="_type2"/>
-			<add src="child(Option17)" trait="_type2"/>
-			<add src="child(Option18)" trait="_type2"/>
-			<add src="child(Option19)" trait="_type2"/>
-			<add src="child(Option20)" trait="_type2"/>
-			<add src="child(Option21)" trait="_type2"/>
-			<add src="child(Option22)" trait="_type2"/>
-			<add src="child(Option23)" trait="_type2"/>
-			<add src="child(Option24)" trait="_type2"/>
-			<add src="child(Option25)" trait="_type2"/>
-			<add src="child(Option26)" trait="_type2"/>
-			<add src="child(Option27)" trait="_type2"/>
-			<add src="child(Option28)" trait="_type2"/>
-			<add src="child(Option29)" trait="_type2"/>
-			<add src="child(Option30)" trait="_type2"/>
-			<add src="child(Option31)" trait="_type2"/>
-			<add src="child(Option32)" trait="_type2"/>
-			<add src="child(Option33)" trait="_type2"/>
-			<add src="child(Option34)" trait="_type2"/>
-			<add src="child(Option35)" trait="_type2"/>
-			<add src="child(Option36)" trait="_type2"/>
+			<add src="child(Option1)" trait="_typeX"/>
+			<add src="child(Option2)" trait="_typeX"/>
+			<add src="child(Option3)" trait="_typeX"/>
+			<add src="child(Option4)" trait="_typeX"/>
+			<add src="child(Option5)" trait="_typeX"/>
+			<add src="child(Option6)" trait="_typeX"/>
+			<add src="child(Option7)" trait="_typeX"/>
+			<add src="child(Option8)" trait="_typeX"/>
+			<add src="child(Option9)" trait="_typeX"/>
+			<add src="child(Option10)" trait="_typeX"/>
+			<add src="child(Option11)" trait="_typeX"/>
+			<add src="child(Option12)" trait="_typeX"/>
+			<add src="child(Option13)" trait="_typeX"/>
+			<add src="child(Option14)" trait="_typeX"/>
+			<add src="child(Option15)" trait="_typeX"/>
+			<add src="child(Option16)" trait="_typeX"/>
+			<add src="child(Option17)" trait="_typeX"/>
+			<add src="child(Option18)" trait="_typeX"/>
+			<add src="child(Option19)" trait="_typeX"/>
+			<add src="child(Option20)" trait="_typeX"/>
+			<add src="child(Option21)" trait="_typeX"/>
+			<add src="child(Option22)" trait="_typeX"/>
+			<add src="child(Option23)" trait="_typeX"/>
+			<add src="child(Option24)" trait="_typeX"/>
+			<add src="child(Option25)" trait="_typeX"/>
+			<add src="child(Option26)" trait="_typeX"/>
+			<add src="child(Option27)" trait="_typeX"/>
+			<add src="child(Option28)" trait="_typeX"/>
+			<add src="child(Option29)" trait="_typeX"/>
+			<add src="child(Option30)" trait="_typeX"/>
+			<add src="child(Option31)" trait="_typeX"/>
+			<add src="child(Option32)" trait="_typeX"/>
+			<add src="child(Option33)" trait="_typeX"/>
+			<add src="child(Option34)" trait="_typeX"/>
+			<add src="child(Option35)" trait="_typeX"/>
+			<add src="child(Option36)" trait="_typeX"/>
 		</_type>
 		<_value>
 			<copy> 0 </copy>
-			<add src="child(Option1)" trait="_value2"/>
-			<add src="child(Option2)" trait="_value2"/>
-			<add src="child(Option3)" trait="_value2"/>
-			<add src="child(Option4)" trait="_value2"/>
-			<add src="child(Option5)" trait="_value2"/>
-			<add src="child(Option6)" trait="_value2"/>
-			<add src="child(Option7)" trait="_value2"/>
-			<add src="child(Option8)" trait="_value2"/>
-			<add src="child(Option9)" trait="_value2"/>
-			<add src="child(Option10)" trait="_value2"/>
-			<add src="child(Option11)" trait="_value2"/>
-			<add src="child(Option12)" trait="_value2"/>
-			<add src="child(Option13)" trait="_value2"/>
-			<add src="child(Option14)" trait="_value2"/>
-			<add src="child(Option15)" trait="_value2"/>
-			<add src="child(Option16)" trait="_value2"/>
-			<add src="child(Option17)" trait="_value2"/>
-			<add src="child(Option18)" trait="_value2"/>
-			<add src="child(Option19)" trait="_value2"/>
-			<add src="child(Option20)" trait="_value2"/>
-			<add src="child(Option21)" trait="_value2"/>
-			<add src="child(Option22)" trait="_value2"/>
-			<add src="child(Option23)" trait="_value2"/>
-			<add src="child(Option24)" trait="_value2"/>
-			<add src="child(Option25)" trait="_value2"/>
-			<add src="child(Option26)" trait="_value2"/>
-			<add src="child(Option27)" trait="_value2"/>
-			<add src="child(Option28)" trait="_value2"/>
-			<add src="child(Option29)" trait="_value2"/>
-			<add src="child(Option30)" trait="_value2"/>
-			<add src="child(Option31)" trait="_value2"/>
-			<add src="child(Option32)" trait="_value2"/>
-			<add src="child(Option33)" trait="_value2"/>
-			<add src="child(Option34)" trait="_value2"/>
-			<add src="child(Option35)" trait="_value2"/>
-			<add src="child(Option36)" trait="_value2"/>
+			<add src="child(Option1)" trait="_valueX"/>
+			<add src="child(Option2)" trait="_valueX"/>
+			<add src="child(Option3)" trait="_valueX"/>
+			<add src="child(Option4)" trait="_valueX"/>
+			<add src="child(Option5)" trait="_valueX"/>
+			<add src="child(Option6)" trait="_valueX"/>
+			<add src="child(Option7)" trait="_valueX"/>
+			<add src="child(Option8)" trait="_valueX"/>
+			<add src="child(Option9)" trait="_valueX"/>
+			<add src="child(Option10)" trait="_valueX"/>
+			<add src="child(Option11)" trait="_valueX"/>
+			<add src="child(Option12)" trait="_valueX"/>
+			<add src="child(Option13)" trait="_valueX"/>
+			<add src="child(Option14)" trait="_valueX"/>
+			<add src="child(Option15)" trait="_valueX"/>
+			<add src="child(Option16)" trait="_valueX"/>
+			<add src="child(Option17)" trait="_valueX"/>
+			<add src="child(Option18)" trait="_valueX"/>
+			<add src="child(Option19)" trait="_valueX"/>
+			<add src="child(Option20)" trait="_valueX"/>
+			<add src="child(Option21)" trait="_valueX"/>
+			<add src="child(Option22)" trait="_valueX"/>
+			<add src="child(Option23)" trait="_valueX"/>
+			<add src="child(Option24)" trait="_valueX"/>
+			<add src="child(Option25)" trait="_valueX"/>
+			<add src="child(Option26)" trait="_valueX"/>
+			<add src="child(Option27)" trait="_valueX"/>
+			<add src="child(Option28)" trait="_valueX"/>
+			<add src="child(Option29)" trait="_valueX"/>
+			<add src="child(Option30)" trait="_valueX"/>
+			<add src="child(Option31)" trait="_valueX"/>
+			<add src="child(Option32)" trait="_valueX"/>
+			<add src="child(Option33)" trait="_valueX"/>
+			<add src="child(Option34)" trait="_valueX"/>
+			<add src="child(Option35)" trait="_valueX"/>
+			<add src="child(Option36)" trait="_valueX"/>
 		</_value>
 		<_visible>
 			<copy> 0 </copy>
@@ -542,7 +542,7 @@
 				<alpha> 40 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> effects\fxsoftglowspot01.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_fxglowspot01"/> </filename>
 				<height> <copy src="parent()" trait="height"/> <sub> 2 </sub> </height>
 				<visible> <copy src="parent()" trait="mouseover"/> </visible>
 				<width> <copy src="parent()" trait="width"/> <mul> 1.3 </mul> </width>
@@ -554,7 +554,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
@@ -570,7 +570,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
@@ -586,7 +586,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
@@ -602,7 +602,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<rotateaxisx> <copy src="me()" trait="width"/> <div> 2 </div> </rotateaxisx>
@@ -632,7 +632,7 @@
 				<alpha> 40 </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> effects\fxsoftglowspot01.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_fxglowspot01"/> </filename>
 				<height> <copy src="parent()" trait="height"/> <sub> 2 </sub> </height>
 				<visible> <copy src="parent()" trait="mouseover"/> </visible>
 				<width> <copy src="parent()" trait="width"/> <mul> 1.3 </mul> </width>
@@ -644,7 +644,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<systemcolor> <copy> 5 </copy> <add> <copy> 5 </copy> <onlyif src="parent()" trait="mouseover"/> </add> </systemcolor>
@@ -657,7 +657,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<systemcolor> <copy> 5 </copy> <add> <copy> 5 </copy> <onlyif src="parent()" trait="mouseover"/> </add> </systemcolor>
@@ -670,7 +670,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<systemcolor> <copy> 5 </copy> <add> <copy> 5 </copy> <onlyif> <copy src="parent()" trait="mouseover"/> </onlyif> </add> </systemcolor>
@@ -683,7 +683,7 @@
 				<alpha> <copy> 255 </copy> <div src="parent()" trait="_alpha"/> </alpha>
 				<brightness> 255 </brightness>
 				<depth> 11 </depth>
-				<filename> Interface\Shared\Arrow\repair_arrow_down.dds </filename>
+				<filename> <copy src="MCM_Images" trait="_repair_arrow_down"/> </filename>
 				<height> 30 </height>
 				<justify> &center; </justify>
 				<systemcolor> <copy> 5 </copy> <add> <copy> 5 </copy> <onlyif src="parent()" trait="mouseover"/> </add> </systemcolor>
