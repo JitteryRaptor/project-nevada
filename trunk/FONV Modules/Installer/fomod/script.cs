@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Windows.Forms;
+using System.Globalization;
 
 
 class Script : FalloutNewVegasBaseScript {
@@ -671,7 +672,7 @@ class Script : FalloutNewVegasBaseScript {
 		
 		try {
 			if (m.Success)
-				return Single.Parse(m.Groups[1].Value);
+				return Single.Parse(m.Groups[1].Value, CultureInfo.InvariantCulture);
 			else
 				return 0;
 		} catch (Exception e) {
