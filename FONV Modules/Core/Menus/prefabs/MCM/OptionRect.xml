@@ -108,9 +108,9 @@
 	<_RGBAlt2> <copy> <copy src="me()" trait="_RGBAlt"/> <sub src="me()" trait="_RGB"/> </copy> <onlyif> <copy src="me()" trait="_target"/> <and src="me()" trait="_type"/> </onlyif> </_RGBAlt2>
 
 	<_active> <copy src="me()" trait="_enable"/> <min> 1 </min> </_active>
-	<_optionID2> <copy src="me()" trait="_optionID"/> <onlyif src="me()" trait="_target"/> </_optionID2>
-	<_type2> <copy src="me()" trait="_type"/> <onlyif src="me()" trait="_target"/> </_type2>
-	<_value2> <copy src="me()" trait="_value"/> <onlyif src="me()" trait="_target"/> </_value2>
+	<_optionIDX> <copy src="me()" trait="_optionID"/> <onlyif src="me()" trait="_target"/> </_optionIDX>
+	<_typeX> <copy src="me()" trait="_type"/> <onlyif src="me()" trait="_target"/> </_typeX>
+	<_valueX> <copy src="me()" trait="_value"/> <onlyif src="me()" trait="_target"/> </_valueX>
 
 	<_altFont> 0 </_altFont>
 	<_brightness> 255 </_brightness>
@@ -127,20 +127,9 @@
 	<_title> </_title>
 	<_type> </_type>
 	<_value> </_value>
-
-	<image name="highlight">
-		<alpha> <copy> 30 </copy> <onlyif src="parent()" trait="_target"/> </alpha>
-		<brightness> 255 </brightness>
-		<depth> 11 </depth>
-		<filename> effects\fxsoftglowspot01.dds </filename>
-		<height> <copy src="sibling(title)" trait="height"/> <onlyifnot src="MCM" trait="_dUI"/> <add> <copy src="parent()" trait="height"/> <onlyif src="MCM" trait="_dUI"/> </add> <sub> 2 </sub> </height>
-		<systemcolor> &mainmenu; </systemcolor>
-		<visible> <copy src="parent()" trait="_highlight"/> </visible>
-		<width> <copy src="parent()" trait="width"/> <mul> 1.3 </mul> </width>
-		<x> <copy src="parent()" trait="x"/> <sub src="MCM_Options" trait="_padding"/> <sub> <copy src="me()" trait="width"/> <sub src="parent()" trait="width"/> <div> 2 </div> </sub> </x>
-		<y> <copy src="parent()" trait="y"/> <sub src="MCM_Options" trait="_padding"/> <add> 1 </add> </y>
-		<zoom> &scale; </zoom>
-	</image>
+	<_value1> </_value1>
+	<_value2> </_value2>
+	<_value3> </_value3>
 
 	<text name="title">
 		<alpha> <copy src="me()" trait="brightness"/> <div src="parent()" trait="_alpha"/> </alpha>
@@ -202,6 +191,14 @@
 					<copy src="grandparent()" trait="_type"/>
 					<lt> 4 </lt>
 				</and>
+				<or>
+					<copy src="grandparent()" trait="_type"/>
+					<eq> 7 </eq>
+				</or>
+				<or>
+					<copy src="grandparent()" trait="_type"/>
+					<eq> 8 </eq>
+				</or>
 			</visible>
 			<x> <copy src="parent()" trait="_xSuffix"/> </x>
 		</text>
@@ -214,20 +211,12 @@
 			<justify> &right; </justify>
 			<red> <copy src="grandparent()" trait="_red"/> </red>
 			<string> <copy src="grandparent()" trait="_prefix"/> </string>
-			<visible> <copy src="grandparent()" trait="_prefix"/> </visible>
+			<visible> <copy> 1 </copy> <onlyif src="grandparent()" trait="_prefix"/> </visible>
 			<x>
 				<copy src="parent()" trait="_xSuffix"/>
 				<sub src="MCM_Options" trait="_spacing"/>
-				<sub>
-					<copy src="sibling(text)" trait="width"/>
-					<onlyif src="sibling(text)" trait="visible"/>
-				</sub>
-				<sub>
-					<copy src="sibling(number)" trait="width"/>
-					<onlyif src="sibling(number)" trait="visible"/>
-				</sub>
+				<sub src="sibling(text)" trait="width"/>
 			</x>
-			<y> <copy src="parent()" trait="y"/> </y>
 		</text>
 
 		<text name="suffix">
@@ -257,8 +246,8 @@
 
 			<text name="toggle_off">
 				<alpha> <copy src="parent()" trait="alpha"/> </alpha>
-				<brightness> <copy src="parent()" trait="brightness"/> </brightness>
 				<blue> <copy src="parent()" trait="_blue"/> </blue>
+				<brightness> <copy src="parent()" trait="brightness"/> </brightness>
 				<green> <copy src="parent()" trait="_green"/> </green>
 				<justify> &right; </justify>
 				<red> <copy src="parent()" trait="_red"/> </red>
@@ -268,8 +257,8 @@
 
 			<text name="toggle_on">
 				<alpha> <copy src="parent()" trait="alpha"/> </alpha>
-				<brightness> <copy src="parent()" trait="brightness"/> </brightness>
 				<blue> <copy src="parent()" trait="_blue"/> </blue>
+				<brightness> <copy src="parent()" trait="brightness"/> </brightness>
 				<green> <copy src="parent()" trait="_green"/> </green>
 				<justify> &right; </justify>
 				<red> <copy src="parent()" trait="_red"/> </red>
@@ -280,9 +269,9 @@
 
 		<image name="toggle_check">
 			<alpha> <copy src="parent()" trait="_alpha"/> </alpha>
-			<brightness> <copy src="parent()" trait="_brightness"/> </brightness>
 			<blue> <copy src="grandparent()" trait="_blue"/> </blue>
-			<filename> MCM\Check0.dds </filename>
+			<brightness> <copy src="parent()" trait="_brightness"/> </brightness>
+			<filename> Interface\Shared\empty.dds </filename>
 			<green> <copy src="grandparent()" trait="_green"/> </green>
 			<height> 32 </height>
 			<red> <copy src="grandparent()" trait="_red"/> </red>
@@ -292,4 +281,18 @@
 			<y> -5 </y>
 			<zoom> &scale; </zoom>
 		</image>
+
+		<hotrect name="RGB">
+			<alpha> <copy src="parent()" trait="_alpha"/> </alpha>
+			<blue> <copy src="grandparent()" trait="_Value3"/> </blue>
+			<brightness> <copy src="parent()" trait="_brightness"/> </brightness>
+			<green> <copy src="grandparent()" trait="_Value2"/> </green>
+			<height> <copy src="parent()" trait="height"/> </height>
+			<red> <copy src="grandparent()" trait="_Value1"/> </red>
+			<systemcolor> &nosystemcolor; </systemcolor>
+			<target> &false; </target>
+			<visible> <copy src="grandparent()" trait="_type"/> <eq> 9 </eq> </visible>
+			<width> 100 </width>
+			<x> <copy> 0 </copy> <sub src="me()" trait="width"/> </x>
+		</hotrect>
 	</rect>

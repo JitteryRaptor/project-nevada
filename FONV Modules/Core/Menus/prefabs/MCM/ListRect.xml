@@ -24,10 +24,10 @@
 	</_target>
 
 	<image name="highlight">
-		<alpha> 60 </alpha>
+		<alpha> 30 </alpha>
 		<brightness> 255 </brightness>
 		<depth> 16 </depth>
-		<filename> effects\fxsoftglowspot01.dds </filename>
+		<filename> <copy src="MCM_Images" trait="_fxglowspot01"/> </filename>
 		<height>
 			<copy src="parent()" trait="height"/>
 			<add src="grandparent()" trait="_spacing"/>
@@ -35,7 +35,7 @@
 		</height>
 		<systemcolor> &mainmenu; </systemcolor>
 		<target> &false; </target>
-		<visible> <copy src="parent()" trait="_target"/> </visible>
+		<visible> <copy src="parent()" trait="_target"/> <onlyif src="MCM" trait="_HighlightGlow"/> </visible>
 		<width> <copy src="parent()" trait="width"/> <add src="grandparent()" trait="_spacing"/> <mul> 1.3 </mul> </width>
 		<x>
 			<copy src="parent()" trait="x"/>
