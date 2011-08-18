@@ -27,7 +27,7 @@ Project Nevada - WMX Support
 Author: Gribbleshnibit8
 Contributors: Antistar, T3T, Zealotlee
 
-Current Version: 1.0
+Current Version: 1.3
 
 Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
@@ -56,7 +56,7 @@ The following mods are required:
 * Weapon Mods Expanded - WMX
 	http://www.newvegasnexus.com/downloads/file.php?id=39651
 	
-* Project Nevada Equipment Module
+* Project Nevada - Equipment Module
 	http://www.newvegasnexus.com/downloads/file.php?id=40040
 	
 ########################################################################################################################################
@@ -74,6 +74,15 @@ In cases where new mods had to be created, they match the style of existing WMX 
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
+
+1.3:
+- Updated for Project Nevada 2.3
+
+1.2:
+- Various bugfixes
+
+1.1:
+- Updated for Project Nevada 2.2
 
 1.0:
 - Initial release
