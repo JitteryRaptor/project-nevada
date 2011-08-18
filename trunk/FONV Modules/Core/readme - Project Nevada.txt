@@ -829,7 +829,12 @@ Upgradable items can be improved at a workbench. If they are already installed, 
 	#3 H&H Tools Factory, inside the opened safe in the office with the keycard
 	#4 Vault 22, Keely's lab
 * Wired Synapses
-	#1 Jacobstown Lodge, Doctor Henry's lab
+	Jacobstown Lodge, Doctor Henry's lab
+* EMP Generator
+	Black Mountain Storage, on a shelf
+* Hyperfrequence Emitter
+	New Vegas Steel
+
 
 [For sale at Doctor Usanagi in New Vegas medical clinic]
 
