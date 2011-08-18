@@ -1226,7 +1226,7 @@ As usual, the Control Panel allows players to customize most settings according 
 		 
 * Primary Needs Increase Interval and Tweaked Timescale
 	Description:
-		Allows to increase the hunger, thirst and sleep increase rates.
+		Allows to modify the timescale and increase the hunger, thirst and sleep increase rates.
 	Defaults:
 		Hunger 25, Thirst 10, Sleep 5,  Timescale 30 [Vanillla]
 		Hunger 20, Thirst 10, Sleep 20, Timescale 20 [PN]
