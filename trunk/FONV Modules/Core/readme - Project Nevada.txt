@@ -134,7 +134,7 @@ to get the mod running.
 - Improved charging scripts and added a charging indicator to the crosshair
 - Removed seperate records for chargeable AER14 and Q-35. They now use the vanilla records, which means they can modded as well
 - Added optional quick-select hotkeys for Grenade Hotkey categories
-- Upgraded bundled MCM to version Beta 11
+- Upgraded bundled MCM to version 1.2 (thanks to Pelinor)
 
 [Cyberware]
 - Added new 'EMP Generator' implant, which grants the ability to fire a targeted electromagnetic pulse

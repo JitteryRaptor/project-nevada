@@ -287,7 +287,7 @@
 			<blue> <copy src="grandparent()" trait="_Value3"/> </blue>
 			<brightness> <copy src="parent()" trait="_brightness"/> </brightness>
 			<green> <copy src="grandparent()" trait="_Value2"/> </green>
-			<height> <copy src="parent()" trait="height"/> </height>
+			<height> <copy src="parent()" trait="height"/> <sub src="MCM_Options" trait="_padding"/> </height>
 			<red> <copy src="grandparent()" trait="_Value1"/> </red>
 			<systemcolor> &nosystemcolor; </systemcolor>
 			<target> &false; </target>
