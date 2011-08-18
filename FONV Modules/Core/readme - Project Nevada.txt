@@ -131,10 +131,13 @@ to get the mod running.
 2.3:
 
 [Core]
-- Improved charging scripts and added a charging indicator to the crosshair
-- Removed seperate records for chargeable AER14 and Q-35. They now use the vanilla records, which means they can modded as well
-- Added optional quick-select hotkeys for Grenade Hotkey categories
 - Upgraded bundled MCM to version 1.2 (thanks to Pelinor)
+- Chargeable Weapons: Improved charging scripts and added a charging indicator to the crosshair
+- Chargeable Weapons: Removed seperate records for chargeable AER14 and Q-35. They now use the vanilla records an can have weapon mods
+- Grenade Hotkey: Added optional quick-select hotkeys for Grenade Hotkey categories
+- Sprint: Tweaked script to avoid situations where the player could be stuck in sprint mode
+- Inventory Sorter: Fixed issue that would leave certain items unsorted until the player opens the inventory for the second time
+- Zoom: Enabled digital zoom for energy weapons that get their scopes by WME/WMX for better integration (thanks to jonnyeah)
 
 [Cyberware]
 - Added new 'EMP Generator' implant, which grants the ability to fire a targeted electromagnetic pulse
@@ -144,6 +147,7 @@ to get the mod running.
 - Fixed recipe descriptions for Razor Nail implants and other typos
 - Increased AP regeneration while using implant-powered vision modes from 0% to 50%
 - Added surgery dialogue option to Arcade Gannon (if he is recruited as a follower)
+- Fixed issue where the effects of already installed vanilla implants would not be removed when they are switched out by Cyberware
 
 [Rebalance]
 - Added option to change level cap
@@ -151,11 +155,13 @@ to get the mod running.
 - Removed additional food variants so lists, recipes etc use the defaults again (for compatibility reasons)
 - Added rads back to raw meat and pre-war food
 - Set food quality labels visible
+- Improved weapon classification for Alternative Repair System
+- Fixed repair lists for Gauss weapons so they can all be repaired with each other
 
 [Equipment]
 - Added 2mm EC ammunition, used by the Auto-Gauss, the Auto-Gauss Pistol and the Gauss Minigun
 - Included new weapons in some form lists they were missing from, and various other fixes (thanks to xporc)
-- Updated models and textures for Wattz 2000 (thanks to jonnyeah)
+- Updated models and textures for Wattz weapons (thanks to jonnyeah)
 - Tweaked weapon balancing (thanks to MadCat221)
 
 
