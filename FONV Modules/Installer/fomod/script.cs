@@ -107,7 +107,8 @@ class Script : FalloutNewVegasBaseScript {
 				"hud_main_menu.xml",
 				"start_menu.xml",
 				"list_box_template.xml",
-				"Menus/prefabs/MCM/"
+				"Menus/prefabs/MCM/",
+				"textures/MCM/"
 			};
 		} else {
 			excludes = new string[] {
@@ -120,7 +121,7 @@ class Script : FalloutNewVegasBaseScript {
 		
 		InstallModuleFiles("Core", excludes);
 		
-		UpdateInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml");
+		UpdateInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxhud.xml", new string[] {"menus/options/start_menu.xml"});
 		UpdateInclude("menus/prefabs/includes_StartMenu.xml", @"MCM\MCM.xml", new string[] {"menus/options/start_menu.xml"});
 		
 		UpdateUIFile("menus/main/hud_main_menu.xml", "menus/main/hud_main_menu.xml", "includes_HUDMainMenu.xml");
@@ -139,8 +140,7 @@ class Script : FalloutNewVegasBaseScript {
 		};
 		InstallModuleFiles("Cyberware", excludes);
 		
-		UpdateInclude("menus/prefabs/includes_TutorialMenu.xml", @"pnx\pnximplants.xml");
-		
+		UpdateInclude("menus/prefabs/includes_TutorialMenu.xml", @"pnx\pnximplants.xml", new string[] {"menus/options/tutorial_menu.xml"});
 		UpdateUIFile("menus/tutorial_menu.xml", "menus/tutorial_menu.xml", "includes_TutorialMenu.xml");
 	
 		return true;
@@ -167,46 +167,25 @@ class Script : FalloutNewVegasBaseScript {
 	}
 	
 	
-	// Installs include from fomod if not present, appends editString otherwise
-	static bool UpdateInclude(string path, string includePath)
+	// Appends editString if not present, otherwise keeps existing file (or generates blank one)	
+	static void UpdateInclude(string path, string includePath, string[] parents)
 	{
-		return UpdateInclude(path, includePath, null);
-	}
-	
-	static bool UpdateInclude(string path, string includePath, string[] checkFiles)
-	{
-		if (! DataFileExists(path)) {
-			return InstallFileFromFomod(path);
-			
-		} else {
-				// 
-			bool editSuccess = AppendInclude(path, includePath, checkFiles);
-		
-			if (! editSuccess) {
-				MessageBox("Failed to access " + path + ". Reinstall the mod with all other applications closed, or try a manual installation (see readme).", title);
-			}
-			
-			return editSuccess;
-		}
+		byte[] data = GenerateInclude(path, includePath, parents);		
+		GenerateDataFile(path, data);
     }
     
     
     // Installs include from fomod if not present, appends editString otherwise
-    static bool UpdateUIFile(string path, string srcPath, string includePath)
-    {
-    	return UpdateUIFile(path, srcPath, includePath, null);
-    }
-    
-	static bool UpdateUIFile(string path, string srcPath, string includePath, string[] checkFiles)
+	static bool UpdateUIFile(string path, string srcPath, string includePath)
 	{
 		if (! DataFileExists(path)) {
 			return InstallFileFromFomod(srcPath, path);
 		} else {
 
-			bool editSuccess = AppendIncludeToMenu(path, includePath, checkFiles);
+			bool editSuccess = AppendIncludeToMenu(path, includePath);
 		
 			if (! editSuccess) {
-				MessageBox("Failed to access " + path + ". Reinstall the mod with all other applications closed, or try a manual installation (see readme).", title);
+				MessageBox("Failed to access " + path + ". You might have to re-install the mod with all other applications closed, or try a manual installation (see readme).", title);
 			}
 			
 			return editSuccess;
@@ -561,15 +540,15 @@ class Script : FalloutNewVegasBaseScript {
 		foreach (string file in files) {
 		
 			// In case i forgot to remove it :)
-			if (file.StartsWith("fomod"))
+			if (file.StartsWith("fomod", true, null))
 				continue;
 				
-			if (file.StartsWith("optional"))
+			if (file.StartsWith("optional", true, null))
 				continue;
 				
 			bool found = false;
 			foreach (string exclude in excludes) {
-				if (file.EndsWith(exclude) || file.StartsWith(exclude)) {
+				if (file.EndsWith(exclude, true, null) || file.StartsWith(exclude, true, null)) {
 					found = true;
 					continue;
 				}
@@ -582,42 +561,45 @@ class Script : FalloutNewVegasBaseScript {
 	}
 	
 	
-	static bool AppendInclude(string xmlPath, string includePath, string[] checkFiles)
+	static byte[] GenerateInclude(string xmlPath, string includePath, string[] parents)
 	{
 		byte[] data = GetExistingDataFile(xmlPath);
 		
 		if (data == null)
-			return false;
+			data = new byte[0];
 		
 		string tmp = encoding.GetString(data);
 		
 		// Include is already there?
 		if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
-			return true;
+			return data;
 		
 		// Check additional files for the include
-		if (checkFiles != null)
-			foreach (string file in checkFiles)
-				if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(file) + "\" />", RegexOptions.Singleline).Success == true)
-					return true;
+		if (parents != null) {
+			foreach (string parentFile in parents) {
+				byte[] parentData = GetExistingDataFile(parentFile);
+				if (parentData == null)
+					continue;
+					
+				if (Regex.Match(encoding.GetString(parentData), "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
+					return data;
+			}
+		}
 		
 		tmp += "\r\n"
-			+ "<!-- BEGIN Added by Project Nevada -->\r\n"
+			+ "<!-- BEGIN Added by " + title + " -->\r\n"
 			+ "<include src=\"" + includePath + "\" />\r\n"
-			+ "<!-- END Added by Project Nevada -->\r\n";
+			+ "<!-- END Added by " + title + " -->\r\n";
 		
-		data = encoding.GetBytes(tmp);
-			
-		GenerateDataFile(xmlPath, data);
-		
-		return true;
+		return encoding.GetBytes(tmp);
 	}
 	
 	
-	static bool AppendIncludeToMenu(string xmlPath, string includePath, string[] checkFiles)
+	static bool AppendIncludeToMenu(string xmlPath, string includePath)
 	{
 		byte[] data = GetExistingDataFile(xmlPath);
 		
+		// Generate empty file of nothing there to append yet
 		if (data == null)
 			return false;
 			
@@ -626,17 +608,11 @@ class Script : FalloutNewVegasBaseScript {
 		// Include is already there?
 		if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
 			return true;
-
-		// Check additional files for the include
-		if (checkFiles != null)
-			foreach (string file in checkFiles)
-				if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(file) + "\" />", RegexOptions.Singleline).Success == true)
-					return true;
 		
 		string includeStr = "\r\n"
-			+ "\t<!-- BEGIN Added by Project Nevada -->\r\n"
+			+ "\t<!-- BEGIN Added by " + title + " -->\r\n"
 			+ "\t<include src=\"" + includePath + "\" />\r\n"
-			+ "\t<!-- END Added by Project Nevada -->\r\n";
+			+ "\t<!-- END Added by " + title + " -->\r\n";
 		
 		tmp = Regex.Replace(tmp,
 			"<menu name=\"(\\w+)\">(.*)</menu>\\s*$",
