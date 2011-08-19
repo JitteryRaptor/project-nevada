@@ -131,7 +131,7 @@ to get the mod running.
 2.3:
 
 [Core]
-- Upgraded bundled MCM to version 1.2 (thanks to Pelinor)
+- Updated bundled MCM (thanks to Pelinor)
 - Chargeable Weapons: Improved charging scripts and added a charging indicator to the crosshair
 - Chargeable Weapons: Removed seperate records for chargeable AER14 and Q-35. They now use the vanilla records an can have weapon mods
 - Grenade Hotkey: Added optional quick-select hotkeys for Grenade Hotkey categories
@@ -421,6 +421,9 @@ MadCat221:	Q-41 Prototype (Unique MultiPlas), including backstory
 			AER18 Prototype (Unique Tri-Beam Laser), including backstory
 			Plasma rifle equip/unequip sounds from Plasma Rifles Awesomefied (http://www.newvegasnexus.com/downloads/file.php?id=35678)
 			Valueable feedback and bug reports
+			Equipment module weapon rebalancing
+
+xporc:		Equipment module fixes and tweaks
 
 pintocat:	Inventory sorting scheme
 
