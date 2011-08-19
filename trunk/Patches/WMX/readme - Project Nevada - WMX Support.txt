@@ -243,8 +243,9 @@ b) Energy Weapons
 	+ Micro Fusion Rifle Dual Harness
 
 * Wattz Laser Pistol
-	+ Wattz Pistol Extra Battery Socket
+	+ Wattz Pistol Recycler Chip
 	+ Wattz Pistol Super Charger
+	^ Laser Rifle Beam Splitter
 
 * Wattz Laser Rifle
 	~ Laser Rifle Scope
