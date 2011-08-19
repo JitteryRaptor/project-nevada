@@ -439,8 +439,6 @@ Ugluxy:		Textures for the visor damage effects
 
 Crawlius:	Weapon charging sound effects
 			Unstable explosion sound effects
-
-joefoxx082:	Fixed Attack3 and Attack4 IS (updated by jonnyeah) animations
 			
 LORD DARIUS and Jtrainz: Ironsight'ed Fallout 3 Weapons (http://www.newvegasnexus.com/downloads/file.php?id=36571)
 
