@@ -127,17 +127,17 @@ the Project Nevada system.
 	As soon as you get to the Zion, you can use the new	weapons with your standard hotkey.
 	
 ------------------------------------------------------------
- c) Honest Hearts
+ c) Old World Blues
 ------------------------------------------------------------
 
 * Visor Overlays
-	TODO
+	Overlays have been added to the Hazmat Darklight Cowl, and to Lobotomite Goggles and Mask
 
 * Grenade Hotkey
-	TODO
+	The grenades and throwable weapons have been added to the appropriate lists.
 
 * Stealth Field
-	TODO
+	Stealth Field enabled for Stealth Suit Mk II once the respective quest is finished.
 	
 * Cyberware Implants
 	The M-5, C-13, Y-3, Y-7 and GRX implants have been converted to be usable with the PN Cyberware interface.
@@ -216,13 +216,28 @@ OR
 
 4.	Done!
 
+------------------------------------------------------------
+ c) Load Order
+------------------------------------------------------------
 
-We really recommend using the Fallout Mod Manager to install any of these patches!
-It will automatically copy the right files and warn you in case you miss any of the required mods.
-So before you can get started, you have to choose whether you want to do the FOMM installation (recommended) or a manual installation.
-The procedure is the same for all patches.
+When using the Project Nevada OWB patch with Cyberware support, it has to be loaded after the Cyberware plugin file itself,
+otherwise the game will not start! Arrange your load order like this:
 
+		...
 
+	Project Nevada - Core.esm
+	
+		...
+
+	Project Nevada - Cyberware.esp
+
+		...
+
+	Project Nevada - Old World Blues.esp
+
+		...
+		
+		
 ========================================================================================================================================
  5. Troubleshooting
 ========================================================================================================================================
@@ -230,7 +245,7 @@ The procedure is the same for all patches.
 Problem: My game crashes right after starting it!
 
 Solution: This happens when you activated a DLC patch without owning the respective DLC. To fix it, find this patch and deactivate it
-	by unchecking it either in FOMM or the New Vegas Launcher.
+	by unchecking it either in FOMM or the New Vegas Launcher. Also check your load order as described in the Installation section.
 
 
 ========================================================================================================================================
