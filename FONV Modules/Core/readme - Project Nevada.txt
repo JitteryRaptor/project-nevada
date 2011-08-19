@@ -792,7 +792,7 @@ a) Implant list
 * Neural Datatool: Science +4(6,8,10) (Upgradable)
 * Razor Nails: Unarmed critical chance and damage increased by 25% (40,55,70) (upgradable)
 * EMP Generator: EM Burst, Capacity 5x, Recharge 1x per hour (effects are additive if used in both arms)
-* Hyperfrequence Emitter: Effect: HF Burst, Capacity 5x, Recharge 1x per hour (effects are additive if used in both arms)
+* Hyperfrequence Emitter: HF Burst, Capacity 5x, Recharge 1x per hour (effects are additive if used in both arms)
 
 [Leg Implants]
 
