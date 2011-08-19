@@ -29,23 +29,36 @@
 				</files>
 			</pattern>
 			<pattern>
-				<dependencies>
-					<dependencies operator="Or">
-						<fileDependency file="HonestHearts.esm" state="Active"/>
-						<fileDependency file="HonestHearts.esm" state="Inactive"/>
-					</dependencies>
+				<dependencies operator="Or">
+					<fileDependency file="HonestHearts.esm" state="Active"/>
+					<fileDependency file="HonestHearts.esm" state="Inactive"/>
 				</dependencies>
 				<files>
 					<file source="Project Nevada - Honest Hearts.esp" priority="2"/>
 				</files>
 			</pattern>
 			<pattern>
-				<dependencies operator="Or">
-					<fileDependency file="OldWorldBlues.esm" state="Active"/>
-					<fileDependency file="OldWorldBlues.esm" state="Inactive"/>
+				<dependencies operator="And">
+					<dependencies operator="Or">
+						<fileDependency file="OldWorldBlues.esm" state="Active"/>
+						<fileDependency file="OldWorldBlues.esm" state="Inactive"/>
+					</dependencies>
+					<fileDependency file="Project Nevada - Cyberware.esp" state="Active"/>
 				</dependencies>
 				<files>
 					<file source="Project Nevada - Old World Blues.esp" priority="1"/>
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<dependencies operator="Or">
+						<fileDependency file="OldWorldBlues.esm" state="Active"/>
+						<fileDependency file="OldWorldBlues.esm" state="Inactive"/>
+					</dependencies>
+					<fileDependency file="Project Nevada - Cyberware.esp" state="Inactive"/>
+				</dependencies>
+				<files>
+					<file source="Project Nevada - Old World Blues (No Cyberware).esp" priority="1"/>
 				</files>
 			</pattern>
 		</patterns>
