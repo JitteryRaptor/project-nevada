@@ -27,7 +27,7 @@ Project Nevada - WME Support
 Author: Gribbleshnibit8
 Contributors: Antistar, Jonnyeah, T3T, Zealotlee
 
-Current Version: 1.0
+Current Version: 1.1
 
 Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
@@ -56,7 +56,7 @@ The following mods are required:
 * Weapon Mods Expansion - WME
 	http://www.newvegasnexus.com/downloads/file.php?id=37576
 	
-* Project Nevada Equipment Module
+* Project Nevada - Equipment Module
 	http://www.newvegasnexus.com/downloads/file.php?id=40040
 	
 ########################################################################################################################################
@@ -74,6 +74,8 @@ In cases where new mods had to be created, they follow along the lines of WME, w
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
+1.1:
+- Update for Project Nevada 2.3
 
 1.0:
 - Initial release
