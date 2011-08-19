@@ -236,8 +236,9 @@ b) Energy Weapons
 	+ Micro Fusion Rifle Dual Harness
 
 * Wattz Laser Pistol
-	+ Wattz Pistol Extra Battery Socket
+	+ Wattz Pistol Recycler Chip
 	+ Wattz Pistol Super Charger
+	^ Laser Rifle Beam Splitter
 
 * Wattz Laser Rifle
 	~ Wattz Laser Rifle Scope
@@ -325,13 +326,18 @@ Solution: There are basically two things that can cause this:
  6. Credits
 ========================================================================================================================================
 
-Antistar, author of WMX, for new meshes and support.
-Jonnyeah for input and error correction in the mods added.
+Antistar, for new meshes and support.
+Jonnyeah, for improved Wattz Pistol meshes and textures.
+joefoxx, for original Wattz Pistol meshes and textures.
+Jonnyeah, for input and error correction in the mods added.
 T3T, for custom icons.
 Zealotlee, for models and textures.
 
 Cryo Revolver Mods
 	Source: M-2081 Pistol (http://newvegasnexus.com/downloads/file.php?id=40174), by Omegared99
+	
+Wattz Laser Pistol Mods
+	Source: FOOK - New Vegas (http://www.newvegasnexus.com/downloads/file.php?id=34684), by The FOOK Team
 
 
 ========================================================================================================================================
