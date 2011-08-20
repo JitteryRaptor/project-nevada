@@ -157,15 +157,15 @@ the Project Nevada system.
 		
 		Y-7
 			Level 1: Consuming food restores additional  5 HP and 2 AP
-			Level 2: Consuming food restored additional 10 HP and 4 AP
+			Level 2: Consuming food restores additional 10 HP and 4 AP
 			
 		GRX
 			The GRX implant is no longer a perk but buyable at the Sink Autodoc like the other implants.
 			It's effects depend on whether Bullet Time is enabled or not.
 			
 			[Bullet Time enabled]
-			Level 1: Bullet Time Action Point drain reduced by 25%
-			Level 2: Bullet Time Action Point drain reduced by 50%
+			Level 1: Bullet Time Action Point drain reduced by 20%
+			Level 2: Bullet Time Action Point drain reduced by 40%
 			
 			[Bullet Time disabled]
 			Level 1: Non-addictive Turbo is added to the inventory, lasts for 2 seconds,  5 uses per day
