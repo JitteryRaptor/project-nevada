@@ -6,6 +6,10 @@
 			<fileDependency file="Project Nevada - Core.esm" state="Inactive"/>
 		</dependencies>
 		<dependencies operator="Or">
+			<fileDependency file="Project Nevada - Equipment.esm" state="Active"/>
+			<fileDependency file="Project Nevada - Equipment.esm" state="Inactive"/>
+		</dependencies>
+		<dependencies operator="Or">
 			<fileDependency file="EVE FNV.esp" state="Active"/>
 			<fileDependency file="EVE FNV.esp " state="Inactive"/>
 		</dependencies>
