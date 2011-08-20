@@ -74,6 +74,12 @@ appropriate patches.
 [Old World Blues]
 - Initial release
 
+[Dead Money] 
+- Placed additional EMP Generator Implant in DLC area if Cyberware is used
+
+[Honest Hearts]
+- Placed additional HF Emitter Implant in DLC area if Cyberware is used
+
 
 1.1:
 
@@ -222,6 +228,10 @@ OR
 
 When using the Project Nevada OWB patch with Cyberware support, it has to be loaded after the Cyberware plugin file itself,
 otherwise the game will not start! Arrange your load order like this:
+
+		...
+
+	OldWorldBlues.esm
 
 		...
 
