@@ -16,6 +16,7 @@
 	</moduleDependencies>
 	<requiredInstallFiles>
 		<folder source="textures"/>
+		<folder source="meshes"/>
 	</requiredInstallFiles>
 	<conditionalFileInstalls>
 		<patterns>
