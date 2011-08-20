@@ -16,6 +16,7 @@
 	</moduleDependencies>
 	<requiredInstallFiles>
 		<folder source="meshes"/>
+		<folder source="textures"/>
 		<file source="Project Nevada - EVE.esp" />
 	</requiredInstallFiles>
 </config>
