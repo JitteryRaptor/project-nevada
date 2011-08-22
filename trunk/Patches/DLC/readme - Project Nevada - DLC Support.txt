@@ -136,6 +136,10 @@ the Project Nevada system.
  c) Old World Blues
 ------------------------------------------------------------
 
+There are two versions of the plugin, one with Cyberware features and one without.
+Both contain the following:
+
+
 * Visor Overlays
 	Overlays have been added to the Hazmat Darklight Cowl, and to Lobotomite Goggles and Mask
 
@@ -144,10 +148,23 @@ the Project Nevada system.
 
 * Stealth Field
 	Stealth Field enabled for Stealth Suit Mk II once the respective quest is finished.
+
+* Hoarder Trait
+	The Hoarder Trait has been adjusted to work with modified Carry Weight formulas.
+	Instead of having the penality limit hardcoded at 130 lbs., it now kicks in when below 75% maximum Carry Weight.
+	Also, being close to (but still below) the weight limit will no longer prevent you from sprinting.
+
+The following features are only included with the Cyberware version:
+
+* Implant Icons
+	All implant related perks have fancy new icons.
 	
 * Cyberware Implants
 	The M-5, C-13, Y-3, Y-7 and GRX implants have been converted to be usable with the PN Cyberware interface.
-	All implants can additionally by upgraded one level. Here's a description of what each implant does now:
+	The items themselves don't use the classic Project Nevada box, but a customized BIG MT variant.
+	All implants can additionally by upgraded one level.
+	
+	Here's a description of what each implant does now:
 	
 		C-13
 			Level 1: +10% damage to Cazadores
@@ -167,6 +184,7 @@ the Project Nevada system.
 			
 		GRX
 			The GRX implant is no longer a perk but buyable at the Sink Autodoc like the other implants.
+			It has to be unlocked by finding a holo-disc, just like the other implants.
 			It's effects depend on whether Bullet Time is enabled or not.
 			
 			[Bullet Time enabled]
@@ -178,11 +196,6 @@ the Project Nevada system.
 			Level 2: Non-addictive Turbo is added to the inventory, lasts for 4 seconds, 10 uses per day
 	
 	The implants are upgradable by bringing the un-installed implant item to a workbench.
-
-* Hoarder Trait
-	The Hoarder Trait has been adjusted to work with modified Carry Weight formulas.
-	Instead of having the penality limit hardcoded at 130 lbs., it now kicks in when below 75% maximum Carry Weight.
-	Also, being close to (but still below) the weight limit will no longer prevent you from sprinting.
 
 
 ========================================================================================================================================
