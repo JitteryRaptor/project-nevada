@@ -56,7 +56,10 @@
 						<fileDependency file="OldWorldBlues.esm" state="Active"/>
 						<fileDependency file="OldWorldBlues.esm" state="Inactive"/>
 					</dependencies>
-					<fileDependency file="Project Nevada - Cyberware.esp" state="Inactive"/>
+					<dependencies operator="Or">
+						<fileDependency file="Project Nevada - Cyberware.esp" state="Inactive"/>
+						<fileDependency file="Project Nevada - Cyberware.esp" state="Missing"/>
+					</dependencies>
 				</dependencies>
 				<files>
 					<file source="Project Nevada - Old World Blues (No Cyberware).esp" priority="4"/>
