@@ -1,0 +1,259 @@
+#### GameExtraData.h ####################################################################################
+
+/*    Class							     vtbl	  Type  Size
+ *   ----------------------------		------		--  --
+ *	ExtraWeaponModFlags                ????????		8D	10
+ */
+ 
+ 
+enum {
+ 
+	...
+	
+	kExtraData_CreatureMovementSound    	= 0x8A,
+	kExtraData_FollowerSwimBreadcrumbs  	= 0x8B,
+	kExtraData_WeaponModFlags			 	= 0x8D
+};
+ 
+ 
+// 010
+class ExtraWeaponModFlags : public BSExtraData
+{
+public:
+	ExtraWeaponModFlags();
+	~ExtraWeaponModFlags();
+
+	UInt8	flags; // 00C
+
+	static ExtraWeaponModFlags* Create();
+};
+
+
+
+
+#### GameExtraData.cpp ####################################################################################
+
+static const UInt32 s_ExtraWeaponModFlagsVtbl = 0x010159A4;
+
+ExtraWeaponModFlags* ExtraWeaponModFlags::Create()
+{
+	ExtraWeaponModFlags* xWeaponModFlags = (ExtraWeaponModFlags*)BSExtraData::Create(kExtraData_WeaponModFlags, sizeof(ExtraWeaponModFlags), s_ExtraWeaponModFlagsVtbl);
+	xWeaponModFlags->flags = 0;
+	return xWeaponModFlags;
+}
+
+
+
+#### GameForms.h ####################################################################################
+
+class TESObjectWEAP : public TESBoundObject
+{
+	....
+
+	// Those were int's before
+	
+	float				value1Mod1;			// 18C
+	float				value1Mod2;			// 190
+	float				value1Mod3;			// 194
+
+	....
+	
+	float				value2Mod1;			// 1B0
+	float				value2Mod2;			// 1B4
+	float				value2Mod3;			// 1B8
+	
+	....
+	
+	UInt32 GetItemModEffect(UInt8 which);
+	float GetItemModValue1(UInt8 which);
+	float GetItemModValue2(UInt8 which);
+}
+	
+
+	
+	
+#### GameForms.cpp ####################################################################################
+
+UInt32 TESObjectWEAP::GetItemModEffect(UInt8 which)
+{
+	UInt32 effectId = 0;
+	switch(which) {
+		case 1: effectId = effectMod1; break;
+		case 2: effectId = effectMod2; break;
+		case 3: effectId = effectMod3; break;
+	}
+	return effectId;
+}
+
+float TESObjectWEAP::GetItemModValue1(UInt8 which)
+{
+	float value = 0;
+	switch(which) {
+		case 1: value = value1Mod1; break;
+		case 2: value = value1Mod2; break;
+		case 3: value = value1Mod3; break;
+	}
+	return value;
+}
+
+float TESObjectWEAP::GetItemModValue2(UInt8 which)
+{
+	float value = 0;
+	switch(which) {
+		case 1: value = value2Mod1; break;
+		case 2: value = value2Mod2; break;
+		case 3: value = value2Mod3; break;
+	}
+	return value;
+}
+
+
+
+
+#### Commands_Inventory.cpp ####################################################################################
+
+bool Cmd_GetEquippedWeaponModFlags_Execute(COMMAND_ARGS)
+{
+	*result = 0;
+
+	if (!thisObj)
+		return true;
+
+	MatchBySlot matcher(5);
+	EquipData equipD = FindEquipped(thisObj, matcher);
+
+	if (!equipD.pForm)
+		return true;
+	
+	if (!equipD.pExtraData)
+		return true;
+	
+	ExtraWeaponModFlags* pXWeaponModFlags = (ExtraWeaponModFlags*)equipD.pExtraData->GetByType(kExtraData_WeaponModFlags);
+	if (pXWeaponModFlags) {
+		*result = pXWeaponModFlags->flags;
+		if(IsConsoleMode())
+			Console_Print("Weapon Mod Flags: %d", pXWeaponModFlags->flags);
+	} else if(IsConsoleMode()) {
+		Console_Print("Weapon Mod Flags: 0");
+	}
+
+	return true;
+}
+
+bool Cmd_SetEquippedWeaponModFlags_Execute(COMMAND_ARGS)
+{
+	*result = 0;
+
+	if (!thisObj)
+		return true;
+
+	UInt32 flags = 0;
+	if (!ExtractArgs(EXTRACT_ARGS, &flags))
+		return true;
+
+	if (flags < 0 || flags > 7)
+		return true;
+
+	MatchBySlot matcher(5);
+	EquipData equipD = FindEquipped(thisObj, matcher);
+
+	if (!equipD.pForm)
+		return true;
+
+	if (!equipD.pExtraData)
+		return true;
+
+	ExtraWeaponModFlags* pXWeaponModFlags = (ExtraWeaponModFlags*)equipD.pExtraData->GetByType(kExtraData_WeaponModFlags);
+
+	// Modify existing flags
+	if (pXWeaponModFlags) {
+		if (flags) {
+			pXWeaponModFlags->flags = (UInt8) flags;
+		} else {
+			equipD.pExtraData->Remove(pXWeaponModFlags);
+			FormHeap_Free(pXWeaponModFlags);
+			pXWeaponModFlags = NULL;
+		}
+
+	// Create new extra data
+	} else if (flags) {
+		pXWeaponModFlags = ExtraWeaponModFlags::Create();
+		if (pXWeaponModFlags) {
+			pXWeaponModFlags->flags = (UInt8) flags;
+
+			if (!equipD.pExtraData->Add(pXWeaponModFlags)) {
+				FormHeap_Free(pXWeaponModFlags);
+				pXWeaponModFlags = NULL;
+			}
+		}
+	}
+
+	return true;
+}
+
+bool Cmd_GetWeaponItemModEffect_Execute(COMMAND_ARGS)
+{
+	*result = 0;
+	UInt32 whichMod = 0;
+	TESObjectWEAP* pWeap = Extract_IntAndWeapon(PASS_COMMAND_ARGS, whichMod);
+	if (!pWeap)
+		return true;
+
+	*result = pWeap->GetItemModEffect(whichMod);
+	if(IsConsoleMode())
+		Console_Print("Item Mod %d Effect: %d", whichMod, pWeap->GetItemModEffect(whichMod));
+
+	return true;
+}
+
+bool Cmd_GetWeaponItemModValue1_Execute(COMMAND_ARGS)
+{
+	*result = 0;
+	UInt32 whichMod = 0;
+	TESObjectWEAP* pWeap = Extract_IntAndWeapon(PASS_COMMAND_ARGS, whichMod);
+	if (!pWeap)
+		return true;
+
+	*result = pWeap->GetItemModValue1(whichMod);
+	if(IsConsoleMode())
+		Console_Print("Item Mod %d Value1: %f", whichMod, pWeap->GetItemModValue1(whichMod));
+
+	return true;
+}
+
+bool Cmd_GetWeaponItemModValue2_Execute(COMMAND_ARGS)
+{
+	*result = 0;
+	UInt32 whichMod = 0;
+	TESObjectWEAP* pWeap = Extract_IntAndWeapon(PASS_COMMAND_ARGS, whichMod);
+	if (!pWeap)
+		return true;
+	
+	*result = pWeap->GetItemModValue2(whichMod);
+	if(IsConsoleMode())
+		Console_Print("Item Mod %d Value2: %f", whichMod, pWeap->GetItemModValue2(whichMod));
+
+	return true;
+}
+
+
+
+
+#### Commands_Inventory.h ####################################################################################
+
+DEFINE_COMMAND(GetEquippedWeaponModFlags, returns equipped weapon mod flags, 1, 0, NULL);
+DEFINE_COMMAND(SetEquippedWeaponModFlags, sets equipped weapon mod flags, 1, 1, kParams_OneInt);
+DEFINE_COMMAND(GetWeaponItemModEffect, returns the specified item mod effect id of the weapon, 0, 2, kParams_OneInt_OneOptionalObjectID);
+DEFINE_COMMAND(GetWeaponItemModValue1, returns the specified item mod value1 of the weapon, 0, 2, kParams_OneInt_OneOptionalObjectID);
+DEFINE_COMMAND(GetWeaponItemModValue2, returns the specified item mod value2 of the weapon, 0, 2, kParams_OneInt_OneOptionalObjectID);
+
+
+
+
+#### CommandTable.cpp ####################################################################################
+
+	ADD_CMD(GetEquippedWeaponModFlags);
+	ADD_CMD(SetEquippedWeaponModFlags);
+	ADD_CMD(GetWeaponItemModEffect);
+	ADD_CMD(GetWeaponItemModValue1);
+	ADD_CMD(GetWeaponItemModValue2);
