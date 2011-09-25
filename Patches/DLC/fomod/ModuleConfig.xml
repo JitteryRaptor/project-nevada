@@ -12,6 +12,8 @@
 			<fileDependency file="HonestHearts.esm" state="Inactive"/>
 			<fileDependency file="OldWorldBlues.esm" state="Active"/>
 			<fileDependency file="OldWorldBlues.esm" state="Inactive"/>
+			<fileDependency file="LonesomeRoad.esm" state="Active"/>
+			<fileDependency file="LonesomeRoad.esm" state="Inactive"/>
 		</dependencies>
 	</moduleDependencies>
 	<requiredInstallFiles>
@@ -62,7 +64,16 @@
 					</dependencies>
 				</dependencies>
 				<files>
-					<file source="Project Nevada - Old World Blues (No Cyberware).esp" priority="4"/>
+					<file source="Project Nevada - Old World Blues (No Cyberware).esp" priority="3"/>
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="Or">
+					<fileDependency file="LonesomeRoad.esm" state="Active"/>
+					<fileDependency file="LonesomeRoad.esm" state="Inactive"/>
+				</dependencies>
+				<files>
+					<file source="Project Nevada - Lonesome Road.esp" priority="4"/>
 				</files>
 			</pattern>
 		</patterns>
