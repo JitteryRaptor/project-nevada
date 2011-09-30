@@ -19,7 +19,7 @@ Team:			snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, TheCastle, x-
 
 Contributors:	Pelinor (Mod Configuration Menu)
 
-Version:		2.3
+Version:		2.4
 
 Download:		http://www.newvegasnexus.com/downloads/file.php?id=40040
 
@@ -126,6 +126,13 @@ to get the mod running.
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
+
+------------------------------------------------------------
+2.4:
+
+[Equipment]
+- Added Stealth Laser (thanks to by MadCat221)
+
 
 ------------------------------------------------------------
 2.3:
@@ -508,6 +515,11 @@ Wattz Laser Rifle
 	Original texture: joefoxx082
 	Enhanced textures, animated glows and improvements: Jonnyeah
 
+Stealth Laser Pistol
+	Concept, NIFSkope work: MadCat211
+	Texture: Drag0ntamer & MadCat211
+	Sound effects: Crawlius
+	
 Plasma Disruptor
 	Source: Plasma Weapons Redesign Rebalance (http://www.fallout3nexus.com/downloads/file.php?id=8983), by Chai
 	Sound effects: Crawlius
