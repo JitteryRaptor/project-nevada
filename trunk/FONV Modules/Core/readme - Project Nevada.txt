@@ -15,7 +15,7 @@
 
 ########################################################################################################################################
 
-Team:			snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, TheCastle, x-quake, Gopher, Gribbleshnibit8, Mezmorki
+Team:			snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, Gribbleshnibit8, Gopher, TheCastle, x-quake, Mezmorki
 
 Contributors:	Pelinor (Mod Configuration Menu)
 
@@ -130,8 +130,16 @@ to get the mod running.
 ------------------------------------------------------------
 2.4:
 
+[Core]
+- Explosive Entry: Improved/reworked this feature to be more intuitive and useful
+
+[Cyberware]
+- Fixed CTD on disarm spots when EMP/HF implant charges were removed
+- Fixed charge reset on reload for EMP/HF implants
+
 [Equipment]
-- Added Stealth Laser (thanks to by MadCat221)
+- Added Stealth Laser (thanks to MadCat221)
+- Fixed wrong Dart Gun ammo list
 
 
 ------------------------------------------------------------
