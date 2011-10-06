@@ -132,6 +132,7 @@ to get the mod running.
 
 [Core]
 - Explosive Entry: Improved/reworked this feature to be more intuitive and useful
+- Various small bugfixes
 
 [Cyberware]
 - Fixed CTD on disarm spots when EMP/HF implant charges were removed
