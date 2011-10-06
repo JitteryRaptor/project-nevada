@@ -139,7 +139,7 @@ to get the mod running.
 - Fixed charge reset on reload for EMP/HF implants
 
 [Equipment]
-- Added Stealth Laser (thanks to MadCat221)
+- Added Stealth Laser Pistol (thanks to MadCat221)
 - Fixed wrong Dart Gun ammo list
 
 
@@ -968,8 +968,10 @@ a) Guns
 * Microwave Emitter
 
 [Custom creations]
+* AES18 Prototype
 * Rail Cannon
 * Q-41 Prototype
+* Stealth Laser Pistol
 
 [Based on community creations]
 * Auto-Gauss
