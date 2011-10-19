@@ -23,9 +23,27 @@
 	<conditionalFileInstalls>
 		<patterns>
 			<pattern>
-				<dependencies operator="Or">
-					<fileDependency file="DeadMoney.esm" state="Active"/>
-					<fileDependency file="DeadMoney.esm" state="Inactive"/>
+				<dependencies operator="And">
+					<dependencies operator="Or">
+						<fileDependency file="DeadMoney.esm" state="Active"/>
+						<fileDependency file="DeadMoney.esm" state="Inactive"/>
+					</dependencies>
+					<fileDependency file="Project Nevada - Rebalance.esp" state="Active"/>
+				</dependencies>
+				<files>
+					<file source="Project Nevada - Dead Money (Rebalance).esp" destination="Project Nevada - Dead Money.esp" priority="1"/>
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<dependencies operator="Or">
+						<fileDependency file="DeadMoney.esm" state="Active"/>
+						<fileDependency file="DeadMoney.esm" state="Inactive"/>
+					</dependencies>
+					<dependencies operator="Or">
+						<fileDependency file="Project Nevada - Rebalance.esp" state="Inactive"/>
+						<fileDependency file="Project Nevada - Rebalance.esp" state="Missing"/>
+					</dependencies>
 				</dependencies>
 				<files>
 					<file source="Project Nevada - Dead Money.esp" priority="1"/>
