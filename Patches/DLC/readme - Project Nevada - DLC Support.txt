@@ -41,6 +41,8 @@ Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 		a) Dead Money
 		b) Honest Hearts
 		c) Old World Blues
+		d) Lonesome Road
+		e) Gun Runners' Arsenal
 
 	4. Installation
 
@@ -68,6 +70,16 @@ appropriate patches.
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
+
+1.3:
+[Lonesome Road]
+- Initial Release
+
+[Gun Runners' Arsenal]
+- Initial Release
+
+[Dead Money]
+- Added support for Rebalance Module if Rebalance is installed
 
 1.2:
 
@@ -130,7 +142,7 @@ the Project Nevada system.
 
 * Grenade Hotkey
 	The grenades and throwable weapons have been added to the appropriate lists.
-	As soon as you get to the Zion, you can use the new	weapons with your standard hotkey.
+	As soon as you get to the Zion Valley, you can use the new weapons with your standard hotkey.
 	
 ------------------------------------------------------------
  c) Old World Blues
@@ -196,7 +208,45 @@ The following features are only included with the Cyberware version:
 			Level 2: Non-addictive Turbo is added to the inventory, lasts for 4 seconds, 10 uses per day
 	
 	The implants are upgradable by bringing the un-installed implant item to a workbench.
+	
+------------------------------------------------------------
+ d) Lonesome Road
+------------------------------------------------------------
 
+* Visor Overlays
+	Overlays have been added to the Riot Helmets (all variants)
+	
+* Vision Modes
+	Vision modes have been added to the Riot Helmets. They scale with the level of the helmet:
+	Riot Helmet:			Night Vision, Heat Vision
+	Advanced Riot Helmet:	Night Vision, Heat Vision, EM Vision
+	Elite Riot Helmet:		Night Vision, Heat Vision, EM Vision, Scanner 
+
+* Grenade Hotkey
+	The grenades and throwable weapons have been added to the appropriate lists.
+	As soon as you get to The Divide, you can use the new weapons with your standard hotkey.
+	The Satchel Charge can be converted into a detonatable explosive.
+	
+* Explosive Entry
+	Satchel Charges have been added to the Explosive Entry system.
+	
+------------------------------------------------------------
+ b) Gun Runners' Arsenal
+------------------------------------------------------------
+
+* Grenade Hotkey
+	The grenades and throwable weapons have been added to the appropriate lists.
+	As soon as you find them, you can use the new weapons with your standard hotkey.
+	The Fat Mine can be converted into a detonatable explosive.
+	
+* Ammo Fixes
+	The new ammo types have been added to the integrated Ammo Spread Effect Fixer system, ensuring
+	that all your ammo behaves as it should.
+	
+* Explosive Entry
+	All new explosive weapons have been added to the Explosive Entry system, so now you can open locked
+	containers with a Fat Mine if you so choose.
+	
 
 ========================================================================================================================================
  4. Installation
@@ -261,6 +311,28 @@ otherwise the game will not start! Arrange your load order like this:
 		...
 		
 		
+When using the Project Nevada DM patch with Rebalance support, it has to be loaded after the Rebalance plugin file itself,
+otherwise the changes made by Dead Money will not show up. Arrange your load order like this:
+	
+		...
+
+	DeadMoney.esm
+
+		...
+
+	Project Nevada - Core.esm
+	
+		...
+
+	Project Nevada - Rebalance.esp
+
+		...
+
+	Project Nevada - Dead Money.esp
+
+		...
+		
+
 ========================================================================================================================================
  5. Troubleshooting
 ========================================================================================================================================
