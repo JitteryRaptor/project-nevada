@@ -209,6 +209,9 @@ The following features are only included with the Cyberware version:
 	
 	The implants are upgradable by bringing the un-installed implant item to a workbench.
 	
+* Note - An edit was made to the Hazmat Darklight Cowl in order for it to have vision modes. This edit make it
+	use the Headband and Eyeglasses slots.
+	
 ------------------------------------------------------------
  d) Lonesome Road
 ------------------------------------------------------------
@@ -229,6 +232,9 @@ The following features are only included with the Cyberware version:
 	
 * Explosive Entry
 	Satchel Charges have been added to the Explosive Entry system.
+	
+* Note - Edits were made to the Riot Helmets in order for them to have vision modes. These edits make them
+	use the exact same slots as the Ranger Helmet off which they are based.
 	
 ------------------------------------------------------------
  b) Gun Runners' Arsenal

@@ -105,7 +105,7 @@
 					<fileDependency file="Project Nevada - Rebalance.esp" state="Active"/>
 				</dependencies>
 				<files>
-					<file source="Project Nevada - Gun Runners' Arsenal (Rebalance).esp" destination="Project Nevada - Gun Runners' Arsenal.esp" priority="1"/>
+					<file source="Project Nevada - Gun Runners' Arsenal (Rebalance).esp" destination="Project Nevada - Gun Runners' Arsenal.esp" priority="5"/>
 				</files>
 			</pattern>
 			<pattern>
@@ -120,7 +120,7 @@
 					</dependencies>
 				</dependencies>
 				<files>
-					<file source="Project Nevada - Gun Runners' Arsenal.esp" priority="1"/>
+					<file source="Project Nevada - Gun Runners' Arsenal.esp" priority="5"/>
 				</files>
 			</pattern>
 		</patterns>
