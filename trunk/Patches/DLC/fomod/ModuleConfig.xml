@@ -14,6 +14,8 @@
 			<fileDependency file="OldWorldBlues.esm" state="Inactive"/>
 			<fileDependency file="LonesomeRoad.esm" state="Active"/>
 			<fileDependency file="LonesomeRoad.esm" state="Inactive"/>
+			<fileDependency file="GunRunnersArsenal.esm" state="Active"/>
+			<fileDependency file="GunRunnersArsenal.esm" state="Inactive"/>
 		</dependencies>
 	</moduleDependencies>
 	<requiredInstallFiles>
@@ -92,6 +94,33 @@
 				</dependencies>
 				<files>
 					<file source="Project Nevada - Lonesome Road.esp" priority="4"/>
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<dependencies operator="Or">
+						<fileDependency file="GunRunnersArsenal.esm" state="Active"/>
+						<fileDependency file="GunRunnersArsenal.esm" state="Inactive"/>
+					</dependencies>
+					<fileDependency file="Project Nevada - Rebalance.esp" state="Active"/>
+				</dependencies>
+				<files>
+					<file source="Project Nevada - Gun Runners' Arsenal (Rebalance).esp" destination="Project Nevada - Gun Runners' Arsenal.esp" priority="1"/>
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<dependencies operator="Or">
+						<fileDependency file="GunRunnersArsenal.esm" state="Active"/>
+						<fileDependency file="GunRunnersArsenal.esm" state="Inactive"/>
+					</dependencies>
+					<dependencies operator="Or">
+						<fileDependency file="Project Nevada - Rebalance.esp" state="Inactive"/>
+						<fileDependency file="Project Nevada - Rebalance.esp" state="Missing"/>
+					</dependencies>
+				</dependencies>
+				<files>
+					<file source="Project Nevada - Gun Runners' Arsenal.esp" priority="1"/>
 				</files>
 			</pattern>
 		</patterns>
