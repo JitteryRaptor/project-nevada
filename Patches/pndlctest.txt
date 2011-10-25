@@ -1,0 +1,50 @@
+;Detonator
+player.additem 00130041 1
+
+;Dead Money
+player.additem 0100e3f1 1
+player.additem 010109f3 1
+player.additem 0100e1b7 1
+player.additem 0100c45d 1
+player.additem 0101140b 1
+player.additem 0100119e 1
+player.additem 010092ef 1
+	player.additem 01012805 1
+	player.additem 01013b1a 1
+	player.additem 01013b20 1
+
+;Honest Hearts
+player.additem 0201124d 1
+player.additem 0200b435 1
+player.additem 0200c626 1
+player.additem 0200bcb4 1
+player.additem 0200bcb6 1
+
+;Old World Blues
+player.additem 0300c12f 1
+player.additem 0300dbb6 1
+player.additem 0300e68b 1
+player.additem 0300c6f7 1
+player.additem 0300bb5e 1
+player.additem 0300bb5f 1
+
+;Lonesome Road
+player.additem 040092ea 1
+player.additem 0400c9c1 1
+player.additem 0400c9c2 1
+player.additem 04008856 1
+player.additem 04008859 1
+player.additem 0400885a 1
+player.additem 0400fc35 1
+player.additem 0c0017e7 1
+player.additem 040076e3 1
+
+;Gun Runners' Arsenal
+player.additem 050008c8 1
+player.additem 05000818 1
+player.additem 05000814 1
+player.additem 050008c9 1
+player.additem 05000815 1
+player.additem 05000811 1
+
+tgm
