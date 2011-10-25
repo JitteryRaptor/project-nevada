@@ -178,23 +178,23 @@ The following features are only included with the Cyberware version:
 	
 	Here's a description of what each implant does now:
 	
-		C-13
+		C-13	Arms
 			Level 1: +10% damage to Cazadores
 			Level 2: +20% damage to Cazadores and a passive radio field that frenzies them over time
 			
-		M-5
+		M-5		Legs
 			Level 1: +20% movement speed when crouched
 			Level 2: +40% movement speed when crouched
 		
-		Y-3
+		Y-3		Torso
 			Level 1: Radiation from contaminated drinks is neutralized
 			Level 2: Radiation from contaminated drinks is absorbed and converted into Action Points
 		
-		Y-7
+		Y-7		Torso
 			Level 1: Consuming food restores additional  5 HP and 2 AP
 			Level 2: Consuming food restores additional 10 HP and 4 AP
 			
-		GRX
+		GRX		Head
 			The GRX implant is no longer a perk but buyable at the Sink Autodoc like the other implants.
 			It has to be unlocked by finding a holo-disc, just like the other implants.
 			It's effects depend on whether Bullet Time is enabled or not.
