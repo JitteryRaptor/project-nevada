@@ -19,7 +19,7 @@ Team:			snakster, Kai Hohiro, delamer, T3T, Zealotlee, Yukichigai, Gribbleshnibi
 
 Contributors:	Pelinor (Mod Configuration Menu)
 
-Version:		2.4
+Version:		2.5
 
 Download:		http://www.newvegasnexus.com/downloads/file.php?id=40040
 
@@ -126,6 +126,21 @@ to get the mod running.
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
+
+------------------------------------------------------------
+2.5:
+[Core]
+- Fixed some stability issues related to list functions that could cause CTDs
+- Several minor tweaks and bugfixes
+
+[Rebalance]
+- Added an option to change the hard-coded influence weapon condition has on damage to make (especially enemy) guns much deadlier
+- Tweaked combat styles and combat-related GMSTs
+- Tweaked the long-range detection script
+
+[Cyberware]
+- Fixed ignored intelligence implant bonus in outer slots
+
 
 ------------------------------------------------------------
 2.4:
@@ -1180,6 +1195,15 @@ As usual, the Control Panel allows players to customize most settings according 
 	Defaults:
 		Distance 5000, Max Angle 0.1, Screen Area 0.1 [PN]
 		Distance 1800, Max Angle 3,   Screen Area 20  [Vanilla]
+		
+* Weapon condition damage penalty
+	Description:
+		Controls how much influence a weapon's condition has on its damage.
+		Vanilla default is 67%, meaning a weapon at ~1% health will only do ~33% of its original damage.
+	Defaults:
+		20% [PN]
+		66% [Vanilla]
+
 
 ------------------------------------------------------------
  c) Stealth + Movement options
