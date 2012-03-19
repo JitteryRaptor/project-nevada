@@ -74,6 +74,9 @@ With this patch, the chargeable weapons in Project Nevada Core and Equipment mak
  2. Changelog
 ========================================================================================================================================
 
+1.1:
+- Includes new plasma effects and visuals.
+
 1.0:
 - Initial release
 
