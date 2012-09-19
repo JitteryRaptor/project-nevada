@@ -1,0 +1,144 @@
+fomod/info.xml
+fomod/screenshot.png
+fomod/script.cs
+Menus/prefabs/pnx/pnximplants.xml
+Menus/prefabs/includes_TutorialMenu.xml
+Menus/tutorial_menu.xml
+Meshes/pnx/Effects/fxpulseexplosion01.nif
+Meshes/pnx/projectiles/mezprojectile01.nif
+Meshes/pnx/projectiles/mezprojectile01red.nif
+Meshes/pnx/implantbox.nif
+Meshes/pnx/surgerymanual.nif
+optional/DarnUI/Menus/tutorial_menu.xml
+optional/MTUI/Menus/tutorial_menu.xml
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult06/PNxYImplan_PNxYSurgery_00003EFC_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult06/PNxYImplan_PNxYSurgery_00003EFC_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/PNxYImplan_PNxYSurgery_00000AE0_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/PNxYImplan_PNxYSurgery_00000AE0_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/PNxYImplan_PNxYSurgery_000072D8_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/PNxYImplan_PNxYSurgery_000072D8_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A15D_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A15D_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A15E_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A15E_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A15F_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A15F_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A160_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A160_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A161_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A161_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A162_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A162_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A163_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A163_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A164_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A164_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A165_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A165_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A166_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/femaleadult11/vDialogueM_vDialogueMedica_0000A166_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/maleadult03/PNxYImplan_PNxYSurgery_00003EFE_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/maleadult03/PNxYImplan_PNxYSurgery_00003EFE_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/maleold02/PNxYImplan_PNxYSurgery_0000A750_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/maleold02/PNxYImplan_PNxYSurgery_0000A750_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/MaleUniqueArcade/PNxYImplan_PNxYSurgery_0000A76E_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/MaleUniqueArcade/PNxYImplan_PNxYSurgery_0000A76E_1.ogg
+Sound/voice/Project Nevada - Cyberware.esp/maleuniquedocmitchell/PNxYImplan_PNxYSurgery_00003EF4_1.lip
+Sound/voice/Project Nevada - Cyberware.esp/maleuniquedocmitchell/PNxYImplan_PNxYSurgery_00003EF4_1.ogg
+Textures/pnx/cy/arrow_head.dds
+Textures/pnx/cy/arrow_leftarm.dds
+Textures/pnx/cy/arrow_leftleg.dds
+Textures/pnx/cy/arrow_rightarm.dds
+Textures/pnx/cy/arrow_rightleg.dds
+Textures/pnx/cy/arrow_torso.dds
+Textures/pnx/cy/background.dds
+Textures/pnx/cy/cyboy.dds
+Textures/pnx/cy/cyboy_base.dds
+Textures/pnx/cy/cyboy_lines.dds
+Textures/pnx/cy/implant_add.dds
+Textures/pnx/cy/implant_arm.dds
+Textures/pnx/cy/leftslot.dds
+Textures/pnx/cy/rightslot.dds
+Textures/pnx/cy/select_head.dds
+Textures/pnx/cy/select_leftarm.dds
+Textures/pnx/cy/select_leftleg.dds
+Textures/pnx/cy/select_rightarm.dds
+Textures/pnx/cy/select_rightleg.dds
+Textures/pnx/cy/select_torso.dds
+Textures/pnx/effects/mezring01red.dds
+Textures/pnx/hud/cy/arrow_head.dds
+Textures/pnx/hud/cy/arrow_head2.dds
+Textures/pnx/hud/cy/arrow_leftarm.dds
+Textures/pnx/hud/cy/arrow_leftarm2.dds
+Textures/pnx/hud/cy/arrow_leftleg.dds
+Textures/pnx/hud/cy/arrow_leftleg2.dds
+Textures/pnx/hud/cy/arrow_rightarm.dds
+Textures/pnx/hud/cy/arrow_rightarm2.dds
+Textures/pnx/hud/cy/arrow_rightleg.dds
+Textures/pnx/hud/cy/arrow_rightleg2.dds
+Textures/pnx/hud/cy/arrow_torso.dds
+Textures/pnx/hud/cy/arrow_torso2.dds
+Textures/pnx/hud/cy/background.dds
+Textures/pnx/hud/cy/cyboy.dds
+Textures/pnx/hud/cy/cyboy_base.dds
+Textures/pnx/hud/cy/cyboy_lines.dds
+Textures/pnx/hud/cy/implant_add.dds
+Textures/pnx/hud/cy/implant_left_arm.dds
+Textures/pnx/hud/cy/implant_left_armor.dds
+Textures/pnx/hud/cy/implant_left_emp.dds
+Textures/pnx/hud/cy/implant_left_eye.dds
+Textures/pnx/hud/cy/implant_left_heart.dds
+Textures/pnx/hud/cy/implant_left_leg.dds
+Textures/pnx/hud/cy/implant_left_lung.dds
+Textures/pnx/hud/cy/implant_left_microwave.dds
+Textures/pnx/hud/cy/implant_left_nail.dds
+Textures/pnx/hud/cy/implant_left_phoenix.dds
+Textures/pnx/hud/cy/implant_left_scanner.dds
+Textures/pnx/hud/cy/implant_left_skill.dds
+Textures/pnx/hud/cy/implant_left_stat.dds
+Textures/pnx/hud/cy/implant_left_stealth.dds
+Textures/pnx/hud/cy/implant_left_synapses.dds
+Textures/pnx/hud/cy/implant_left_weave.dds
+Textures/pnx/hud/cy/implant_left_weight.dds
+Textures/pnx/hud/cy/implant_right_arm.dds
+Textures/pnx/hud/cy/implant_right_armor.dds
+Textures/pnx/hud/cy/implant_right_emp.dds
+Textures/pnx/hud/cy/implant_right_eye.dds
+Textures/pnx/hud/cy/implant_right_heart.dds
+Textures/pnx/hud/cy/implant_right_leg.dds
+Textures/pnx/hud/cy/implant_right_lung.dds
+Textures/pnx/hud/cy/implant_right_microwave.dds
+Textures/pnx/hud/cy/implant_right_nail.dds
+Textures/pnx/hud/cy/implant_right_phoenix.dds
+Textures/pnx/hud/cy/implant_right_scanner.dds
+Textures/pnx/hud/cy/implant_right_skill.dds
+Textures/pnx/hud/cy/implant_right_stat.dds
+Textures/pnx/hud/cy/implant_right_stealth.dds
+Textures/pnx/hud/cy/implant_right_synapses.dds
+Textures/pnx/hud/cy/implant_right_weave.dds
+Textures/pnx/hud/cy/implant_right_weight.dds
+Textures/pnx/hud/cy/leftslot.dds
+Textures/pnx/hud/cy/nevada.dds
+Textures/pnx/hud/cy/rightslot.dds
+Textures/pnx/hud/cy/select_head.dds
+Textures/pnx/hud/cy/select_leftarm.dds
+Textures/pnx/hud/cy/select_leftleg.dds
+Textures/pnx/hud/cy/select_rightarm.dds
+Textures/pnx/hud/cy/select_rightleg.dds
+Textures/pnx/hud/cy/select_torso.dds
+Textures/pnx/hud/gren/EMPWeap.dds
+Textures/pnx/hud/gren/HFPWeap.dds
+Textures/pnx/icons/perks/implant_perk_matrix1.dds
+Textures/pnx/icons/perks/implant_perk_matrix2.dds
+Textures/pnx/icons/perks/implant_perk_sprint.dds
+Textures/pnx/icons/perks/PN-CW_PerkEMPBlast.dds
+Textures/pnx/icons/perks/PN-CW_PerkMicroBlast.dds
+Textures/pnx/icons/perks/pnx_cyberware_4AugArm.dds
+Textures/pnx/icons/perks/pnx_cyberware_4AugChest.dds
+Textures/pnx/icons/perks/pnx_cyberware_4AugHead.dds
+Textures/pnx/icons/perks/pnx_cyberware_4AugLeg.dds
+Textures/pnx/icons/Pipboyimages/items/implantbook.dds
+Textures/pnx/icons/Pipboyimages/items/implantbox.dds
+Textures/pnx/misc/implantbox.dds
+Textures/pnx/misc/surgerymanual.dds
+Project Nevada - Cyberware.esp

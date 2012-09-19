@@ -1,0 +1,63 @@
+Implant Number Scheme:
+
+0000-0049	SPL
+For implants that edit a persons base characteristics: Strength, Intelligence, etc.
+	-0037 Hypertrophy Accelerator	S
+	-0039 Optics Enhancer			P
+	-0038 Nociception Regulator		E
+	-0043 Empathy Synthesizer		C
+	-0009 Logic Co-Processor		I
+	-0005 Reflex Booster			A
+	-0032 Probability Calculator	L
+
+0050-0349	MIL
+Owned by US Military
+	-0073-0076 Weight Absorber
+	-0110 Bionic Eyes
+	-0258 Nanobionic Weave
+	-0269-0272 Tread Damper
+	-0346-0349 Motor Memorizer
+
+0350-0649	VTK
+Owned by Vault-Tec Industries
+
+0800-0850	WTK
+Owned by West Tek
+	-0814 Sub-Dermal Armor
+
+2650-2749	YUM
+Owned by Yuma Flats Energy Consortium
+	-2656 EMP Generator
+
+3700-3749	LOB
+L.O.B. Enterprises
+	-3733 Hyperfrequency Emitter
+
+4750-4799	BTC
+Owned by BeatCo
+	-4793-4796 Razor Nails
+
+1350-5999
+Reserved for future use
+
+6000-6499	RBC
+Owned by Rob-Co
+	-6060 Stealth Nano-Bots
+	-6361-6364 Hand Stabilizer
+	-6430-6433 Neural Datatool
+
+7000-7999	MTK
+Owned by Med-Tek
+	-7398 Synthetic Lungs
+	-7722 Monocyte Breeder
+
+8000-9999	CYX
+Owned by Project Nevada Group
+	-8734 Wired Synapses
+	-9210-9214 Voice Modulator
+	-9243 Kinetic Accelerator
+	-9851 AR Scanner
+	
+
+
+Big MT implants are all in development stage, and are not (and never will be) slated for mass production. Because of this, they use a unique internal naming/numbering scheme instead of the standards set by the Project Nevada Group.

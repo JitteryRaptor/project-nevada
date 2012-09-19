@@ -1,0 +1,110 @@
+<!-- ######################################################################################## General -->
+<_PNxScanHUD> 1 </_PNxScanHUD>
+
+
+<!-- ######################################################################################## IO Scanlines -->
+<_PNxScanPhase> 0 </_PNxScanPhase> <!-- 0: Disabled -->
+<_PNxScanAmount> 0 </_PNxScanAmount>
+<_PNxScanColorRed> 1.0 </_PNxScanColorRed>
+<_PNxScanColorGreen> 1.0 </_PNxScanColorGreen>
+<_PNxScanColorBlue> 1.0 </_PNxScanColorBlue>
+
+
+<!-- ######################################################################################## ScanLines -->
+<rect name="PNxScanLayer">
+	<visible>
+		<copy src="io()" trait="_PNxScanPhase" />
+		<and src="io()" trait="_PNxVisorOverlayEnabled" />
+		<gt> 0 </gt>
+	</visible>
+	<x>0</x>
+	<y>0</y>
+	<width>
+		<copy src="screen()" trait="width" />
+	</width>
+	<height><copy src="screen()" trait="height" /></height>
+	
+	<alpha>
+		<copy src="io()" trait="_PNxScanAmount" />
+		<mul>255</mul>
+	</alpha>
+	<red>
+		<copy src="io()" trait="_PNxScanColorRed" />
+		<mul>255</mul>
+	</red>
+	<green>
+		<copy src="io()" trait="_PNxScanColorGreen" />
+		<mul>255</mul>
+	</green>
+	<blue>
+		<copy src="io()" trait="_PNxScanColorBlue" />
+		<mul>255</mul>
+	</blue>
+
+	<!-- Explicit copy for each phase for smoother performance -->
+	<image name="Phase1">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxScanPhase" />
+			<eq> 1 </eq>
+		</visible>
+		
+		<filename> pnx\hud\line\scanline1.dds </filename>
+	</image>
+	
+	<image name="Phase2">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxScanPhase" />
+			<eq> 2 </eq>
+		</visible>
+		
+		<filename> pnx\hud\line\scanline2.dds </filename>
+		
+	</image>
+	
+	<image name="Phase3">
+		<zoom> &scale; </zoom>
+		<depth> -11 </depth>
+		<systemcolor> &nosystemcolor; </systemcolor>
+		
+		<red><copy src="parent()" trait="red" /></red>
+		<green><copy src="parent()" trait="green" /></green>
+		<blue><copy src="parent()" trait="blue" /></blue>
+		<alpha><copy src="parent()" trait="alpha" /></alpha>
+		
+		<width><copy src="parent()" trait="width" /></width>
+		<height><copy src="parent()" trait="height" /></height>
+		
+		<visible>
+			<copy src="io()" trait="_PNxScanPhase" />
+			<eq> 3 </eq>
+		</visible>
+		
+		<filename> pnx\hud\line\scanline3.dds </filename>
+		
+	</image>
+
+</rect>
