@@ -1,0 +1,458 @@
+fomod/info.xml
+fomod/screenshot.png
+meshes/dlc04/weapons/2handrifle/dlc04shotgun.nif
+meshes/dlc05/weapons/1handpistol/dlc05alienpistol.nif
+meshes/pnx/armor/AdvRecon/f/advreconf.nif
+meshes/pnx/armor/AdvRecon/m/advreconm.nif
+meshes/pnx/armor/AdvRecon/m/go.nif
+meshes/pnx/armor/ArmoredDuster/Female/ArmoredDusterF.nif
+meshes/pnx/armor/ArmoredDuster/Male/ArmoredDusterM.nif
+meshes/pnx/armor/ArmoredDuster/Male/go.nif
+meshes/pnx/armor/HeadGear/AdvRecon/female/AdvReconHelmet.nif
+meshes/pnx/armor/HeadGear/AdvRecon/male/AdvReconHelmet.nif
+meshes/pnx/armor/HeadGear/RangerRecon/ReconRangerHelmet.nif
+meshes/pnx/armor/HeadGear/surgicalmask_go.nif
+meshes/pnx/armor/Leather backpack/LB_no_sleep bag.nif
+meshes/pnx/armor/Leather backpack/LB_no_sleep_bag_go.nif
+meshes/pnx/armor/RangerRecon/rangerreconf.nif
+meshes/pnx/armor/RangerRecon/rangerreconm.nif
+meshes/pnx/armor/T-57 C/GloveL.nif
+meshes/pnx/armor/T-57 C/GloveR.nif
+meshes/pnx/armor/T-57 C/T-57Cbackpack.nif
+meshes/pnx/armor/T-57 C/T-57Chelmet.nif
+meshes/pnx/armor/T-57 C/T-57Chelmet_go.nif
+meshes/pnx/armor/T-57 C/T-57Cpowerarmor.nif
+meshes/pnx/armor/T-57 C/T-57Cpowerarmor_go.nif
+meshes/pnx/armor/VaultTec PA/GloveL.nif
+meshes/pnx/armor/VaultTec PA/GloveR.nif
+meshes/pnx/armor/VaultTec PA/VTpowerarmor.nif
+meshes/pnx/armor/VaultTec PA/VTpowerarmor_go.nif
+meshes/pnx/armor/VaultTec PA/VTpowerhelmet.nif
+meshes/pnx/armor/VaultTec PA/VTpowerhelmet_go.nif
+meshes/pnx/characters/5mmSMGJam.kf
+meshes/pnx/characters/5mmSMGJam1stPerson.kf
+meshes/pnx/characters/5mmSMGReload.kf
+meshes/pnx/characters/5mmSMGReload1stPerson.kf
+meshes/pnx/characters/PlasmaDisruptorJam.kf
+meshes/pnx/characters/PlasmaDisruptorJam1stPerson.kf
+meshes/pnx/characters/PlasmaDisruptorReload.kf
+meshes/pnx/characters/PlasmaDisruptorReload1stPerson.kf
+meshes/pnx/characters/PlasmaRepeaterJam.kf
+meshes/pnx/characters/PlasmaRepeaterJam1stPerson.kf
+meshes/pnx/characters/PlasmaRepeaterReload.kf
+meshes/pnx/characters/PlasmaRepeaterReload1stPerson.kf
+meshes/pnx/clutter/coolant.nif
+meshes/pnx/Effects/MuzzleFlashes/PlasmaDisrupterFlash.nif
+meshes/pnx/Effects/MuzzleFlashes/PlasmaDisrupterFlash2.nif
+meshes/pnx/Effects/impactcryo.nif
+meshes/pnx/Effects/impactenergyplasma.nif
+meshes/pnx/Effects/impactenergyStealthLaser01.nif
+meshes/pnx/Effects/impactenergyStealthLaserflesh01.nif
+meshes/pnx/Effects/railCannonBeam.nif
+meshes/pnx/interface/HUD/railCannonScope.nif
+meshes/pnx/interface/HUD/RRDotScope01.nif
+meshes/pnx/interface/HUD/scope_pso1.nif
+meshes/pnx/mps/mpsenergyimpactplasma.nif
+meshes/pnx/mps/mpsplasmaprojectilesmall.nif
+meshes/pnx/projectiles/grenadecryoprojectile.nif
+meshes/pnx/projectiles/mfcellcasing.nif
+meshes/pnx/projectiles/plasmaprojectile03.nif
+meshes/pnx/projectiles/plasmaprojectile04.nif
+meshes/pnx/projectiles/SilentVioletLaserbeamprojectile.nif
+meshes/pnx/projectiles/smallteslabeam.nif
+meshes/pnx/weapons/1HandGrenadeThrow/cryogrenade.nif
+meshes/pnx/weapons/1HandGrenadeThrow/molotov.nif
+meshes/pnx/weapons/1HandGrenadeThrow/molotovthrown.nif
+meshes/pnx/weapons/1HandGrenadeThrow/molotov_go.nif
+meshes/pnx/weapons/1HandGrenadeThrow/pipebomb.nif
+meshes/pnx/weapons/1HandMelee/crowbar.nif
+meshes/pnx/weapons/1HandMelee/laser_katana_1h.nif
+meshes/pnx/weapons/1HandMelee/laser_katana_1hstatic.nif
+meshes/pnx/weapons/1HandMineDrop/minecryo.nif
+meshes/pnx/weapons/1HandMineDrop/minepowderchargemk2.nif
+meshes/pnx/weapons/1HandMineDrop/remoteMineFrag.nif
+meshes/pnx/weapons/1HandMineDrop/remoteMinePlasma.nif
+meshes/pnx/weapons/1HandMineDrop/remoteMinePulse.nif
+meshes/pnx/weapons/1HandPistol/CryoRevolver/cryoAmmo.nif
+meshes/pnx/weapons/1HandPistol/CryoRevolver/CryoRevolver.nif
+meshes/pnx/weapons/1HandPistol/MicroFlamer/FlamerPistol.nif
+meshes/pnx/weapons/1HandPistol/PPK12/ppk12gaussmuzzleflash.nif
+meshes/pnx/weapons/1HandPistol/PPK12/PPK12GP.nif
+meshes/pnx/weapons/1HandPistol/PPK12/PPK12GPEh.nif
+meshes/pnx/weapons/1HandPistol/PPK12/PPK12GPEhSa.nif
+meshes/pnx/weapons/1HandPistol/PPK12/PPK12GPEhSc.nif
+meshes/pnx/weapons/1HandPistol/PPK12/PPK12GPEhScSa.nif
+meshes/pnx/weapons/1HandPistol/PPK12/PPK12GPSa.nif
+meshes/pnx/weapons/1HandPistol/PPK12/PPK12GPSc.nif
+meshes/pnx/weapons/1HandPistol/PPK12/PPK12GPScSa.nif
+meshes/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagle.nif
+meshes/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleEx.nif
+meshes/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleExFl.nif
+meshes/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleFl.nif
+meshes/pnx/weapons/1HandPistol/StealthLaser/laserpistolenclaveSILENCED.nif
+meshes/pnx/weapons/1HandPistol/WattzPistol/LaserPistolW.nif
+meshes/pnx/weapons/1HandPistol/10mmpistolallmodsanch.nif
+meshes/pnx/weapons/1HandPistol/10mmpistolanch.nif
+meshes/pnx/weapons/1HandPistol/10mmpistolextendedmaganch.nif
+meshes/pnx/weapons/1HandPistol/10mmpistolextendedmaglasersightanch.nif
+meshes/pnx/weapons/1HandPistol/10mmpistollasersightanch.nif
+meshes/pnx/weapons/1HandPistol/10mmpistolsilencedanch.nif
+meshes/pnx/weapons/1HandPistol/10mmpistolsilencedextendedmaganch.nif
+meshes/pnx/weapons/1HandPistol/10mmpistolsilencedlasersightanch.nif
+meshes/pnx/weapons/1HandPistol/3_shooter.nif
+meshes/pnx/weapons/1HandPistol/3_shooter_structs.nif
+meshes/pnx/weapons/1HandPistol/plasmapistol2.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/FNFAL.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/FNFAL1.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/FNFAL12.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/FNFAL123.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/FNFAL13.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/FNFAL2.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/FNFAL23.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/FNFAL3.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/L1A1.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/L1A11.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/L1A112.nif
+meshes/pnx/weapons/2HandAutomatic/FAL/L1A12.nif
+meshes/pnx/weapons/2HandAutomatic/P90/p90.nif
+meshes/pnx/weapons/2HandAutomatic/P90/p90EX.nif
+meshes/pnx/weapons/2HandAutomatic/P90/p90EXLS.nif
+meshes/pnx/weapons/2HandAutomatic/P90/p90EXSI.nif
+meshes/pnx/weapons/2HandAutomatic/P90/p90EXSILS.nif
+meshes/pnx/weapons/2HandAutomatic/P90/p90LS.nif
+meshes/pnx/weapons/2HandAutomatic/P90/p90SI.nif
+meshes/pnx/weapons/2HandAutomatic/P90/p90SILS.nif
+meshes/pnx/weapons/2HandAutomatic/HomemadeAssaultRifle.nif
+meshes/pnx/weapons/2HandAutomatic/HomemadeAssaultRifleSilenced.nif
+meshes/pnx/weapons/2HandHandle/MECGM.nif
+meshes/pnx/weapons/2HandLauncher/railCannon.nif
+meshes/pnx/weapons/2HandRifle/M72/2mmECM72Ammo.nif
+meshes/pnx/weapons/2HandRifle/M72/M72GRifle.nif
+meshes/pnx/weapons/2HandRifle/M72/M72GRifleEc.nif
+meshes/pnx/weapons/2HandRifle/M72/M72GRifleSa.nif
+meshes/pnx/weapons/2HandRifle/M72/M72GRifleSaEc.nif
+meshes/pnx/weapons/2HandRifle/M72/M72GRifleSaSc.nif
+meshes/pnx/weapons/2HandRifle/M72/M72GRifleSaScEc.nif
+meshes/pnx/weapons/2HandRifle/M72/M72GRifleSc.nif
+meshes/pnx/weapons/2HandRifle/M72/M72GRifleScEc.nif
+meshes/pnx/weapons/2HandRifle/PlasmaSniper/plasmasniper.nif
+meshes/pnx/weapons/2HandRifle/UniqueMultiplas/PrototypeMultiplas.nif
+meshes/pnx/weapons/2HandRifle/WattzRifle/LaserRifleW.nif
+meshes/pnx/weapons/2HandRifle/WattzRifle/LaserRifleWExt.nif
+meshes/pnx/weapons/2HandRifle/WattzRifle/LaserRifleWExtFO.nif
+meshes/pnx/weapons/2HandRifle/WattzRifle/LaserRifleWFO.nif
+meshes/pnx/weapons/2HandRifle/WattzRifle/LaserRifleWScope.nif
+meshes/pnx/weapons/2HandRifle/WattzRifle/LaserRifleWScopeExt.nif
+meshes/pnx/weapons/2HandRifle/WattzRifle/LaserRifleWScopeExtFO.nif
+meshes/pnx/weapons/2HandRifle/WattzRifle/LaserRifleWScopeFO.nif
+meshes/pnx/weapons/2HandRifle/chineseSR.nif
+meshes/pnx/weapons/2HandRifle/p95.nif
+meshes/pnx/weapons/2HandRifle/p95go.nif
+meshes/pnx/weapons/2HandRifle/PlasmaGun.nif
+meshes/pnx/weapons/2HandRifle/PlasmaGunScoped2.nif
+meshes/pnx/weapons/2HandRifle/TribeamUnique.nif
+meshes/pnx/weapons/2HandRifle/WastelandRifle.nif
+meshes/pnx/weapons/2HandRifle/WastelandRifleScoped.nif
+meshes/weapons/1handpistol/32snubnose.nif
+meshes/weapons/1handpistol/mauserpistol01.nif
+meshes/weapons/2handautomatic/assaultrifle.nif
+meshes/weapons/2handautomatic/g3assaultrifle.nif
+meshes/weapons/2handrifle/combatshotgun.nif
+meshes/weapons/2handrifle/lincolnrifle.nif
+sound/fx/pnx/SilencedLaser/SilencedLaser5-2D.wav
+sound/fx/pnx/SilencedLaser/SilencedLaser5-3D.wav
+sound/fx/pnx/UnstableExplosion/far/Distant 1.wav
+sound/fx/pnx/UnstableExplosion/far/Distant 2.wav
+sound/fx/pnx/UnstableExplosion/near/Local 1.wav
+sound/fx/pnx/UnstableExplosion/near/Local 2.wav
+sound/fx/pnx/wpn/disruptor/Custom Fire 1A.wav
+sound/fx/pnx/wpn/disruptor/Custom Fire 1B.wav
+sound/fx/pnx/wpn/M72GaussRifle/wpn_M72_fire_2d.wav
+sound/fx/pnx/wpn/M72GaussRifle/wpn_M72_fire_3d.wav
+sound/fx/pnx/wpn/P90/p902d.wav
+sound/fx/pnx/wpn/P90/p903d.wav
+sound/fx/pnx/wpn/P90/p90SilencedFire2d.wav
+sound/fx/pnx/wpn/P90/p90SilencedFire3d.wav
+sound/fx/pnx/wpn/pistolplasma2/fire/wpn_pistolplasma2_fire_2d.wav
+sound/fx/pnx/wpn/pistolplasma2/fire/wpn_pistolplasma2_fire_3d.wav
+sound/fx/pnx/wpn/pistolplasma2/wpn_pistolplasma2_reload.wav
+sound/fx/pnx/wpn/pistolplasma2/wpn_pistolplasma_reload_silence2.wav
+sound/fx/pnx/wpn/riflep95/fire/wpn_p95_fire_2d.wav
+sound/fx/pnx/wpn/riflep95/fire/wpn_p95_fire_3d.wav
+sound/fx/pnx/cryoexplosion.wav
+textures/pnx/armor/AdvRecon/advreconf.dds
+textures/pnx/armor/AdvRecon/advreconf_n.dds
+textures/pnx/armor/AdvRecon/advreconm.dds
+textures/pnx/armor/AdvRecon/advreconm_n.dds
+textures/pnx/armor/AdvRecon/torso.dds
+textures/pnx/armor/AdvRecon/torsof.dds
+textures/pnx/armor/AdvRecon/torsof_n.dds
+textures/pnx/armor/AdvRecon/torso_n.dds
+textures/pnx/armor/ArmoredDuster/armorf.dds
+textures/pnx/armor/ArmoredDuster/armorf_n.dds
+textures/pnx/armor/ArmoredDuster/armorm.dds
+textures/pnx/armor/ArmoredDuster/armorm_n.dds
+textures/pnx/armor/ArmoredDuster/dusterf.dds
+textures/pnx/armor/ArmoredDuster/dusterf_n.dds
+textures/pnx/armor/ArmoredDuster/dusterm.dds
+textures/pnx/armor/ArmoredDuster/dusterm_n.dds
+textures/pnx/armor/ArmyJumpsuit/outfitf.dds
+textures/pnx/armor/DeathWalker/DarkJusticeDusterf.dds
+textures/pnx/armor/DeathWalker/DarkJusticeDusterf_n.dds
+textures/pnx/armor/DeathWalker/DarkJusticeDusterm.dds
+textures/pnx/armor/DeathWalker/DarkJusticeDusterm_n.dds
+textures/pnx/armor/DeathWalker/DarkJusticeReconf.dds
+textures/pnx/armor/DeathWalker/DarkJusticeReconf_n.dds
+textures/pnx/armor/DeathWalker/DarkJusticeReconm.dds
+textures/pnx/armor/DeathWalker/DarkJusticeReconm_n.dds
+textures/pnx/armor/HeadGear/AdvRecon/advreconhelm.dds
+textures/pnx/armor/HeadGear/AdvRecon/advreconhelm_n.dds
+textures/pnx/armor/HeadGear/AdvRecon/helmet.dds
+textures/pnx/armor/HeadGear/AdvRecon/helmet_n.dds
+textures/pnx/armor/HeadGear/AdvRecon/lights_g.dds
+textures/pnx/armor/HeadGear/RangerRecon/crhelmet.dds
+textures/pnx/armor/HeadGear/RangerRecon/crhelmet_g.dds
+textures/pnx/armor/HeadGear/RangerRecon/crhelmet_n.dds
+textures/pnx/armor/HeadGear/RangerRecon/neck.dds
+textures/pnx/armor/Leather backpack/backpack.dds
+textures/pnx/armor/Leather backpack/backpack_n.dds
+textures/pnx/armor/RangerRecon/combatranger.dds
+textures/pnx/armor/RangerRecon/combatranger_m.dds
+textures/pnx/armor/RangerRecon/combatranger_n.dds
+textures/pnx/armor/RangerRecon/rangerreconf.dds
+textures/pnx/armor/RangerRecon/rangerreconm.dds
+textures/pnx/armor/RangerRecon/torso.dds
+textures/pnx/armor/RangerRecon/torsof.dds
+textures/pnx/armor/T-57 C/DecalsHelmet.dds
+textures/pnx/armor/T-57 C/DecalsPowerArmor.dds
+textures/pnx/armor/T-57 C/gloveL.dds
+textures/pnx/armor/T-57 C/gloveL_n.dds
+textures/pnx/armor/T-57 C/gloveR.dds
+textures/pnx/armor/T-57 C/gloveR_n.dds
+textures/pnx/armor/T-57 C/Gloves.dds
+textures/pnx/armor/T-57 C/Gloves_n.dds
+textures/pnx/armor/T-57 C/T57Carms.dds
+textures/pnx/armor/T-57 C/T57Carms_n.dds
+textures/pnx/armor/T-57 C/T57Cbackpack.dds
+textures/pnx/armor/T-57 C/T57Cbackpack_n.dds
+textures/pnx/armor/T-57 C/T57Chelmet.dds
+textures/pnx/armor/T-57 C/T57Chelmet_n.dds
+textures/pnx/armor/T-57 C/T57CiconArmor.dds
+textures/pnx/armor/T-57 C/T57CiconHelmet.dds
+textures/pnx/armor/T-57 C/T57Cpowerarmor.dds
+textures/pnx/armor/T-57 C/T57Cpowerarmor_n.dds
+textures/pnx/armor/VaulTec PA/armor.dds
+textures/pnx/armor/VaulTec PA/armor_m.dds
+textures/pnx/armor/VaulTec PA/armor_n.dds
+textures/pnx/armor/VaulTec PA/gloves.dds
+textures/pnx/armor/VaulTec PA/gloves_m.dds
+textures/pnx/armor/VaulTec PA/gloves_n.dds
+textures/pnx/armor/VaulTec PA/helmet.dds
+textures/pnx/armor/VaulTec PA/helmet_m.dds
+textures/pnx/armor/VaulTec PA/helmet_n.dds
+textures/pnx/armor/VaulTec PA/IconVT.dds
+textures/pnx/armor/VaulTec PA/IconVTh.dds
+textures/pnx/clutter/coolant.dds
+textures/pnx/dlcanch/weapons/1handpistol/3rdpersondlcanch10mmpistol.dds
+textures/pnx/dlcanch/weapons/1handpistol/dlcanch3rdperson10mmsilencer.dds
+textures/pnx/effects/fxwhite2.dds
+textures/pnx/effects/railCannonBeam.dds
+textures/pnx/icons/Pipboyimages/armors/apperal_leather_backpack_no_mattress.dds
+textures/pnx/icons/Pipboyimages/armors/PN-EM_ADA_B.dds
+textures/pnx/icons/Pipboyimages/armors/PN-EM_ARA_B.dds
+textures/pnx/icons/Pipboyimages/armors/PN-EM_ARA_H.dds
+textures/pnx/icons/Pipboyimages/armors/SurgicalMask.dds
+textures/pnx/icons/Pipboyimages/weapons/CFW_1000.dds
+textures/pnx/icons/Pipboyimages/weapons/CFW_2000.dds
+textures/pnx/icons/Pipboyimages/weapons/CFW_DE.dds
+textures/pnx/icons/Pipboyimages/weapons/chineseSRIcon.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_crowbar.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_deagle_highroller.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_flamerpistol.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_hm_assaultrifle.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_hm_plasmarifle.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_hm_submachinegun.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_p90.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_pipebomb.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_plasmasniper.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_railcannon.dds
+textures/pnx/icons/Pipboyimages/weapons/pnx_weapons_trishooter.dds
+textures/pnx/icons/Pipboyimages/weapons/PPK12GP.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_cryogrenade.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_cryomine.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_FAL.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_laser_katana_1h_icon.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_MECGM.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_molotov.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_p90.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_p95.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_plasma_pistol2.dds
+textures/pnx/icons/Pipboyimages/weapons/weapons_powder_charge_mk2.dds
+textures/pnx/icons/Pipboyimages_small/glow_1000.dds
+textures/pnx/icons/Pipboyimages_small/glow_2000.dds
+textures/pnx/icons/Pipboyimages_small/glow_crowbar.dds
+textures/pnx/icons/Pipboyimages_small/glow_deagle.dds
+textures/pnx/icons/Pipboyimages_small/weapons_laser_katana_icon_small.dds
+textures/pnx/Interface/Icons/Pipboyimages/Items/WMX-PN_3ST_ReinBarl.dds
+textures/pnx/Interface/Icons/Pipboyimages/Items/WMX-PN_AGR_CoolAnt.dds
+textures/pnx/Interface/Icons/Pipboyimages/Items/WMX-PN_AGR_ExCel.dds
+textures/pnx/Interface/Icons/Pipboyimages/Items/WMX-PN_EBR_ExtBarrel.dds
+textures/pnx/LD/Weapons/1stpersonLDlincolnrifle.dds
+textures/pnx/weapons/1HandGrenadeThrow/cryogrenade.dds
+textures/pnx/weapons/1HandGrenadeThrow/molotovcocktail.dds
+textures/pnx/weapons/1HandGrenadeThrow/molotovcocktail_n.dds
+textures/pnx/weapons/1HandGrenadeThrow/pipebomb.dds
+textures/pnx/weapons/1HandGrenadeThrow/pipebomb_n.dds
+textures/pnx/weapons/1HandGrenadeThrow/sodabottle01.dds
+textures/pnx/weapons/1HandGrenadeThrow/sodabottle01_m.dds
+textures/pnx/weapons/1HandGrenadeThrow/sodabottle01_n.dds
+textures/pnx/weapons/1HandGrenadeThrow/sodabottleinside.dds
+textures/pnx/weapons/1HandMelee/CBar_Body.dds
+textures/pnx/weapons/1HandMelee/CBar_Body_n.dds
+textures/pnx/weapons/1HandMelee/laser_katana.dds
+textures/pnx/weapons/1HandMelee/laser_katana_g.dds
+textures/pnx/weapons/1HandMelee/laser_katana_n.dds
+textures/pnx/weapons/1HandMineDrop/cryoglow.dds
+textures/pnx/weapons/1HandMineDrop/minecryo.dds
+textures/pnx/weapons/1HandPistol/CryoRevolver/CryoRevolver.dds
+textures/pnx/weapons/1HandPistol/CryoRevolver/CryoRevolver_g.dds
+textures/pnx/weapons/1HandPistol/CryoRevolver/CryoRevolver_n.DDS
+textures/pnx/weapons/1HandPistol/MicroFlamer/FlamerPistol.dds
+textures/pnx/weapons/1HandPistol/MicroFlamer/FlamerPistolTank.dds
+textures/pnx/weapons/1HandPistol/MicroFlamer/FlamerPistolTank_n.dds
+textures/pnx/weapons/1HandPistol/MicroFlamer/FlamerPistol_n.dds
+textures/pnx/weapons/1HandPistol/MicroFlamer/FlamerPistol_Pip.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPAmmo_d.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPAmmo_g.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPAmmo_m.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPAmmo_n.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPlasergreenlight.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPMods_d.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPMods_g.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPMods_m.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPMods_n.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GPscreen.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GP_d.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GP_g.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GP_m.dds
+textures/pnx/weapons/1HandPistol/PPK12/PPK12GP_n.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleExtras.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleExtras_n.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleFlashLight.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleFlashLight_n.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleFrame.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleFrameGold.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleFrame_n.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleGrip.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleGripWhite.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleGripWhite_n.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleGrip_n.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleSilde.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleSildeGold.dds
+textures/pnx/weapons/1HandPistol/SemiAuto44Mag/DWDEagleSilde_n.dds
+textures/pnx/weapons/1HandPistol/stealthlaser/1stpersonlaserpistolEnclave_n.dds
+textures/pnx/weapons/1HandPistol/stealthlaser/1stpersonlaserpistol_Enclave.dds
+textures/pnx/weapons/1HandPistol/stealthlaser/EnclaveDecal.dds
+textures/pnx/weapons/1HandPistol/stealthlaser/EnclaveDecal_n.dds
+textures/pnx/weapons/1HandPistol/stealthlaser/LaserpistolEnclave_n.dds
+textures/pnx/weapons/1HandPistol/stealthlaser/laserpistol_Enclave.dds
+textures/pnx/weapons/1HandPistol/WattzPistol/w1klaserpistol.dds
+textures/pnx/weapons/1HandPistol/WattzPistol/w1klaserpistol_g.dds
+textures/pnx/weapons/1HandPistol/WattzPistol/w1klaserpistol_m.dds
+textures/pnx/weapons/1HandPistol/WattzPistol/w1klaserpistol_n.dds
+textures/pnx/weapons/1HandPistol/3_shooter.dds
+textures/pnx/weapons/1HandPistol/3_shooter_n.dds
+textures/pnx/weapons/1HandPistol/plasmapistol2.dds
+textures/pnx/weapons/1HandPistol/plasmapistol2_clip.dds
+textures/pnx/weapons/1HandPistol/plasmapistol2_clip_g.dds
+textures/pnx/weapons/1HandPistol/plasmapistol2_clip_n.dds
+textures/pnx/weapons/1HandPistol/plasmapistol2_g.dds
+textures/pnx/weapons/1HandPistol/plasmapistol2_n.dds
+textures/pnx/weapons/2handautomatic/FN FAL/FNFAL.dds
+textures/pnx/weapons/2handautomatic/FN FAL/FNFAL_N.dds
+textures/pnx/weapons/2handautomatic/FN FAL/L1A1.dds
+textures/pnx/weapons/2handautomatic/P90/p90.dds
+textures/pnx/weapons/2handautomatic/P90/p90mag.dds
+textures/pnx/weapons/2handautomatic/P90/p90mag_n.dds
+textures/pnx/weapons/2handautomatic/P90/p90misc_m.dds
+textures/pnx/weapons/2handautomatic/P90/p90_g.dds
+textures/pnx/weapons/2handautomatic/P90/p90_m.dds
+textures/pnx/weapons/2handautomatic/P90/p90_n.dds
+textures/pnx/weapons/2HandHandle/MECGM/2mmECDrum.dds
+textures/pnx/weapons/2HandHandle/MECGM/2mmECDrum_n.dds
+textures/pnx/weapons/2HandHandle/MECGM/MECGM.dds
+textures/pnx/weapons/2HandHandle/MECGM/MECGM_g.dds
+textures/pnx/weapons/2HandHandle/MECGM/MECGM_m.dds
+textures/pnx/weapons/2HandHandle/MECGM/MECGM_misc.dds
+textures/pnx/weapons/2HandHandle/MECGM/MECGM_n.dds
+textures/pnx/weapons/2HandLauncher/RailCannon/railcannon.dds
+textures/pnx/weapons/2HandLauncher/RailCannon/railcannonscope_o.dds
+textures/pnx/weapons/2HandLauncher/RailCannon/railcannon_g.dds
+textures/pnx/weapons/2HandLauncher/RailCannon/railcannon_n.dds
+textures/pnx/weapons/2HandRifle/M72/items_2mmEC_ammo.dds
+textures/pnx/weapons/2HandRifle/M72/items_mod_ECool.dds
+textures/pnx/weapons/2HandRifle/M72/items_mod_nscope.dds
+textures/pnx/weapons/2HandRifle/M72/items_mod_SecCoil.dds
+textures/pnx/weapons/2HandRifle/M72/M72Gauss_rifle.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRAmmo_d.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRAmmo_g.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRAmmo_m.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRAmmo_n.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRlasergreenlight.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRMods_d.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRMods_g.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRMods_m.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRMods_n.dds
+textures/pnx/weapons/2HandRifle/M72/M72GRscreen.dds
+textures/pnx/weapons/2HandRifle/M72/M72GR_d.dds
+textures/pnx/weapons/2HandRifle/M72/M72GR_g.dds
+textures/pnx/weapons/2HandRifle/M72/M72GR_m.dds
+textures/pnx/weapons/2HandRifle/M72/M72GR_misc.dds
+textures/pnx/weapons/2HandRifle/M72/M72GR_n.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/libertyrifle01.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/libertyrifle02.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/plasmarifle01.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/plasmarifle01_m.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/plasmarifle01_n.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/plasmarifle02.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/plasmarifle02_m.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/plasmarifle02_n.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/sniperrifle.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/sniperrifle_m.dds
+textures/pnx/weapons/2HandRifle/PlasmaSniper/sniperrifle_n.dds
+textures/pnx/weapons/2HandRifle/UniqueMultiplas/1stpersonplasmarifle02a.dds
+textures/pnx/weapons/2HandRifle/UniqueMultiplas/1stpersonplasmarifle02b.dds
+textures/pnx/weapons/2HandRifle/UniqueMultiplas/plasmarif02a.dds
+textures/pnx/weapons/2HandRifle/UniqueMultiplas/plasmarif02b.dds
+textures/pnx/weapons/2HandRifle/wattz/laserrifleold.dds
+textures/pnx/weapons/2HandRifle/wattz/laserrifleoldext.dds
+textures/pnx/weapons/2HandRifle/wattz/laserrifleoldext_m.dds
+textures/pnx/weapons/2HandRifle/wattz/laserrifleold_g.dds
+textures/pnx/weapons/2HandRifle/wattz/laserrifleold_m.dds
+textures/pnx/weapons/2HandRifle/wattz/laserrifleold_n.dds
+textures/pnx/weapons/2HandRifle/wattz/laserriflescope.dds
+textures/pnx/weapons/2HandRifle/wattz/laserriflescope_g.dds
+textures/pnx/weapons/2HandRifle/wattz/laserriflescope_m.dds
+textures/pnx/weapons/2HandRifle/wattz/laserriflescope_n.dds
+textures/pnx/weapons/2HandRifle/microfusioncell02.dds
+textures/pnx/weapons/2HandRifle/microfusioncell02_n.dds
+textures/pnx/weapons/2HandRifle/p95.dds
+textures/pnx/weapons/2HandRifle/p95_g.dds
+textures/pnx/weapons/2HandRifle/p95_n.dds
+textures/pnx/weapons/weapaddons/p90silencer.dds
+textures/pnx/weapons/weapaddons/p90silencer_n.dds
+textures/pnx/weapons/weapaddons/rustywires.dds
+textures/pnx/weapons/weapaddons/rustywires_n.dds
+textures/pnx/weapons/weapaddons/stock part1.dds
+textures/pnx/weapons/weapaddons/stock part2.dds
+textures/pnx/weapons/weapaddons/waterunpurified.dds
+textures/pnx/weapons/weapaddons/waterunpurified_n.dds
+textures/pnx/weapons/1stpersoncsr.dds
+textures/pnx/weapons/csr-mag.dds
+textures/pnx/weapons/csr-mag_n.dds
+textures/pnx/weapons/csr.dds
+textures/pnx/weapons/csr_m.dds
+textures/pnx/weapons/csr_n.dds
+textures/pnx/weapons/peoplesRifle.dds
+textures/pnx/weapons/peoplesRifle_n.dds
+Project Nevada - Equipment.esm

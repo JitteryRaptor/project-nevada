@@ -1,0 +1,4 @@
+fomod/info.xml
+fomod/screenshot.png
+Sound/fx/pnx/PNxRExplosionRing.wav
+Project Nevada - Rebalance.esp
