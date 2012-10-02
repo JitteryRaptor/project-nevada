@@ -20,6 +20,7 @@ class Script : FalloutNewVegasBaseScript {
 	static bool cyberwareSelected = true;
 	static bool equipmentSelected = true;
 	static bool rebalanceSelected = true;
+	static bool dlcSelected = true;
 	static bool installSelected = false;
 
 	static Form installerForm;
@@ -30,10 +31,12 @@ class Script : FalloutNewVegasBaseScript {
     static PictureBox cyberwareButton;
     static PictureBox equipmentButton;
     static PictureBox rebalanceButton;
+	static PictureBox dlcButton;
     static PictureBox coreCheckbox;
     static PictureBox cyberwareCheckbox;
     static PictureBox equipmentCheckbox;
     static PictureBox rebalanceCheckbox;
+	static PictureBox dlcCheckbox;
 	
 	static Image imageChecked;
 	static Image imageUnchecked;
@@ -54,6 +57,9 @@ class Script : FalloutNewVegasBaseScript {
 	static Image imageRebalance;
 	static Image imageRebalanceHi;
 	static Image imageRebalanceDesc;
+	static Image imageDLC;
+	static Image imageDLCHi;
+	static Image imageDLCDesc;
 	
 	static System.Media.SoundPlayer hoverPlayer;
 	static System.Media.SoundPlayer acceptPlayer;
@@ -89,6 +95,11 @@ class Script : FalloutNewVegasBaseScript {
 			if (! InstallModuleRebalance())
 				return false;
 		}
+		
+		// if (dlcSelected) {
+			// if (! InstallModuleDLC())
+				// return false;
+		// }
 		
 		return true;
 	}
@@ -212,36 +223,6 @@ class Script : FalloutNewVegasBaseScript {
     	
     	return (ExtractMCMVersion(oldFile) > ExtractMCMVersion(newFile));
     }
-	
-	static bool AppendIncludeToMenu(string xmlPath, string includePath)
-	{
-	byte[] data = GetExistingDataFile(xmlPath);
-		
-		if (data == null)
-			return false;
-			
-		string tmp = encoding.GetString(data);
-
-		// Include is already there?
-		if (Regex.Match(tmp, "<include src=\"" + Regex.Escape(includePath) + "\" />", RegexOptions.Singleline).Success == true)
-			return true;
-		
-		string includeStr = "\r\n"
-			+ "\t<!-- BEGIN Added by " + title + " -->\r\n"
-			+ "\t<include src=\"" + includePath + "\" />\r\n"
-			+ "\t<!-- END Added by " + title + " -->\r\n";
-		
-		tmp = Regex.Replace(tmp,
-			"<menu name=\"(\\w+)\">(.*)</menu>\\s*$",
-			"<menu name=\"$1\">$2" + includeStr + "</menu>",
-			RegexOptions.Singleline);
-		
-		data = encoding.GetBytes(tmp);
-			
-		GenerateDataFile(xmlPath, data);
-		
-		return true;
-	}
     
     
     static void InitializeComponents()
@@ -273,25 +254,32 @@ class Script : FalloutNewVegasBaseScript {
 		imageRebalance = GetImageFromFomod("fomod/InstallerRebalance.png");
 		imageRebalanceHi = GetImageFromFomod("fomod/InstallerRebalanceHi.png");
 		imageRebalanceDesc = GetImageFromFomod("fomod/InstallerRebalanceDesc.png");
+		imageDLC = GetImageFromFomod("fomod/InstallerDLC.png");
+		imageDLCHi = GetImageFromFomod("fomod/InstallerDLCHi.png");
+		imageDLCDesc = GetImageFromFomod("fomod/LogoIconsTrain.png");
     
     	installerForm = CreateCustomForm();
     
+		dlcCheckbox = new System.Windows.Forms.PictureBox();
     	rebalanceCheckbox = new System.Windows.Forms.PictureBox();
     	equipmentCheckbox = new System.Windows.Forms.PictureBox();
         cyberwareCheckbox = new System.Windows.Forms.PictureBox();
         coreCheckbox = new System.Windows.Forms.PictureBox();
         contentPicture = new System.Windows.Forms.PictureBox();
+		dlcButton = new System.Windows.Forms.PictureBox();
         rebalanceButton = new System.Windows.Forms.PictureBox();
         equipmentButton = new System.Windows.Forms.PictureBox();
         cyberwareButton = new System.Windows.Forms.PictureBox();
         coreButton = new System.Windows.Forms.PictureBox();
         installButton = new System.Windows.Forms.PictureBox();
         exitButton = new System.Windows.Forms.PictureBox();
+		((System.ComponentModel.ISupportInitialize)(dlcCheckbox)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(rebalanceCheckbox)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(equipmentCheckbox)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(cyberwareCheckbox)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(coreCheckbox)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(contentPicture)).BeginInit();
+		((System.ComponentModel.ISupportInitialize)(dlcButton)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(rebalanceButton)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(equipmentButton)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(cyberwareButton)).BeginInit();
@@ -299,41 +287,50 @@ class Script : FalloutNewVegasBaseScript {
         ((System.ComponentModel.ISupportInitialize)(installButton)).BeginInit();
         ((System.ComponentModel.ISupportInitialize)(exitButton)).BeginInit();
         installerForm.SuspendLayout();
+		// 
+        // dlcCheckbox
+        // 
+        dlcCheckbox.Image = imageChecked;
+        dlcCheckbox.Location = new System.Drawing.Point(613, 115);
+        dlcCheckbox.Name = "dlcCheckbox";
+        dlcCheckbox.Size = new System.Drawing.Size(64, 62);
+        dlcCheckbox.TabIndex = 12;
+        dlcCheckbox.TabStop = false;
         // 
         // rebalanceCheckbox
         // 
         rebalanceCheckbox.Image = imageChecked;
-        rebalanceCheckbox.Location = new System.Drawing.Point(603, 115);
+        rebalanceCheckbox.Location = new System.Drawing.Point(483, 115);
         rebalanceCheckbox.Name = "rebalanceCheckbox";
         rebalanceCheckbox.Size = new System.Drawing.Size(64, 62);
-        rebalanceCheckbox.TabIndex = 10;
+        rebalanceCheckbox.TabIndex = 11;
         rebalanceCheckbox.TabStop = false;
         // 
         // equipmentCheckbox
         // 
         equipmentCheckbox.Image = imageChecked;
-        equipmentCheckbox.Location = new System.Drawing.Point(446, 115);
+        equipmentCheckbox.Location = new System.Drawing.Point(353, 115);
         equipmentCheckbox.Name = "equipmentCheckbox";
         equipmentCheckbox.Size = new System.Drawing.Size(64, 62);
-        equipmentCheckbox.TabIndex = 9;
+        equipmentCheckbox.TabIndex = 10;
         equipmentCheckbox.TabStop = false;
         // 
         // cyberwareCheckbox
         // 
         cyberwareCheckbox.Image = imageChecked;
-        cyberwareCheckbox.Location = new System.Drawing.Point(289, 115);
+        cyberwareCheckbox.Location = new System.Drawing.Point(223, 115);
         cyberwareCheckbox.Name = "cyberwareCheckbox";
         cyberwareCheckbox.Size = new System.Drawing.Size(64, 62);
-        cyberwareCheckbox.TabIndex = 8;
+        cyberwareCheckbox.TabIndex = 9;
         cyberwareCheckbox.TabStop = false;
         // 
         // coreCheckbox
         // 
         coreCheckbox.Image = imageChecked;
-        coreCheckbox.Location = new System.Drawing.Point(133, 115);
+        coreCheckbox.Location = new System.Drawing.Point(93, 115);
         coreCheckbox.Name = "coreCheckbox";
         coreCheckbox.Size = new System.Drawing.Size(64, 62);
-        coreCheckbox.TabIndex = 7;
+        coreCheckbox.TabIndex = 8;
         coreCheckbox.TabStop = false;
         // 
         // contentPicture
@@ -346,10 +343,39 @@ class Script : FalloutNewVegasBaseScript {
         contentPicture.TabIndex = 0;
         contentPicture.TabStop = false;
 		// 
+        // dlcButton
+        // 
+        dlcButton.Image = imageDLC;
+        dlcButton.Location = new System.Drawing.Point(580, 28);
+        dlcButton.Name = "dlcButton";
+        dlcButton.Size = new System.Drawing.Size(130, 81);
+        dlcButton.TabIndex = 7;
+        dlcButton.TabStop = false;
+        dlcButton.Click += delegate(object sender, EventArgs e) {
+			acceptPlayer.Play();
+
+			if (dlcSelected == true) {
+				dlcSelected = false;
+				dlcCheckbox.Image = imageUnchecked;
+			} else {
+				dlcSelected = true;
+				dlcCheckbox.Image = imageChecked;
+			}
+		};
+        dlcButton.MouseEnter += delegate(object sender, EventArgs e) {
+			dlcButton.Image = imageDLCHi;
+			contentPicture.Image = imageDLCDesc;
+			hoverPlayer.Play();
+		};
+        dlcButton.MouseLeave += delegate(object sender, EventArgs e) {
+			dlcButton.Image = imageDLC;
+			contentPicture.Image = imageLogo;
+		};
+		// 
         // rebalanceButton
         // 
         rebalanceButton.Image = imageRebalance;
-        rebalanceButton.Location = new System.Drawing.Point(570, 28);
+        rebalanceButton.Location = new System.Drawing.Point(450, 28);
         rebalanceButton.Name = "rebalanceButton";
         rebalanceButton.Size = new System.Drawing.Size(130, 81);
         rebalanceButton.TabIndex = 6;
@@ -378,7 +404,7 @@ class Script : FalloutNewVegasBaseScript {
         // equipmentButton
         // 
         equipmentButton.Image = imageEquipment;
-        equipmentButton.Location = new System.Drawing.Point(413, 28);
+        equipmentButton.Location = new System.Drawing.Point(320, 28);
         equipmentButton.Name = "equipmentButton";
         equipmentButton.Size = new System.Drawing.Size(130, 81);
         equipmentButton.TabIndex = 6;
@@ -407,7 +433,7 @@ class Script : FalloutNewVegasBaseScript {
         // cyberwareButton
         // 
         cyberwareButton.Image = imageCyberware;
-        cyberwareButton.Location = new System.Drawing.Point(256, 28);
+        cyberwareButton.Location = new System.Drawing.Point(190, 28);
         cyberwareButton.Name = "cyberwareButton";
         cyberwareButton.Size = new System.Drawing.Size(130, 81);
         cyberwareButton.TabIndex = 6;
@@ -436,7 +462,7 @@ class Script : FalloutNewVegasBaseScript {
         // coreButton
         // 
         coreButton.Image = imageCore;
-        coreButton.Location = new System.Drawing.Point(100, 28);
+        coreButton.Location = new System.Drawing.Point(60, 28);
         coreButton.Name = "coreButton";
         coreButton.Size = new System.Drawing.Size(130, 81);
         coreButton.TabIndex = 3;
@@ -500,11 +526,13 @@ class Script : FalloutNewVegasBaseScript {
         installerForm.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         installerForm.BackColor = System.Drawing.Color.Black;
         installerForm.ClientSize = new System.Drawing.Size(784, 647);
+		installerForm.Controls.Add(dlcCheckbox);
         installerForm.Controls.Add(rebalanceCheckbox);
         installerForm.Controls.Add(equipmentCheckbox);
         installerForm.Controls.Add(cyberwareCheckbox);
         installerForm.Controls.Add(coreCheckbox);
         installerForm.Controls.Add(contentPicture);
+		installerForm.Controls.Add(dlcButton);
         installerForm.Controls.Add(rebalanceButton);
         installerForm.Controls.Add(equipmentButton);
         installerForm.Controls.Add(cyberwareButton);
@@ -518,11 +546,13 @@ class Script : FalloutNewVegasBaseScript {
         installerForm.Name = "installerForm";
         installerForm.Padding = new System.Windows.Forms.Padding(5, 25, 5, 5);
         installerForm.Text = title;
+		((System.ComponentModel.ISupportInitialize)(dlcCheckbox)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(rebalanceCheckbox)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(equipmentCheckbox)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(cyberwareCheckbox)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(coreCheckbox)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(contentPicture)).EndInit();
+		((System.ComponentModel.ISupportInitialize)(dlcButton)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(rebalanceButton)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(equipmentButton)).EndInit();
         ((System.ComponentModel.ISupportInitialize)(cyberwareButton)).EndInit();
