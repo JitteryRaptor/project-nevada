@@ -256,7 +256,7 @@ class Script : FalloutNewVegasBaseScript {
 		imageRebalanceDesc = GetImageFromFomod("fomod/InstallerRebalanceDesc.png");
 		imageDLC = GetImageFromFomod("fomod/InstallerDLC.png");
 		imageDLCHi = GetImageFromFomod("fomod/InstallerDLCHi.png");
-		imageDLCDesc = GetImageFromFomod("fomod/LogoIconsTrain.png");
+		imageDLCDesc = GetImageFromFomod("fomod/InstallerDLCDesc.png");
     
     	installerForm = CreateCustomForm();
     
