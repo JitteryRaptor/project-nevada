@@ -183,6 +183,8 @@ class Script : FalloutNewVegasBaseScript {
 		// Install base files
 		string[] excludes = new string[0];
 		InstallModuleFiles("DLC", excludes);
+		
+		UpdateInclude("menus/prefabs/includes_HUDMainMenu.xml", @"pnx\pnxeohud.xml", new string[] {"menus/options/start_menu.xml"});
 	
 		return true;
 	}
