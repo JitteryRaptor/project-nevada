@@ -1,0 +1,8 @@
+menus/prefabs/pnx/pnxeohud.xml
+textures/pnx/hud/line/scanline1 - Copy.dds
+textures/pnx/hud/line/scanline1.dds
+textures/pnx/hud/line/scanline2 - Copy.dds
+textures/pnx/hud/line/scanline2.dds
+textures/pnx/hud/line/scanline3 - Copy.dds
+textures/pnx/hud/line/scanline3.dds
+Project Nevada - Extra Options.esm
