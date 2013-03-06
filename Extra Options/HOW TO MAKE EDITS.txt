@@ -1,0 +1,5 @@
+To edit any of the EO features, load all of the plugins you need to work with in GECK, but do NOT set an active file.
+
+Load everything up and make your changes, saving them as a new plugin.
+
+Commit that plugin for review and merging.
