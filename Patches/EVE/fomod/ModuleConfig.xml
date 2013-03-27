@@ -10,13 +10,47 @@
 			<fileDependency file="Project Nevada - Equipment.esm" state="Inactive"/>
 		</dependencies>
 		<dependencies operator="Or">
-			<fileDependency file="EVE FNV.esp" state="Active"/>
-			<fileDependency file="EVE FNV.esp " state="Inactive"/>
+			<fileDependency file="EVE FNV - ALL DLC.esp" state="Active"/>
+			<fileDependency file="EVE FNV - ALL DLC.esp" state="Inactive"/>
+			<fileDependency file="EVE FNV - NO DLC.esp" state="Active"/>
+			<fileDependency file="EVE FNV - NO DLC.esp" state="Inactive"/>
+			<fileDependency file="EVE FNV - NO GRA.esp" state="Active"/>
+			<fileDependency file="EVE FNV - NO GRA.esp" state="Inactive"/>
 		</dependencies>
 	</moduleDependencies>
 	<requiredInstallFiles>
 		<folder source="meshes"/>
 		<folder source="textures"/>
-		<file source="Project Nevada - EVE.esp" />
 	</requiredInstallFiles>
+	<conditionalFileInstalls>
+		<patterns>
+			<pattern>
+				<dependencies operator="Or">
+					<fileDependency file="EVE FNV - ALL DLC.esp" state="Active"/>
+					<fileDependency file="EVE FNV - ALL DLC.esp" state="Inactive"/>
+				</dependencies>
+				<files>
+					<file source="Project Nevada - EVE All DLC.esp"/>
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="Or">
+					<fileDependency file="EVE FNV - NO DLC.esp" state="Active"/>
+					<fileDependency file="EVE FNV - NO DLC.esp" state="Inactive"/>
+				</dependencies>
+				<files>
+					<file source="Project Nevada - EVE No DLC.esp"/>
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="Or">
+					<fileDependency file="EVE FNV - NO GRA.esp" state="Active"/>
+					<fileDependency file="EVE FNV - NO GRA.esp" state="Inactive"/>
+				</dependencies>
+				<files>
+					<file source="Project Nevada - EVE No GRA.esp"/>
+				</files>
+			</pattern>
+		</patterns>
+	</conditionalFileInstalls>
 </config>
