@@ -27,7 +27,7 @@ Project Nevada - EVE Support
 Authors: snakster + Gribbleshnibit8
 Contributors: Jonnyeah, Weijiesen
 
-Current Version: 1.2
+Current Version: 1.0
 
 Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
@@ -73,10 +73,6 @@ With this patch, the chargeable weapons in Project Nevada Core and Equipment mak
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
-
-1.2:
-- Added Wattz weapons.
-- Added new versions to account for EVE 1.5 Final.
 
 1.1:
 - Includes new plasma effects and visuals.
