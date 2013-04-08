@@ -22,12 +22,12 @@
 
 ########################################################################################################################################
 
-Project Nevada - EVE Support
+Project Nevada - WMX Support
 
-Authors: snakster + Gribbleshnibit8
-Contributors: Jonnyeah, Weijiesen
+Author: Gribbleshnibit8
+Contributors: Antistar, T3T, Zealotlee
 
-Current Version: 1.2
+Current Version: 1.3
 
 Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
@@ -53,8 +53,8 @@ Download: http://www.newvegasnexus.com/downloads/file.php?id=42363
 
 The following mods are required:
 
-* EVE - Essential Visual Enhancements
-	http://www.newvegasnexus.com/downloads/file.php?id=42666
+* Weapon Mods Expanded - WMX
+	http://www.newvegasnexus.com/downloads/file.php?id=39651
 	
 * Project Nevada - Equipment Module
 	http://www.newvegasnexus.com/downloads/file.php?id=40040
@@ -67,19 +67,22 @@ The following mods are required:
  1. Introduction
 ========================================================================================================================================
 
-With this patch, the chargeable weapons in Project Nevada Core and Equipment make use of the enhanced visual effects added by EVE.
+This patch adds the weapon mods that come with WMX to many of the new weapons in the Project Nevada Equipment module.
+In cases where new mods had to be created, they match the style of existing WMX mods, many of them provided by Antistar himself.
 
 
 ========================================================================================================================================
  2. Changelog
 ========================================================================================================================================
 
+1.3:
+- Updated for Project Nevada 2.3
+
 1.2:
-- Added Wattz weapons.
-- Added new versions to account for EVE 1.5 Final.
+- Various bugfixes
 
 1.1:
-- Includes new plasma effects and visuals.
+- Updated for Project Nevada 2.2
 
 1.0:
 - Initial release
@@ -89,11 +92,165 @@ With this patch, the chargeable weapons in Project Nevada Core and Equipment mak
  3. Features
 ========================================================================================================================================
 
-* AER14 Prototype
-	Green charged powered beams have been replaced with purple versions to match the EVE projectile.
-	
-* AES18 Prototype
-	Model has been replaced by EVE's Tri-Beam Laser Rifle with a custom sight that indicate the current charging stage.
+Symbols:
+	 + New mod
+	 # Mod added by WMX
+	 ^ Vanilla mod edited by WMX
+	 ~ Unchanged from PN
+
+------------------------------------------------------------
+a) Guns
+------------------------------------------------------------
+
+* .22 Revolver
+	+ HD Cylinder
+	+ Long Barrel
+	+ Custom Action
+
+* .44 Pistol
+	+ .44 Pistol Extended Mags
+	^ Laser Sight
+
+* 10mm Alloy Steel Pistol
+	~ 10mm Pistol Extended Mags
+	~ 10mm Pistol Laser Sight
+	~ 10mm Pistol Silencer
+
+* 5mm Submachine Gun
+	~ 5mm Submachine Gun Silencer
+	^ Laser Sight
+	~ 5mm SMG Ext Barrel
+
+* Alloy Steel Assault Rifle
+	+ 5.56mm Extended Magazine
+	+ Assault Rifle Scope
+	+ Assault Rifle Silencer
+
+* Alloy Steel Combat Shotgun
+	+ Combat Shotgun Choke
+	+ Combat Shotgun Saddle Drums
+			
+* Assault Rifle
+	+ 5.56mm Extended Magazine
+	+ Assault Rifle Scope
+	+ Assault Rifle Silencer
+
+* Chinese Assault Rifle
+	+ 5.56mm Drum Magazine
+	^ 5.56mm Recoil Compensator
+	+ Assault Rifle Scope
+
+* Chinese Pistol
+	+ Chinese Pistol Ext. Mags
+	^ Laser Sight
+	+ Chinese Pistol Long Barrel
+
+* Chinese Sniper Rifle
+	^ Sniper Rifle Suppressor
+	+ Chinese Sniper Rifle Mesquite Stock
+	# Sniper Rifle Extended Mags
+
+* Combat Shotgun
+	+ Combat Shotgun Choke
+	+ Combat Shotgun Saddle Drums
+
+* Double-Barrel Shotgun
+	^ 12 Gauge Shotgun Choke
+
+* Dragoon Assault Rifle
+	+ 5.56mm Drum Magazine
+	^ 5.56mm Recoil Compensator
+	+ Assault Rifle Scope
+
+* Dragoon Pistol
+	+ Chinese Pistol Ext. Mags
+	^ Laser Sight
+	+ Chinese Pistol Long Barrel
+
+* European Battle Rifle
+	~ Euro Battle Rifle Night Scope
+	~ Euro Battle Rifle Folding Stock
+	~ Euro Battle Rifle Ext. Barrel
+
+* High Roller
+	+ .44 Pistol Extended Mags
+	^ Laser Sight
+
+* Infiltrator
+	+ 5.56mm Drum Magazine
+	+ Infiltrator Improved Rifling
+	^ Laser Sight
+
+* Lever-Action Rifle
+	# Trail Carbine Custom Action
+	+ Lever-Action Rifle Long Barrel
+	+ Lever-Action rifle Long Scope
+
+* Liberator Rifle
+	~ Euro Battle Rifle Night Scope
+	~ Euro Battle Rifle Folding Stock
+
+* Replica Repeater
+	# Trail Carbine Custom Action
+	+ Lever-Action Rifle Long Barrel
+	+ Lever-Action rifle Long Scope
+
+* The People's Rifle
+	^ Sniper Rifle Suppressor
+	+ People's Rifle Custom Action
+	+ Sniper Rifle Extended Mags
+
+* Three Shooter
+	~ Three Shooter Barrel Reinforcement
+	+ Three Shooter Choke	
+
+------------------------------------------------------------
+b) Energy Weapons
+------------------------------------------------------------
+
+* Alien Atomizer
+	# Alien Blaster Exp. Mag. Accel.
+	# Extended Alien Power Cells
+	# Embedded Laser Sight
+
+* Alien Disintegrator
+	# Alien Blaster Exp. Mag.
+	# Embedded Laser Sight
+
+* Auto-Gauss
+	~ Auto-Gauss Cooling Unit
+	~ Auto-Gauss Accelerators
+	~ Auto-Gauss Night Scope
+
+* Captain's Sidearm
+	~ Extended Alien Power Cells
+	~ Alien Blaster Exp. Mag. Accel.
+
+* Cryo Revolver
+	+ Cryo Revolver Extended Barrel
+
+* Flamer Pistol
+	+ Flamer Pistol Expanded Cylinders
+	+ Flamer Pistol Improved Heatsink
+
+* Plasma Repeater
+	+ Plasma Repeater Ext. Mags
+	+ Plasma Repeater Scope
+
+* Tesla Rifle Prototype
+	+ Prototype Tesla Feeder Cylinders
+	+ Prototype Tesla Oscillation Stabilizer
+	+ Micro Fusion Rifle Dual Harness
+
+* Wattz Laser Pistol
+	+ Wattz Pistol Recycler Chip
+	+ Wattz Pistol Super Charger
+	^ Laser Rifle Beam Splitter
+
+* Wattz Laser Rifle
+	~ Laser Rifle Scope
+	~ Laser RCW Recycler
+	~ Laser Rifle Focus Optics		
 
 
 ========================================================================================================================================
@@ -129,7 +286,7 @@ OR
 
 2.	Extract the contents of the downloaded archive file to your Data/ folder.
 
-3.	In the New Vegas Launcher, click on Data Files and enable Project Nevada - EVE.esp.
+3.	In the New Vegas Launcher, click on Data Files and enable Project Nevada - WMX.esp.
 
 4.	Done!
 
@@ -137,7 +294,7 @@ OR
  c) Load Order
 ------------------------------------------------------------
 
-The Project Nevada EVE patch has to be loaded after the EVE plugin file itself, otherwise your game will not start!
+Make sure Project Nevada WMX patch has to be loaded after the WMX plugin file itself, otherwise your game will not start!
 Arrange your load order like this:
 
 		...
@@ -147,11 +304,11 @@ Arrange your load order like this:
 
 		...
 
-	EVE FNV.esp
+	WeaponModsExpanded.esp
 
 		...
 
-	Project Nevada - EVE.esp
+	Project Nevada - WMX.esp
 
 		...
 
@@ -163,7 +320,7 @@ Problem: My game crashes right after starting it!
 
 Solution: There are basically two things that can cause this:
 	1)	A missing requirement (some plugins depend on other plugins, and if they can't find them the game crashes).
-		To fix this, make sure have EVE and the Project Nevada Equipment Module installed.
+		To fix this, make sure have WMX and the Project Nevada Equipment Module installed.
 		Also don't forgot to adjust your load order as described in the next point.
                 
 	2)	Your load order is wrong.
@@ -175,8 +332,12 @@ Solution: There are basically two things that can cause this:
  6. Credits
 ========================================================================================================================================
 
-Weijiesen, author of EVE, for purple laser beams
-Jonnyeah, co-author of EVE, for modified EVE Tri-Beam laser model that supports displaying the charging state
+Antistar, author of WMX, for new meshes and support.
+T3T, for custom icons.
+Zealotlee, for models and textures.
+
+Cryo Revolver Mods
+	Source: M-2081 Pistol (http://newvegasnexus.com/downloads/file.php?id=40174), by Omegared99
 
 
 ========================================================================================================================================
