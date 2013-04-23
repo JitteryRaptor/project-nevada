@@ -1,0 +1,15 @@
+These files are used to update the preset system in PN.
+
+1. First make a list of all the variables you have added to PN that need to be updated as presets.
+
+2. Add those variables to the "Variable Names.txt" file to each section demarked by the words in [].
+
+3. Add your variables to each section as above, but to the "PN Extra Options.ini" and "Project Nevada Presets.ini" files.
+
+4. Now run the "Shorten Keys.pl" file to generate the short name key values for the ini files. It will ask for the file to run against. Point it at the two files from above.
+
+5. Copy the contents of "Short Keys.txt" To the appropriate file from Step 4.
+
+6. Run the "CreateCheck.pl", "CreateGet.pl", and "CreateSet.pl" files to generate the appropriate scripts.
+
+7. Copy each of the sections from the new script files into the game, as per the stage they belong to.
