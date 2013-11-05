@@ -32,7 +32,7 @@ while( (my $line1 = <$info>) & (my $line2 = <$vars>))  {
 	}
 	chomp($line2);
 	@values = split('=', $line1);
-	print (DATAFILE "set $line2 to GetModINI \"PN Extra Options/$section/$values[0]\"\n");
+	print (DATAFILE "set $line2 to GetModINI \"PN EO/$section/$values[0]\"\n");
 }
 
 close $info;

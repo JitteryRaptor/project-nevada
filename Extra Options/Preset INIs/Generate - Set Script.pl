@@ -10,7 +10,7 @@ chop $file;
 # my $file = 'PN Extra Options.ini';
 open my $info, $file or die "Could not open $file: $!";
 open my $vars, "Variable Names.txt" or die "Could not open file";
-open (DATAFILE, "+>Check Scripts.txt");
+open (DATAFILE, "+>Set Scripts.txt");
 
 my @values;
 my $section;
@@ -32,7 +32,7 @@ while( (my $line1 = <$info>) & (my $line2 = <$vars>))  {
 	}
 	chomp($line2);
 	@values = split('=', $line1);
-	print (DATAFILE "set iCheck to iCheck + ($line2 != GetModINI \"Project Nevada Presets/$section/$values[0]\")\n");
+	print (DATAFILE "SetModINI \"PN EO/$section/$values[0]\" $line2\n");
 }
 
 close $info;

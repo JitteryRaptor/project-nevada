@@ -4,7 +4,7 @@ These files are used to update the preset system in PN.
 
 2. Add those variables to the "Variable Names.txt" file to each section demarked by the words in [].
 
-3. Add your variables to each section as above, but to the "PN Extra Options.ini" and "Project Nevada Presets.ini" files.
+3. Add your variables to each section as above, but to the "PN EO.ini" and "PN Presets.ini" files.
 
 4. Now run the "Shorten Keys.pl" file to generate the short name key values for the ini files. It will ask for the file to run against. Point it at the two files from above.
 
