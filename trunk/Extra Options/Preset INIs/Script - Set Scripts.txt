@@ -2,451 +2,451 @@
 
 
 ; Preset1
-SetModINI "PN EO/Preset1/PNxCEnBT" PNxCEnableBulletTime
-SetModINI "PN EO/Preset1/PNxCEnWeaponCharge" PNxCEnableWeaponCharge
-SetModINI "PN EO/Preset1/PNxCEnCrosshair" PNxCEnableCrosshair
-SetModINI "PN EO/Preset1/PNxCEnStFld" PNxCEnableStealthField
-SetModINI "PN EO/Preset1/PNxCEnVisionMode" PNxCEnableVisionMode
-SetModINI "PN EO/Preset1/PNxCEnZoom" PNxCEnableZoom
-SetModINI "PN EO/Preset1/PNxCEnGrenadeHotkey" PNxCEnableGrenadeHotkey
-SetModINI "PN EO/Preset1/PNxCEnBackpedal" PNxCEnableBackpedal
-SetModINI "PN EO/Preset1/PNxCEnSprint" PNxCEnableSprint
-SetModINI "PN EO/Preset1/PNxCEnHlVisuals" PNxCEnableHealthVisuals
-SetModINI "PN EO/Preset1/PNxCEnHTSEffects" PNxCEnableHTSEffects
-SetModINI "PN EO/Preset1/PNxCEnVisor" PNxCEnableVisor
-SetModINI "PN EO/Preset1/PNxCEnExplosiveEntry" PNxCEnableExplosiveEntry
-SetModINI "PN EO/Preset1/PNxCEnSorter" PNxCEnableSorter
-SetModINI "PN EO/Preset1/PNxCCrosshairEnRecoil" PNxCCrosshairEnableRecoil
-SetModINI "PN EO/Preset1/PNxCBTEnInd" PNxCBulletTimeEnableIndicator
-SetModINI "PN EO/Preset1/PNxCVisorEnOverlays" PNxCVisorEnableOverlays
-SetModINI "PN EO/Preset1/PNxCWeaponChargeEnInd" PNxCWeaponChargeEnableIndicator
-SetModINI "PN EO/Preset1/PNxCBTAPDrainBase" PNxCBulletTimeAPDrainBase
-SetModINI "PN EO/Preset1/PNxCSprintSpeedMult" PNxCSprintSpeedMult
-SetModINI "PN EO/Preset1/PNxCSprintAPDrain" PNxCSprintAPDrain
-SetModINI "PN EO/Preset1/PNxCSprintTackeAPCost" PNxCSprintTackeAPCost
-SetModINI "PN EO/Preset1/PNxCStFldArEnergyDrain" PNxCStealthFieldArmorEnergyDrain
-SetModINI "PN EO/Preset1/PNxCStFldArStabGn" PNxCStealthFieldArmorStabilityGn
-SetModINI "PN EO/Preset1/PNxCStFldArStabDn" PNxCStealthFieldArmorStabilityDn
-SetModINI "PN EO/Preset1/PNxCStFldSBStabDrain" PNxCStealthFieldSBStabilityDrain
-SetModINI "PN EO/Preset1/PNxCVisionModeDrainEM" PNxCVisionModeDrainEM
-SetModINI "PN EO/Preset1/PNxCVisionModeDrainHeat" PNxCVisionModeDrainHeat
-SetModINI "PN EO/Preset1/PNxCVisionModeDrainNight" PNxCVisionModeDrainNight
-SetModINI "PN EO/Preset1/PNxBCfgBTVFx1" PNxBConfigBulletTimeVFx1
-SetModINI "PN EO/Preset1/PNxBCfgBTVFx2" PNxBConfigBulletTimeVFx2
-SetModINI "PN EO/Preset1/PNxBCfgImplantAPRegenVM" PNxBConfigImplantAPRegenVM
-SetModINI "PN EO/Preset1/PNxBCfgSprintShudder" PNxBConfigSprintShudder
-SetModINI "PN EO/Preset1/PNxBExpEntDistance" PNxBExpEntDistance
-SetModINI "PN EO/Preset1/PNxBExpEntItemDestruction" PNxBExpEntItemDestruction
-SetModINI "PN EO/Preset1/PNxBExpEntUseSkill" PNxBExpEntUseSkill
-SetModINI "PN EO/Preset1/PNxBStFldStrength" PNxBStealthFieldStrength
-SetModINI "PN EO/Preset1/PNxBULCfgLuckBase" PNxBULConfigLuckBase
-SetModINI "PN EO/Preset1/PNxBULEn" PNxBULEnable
+SetModINI "PNEO/Preset1/PNxCEnBT" PNxCEnableBulletTime
+SetModINI "PNEO/Preset1/PNxCEnWeaponCharge" PNxCEnableWeaponCharge
+SetModINI "PNEO/Preset1/PNxCEnCrosshair" PNxCEnableCrosshair
+SetModINI "PNEO/Preset1/PNxCEnStFld" PNxCEnableStealthField
+SetModINI "PNEO/Preset1/PNxCEnVisionMode" PNxCEnableVisionMode
+SetModINI "PNEO/Preset1/PNxCEnZoom" PNxCEnableZoom
+SetModINI "PNEO/Preset1/PNxCEnGrenadeHotkey" PNxCEnableGrenadeHotkey
+SetModINI "PNEO/Preset1/PNxCEnBackpedal" PNxCEnableBackpedal
+SetModINI "PNEO/Preset1/PNxCEnSprint" PNxCEnableSprint
+SetModINI "PNEO/Preset1/PNxCEnHlVisuals" PNxCEnableHealthVisuals
+SetModINI "PNEO/Preset1/PNxCEnHTSEffects" PNxCEnableHTSEffects
+SetModINI "PNEO/Preset1/PNxCEnVisor" PNxCEnableVisor
+SetModINI "PNEO/Preset1/PNxCEnExplosiveEntry" PNxCEnableExplosiveEntry
+SetModINI "PNEO/Preset1/PNxCEnSorter" PNxCEnableSorter
+SetModINI "PNEO/Preset1/PNxCCrosshairEnRecoil" PNxCCrosshairEnableRecoil
+SetModINI "PNEO/Preset1/PNxCBTEnInd" PNxCBulletTimeEnableIndicator
+SetModINI "PNEO/Preset1/PNxCVisorEnOverlays" PNxCVisorEnableOverlays
+SetModINI "PNEO/Preset1/PNxCWeaponChargeEnInd" PNxCWeaponChargeEnableIndicator
+SetModINI "PNEO/Preset1/PNxCBTAPDrainBase" PNxCBulletTimeAPDrainBase
+SetModINI "PNEO/Preset1/PNxCSprintSpeedMult" PNxCSprintSpeedMult
+SetModINI "PNEO/Preset1/PNxCSprintAPDrain" PNxCSprintAPDrain
+SetModINI "PNEO/Preset1/PNxCSprintTackeAPCost" PNxCSprintTackeAPCost
+SetModINI "PNEO/Preset1/PNxCStFldArEnergyDrain" PNxCStealthFieldArmorEnergyDrain
+SetModINI "PNEO/Preset1/PNxCStFldArStabGn" PNxCStealthFieldArmorStabilityGn
+SetModINI "PNEO/Preset1/PNxCStFldArStabDn" PNxCStealthFieldArmorStabilityDn
+SetModINI "PNEO/Preset1/PNxCStFldSBStabDrain" PNxCStealthFieldSBStabilityDrain
+SetModINI "PNEO/Preset1/PNxCVisionModeDrainEM" PNxCVisionModeDrainEM
+SetModINI "PNEO/Preset1/PNxCVisionModeDrainHeat" PNxCVisionModeDrainHeat
+SetModINI "PNEO/Preset1/PNxCVisionModeDrainNight" PNxCVisionModeDrainNight
+SetModINI "PNEO/Preset1/PNxBCfgBTVFx1" PNxBConfigBulletTimeVFx1
+SetModINI "PNEO/Preset1/PNxBCfgBTVFx2" PNxBConfigBulletTimeVFx2
+SetModINI "PNEO/Preset1/PNxBCfgImplantAPRegenVM" PNxBConfigImplantAPRegenVM
+SetModINI "PNEO/Preset1/PNxBCfgSprintShudder" PNxBConfigSprintShudder
+SetModINI "PNEO/Preset1/PNxBExpEntDistance" PNxBExpEntDistance
+SetModINI "PNEO/Preset1/PNxBExpEntItemDestruction" PNxBExpEntItemDestruction
+SetModINI "PNEO/Preset1/PNxBExpEntUseSkill" PNxBExpEntUseSkill
+SetModINI "PNEO/Preset1/PNxBStFldStrength" PNxBStealthFieldStrength
+SetModINI "PNEO/Preset1/PNxBULCfgLuckBase" PNxBULConfigLuckBase
+SetModINI "PNEO/Preset1/PNxBULEn" PNxBULEnable
 
-SetModINI "PN EO/Preset1/PNxRCfgXPGainProfile" PNxRConfigXPGainProfile
-SetModINI "PN EO/Preset1/PNxRCfgSkillPointModifier" PNxRConfigSkillPointModifier
-SetModINI "PN EO/Preset1/PNxRCfgLevelsPerPerk" PNxRConfigLevelsPerPerk
-SetModINI "PN EO/Preset1/PNxRCfgMaxLevel" PNxRConfigMaxLevel
-SetModINI "PN EO/Preset1/PNxBRCfgCombatXP" PNxBRConfigCombatXP
-SetModINI "PN EO/Preset1/PNxBRCfgHackLockXP" PNxBRConfigHackLockXP
-SetModINI "PN EO/Preset1/PNxBRCfgLocationXP" PNxBRConfigLocationXP
-SetModINI "PN EO/Preset1/PNxBRCfgSpeechXP" PNxBRConfigSpeechXP
-SetModINI "PN EO/Preset1/PNxRCfgActionPointsBase" PNxRConfigActionPointsBase
-SetModINI "PN EO/Preset1/PNxRCfgActionPointsMult" PNxRConfigActionPointsMult
-SetModINI "PN EO/Preset1/PNxRCfgCarryWeightBase" PNxRConfigCarryWeightBase
-SetModINI "PN EO/Preset1/PNxRCfgCarryWeightMult" PNxRConfigCarryWeightMult
-SetModINI "PN EO/Preset1/PNxRCfgThrowingProfile" PNxRConfigThrowingProfile
-SetModINI "PN EO/Preset1/PNxBRCfgTAGBase" PNxBRConfigTAGBase
-SetModINI "PN EO/Preset1/PNxBRCfgTAGMult" PNxBRConfigTAGMult
-SetModINI "PN EO/Preset1/PNxRCfgHlPlayerEndMult" PNxRConfigHealthPlayerEnduranceMult
-SetModINI "PN EO/Preset1/PNxRCfgHlPlayerLevelMult" PNxRConfigHealthPlayerLevelMult
-SetModINI "PN EO/Preset1/PNxRCfgHlNPCEndMult" PNxRConfigHealthNPCEnduranceMult
-SetModINI "PN EO/Preset1/PNxRCfgHlNPCLevelMult" PNxRConfigHealthNPCLevelMult
-SetModINI "PN EO/Preset1/PNxRCfgDTMinDamPerc" PNxRConfigDTMinDamagePerc
-SetModINI "PN EO/Preset1/PNxREnHeadshotMonitor" PNxREnableHeadshotMonitor
-SetModINI "PN EO/Preset1/PNxRCfgDamSkillPerc" PNxRConfigDamageSkillPerc
-SetModINI "PN EO/Preset1/PNxRCfgDamLimbPerc" PNxRConfigDamageLimbPerc
-SetModINI "PN EO/Preset1/PNxRCfgRadiationRatePerc" PNxRConfigRadiationRatePerc
-SetModINI "PN EO/Preset1/PNxRCfgFallingHeight" PNxRConfigFallingHeight
-SetModINI "PN EO/Preset1/PNxRCfgExplosionKnockdowns" PNxRConfigExplosionKnockdowns
-SetModINI "PN EO/Preset1/PNxRCfgExplosionSounds" PNxRConfigExplosionSounds
-SetModINI "PN EO/Preset1/PNxRCfgAutoAimMaxAngle" PNxRConfigAutoAimMaxAngle
-SetModINI "PN EO/Preset1/PNxRCfgAutoAimMaxDistance" PNxRConfigAutoAimMaxDistance
-SetModINI "PN EO/Preset1/PNxRCfgAutoAimScreenPerc" PNxRConfigAutoAimScreenPercentage
-SetModINI "PN EO/Preset1/PNxRCfgCondDamPenPerc" PNxRConfigConditionDamagePenaltyPerc
-SetModINI "PN EO/Preset1/PNxRCfgRunningMult" PNxRConfigRunningMult
-SetModINI "PN EO/Preset1/PNxRCfgHolsterMult" PNxRConfigHolsterMult
-SetModINI "PN EO/Preset1/PNxRCfgSpeed1CripPerc" PNxRConfigSpeed1CrippledPerc
-SetModINI "PN EO/Preset1/PNxRCfgSpeed2CripPerc" PNxRConfigSpeed2CrippledPerc
-SetModINI "PN EO/Preset1/PNxRCfgSneakProfile" PNxRConfigSneakProfile
-SetModINI "PN EO/Preset1/PNxREnDetection" PNxREnableDetection
-SetModINI "PN EO/Preset1/PNxRCfgLootFood100" PNxRConfigLootFood100
-SetModINI "PN EO/Preset1/PNxRCfgLootFood75" PNxRConfigLootFood75
-SetModINI "PN EO/Preset1/PNxRCfgLootFood50" PNxRConfigLootFood50
-SetModINI "PN EO/Preset1/PNxRCfgLootFood25" PNxRConfigLootFood25
-SetModINI "PN EO/Preset1/PNxBRCfgLootAmmo100" PNxBRConfigLootAmmo100
-SetModINI "PN EO/Preset1/PNxRCfgLootAmmo75" PNxRConfigLootAmmo75
-SetModINI "PN EO/Preset1/PNxBRCfgLootAmmo50" PNxBRConfigLootAmmo50
-SetModINI "PN EO/Preset1/PNxBRCfgLootAmmo25" PNxBRConfigLootAmmo25
-SetModINI "PN EO/Preset1/PNxBRCfgLootChems100" PNxBRConfigLootChems100
-SetModINI "PN EO/Preset1/PNxBRCfgLootChems75" PNxBRConfigLootChems75
-SetModINI "PN EO/Preset1/PNxBRCfgLootChems50" PNxBRConfigLootChems50
-SetModINI "PN EO/Preset1/PNxBRCfgLootChems25" PNxBRConfigLootChems25
-SetModINI "PN EO/Preset1/PNxBRCfgLootMisc100" PNxBRConfigLootMisc100
-SetModINI "PN EO/Preset1/PNxBRCfgLootMisc75" PNxBRConfigLootMisc75
-SetModINI "PN EO/Preset1/PNxBRCfgLootMisc50" PNxBRConfigLootMisc50
-SetModINI "PN EO/Preset1/PNxBRCfgLootMisc25" PNxBRConfigLootMisc25
-SetModINI "PN EO/Preset1/PNxRFoodHeals" PNxRFoodHeals
-SetModINI "PN EO/Preset1/PNxREnDynamicHTS" PNxREnableDynamicHTS
-SetModINI "PN EO/Preset1/PNxRCfgTimescale" PNxRConfigTimescale
-SetModINI "PN EO/Preset1/PNxRCfgHungerIncrease" PNxRConfigHungerIncrease
-SetModINI "PN EO/Preset1/PNxRCfgThirstIncrease" PNxRConfigThirstIncrease
-SetModINI "PN EO/Preset1/PNxRCfgSleepIncrease" PNxRConfigSleepIncrease
-SetModINI "PN EO/Preset1/PNxRCfgKarmaMsgProfile" PNxRConfigKarmaMsgProfile
-SetModINI "PN EO/Preset1/PNxRCfgSneakIndProfile" PNxRConfigSneakIndicatorProfile
-SetModINI "PN EO/Preset1/PNxRCfgGoreDismemberPerc" PNxRConfigGoreDismemberPerc
-SetModINI "PN EO/Preset1/PNxRCfgGoreExplodePerc" PNxRConfigGoreExplodePerc
-SetModINI "PN EO/Preset1/PNxREnRepair" PNxREnableRepair
-SetModINI "PN EO/Preset1/PNxRCfgDeathPhyForceMult" PNxRConfigDeathPhysicsForceMult
-SetModINI "PN EO/Preset1/PNxBRCfgBarter" PNxBRConfigBarter
-SetModINI "PN EO/Preset1/PNxBRCfgVendorRespawn" PNxBRConfigVendorRespawn
-SetModINI "PN EO/Preset1/PNxBRCfgFastTravel" PNxBRConfigFastTravel
-SetModINI "PN EO/Preset1/PNxBRCfgWorldRespawn" PNxBRConfigWorldRespawn
+SetModINI "PNEO/Preset1/PNxRCfgXPGainProfile" PNxRConfigXPGainProfile
+SetModINI "PNEO/Preset1/PNxRCfgSkillPointModifier" PNxRConfigSkillPointModifier
+SetModINI "PNEO/Preset1/PNxRCfgLevelsPerPerk" PNxRConfigLevelsPerPerk
+SetModINI "PNEO/Preset1/PNxRCfgMaxLevel" PNxRConfigMaxLevel
+SetModINI "PNEO/Preset1/PNxBRCfgCombatXP" PNxBRConfigCombatXP
+SetModINI "PNEO/Preset1/PNxBRCfgHackLockXP" PNxBRConfigHackLockXP
+SetModINI "PNEO/Preset1/PNxBRCfgLocationXP" PNxBRConfigLocationXP
+SetModINI "PNEO/Preset1/PNxBRCfgSpeechXP" PNxBRConfigSpeechXP
+SetModINI "PNEO/Preset1/PNxRCfgActionPointsBase" PNxRConfigActionPointsBase
+SetModINI "PNEO/Preset1/PNxRCfgActionPointsMult" PNxRConfigActionPointsMult
+SetModINI "PNEO/Preset1/PNxRCfgCarryWeightBase" PNxRConfigCarryWeightBase
+SetModINI "PNEO/Preset1/PNxRCfgCarryWeightMult" PNxRConfigCarryWeightMult
+SetModINI "PNEO/Preset1/PNxRCfgThrowingProfile" PNxRConfigThrowingProfile
+SetModINI "PNEO/Preset1/PNxBRCfgTAGBase" PNxBRConfigTAGBase
+SetModINI "PNEO/Preset1/PNxBRCfgTAGMult" PNxBRConfigTAGMult
+SetModINI "PNEO/Preset1/PNxRCfgHlPlayerEndMult" PNxRConfigHealthPlayerEnduranceMult
+SetModINI "PNEO/Preset1/PNxRCfgHlPlayerLevelMult" PNxRConfigHealthPlayerLevelMult
+SetModINI "PNEO/Preset1/PNxRCfgHlNPCEndMult" PNxRConfigHealthNPCEnduranceMult
+SetModINI "PNEO/Preset1/PNxRCfgHlNPCLevelMult" PNxRConfigHealthNPCLevelMult
+SetModINI "PNEO/Preset1/PNxRCfgDTMinDamPerc" PNxRConfigDTMinDamagePerc
+SetModINI "PNEO/Preset1/PNxREnHeadshotMonitor" PNxREnableHeadshotMonitor
+SetModINI "PNEO/Preset1/PNxRCfgDamSkillPerc" PNxRConfigDamageSkillPerc
+SetModINI "PNEO/Preset1/PNxRCfgDamLimbPerc" PNxRConfigDamageLimbPerc
+SetModINI "PNEO/Preset1/PNxRCfgRadiationRatePerc" PNxRConfigRadiationRatePerc
+SetModINI "PNEO/Preset1/PNxRCfgFallingHeight" PNxRConfigFallingHeight
+SetModINI "PNEO/Preset1/PNxRCfgExplosionKnockdowns" PNxRConfigExplosionKnockdowns
+SetModINI "PNEO/Preset1/PNxRCfgExplosionSounds" PNxRConfigExplosionSounds
+SetModINI "PNEO/Preset1/PNxRCfgAutoAimMaxAngle" PNxRConfigAutoAimMaxAngle
+SetModINI "PNEO/Preset1/PNxRCfgAutoAimMaxDistance" PNxRConfigAutoAimMaxDistance
+SetModINI "PNEO/Preset1/PNxRCfgAutoAimScreenPerc" PNxRConfigAutoAimScreenPercentage
+SetModINI "PNEO/Preset1/PNxRCfgCondDamPenPerc" PNxRConfigConditionDamagePenaltyPerc
+SetModINI "PNEO/Preset1/PNxRCfgRunningMult" PNxRConfigRunningMult
+SetModINI "PNEO/Preset1/PNxRCfgHolsterMult" PNxRConfigHolsterMult
+SetModINI "PNEO/Preset1/PNxRCfgSpeed1CripPerc" PNxRConfigSpeed1CrippledPerc
+SetModINI "PNEO/Preset1/PNxRCfgSpeed2CripPerc" PNxRConfigSpeed2CrippledPerc
+SetModINI "PNEO/Preset1/PNxRCfgSneakProfile" PNxRConfigSneakProfile
+SetModINI "PNEO/Preset1/PNxREnDetection" PNxREnableDetection
+SetModINI "PNEO/Preset1/PNxRCfgLootFood100" PNxRConfigLootFood100
+SetModINI "PNEO/Preset1/PNxRCfgLootFood75" PNxRConfigLootFood75
+SetModINI "PNEO/Preset1/PNxRCfgLootFood50" PNxRConfigLootFood50
+SetModINI "PNEO/Preset1/PNxRCfgLootFood25" PNxRConfigLootFood25
+SetModINI "PNEO/Preset1/PNxBRCfgLootAmmo100" PNxBRConfigLootAmmo100
+SetModINI "PNEO/Preset1/PNxRCfgLootAmmo75" PNxRConfigLootAmmo75
+SetModINI "PNEO/Preset1/PNxBRCfgLootAmmo50" PNxBRConfigLootAmmo50
+SetModINI "PNEO/Preset1/PNxBRCfgLootAmmo25" PNxBRConfigLootAmmo25
+SetModINI "PNEO/Preset1/PNxBRCfgLootChems100" PNxBRConfigLootChems100
+SetModINI "PNEO/Preset1/PNxBRCfgLootChems75" PNxBRConfigLootChems75
+SetModINI "PNEO/Preset1/PNxBRCfgLootChems50" PNxBRConfigLootChems50
+SetModINI "PNEO/Preset1/PNxBRCfgLootChems25" PNxBRConfigLootChems25
+SetModINI "PNEO/Preset1/PNxBRCfgLootMisc100" PNxBRConfigLootMisc100
+SetModINI "PNEO/Preset1/PNxBRCfgLootMisc75" PNxBRConfigLootMisc75
+SetModINI "PNEO/Preset1/PNxBRCfgLootMisc50" PNxBRConfigLootMisc50
+SetModINI "PNEO/Preset1/PNxBRCfgLootMisc25" PNxBRConfigLootMisc25
+SetModINI "PNEO/Preset1/PNxRFoodHeals" PNxRFoodHeals
+SetModINI "PNEO/Preset1/PNxREnDynamicHTS" PNxREnableDynamicHTS
+SetModINI "PNEO/Preset1/PNxRCfgTimescale" PNxRConfigTimescale
+SetModINI "PNEO/Preset1/PNxRCfgHungerIncrease" PNxRConfigHungerIncrease
+SetModINI "PNEO/Preset1/PNxRCfgThirstIncrease" PNxRConfigThirstIncrease
+SetModINI "PNEO/Preset1/PNxRCfgSleepIncrease" PNxRConfigSleepIncrease
+SetModINI "PNEO/Preset1/PNxRCfgKarmaMsgProfile" PNxRConfigKarmaMsgProfile
+SetModINI "PNEO/Preset1/PNxRCfgSneakIndProfile" PNxRConfigSneakIndicatorProfile
+SetModINI "PNEO/Preset1/PNxRCfgGoreDismemberPerc" PNxRConfigGoreDismemberPerc
+SetModINI "PNEO/Preset1/PNxRCfgGoreExplodePerc" PNxRConfigGoreExplodePerc
+SetModINI "PNEO/Preset1/PNxREnRepair" PNxREnableRepair
+SetModINI "PNEO/Preset1/PNxRCfgDeathPhyForceMult" PNxRConfigDeathPhysicsForceMult
+SetModINI "PNEO/Preset1/PNxBRCfgBarter" PNxBRConfigBarter
+SetModINI "PNEO/Preset1/PNxBRCfgVendorRespawn" PNxBRConfigVendorRespawn
+SetModINI "PNEO/Preset1/PNxBRCfgFastTravel" PNxBRConfigFastTravel
+SetModINI "PNEO/Preset1/PNxBRCfgWorldRespawn" PNxBRConfigWorldRespawn
 
 
 
 ; Preset2
-SetModINI "PN EO/Preset2/PNxCEnBT" PNxCEnableBulletTime
-SetModINI "PN EO/Preset2/PNxCEnWeaponCharge" PNxCEnableWeaponCharge
-SetModINI "PN EO/Preset2/PNxCEnCrosshair" PNxCEnableCrosshair
-SetModINI "PN EO/Preset2/PNxCEnStFld" PNxCEnableStealthField
-SetModINI "PN EO/Preset2/PNxCEnVisionMode" PNxCEnableVisionMode
-SetModINI "PN EO/Preset2/PNxCEnZoom" PNxCEnableZoom
-SetModINI "PN EO/Preset2/PNxCEnGrenadeHotkey" PNxCEnableGrenadeHotkey
-SetModINI "PN EO/Preset2/PNxCEnBackpedal" PNxCEnableBackpedal
-SetModINI "PN EO/Preset2/PNxCEnSprint" PNxCEnableSprint
-SetModINI "PN EO/Preset2/PNxCEnHlVisuals" PNxCEnableHealthVisuals
-SetModINI "PN EO/Preset2/PNxCEnHTSEffects" PNxCEnableHTSEffects
-SetModINI "PN EO/Preset2/PNxCEnVisor" PNxCEnableVisor
-SetModINI "PN EO/Preset2/PNxCEnExplosiveEntry" PNxCEnableExplosiveEntry
-SetModINI "PN EO/Preset2/PNxCEnSorter" PNxCEnableSorter
-SetModINI "PN EO/Preset2/PNxCCrosshairEnRecoil" PNxCCrosshairEnableRecoil
-SetModINI "PN EO/Preset2/PNxCBTEnInd" PNxCBulletTimeEnableIndicator
-SetModINI "PN EO/Preset2/PNxCVisorEnOverlays" PNxCVisorEnableOverlays
-SetModINI "PN EO/Preset2/PNxCWeaponChargeEnInd" PNxCWeaponChargeEnableIndicator
-SetModINI "PN EO/Preset2/PNxCBTAPDrainBase" PNxCBulletTimeAPDrainBase
-SetModINI "PN EO/Preset2/PNxCSprintSpeedMult" PNxCSprintSpeedMult
-SetModINI "PN EO/Preset2/PNxCSprintAPDrain" PNxCSprintAPDrain
-SetModINI "PN EO/Preset2/PNxCSprintTackeAPCost" PNxCSprintTackeAPCost
-SetModINI "PN EO/Preset2/PNxCStFldArEnergyDrain" PNxCStealthFieldArmorEnergyDrain
-SetModINI "PN EO/Preset2/PNxCStFldArStabGn" PNxCStealthFieldArmorStabilityGain
-SetModINI "PN EO/Preset2/PNxCStFldArStabDn" PNxCStealthFieldArmorStabilityDrain
-SetModINI "PN EO/Preset2/PNxCStFldSBStabDrain" PNxCStealthFieldSBStabilityDrain
-SetModINI "PN EO/Preset2/PNxCVisionModeDrainEM" PNxCVisionModeDrainEM
-SetModINI "PN EO/Preset2/PNxCVisionModeDrainHeat" PNxCVisionModeDrainHeat
-SetModINI "PN EO/Preset2/PNxCVisionModeDrainNight" PNxCVisionModeDrainNight
-SetModINI "PN EO/Preset2/PNxBCfgBTVFx1" PNxBConfigBulletTimeVFx1
-SetModINI "PN EO/Preset2/PNxBCfgBTVFx2" PNxBConfigBulletTimeVFx2
-SetModINI "PN EO/Preset2/PNxBCfgImplantAPRegenVM" PNxBConfigImplantAPRegenVM
-SetModINI "PN EO/Preset2/PNxBCfgSprintShudder" PNxBConfigSprintShudder
-SetModINI "PN EO/Preset2/PNxBExpEntDistance" PNxBExpEntDistance
-SetModINI "PN EO/Preset2/PNxBExpEntItemDestruction" PNxBExpEntItemDestruction
-SetModINI "PN EO/Preset2/PNxBExpEntUseSkill" PNxBExpEntUseSkill
-SetModINI "PN EO/Preset2/PNxBStFldStrength" PNxBStealthFieldStrength
-SetModINI "PN EO/Preset2/PNxBULCfgLuckBase" PNxBULConfigLuckBase
-SetModINI "PN EO/Preset2/PNxBULEn" PNxBULEnable
+SetModINI "PNEO/Preset2/PNxCEnBT" PNxCEnableBulletTime
+SetModINI "PNEO/Preset2/PNxCEnWeaponCharge" PNxCEnableWeaponCharge
+SetModINI "PNEO/Preset2/PNxCEnCrosshair" PNxCEnableCrosshair
+SetModINI "PNEO/Preset2/PNxCEnStFld" PNxCEnableStealthField
+SetModINI "PNEO/Preset2/PNxCEnVisionMode" PNxCEnableVisionMode
+SetModINI "PNEO/Preset2/PNxCEnZoom" PNxCEnableZoom
+SetModINI "PNEO/Preset2/PNxCEnGrenadeHotkey" PNxCEnableGrenadeHotkey
+SetModINI "PNEO/Preset2/PNxCEnBackpedal" PNxCEnableBackpedal
+SetModINI "PNEO/Preset2/PNxCEnSprint" PNxCEnableSprint
+SetModINI "PNEO/Preset2/PNxCEnHlVisuals" PNxCEnableHealthVisuals
+SetModINI "PNEO/Preset2/PNxCEnHTSEffects" PNxCEnableHTSEffects
+SetModINI "PNEO/Preset2/PNxCEnVisor" PNxCEnableVisor
+SetModINI "PNEO/Preset2/PNxCEnExplosiveEntry" PNxCEnableExplosiveEntry
+SetModINI "PNEO/Preset2/PNxCEnSorter" PNxCEnableSorter
+SetModINI "PNEO/Preset2/PNxCCrosshairEnRecoil" PNxCCrosshairEnableRecoil
+SetModINI "PNEO/Preset2/PNxCBTEnInd" PNxCBulletTimeEnableIndicator
+SetModINI "PNEO/Preset2/PNxCVisorEnOverlays" PNxCVisorEnableOverlays
+SetModINI "PNEO/Preset2/PNxCWeaponChargeEnInd" PNxCWeaponChargeEnableIndicator
+SetModINI "PNEO/Preset2/PNxCBTAPDrainBase" PNxCBulletTimeAPDrainBase
+SetModINI "PNEO/Preset2/PNxCSprintSpeedMult" PNxCSprintSpeedMult
+SetModINI "PNEO/Preset2/PNxCSprintAPDrain" PNxCSprintAPDrain
+SetModINI "PNEO/Preset2/PNxCSprintTackeAPCost" PNxCSprintTackeAPCost
+SetModINI "PNEO/Preset2/PNxCStFldArEnergyDrain" PNxCStealthFieldArmorEnergyDrain
+SetModINI "PNEO/Preset2/PNxCStFldArStabGn" PNxCStealthFieldArmorStabilityGain
+SetModINI "PNEO/Preset2/PNxCStFldArStabDn" PNxCStealthFieldArmorStabilityDrain
+SetModINI "PNEO/Preset2/PNxCStFldSBStabDrain" PNxCStealthFieldSBStabilityDrain
+SetModINI "PNEO/Preset2/PNxCVisionModeDrainEM" PNxCVisionModeDrainEM
+SetModINI "PNEO/Preset2/PNxCVisionModeDrainHeat" PNxCVisionModeDrainHeat
+SetModINI "PNEO/Preset2/PNxCVisionModeDrainNight" PNxCVisionModeDrainNight
+SetModINI "PNEO/Preset2/PNxBCfgBTVFx1" PNxBConfigBulletTimeVFx1
+SetModINI "PNEO/Preset2/PNxBCfgBTVFx2" PNxBConfigBulletTimeVFx2
+SetModINI "PNEO/Preset2/PNxBCfgImplantAPRegenVM" PNxBConfigImplantAPRegenVM
+SetModINI "PNEO/Preset2/PNxBCfgSprintShudder" PNxBConfigSprintShudder
+SetModINI "PNEO/Preset2/PNxBExpEntDistance" PNxBExpEntDistance
+SetModINI "PNEO/Preset2/PNxBExpEntItemDestruction" PNxBExpEntItemDestruction
+SetModINI "PNEO/Preset2/PNxBExpEntUseSkill" PNxBExpEntUseSkill
+SetModINI "PNEO/Preset2/PNxBStFldStrength" PNxBStealthFieldStrength
+SetModINI "PNEO/Preset2/PNxBULCfgLuckBase" PNxBULConfigLuckBase
+SetModINI "PNEO/Preset2/PNxBULEn" PNxBULEnable
 
-SetModINI "PN EO/Preset2/PNxRCfgXPGainProfile" PNxRConfigXPGainProfile
-SetModINI "PN EO/Preset2/PNxRCfgSkillPointModifier" PNxRConfigSkillPointModifier
-SetModINI "PN EO/Preset2/PNxRCfgLevelsPerPerk" PNxRConfigLevelsPerPerk
-SetModINI "PN EO/Preset2/PNxRCfgMaxLevel" PNxRConfigMaxLevel
-SetModINI "PN EO/Preset2/PNxBRCfgCombatXP" PNxBRConfigCombatXP
-SetModINI "PN EO/Preset2/PNxBRCfgHackLockXP" PNxBRConfigHackLockXP
-SetModINI "PN EO/Preset2/PNxBRCfgLocationXP" PNxBRConfigLocationXP
-SetModINI "PN EO/Preset2/PNxBRCfgSpeechXP" PNxBRConfigSpeechXP
-SetModINI "PN EO/Preset2/PNxRCfgActionPointsBase" PNxRConfigActionPointsBase
-SetModINI "PN EO/Preset2/PNxRCfgActionPointsMult" PNxRConfigActionPointsMult
-SetModINI "PN EO/Preset2/PNxRCfgCarryWeightBase" PNxRConfigCarryWeightBase
-SetModINI "PN EO/Preset2/PNxRCfgCarryWeightMult" PNxRConfigCarryWeightMult
-SetModINI "PN EO/Preset2/PNxRCfgThrowingProfile" PNxRConfigThrowingProfile
-SetModINI "PN EO/Preset2/PNxBRCfgTAGBase" PNxBRConfigTAGBase
-SetModINI "PN EO/Preset2/PNxBRCfgTAGMult" PNxBRConfigTAGMult
-SetModINI "PN EO/Preset2/PNxRCfgHlPlayerEndMult" PNxRConfigHealthPlayerEnduranceMult
-SetModINI "PN EO/Preset2/PNxRCfgHlPlayerLevelMult" PNxRConfigHealthPlayerLevelMult
-SetModINI "PN EO/Preset2/PNxRCfgHlNPCEndMult" PNxRConfigHealthNPCEnduranceMult
-SetModINI "PN EO/Preset2/PNxRCfgHlNPCLevelMult" PNxRConfigHealthNPCLevelMult
-SetModINI "PN EO/Preset2/PNxRCfgDTMinDamPerc" PNxRConfigDTMinDamagePerc
-SetModINI "PN EO/Preset2/PNxREnHeadshotMonitor" PNxREnableHeadshotMonitor
-SetModINI "PN EO/Preset2/PNxRCfgDamSkillPerc" PNxRConfigDamageSkillPerc
-SetModINI "PN EO/Preset2/PNxRCfgDamLimbPerc" PNxRConfigDamageLimbPerc
-SetModINI "PN EO/Preset2/PNxRCfgRadiationRatePerc" PNxRConfigRadiationRatePerc
-SetModINI "PN EO/Preset2/PNxRCfgFallingHeight" PNxRConfigFallingHeight
-SetModINI "PN EO/Preset2/PNxRCfgExplosionKnockdowns" PNxRConfigExplosionKnockdowns
-SetModINI "PN EO/Preset2/PNxRCfgExplosionSounds" PNxRConfigExplosionSounds
-SetModINI "PN EO/Preset2/PNxRCfgAutoAimMaxAngle" PNxRConfigAutoAimMaxAngle
-SetModINI "PN EO/Preset2/PNxRCfgAutoAimMaxDistance" PNxRConfigAutoAimMaxDistance
-SetModINI "PN EO/Preset2/PNxRCfgAutoAimScreenPerc" PNxRConfigAutoAimScreenPercentage
-SetModINI "PN EO/Preset2/PNxRCfgCondDamPenPerc" PNxRConfigConditionDamagePenaltyPerc
-SetModINI "PN EO/Preset2/PNxRCfgRunningMult" PNxRConfigRunningMult
-SetModINI "PN EO/Preset2/PNxRCfgHolsterMult" PNxRConfigHolsterMult
-SetModINI "PN EO/Preset2/PNxRCfgSpeed1CripPerc" PNxRConfigSpeed1CrippledPerc
-SetModINI "PN EO/Preset2/PNxRCfgSpeed2CripPerc" PNxRConfigSpeed2CrippledPerc
-SetModINI "PN EO/Preset2/PNxRCfgSneakProfile" PNxRConfigSneakProfile
-SetModINI "PN EO/Preset2/PNxREnDetection" PNxREnableDetection
-SetModINI "PN EO/Preset2/PNxRCfgLootFood100" PNxRConfigLootFood100
-SetModINI "PN EO/Preset2/PNxRCfgLootFood75" PNxRConfigLootFood75
-SetModINI "PN EO/Preset2/PNxRCfgLootFood50" PNxRConfigLootFood50
-SetModINI "PN EO/Preset2/PNxRCfgLootFood25" PNxRConfigLootFood25
-SetModINI "PN EO/Preset2/PNxBRCfgLootAmmo100" PNxBRConfigLootAmmo100
-SetModINI "PN EO/Preset2/PNxRCfgLootAmmo75" PNxRConfigLootAmmo75
-SetModINI "PN EO/Preset2/PNxBRCfgLootAmmo50" PNxBRConfigLootAmmo50
-SetModINI "PN EO/Preset2/PNxBRCfgLootAmmo25" PNxBRConfigLootAmmo25
-SetModINI "PN EO/Preset2/PNxBRCfgLootChems100" PNxBRConfigLootChems100
-SetModINI "PN EO/Preset2/PNxBRCfgLootChems75" PNxBRConfigLootChems75
-SetModINI "PN EO/Preset2/PNxBRCfgLootChems50" PNxBRConfigLootChems50
-SetModINI "PN EO/Preset2/PNxBRCfgLootChems25" PNxBRConfigLootChems25
-SetModINI "PN EO/Preset2/PNxBRCfgLootMisc100" PNxBRConfigLootMisc100
-SetModINI "PN EO/Preset2/PNxBRCfgLootMisc75" PNxBRConfigLootMisc75
-SetModINI "PN EO/Preset2/PNxBRCfgLootMisc50" PNxBRConfigLootMisc50
-SetModINI "PN EO/Preset2/PNxBRCfgLootMisc25" PNxBRConfigLootMisc25
-SetModINI "PN EO/Preset2/PNxRFoodHeals" PNxRFoodHeals
-SetModINI "PN EO/Preset2/PNxREnDynamicHTS" PNxREnableDynamicHTS
-SetModINI "PN EO/Preset2/PNxRCfgTimescale" PNxRConfigTimescale
-SetModINI "PN EO/Preset2/PNxRCfgHungerIncrease" PNxRConfigHungerIncrease
-SetModINI "PN EO/Preset2/PNxRCfgThirstIncrease" PNxRConfigThirstIncrease
-SetModINI "PN EO/Preset2/PNxRCfgSleepIncrease" PNxRConfigSleepIncrease
-SetModINI "PN EO/Preset2/PNxRCfgKarmaMsgProfile" PNxRConfigKarmaMsgProfile
-SetModINI "PN EO/Preset2/PNxRCfgSneakIndProfile" PNxRConfigSneakIndicatorProfile
-SetModINI "PN EO/Preset2/PNxRCfgGoreDismemberPerc" PNxRConfigGoreDismemberPerc
-SetModINI "PN EO/Preset2/PNxRCfgGoreExplodePerc" PNxRConfigGoreExplodePerc
-SetModINI "PN EO/Preset2/PNxREnRepair" PNxREnableRepair
-SetModINI "PN EO/Preset2/PNxRCfgDeathPhyForceMult" PNxRConfigDeathPhysicsForceMult
-SetModINI "PN EO/Preset2/PNxBRCfgBarter" PNxBRConfigBarter
-SetModINI "PN EO/Preset2/PNxBRCfgVendorRespawn" PNxBRConfigVendorRespawn
-SetModINI "PN EO/Preset2/PNxBRCfgFastTravel" PNxBRConfigFastTravel
-SetModINI "PN EO/Preset2/PNxBRCfgWorldRespawn" PNxBRConfigWorldRespawn
+SetModINI "PNEO/Preset2/PNxRCfgXPGainProfile" PNxRConfigXPGainProfile
+SetModINI "PNEO/Preset2/PNxRCfgSkillPointModifier" PNxRConfigSkillPointModifier
+SetModINI "PNEO/Preset2/PNxRCfgLevelsPerPerk" PNxRConfigLevelsPerPerk
+SetModINI "PNEO/Preset2/PNxRCfgMaxLevel" PNxRConfigMaxLevel
+SetModINI "PNEO/Preset2/PNxBRCfgCombatXP" PNxBRConfigCombatXP
+SetModINI "PNEO/Preset2/PNxBRCfgHackLockXP" PNxBRConfigHackLockXP
+SetModINI "PNEO/Preset2/PNxBRCfgLocationXP" PNxBRConfigLocationXP
+SetModINI "PNEO/Preset2/PNxBRCfgSpeechXP" PNxBRConfigSpeechXP
+SetModINI "PNEO/Preset2/PNxRCfgActionPointsBase" PNxRConfigActionPointsBase
+SetModINI "PNEO/Preset2/PNxRCfgActionPointsMult" PNxRConfigActionPointsMult
+SetModINI "PNEO/Preset2/PNxRCfgCarryWeightBase" PNxRConfigCarryWeightBase
+SetModINI "PNEO/Preset2/PNxRCfgCarryWeightMult" PNxRConfigCarryWeightMult
+SetModINI "PNEO/Preset2/PNxRCfgThrowingProfile" PNxRConfigThrowingProfile
+SetModINI "PNEO/Preset2/PNxBRCfgTAGBase" PNxBRConfigTAGBase
+SetModINI "PNEO/Preset2/PNxBRCfgTAGMult" PNxBRConfigTAGMult
+SetModINI "PNEO/Preset2/PNxRCfgHlPlayerEndMult" PNxRConfigHealthPlayerEnduranceMult
+SetModINI "PNEO/Preset2/PNxRCfgHlPlayerLevelMult" PNxRConfigHealthPlayerLevelMult
+SetModINI "PNEO/Preset2/PNxRCfgHlNPCEndMult" PNxRConfigHealthNPCEnduranceMult
+SetModINI "PNEO/Preset2/PNxRCfgHlNPCLevelMult" PNxRConfigHealthNPCLevelMult
+SetModINI "PNEO/Preset2/PNxRCfgDTMinDamPerc" PNxRConfigDTMinDamagePerc
+SetModINI "PNEO/Preset2/PNxREnHeadshotMonitor" PNxREnableHeadshotMonitor
+SetModINI "PNEO/Preset2/PNxRCfgDamSkillPerc" PNxRConfigDamageSkillPerc
+SetModINI "PNEO/Preset2/PNxRCfgDamLimbPerc" PNxRConfigDamageLimbPerc
+SetModINI "PNEO/Preset2/PNxRCfgRadiationRatePerc" PNxRConfigRadiationRatePerc
+SetModINI "PNEO/Preset2/PNxRCfgFallingHeight" PNxRConfigFallingHeight
+SetModINI "PNEO/Preset2/PNxRCfgExplosionKnockdowns" PNxRConfigExplosionKnockdowns
+SetModINI "PNEO/Preset2/PNxRCfgExplosionSounds" PNxRConfigExplosionSounds
+SetModINI "PNEO/Preset2/PNxRCfgAutoAimMaxAngle" PNxRConfigAutoAimMaxAngle
+SetModINI "PNEO/Preset2/PNxRCfgAutoAimMaxDistance" PNxRConfigAutoAimMaxDistance
+SetModINI "PNEO/Preset2/PNxRCfgAutoAimScreenPerc" PNxRConfigAutoAimScreenPercentage
+SetModINI "PNEO/Preset2/PNxRCfgCondDamPenPerc" PNxRConfigConditionDamagePenaltyPerc
+SetModINI "PNEO/Preset2/PNxRCfgRunningMult" PNxRConfigRunningMult
+SetModINI "PNEO/Preset2/PNxRCfgHolsterMult" PNxRConfigHolsterMult
+SetModINI "PNEO/Preset2/PNxRCfgSpeed1CripPerc" PNxRConfigSpeed1CrippledPerc
+SetModINI "PNEO/Preset2/PNxRCfgSpeed2CripPerc" PNxRConfigSpeed2CrippledPerc
+SetModINI "PNEO/Preset2/PNxRCfgSneakProfile" PNxRConfigSneakProfile
+SetModINI "PNEO/Preset2/PNxREnDetection" PNxREnableDetection
+SetModINI "PNEO/Preset2/PNxRCfgLootFood100" PNxRConfigLootFood100
+SetModINI "PNEO/Preset2/PNxRCfgLootFood75" PNxRConfigLootFood75
+SetModINI "PNEO/Preset2/PNxRCfgLootFood50" PNxRConfigLootFood50
+SetModINI "PNEO/Preset2/PNxRCfgLootFood25" PNxRConfigLootFood25
+SetModINI "PNEO/Preset2/PNxBRCfgLootAmmo100" PNxBRConfigLootAmmo100
+SetModINI "PNEO/Preset2/PNxRCfgLootAmmo75" PNxRConfigLootAmmo75
+SetModINI "PNEO/Preset2/PNxBRCfgLootAmmo50" PNxBRConfigLootAmmo50
+SetModINI "PNEO/Preset2/PNxBRCfgLootAmmo25" PNxBRConfigLootAmmo25
+SetModINI "PNEO/Preset2/PNxBRCfgLootChems100" PNxBRConfigLootChems100
+SetModINI "PNEO/Preset2/PNxBRCfgLootChems75" PNxBRConfigLootChems75
+SetModINI "PNEO/Preset2/PNxBRCfgLootChems50" PNxBRConfigLootChems50
+SetModINI "PNEO/Preset2/PNxBRCfgLootChems25" PNxBRConfigLootChems25
+SetModINI "PNEO/Preset2/PNxBRCfgLootMisc100" PNxBRConfigLootMisc100
+SetModINI "PNEO/Preset2/PNxBRCfgLootMisc75" PNxBRConfigLootMisc75
+SetModINI "PNEO/Preset2/PNxBRCfgLootMisc50" PNxBRConfigLootMisc50
+SetModINI "PNEO/Preset2/PNxBRCfgLootMisc25" PNxBRConfigLootMisc25
+SetModINI "PNEO/Preset2/PNxRFoodHeals" PNxRFoodHeals
+SetModINI "PNEO/Preset2/PNxREnDynamicHTS" PNxREnableDynamicHTS
+SetModINI "PNEO/Preset2/PNxRCfgTimescale" PNxRConfigTimescale
+SetModINI "PNEO/Preset2/PNxRCfgHungerIncrease" PNxRConfigHungerIncrease
+SetModINI "PNEO/Preset2/PNxRCfgThirstIncrease" PNxRConfigThirstIncrease
+SetModINI "PNEO/Preset2/PNxRCfgSleepIncrease" PNxRConfigSleepIncrease
+SetModINI "PNEO/Preset2/PNxRCfgKarmaMsgProfile" PNxRConfigKarmaMsgProfile
+SetModINI "PNEO/Preset2/PNxRCfgSneakIndProfile" PNxRConfigSneakIndicatorProfile
+SetModINI "PNEO/Preset2/PNxRCfgGoreDismemberPerc" PNxRConfigGoreDismemberPerc
+SetModINI "PNEO/Preset2/PNxRCfgGoreExplodePerc" PNxRConfigGoreExplodePerc
+SetModINI "PNEO/Preset2/PNxREnRepair" PNxREnableRepair
+SetModINI "PNEO/Preset2/PNxRCfgDeathPhyForceMult" PNxRConfigDeathPhysicsForceMult
+SetModINI "PNEO/Preset2/PNxBRCfgBarter" PNxBRConfigBarter
+SetModINI "PNEO/Preset2/PNxBRCfgVendorRespawn" PNxBRConfigVendorRespawn
+SetModINI "PNEO/Preset2/PNxBRCfgFastTravel" PNxBRConfigFastTravel
+SetModINI "PNEO/Preset2/PNxBRCfgWorldRespawn" PNxBRConfigWorldRespawn
 
 
 
 ; Preset3
-SetModINI "PN EO/Preset3/PNxCEnBT" PNxCEnableBulletTime
-SetModINI "PN EO/Preset3/PNxCEnWeaponCharge" PNxCEnableWeaponCharge
-SetModINI "PN EO/Preset3/PNxCEnCrosshair" PNxCEnableCrosshair
-SetModINI "PN EO/Preset3/PNxCEnStFld" PNxCEnableStealthField
-SetModINI "PN EO/Preset3/PNxCEnVisionMode" PNxCEnableVisionMode
-SetModINI "PN EO/Preset3/PNxCEnZoom" PNxCEnableZoom
-SetModINI "PN EO/Preset3/PNxCEnGrenadeHotkey" PNxCEnableGrenadeHotkey
-SetModINI "PN EO/Preset3/PNxCEnBackpedal" PNxCEnableBackpedal
-SetModINI "PN EO/Preset3/PNxCEnSprint" PNxCEnableSprint
-SetModINI "PN EO/Preset3/PNxCEnHlVisuals" PNxCEnableHealthVisuals
-SetModINI "PN EO/Preset3/PNxCEnHTSEffects" PNxCEnableHTSEffects
-SetModINI "PN EO/Preset3/PNxCEnVisor" PNxCEnableVisor
-SetModINI "PN EO/Preset3/PNxCEnExplosiveEntry" PNxCEnableExplosiveEntry
-SetModINI "PN EO/Preset3/PNxCEnSorter" PNxCEnableSorter
-SetModINI "PN EO/Preset3/PNxCCrosshairEnRecoil" PNxCCrosshairEnableRecoil
-SetModINI "PN EO/Preset3/PNxCBTEnInd" PNxCBulletTimeEnableIndicator
-SetModINI "PN EO/Preset3/PNxCVisorEnOverlays" PNxCVisorEnableOverlays
-SetModINI "PN EO/Preset3/PNxCWeaponChargeEnInd" PNxCWeaponChargeEnableIndicator
-SetModINI "PN EO/Preset3/PNxCBTAPDrainBase" PNxCBulletTimeAPDrainBase
-SetModINI "PN EO/Preset3/PNxCSprintSpeedMult" PNxCSprintSpeedMult
-SetModINI "PN EO/Preset3/PNxCSprintAPDrain" PNxCSprintAPDrain
-SetModINI "PN EO/Preset3/PNxCSprintTackeAPCost" PNxCSprintTackeAPCost
-SetModINI "PN EO/Preset3/PNxCStFldArEnergyDrain" PNxCStealthFieldArmorEnergyDrain
-SetModINI "PN EO/Preset3/PNxCStFldArStabGn" PNxCStealthFieldArmorStabilityGain
-SetModINI "PN EO/Preset3/PNxCStFldArStabDn" PNxCStealthFieldArmorStabilityDrain
-SetModINI "PN EO/Preset3/PNxCStFldSBStabDrain" PNxCStealthFieldSBStabilityDrain
-SetModINI "PN EO/Preset3/PNxCVisionModeDrainEM" PNxCVisionModeDrainEM
-SetModINI "PN EO/Preset3/PNxCVisionModeDrainHeat" PNxCVisionModeDrainHeat
-SetModINI "PN EO/Preset3/PNxCVisionModeDrainNight" PNxCVisionModeDrainNight
-SetModINI "PN EO/Preset3/PNxBCfgBTVFx1" PNxBConfigBulletTimeVFx1
-SetModINI "PN EO/Preset3/PNxBCfgBTVFx2" PNxBConfigBulletTimeVFx2
-SetModINI "PN EO/Preset3/PNxBCfgImplantAPRegenVM" PNxBConfigImplantAPRegenVM
-SetModINI "PN EO/Preset3/PNxBCfgSprintShudder" PNxBConfigSprintShudder
-SetModINI "PN EO/Preset3/PNxBExpEntDistance" PNxBExpEntDistance
-SetModINI "PN EO/Preset3/PNxBExpEntItemDestruction" PNxBExpEntItemDestruction
-SetModINI "PN EO/Preset3/PNxBExpEntUseSkill" PNxBExpEntUseSkill
-SetModINI "PN EO/Preset3/PNxBStFldStrength" PNxBStealthFieldStrength
-SetModINI "PN EO/Preset3/PNxBULCfgLuckBase" PNxBULConfigLuckBase
-SetModINI "PN EO/Preset3/PNxBULEn" PNxBULEnable
+SetModINI "PNEO/Preset3/PNxCEnBT" PNxCEnableBulletTime
+SetModINI "PNEO/Preset3/PNxCEnWeaponCharge" PNxCEnableWeaponCharge
+SetModINI "PNEO/Preset3/PNxCEnCrosshair" PNxCEnableCrosshair
+SetModINI "PNEO/Preset3/PNxCEnStFld" PNxCEnableStealthField
+SetModINI "PNEO/Preset3/PNxCEnVisionMode" PNxCEnableVisionMode
+SetModINI "PNEO/Preset3/PNxCEnZoom" PNxCEnableZoom
+SetModINI "PNEO/Preset3/PNxCEnGrenadeHotkey" PNxCEnableGrenadeHotkey
+SetModINI "PNEO/Preset3/PNxCEnBackpedal" PNxCEnableBackpedal
+SetModINI "PNEO/Preset3/PNxCEnSprint" PNxCEnableSprint
+SetModINI "PNEO/Preset3/PNxCEnHlVisuals" PNxCEnableHealthVisuals
+SetModINI "PNEO/Preset3/PNxCEnHTSEffects" PNxCEnableHTSEffects
+SetModINI "PNEO/Preset3/PNxCEnVisor" PNxCEnableVisor
+SetModINI "PNEO/Preset3/PNxCEnExplosiveEntry" PNxCEnableExplosiveEntry
+SetModINI "PNEO/Preset3/PNxCEnSorter" PNxCEnableSorter
+SetModINI "PNEO/Preset3/PNxCCrosshairEnRecoil" PNxCCrosshairEnableRecoil
+SetModINI "PNEO/Preset3/PNxCBTEnInd" PNxCBulletTimeEnableIndicator
+SetModINI "PNEO/Preset3/PNxCVisorEnOverlays" PNxCVisorEnableOverlays
+SetModINI "PNEO/Preset3/PNxCWeaponChargeEnInd" PNxCWeaponChargeEnableIndicator
+SetModINI "PNEO/Preset3/PNxCBTAPDrainBase" PNxCBulletTimeAPDrainBase
+SetModINI "PNEO/Preset3/PNxCSprintSpeedMult" PNxCSprintSpeedMult
+SetModINI "PNEO/Preset3/PNxCSprintAPDrain" PNxCSprintAPDrain
+SetModINI "PNEO/Preset3/PNxCSprintTackeAPCost" PNxCSprintTackeAPCost
+SetModINI "PNEO/Preset3/PNxCStFldArEnergyDrain" PNxCStealthFieldArmorEnergyDrain
+SetModINI "PNEO/Preset3/PNxCStFldArStabGn" PNxCStealthFieldArmorStabilityGain
+SetModINI "PNEO/Preset3/PNxCStFldArStabDn" PNxCStealthFieldArmorStabilityDrain
+SetModINI "PNEO/Preset3/PNxCStFldSBStabDrain" PNxCStealthFieldSBStabilityDrain
+SetModINI "PNEO/Preset3/PNxCVisionModeDrainEM" PNxCVisionModeDrainEM
+SetModINI "PNEO/Preset3/PNxCVisionModeDrainHeat" PNxCVisionModeDrainHeat
+SetModINI "PNEO/Preset3/PNxCVisionModeDrainNight" PNxCVisionModeDrainNight
+SetModINI "PNEO/Preset3/PNxBCfgBTVFx1" PNxBConfigBulletTimeVFx1
+SetModINI "PNEO/Preset3/PNxBCfgBTVFx2" PNxBConfigBulletTimeVFx2
+SetModINI "PNEO/Preset3/PNxBCfgImplantAPRegenVM" PNxBConfigImplantAPRegenVM
+SetModINI "PNEO/Preset3/PNxBCfgSprintShudder" PNxBConfigSprintShudder
+SetModINI "PNEO/Preset3/PNxBExpEntDistance" PNxBExpEntDistance
+SetModINI "PNEO/Preset3/PNxBExpEntItemDestruction" PNxBExpEntItemDestruction
+SetModINI "PNEO/Preset3/PNxBExpEntUseSkill" PNxBExpEntUseSkill
+SetModINI "PNEO/Preset3/PNxBStFldStrength" PNxBStealthFieldStrength
+SetModINI "PNEO/Preset3/PNxBULCfgLuckBase" PNxBULConfigLuckBase
+SetModINI "PNEO/Preset3/PNxBULEn" PNxBULEnable
 
-SetModINI "PN EO/Preset3/PNxRCfgXPGainProfile" PNxRConfigXPGainProfile
-SetModINI "PN EO/Preset3/PNxRCfgSkillPointModifier" PNxRConfigSkillPointModifier
-SetModINI "PN EO/Preset3/PNxRCfgLevelsPerPerk" PNxRConfigLevelsPerPerk
-SetModINI "PN EO/Preset3/PNxRCfgMaxLevel" PNxRConfigMaxLevel
-SetModINI "PN EO/Preset3/PNxBRCfgCombatXP" PNxBRConfigCombatXP
-SetModINI "PN EO/Preset3/PNxBRCfgHackLockXP" PNxBRConfigHackLockXP
-SetModINI "PN EO/Preset3/PNxBRCfgLocationXP" PNxBRConfigLocationXP
-SetModINI "PN EO/Preset3/PNxBRCfgSpeechXP" PNxBRConfigSpeechXP
-SetModINI "PN EO/Preset3/PNxRCfgActionPointsBase" PNxRConfigActionPointsBase
-SetModINI "PN EO/Preset3/PNxRCfgActionPointsMult" PNxRConfigActionPointsMult
-SetModINI "PN EO/Preset3/PNxRCfgCarryWeightBase" PNxRConfigCarryWeightBase
-SetModINI "PN EO/Preset3/PNxRCfgCarryWeightMult" PNxRConfigCarryWeightMult
-SetModINI "PN EO/Preset3/PNxRCfgThrowingProfile" PNxRConfigThrowingProfile
-SetModINI "PN EO/Preset3/PNxBRCfgTAGBase" PNxBRConfigTAGBase
-SetModINI "PN EO/Preset3/PNxBRCfgTAGMult" PNxBRConfigTAGMult
-SetModINI "PN EO/Preset3/PNxRCfgHlPlayerEndMult" PNxRConfigHealthPlayerEnduranceMult
-SetModINI "PN EO/Preset3/PNxRCfgHlPlayerLevelMult" PNxRConfigHealthPlayerLevelMult
-SetModINI "PN EO/Preset3/PNxRCfgHlNPCEndMult" PNxRConfigHealthNPCEnduranceMult
-SetModINI "PN EO/Preset3/PNxRCfgHlNPCLevelMult" PNxRConfigHealthNPCLevelMult
-SetModINI "PN EO/Preset3/PNxRCfgDTMinDamPerc" PNxRConfigDTMinDamagePerc
-SetModINI "PN EO/Preset3/PNxREnHeadshotMonitor" PNxREnableHeadshotMonitor
-SetModINI "PN EO/Preset3/PNxRCfgDamSkillPerc" PNxRConfigDamageSkillPerc
-SetModINI "PN EO/Preset3/PNxRCfgDamLimbPerc" PNxRConfigDamageLimbPerc
-SetModINI "PN EO/Preset3/PNxRCfgRadiationRatePerc" PNxRConfigRadiationRatePerc
-SetModINI "PN EO/Preset3/PNxRCfgFallingHeight" PNxRConfigFallingHeight
-SetModINI "PN EO/Preset3/PNxRCfgExplosionKnockdowns" PNxRConfigExplosionKnockdowns
-SetModINI "PN EO/Preset3/PNxRCfgExplosionSounds" PNxRConfigExplosionSounds
-SetModINI "PN EO/Preset3/PNxRCfgAutoAimMaxAngle" PNxRConfigAutoAimMaxAngle
-SetModINI "PN EO/Preset3/PNxRCfgAutoAimMaxDistance" PNxRConfigAutoAimMaxDistance
-SetModINI "PN EO/Preset3/PNxRCfgAutoAimScreenPerc" PNxRConfigAutoAimScreenPercentage
-SetModINI "PN EO/Preset3/PNxRCfgCondDamPenPerc" PNxRConfigConditionDamagePenaltyPerc
-SetModINI "PN EO/Preset3/PNxRCfgRunningMult" PNxRConfigRunningMult
-SetModINI "PN EO/Preset3/PNxRCfgHolsterMult" PNxRConfigHolsterMult
-SetModINI "PN EO/Preset3/PNxRCfgSpeed1CripPerc" PNxRConfigSpeed1CrippledPerc
-SetModINI "PN EO/Preset3/PNxRCfgSpeed2CripPerc" PNxRConfigSpeed2CrippledPerc
-SetModINI "PN EO/Preset3/PNxRCfgSneakProfile" PNxRConfigSneakProfile
-SetModINI "PN EO/Preset3/PNxREnDetection" PNxREnableDetection
-SetModINI "PN EO/Preset3/PNxRCfgLootFood100" PNxRConfigLootFood100
-SetModINI "PN EO/Preset3/PNxRCfgLootFood75" PNxRConfigLootFood75
-SetModINI "PN EO/Preset3/PNxRCfgLootFood50" PNxRConfigLootFood50
-SetModINI "PN EO/Preset3/PNxRCfgLootFood25" PNxRConfigLootFood25
-SetModINI "PN EO/Preset3/PNxBRCfgLootAmmo100" PNxBRConfigLootAmmo100
-SetModINI "PN EO/Preset3/PNxRCfgLootAmmo75" PNxRConfigLootAmmo75
-SetModINI "PN EO/Preset3/PNxBRCfgLootAmmo50" PNxBRConfigLootAmmo50
-SetModINI "PN EO/Preset3/PNxBRCfgLootAmmo25" PNxBRConfigLootAmmo25
-SetModINI "PN EO/Preset3/PNxBRCfgLootChems100" PNxBRConfigLootChems100
-SetModINI "PN EO/Preset3/PNxBRCfgLootChems75" PNxBRConfigLootChems75
-SetModINI "PN EO/Preset3/PNxBRCfgLootChems50" PNxBRConfigLootChems50
-SetModINI "PN EO/Preset3/PNxBRCfgLootChems25" PNxBRConfigLootChems25
-SetModINI "PN EO/Preset3/PNxBRCfgLootMisc100" PNxBRConfigLootMisc100
-SetModINI "PN EO/Preset3/PNxBRCfgLootMisc75" PNxBRConfigLootMisc75
-SetModINI "PN EO/Preset3/PNxBRCfgLootMisc50" PNxBRConfigLootMisc50
-SetModINI "PN EO/Preset3/PNxBRCfgLootMisc25" PNxBRConfigLootMisc25
-SetModINI "PN EO/Preset3/PNxRFoodHeals" PNxRFoodHeals
-SetModINI "PN EO/Preset3/PNxREnDynamicHTS" PNxREnableDynamicHTS
-SetModINI "PN EO/Preset3/PNxRCfgTimescale" PNxRConfigTimescale
-SetModINI "PN EO/Preset3/PNxRCfgHungerIncrease" PNxRConfigHungerIncrease
-SetModINI "PN EO/Preset3/PNxRCfgThirstIncrease" PNxRConfigThirstIncrease
-SetModINI "PN EO/Preset3/PNxRCfgSleepIncrease" PNxRConfigSleepIncrease
-SetModINI "PN EO/Preset3/PNxRCfgKarmaMsgProfile" PNxRConfigKarmaMsgProfile
-SetModINI "PN EO/Preset3/PNxRCfgSneakIndProfile" PNxRConfigSneakIndicatorProfile
-SetModINI "PN EO/Preset3/PNxRCfgGoreDismemberPerc" PNxRConfigGoreDismemberPerc
-SetModINI "PN EO/Preset3/PNxRCfgGoreExplodePerc" PNxRConfigGoreExplodePerc
-SetModINI "PN EO/Preset3/PNxREnRepair" PNxREnableRepair
-SetModINI "PN EO/Preset3/PNxRCfgDeathPhyForceMult" PNxRConfigDeathPhysicsForceMult
-SetModINI "PN EO/Preset3/PNxBRCfgBarter" PNxBRConfigBarter
-SetModINI "PN EO/Preset3/PNxBRCfgVendorRespawn" PNxBRConfigVendorRespawn
-SetModINI "PN EO/Preset3/PNxBRCfgFastTravel" PNxBRConfigFastTravel
-SetModINI "PN EO/Preset3/PNxBRCfgWorldRespawn" PNxBRConfigWorldRespawn
+SetModINI "PNEO/Preset3/PNxRCfgXPGainProfile" PNxRConfigXPGainProfile
+SetModINI "PNEO/Preset3/PNxRCfgSkillPointModifier" PNxRConfigSkillPointModifier
+SetModINI "PNEO/Preset3/PNxRCfgLevelsPerPerk" PNxRConfigLevelsPerPerk
+SetModINI "PNEO/Preset3/PNxRCfgMaxLevel" PNxRConfigMaxLevel
+SetModINI "PNEO/Preset3/PNxBRCfgCombatXP" PNxBRConfigCombatXP
+SetModINI "PNEO/Preset3/PNxBRCfgHackLockXP" PNxBRConfigHackLockXP
+SetModINI "PNEO/Preset3/PNxBRCfgLocationXP" PNxBRConfigLocationXP
+SetModINI "PNEO/Preset3/PNxBRCfgSpeechXP" PNxBRConfigSpeechXP
+SetModINI "PNEO/Preset3/PNxRCfgActionPointsBase" PNxRConfigActionPointsBase
+SetModINI "PNEO/Preset3/PNxRCfgActionPointsMult" PNxRConfigActionPointsMult
+SetModINI "PNEO/Preset3/PNxRCfgCarryWeightBase" PNxRConfigCarryWeightBase
+SetModINI "PNEO/Preset3/PNxRCfgCarryWeightMult" PNxRConfigCarryWeightMult
+SetModINI "PNEO/Preset3/PNxRCfgThrowingProfile" PNxRConfigThrowingProfile
+SetModINI "PNEO/Preset3/PNxBRCfgTAGBase" PNxBRConfigTAGBase
+SetModINI "PNEO/Preset3/PNxBRCfgTAGMult" PNxBRConfigTAGMult
+SetModINI "PNEO/Preset3/PNxRCfgHlPlayerEndMult" PNxRConfigHealthPlayerEnduranceMult
+SetModINI "PNEO/Preset3/PNxRCfgHlPlayerLevelMult" PNxRConfigHealthPlayerLevelMult
+SetModINI "PNEO/Preset3/PNxRCfgHlNPCEndMult" PNxRConfigHealthNPCEnduranceMult
+SetModINI "PNEO/Preset3/PNxRCfgHlNPCLevelMult" PNxRConfigHealthNPCLevelMult
+SetModINI "PNEO/Preset3/PNxRCfgDTMinDamPerc" PNxRConfigDTMinDamagePerc
+SetModINI "PNEO/Preset3/PNxREnHeadshotMonitor" PNxREnableHeadshotMonitor
+SetModINI "PNEO/Preset3/PNxRCfgDamSkillPerc" PNxRConfigDamageSkillPerc
+SetModINI "PNEO/Preset3/PNxRCfgDamLimbPerc" PNxRConfigDamageLimbPerc
+SetModINI "PNEO/Preset3/PNxRCfgRadiationRatePerc" PNxRConfigRadiationRatePerc
+SetModINI "PNEO/Preset3/PNxRCfgFallingHeight" PNxRConfigFallingHeight
+SetModINI "PNEO/Preset3/PNxRCfgExplosionKnockdowns" PNxRConfigExplosionKnockdowns
+SetModINI "PNEO/Preset3/PNxRCfgExplosionSounds" PNxRConfigExplosionSounds
+SetModINI "PNEO/Preset3/PNxRCfgAutoAimMaxAngle" PNxRConfigAutoAimMaxAngle
+SetModINI "PNEO/Preset3/PNxRCfgAutoAimMaxDistance" PNxRConfigAutoAimMaxDistance
+SetModINI "PNEO/Preset3/PNxRCfgAutoAimScreenPerc" PNxRConfigAutoAimScreenPercentage
+SetModINI "PNEO/Preset3/PNxRCfgCondDamPenPerc" PNxRConfigConditionDamagePenaltyPerc
+SetModINI "PNEO/Preset3/PNxRCfgRunningMult" PNxRConfigRunningMult
+SetModINI "PNEO/Preset3/PNxRCfgHolsterMult" PNxRConfigHolsterMult
+SetModINI "PNEO/Preset3/PNxRCfgSpeed1CripPerc" PNxRConfigSpeed1CrippledPerc
+SetModINI "PNEO/Preset3/PNxRCfgSpeed2CripPerc" PNxRConfigSpeed2CrippledPerc
+SetModINI "PNEO/Preset3/PNxRCfgSneakProfile" PNxRConfigSneakProfile
+SetModINI "PNEO/Preset3/PNxREnDetection" PNxREnableDetection
+SetModINI "PNEO/Preset3/PNxRCfgLootFood100" PNxRConfigLootFood100
+SetModINI "PNEO/Preset3/PNxRCfgLootFood75" PNxRConfigLootFood75
+SetModINI "PNEO/Preset3/PNxRCfgLootFood50" PNxRConfigLootFood50
+SetModINI "PNEO/Preset3/PNxRCfgLootFood25" PNxRConfigLootFood25
+SetModINI "PNEO/Preset3/PNxBRCfgLootAmmo100" PNxBRConfigLootAmmo100
+SetModINI "PNEO/Preset3/PNxRCfgLootAmmo75" PNxRConfigLootAmmo75
+SetModINI "PNEO/Preset3/PNxBRCfgLootAmmo50" PNxBRConfigLootAmmo50
+SetModINI "PNEO/Preset3/PNxBRCfgLootAmmo25" PNxBRConfigLootAmmo25
+SetModINI "PNEO/Preset3/PNxBRCfgLootChems100" PNxBRConfigLootChems100
+SetModINI "PNEO/Preset3/PNxBRCfgLootChems75" PNxBRConfigLootChems75
+SetModINI "PNEO/Preset3/PNxBRCfgLootChems50" PNxBRConfigLootChems50
+SetModINI "PNEO/Preset3/PNxBRCfgLootChems25" PNxBRConfigLootChems25
+SetModINI "PNEO/Preset3/PNxBRCfgLootMisc100" PNxBRConfigLootMisc100
+SetModINI "PNEO/Preset3/PNxBRCfgLootMisc75" PNxBRConfigLootMisc75
+SetModINI "PNEO/Preset3/PNxBRCfgLootMisc50" PNxBRConfigLootMisc50
+SetModINI "PNEO/Preset3/PNxBRCfgLootMisc25" PNxBRConfigLootMisc25
+SetModINI "PNEO/Preset3/PNxRFoodHeals" PNxRFoodHeals
+SetModINI "PNEO/Preset3/PNxREnDynamicHTS" PNxREnableDynamicHTS
+SetModINI "PNEO/Preset3/PNxRCfgTimescale" PNxRConfigTimescale
+SetModINI "PNEO/Preset3/PNxRCfgHungerIncrease" PNxRConfigHungerIncrease
+SetModINI "PNEO/Preset3/PNxRCfgThirstIncrease" PNxRConfigThirstIncrease
+SetModINI "PNEO/Preset3/PNxRCfgSleepIncrease" PNxRConfigSleepIncrease
+SetModINI "PNEO/Preset3/PNxRCfgKarmaMsgProfile" PNxRConfigKarmaMsgProfile
+SetModINI "PNEO/Preset3/PNxRCfgSneakIndProfile" PNxRConfigSneakIndicatorProfile
+SetModINI "PNEO/Preset3/PNxRCfgGoreDismemberPerc" PNxRConfigGoreDismemberPerc
+SetModINI "PNEO/Preset3/PNxRCfgGoreExplodePerc" PNxRConfigGoreExplodePerc
+SetModINI "PNEO/Preset3/PNxREnRepair" PNxREnableRepair
+SetModINI "PNEO/Preset3/PNxRCfgDeathPhyForceMult" PNxRConfigDeathPhysicsForceMult
+SetModINI "PNEO/Preset3/PNxBRCfgBarter" PNxBRConfigBarter
+SetModINI "PNEO/Preset3/PNxBRCfgVendorRespawn" PNxBRConfigVendorRespawn
+SetModINI "PNEO/Preset3/PNxBRCfgFastTravel" PNxBRConfigFastTravel
+SetModINI "PNEO/Preset3/PNxBRCfgWorldRespawn" PNxBRConfigWorldRespawn
 
 
 
 ; Preset4
-SetModINI "PN EO/Preset4/PNxCEnBT" PNxCEnableBulletTime
-SetModINI "PN EO/Preset4/PNxCEnWeaponCharge" PNxCEnableWeaponCharge
-SetModINI "PN EO/Preset4/PNxCEnCrosshair" PNxCEnableCrosshair
-SetModINI "PN EO/Preset4/PNxCEnStFld" PNxCEnableStealthField
-SetModINI "PN EO/Preset4/PNxCEnVisionMode" PNxCEnableVisionMode
-SetModINI "PN EO/Preset4/PNxCEnZoom" PNxCEnableZoom
-SetModINI "PN EO/Preset4/PNxCEnGrenadeHotkey" PNxCEnableGrenadeHotkey
-SetModINI "PN EO/Preset4/PNxCEnBackpedal" PNxCEnableBackpedal
-SetModINI "PN EO/Preset4/PNxCEnSprint" PNxCEnableSprint
-SetModINI "PN EO/Preset4/PNxCEnHlVisuals" PNxCEnableHealthVisuals
-SetModINI "PN EO/Preset4/PNxCEnHTSEffects" PNxCEnableHTSEffects
-SetModINI "PN EO/Preset4/PNxCEnVisor" PNxCEnableVisor
-SetModINI "PN EO/Preset4/PNxCEnExplosiveEntry" PNxCEnableExplosiveEntry
-SetModINI "PN EO/Preset4/PNxCEnSorter" PNxCEnableSorter
-SetModINI "PN EO/Preset4/PNxCCrosshairEnRecoil" PNxCCrosshairEnableRecoil
-SetModINI "PN EO/Preset4/PNxCBTEnInd" PNxCBulletTimeEnableIndicator
-SetModINI "PN EO/Preset4/PNxCVisorEnOverlays" PNxCVisorEnableOverlays
-SetModINI "PN EO/Preset4/PNxCWeaponChargeEnInd" PNxCWeaponChargeEnableIndicator
-SetModINI "PN EO/Preset4/PNxCBTAPDrainBase" PNxCBulletTimeAPDrainBase
-SetModINI "PN EO/Preset4/PNxCSprintSpeedMult" PNxCSprintSpeedMult
-SetModINI "PN EO/Preset4/PNxCSprintAPDrain" PNxCSprintAPDrain
-SetModINI "PN EO/Preset4/PNxCSprintTackeAPCost" PNxCSprintTackeAPCost
-SetModINI "PN EO/Preset4/PNxCStFldArEnergyDrain" PNxCStealthFieldArmorEnergyDrain
-SetModINI "PN EO/Preset4/PNxCStFldArStabGn" PNxCStealthFieldArmorStabilityGain
-SetModINI "PN EO/Preset4/PNxCStFldArStabDn" PNxCStealthFieldArmorStabilityDrain
-SetModINI "PN EO/Preset4/PNxCStFldSBStabDrain" PNxCStealthFieldSBStabilityDrain
-SetModINI "PN EO/Preset4/PNxCVisionModeDrainEM" PNxCVisionModeDrainEM
-SetModINI "PN EO/Preset4/PNxCVisionModeDrainHeat" PNxCVisionModeDrainHeat
-SetModINI "PN EO/Preset4/PNxCVisionModeDrainNight" PNxCVisionModeDrainNight
-SetModINI "PN EO/Preset4/PNxBCfgBTVFx1" PNxBConfigBulletTimeVFx1
-SetModINI "PN EO/Preset4/PNxBCfgBTVFx2" PNxBConfigBulletTimeVFx2
-SetModINI "PN EO/Preset4/PNxBCfgImplantAPRegenVM" PNxBConfigImplantAPRegenVM
-SetModINI "PN EO/Preset4/PNxBCfgSprintShudder" PNxBConfigSprintShudder
-SetModINI "PN EO/Preset4/PNxBExpEntDistance" PNxBExpEntDistance
-SetModINI "PN EO/Preset4/PNxBExpEntItemDestruction" PNxBExpEntItemDestruction
-SetModINI "PN EO/Preset4/PNxBExpEntUseSkill" PNxBExpEntUseSkill
-SetModINI "PN EO/Preset4/PNxBStFldStrength" PNxBStealthFieldStrength
-SetModINI "PN EO/Preset4/PNxBULCfgLuckBase" PNxBULConfigLuckBase
-SetModINI "PN EO/Preset4/PNxBULEn" PNxBULEnable
+SetModINI "PNEO/Preset4/PNxCEnBT" PNxCEnableBulletTime
+SetModINI "PNEO/Preset4/PNxCEnWeaponCharge" PNxCEnableWeaponCharge
+SetModINI "PNEO/Preset4/PNxCEnCrosshair" PNxCEnableCrosshair
+SetModINI "PNEO/Preset4/PNxCEnStFld" PNxCEnableStealthField
+SetModINI "PNEO/Preset4/PNxCEnVisionMode" PNxCEnableVisionMode
+SetModINI "PNEO/Preset4/PNxCEnZoom" PNxCEnableZoom
+SetModINI "PNEO/Preset4/PNxCEnGrenadeHotkey" PNxCEnableGrenadeHotkey
+SetModINI "PNEO/Preset4/PNxCEnBackpedal" PNxCEnableBackpedal
+SetModINI "PNEO/Preset4/PNxCEnSprint" PNxCEnableSprint
+SetModINI "PNEO/Preset4/PNxCEnHlVisuals" PNxCEnableHealthVisuals
+SetModINI "PNEO/Preset4/PNxCEnHTSEffects" PNxCEnableHTSEffects
+SetModINI "PNEO/Preset4/PNxCEnVisor" PNxCEnableVisor
+SetModINI "PNEO/Preset4/PNxCEnExplosiveEntry" PNxCEnableExplosiveEntry
+SetModINI "PNEO/Preset4/PNxCEnSorter" PNxCEnableSorter
+SetModINI "PNEO/Preset4/PNxCCrosshairEnRecoil" PNxCCrosshairEnableRecoil
+SetModINI "PNEO/Preset4/PNxCBTEnInd" PNxCBulletTimeEnableIndicator
+SetModINI "PNEO/Preset4/PNxCVisorEnOverlays" PNxCVisorEnableOverlays
+SetModINI "PNEO/Preset4/PNxCWeaponChargeEnInd" PNxCWeaponChargeEnableIndicator
+SetModINI "PNEO/Preset4/PNxCBTAPDrainBase" PNxCBulletTimeAPDrainBase
+SetModINI "PNEO/Preset4/PNxCSprintSpeedMult" PNxCSprintSpeedMult
+SetModINI "PNEO/Preset4/PNxCSprintAPDrain" PNxCSprintAPDrain
+SetModINI "PNEO/Preset4/PNxCSprintTackeAPCost" PNxCSprintTackeAPCost
+SetModINI "PNEO/Preset4/PNxCStFldArEnergyDrain" PNxCStealthFieldArmorEnergyDrain
+SetModINI "PNEO/Preset4/PNxCStFldArStabGn" PNxCStealthFieldArmorStabilityGain
+SetModINI "PNEO/Preset4/PNxCStFldArStabDn" PNxCStealthFieldArmorStabilityDrain
+SetModINI "PNEO/Preset4/PNxCStFldSBStabDrain" PNxCStealthFieldSBStabilityDrain
+SetModINI "PNEO/Preset4/PNxCVisionModeDrainEM" PNxCVisionModeDrainEM
+SetModINI "PNEO/Preset4/PNxCVisionModeDrainHeat" PNxCVisionModeDrainHeat
+SetModINI "PNEO/Preset4/PNxCVisionModeDrainNight" PNxCVisionModeDrainNight
+SetModINI "PNEO/Preset4/PNxBCfgBTVFx1" PNxBConfigBulletTimeVFx1
+SetModINI "PNEO/Preset4/PNxBCfgBTVFx2" PNxBConfigBulletTimeVFx2
+SetModINI "PNEO/Preset4/PNxBCfgImplantAPRegenVM" PNxBConfigImplantAPRegenVM
+SetModINI "PNEO/Preset4/PNxBCfgSprintShudder" PNxBConfigSprintShudder
+SetModINI "PNEO/Preset4/PNxBExpEntDistance" PNxBExpEntDistance
+SetModINI "PNEO/Preset4/PNxBExpEntItemDestruction" PNxBExpEntItemDestruction
+SetModINI "PNEO/Preset4/PNxBExpEntUseSkill" PNxBExpEntUseSkill
+SetModINI "PNEO/Preset4/PNxBStFldStrength" PNxBStealthFieldStrength
+SetModINI "PNEO/Preset4/PNxBULCfgLuckBase" PNxBULConfigLuckBase
+SetModINI "PNEO/Preset4/PNxBULEn" PNxBULEnable
 
-SetModINI "PN EO/Preset4/PNxRCfgXPGainProfile" PNxRConfigXPGainProfile
-SetModINI "PN EO/Preset4/PNxRCfgSkillPointModifier" PNxRConfigSkillPointModifier
-SetModINI "PN EO/Preset4/PNxRCfgLevelsPerPerk" PNxRConfigLevelsPerPerk
-SetModINI "PN EO/Preset4/PNxRCfgMaxLevel" PNxRConfigMaxLevel
-SetModINI "PN EO/Preset4/PNxBRCfgCombatXP" PNxBRConfigCombatXP
-SetModINI "PN EO/Preset4/PNxBRCfgHackLockXP" PNxBRConfigHackLockXP
-SetModINI "PN EO/Preset4/PNxBRCfgLocationXP" PNxBRConfigLocationXP
-SetModINI "PN EO/Preset4/PNxBRCfgSpeechXP" PNxBRConfigSpeechXP
-SetModINI "PN EO/Preset4/PNxRCfgActionPointsBase" PNxRConfigActionPointsBase
-SetModINI "PN EO/Preset4/PNxRCfgActionPointsMult" PNxRConfigActionPointsMult
-SetModINI "PN EO/Preset4/PNxRCfgCarryWeightBase" PNxRConfigCarryWeightBase
-SetModINI "PN EO/Preset4/PNxRCfgCarryWeightMult" PNxRConfigCarryWeightMult
-SetModINI "PN EO/Preset4/PNxRCfgThrowingProfile" PNxRConfigThrowingProfile
-SetModINI "PN EO/Preset4/PNxBRCfgTAGBase" PNxBRConfigTAGBase
-SetModINI "PN EO/Preset4/PNxBRCfgTAGMult" PNxBRConfigTAGMult
-SetModINI "PN EO/Preset4/PNxRCfgHlPlayerEndMult" PNxRConfigHealthPlayerEnduranceMult
-SetModINI "PN EO/Preset4/PNxRCfgHlPlayerLevelMult" PNxRConfigHealthPlayerLevelMult
-SetModINI "PN EO/Preset4/PNxRCfgHlNPCEndMult" PNxRConfigHealthNPCEnduranceMult
-SetModINI "PN EO/Preset4/PNxRCfgHlNPCLevelMult" PNxRConfigHealthNPCLevelMult
-SetModINI "PN EO/Preset4/PNxRCfgDTMinDamPerc" PNxRConfigDTMinDamagePerc
-SetModINI "PN EO/Preset4/PNxREnHeadshotMonitor" PNxREnableHeadshotMonitor
-SetModINI "PN EO/Preset4/PNxRCfgDamSkillPerc" PNxRConfigDamageSkillPerc
-SetModINI "PN EO/Preset4/PNxRCfgDamLimbPerc" PNxRConfigDamageLimbPerc
-SetModINI "PN EO/Preset4/PNxRCfgRadiationRatePerc" PNxRConfigRadiationRatePerc
-SetModINI "PN EO/Preset4/PNxRCfgFallingHeight" PNxRConfigFallingHeight
-SetModINI "PN EO/Preset4/PNxRCfgExplosionKnockdowns" PNxRConfigExplosionKnockdowns
-SetModINI "PN EO/Preset4/PNxRCfgExplosionSounds" PNxRConfigExplosionSounds
-SetModINI "PN EO/Preset4/PNxRCfgAutoAimMaxAngle" PNxRConfigAutoAimMaxAngle
-SetModINI "PN EO/Preset4/PNxRCfgAutoAimMaxDistance" PNxRConfigAutoAimMaxDistance
-SetModINI "PN EO/Preset4/PNxRCfgAutoAimScreenPerc" PNxRConfigAutoAimScreenPercentage
-SetModINI "PN EO/Preset4/PNxRCfgCondDamPenPerc" PNxRConfigConditionDamagePenaltyPerc
-SetModINI "PN EO/Preset4/PNxRCfgRunningMult" PNxRConfigRunningMult
-SetModINI "PN EO/Preset4/PNxRCfgHolsterMult" PNxRConfigHolsterMult
-SetModINI "PN EO/Preset4/PNxRCfgSpeed1CripPerc" PNxRConfigSpeed1CrippledPerc
-SetModINI "PN EO/Preset4/PNxRCfgSpeed2CripPerc" PNxRConfigSpeed2CrippledPerc
-SetModINI "PN EO/Preset4/PNxRCfgSneakProfile" PNxRConfigSneakProfile
-SetModINI "PN EO/Preset4/PNxREnDetection" PNxREnableDetection
-SetModINI "PN EO/Preset4/PNxRCfgLootFood100" PNxRConfigLootFood100
-SetModINI "PN EO/Preset4/PNxRCfgLootFood75" PNxRConfigLootFood75
-SetModINI "PN EO/Preset4/PNxRCfgLootFood50" PNxRConfigLootFood50
-SetModINI "PN EO/Preset4/PNxRCfgLootFood25" PNxRConfigLootFood25
-SetModINI "PN EO/Preset4/PNxBRCfgLootAmmo100" PNxBRConfigLootAmmo100
-SetModINI "PN EO/Preset4/PNxRCfgLootAmmo75" PNxRConfigLootAmmo75
-SetModINI "PN EO/Preset4/PNxBRCfgLootAmmo50" PNxBRConfigLootAmmo50
-SetModINI "PN EO/Preset4/PNxBRCfgLootAmmo25" PNxBRConfigLootAmmo25
-SetModINI "PN EO/Preset4/PNxBRCfgLootChems100" PNxBRConfigLootChems100
-SetModINI "PN EO/Preset4/PNxBRCfgLootChems75" PNxBRConfigLootChems75
-SetModINI "PN EO/Preset4/PNxBRCfgLootChems50" PNxBRConfigLootChems50
-SetModINI "PN EO/Preset4/PNxBRCfgLootChems25" PNxBRConfigLootChems25
-SetModINI "PN EO/Preset4/PNxBRCfgLootMisc100" PNxBRConfigLootMisc100
-SetModINI "PN EO/Preset4/PNxBRCfgLootMisc75" PNxBRConfigLootMisc75
-SetModINI "PN EO/Preset4/PNxBRCfgLootMisc50" PNxBRConfigLootMisc50
-SetModINI "PN EO/Preset4/PNxBRCfgLootMisc25" PNxBRConfigLootMisc25
-SetModINI "PN EO/Preset4/PNxRFoodHeals" PNxRFoodHeals
-SetModINI "PN EO/Preset4/PNxREnDynamicHTS" PNxREnableDynamicHTS
-SetModINI "PN EO/Preset4/PNxRCfgTimescale" PNxRConfigTimescale
-SetModINI "PN EO/Preset4/PNxRCfgHungerIncrease" PNxRConfigHungerIncrease
-SetModINI "PN EO/Preset4/PNxRCfgThirstIncrease" PNxRConfigThirstIncrease
-SetModINI "PN EO/Preset4/PNxRCfgSleepIncrease" PNxRConfigSleepIncrease
-SetModINI "PN EO/Preset4/PNxRCfgKarmaMsgProfile" PNxRConfigKarmaMsgProfile
-SetModINI "PN EO/Preset4/PNxRCfgSneakIndProfile" PNxRConfigSneakIndicatorProfile
-SetModINI "PN EO/Preset4/PNxRCfgGoreDismemberPerc" PNxRConfigGoreDismemberPerc
-SetModINI "PN EO/Preset4/PNxRCfgGoreExplodePerc" PNxRConfigGoreExplodePerc
-SetModINI "PN EO/Preset4/PNxREnRepair" PNxREnableRepair
-SetModINI "PN EO/Preset4/PNxRCfgDeathPhyForceMult" PNxRConfigDeathPhysicsForceMult
-SetModINI "PN EO/Preset4/PNxBRCfgBarter" PNxBRConfigBarter
-SetModINI "PN EO/Preset4/PNxBRCfgVendorRespawn" PNxBRConfigVendorRespawn
-SetModINI "PN EO/Preset4/PNxBRCfgFastTravel" PNxBRConfigFastTravel
-SetModINI "PN EO/Preset4/PNxBRCfgWorldRespawn" PNxBRConfigWorldRespawn
+SetModINI "PNEO/Preset4/PNxRCfgXPGainProfile" PNxRConfigXPGainProfile
+SetModINI "PNEO/Preset4/PNxRCfgSkillPointModifier" PNxRConfigSkillPointModifier
+SetModINI "PNEO/Preset4/PNxRCfgLevelsPerPerk" PNxRConfigLevelsPerPerk
+SetModINI "PNEO/Preset4/PNxRCfgMaxLevel" PNxRConfigMaxLevel
+SetModINI "PNEO/Preset4/PNxBRCfgCombatXP" PNxBRConfigCombatXP
+SetModINI "PNEO/Preset4/PNxBRCfgHackLockXP" PNxBRConfigHackLockXP
+SetModINI "PNEO/Preset4/PNxBRCfgLocationXP" PNxBRConfigLocationXP
+SetModINI "PNEO/Preset4/PNxBRCfgSpeechXP" PNxBRConfigSpeechXP
+SetModINI "PNEO/Preset4/PNxRCfgActionPointsBase" PNxRConfigActionPointsBase
+SetModINI "PNEO/Preset4/PNxRCfgActionPointsMult" PNxRConfigActionPointsMult
+SetModINI "PNEO/Preset4/PNxRCfgCarryWeightBase" PNxRConfigCarryWeightBase
+SetModINI "PNEO/Preset4/PNxRCfgCarryWeightMult" PNxRConfigCarryWeightMult
+SetModINI "PNEO/Preset4/PNxRCfgThrowingProfile" PNxRConfigThrowingProfile
+SetModINI "PNEO/Preset4/PNxBRCfgTAGBase" PNxBRConfigTAGBase
+SetModINI "PNEO/Preset4/PNxBRCfgTAGMult" PNxBRConfigTAGMult
+SetModINI "PNEO/Preset4/PNxRCfgHlPlayerEndMult" PNxRConfigHealthPlayerEnduranceMult
+SetModINI "PNEO/Preset4/PNxRCfgHlPlayerLevelMult" PNxRConfigHealthPlayerLevelMult
+SetModINI "PNEO/Preset4/PNxRCfgHlNPCEndMult" PNxRConfigHealthNPCEnduranceMult
+SetModINI "PNEO/Preset4/PNxRCfgHlNPCLevelMult" PNxRConfigHealthNPCLevelMult
+SetModINI "PNEO/Preset4/PNxRCfgDTMinDamPerc" PNxRConfigDTMinDamagePerc
+SetModINI "PNEO/Preset4/PNxREnHeadshotMonitor" PNxREnableHeadshotMonitor
+SetModINI "PNEO/Preset4/PNxRCfgDamSkillPerc" PNxRConfigDamageSkillPerc
+SetModINI "PNEO/Preset4/PNxRCfgDamLimbPerc" PNxRConfigDamageLimbPerc
+SetModINI "PNEO/Preset4/PNxRCfgRadiationRatePerc" PNxRConfigRadiationRatePerc
+SetModINI "PNEO/Preset4/PNxRCfgFallingHeight" PNxRConfigFallingHeight
+SetModINI "PNEO/Preset4/PNxRCfgExplosionKnockdowns" PNxRConfigExplosionKnockdowns
+SetModINI "PNEO/Preset4/PNxRCfgExplosionSounds" PNxRConfigExplosionSounds
+SetModINI "PNEO/Preset4/PNxRCfgAutoAimMaxAngle" PNxRConfigAutoAimMaxAngle
+SetModINI "PNEO/Preset4/PNxRCfgAutoAimMaxDistance" PNxRConfigAutoAimMaxDistance
+SetModINI "PNEO/Preset4/PNxRCfgAutoAimScreenPerc" PNxRConfigAutoAimScreenPercentage
+SetModINI "PNEO/Preset4/PNxRCfgCondDamPenPerc" PNxRConfigConditionDamagePenaltyPerc
+SetModINI "PNEO/Preset4/PNxRCfgRunningMult" PNxRConfigRunningMult
+SetModINI "PNEO/Preset4/PNxRCfgHolsterMult" PNxRConfigHolsterMult
+SetModINI "PNEO/Preset4/PNxRCfgSpeed1CripPerc" PNxRConfigSpeed1CrippledPerc
+SetModINI "PNEO/Preset4/PNxRCfgSpeed2CripPerc" PNxRConfigSpeed2CrippledPerc
+SetModINI "PNEO/Preset4/PNxRCfgSneakProfile" PNxRConfigSneakProfile
+SetModINI "PNEO/Preset4/PNxREnDetection" PNxREnableDetection
+SetModINI "PNEO/Preset4/PNxRCfgLootFood100" PNxRConfigLootFood100
+SetModINI "PNEO/Preset4/PNxRCfgLootFood75" PNxRConfigLootFood75
+SetModINI "PNEO/Preset4/PNxRCfgLootFood50" PNxRConfigLootFood50
+SetModINI "PNEO/Preset4/PNxRCfgLootFood25" PNxRConfigLootFood25
+SetModINI "PNEO/Preset4/PNxBRCfgLootAmmo100" PNxBRConfigLootAmmo100
+SetModINI "PNEO/Preset4/PNxRCfgLootAmmo75" PNxRConfigLootAmmo75
+SetModINI "PNEO/Preset4/PNxBRCfgLootAmmo50" PNxBRConfigLootAmmo50
+SetModINI "PNEO/Preset4/PNxBRCfgLootAmmo25" PNxBRConfigLootAmmo25
+SetModINI "PNEO/Preset4/PNxBRCfgLootChems100" PNxBRConfigLootChems100
+SetModINI "PNEO/Preset4/PNxBRCfgLootChems75" PNxBRConfigLootChems75
+SetModINI "PNEO/Preset4/PNxBRCfgLootChems50" PNxBRConfigLootChems50
+SetModINI "PNEO/Preset4/PNxBRCfgLootChems25" PNxBRConfigLootChems25
+SetModINI "PNEO/Preset4/PNxBRCfgLootMisc100" PNxBRConfigLootMisc100
+SetModINI "PNEO/Preset4/PNxBRCfgLootMisc75" PNxBRConfigLootMisc75
+SetModINI "PNEO/Preset4/PNxBRCfgLootMisc50" PNxBRConfigLootMisc50
+SetModINI "PNEO/Preset4/PNxBRCfgLootMisc25" PNxBRConfigLootMisc25
+SetModINI "PNEO/Preset4/PNxRFoodHeals" PNxRFoodHeals
+SetModINI "PNEO/Preset4/PNxREnDynamicHTS" PNxREnableDynamicHTS
+SetModINI "PNEO/Preset4/PNxRCfgTimescale" PNxRConfigTimescale
+SetModINI "PNEO/Preset4/PNxRCfgHungerIncrease" PNxRConfigHungerIncrease
+SetModINI "PNEO/Preset4/PNxRCfgThirstIncrease" PNxRConfigThirstIncrease
+SetModINI "PNEO/Preset4/PNxRCfgSleepIncrease" PNxRConfigSleepIncrease
+SetModINI "PNEO/Preset4/PNxRCfgKarmaMsgProfile" PNxRConfigKarmaMsgProfile
+SetModINI "PNEO/Preset4/PNxRCfgSneakIndProfile" PNxRConfigSneakIndicatorProfile
+SetModINI "PNEO/Preset4/PNxRCfgGoreDismemberPerc" PNxRConfigGoreDismemberPerc
+SetModINI "PNEO/Preset4/PNxRCfgGoreExplodePerc" PNxRConfigGoreExplodePerc
+SetModINI "PNEO/Preset4/PNxREnRepair" PNxREnableRepair
+SetModINI "PNEO/Preset4/PNxRCfgDeathPhyForceMult" PNxRConfigDeathPhysicsForceMult
+SetModINI "PNEO/Preset4/PNxBRCfgBarter" PNxBRConfigBarter
+SetModINI "PNEO/Preset4/PNxBRCfgVendorRespawn" PNxBRConfigVendorRespawn
+SetModINI "PNEO/Preset4/PNxBRCfgFastTravel" PNxBRConfigFastTravel
+SetModINI "PNEO/Preset4/PNxBRCfgWorldRespawn" PNxBRConfigWorldRespawn
